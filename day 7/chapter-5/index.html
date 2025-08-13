@@ -1,0 +1,822 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://localhost/main.css">
+    <link rel="icon" href="https://www.rust-lang.org/static/images/favicon-16x16.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Rust Programming Course! | Common Borrowing Errors and Solutions </title>
+</head>
+<body>
+
+<main>
+    
+    <nav>
+            <a href="http:&#x2F;&#x2F;localhost">
+                        <img src="https://www.rust-lang.org/static/images/rust-logo-blk.svg" alt="logo"/>
+                    </a>
+                <!-- -->
+
+            <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+            <div id="trees">
+                <input class="tree-toggle" type="checkbox" id="day-1-introduction"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-1-introduction">Day 1: Introduction</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 1/chapter-1/">What is Rust and why use it?</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-2/">Installing Rust Toolchain (rustup, cargo)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-3/">Setting up Development (VS Code + Hello World)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-4/">Understanding Cargo Project Structure</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-2-basic-syntax-variables"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-2-basic-syntax-variables">Day 2: Basic Syntax &amp; Variables</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 2/chapter-1/">Variables and Mutability in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-2/">Data Types in Rust: Integers, Floats, Booleans, and Characters</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-3/">Constants vs Variables</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-4/">Understanding Shadowing in Rust: A Practical Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-5/">Basic Input&#x2F;Output</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-3-functions-control-flow"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-3-functions-control-flow">Day 3: Functions &amp; Control Flow</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 3/chapter-1/">Function Syntax and Parameters in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-2/">Return Values and Expressions vs Statements</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-3/">If&#x2F;Else Statements in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-4/">Match Expressions in Rust: Powerful Pattern Matching</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-5/">Loops in Rust: loop, while, for Explained</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-4-data-types-deep-dive"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-4-data-types-deep-dive">Day 4: Data Types Deep Dive</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 4/chapter-1/">Compound Types (Tuples, Arrays)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-2/">String vs &amp;str in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-3/">Vector Basics in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-4/">Type Annotations and Inference in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-5/">Practical Rust Exercises</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-5-practice-review"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-5-practice-review">Day 5: Practice &amp; Review</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 5/chapter-1/">Day 5: Practice &amp; Review</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-6-ownership-fundamentals"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-6-ownership-fundamentals">Day 6: Ownership Fundamentals</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 6/chapter-1/">Ownership in Rust: A Detailed Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-2/">Stack vs Heap in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-3/">Understanding Ownership in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-4/">Move Semantics in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-5/">Copy Trait in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-7-references-borrowing"
+                           checked/>
+                    <label class="tree-toggle-label"
+                           for="day-7-references-borrowing">Day 7: References &amp; Borrowing</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 7/chapter-1/">Immutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-2/">Mutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-3/">Borrowing Rules</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-4/">Reference Lifetime Basics</a>
+                            </li>
+
+                            <li class="active">
+                                <a href="http://localhost/day 7/chapter-5/">Common Borrowing Errors and Solutions</a>
+                            </li>
+
+                            
+                                    
+                                    
+                                        <ul id="toc">
+                                            <li><a href="
+                                                        http://localhost/day 7/chapter-5/#common-borrowing-errors-and-solutions-in-rust-detailed-documentation">Common Borrowing Errors and Solutions in Rust: Detailed Documentation</a>
+                                                    <ul>
+                                                            <li>
+                                                                    <a href="http://localhost/day 7/chapter-5/#1-cannot-borrow-as-mutable-because-it-s-also-borrowed-as-immutable">1. Cannot Borrow as Mutable Because It’s Also Borrowed as Immutable</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 7/chapter-5/#2-cannot-borrow-as-immutable-because-it-s-already-borrowed-as-mutable">2. Cannot Borrow as Immutable Because It’s Already Borrowed as Mutable</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 7/chapter-5/#3-cannot-return-reference-to-local-data-dangling-reference">3. Cannot Return Reference to Local Data (Dangling Reference)</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 7/chapter-5/#4-borrowed-value-does-not-live-long-enough">4. Borrowed Value Does Not Live Long Enough</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 7/chapter-5/#5-mutable-borrow-occurs-twice-in-the-same-scope">5. Mutable Borrow Occurs Twice in the Same Scope</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 7/chapter-5/#6-cannot-borrow-data-as-mutable-because-it-s-not-declared-mut">6. Cannot Borrow Data as Mutable Because It’s Not Declared mut</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 7/chapter-5/#7-conflicting-borrow-across-function-calls">7. Conflicting Borrow Across Function Calls</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 7/chapter-5/#8-cannot-return-mutable-reference-to-local-data">8. Cannot Return Mutable Reference to Local Data</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 7/chapter-5/#9-borrow-checker-over-conservatism-non-lexical-lifetimes">9. Borrow Checker Over-Conservatism (Non-Lexical Lifetimes)</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 7/chapter-5/#summary-of-borrowing-errors">Summary of Borrowing Errors</a>
+                                                                </li>
+                                                            </ul>
+                                                    </li>
+                                            </ul>
+                                    </ul>
+                <input class="tree-toggle" type="checkbox" id="day-8-slices"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-8-slices">Day 8: Slices</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 8/chapter-1/">String Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-2/">Array Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-3/">Slice Syntax and Usage</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-4/">Practical Applications</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-5/">Memory Safety Benefits</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-9-advanced-ownership"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-9-advanced-ownership">Day 9: Advanced Ownership</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 9/chapter-1/">Clone Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-2/">Drop Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-3/">RAII Pattern</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-4/">Memory Management Comparison with Other Languages</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-5/">Best Practices (Advanced Ownership)</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-10-ownership-practice"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-10-ownership-practice">Day 10: Ownership Practice</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 10/chapter-1/">Complex Ownership Scenarios</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-2/">Debugging Ownership Errors</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-3/">Code Refactoring Exercises</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-4/">Group Problem-Solving</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-11-structs-basics"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-11-structs-basics">Day 11: Structs Basics</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 11/chapter-1/">Defining and Instantiating Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-2/">Field Access and Modification</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-3/">Tuple Structs and Unit Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-4/">Struct Update Syntax</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-5/">Ownership of Struct Data</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-12-methods-associated-functions"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-12-methods-associated-functions">Day 12: Methods &amp; Associated Functions</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 12/chapter-1/">Implementing Methods with impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-2/">&amp;self, &amp;mut self, and self</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-3/">Associated Functions (like Constructors)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-4/">Multiple impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-5/">Method Chaining</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-13-advanced-struct-concepts"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-13-advanced-struct-concepts">Day 13: Advanced Struct Concepts</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 13/chapter-1/">Struct Lifetime Parameters</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-2/">Debug Trait and Custom Formatting</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-3/">Builder Pattern Implementation</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-4/">Struct Composition</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-5/">Best Practices for Struct Design</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-14-enums-pattern-matching"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-14-enums-pattern-matching">Day 14: Enums &amp; Pattern Matching</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 14/chapter-1/">Defining Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-2/">Enum Variants with Data</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-3/">Option&lt;T&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-4/">Result&lt;T, E&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-5/">Advanced Match Patterns in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-15-practice-project"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-15-practice-project">Day 15: Practice Project</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 15/chapter-1/">Building a Simple CLI Calculator in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-16-vectors"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-16-vectors">Day 16: Vectors</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 16/chapter-1/">Creating and Updating Vectors</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-2/">Vector Methods: push, pop, iter</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-3/">Accessing Vector Elements Safely</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-4/">Vector of Different Types with Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-5/">Performance Considerations</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-17-hashmaps-other-collections"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-17-hashmaps-other-collections">Day 17: HashMaps &amp; Other Collections</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 17/chapter-1/">HashMap Creation and Manipulation</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-2/">Keys and Values Ownership</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-3/">HashMap Methods and Iteration</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-4/">When to Use Different Collections</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-5/">BTreeMap Introduction</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-18-error-handling"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-18-error-handling">Day 18: Error Handling</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 18/chapter-1/">Panic! and When to Use It</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 18/chapter-2/">Result&lt;T, E&gt; in Depth</a>
+                            </li>
+
+                            </ul>
+                </div>
+        </nav>
+    <article>
+
+        <div id="on_right">
+                <span id="search-ico" class="ms-Icon--Search"></span>
+            </div>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="Search as you type...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        <div id="wrap">
+            
+        <h1 id="common-borrowing-errors-and-solutions-in-rust-detailed-documentation">Common Borrowing Errors and Solutions in Rust: Detailed Documentation</h1>
+<p>Rust’s borrowing rules enforce memory safety at compile time, but can lead to common compiler errors when misused. Below are typical borrowing errors, explanations, and practical solutions.</p>
+<h2 id="1-cannot-borrow-as-mutable-because-it-s-also-borrowed-as-immutable">1. Cannot Borrow as Mutable Because It’s Also Borrowed as Immutable</h2>
+<p><strong>Error Message:</strong></p>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>error[E0502]: cannot borrow `data` as mutable because it is also borrowed as immutable
+</span><span>  --&gt; src/main.rs:6:16
+</span><span>   |
+</span><span>5  |     let r1 = &amp;data;
+</span><span>   |              ----- immutable borrow occurs here
+</span><span>6  |     let r2 = &amp;mut data;
+</span><span>   |                ^^^^^^^ mutable borrow occurs here
+</span><span>7  |     println!(&quot;{}&quot;, r1);
+</span><span>   |                    -- immutable borrow later used here
+</span></code></pre>
+<h3 id="explanation">Explanation</h3>
+<p>You have an active immutable borrow (<code>&amp;data</code>) when attempting a mutable borrow (<code>&amp;mut data</code>), violating exclusivity.</p>
+<h3 id="solution">Solution</h3>
+<p>End or restrict the immutable borrow before the mutable one by scoping or dropping the first reference:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> data = String::from(&quot;</span><span style="color:#a3be8c;">hello</span><span>&quot;);
+</span><span>    {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> r1 = &amp;data;         </span><span style="color:#a7adba;">// Immutable borrow
+</span><span>        println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, r1);
+</span><span>    }                           </span><span style="color:#a7adba;">// r1 goes out of scope here
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> r2 = &amp;</span><span style="color:#b48ead;">mut</span><span> data;         </span><span style="color:#a7adba;">// Now allowed
+</span><span>    r2.</span><span style="color:#96b5b4;">push_str</span><span>(&quot;</span><span style="color:#a3be8c;">, world</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, r2);
+</span><span>}
+</span></code></pre>
+<p>Or avoid simultaneous borrows:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> data = vec![</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">2</span><span>, </span><span style="color:#d08770;">3</span><span>];
+</span><span>    </span><span style="color:#a7adba;">// Use immutable borrows only when needed
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Length: </span><span style="color:#d08770;">{}</span><span>&quot;, data.</span><span style="color:#96b5b4;">len</span><span>());
+</span><span>    </span><span style="color:#a7adba;">// Then perform mutation
+</span><span>    data.</span><span style="color:#96b5b4;">push</span><span>(</span><span style="color:#d08770;">4</span><span>);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">After push: </span><span style="color:#d08770;">{:?}</span><span>&quot;, data);
+</span><span>}
+</span></code></pre>
+<h2 id="2-cannot-borrow-as-immutable-because-it-s-already-borrowed-as-mutable">2. Cannot Borrow as Immutable Because It’s Already Borrowed as Mutable</h2>
+<p><strong>Error Message:</strong></p>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>error[E0502]: cannot borrow `data` as immutable because it is also borrowed as mutable
+</span><span>  --&gt; src/main.rs:6:16
+</span><span>   |
+</span><span>5  |     let m = &amp;mut data;
+</span><span>   |             -------- mutable borrow occurs here
+</span><span>6  |     let r = &amp;data;
+</span><span>   |                ^^^^^ immutable borrow occurs here
+</span><span>7  |     println!(&quot;{}&quot;, m);
+</span><span>   |                    - mutable borrow later used here
+</span></code></pre>
+<h3 id="explanation-1">Explanation</h3>
+<p>You hold a mutable borrow when trying an immutable borrow, violating the rule of one mutable or many immutable.</p>
+<h3 id="solution-1">Solution</h3>
+<p>End the mutable borrow scope before the immutable:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> data = vec![</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">2</span><span>, </span><span style="color:#d08770;">3</span><span>];
+</span><span>    {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> m = &amp;</span><span style="color:#b48ead;">mut</span><span> data;    </span><span style="color:#a7adba;">// Mutable borrow
+</span><span>        m.</span><span style="color:#96b5b4;">push</span><span>(</span><span style="color:#d08770;">4</span><span>);
+</span><span>    }                         </span><span style="color:#a7adba;">// m goes out of scope here
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> r = &amp;data;            </span><span style="color:#a7adba;">// Immutable borrow now allowed
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Data: </span><span style="color:#d08770;">{:?}</span><span>&quot;, r);
+</span><span>}
+</span></code></pre>
+<p>Or separate operations:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> data = vec![</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">2</span><span>, </span><span style="color:#d08770;">3</span><span>];
+</span><span>    </span><span style="color:#a7adba;">// Mutate first
+</span><span>    data.</span><span style="color:#96b5b4;">push</span><span>(</span><span style="color:#d08770;">4</span><span>);
+</span><span>    </span><span style="color:#a7adba;">// Then read
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Data: </span><span style="color:#d08770;">{:?}</span><span>&quot;, data);
+</span><span>}
+</span></code></pre>
+<h2 id="3-cannot-return-reference-to-local-data-dangling-reference">3. Cannot Return Reference to Local Data (Dangling Reference)</h2>
+<p><strong>Error Message:</strong></p>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>error[E0106]: missing lifetime specifier
+</span><span>  --&gt; src/main.rs:3:20
+</span><span>   |
+</span><span>3  | fn dangle() -&gt; &amp;String {
+</span><span>   |            --   ^ expected named lifetime parameter
+</span><span>   |            |
+</span><span>   |            help: consider using the `&#39;static` lifetime
+</span></code></pre>
+<h3 id="explanation-2">Explanation</h3>
+<p>A function attempts to return a reference to data allocated within its own scope, which is dropped when the function returns.</p>
+<h3 id="solution-2">Solution</h3>
+<p>Return an owned value instead of a reference:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Wrong
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">dangle</span><span>() -&gt; &amp;String {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> s = String::from(&quot;</span><span style="color:#a3be8c;">hello</span><span>&quot;);
+</span><span>    &amp;s  </span><span style="color:#a7adba;">// s is dropped here
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Correct: return owned String
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">no_dangle</span><span>() -&gt; String {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> s = String::from(&quot;</span><span style="color:#a3be8c;">hello</span><span>&quot;);
+</span><span>    s
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> s = </span><span style="color:#96b5b4;">no_dangle</span><span>();
+</span><span>    println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, s);
+</span><span>}
+</span></code></pre>
+<h2 id="4-borrowed-value-does-not-live-long-enough">4. Borrowed Value Does Not Live Long Enough</h2>
+<p><strong>Error Message:</strong></p>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>error[E0597]: `s` does not live long enough
+</span><span>  --&gt; src/main.rs:5:16
+</span><span>   |
+</span><span>4  |     let r;
+</span><span>5  |     {
+</span><span>6  |         let s = String::from(&quot;hello&quot;);
+</span><span>   |             - `s` dropped here while still borrowed
+</span><span>7  |         r = &amp;s;
+</span><span>   |                ^^ borrowed value does not live long enough
+</span><span>8  |     }
+</span><span>9  |     println!(&quot;{}&quot;, r);
+</span><span>   |                    - borrow later used here
+</span></code></pre>
+<h3 id="explanation-3">Explanation</h3>
+<p>A reference outlives its referent due to nested scopes.</p>
+<h3 id="solution-3">Solution</h3>
+<p>Ensure the referent lives longer than the reference:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> s = String::from(&quot;</span><span style="color:#a3be8c;">hello</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> r = &amp;s;            </span><span style="color:#a7adba;">// s lives as long as r
+</span><span>    println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, r);
+</span><span>}
+</span></code></pre>
+<p>Or limit reference scope:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> r;
+</span><span>    {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> s = String::from(&quot;</span><span style="color:#a3be8c;">hello</span><span>&quot;);
+</span><span>        r = s.</span><span style="color:#96b5b4;">clone</span><span>();     </span><span style="color:#a7adba;">// Clone to own data
+</span><span>    }
+</span><span>    println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, r);
+</span><span>}
+</span></code></pre>
+<h2 id="5-mutable-borrow-occurs-twice-in-the-same-scope">5. Mutable Borrow Occurs Twice in the Same Scope</h2>
+<p><strong>Error Message:</strong></p>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>error[E0499]: cannot borrow `data` as mutable more than once at a time
+</span><span>  --&gt; src/main.rs:5:16
+</span><span>   |
+</span><span>5  |     let m1 = &amp;mut data;
+</span><span>   |              -------- first mutable borrow occurs here
+</span><span>6  |     let m2 = &amp;mut data;
+</span><span>   |              ^^^^^^^^^ second mutable borrow occurs here
+</span></code></pre>
+<h3 id="explanation-4">Explanation</h3>
+<p>Two simultaneous mutable references violate exclusive access.</p>
+<h3 id="solution-4">Solution</h3>
+<p>Sequence the borrows or use block scoping:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> data = vec![</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">2</span><span>, </span><span style="color:#d08770;">3</span><span>];
+</span><span>    {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> m1 = &amp;</span><span style="color:#b48ead;">mut</span><span> data;
+</span><span>        m1.</span><span style="color:#96b5b4;">push</span><span>(</span><span style="color:#d08770;">4</span><span>);
+</span><span>    }  </span><span style="color:#a7adba;">// m1 ends here
+</span><span>
+</span><span>    {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> m2 = &amp;</span><span style="color:#b48ead;">mut</span><span> data;
+</span><span>        m2.</span><span style="color:#96b5b4;">push</span><span>(</span><span style="color:#d08770;">5</span><span>);
+</span><span>    }  </span><span style="color:#a7adba;">// m2 ends here
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#d08770;">{:?}</span><span>&quot;, data);
+</span><span>}
+</span></code></pre>
+<p>Or split data into disjoint parts:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> arr = [</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">2</span><span>, </span><span style="color:#d08770;">3</span><span>, </span><span style="color:#d08770;">4</span><span>];
+</span><span>    </span><span style="color:#b48ead;">let </span><span>(left, right) = arr.</span><span style="color:#96b5b4;">split_at_mut</span><span>(</span><span style="color:#d08770;">2</span><span>);
+</span><span>    left[</span><span style="color:#d08770;">0</span><span>] = </span><span style="color:#d08770;">10</span><span>;
+</span><span>    right[</span><span style="color:#d08770;">0</span><span>] = </span><span style="color:#d08770;">20</span><span>;
+</span><span>    println!(&quot;</span><span style="color:#d08770;">{:?}</span><span>&quot;, arr);  </span><span style="color:#a7adba;">// [10, 2, 20, 4]
+</span><span>}
+</span></code></pre>
+<h2 id="6-cannot-borrow-data-as-mutable-because-it-s-not-declared-mut">6. Cannot Borrow Data as Mutable Because It’s Not Declared <code>mut</code></h2>
+<p><strong>Error Message:</strong></p>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>error[E0596]: cannot borrow immutable local variable `data` as mutable
+</span><span>  --&gt; src/main.rs:4:16
+</span><span>   |
+</span><span>4  |     let data = String::from(&quot;hello&quot;);
+</span><span>   |         ---- help: consider changing this to be mutable: `mut data`
+</span><span>5  |     let m = &amp;mut data;
+</span><span>   |                ^^^^^ cannot borrow as mutable
+</span></code></pre>
+<h3 id="explanation-5">Explanation</h3>
+<p>Only <code>mut</code> variables can be mutably borrowed.</p>
+<h3 id="solution-5">Solution</h3>
+<p>Declare the variable as mutable:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> data = String::from(&quot;</span><span style="color:#a3be8c;">hello</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> m = &amp;</span><span style="color:#b48ead;">mut</span><span> data;      </span><span style="color:#a7adba;">// OK
+</span><span>    m.</span><span style="color:#96b5b4;">push_str</span><span>(&quot;</span><span style="color:#a3be8c;">, world</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, data);
+</span><span>}
+</span></code></pre>
+<h2 id="7-conflicting-borrow-across-function-calls">7. Conflicting Borrow Across Function Calls</h2>
+<p><strong>Error Message:</strong></p>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>error[E0502]: cannot borrow `self` as mutable because it is also borrowed as immutable
+</span><span>  --&gt; src/lib.rs:10:18
+</span><span>   |
+</span><span>9  |     let r = &amp;self.field;
+</span><span>   |             --------------- immutable borrow occurs here
+</span><span>10 |     self.modify();
+</span><span>   |     ^^^^ mutable borrow occurs here
+</span><span>11 |     println!(&quot;{}&quot;, r);
+</span><span>   |                    - immutable borrow later used here
+</span></code></pre>
+<h3 id="explanation-6">Explanation</h3>
+<p>A method holds an immutable borrow of <code>self.field</code> then calls a method taking <code>&amp;mut self</code>, violating exclusivity.</p>
+<h3 id="solution-6">Solution</h3>
+<p>Reorder operations so borrows do not overlap:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">impl </span><span>Data {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">do_work</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) {
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.</span><span style="color:#96b5b4;">modify</span><span>();            </span><span style="color:#a7adba;">// mutable borrow first
+</span><span>        </span><span style="color:#b48ead;">let</span><span> r = &amp;</span><span style="color:#bf616a;">self</span><span>.field;      </span><span style="color:#a7adba;">// immutable borrow after
+</span><span>        println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, r);
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<p>Or clone the field if you need to hold data across a mutable call:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">impl </span><span>Data {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">do_work</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> field_clone = </span><span style="color:#bf616a;">self</span><span>.field.</span><span style="color:#96b5b4;">clone</span><span>();  </span><span style="color:#a7adba;">// Own the data
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.</span><span style="color:#96b5b4;">modify</span><span>();                         </span><span style="color:#a7adba;">// mutable borrow ends after
+</span><span>        println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, field_clone);
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h2 id="8-cannot-return-mutable-reference-to-local-data">8. Cannot Return Mutable Reference to Local Data</h2>
+<p><strong>Error Message:</strong></p>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>error[E0106]: missing lifetime specifier
+</span><span>  --&gt; src/main.rs:3:21
+</span><span>   |
+</span><span>3  | fn get_mut() -&gt; &amp;mut String {
+</span><span>   |             -   ^ expected named lifetime
+</span><span>   |             |
+</span><span>   |             help: consider using `&#39;_` lifetime
+</span><span>4  |     let mut s = String::from(&quot;hello&quot;);
+</span><span>5  |     &amp;mut s  // s dropped here
+</span></code></pre>
+<h3 id="explanation-7">Explanation</h3>
+<p>Returning a mutable reference to data that will be dropped causes a dangling reference.</p>
+<h3 id="solution-7">Solution</h3>
+<p>Return owned data or accept a mutable reference parameter:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Return owned data
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">get_owned</span><span>() -&gt; String {
+</span><span>    String::from(&quot;</span><span style="color:#a3be8c;">hello</span><span>&quot;)
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Accept mutable reference
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">modify_ref</span><span>(</span><span style="color:#bf616a;">s</span><span>: &amp;</span><span style="color:#b48ead;">mut</span><span> String) {
+</span><span>    s.</span><span style="color:#96b5b4;">push_str</span><span>(&quot;</span><span style="color:#a3be8c;"> modified</span><span>&quot;);
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> data = </span><span style="color:#96b5b4;">get_owned</span><span>();
+</span><span>    </span><span style="color:#96b5b4;">modify_ref</span><span>(&amp;</span><span style="color:#b48ead;">mut</span><span> data);
+</span><span>    println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, data);
+</span><span>}
+</span></code></pre>
+<h2 id="9-borrow-checker-over-conservatism-non-lexical-lifetimes">9. Borrow Checker Over-Conservatism (Non-Lexical Lifetimes)</h2>
+<p>Older Rust versions sometimes prevented safe borrows. Modern Rust uses <strong>Non-Lexical Lifetimes (NLL)</strong> to allow more flexible scopes.</p>
+<h3 id="example-before-nll">Example Before NLL</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">let mut</span><span> s = String::from(&quot;</span><span style="color:#a3be8c;">hello</span><span>&quot;);
+</span><span style="color:#b48ead;">let</span><span> r = &amp;s;      </span><span style="color:#a7adba;">// immutable borrow
+</span><span>println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, r);
+</span><span style="color:#b48ead;">let</span><span> m = &amp;</span><span style="color:#b48ead;">mut</span><span> s;  </span><span style="color:#a7adba;">// Error in old Rust: borrow still active
+</span><span>m.</span><span style="color:#96b5b4;">push_str</span><span>(&quot;</span><span style="color:#a3be8c;"> world</span><span>&quot;);
+</span></code></pre>
+<h3 id="example-after-nll">Example After NLL</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">let mut</span><span> s = String::from(&quot;</span><span style="color:#a3be8c;">hello</span><span>&quot;);
+</span><span>{
+</span><span>    </span><span style="color:#b48ead;">let</span><span> r = &amp;s;  </span><span style="color:#a7adba;">// r’s scope ends at println!
+</span><span>    println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, r);
+</span><span>}  </span><span style="color:#a7adba;">// r ends
+</span><span style="color:#b48ead;">let</span><span> m = &amp;</span><span style="color:#b48ead;">mut</span><span> s;  </span><span style="color:#a7adba;">// Allowed under NLL
+</span><span>m.</span><span style="color:#96b5b4;">push_str</span><span>(&quot;</span><span style="color:#a3be8c;"> world</span><span>&quot;);
+</span><span>println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, s);
+</span></code></pre>
+<h2 id="summary-of-borrowing-errors">Summary of Borrowing Errors</h2>
+<table><thead><tr><th>Error Scenario</th><th>Cause</th><th>Solution</th></tr></thead><tbody>
+<tr><td>Immutable + mutable borrow conflict</td><td>Immutable borrow still active when mutable borrow attempted</td><td>End immutable borrow scope before mutable borrow</td></tr>
+<tr><td>Multiple mutable borrows</td><td>Two simultaneous <code>&amp;mut</code> borrows</td><td>Scope borrows sequentially or split data</td></tr>
+<tr><td>Dangling reference (returning local reference)</td><td>Returning reference to local variable</td><td>Return owned value or accept reference parameter</td></tr>
+<tr><td>Borrowed value does not live long enough</td><td>Reference outlives referent scope</td><td>Extend referent lifetime or limit reference scope</td></tr>
+<tr><td>Borrow as mutable without <code>mut</code></td><td>Variable not declared mutable</td><td>Declare variable <code>mut</code></td></tr>
+<tr><td>Conflicting borrow across method calls</td><td>Immutable borrow held across mutable method call</td><td>Reorder calls or clone data</td></tr>
+<tr><td>Returning mutable reference to local data</td><td>Local data dropped at function end</td><td>Return owned data or borrow external data</td></tr>
+<tr><td>Overly conservative borrowing (pre-NLL)</td><td>Compiler’s lexical lifetime inference</td><td>Upgrade to Rust edition with NLL or refactor scopes</td></tr>
+</tbody></table>
+<p>Rust’s compile-time enforcement of borrowing rules may appear strict but prevents data races, dangling pointers, and ensures memory safety. Understanding these common errors and solutions will help you navigate the borrow checker and write correct, efficient Rust code.</p>
+
+    
+        </div>
+
+    </article>
+</main>
+
+
+    <script type="text/javascript" src="http://localhost/elasticlunr.min.js" defer></script>
+    <script type="text/javascript" src="http://localhost/search_index.en.js" defer></script>
+<script type="text/javascript" src="http://localhost/js.js" defer></script>
+
+</body>
+</html>

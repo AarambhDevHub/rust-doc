@@ -1,0 +1,964 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://localhost/main.css">
+    <link rel="icon" href="https://www.rust-lang.org/static/images/favicon-16x16.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Rust Programming Course! | String vs &amp;str in Rust </title>
+</head>
+<body>
+
+<main>
+    
+    <nav>
+            <a href="http:&#x2F;&#x2F;localhost">
+                        <img src="https://www.rust-lang.org/static/images/rust-logo-blk.svg" alt="logo"/>
+                    </a>
+                <!-- -->
+
+            <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+            <div id="trees">
+                <input class="tree-toggle" type="checkbox" id="day-1-introduction"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-1-introduction">Day 1: Introduction</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 1/chapter-1/">What is Rust and why use it?</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-2/">Installing Rust Toolchain (rustup, cargo)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-3/">Setting up Development (VS Code + Hello World)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-4/">Understanding Cargo Project Structure</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-2-basic-syntax-variables"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-2-basic-syntax-variables">Day 2: Basic Syntax &amp; Variables</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 2/chapter-1/">Variables and Mutability in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-2/">Data Types in Rust: Integers, Floats, Booleans, and Characters</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-3/">Constants vs Variables</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-4/">Understanding Shadowing in Rust: A Practical Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-5/">Basic Input&#x2F;Output</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-3-functions-control-flow"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-3-functions-control-flow">Day 3: Functions &amp; Control Flow</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 3/chapter-1/">Function Syntax and Parameters in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-2/">Return Values and Expressions vs Statements</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-3/">If&#x2F;Else Statements in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-4/">Match Expressions in Rust: Powerful Pattern Matching</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-5/">Loops in Rust: loop, while, for Explained</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-4-data-types-deep-dive"
+                           checked/>
+                    <label class="tree-toggle-label"
+                           for="day-4-data-types-deep-dive">Day 4: Data Types Deep Dive</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 4/chapter-1/">Compound Types (Tuples, Arrays)</a>
+                            </li>
+
+                            <li class="active">
+                                <a href="http://localhost/day 4/chapter-2/">String vs &amp;str in Rust</a>
+                            </li>
+
+                            
+                                    
+                                    
+                                        <ul id="toc">
+                                            <li><a href="
+                                                        http://localhost/day 4/chapter-2/#string-vs-str-in-rust-a-detailed-guide">String vs &amp;str in Rust: A Detailed Guide</a>
+                                                    <ul>
+                                                            <li>
+                                                                    <a href="http://localhost/day 4/chapter-2/#core-differences-overview">Core Differences Overview</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 4/chapter-2/#understanding-string">Understanding String</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 4/chapter-2/#understanding-str">Understanding &amp;str</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 4/chapter-2/#conversion-between-string-and-str">Conversion Between String and &amp;str</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 4/chapter-2/#function-parameters-when-to-use-which">Function Parameters: When to Use Which</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 4/chapter-2/#performance-considerations">Performance Considerations</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 4/chapter-2/#common-patterns-and-use-cases">Common Patterns and Use Cases</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 4/chapter-2/#best-practices">Best Practices</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 4/chapter-2/#when-to-use-each-type">When to Use Each Type</a>
+                                                                </li>
+                                                            </ul>
+                                                    </li>
+                                            </ul>
+                                    <li >
+                                <a href="http://localhost/day 4/chapter-3/">Vector Basics in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-4/">Type Annotations and Inference in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-5/">Practical Rust Exercises</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-5-practice-review"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-5-practice-review">Day 5: Practice &amp; Review</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 5/chapter-1/">Day 5: Practice &amp; Review</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-6-ownership-fundamentals"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-6-ownership-fundamentals">Day 6: Ownership Fundamentals</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 6/chapter-1/">Ownership in Rust: A Detailed Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-2/">Stack vs Heap in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-3/">Understanding Ownership in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-4/">Move Semantics in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-5/">Copy Trait in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-7-references-borrowing"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-7-references-borrowing">Day 7: References &amp; Borrowing</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 7/chapter-1/">Immutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-2/">Mutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-3/">Borrowing Rules</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-4/">Reference Lifetime Basics</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-5/">Common Borrowing Errors and Solutions</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-8-slices"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-8-slices">Day 8: Slices</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 8/chapter-1/">String Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-2/">Array Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-3/">Slice Syntax and Usage</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-4/">Practical Applications</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-5/">Memory Safety Benefits</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-9-advanced-ownership"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-9-advanced-ownership">Day 9: Advanced Ownership</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 9/chapter-1/">Clone Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-2/">Drop Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-3/">RAII Pattern</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-4/">Memory Management Comparison with Other Languages</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-5/">Best Practices (Advanced Ownership)</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-10-ownership-practice"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-10-ownership-practice">Day 10: Ownership Practice</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 10/chapter-1/">Complex Ownership Scenarios</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-2/">Debugging Ownership Errors</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-3/">Code Refactoring Exercises</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-4/">Group Problem-Solving</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-11-structs-basics"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-11-structs-basics">Day 11: Structs Basics</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 11/chapter-1/">Defining and Instantiating Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-2/">Field Access and Modification</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-3/">Tuple Structs and Unit Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-4/">Struct Update Syntax</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-5/">Ownership of Struct Data</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-12-methods-associated-functions"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-12-methods-associated-functions">Day 12: Methods &amp; Associated Functions</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 12/chapter-1/">Implementing Methods with impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-2/">&amp;self, &amp;mut self, and self</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-3/">Associated Functions (like Constructors)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-4/">Multiple impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-5/">Method Chaining</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-13-advanced-struct-concepts"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-13-advanced-struct-concepts">Day 13: Advanced Struct Concepts</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 13/chapter-1/">Struct Lifetime Parameters</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-2/">Debug Trait and Custom Formatting</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-3/">Builder Pattern Implementation</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-4/">Struct Composition</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-5/">Best Practices for Struct Design</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-14-enums-pattern-matching"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-14-enums-pattern-matching">Day 14: Enums &amp; Pattern Matching</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 14/chapter-1/">Defining Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-2/">Enum Variants with Data</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-3/">Option&lt;T&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-4/">Result&lt;T, E&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-5/">Advanced Match Patterns in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-15-practice-project"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-15-practice-project">Day 15: Practice Project</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 15/chapter-1/">Building a Simple CLI Calculator in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-16-vectors"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-16-vectors">Day 16: Vectors</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 16/chapter-1/">Creating and Updating Vectors</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-2/">Vector Methods: push, pop, iter</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-3/">Accessing Vector Elements Safely</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-4/">Vector of Different Types with Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-5/">Performance Considerations</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-17-hashmaps-other-collections"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-17-hashmaps-other-collections">Day 17: HashMaps &amp; Other Collections</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 17/chapter-1/">HashMap Creation and Manipulation</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-2/">Keys and Values Ownership</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-3/">HashMap Methods and Iteration</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-4/">When to Use Different Collections</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-5/">BTreeMap Introduction</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-18-error-handling"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-18-error-handling">Day 18: Error Handling</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 18/chapter-1/">Panic! and When to Use It</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 18/chapter-2/">Result&lt;T, E&gt; in Depth</a>
+                            </li>
+
+                            </ul>
+                </div>
+        </nav>
+    <article>
+
+        <div id="on_right">
+                <span id="search-ico" class="ms-Icon--Search"></span>
+            </div>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="Search as you type...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        <div id="wrap">
+            
+        <h1 id="string-vs-str-in-rust-a-detailed-guide">String vs &amp;str in Rust: A Detailed Guide</h1>
+<p>Building on your understanding of compound types like tuples and arrays, let's explore one of Rust's most important and frequently misunderstood concepts: <strong>String vs &amp;str</strong>. These two string types represent fundamentally different approaches to handling text data, and understanding their differences is crucial for writing efficient and idiomatic Rust code.</p>
+<h2 id="core-differences-overview">Core Differences Overview</h2>
+<p><strong>String</strong> and <strong>&amp;str</strong> serve different purposes in Rust's memory management system:</p>
+<ul>
+<li><strong><code>String</code></strong> - An owned, growable, heap-allocated string type that owns its data</li>
+<li><strong><code>&amp;str</code></strong> - A borrowed string slice that references existing string data somewhere else</li>
+</ul>
+<table><thead><tr><th>Feature</th><th>String</th><th>&amp;str</th></tr></thead><tbody>
+<tr><td><strong>Ownership</strong></td><td>Owns its data</td><td>Borrows/references data</td></tr>
+<tr><td><strong>Memory Location</strong></td><td>Heap-allocated</td><td>Points to data elsewhere</td></tr>
+<tr><td><strong>Mutability</strong></td><td>Can be mutable</td><td>Immutable reference</td></tr>
+<tr><td><strong>Size</strong></td><td>Can grow/shrink</td><td>Fixed size</td></tr>
+<tr><td><strong>Performance</strong></td><td>Allocation overhead</td><td>Zero-cost reference</td></tr>
+<tr><td><strong>Use Case</strong></td><td>Creating/modifying strings</td><td>Reading existing strings</td></tr>
+</tbody></table>
+<h2 id="understanding-string">Understanding String</h2>
+<p><strong><code>String</code></strong> is Rust's <strong>owned string type</strong> - it's essentially a <strong>growable array of bytes stored on the heap</strong>. Think of it as similar to <code>Vec&lt;u8&gt;</code> but with the guarantee that the bytes represent valid UTF-8 text.</p>
+<h3 id="string-characteristics">String Characteristics</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// Creating String instances
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> owned_string = String::new();              </span><span style="color:#a7adba;">// Empty string
+</span><span>    </span><span style="color:#b48ead;">let</span><span> from_literal = String::from(&quot;</span><span style="color:#a3be8c;">Hello, world!</span><span>&quot;);  </span><span style="color:#a7adba;">// From literal
+</span><span>    </span><span style="color:#b48ead;">let</span><span> to_string = &quot;</span><span style="color:#a3be8c;">Hello</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>();               </span><span style="color:#a7adba;">// Convert &amp;str to String
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// String is mutable and can grow
+</span><span>    owned_string.</span><span style="color:#96b5b4;">push_str</span><span>(&quot;</span><span style="color:#a3be8c;">Hello</span><span>&quot;);
+</span><span>    owned_string.</span><span style="color:#96b5b4;">push</span><span>(&#39; &#39;);
+</span><span>    owned_string.</span><span style="color:#96b5b4;">push_str</span><span>(&quot;</span><span style="color:#a3be8c;">Rust!</span><span>&quot;);
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Owned string: </span><span style="color:#d08770;">{}</span><span>&quot;, owned_string);  </span><span style="color:#a7adba;">// &quot;Hello Rust!&quot;
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// String owns its data
+</span><span>    </span><span style="color:#b48ead;">let</span><span> length = owned_string.</span><span style="color:#96b5b4;">len</span><span>();
+</span><span>    </span><span style="color:#b48ead;">let</span><span> capacity = owned_string.</span><span style="color:#96b5b4;">capacity</span><span>();
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Length: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">, Capacity: </span><span style="color:#d08770;">{}</span><span>&quot;, length, capacity);
+</span><span>}
+</span></code></pre>
+<h3 id="string-operations">String Operations</h3>
+<p><strong>String provides extensive methods for manipulation</strong>:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> message = String::from(&quot;</span><span style="color:#a3be8c;">Hello</span><span>&quot;);
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Appending
+</span><span>    message.</span><span style="color:#96b5b4;">push_str</span><span>(&quot;</span><span style="color:#a3be8c;">, World!</span><span>&quot;);      </span><span style="color:#a7adba;">// Append string slice
+</span><span>    message.</span><span style="color:#96b5b4;">push</span><span>(&#39;</span><span style="color:#a3be8c;">!</span><span>&#39;);                 </span><span style="color:#a7adba;">// Append single character
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Inserting
+</span><span>    message.</span><span style="color:#96b5b4;">insert</span><span>(</span><span style="color:#d08770;">5</span><span>, &#39;</span><span style="color:#a3be8c;">,</span><span>&#39;);            </span><span style="color:#a7adba;">// Insert character at index
+</span><span>    message.</span><span style="color:#96b5b4;">insert_str</span><span>(</span><span style="color:#d08770;">6</span><span>, &quot;</span><span style="color:#a3be8c;"> Beautiful</span><span>&quot;); </span><span style="color:#a7adba;">// Insert string at index
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Removing
+</span><span>    message.</span><span style="color:#96b5b4;">pop</span><span>();                     </span><span style="color:#a7adba;">// Remove last character
+</span><span>    message.</span><span style="color:#96b5b4;">truncate</span><span>(</span><span style="color:#d08770;">5</span><span>);               </span><span style="color:#a7adba;">// Keep only first 5 characters
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Replacing
+</span><span>    </span><span style="color:#b48ead;">let</span><span> replaced = message.</span><span style="color:#96b5b4;">replace</span><span>(&quot;</span><span style="color:#a3be8c;">Hello</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Hi</span><span>&quot;);
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Final: </span><span style="color:#d08770;">{}</span><span>&quot;, message);    </span><span style="color:#a7adba;">// &quot;Hello&quot;
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Replaced: </span><span style="color:#d08770;">{}</span><span>&quot;, replaced); </span><span style="color:#a7adba;">// &quot;Hi&quot;
+</span><span>}
+</span></code></pre>
+<h3 id="memory-layout-of-string">Memory Layout of String</h3>
+<p><strong>String is a "fat pointer"</strong> containing three components:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> text = String::from(&quot;</span><span style="color:#a3be8c;">Hello, Rust!</span><span>&quot;);
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// String contains:
+</span><span>    </span><span style="color:#a7adba;">// - ptr: pointer to heap data
+</span><span>    </span><span style="color:#a7adba;">// - len: current length (13 bytes)
+</span><span>    </span><span style="color:#a7adba;">// - capacity: allocated space (may be &gt; len)
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Length: </span><span style="color:#d08770;">{}</span><span>&quot;, text.</span><span style="color:#96b5b4;">len</span><span>());
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Capacity: </span><span style="color:#d08770;">{}</span><span>&quot;, text.</span><span style="color:#96b5b4;">capacity</span><span>());
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">As bytes: </span><span style="color:#d08770;">{:?}</span><span>&quot;, text.</span><span style="color:#96b5b4;">as_bytes</span><span>());
+</span><span>}
+</span></code></pre>
+<h2 id="understanding-str">Understanding &amp;str</h2>
+<p><strong><code>&amp;str</code></strong> (string slice) is an <strong>immutable reference</strong> to a sequence of UTF-8 bytes stored somewhere in memory. It's a <strong>"view" or "window"</strong> into string data that exists elsewhere.</p>
+<h3 id="str-characteristics">&amp;str Characteristics</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// String literals are &amp;str
+</span><span>    </span><span style="color:#b48ead;">let</span><span> literal: &amp;</span><span style="color:#b48ead;">str </span><span>= &quot;</span><span style="color:#a3be8c;">Hello, world!</span><span>&quot;;  </span><span style="color:#a7adba;">// Points to binary data
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Creating &amp;str from String
+</span><span>    </span><span style="color:#b48ead;">let</span><span> owned = String::from(&quot;</span><span style="color:#a3be8c;">Hello, Rust!</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> slice: &amp;</span><span style="color:#b48ead;">str </span><span>= &amp;owned;             </span><span style="color:#a7adba;">// Borrow from String
+</span><span>    </span><span style="color:#b48ead;">let</span><span> partial: &amp;</span><span style="color:#b48ead;">str </span><span>= &amp;owned[</span><span style="color:#d08770;">0</span><span>..</span><span style="color:#d08770;">5</span><span>];     </span><span style="color:#a7adba;">// Slice of String
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// &amp;str is immutable
+</span><span>    </span><span style="color:#a7adba;">// slice.push(&#39;!&#39;);  // Error: cannot mutate through &amp;str
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Literal: </span><span style="color:#d08770;">{}</span><span>&quot;, literal);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Slice: </span><span style="color:#d08770;">{}</span><span>&quot;, slice);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Partial: </span><span style="color:#d08770;">{}</span><span>&quot;, partial);    </span><span style="color:#a7adba;">// &quot;Hello&quot;
+</span><span>}
+</span></code></pre>
+<h3 id="where-str-data-lives">Where &amp;str Data Lives</h3>
+<p><strong>&amp;str can point to data in various locations</strong>:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// 1. Static memory (string literals)
+</span><span>    </span><span style="color:#b48ead;">let</span><span> static_str: &amp;</span><span style="color:#b48ead;">&#39;static str </span><span>= &quot;</span><span style="color:#a3be8c;">I&#39;m in the binary!</span><span>&quot;;
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// 2. Heap memory (from String)
+</span><span>    </span><span style="color:#b48ead;">let</span><span> owned = String::from(&quot;</span><span style="color:#a3be8c;">I&#39;m on the heap!</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> heap_str: &amp;</span><span style="color:#b48ead;">str </span><span>= &amp;owned;
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// 3. Stack memory (from array)
+</span><span>    </span><span style="color:#b48ead;">let</span><span> bytes = [</span><span style="color:#d08770;">72</span><span>, </span><span style="color:#d08770;">101</span><span>, </span><span style="color:#d08770;">108</span><span>, </span><span style="color:#d08770;">108</span><span>, </span><span style="color:#d08770;">111</span><span>]; </span><span style="color:#a7adba;">// &quot;Hello&quot; as bytes
+</span><span>    </span><span style="color:#b48ead;">let</span><span> stack_str = std::str::from_utf8(&amp;bytes).</span><span style="color:#96b5b4;">unwrap</span><span>();
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Static: </span><span style="color:#d08770;">{}</span><span>&quot;, static_str);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Heap: </span><span style="color:#d08770;">{}</span><span>&quot;, heap_str);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Stack: </span><span style="color:#d08770;">{}</span><span>&quot;, stack_str);
+</span><span>}
+</span></code></pre>
+<h3 id="string-slicing">String Slicing</h3>
+<p><strong>&amp;str enables powerful slicing operations</strong>:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> text = String::from(&quot;</span><span style="color:#a3be8c;">Hello, beautiful world!</span><span>&quot;);
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Various slicing operations
+</span><span>    </span><span style="color:#b48ead;">let</span><span> full: &amp;</span><span style="color:#b48ead;">str </span><span>= &amp;text;           </span><span style="color:#a7adba;">// Entire string
+</span><span>    </span><span style="color:#b48ead;">let</span><span> hello: &amp;</span><span style="color:#b48ead;">str </span><span>= &amp;text[</span><span style="color:#d08770;">0</span><span>..</span><span style="color:#d08770;">5</span><span>];    </span><span style="color:#a7adba;">// &quot;Hello&quot;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> world: &amp;</span><span style="color:#b48ead;">str </span><span>= &amp;text[</span><span style="color:#d08770;">17</span><span>..</span><span style="color:#d08770;">22</span><span>];  </span><span style="color:#a7adba;">// &quot;world&quot;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> from_index: &amp;</span><span style="color:#b48ead;">str </span><span>= &amp;text[</span><span style="color:#d08770;">7</span><span>..]; </span><span style="color:#a7adba;">// &quot;beautiful world!&quot;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> to_index: &amp;</span><span style="color:#b48ead;">str </span><span>= &amp;text[..</span><span style="color:#d08770;">5</span><span>];  </span><span style="color:#a7adba;">// &quot;Hello&quot;
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Full: &#39;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">&#39;</span><span>&quot;, full);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Hello: &#39;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">&#39;</span><span>&quot;, hello);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">World: &#39;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">&#39;</span><span>&quot;, world);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">From 7: &#39;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">&#39;</span><span>&quot;, from_index);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">To 5: &#39;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">&#39;</span><span>&quot;, to_index);
+</span><span>}
+</span></code></pre>
+<h2 id="conversion-between-string-and-str">Conversion Between String and &amp;str</h2>
+<p><strong>Converting between these types is straightforward but important to understand</strong>:</p>
+<h3 id="string-to-str-automatic-coercion">String to &amp;str (Automatic Coercion)</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> owned = String::from(&quot;</span><span style="color:#a3be8c;">Hello</span><span>&quot;);
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Automatic coercion (deref coercion)
+</span><span>    </span><span style="color:#b48ead;">let</span><span> slice: &amp;</span><span style="color:#b48ead;">str </span><span>= &amp;owned;         </span><span style="color:#a7adba;">// Explicit reference
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Can also use as_str() method
+</span><span>    </span><span style="color:#b48ead;">let</span><span> slice2: &amp;</span><span style="color:#b48ead;">str </span><span>= owned.</span><span style="color:#96b5b4;">as_str</span><span>();
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Functions accepting &amp;str can take &amp;String
+</span><span>    </span><span style="color:#96b5b4;">print_string</span><span>(&amp;owned);  </span><span style="color:#a7adba;">// Works due to deref coercion
+</span><span>    </span><span style="color:#96b5b4;">print_string</span><span>(slice);   </span><span style="color:#a7adba;">// Direct &amp;str
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">print_string</span><span>(</span><span style="color:#bf616a;">s</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) {
+</span><span>    println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, s);
+</span><span>}
+</span></code></pre>
+<h3 id="str-to-string-explicit-conversion">&amp;str to String (Explicit Conversion)</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> slice: &amp;</span><span style="color:#b48ead;">str </span><span>= &quot;</span><span style="color:#a3be8c;">Hello, world!</span><span>&quot;;
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Several ways to convert &amp;str to String
+</span><span>    </span><span style="color:#b48ead;">let</span><span> owned1 = String::from(slice);      </span><span style="color:#a7adba;">// Most explicit
+</span><span>    </span><span style="color:#b48ead;">let</span><span> owned2 = slice.</span><span style="color:#96b5b4;">to_string</span><span>();        </span><span style="color:#a7adba;">// Common idiom
+</span><span>    </span><span style="color:#b48ead;">let</span><span> owned3 = slice.</span><span style="color:#96b5b4;">to_owned</span><span>();         </span><span style="color:#a7adba;">// Explicit ownership
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Owned 1: </span><span style="color:#d08770;">{}</span><span>&quot;, owned1);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Owned 2: </span><span style="color:#d08770;">{}</span><span>&quot;, owned2);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Owned 3: </span><span style="color:#d08770;">{}</span><span>&quot;, owned3);
+</span><span>}
+</span></code></pre>
+<h2 id="function-parameters-when-to-use-which">Function Parameters: When to Use Which</h2>
+<p><strong>The choice between String and &amp;str in function parameters significantly affects API design</strong>:</p>
+<h3 id="prefer-str-for-function-parameters">Prefer &amp;str for Function Parameters</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Good - accepts any string-like type
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">process_text</span><span>(</span><span style="color:#bf616a;">text</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) {
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Processing: </span><span style="color:#d08770;">{}</span><span>&quot;, text);
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> owned = String::from(&quot;</span><span style="color:#a3be8c;">Hello</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> literal = &quot;</span><span style="color:#a3be8c;">World</span><span>&quot;;
+</span><span>    
+</span><span>    </span><span style="color:#96b5b4;">process_text</span><span>(&amp;owned);    </span><span style="color:#a7adba;">// Works with String (via &amp;)
+</span><span>    </span><span style="color:#96b5b4;">process_text</span><span>(literal);   </span><span style="color:#a7adba;">// Works with &amp;str
+</span><span>    </span><span style="color:#96b5b4;">process_text</span><span>(&quot;</span><span style="color:#a3be8c;">Direct</span><span>&quot;);  </span><span style="color:#a7adba;">// Works with literals
+</span><span>}
+</span></code></pre>
+<h3 id="use-string-only-when-necessary">Use String Only When Necessary</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Only use String parameter when you need ownership
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">take_ownership</span><span>(</span><span style="color:#bf616a;">text</span><span>: String) -&gt; String {
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> result = text;
+</span><span>    result.</span><span style="color:#96b5b4;">push_str</span><span>(&quot;</span><span style="color:#a3be8c;"> - processed</span><span>&quot;);
+</span><span>    result
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Better: Use &amp;str and convert inside if needed
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">process_and_return</span><span>(</span><span style="color:#bf616a;">text</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; String {
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> result = text.</span><span style="color:#96b5b4;">to_string</span><span>();
+</span><span>    result.</span><span style="color:#96b5b4;">push_str</span><span>(&quot;</span><span style="color:#a3be8c;"> - processed</span><span>&quot;);
+</span><span>    result
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> message = String::from(&quot;</span><span style="color:#a3be8c;">Hello</span><span>&quot;);
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// take_ownership consumes the String
+</span><span>    </span><span style="color:#b48ead;">let</span><span> processed1 = </span><span style="color:#96b5b4;">take_ownership</span><span>(message);
+</span><span>    </span><span style="color:#a7adba;">// println!(&quot;{}&quot;, message); // Error: message was moved
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> message2 = String::from(&quot;</span><span style="color:#a3be8c;">World</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> processed2 = </span><span style="color:#96b5b4;">process_and_return</span><span>(&amp;message2);
+</span><span>    println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, message2); </span><span style="color:#a7adba;">// Still accessible
+</span><span>}
+</span></code></pre>
+<h2 id="performance-considerations">Performance Considerations</h2>
+<h3 id="memory-allocation">Memory Allocation</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// &amp;str has no allocation cost
+</span><span>    </span><span style="color:#b48ead;">let</span><span> literal: &amp;</span><span style="color:#b48ead;">str </span><span>= &quot;</span><span style="color:#a3be8c;">This costs nothing to create</span><span>&quot;;
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// String allocates memory on the heap
+</span><span>    </span><span style="color:#b48ead;">let</span><span> owned: String = String::from(&quot;</span><span style="color:#a3be8c;">This allocates memory</span><span>&quot;);
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Converting &amp;str to String requires allocation
+</span><span>    </span><span style="color:#b48ead;">let</span><span> converted: String = literal.</span><span style="color:#96b5b4;">to_string</span><span>(); </span><span style="color:#a7adba;">// Heap allocation
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Slicing String creates &amp;str with no allocation
+</span><span>    </span><span style="color:#b48ead;">let</span><span> slice: &amp;</span><span style="color:#b48ead;">str </span><span>= &amp;owned[</span><span style="color:#d08770;">0</span><span>..</span><span style="color:#d08770;">4</span><span>]; </span><span style="color:#a7adba;">// No allocation, just reference
+</span><span>}
+</span></code></pre>
+<h3 id="function-call-overhead">Function Call Overhead</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Efficient - no allocation, just passes pointer + length
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">read_only_operation</span><span>(</span><span style="color:#bf616a;">text</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; </span><span style="color:#b48ead;">usize </span><span>{
+</span><span>    text.</span><span style="color:#96b5b4;">len</span><span>()
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Less efficient - requires ownership transfer or cloning
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">take_ownership_operation</span><span>(</span><span style="color:#bf616a;">text</span><span>: String) -&gt; </span><span style="color:#b48ead;">usize </span><span>{
+</span><span>    text.</span><span style="color:#96b5b4;">len</span><span>()
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> message = String::from(&quot;</span><span style="color:#a3be8c;">Hello, world!</span><span>&quot;);
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Efficient call - no data copying
+</span><span>    </span><span style="color:#b48ead;">let</span><span> length1 = </span><span style="color:#96b5b4;">read_only_operation</span><span>(&amp;message);
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Requires cloning if you want to keep using message
+</span><span>    </span><span style="color:#b48ead;">let</span><span> length2 = </span><span style="color:#96b5b4;">take_ownership_operation</span><span>(message.</span><span style="color:#96b5b4;">clone</span><span>());
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Or move ownership (message becomes unusable)
+</span><span>    </span><span style="color:#a7adba;">// let length3 = take_ownership_operation(message);
+</span><span>}
+</span></code></pre>
+<h2 id="common-patterns-and-use-cases">Common Patterns and Use Cases</h2>
+<h3 id="building-strings-dynamically">Building Strings Dynamically</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">build_greeting</span><span>(</span><span style="color:#bf616a;">name</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>, </span><span style="color:#bf616a;">title</span><span>: Option&lt;&amp;</span><span style="color:#b48ead;">str</span><span>&gt;) -&gt; String {
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> greeting = String::from(&quot;</span><span style="color:#a3be8c;">Hello</span><span>&quot;);
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">if let </span><span>Some(t) = title {
+</span><span>        greeting.</span><span style="color:#96b5b4;">push_str</span><span>(&quot;</span><span style="color:#a3be8c;">, </span><span>&quot;);
+</span><span>        greeting.</span><span style="color:#96b5b4;">push_str</span><span>(t);
+</span><span>    }
+</span><span>    
+</span><span>    greeting.</span><span style="color:#96b5b4;">push</span><span>(&#39; &#39;);
+</span><span>    greeting.</span><span style="color:#96b5b4;">push_str</span><span>(name);
+</span><span>    greeting.</span><span style="color:#96b5b4;">push</span><span>(&#39;</span><span style="color:#a3be8c;">!</span><span>&#39;);
+</span><span>    
+</span><span>    greeting
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> name = &quot;</span><span style="color:#a3be8c;">Alice</span><span>&quot;;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> greeting1 = </span><span style="color:#96b5b4;">build_greeting</span><span>(name, None);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> greeting2 = </span><span style="color:#96b5b4;">build_greeting</span><span>(name, Some(&quot;</span><span style="color:#a3be8c;">Dr.</span><span>&quot;));
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, greeting1);  </span><span style="color:#a7adba;">// &quot;Hello Alice!&quot;
+</span><span>    println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, greeting2);  </span><span style="color:#a7adba;">// &quot;Hello, Dr. Alice!&quot;
+</span><span>}
+</span></code></pre>
+<h3 id="string-processing-pipeline">String Processing Pipeline</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">process_user_input</span><span>(</span><span style="color:#bf616a;">input</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; Result&lt;String, &amp;</span><span style="color:#b48ead;">&#39;static str</span><span>&gt; {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> trimmed = input.</span><span style="color:#96b5b4;">trim</span><span>();
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">if</span><span> trimmed.</span><span style="color:#96b5b4;">is_empty</span><span>() {
+</span><span>        </span><span style="color:#b48ead;">return </span><span>Err(&quot;</span><span style="color:#a3be8c;">Input cannot be empty</span><span>&quot;);
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> processed = String::with_capacity(trimmed.</span><span style="color:#96b5b4;">len</span><span>());
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">for</span><span> ch in trimmed.</span><span style="color:#96b5b4;">chars</span><span>() {
+</span><span>        </span><span style="color:#b48ead;">if</span><span> ch.</span><span style="color:#96b5b4;">is_alphabetic</span><span>() || ch.</span><span style="color:#96b5b4;">is_whitespace</span><span>() {
+</span><span>            processed.</span><span style="color:#96b5b4;">push</span><span>(ch.</span><span style="color:#96b5b4;">to_lowercase</span><span>().</span><span style="color:#96b5b4;">next</span><span>().</span><span style="color:#96b5b4;">unwrap_or</span><span>(ch));
+</span><span>        }
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">if</span><span> processed.</span><span style="color:#96b5b4;">is_empty</span><span>() {
+</span><span>        Err(&quot;</span><span style="color:#a3be8c;">No valid characters found</span><span>&quot;)
+</span><span>    } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>        Ok(processed)
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> inputs = [&quot;</span><span style="color:#a3be8c;">  Hello World!  </span><span>&quot;, &quot;</span><span style="color:#a3be8c;">123</span><span>&quot;, &quot;&quot;, &quot;</span><span style="color:#a3be8c;">Mix3d C4s3!</span><span>&quot;];
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">for</span><span> input in inputs.</span><span style="color:#96b5b4;">iter</span><span>() {
+</span><span>        </span><span style="color:#b48ead;">match </span><span style="color:#96b5b4;">process_user_input</span><span>(input) {
+</span><span>            Ok(result) =&gt; println!(&quot;</span><span style="color:#a3be8c;">&#39;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">&#39; -&gt; &#39;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">&#39;</span><span>&quot;, input, result),
+</span><span>            Err(error) =&gt; println!(&quot;</span><span style="color:#a3be8c;">&#39;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">&#39; -&gt; Error: </span><span style="color:#d08770;">{}</span><span>&quot;, input, error),
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h3 id="configuration-and-constants">Configuration and Constants</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Use &amp;str for compile-time constants
+</span><span style="color:#b48ead;">const </span><span style="color:#d08770;">DEFAULT_MESSAGE</span><span>: &amp;</span><span style="color:#b48ead;">str </span><span>= &quot;</span><span style="color:#a3be8c;">Welcome to Rust!</span><span>&quot;;
+</span><span style="color:#b48ead;">const </span><span style="color:#d08770;">ERROR_MESSAGES</span><span>: &amp;[&amp;</span><span style="color:#b48ead;">str</span><span>] = &amp;[
+</span><span>    &quot;</span><span style="color:#a3be8c;">Invalid input</span><span>&quot;,
+</span><span>    &quot;</span><span style="color:#a3be8c;">Network error</span><span>&quot;, 
+</span><span>    &quot;</span><span style="color:#a3be8c;">Permission denied</span><span>&quot;
+</span><span>];
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">get_config_value</span><span>(</span><span style="color:#bf616a;">key</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; Option&lt;String&gt; {
+</span><span>    </span><span style="color:#a7adba;">// Return owned String for dynamic values
+</span><span>    </span><span style="color:#b48ead;">match</span><span> key {
+</span><span>        &quot;</span><span style="color:#a3be8c;">version</span><span>&quot; =&gt; Some(&quot;</span><span style="color:#a3be8c;">1.0.0</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()),
+</span><span>        &quot;</span><span style="color:#a3be8c;">author</span><span>&quot; =&gt; Some(&quot;</span><span style="color:#a3be8c;">Rust Team</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()),
+</span><span>        &quot;</span><span style="color:#a3be8c;">default_msg</span><span>&quot; =&gt; Some(</span><span style="color:#d08770;">DEFAULT_MESSAGE</span><span>.</span><span style="color:#96b5b4;">to_string</span><span>()),
+</span><span>        _ =&gt; None,
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Default: </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#d08770;">DEFAULT_MESSAGE</span><span>);
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">if let </span><span>Some(version) = </span><span style="color:#96b5b4;">get_config_value</span><span>(&quot;</span><span style="color:#a3be8c;">version</span><span>&quot;) {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Version: </span><span style="color:#d08770;">{}</span><span>&quot;, version);
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="api-design-guidelines"><strong>API Design Guidelines</strong></h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Good - flexible function that accepts any string type
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">validate_email</span><span>(</span><span style="color:#bf616a;">email</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; </span><span style="color:#b48ead;">bool </span><span>{
+</span><span>    email.</span><span style="color:#96b5b4;">contains</span><span>(&#39;</span><span style="color:#a3be8c;">@</span><span>&#39;) &amp;&amp; email.</span><span style="color:#96b5b4;">contains</span><span>(&#39;</span><span style="color:#a3be8c;">.</span><span>&#39;)
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Good - returns owned String when creating new data
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">format_phone_number</span><span>(</span><span style="color:#bf616a;">digits</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; String {
+</span><span>    format!(&quot;</span><span style="color:#a3be8c;">(</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">) </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">-</span><span style="color:#d08770;">{}</span><span>&quot;, 
+</span><span>            &amp;digits[</span><span style="color:#d08770;">0</span><span>..</span><span style="color:#d08770;">3</span><span>], 
+</span><span>            &amp;digits[</span><span style="color:#d08770;">3</span><span>..</span><span style="color:#d08770;">6</span><span>], 
+</span><span>            &amp;digits[</span><span style="color:#d08770;">6</span><span>..</span><span style="color:#d08770;">10</span><span>])
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Avoid - unnecessarily restrictive
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">bad_validate_email</span><span>(</span><span style="color:#bf616a;">email</span><span>: String) -&gt; </span><span style="color:#b48ead;">bool </span><span>{  </span><span style="color:#a7adba;">// Takes ownership unnecessarily
+</span><span>    email.</span><span style="color:#96b5b4;">contains</span><span>(&#39;</span><span style="color:#a3be8c;">@</span><span>&#39;) &amp;&amp; email.</span><span style="color:#96b5b4;">contains</span><span>(&#39;</span><span style="color:#a3be8c;">.</span><span>&#39;)
+</span><span>}
+</span></code></pre>
+<h3 id="memory-efficiency"><strong>Memory Efficiency</strong></h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Efficient - no unnecessary allocations
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">count_words</span><span>(</span><span style="color:#bf616a;">text</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; </span><span style="color:#b48ead;">usize </span><span>{
+</span><span>    text.</span><span style="color:#96b5b4;">split_whitespace</span><span>().</span><span style="color:#96b5b4;">count</span><span>()
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Inefficient - unnecessary String creation
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">inefficient_count_words</span><span>(</span><span style="color:#bf616a;">text</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; </span><span style="color:#b48ead;">usize </span><span>{
+</span><span>    </span><span style="color:#b48ead;">let</span><span> owned = text.</span><span style="color:#96b5b4;">to_string</span><span>();  </span><span style="color:#a7adba;">// Unnecessary allocation
+</span><span>    owned.</span><span style="color:#96b5b4;">split_whitespace</span><span>().</span><span style="color:#96b5b4;">count</span><span>()
+</span><span>}
+</span></code></pre>
+<h3 id="error-handling"><strong>Error Handling</strong></h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">parse_number</span><span>(</span><span style="color:#bf616a;">input</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; Result&lt;</span><span style="color:#b48ead;">i32</span><span>, String&gt; {
+</span><span>    input.</span><span style="color:#96b5b4;">trim</span><span>().</span><span style="color:#96b5b4;">parse</span><span>()
+</span><span>        .</span><span style="color:#96b5b4;">map_err</span><span>(|</span><span style="color:#bf616a;">e</span><span>| format!(&quot;</span><span style="color:#a3be8c;">Failed to parse &#39;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">&#39;: </span><span style="color:#d08770;">{}</span><span>&quot;, input, e))
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">safe_substring</span><span>(</span><span style="color:#bf616a;">text</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>, </span><span style="color:#bf616a;">start</span><span>: </span><span style="color:#b48ead;">usize</span><span>, </span><span style="color:#bf616a;">len</span><span>: </span><span style="color:#b48ead;">usize</span><span>) -&gt; Option&lt;&amp;</span><span style="color:#b48ead;">str</span><span>&gt; {
+</span><span>    </span><span style="color:#b48ead;">if</span><span> start + len &lt;= text.</span><span style="color:#96b5b4;">len</span><span>() {
+</span><span>        Some(&amp;text[start..start + len])
+</span><span>    } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>        None
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h2 id="when-to-use-each-type">When to Use Each Type</h2>
+<h3 id="use-string-when">Use <strong>String</strong> when:</h3>
+<ul>
+<li><strong>Creating or building</strong> strings dynamically</li>
+<li><strong>Modifying</strong> string content (append, insert, remove)</li>
+<li><strong>Owning</strong> string data that needs to outlive the current scope</li>
+<li><strong>Returning</strong> newly created strings from functions</li>
+<li><strong>Storing</strong> strings in data structures that require ownership</li>
+</ul>
+<h3 id="use-str-when">Use <strong>&amp;str</strong> when:</h3>
+<ul>
+<li><strong>Reading</strong> or processing existing strings</li>
+<li><strong>Function parameters</strong> (unless you need ownership)</li>
+<li><strong>String literals</strong> and constants</li>
+<li><strong>Temporary views</strong> into parts of strings</li>
+<li><strong>Performance-critical</strong> code where allocations matter</li>
+</ul>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Example showcasing appropriate usage
+</span><span style="color:#b48ead;">struct </span><span>User {
+</span><span>    </span><span style="color:#bf616a;">name</span><span>: String,        </span><span style="color:#a7adba;">// Owned - user data lives with struct
+</span><span>    </span><span style="color:#bf616a;">email</span><span>: String,       </span><span style="color:#a7adba;">// Owned - user data lives with struct
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>User {
+</span><span>    </span><span style="color:#a7adba;">// Parameter: &amp;str for flexibility
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#bf616a;">name</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>, </span><span style="color:#bf616a;">email</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        User {
+</span><span>            name: name.</span><span style="color:#96b5b4;">to_string</span><span>(),    </span><span style="color:#a7adba;">// Convert to owned
+</span><span>            email: email.</span><span style="color:#96b5b4;">to_string</span><span>(),  </span><span style="color:#a7adba;">// Convert to owned
+</span><span>        }
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Return: &amp;str for efficient access to existing data
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">get_name</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; &amp;</span><span style="color:#b48ead;">str </span><span>{
+</span><span>        &amp;</span><span style="color:#bf616a;">self</span><span>.name
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Return: String for computed/modified data
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">display_name</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; String {
+</span><span>        format!(&quot;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> &lt;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">&gt;</span><span>&quot;, </span><span style="color:#bf616a;">self</span><span>.name, </span><span style="color:#bf616a;">self</span><span>.email)
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<p>Understanding the distinction between <code>String</code> and <code>&amp;str</code> is fundamental to writing efficient Rust code. <strong>Use <strong><strong><code>&amp;str</code></strong></strong> for parameters and temporary access, use <strong><strong><code>String</code></strong></strong> for owned data and dynamic string building</strong>. This approach leads to more flexible APIs, better performance, and clearer code intent. The Rust compiler's automatic coercion between these types makes the transition seamless while maintaining memory safety and zero-cost abstractions.</p>
+<h6 id="sources">Sources</h6>
+<p>https://users.rust-lang.org/t/understanding-when-to-use-string-vs-str/103746</p>
+<p>https://www.reddit.com/r/rust/comments/1695k03/string_vs_str/</p>
+<p>https://users.rust-lang.org/t/whats-the-difference-between-string-and-str/10177</p>
+<p>https://stackoverflow.com/questions/24158114/what-are-the-differences-between-rusts-string-and-str</p>
+<p>https://stackoverflow.com/questions/24158114/what-are-the-differences-between-rusts-string-and-str/24159933</p>
+<p>https://dev.to/alexmercedcoder/in-depth-guide-to-working-with-strings-in-rust-1522</p>
+<p>https://dev.to/sgchris/why-str-is-better-than-string-in-parameters-4jn0</p>
+<p>https://dev.to/dsysd_dev/string-vs-str-in-rust-understanding-the-fundamental-differences-for-efficient-programming-4og8</p>
+<p>https://www.youtube.com/watch?v=tUG_NItm2HY</p>
+<p>https://users.rust-lang.org/t/string-str-string-str/100611</p>
+
+    
+        </div>
+
+    </article>
+</main>
+
+
+    <script type="text/javascript" src="http://localhost/elasticlunr.min.js" defer></script>
+    <script type="text/javascript" src="http://localhost/search_index.en.js" defer></script>
+<script type="text/javascript" src="http://localhost/js.js" defer></script>
+
+</body>
+</html>

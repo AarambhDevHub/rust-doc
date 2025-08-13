@@ -1,0 +1,623 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://localhost/main.css">
+    <link rel="icon" href="https://www.rust-lang.org/static/images/favicon-16x16.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Rust Programming Course! | Installing Rust Toolchain (rustup, cargo) </title>
+</head>
+<body>
+
+<main>
+    
+    <nav>
+            <a href="http:&#x2F;&#x2F;localhost">
+                        <img src="https://www.rust-lang.org/static/images/rust-logo-blk.svg" alt="logo"/>
+                    </a>
+                <!-- -->
+
+            <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+            <div id="trees">
+                <input class="tree-toggle" type="checkbox" id="day-1-introduction"
+                           checked/>
+                    <label class="tree-toggle-label"
+                           for="day-1-introduction">Day 1: Introduction</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 1/chapter-1/">What is Rust and why use it?</a>
+                            </li>
+
+                            <li class="active">
+                                <a href="http://localhost/day 1/chapter-2/">Installing Rust Toolchain (rustup, cargo)</a>
+                            </li>
+
+                            
+                                    
+                                    
+                                        <ul id="toc">
+                                            <li><a href="
+                                                        http://localhost/day 1/chapter-2/#installing-rust-toolchain-rustup-cargo">Installing Rust Toolchain (rustup, cargo)</a>
+                                                    <ul>
+                                                            <li>
+                                                                    <a href="http://localhost/day 1/chapter-2/#primary-installation-method">Primary Installation Method</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 1/chapter-2/#using-rustup-recommended">Using rustup (Recommended)</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 1/chapter-2/#for-linux-macos-unix-systems-including-wsl">For Linux&#x2F;macOS&#x2F;Unix Systems (including WSL):</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 1/chapter-2/#for-windows">For Windows:</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 1/chapter-2/#installation-process">Installation Process</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 1/chapter-2/#post-installation-steps">Post-Installation Steps</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 1/chapter-2/#1-update-your-bash-environment">1. Update Your bash Environment</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 1/chapter-2/#2-verify-installation">2. Verify Installation</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 1/chapter-2/#alternative-installation-method">Alternative Installation Method</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 1/chapter-2/#using-package-managers-ubuntu-debian">Using Package Managers (Ubuntu&#x2F;Debian)</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 1/chapter-2/#custom-installation-locations">Custom Installation Locations</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 1/chapter-2/#managing-your-installation">Managing Your Installation</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 1/chapter-2/#updating-rust">Updating Rust</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 1/chapter-2/#uninstalling-rust">Uninstalling Rust</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 1/chapter-2/#what-gets-installed">What Gets Installed</a>
+                                                                </li>
+                                                            </ul>
+                                                    </li>
+                                            </ul>
+                                    <li >
+                                <a href="http://localhost/day 1/chapter-3/">Setting up Development (VS Code + Hello World)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-4/">Understanding Cargo Project Structure</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-2-basic-syntax-variables"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-2-basic-syntax-variables">Day 2: Basic Syntax &amp; Variables</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 2/chapter-1/">Variables and Mutability in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-2/">Data Types in Rust: Integers, Floats, Booleans, and Characters</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-3/">Constants vs Variables</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-4/">Understanding Shadowing in Rust: A Practical Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-5/">Basic Input&#x2F;Output</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-3-functions-control-flow"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-3-functions-control-flow">Day 3: Functions &amp; Control Flow</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 3/chapter-1/">Function Syntax and Parameters in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-2/">Return Values and Expressions vs Statements</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-3/">If&#x2F;Else Statements in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-4/">Match Expressions in Rust: Powerful Pattern Matching</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-5/">Loops in Rust: loop, while, for Explained</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-4-data-types-deep-dive"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-4-data-types-deep-dive">Day 4: Data Types Deep Dive</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 4/chapter-1/">Compound Types (Tuples, Arrays)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-2/">String vs &amp;str in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-3/">Vector Basics in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-4/">Type Annotations and Inference in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-5/">Practical Rust Exercises</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-5-practice-review"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-5-practice-review">Day 5: Practice &amp; Review</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 5/chapter-1/">Day 5: Practice &amp; Review</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-6-ownership-fundamentals"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-6-ownership-fundamentals">Day 6: Ownership Fundamentals</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 6/chapter-1/">Ownership in Rust: A Detailed Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-2/">Stack vs Heap in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-3/">Understanding Ownership in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-4/">Move Semantics in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-5/">Copy Trait in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-7-references-borrowing"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-7-references-borrowing">Day 7: References &amp; Borrowing</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 7/chapter-1/">Immutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-2/">Mutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-3/">Borrowing Rules</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-4/">Reference Lifetime Basics</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-5/">Common Borrowing Errors and Solutions</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-8-slices"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-8-slices">Day 8: Slices</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 8/chapter-1/">String Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-2/">Array Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-3/">Slice Syntax and Usage</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-4/">Practical Applications</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-5/">Memory Safety Benefits</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-9-advanced-ownership"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-9-advanced-ownership">Day 9: Advanced Ownership</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 9/chapter-1/">Clone Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-2/">Drop Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-3/">RAII Pattern</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-4/">Memory Management Comparison with Other Languages</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-5/">Best Practices (Advanced Ownership)</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-10-ownership-practice"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-10-ownership-practice">Day 10: Ownership Practice</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 10/chapter-1/">Complex Ownership Scenarios</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-2/">Debugging Ownership Errors</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-3/">Code Refactoring Exercises</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-4/">Group Problem-Solving</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-11-structs-basics"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-11-structs-basics">Day 11: Structs Basics</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 11/chapter-1/">Defining and Instantiating Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-2/">Field Access and Modification</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-3/">Tuple Structs and Unit Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-4/">Struct Update Syntax</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-5/">Ownership of Struct Data</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-12-methods-associated-functions"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-12-methods-associated-functions">Day 12: Methods &amp; Associated Functions</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 12/chapter-1/">Implementing Methods with impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-2/">&amp;self, &amp;mut self, and self</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-3/">Associated Functions (like Constructors)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-4/">Multiple impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-5/">Method Chaining</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-13-advanced-struct-concepts"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-13-advanced-struct-concepts">Day 13: Advanced Struct Concepts</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 13/chapter-1/">Struct Lifetime Parameters</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-2/">Debug Trait and Custom Formatting</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-3/">Builder Pattern Implementation</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-4/">Struct Composition</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-5/">Best Practices for Struct Design</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-14-enums-pattern-matching"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-14-enums-pattern-matching">Day 14: Enums &amp; Pattern Matching</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 14/chapter-1/">Defining Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-2/">Enum Variants with Data</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-3/">Option&lt;T&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-4/">Result&lt;T, E&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-5/">Advanced Match Patterns in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-15-practice-project"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-15-practice-project">Day 15: Practice Project</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 15/chapter-1/">Building a Simple CLI Calculator in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-16-vectors"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-16-vectors">Day 16: Vectors</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 16/chapter-1/">Creating and Updating Vectors</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-2/">Vector Methods: push, pop, iter</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-3/">Accessing Vector Elements Safely</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-4/">Vector of Different Types with Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-5/">Performance Considerations</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-17-hashmaps-other-collections"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-17-hashmaps-other-collections">Day 17: HashMaps &amp; Other Collections</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 17/chapter-1/">HashMap Creation and Manipulation</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-2/">Keys and Values Ownership</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-3/">HashMap Methods and Iteration</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-4/">When to Use Different Collections</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-5/">BTreeMap Introduction</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-18-error-handling"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-18-error-handling">Day 18: Error Handling</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 18/chapter-1/">Panic! and When to Use It</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 18/chapter-2/">Result&lt;T, E&gt; in Depth</a>
+                            </li>
+
+                            </ul>
+                </div>
+        </nav>
+    <article>
+
+        <div id="on_right">
+                <span id="search-ico" class="ms-Icon--Search"></span>
+            </div>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="Search as you type...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        <div id="wrap">
+            
+        <h1 id="installing-rust-toolchain-rustup-cargo">Installing Rust Toolchain (rustup, cargo)</h1>
+<p>Installing the Rust toolchain is straightforward using the official <strong>rustup</strong> installer, which automatically installs both <code>rustup</code> (the toolchain manager), <code>cargo</code> (the package manager), and <code>rustc</code> (the compiler) in one convenient process.</p>
+<h2 id="primary-installation-method">Primary Installation Method</h2>
+<h2 id="using-rustup-recommended">Using rustup (Recommended)</h2>
+<p><strong>rustup</strong> is the official Rust toolchain installer and the preferred method for installing Rust.</p>
+<h2 id="for-linux-macos-unix-systems-including-wsl">For Linux/macOS/Unix Systems (including WSL):</h2>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">curl --proto </span><span>&#39;</span><span style="color:#a3be8c;">=https</span><span>&#39;</span><span style="color:#bf616a;"> --tlsv1</span><span>.2</span><span style="color:#bf616a;"> -sSf</span><span> https://sh.rustup.rs | </span><span style="color:#bf616a;">sh
+</span></code></pre>
+<p>This command downloads and runs the official installer script.</p>
+<h2 id="for-windows">For Windows:</h2>
+<ol>
+<li>Download and run <code>rustup-init.exe</code> from <a href="https://rustup.rs">rustup.rs</a></li>
+</ol>
+<ul>
+<li>Follow the on-screen instructions</li>
+<li>You may need to install Visual Studio C++ Build Tools when prompted</li>
+</ul>
+<h2 id="installation-process">Installation Process</h2>
+<p>During installation, you'll see options like:</p>
+<ul>
+<li><strong>Option 1</strong>: Proceed with installation (default) - recommended for most users</li>
+<li><strong>Option 2</strong>: Customize installation</li>
+<li><strong>Option 3</strong>: Cancel installation</li>
+</ul>
+<p>Choose option 1 for a standard installation. The installer will:</p>
+<ul>
+<li>Download and install <code>rustc</code>, <code>cargo</code>, <code>rustup</code>, and other standard tools</li>
+<li>Install everything to the Cargo bin directory (<code>$HOME/.cargo/bin</code> on Unix, <code>%USERPROFILE%\.cargo\bin</code> on Windows)</li>
+</ul>
+<p>Automatically add this directory to your PATH environment variable</p>
+<h2 id="post-installation-steps">Post-Installation Steps</h2>
+<h2 id="1-update-your-bash-environment">1. Update Your bash Environment</h2>
+<p>After installation, either restart your terminal or run:</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#96b5b4;">source </span><span>&quot;$</span><span style="color:#bf616a;">HOME</span><span style="color:#a3be8c;">/.cargo/env</span><span>&quot;
+</span></code></pre>
+<p>This loads the Rust environment into your current bash session.</p>
+<h2 id="2-verify-installation">2. Verify Installation</h2>
+<p>Check that everything installed correctly:</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">rustc --version
+</span><span style="color:#bf616a;">cargo --version
+</span><span style="color:#bf616a;">rustup --version
+</span></code></pre>
+<p>You should see version information for each tool, confirming successful installation.</p>
+<h2 id="alternative-installation-method">Alternative Installation Method</h2>
+<h2 id="using-package-managers-ubuntu-debian">Using Package Managers (Ubuntu/Debian)</h2>
+<p>You can also install Rust through your system's package manager, though this typically provides older versions:</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span> apt install cargo
+</span></code></pre>
+<p>This installs both cargo and rustc system-wide. However, the <strong>rustup method is preferred</strong> because it:</p>
+<ul>
+<li>Provides the latest Rust version</li>
+<li>Allows easy toolchain management and updates</li>
+<li>Installs per-user rather than system-wide</li>
+<li>Doesn't require sudo privileges</li>
+</ul>
+<h2 id="custom-installation-locations">Custom Installation Locations</h2>
+<p>If you need to install Rust in a specific directory, you can set environment variables before running the installer:</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#b48ead;">export </span><span style="color:#bf616a;">CARGO_HOME</span><span>=</span><span style="color:#a3be8c;">/your/custom/path/.cargo
+</span><span style="color:#b48ead;">export </span><span style="color:#bf616a;">RUSTUP_HOME</span><span>=</span><span style="color:#a3be8c;">/your/custom/path/.rustup
+</span><span style="color:#bf616a;">curl --proto </span><span>&#39;</span><span style="color:#a3be8c;">=https</span><span>&#39;</span><span style="color:#bf616a;"> --tlsv1</span><span>.2</span><span style="color:#bf616a;"> -sSf</span><span> https://sh.rustup.rs | </span><span style="color:#bf616a;">sh
+</span></code></pre>
+<p>Make sure to add <code>CARGO_HOME/bin</code> to your PATH and keep these environment variables set when using the toolchain.</p>
+<h2 id="managing-your-installation">Managing Your Installation</h2>
+<h2 id="updating-rust">Updating Rust</h2>
+<p>Keep your Rust installation current with:</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">rustup</span><span> update
+</span></code></pre>
+<h2 id="uninstalling-rust">Uninstalling Rust</h2>
+<p>If you ever need to remove Rust completely:</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">rustup</span><span> self uninstall
+</span></code></pre>
+<p>This removes all installed toolchains and rustup itself.</p>
+<h2 id="what-gets-installed">What Gets Installed</h2>
+<p>The rustup installation provides:</p>
+<ul>
+<li><strong>rustc</strong>: The Rust compiler</li>
+<li><strong>cargo</strong>: Package manager and build system</li>
+<li><strong>rustup</strong>: Toolchain manager for updating and managing Rust versions</li>
+<li><strong>rustfmt</strong>: Code formatting tool</li>
+<li><strong>clippy</strong>: Linting tool</li>
+<li><strong>rust-docs</strong>: Local documentation</li>
+</ul>
+<p>After installation, you'll have everything needed to start developing Rust applications, with cargo serving as your primary interface for creating projects, managing dependencies, and building applications.</p>
+
+    
+        </div>
+
+    </article>
+</main>
+
+
+    <script type="text/javascript" src="http://localhost/elasticlunr.min.js" defer></script>
+    <script type="text/javascript" src="http://localhost/search_index.en.js" defer></script>
+<script type="text/javascript" src="http://localhost/js.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,1929 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://localhost/main.css">
+    <link rel="icon" href="https://www.rust-lang.org/static/images/favicon-16x16.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Rust Programming Course! | Result&lt;T, E&gt; Enum in Rust </title>
+</head>
+<body>
+
+<main>
+    
+    <nav>
+            <a href="http:&#x2F;&#x2F;localhost">
+                        <img src="https://www.rust-lang.org/static/images/rust-logo-blk.svg" alt="logo"/>
+                    </a>
+                <!-- -->
+
+            <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+            <div id="trees">
+                <input class="tree-toggle" type="checkbox" id="day-1-introduction"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-1-introduction">Day 1: Introduction</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 1/chapter-1/">What is Rust and why use it?</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-2/">Installing Rust Toolchain (rustup, cargo)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-3/">Setting up Development (VS Code + Hello World)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-4/">Understanding Cargo Project Structure</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-2-basic-syntax-variables"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-2-basic-syntax-variables">Day 2: Basic Syntax &amp; Variables</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 2/chapter-1/">Variables and Mutability in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-2/">Data Types in Rust: Integers, Floats, Booleans, and Characters</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-3/">Constants vs Variables</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-4/">Understanding Shadowing in Rust: A Practical Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-5/">Basic Input&#x2F;Output</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-3-functions-control-flow"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-3-functions-control-flow">Day 3: Functions &amp; Control Flow</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 3/chapter-1/">Function Syntax and Parameters in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-2/">Return Values and Expressions vs Statements</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-3/">If&#x2F;Else Statements in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-4/">Match Expressions in Rust: Powerful Pattern Matching</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-5/">Loops in Rust: loop, while, for Explained</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-4-data-types-deep-dive"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-4-data-types-deep-dive">Day 4: Data Types Deep Dive</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 4/chapter-1/">Compound Types (Tuples, Arrays)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-2/">String vs &amp;str in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-3/">Vector Basics in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-4/">Type Annotations and Inference in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-5/">Practical Rust Exercises</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-5-practice-review"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-5-practice-review">Day 5: Practice &amp; Review</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 5/chapter-1/">Day 5: Practice &amp; Review</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-6-ownership-fundamentals"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-6-ownership-fundamentals">Day 6: Ownership Fundamentals</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 6/chapter-1/">Ownership in Rust: A Detailed Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-2/">Stack vs Heap in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-3/">Understanding Ownership in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-4/">Move Semantics in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-5/">Copy Trait in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-7-references-borrowing"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-7-references-borrowing">Day 7: References &amp; Borrowing</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 7/chapter-1/">Immutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-2/">Mutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-3/">Borrowing Rules</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-4/">Reference Lifetime Basics</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-5/">Common Borrowing Errors and Solutions</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-8-slices"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-8-slices">Day 8: Slices</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 8/chapter-1/">String Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-2/">Array Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-3/">Slice Syntax and Usage</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-4/">Practical Applications</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-5/">Memory Safety Benefits</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-9-advanced-ownership"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-9-advanced-ownership">Day 9: Advanced Ownership</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 9/chapter-1/">Clone Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-2/">Drop Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-3/">RAII Pattern</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-4/">Memory Management Comparison with Other Languages</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-5/">Best Practices (Advanced Ownership)</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-10-ownership-practice"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-10-ownership-practice">Day 10: Ownership Practice</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 10/chapter-1/">Complex Ownership Scenarios</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-2/">Debugging Ownership Errors</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-3/">Code Refactoring Exercises</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-4/">Group Problem-Solving</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-11-structs-basics"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-11-structs-basics">Day 11: Structs Basics</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 11/chapter-1/">Defining and Instantiating Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-2/">Field Access and Modification</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-3/">Tuple Structs and Unit Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-4/">Struct Update Syntax</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-5/">Ownership of Struct Data</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-12-methods-associated-functions"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-12-methods-associated-functions">Day 12: Methods &amp; Associated Functions</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 12/chapter-1/">Implementing Methods with impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-2/">&amp;self, &amp;mut self, and self</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-3/">Associated Functions (like Constructors)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-4/">Multiple impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-5/">Method Chaining</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-13-advanced-struct-concepts"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-13-advanced-struct-concepts">Day 13: Advanced Struct Concepts</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 13/chapter-1/">Struct Lifetime Parameters</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-2/">Debug Trait and Custom Formatting</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-3/">Builder Pattern Implementation</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-4/">Struct Composition</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-5/">Best Practices for Struct Design</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-14-enums-pattern-matching"
+                           checked/>
+                    <label class="tree-toggle-label"
+                           for="day-14-enums-pattern-matching">Day 14: Enums &amp; Pattern Matching</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 14/chapter-1/">Defining Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-2/">Enum Variants with Data</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-3/">Option&lt;T&gt; Enum in Rust</a>
+                            </li>
+
+                            <li class="active">
+                                <a href="http://localhost/day 14/chapter-4/">Result&lt;T, E&gt; Enum in Rust</a>
+                            </li>
+
+                            
+                                    
+                                    
+                                        <ul id="toc">
+                                            <li><a href="
+                                                        http://localhost/day 14/chapter-4/#result-t-e-enum-in-rust-comprehensive-documentation-for-beginners">Result&lt;T, E&gt; Enum in Rust: Comprehensive Documentation for Beginners</a>
+                                                    <ul>
+                                                            <li>
+                                                                    <a href="http://localhost/day 14/chapter-4/#the-professional-vegetarian-kitchen-analogy-man-fried-egg">The Professional Vegetarian Kitchen Analogy 👨🍳</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 14/chapter-4/#what-is-result-t-e">What is Result&lt;T, E&gt;?</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 14/chapter-4/#basic-result-t-e-usage">Basic Result&lt;T, E&gt; Usage</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 14/chapter-4/#essential-result-t-e-methods">Essential Result&lt;T, E&gt; Methods</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 14/chapter-4/#the-question-mark-operator-error-propagation">The Question Mark Operator (?) - Error Propagation</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 14/chapter-4/#advanced-result-t-e-patterns">Advanced Result&lt;T, E&gt; Patterns</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 14/chapter-4/#best-practices-and-patterns">Best Practices and Patterns</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 14/chapter-4/#common-mistakes-to-avoid">Common Mistakes to Avoid</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 14/chapter-4/#summary-and-key-takeaways">Summary and Key Takeaways</a>
+                                                                </li>
+                                                            </ul>
+                                                    </li>
+                                            </ul>
+                                    <li >
+                                <a href="http://localhost/day 14/chapter-5/">Advanced Match Patterns in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-15-practice-project"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-15-practice-project">Day 15: Practice Project</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 15/chapter-1/">Building a Simple CLI Calculator in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-16-vectors"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-16-vectors">Day 16: Vectors</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 16/chapter-1/">Creating and Updating Vectors</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-2/">Vector Methods: push, pop, iter</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-3/">Accessing Vector Elements Safely</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-4/">Vector of Different Types with Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-5/">Performance Considerations</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-17-hashmaps-other-collections"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-17-hashmaps-other-collections">Day 17: HashMaps &amp; Other Collections</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 17/chapter-1/">HashMap Creation and Manipulation</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-2/">Keys and Values Ownership</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-3/">HashMap Methods and Iteration</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-4/">When to Use Different Collections</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-5/">BTreeMap Introduction</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-18-error-handling"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-18-error-handling">Day 18: Error Handling</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 18/chapter-1/">Panic! and When to Use It</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 18/chapter-2/">Result&lt;T, E&gt; in Depth</a>
+                            </li>
+
+                            </ul>
+                </div>
+        </nav>
+    <article>
+
+        <div id="on_right">
+                <span id="search-ico" class="ms-Icon--Search"></span>
+            </div>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="Search as you type...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        <div id="wrap">
+            
+        <h1 id="result-t-e-enum-in-rust-comprehensive-documentation-for-beginners">Result&lt;T, E&gt; Enum in Rust: Comprehensive Documentation for Beginners</h1>
+<p>Understanding <code>Result&lt;T, E&gt;</code> is like learning to <strong>run a professional vegetarian kitchen where every cooking step can either succeed beautifully or fail spectacularly</strong> - and you need to know not just <em>if</em> something went wrong, but <em>exactly why</em> it failed so you can fix it. Unlike <code>Option&lt;T&gt;</code> which simply tells you "something is missing," <code>Result&lt;T, E&gt;</code> is your kitchen's incident report system that captures both successes and detailed failure information.</p>
+<h2 id="the-professional-vegetarian-kitchen-analogy-man-fried-egg">The Professional Vegetarian Kitchen Analogy 👨🍳</h2>
+<h3 id="imagine-you-re-head-chef-in-a-busy-vegetarian-restaurant">Imagine You're Head Chef in a Busy Vegetarian Restaurant</h3>
+<p><strong>Option<T> Approach (Limited Information):</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// ❌ Only tells you if something failed, not why
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">cook_dish</span><span>() -&gt; Option&lt;String&gt; {
+</span><span>    </span><span style="color:#a7adba;">// Either returns Some(&quot;Delicious pasta&quot;) or None
+</span><span>    </span><span style="color:#a7adba;">// But if None, you don&#39;t know what went wrong!
+</span><span>}
+</span></code></pre>
+<p><strong>Result&lt;T, E&gt; Approach (Full Kitchen Report):</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// ✅ Tells you exactly what happened - success or detailed failure
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">cook_dish</span><span>() -&gt; Result&lt;String, CookingError&gt; {
+</span><span>    </span><span style="color:#a7adba;">// Returns either:
+</span><span>    </span><span style="color:#a7adba;">// Ok(&quot;Perfect quinoa bowl&quot;) - success with the dish
+</span><span>    </span><span style="color:#a7adba;">// Err(CookingError::OutOfIngredient(&quot;quinoa&quot;)) - specific problem
+</span><span>    </span><span style="color:#a7adba;">// Err(CookingError::OverheatedOven(450)) - another specific problem
+</span><span>}
+</span></code></pre>
+<p><strong>Why This Is Better:</strong></p>
+<ul>
+<li>🎯 <strong>Success details</strong> - Know exactly what you accomplished</li>
+<li>🔍 <strong>Specific error info</strong> - Understand exactly what went wrong</li>
+<li>🛠️ <strong>Actionable feedback</strong> - Can take specific steps to fix problems</li>
+<li>📊 <strong>Kitchen management</strong> - Track patterns in what goes wrong</li>
+<li>🚫 <strong>No silent failures</strong> - Every problem is captured and must be handled</li>
+</ul>
+<h2 id="what-is-result-t-e">What is Result&lt;T, E&gt;?</h2>
+<h3 id="core-concept">Core Concept</h3>
+<p><code>Result&lt;T, E&gt;</code> is Rust's primary error-handling mechanism. It's an enum with exactly two variants:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">enum </span><span>Result&lt;T, E&gt; {
+</span><span>    Ok(T),      </span><span style="color:#a7adba;">// Success: contains the successful result of type T
+</span><span>    Err(E),     </span><span style="color:#a7adba;">// Failure: contains the error information of type E
+</span><span>}
+</span></code></pre>
+<p><strong>Key Benefits:</strong></p>
+<ul>
+<li><strong>Explicit error handling</strong> - Must handle both success and failure cases</li>
+<li><strong>Rich error information</strong> - Errors can carry detailed context</li>
+<li><strong>No exceptions</strong> - No hidden control flow or crashes</li>
+<li><strong>Composable</strong> - Can chain operations and propagate errors elegantly</li>
+<li><strong>Type safe</strong> - Compiler ensures you handle all cases</li>
+</ul>
+<h3 id="the-kitchen-incident-system">The Kitchen Incident System</h3>
+<p>Think of <code>Result&lt;T, E&gt;</code> like a comprehensive kitchen reporting system:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span>#[</span><span style="color:#bf616a;">derive</span><span>(Debug)]
+</span><span style="color:#b48ead;">enum </span><span>CookingError {
+</span><span>    MissingIngredient(String),
+</span><span>    EquipmentFailure(String),
+</span><span>    TemperatureTooHigh(</span><span style="color:#b48ead;">u32</span><span>),
+</span><span>    TemperatureTooLow(</span><span style="color:#b48ead;">u32</span><span>),
+</span><span>    TimingError { step: String, expected: </span><span style="color:#b48ead;">u32</span><span>, actual: </span><span style="color:#b48ead;">u32 </span><span>},
+</span><span>    ContaminationRisk(String),
+</span><span>}
+</span><span>
+</span><span>#[</span><span style="color:#bf616a;">derive</span><span>(Debug)]
+</span><span style="color:#b48ead;">struct </span><span>Dish {
+</span><span>    </span><span style="color:#bf616a;">name</span><span>: String,
+</span><span>    </span><span style="color:#bf616a;">ingredients</span><span>: Vec&lt;String&gt;,
+</span><span>    </span><span style="color:#bf616a;">cook_time_minutes</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">prepare_quinoa_bowl</span><span>() -&gt; Result&lt;Dish, CookingError&gt; {
+</span><span>    </span><span style="color:#a7adba;">// Check if we have quinoa
+</span><span>    </span><span style="color:#b48ead;">if </span><span>!</span><span style="color:#96b5b4;">pantry_has_ingredient</span><span>(&quot;</span><span style="color:#a3be8c;">quinoa</span><span>&quot;) {
+</span><span>        </span><span style="color:#b48ead;">return </span><span>Err(CookingError::MissingIngredient(&quot;</span><span style="color:#a3be8c;">quinoa</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()));
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Check if stove is working
+</span><span>    </span><span style="color:#b48ead;">if </span><span>!</span><span style="color:#96b5b4;">equipment_functional</span><span>(&quot;</span><span style="color:#a3be8c;">stove</span><span>&quot;) {
+</span><span>        </span><span style="color:#b48ead;">return </span><span>Err(CookingError::EquipmentFailure(&quot;</span><span style="color:#a3be8c;">stove not heating</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()));
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Check temperature
+</span><span>    </span><span style="color:#b48ead;">let</span><span> stove_temp = </span><span style="color:#96b5b4;">get_stove_temperature</span><span>();
+</span><span>    </span><span style="color:#b48ead;">if</span><span> stove_temp &gt; </span><span style="color:#d08770;">400 </span><span>{
+</span><span>        </span><span style="color:#b48ead;">return </span><span>Err(CookingError::TemperatureTooHigh(stove_temp));
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// If everything is fine, return success
+</span><span>    Ok(Dish {
+</span><span>        name: &quot;</span><span style="color:#a3be8c;">Quinoa Power Bowl</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        ingredients: vec![&quot;</span><span style="color:#a3be8c;">quinoa</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), &quot;</span><span style="color:#a3be8c;">vegetables</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()],
+</span><span>        cook_time_minutes: </span><span style="color:#d08770;">25</span><span>,
+</span><span>    })
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">pantry_has_ingredient</span><span>(</span><span style="color:#bf616a;">_ingredient</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; </span><span style="color:#b48ead;">bool </span><span>{ </span><span style="color:#d08770;">true </span><span>} </span><span style="color:#a7adba;">// Simplified
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">equipment_functional</span><span>(</span><span style="color:#bf616a;">_equipment</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; </span><span style="color:#b48ead;">bool </span><span>{ </span><span style="color:#d08770;">true </span><span>}   </span><span style="color:#a7adba;">// Simplified
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">get_stove_temperature</span><span>() -&gt; </span><span style="color:#b48ead;">u32 </span><span>{ </span><span style="color:#d08770;">350 </span><span>}                   </span><span style="color:#a7adba;">// Simplified
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">match </span><span style="color:#96b5b4;">prepare_quinoa_bowl</span><span>() {
+</span><span>        Ok(dish) =&gt; {
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">✅ Success! Made </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> in </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> minutes</span><span>&quot;, dish.name, dish.cook_time_minutes);
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">   Ingredients: </span><span style="color:#d08770;">{:?}</span><span>&quot;, dish.ingredients);
+</span><span>        }
+</span><span>        Err(CookingError::MissingIngredient(ingredient)) =&gt; {
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">❌ Can&#39;t cook: missing </span><span style="color:#d08770;">{}</span><span>&quot;, ingredient);
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">   Action: Add </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> to shopping list</span><span>&quot;, ingredient);
+</span><span>        }
+</span><span>        Err(CookingError::EquipmentFailure(issue)) =&gt; {
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">❌ Equipment problem: </span><span style="color:#d08770;">{}</span><span>&quot;, issue);
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">   Action: Call maintenance team</span><span>&quot;);
+</span><span>        }
+</span><span>        Err(CookingError::TemperatureTooHigh(temp)) =&gt; {
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">❌ Stove too hot: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">°F</span><span>&quot;, temp);
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">   Action: Lower heat and wait to cool down</span><span>&quot;);
+</span><span>        }
+</span><span>        Err(other_error) =&gt; {
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">❌ Other cooking error: </span><span style="color:#d08770;">{:?}</span><span>&quot;, other_error);
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<p>Each kitchen operation tells you exactly what happened - no guessing required!</p>
+<h2 id="basic-result-t-e-usage">Basic Result&lt;T, E&gt; Usage</h2>
+<h3 id="simple-operations-with-results">Simple Operations with Results</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Basic arithmetic that can fail
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">safe_divide</span><span>(</span><span style="color:#bf616a;">numerator</span><span>: </span><span style="color:#b48ead;">f64</span><span>, </span><span style="color:#bf616a;">denominator</span><span>: </span><span style="color:#b48ead;">f64</span><span>) -&gt; Result&lt;</span><span style="color:#b48ead;">f64</span><span>, String&gt; {
+</span><span>    </span><span style="color:#b48ead;">if</span><span> denominator == </span><span style="color:#d08770;">0.0 </span><span>{
+</span><span>        Err(&quot;</span><span style="color:#a3be8c;">Cannot divide by zero - that&#39;s mathematically impossible!</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>())
+</span><span>    } </span><span style="color:#b48ead;">else if</span><span> denominator.</span><span style="color:#96b5b4;">abs</span><span>() &lt; </span><span style="color:#b48ead;">f64</span><span>::</span><span style="color:#d08770;">EPSILON </span><span>{
+</span><span>        Err(&quot;</span><span style="color:#a3be8c;">Denominator too close to zero - results would be unreliable</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>())
+</span><span>    } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>        Ok(numerator / denominator)
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Parsing ingredients from strings
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">parse_ingredient_amount</span><span>(</span><span style="color:#bf616a;">input</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; Result&lt;</span><span style="color:#b48ead;">f64</span><span>, String&gt; {
+</span><span>    input.parse::&lt;</span><span style="color:#b48ead;">f64</span><span>&gt;().</span><span style="color:#96b5b4;">map_err</span><span>(|_| {
+</span><span>        format!(&quot;</span><span style="color:#a3be8c;">&#39;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">&#39; is not a valid number - please use format like &#39;2.5&#39;</span><span>&quot;, input)
+</span><span>    })
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Converting temperature units
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">fahrenheit_to_celsius</span><span>(</span><span style="color:#bf616a;">f</span><span>: </span><span style="color:#b48ead;">f64</span><span>) -&gt; Result&lt;</span><span style="color:#b48ead;">f64</span><span>, String&gt; {
+</span><span>    </span><span style="color:#b48ead;">if</span><span> f &lt; -</span><span style="color:#d08770;">459.67 </span><span>{
+</span><span>        Err(format!(&quot;</span><span style="color:#a3be8c;">Temperature </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">°F is below absolute zero!</span><span>&quot;, f))
+</span><span>    } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>        Ok((f - </span><span style="color:#d08770;">32.0</span><span>) * </span><span style="color:#d08770;">5.0 </span><span>/ </span><span style="color:#d08770;">9.0</span><span>)
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// Test division
+</span><span>    </span><span style="color:#b48ead;">match </span><span style="color:#96b5b4;">safe_divide</span><span>(</span><span style="color:#d08770;">10.0</span><span>, </span><span style="color:#d08770;">2.0</span><span>) {
+</span><span>        Ok(result) =&gt; println!(&quot;</span><span style="color:#a3be8c;">✅ 10 ÷ 2 = </span><span style="color:#d08770;">{}</span><span>&quot;, result),
+</span><span>        Err(error) =&gt; println!(&quot;</span><span style="color:#a3be8c;">❌ Division failed: </span><span style="color:#d08770;">{}</span><span>&quot;, error),
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">match </span><span style="color:#96b5b4;">safe_divide</span><span>(</span><span style="color:#d08770;">10.0</span><span>, </span><span style="color:#d08770;">0.0</span><span>) {
+</span><span>        Ok(result) =&gt; println!(&quot;</span><span style="color:#a3be8c;">✅ 10 ÷ 0 = </span><span style="color:#d08770;">{}</span><span>&quot;, result),
+</span><span>        Err(error) =&gt; println!(&quot;</span><span style="color:#a3be8c;">❌ Division failed: </span><span style="color:#d08770;">{}</span><span>&quot;, error),
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Test parsing
+</span><span>    </span><span style="color:#b48ead;">let</span><span> amounts = [&quot;</span><span style="color:#a3be8c;">2.5</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">invalid</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">0.75</span><span>&quot;];
+</span><span>    </span><span style="color:#b48ead;">for</span><span> amount_str in &amp;amounts {
+</span><span>        </span><span style="color:#b48ead;">match </span><span style="color:#96b5b4;">parse_ingredient_amount</span><span>(amount_str) {
+</span><span>            Ok(amount) =&gt; println!(&quot;</span><span style="color:#a3be8c;">✅ Parsed &#39;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">&#39; as </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> cups</span><span>&quot;, amount_str, amount),
+</span><span>            Err(error) =&gt; println!(&quot;</span><span style="color:#a3be8c;">❌ Parse error: </span><span style="color:#d08770;">{}</span><span>&quot;, error),
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Test temperature conversion
+</span><span>    </span><span style="color:#b48ead;">let</span><span> temperatures = [</span><span style="color:#d08770;">32.0</span><span>, </span><span style="color:#d08770;">100.0</span><span>, -</span><span style="color:#d08770;">500.0</span><span>];
+</span><span>    </span><span style="color:#b48ead;">for</span><span> temp_f in &amp;temperatures {
+</span><span>        </span><span style="color:#b48ead;">match </span><span style="color:#96b5b4;">fahrenheit_to_celsius</span><span>(*temp_f) {
+</span><span>            Ok(temp_c) =&gt; println!(&quot;</span><span style="color:#a3be8c;">✅ </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">°F = </span><span style="color:#d08770;">{:.1}</span><span style="color:#a3be8c;">°C</span><span>&quot;, temp_f, temp_c),
+</span><span>            Err(error) =&gt; println!(&quot;</span><span style="color:#a3be8c;">❌ Conversion error: </span><span style="color:#d08770;">{}</span><span>&quot;, error),
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h3 id="pattern-matching-with-result-t-e">Pattern Matching with Result&lt;T, E&gt;</h3>
+<p><strong>The most fundamental way to work with <code>Result&lt;T, E&gt;</code> is pattern matching:</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span>#[</span><span style="color:#bf616a;">derive</span><span>(Debug)]
+</span><span style="color:#b48ead;">enum </span><span>RecipeError {
+</span><span>    MissingIngredients(Vec&lt;String&gt;),
+</span><span>    InvalidQuantity(String),
+</span><span>    UnsuitableEquipment(String),
+</span><span>    TimingConflict(String),
+</span><span>}
+</span><span>
+</span><span>#[</span><span style="color:#bf616a;">derive</span><span>(Debug)]
+</span><span style="color:#b48ead;">struct </span><span>Recipe {
+</span><span>    </span><span style="color:#bf616a;">name</span><span>: String,
+</span><span>    </span><span style="color:#bf616a;">servings</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>    </span><span style="color:#bf616a;">estimated_time</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">validate_recipe_request</span><span>(
+</span><span>    </span><span style="color:#bf616a;">recipe_name</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>,
+</span><span>    </span><span style="color:#bf616a;">requested_servings</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>    </span><span style="color:#bf616a;">available_ingredients</span><span>: &amp;[&amp;</span><span style="color:#b48ead;">str</span><span>]
+</span><span>) -&gt; Result&lt;Recipe, RecipeError&gt; {
+</span><span>    </span><span style="color:#a7adba;">// Check for valid servings
+</span><span>    </span><span style="color:#b48ead;">if</span><span> requested_servings == </span><span style="color:#d08770;">0 </span><span>|| requested_servings &gt; </span><span style="color:#d08770;">20 </span><span>{
+</span><span>        </span><span style="color:#b48ead;">return </span><span>Err(RecipeError::InvalidQuantity(
+</span><span>            format!(&quot;</span><span style="color:#a3be8c;">Cannot make </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> servings - range is 1-20</span><span>&quot;, requested_servings)
+</span><span>        ));
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Check required ingredients based on recipe
+</span><span>    </span><span style="color:#b48ead;">let</span><span> required_ingredients = </span><span style="color:#b48ead;">match</span><span> recipe_name {
+</span><span>        &quot;</span><span style="color:#a3be8c;">Quinoa Bowl</span><span>&quot; =&gt; vec![&quot;</span><span style="color:#a3be8c;">quinoa</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">vegetables</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">olive oil</span><span>&quot;],
+</span><span>        &quot;</span><span style="color:#a3be8c;">Pasta Primavera</span><span>&quot; =&gt; vec![&quot;</span><span style="color:#a3be8c;">pasta</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">vegetables</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">tomato sauce</span><span>&quot;],
+</span><span>        &quot;</span><span style="color:#a3be8c;">Lentil Soup</span><span>&quot; =&gt; vec![&quot;</span><span style="color:#a3be8c;">lentils</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">vegetables</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">vegetable broth</span><span>&quot;],
+</span><span>        _ =&gt; </span><span style="color:#b48ead;">return </span><span>Err(RecipeError::UnsuitableEquipment(
+</span><span>            format!(&quot;</span><span style="color:#a3be8c;">Recipe &#39;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">&#39; not in our cookbook</span><span>&quot;, recipe_name)
+</span><span>        )),
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> missing: Vec&lt;String&gt; = required_ingredients
+</span><span>        .</span><span style="color:#96b5b4;">into_iter</span><span>()
+</span><span>        .</span><span style="color:#96b5b4;">filter</span><span>(|</span><span style="color:#bf616a;">ingredient</span><span>| !available_ingredients.</span><span style="color:#96b5b4;">contains</span><span>(ingredient))
+</span><span>        .</span><span style="color:#96b5b4;">map</span><span>(|</span><span style="color:#bf616a;">s</span><span>| s.</span><span style="color:#96b5b4;">to_string</span><span>())
+</span><span>        .</span><span style="color:#96b5b4;">collect</span><span>();
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">if </span><span>!missing.</span><span style="color:#96b5b4;">is_empty</span><span>() {
+</span><span>        </span><span style="color:#b48ead;">return </span><span>Err(RecipeError::MissingIngredients(missing));
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Estimate cooking time
+</span><span>    </span><span style="color:#b48ead;">let</span><span> base_time = </span><span style="color:#b48ead;">match</span><span> recipe_name {
+</span><span>        &quot;</span><span style="color:#a3be8c;">Quinoa Bowl</span><span>&quot; =&gt; </span><span style="color:#d08770;">25</span><span>,
+</span><span>        &quot;</span><span style="color:#a3be8c;">Pasta Primavera</span><span>&quot; =&gt; </span><span style="color:#d08770;">30</span><span>,
+</span><span>        &quot;</span><span style="color:#a3be8c;">Lentil Soup</span><span>&quot; =&gt; </span><span style="color:#d08770;">45</span><span>,
+</span><span>        _ =&gt; unreachable!(), </span><span style="color:#a7adba;">// We already checked above
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> total_time = base_time + (requested_servings - </span><span style="color:#d08770;">1</span><span>) * </span><span style="color:#d08770;">5</span><span>; </span><span style="color:#a7adba;">// Extra time for larger batches
+</span><span>
+</span><span>    Ok(Recipe {
+</span><span>        name: recipe_name.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        servings: requested_servings,
+</span><span>        estimated_time: total_time,
+</span><span>    })
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">process_recipe_request</span><span>(
+</span><span>    </span><span style="color:#bf616a;">recipe_name</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>,
+</span><span>    </span><span style="color:#bf616a;">servings</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>    </span><span style="color:#bf616a;">available_ingredients</span><span>: &amp;[&amp;</span><span style="color:#b48ead;">str</span><span>]
+</span><span>) {
+</span><span>    </span><span style="color:#b48ead;">match </span><span style="color:#96b5b4;">validate_recipe_request</span><span>(recipe_name, servings, available_ingredients) {
+</span><span>        Ok(recipe) =&gt; {
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">✅ Recipe approved!</span><span>&quot;);
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">   📖 </span><span style="color:#d08770;">{}</span><span>&quot;, recipe.name);
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">   👥 </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> servings</span><span>&quot;, recipe.servings);
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">   ⏰ </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> minutes estimated</span><span>&quot;, recipe.estimated_time);
+</span><span>        }
+</span><span>        Err(RecipeError::MissingIngredients(missing)) =&gt; {
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">❌ Cannot make recipe - missing ingredients:</span><span>&quot;);
+</span><span>            </span><span style="color:#b48ead;">for</span><span> ingredient in missing {
+</span><span>                println!(&quot;</span><span style="color:#a3be8c;">   🛒 Need: </span><span style="color:#d08770;">{}</span><span>&quot;, ingredient);
+</span><span>            }
+</span><span>        }
+</span><span>        Err(RecipeError::InvalidQuantity(message)) =&gt; {
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">❌ Invalid serving size: </span><span style="color:#d08770;">{}</span><span>&quot;, message);
+</span><span>        }
+</span><span>        Err(RecipeError::UnsuitableEquipment(message)) =&gt; {
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">❌ Recipe not available: </span><span style="color:#d08770;">{}</span><span>&quot;, message);
+</span><span>        }
+</span><span>        Err(RecipeError::TimingConflict(message)) =&gt; {
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">❌ Timing issue: </span><span style="color:#d08770;">{}</span><span>&quot;, message);
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> pantry_items = [&quot;</span><span style="color:#a3be8c;">quinoa</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">vegetables</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">olive oil</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">pasta</span><span>&quot;];
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">🍳 Recipe Request Processing System</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Available ingredients: </span><span style="color:#d08770;">{:?}</span><span>&quot;, pantry_items);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">{:=&lt;50}</span><span>&quot;, &quot;&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Test different scenarios
+</span><span>    </span><span style="color:#b48ead;">let</span><span> requests = [
+</span><span>        (&quot;</span><span style="color:#a3be8c;">Quinoa Bowl</span><span>&quot;, </span><span style="color:#d08770;">4</span><span>, &quot;</span><span style="color:#a3be8c;">Should work</span><span>&quot;),
+</span><span>        (&quot;</span><span style="color:#a3be8c;">Pasta Primavera</span><span>&quot;, </span><span style="color:#d08770;">6</span><span>, &quot;</span><span style="color:#a3be8c;">Missing tomato sauce</span><span>&quot;),
+</span><span>        (&quot;</span><span style="color:#a3be8c;">Lentil Soup</span><span>&quot;, </span><span style="color:#d08770;">2</span><span>, &quot;</span><span style="color:#a3be8c;">Missing lentils and broth</span><span>&quot;),
+</span><span>        (&quot;</span><span style="color:#a3be8c;">Pizza</span><span>&quot;, </span><span style="color:#d08770;">4</span><span>, &quot;</span><span style="color:#a3be8c;">Recipe not available</span><span>&quot;),
+</span><span>        (&quot;</span><span style="color:#a3be8c;">Quinoa Bowl</span><span>&quot;, </span><span style="color:#d08770;">25</span><span>, &quot;</span><span style="color:#a3be8c;">Too many servings</span><span>&quot;),
+</span><span>    ];
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">for </span><span>(recipe, servings, note) in requests {
+</span><span>        println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">🍽️ Request: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> for </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> people (</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">)</span><span>&quot;, recipe, servings, note);
+</span><span>        </span><span style="color:#96b5b4;">process_recipe_request</span><span>(recipe, servings, &amp;pantry_items);
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h2 id="essential-result-t-e-methods">Essential Result&lt;T, E&gt; Methods</h2>
+<h3 id="checking-and-unwrapping-methods">Checking and Unwrapping Methods</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">demonstrate_result_methods</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> success: Result&lt;</span><span style="color:#b48ead;">i32</span><span>, String&gt; = Ok(</span><span style="color:#d08770;">42</span><span>);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> failure: Result&lt;</span><span style="color:#b48ead;">i32</span><span>, String&gt; = Err(&quot;</span><span style="color:#a3be8c;">Something went wrong</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>());
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Checking methods - safe to use
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">✅ Checking methods:</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   success.is_ok(): </span><span style="color:#d08770;">{}</span><span>&quot;, success.</span><span style="color:#96b5b4;">is_ok</span><span>());     </span><span style="color:#a7adba;">// true
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   success.is_err(): </span><span style="color:#d08770;">{}</span><span>&quot;, success.</span><span style="color:#96b5b4;">is_err</span><span>());   </span><span style="color:#a7adba;">// false
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   failure.is_ok(): </span><span style="color:#d08770;">{}</span><span>&quot;, failure.</span><span style="color:#96b5b4;">is_ok</span><span>());     </span><span style="color:#a7adba;">// false
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   failure.is_err(): </span><span style="color:#d08770;">{}</span><span>&quot;, failure.</span><span style="color:#96b5b4;">is_err</span><span>());   </span><span style="color:#a7adba;">// true
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Safe unwrapping with defaults
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">🔒 Safe unwrapping:</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   success.unwrap_or(0): </span><span style="color:#d08770;">{}</span><span>&quot;, success.</span><span style="color:#96b5b4;">unwrap_or</span><span>(</span><span style="color:#d08770;">0</span><span>));         </span><span style="color:#a7adba;">// 42
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   failure.unwrap_or(0): </span><span style="color:#d08770;">{}</span><span>&quot;, failure.</span><span style="color:#96b5b4;">unwrap_or</span><span>(</span><span style="color:#d08770;">0</span><span>));         </span><span style="color:#a7adba;">// 0
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Unwrapping with computed defaults
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   failure.unwrap_or_else(|_| -1): </span><span style="color:#d08770;">{}</span><span>&quot;,
+</span><span>             failure.</span><span style="color:#96b5b4;">unwrap_or_else</span><span>(|_| -</span><span style="color:#d08770;">1</span><span>));                              </span><span style="color:#a7adba;">// -1
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Getting references to inner values
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">👀 Peeking at values:</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">if let </span><span>Ok(val) = &amp;success {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">   Success contains: </span><span style="color:#d08770;">{}</span><span>&quot;, val);
+</span><span>    }
+</span><span>    </span><span style="color:#b48ead;">if let </span><span>Err(err) = &amp;failure {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">   Error contains: </span><span style="color:#d08770;">{}</span><span>&quot;, err);
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Dangerous methods - use with caution!
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">⚠️ Dangerous methods (use carefully):</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   success.unwrap(): </span><span style="color:#d08770;">{}</span><span>&quot;, success.</span><span style="color:#96b5b4;">unwrap</span><span>());    </span><span style="color:#a7adba;">// 42 - OK
+</span><span>    </span><span style="color:#a7adba;">// println!(&quot;   failure.unwrap(): {}&quot;, failure.unwrap());  // Would PANIC!
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   success.expect(&#39;Should work&#39;): </span><span style="color:#d08770;">{}</span><span>&quot;,
+</span><span>             success.</span><span style="color:#96b5b4;">expect</span><span>(&quot;</span><span style="color:#a3be8c;">Should work</span><span>&quot;));                   </span><span style="color:#a7adba;">// 42 - OK
+</span><span>    </span><span style="color:#a7adba;">// println!(&quot;   failure.expect(&#39;Should work&#39;): {}&quot;,
+</span><span>    </span><span style="color:#a7adba;">//          failure.expect(&quot;Should work&quot;));                // Would PANIC!
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#96b5b4;">demonstrate_result_methods</span><span>();
+</span><span>}
+</span></code></pre>
+<h3 id="transformation-methods">Transformation Methods</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">demonstrate_transformations</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> cooking_temp: Result&lt;</span><span style="color:#b48ead;">u32</span><span>, String&gt; = Ok(</span><span style="color:#d08770;">350</span><span>);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> broken_thermometer: Result&lt;</span><span style="color:#b48ead;">u32</span><span>, String&gt; = Err(&quot;</span><span style="color:#a3be8c;">Sensor malfunction</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>());
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Map - transform success values
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">🔄 Transformation methods:</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> temp_celsius = cooking_temp.</span><span style="color:#96b5b4;">map</span><span>(|</span><span style="color:#bf616a;">f</span><span>| (f - </span><span style="color:#d08770;">32</span><span>) * </span><span style="color:#d08770;">5 </span><span>/ </span><span style="color:#d08770;">9</span><span>);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   350°F in Celsius: </span><span style="color:#d08770;">{:?}</span><span>&quot;, temp_celsius);
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> broken_celsius = broken_thermometer.</span><span style="color:#96b5b4;">map</span><span>(|</span><span style="color:#bf616a;">f</span><span>| (f - </span><span style="color:#d08770;">32</span><span>) * </span><span style="color:#d08770;">5 </span><span>/ </span><span style="color:#d08770;">9</span><span>);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Broken sensor in Celsius: </span><span style="color:#d08770;">{:?}</span><span>&quot;, broken_celsius);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Map with string formatting
+</span><span>    </span><span style="color:#b48ead;">let</span><span> temp_display = cooking_temp.</span><span style="color:#96b5b4;">map</span><span>(|</span><span style="color:#bf616a;">temp</span><span>| format!(&quot;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">°F</span><span>&quot;, temp));
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Formatted temperature: </span><span style="color:#d08770;">{:?}</span><span>&quot;, temp_display);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Map_err - transform error values
+</span><span>    </span><span style="color:#b48ead;">let</span><span> better_error = broken_thermometer.</span><span style="color:#96b5b4;">map_err</span><span>(|</span><span style="color:#bf616a;">err</span><span>| {
+</span><span>        format!(&quot;</span><span style="color:#a3be8c;">Kitchen equipment error: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> - call maintenance</span><span>&quot;, err)
+</span><span>    });
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Better error message: </span><span style="color:#d08770;">{:?}</span><span>&quot;, better_error);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// and_then - chain operations that can fail
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">🔗 Chaining operations:</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> recipe_result = cooking_temp.</span><span style="color:#96b5b4;">and_then</span><span>(|</span><span style="color:#bf616a;">temp</span><span>| {
+</span><span>        </span><span style="color:#b48ead;">if</span><span> temp &gt;= </span><span style="color:#d08770;">300 </span><span>&amp;&amp; temp &lt;= </span><span style="color:#d08770;">400 </span><span>{
+</span><span>            Ok(format!(&quot;</span><span style="color:#a3be8c;">Perfect for roasting vegetables at </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">°F</span><span>&quot;, temp))
+</span><span>        } </span><span style="color:#b48ead;">else if</span><span> temp &lt; </span><span style="color:#d08770;">300 </span><span>{
+</span><span>            Err(format!(&quot;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">°F too low for roasting - increase heat</span><span>&quot;, temp))
+</span><span>        } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>            Err(format!(&quot;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">°F too high for roasting - reduce heat</span><span>&quot;, temp))
+</span><span>        }
+</span><span>    });
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">match</span><span> recipe_result {
+</span><span>        Ok(instruction) =&gt; println!(&quot;</span><span style="color:#a3be8c;">   Recipe instruction: </span><span style="color:#d08770;">{}</span><span>&quot;, instruction),
+</span><span>        Err(warning) =&gt; println!(&quot;</span><span style="color:#a3be8c;">   Temperature warning: </span><span style="color:#d08770;">{}</span><span>&quot;, warning),
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// or_else - provide alternative on error
+</span><span>    </span><span style="color:#b48ead;">let</span><span> backup_result = broken_thermometer.</span><span style="color:#96b5b4;">or_else</span><span>(|_| {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">   Thermometer broken, using visual cues...</span><span>&quot;);
+</span><span>        Ok(</span><span style="color:#d08770;">375</span><span>) </span><span style="color:#a7adba;">// Estimated temperature
+</span><span>    });
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Backup temperature reading: </span><span style="color:#d08770;">{:?}</span><span>&quot;, backup_result);
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#96b5b4;">demonstrate_transformations</span><span>();
+</span><span>}
+</span></code></pre>
+<h2 id="the-question-mark-operator-error-propagation">The Question Mark Operator (?) - Error Propagation</h2>
+<h3 id="simplifying-error-handling">Simplifying Error Handling</h3>
+<p>The <code>?</code> operator is like having a <strong>sous chef who automatically handles all kitchen emergencies</strong> - if anything goes wrong at any step, they immediately report it up the chain of command without you having to manually check each step.</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>std::collections::HashMap;
+</span><span>
+</span><span>#[</span><span style="color:#bf616a;">derive</span><span>(Debug)]
+</span><span style="color:#b48ead;">enum </span><span>KitchenError {
+</span><span>    MissingIngredient(String),
+</span><span>    InvalidQuantity(String),
+</span><span>    EquipmentFailure(String),
+</span><span>    TemperatureError(String),
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">struct </span><span>Kitchen {
+</span><span>    </span><span style="color:#bf616a;">ingredients</span><span>: HashMap&lt;String, </span><span style="color:#b48ead;">u32</span><span>&gt;, </span><span style="color:#a7adba;">// ingredient -&gt; quantity in grams
+</span><span>    </span><span style="color:#bf616a;">equipment_status</span><span>: HashMap&lt;String, </span><span style="color:#b48ead;">bool</span><span>&gt;, </span><span style="color:#a7adba;">// equipment -&gt; working status
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>Kitchen {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>() -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        </span><span style="color:#b48ead;">let mut</span><span> ingredients = HashMap::new();
+</span><span>        ingredients.</span><span style="color:#96b5b4;">insert</span><span>(&quot;</span><span style="color:#a3be8c;">quinoa</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), </span><span style="color:#d08770;">500</span><span>);
+</span><span>        ingredients.</span><span style="color:#96b5b4;">insert</span><span>(&quot;</span><span style="color:#a3be8c;">olive oil</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), </span><span style="color:#d08770;">250</span><span>);
+</span><span>        ingredients.</span><span style="color:#96b5b4;">insert</span><span>(&quot;</span><span style="color:#a3be8c;">vegetables</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), </span><span style="color:#d08770;">800</span><span>);
+</span><span>        ingredients.</span><span style="color:#96b5b4;">insert</span><span>(&quot;</span><span style="color:#a3be8c;">salt</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), </span><span style="color:#d08770;">100</span><span>);
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">let mut</span><span> equipment = HashMap::new();
+</span><span>        equipment.</span><span style="color:#96b5b4;">insert</span><span>(&quot;</span><span style="color:#a3be8c;">stove</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), </span><span style="color:#d08770;">true</span><span>);
+</span><span>        equipment.</span><span style="color:#96b5b4;">insert</span><span>(&quot;</span><span style="color:#a3be8c;">oven</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), </span><span style="color:#d08770;">true</span><span>);
+</span><span>        equipment.</span><span style="color:#96b5b4;">insert</span><span>(&quot;</span><span style="color:#a3be8c;">blender</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), </span><span style="color:#d08770;">false</span><span>); </span><span style="color:#a7adba;">// Broken!
+</span><span>
+</span><span>        Kitchen {
+</span><span>            ingredients,
+</span><span>            equipment_status: equipment,
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Check ingredient availability
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">check_ingredient</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">name</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>, </span><span style="color:#bf616a;">needed</span><span>: </span><span style="color:#b48ead;">u32</span><span>) -&gt; Result&lt;(), KitchenError&gt; {
+</span><span>        </span><span style="color:#b48ead;">match </span><span style="color:#bf616a;">self</span><span>.ingredients.</span><span style="color:#96b5b4;">get</span><span>(name) {
+</span><span>            Some(available) </span><span style="color:#b48ead;">if </span><span>*available &gt;= needed =&gt; Ok(()),
+</span><span>            Some(available) =&gt; Err(KitchenError::InvalidQuantity(
+</span><span>                format!(&quot;</span><span style="color:#a3be8c;">Need </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">g of </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">, but only have </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">g</span><span>&quot;, needed, name, available)
+</span><span>            )),
+</span><span>            None =&gt; Err(KitchenError::MissingIngredient(name.</span><span style="color:#96b5b4;">to_string</span><span>())),
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Check equipment availability
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">check_equipment</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">name</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; Result&lt;(), KitchenError&gt; {
+</span><span>        </span><span style="color:#b48ead;">match </span><span style="color:#bf616a;">self</span><span>.equipment_status.</span><span style="color:#96b5b4;">get</span><span>(name) {
+</span><span>            Some(</span><span style="color:#d08770;">true</span><span>) =&gt; Ok(()),
+</span><span>            Some(</span><span style="color:#d08770;">false</span><span>) =&gt; Err(KitchenError::EquipmentFailure(
+</span><span>                format!(&quot;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> is not working</span><span>&quot;, name)
+</span><span>            )),
+</span><span>            None =&gt; Err(KitchenError::EquipmentFailure(
+</span><span>                format!(&quot;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> not available in kitchen</span><span>&quot;, name)
+</span><span>            )),
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Validate cooking temperature
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">validate_temperature</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">temp</span><span>: </span><span style="color:#b48ead;">u32</span><span>, </span><span style="color:#bf616a;">method</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; Result&lt;(), KitchenError&gt; {
+</span><span>        </span><span style="color:#b48ead;">match</span><span> method {
+</span><span>            &quot;</span><span style="color:#a3be8c;">sauté</span><span>&quot; </span><span style="color:#b48ead;">if</span><span> temp &lt; </span><span style="color:#d08770;">300 </span><span>|| temp &gt; </span><span style="color:#d08770;">400 </span><span>=&gt; {
+</span><span>                Err(KitchenError::TemperatureError(
+</span><span>                    format!(&quot;</span><span style="color:#a3be8c;">Sautéing requires 300-400°F, got </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">°F</span><span>&quot;, temp)
+</span><span>                ))
+</span><span>            }
+</span><span>            &quot;</span><span style="color:#a3be8c;">boil</span><span>&quot; </span><span style="color:#b48ead;">if</span><span> temp &lt; </span><span style="color:#d08770;">212 </span><span>=&gt; {
+</span><span>                Err(KitchenError::TemperatureError(
+</span><span>                    format!(&quot;</span><span style="color:#a3be8c;">Water boils at 212°F, got </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">°F</span><span>&quot;, temp)
+</span><span>                ))
+</span><span>            }
+</span><span>            _ =&gt; Ok(()),
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// WITHOUT ? operator - verbose and error-prone
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">prepare_quinoa_bowl_verbose</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; Result&lt;String, KitchenError&gt; {
+</span><span>        </span><span style="color:#a7adba;">// Check quinoa
+</span><span>        </span><span style="color:#b48ead;">match </span><span style="color:#bf616a;">self</span><span>.</span><span style="color:#96b5b4;">check_ingredient</span><span>(&quot;</span><span style="color:#a3be8c;">quinoa</span><span>&quot;, </span><span style="color:#d08770;">200</span><span>) {
+</span><span>            Ok(()) =&gt; {},
+</span><span>            Err(e) =&gt; </span><span style="color:#b48ead;">return </span><span>Err(e),
+</span><span>        }
+</span><span>
+</span><span>        </span><span style="color:#a7adba;">// Check vegetables
+</span><span>        </span><span style="color:#b48ead;">match </span><span style="color:#bf616a;">self</span><span>.</span><span style="color:#96b5b4;">check_ingredient</span><span>(&quot;</span><span style="color:#a3be8c;">vegetables</span><span>&quot;, </span><span style="color:#d08770;">300</span><span>) {
+</span><span>            Ok(()) =&gt; {},
+</span><span>            Err(e) =&gt; </span><span style="color:#b48ead;">return </span><span>Err(e),
+</span><span>        }
+</span><span>
+</span><span>        </span><span style="color:#a7adba;">// Check olive oil
+</span><span>        </span><span style="color:#b48ead;">match </span><span style="color:#bf616a;">self</span><span>.</span><span style="color:#96b5b4;">check_ingredient</span><span>(&quot;</span><span style="color:#a3be8c;">olive oil</span><span>&quot;, </span><span style="color:#d08770;">30</span><span>) {
+</span><span>            Ok(()) =&gt; {},
+</span><span>            Err(e) =&gt; </span><span style="color:#b48ead;">return </span><span>Err(e),
+</span><span>        }
+</span><span>
+</span><span>        </span><span style="color:#a7adba;">// Check stove
+</span><span>        </span><span style="color:#b48ead;">match </span><span style="color:#bf616a;">self</span><span>.</span><span style="color:#96b5b4;">check_equipment</span><span>(&quot;</span><span style="color:#a3be8c;">stove</span><span>&quot;) {
+</span><span>            Ok(()) =&gt; {},
+</span><span>            Err(e) =&gt; </span><span style="color:#b48ead;">return </span><span>Err(e),
+</span><span>        }
+</span><span>
+</span><span>        </span><span style="color:#a7adba;">// Check temperature
+</span><span>        </span><span style="color:#b48ead;">match </span><span style="color:#bf616a;">self</span><span>.</span><span style="color:#96b5b4;">validate_temperature</span><span>(</span><span style="color:#d08770;">350</span><span>, &quot;</span><span style="color:#a3be8c;">sauté</span><span>&quot;) {
+</span><span>            Ok(()) =&gt; {},
+</span><span>            Err(e) =&gt; </span><span style="color:#b48ead;">return </span><span>Err(e),
+</span><span>        }
+</span><span>
+</span><span>        Ok(&quot;</span><span style="color:#a3be8c;">Quinoa bowl prepared successfully!</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>())
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// WITH ? operator - clean and readable!
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">prepare_quinoa_bowl</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; Result&lt;String, KitchenError&gt; {
+</span><span>        </span><span style="color:#a7adba;">// Each ? automatically returns the error if something fails
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.</span><span style="color:#96b5b4;">check_ingredient</span><span>(&quot;</span><span style="color:#a3be8c;">quinoa</span><span>&quot;, </span><span style="color:#d08770;">200</span><span>)?;       </span><span style="color:#a7adba;">// Auto-return on error
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.</span><span style="color:#96b5b4;">check_ingredient</span><span>(&quot;</span><span style="color:#a3be8c;">vegetables</span><span>&quot;, </span><span style="color:#d08770;">300</span><span>)?;   </span><span style="color:#a7adba;">// Auto-return on error
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.</span><span style="color:#96b5b4;">check_ingredient</span><span>(&quot;</span><span style="color:#a3be8c;">olive oil</span><span>&quot;, </span><span style="color:#d08770;">30</span><span>)?;     </span><span style="color:#a7adba;">// Auto-return on error
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.</span><span style="color:#96b5b4;">check_equipment</span><span>(&quot;</span><span style="color:#a3be8c;">stove</span><span>&quot;)?;              </span><span style="color:#a7adba;">// Auto-return on error
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.</span><span style="color:#96b5b4;">validate_temperature</span><span>(</span><span style="color:#d08770;">350</span><span>, &quot;</span><span style="color:#a3be8c;">sauté</span><span>&quot;)?;    </span><span style="color:#a7adba;">// Auto-return on error
+</span><span>
+</span><span>        Ok(&quot;</span><span style="color:#a3be8c;">Quinoa bowl prepared successfully!</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>())
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Chain multiple operations with ?
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">prepare_smoothie</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; Result&lt;String, KitchenError&gt; {
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.</span><span style="color:#96b5b4;">check_ingredient</span><span>(&quot;</span><span style="color:#a3be8c;">vegetables</span><span>&quot;, </span><span style="color:#d08770;">150</span><span>)?;   </span><span style="color:#a7adba;">// Spinach, kale, etc.
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.</span><span style="color:#96b5b4;">check_equipment</span><span>(&quot;</span><span style="color:#a3be8c;">blender</span><span>&quot;)?;            </span><span style="color:#a7adba;">// This will fail!
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.</span><span style="color:#96b5b4;">validate_temperature</span><span>(</span><span style="color:#d08770;">32</span><span>, &quot;</span><span style="color:#a3be8c;">blend</span><span>&quot;)?;     </span><span style="color:#a7adba;">// Cold blending
+</span><span>
+</span><span>        Ok(&quot;</span><span style="color:#a3be8c;">Green smoothie ready!</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>())
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Complex recipe with multiple steps
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">prepare_full_meal</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; Result&lt;Vec&lt;String&gt;, KitchenError&gt; {
+</span><span>        </span><span style="color:#b48ead;">let mut</span><span> dishes = Vec::new();
+</span><span>
+</span><span>        </span><span style="color:#a7adba;">// Try to make quinoa bowl
+</span><span>        </span><span style="color:#b48ead;">let</span><span> quinoa_result = </span><span style="color:#bf616a;">self</span><span>.</span><span style="color:#96b5b4;">prepare_quinoa_bowl</span><span>()?; </span><span style="color:#a7adba;">// Propagates error if fails
+</span><span>        dishes.</span><span style="color:#96b5b4;">push</span><span>(quinoa_result);
+</span><span>
+</span><span>        </span><span style="color:#a7adba;">// Try to make smoothie (will fail due to broken blender)
+</span><span>        </span><span style="color:#b48ead;">let</span><span> smoothie_result = </span><span style="color:#bf616a;">self</span><span>.</span><span style="color:#96b5b4;">prepare_smoothie</span><span>()?; </span><span style="color:#a7adba;">// Error will bubble up
+</span><span>        dishes.</span><span style="color:#96b5b4;">push</span><span>(smoothie_result);
+</span><span>
+</span><span>        Ok(dishes)
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> kitchen = Kitchen::new();
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">🍳 Kitchen Status Check</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Ingredients: </span><span style="color:#d08770;">{:?}</span><span>&quot;, kitchen.ingredients);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Equipment: </span><span style="color:#d08770;">{:?}</span><span>&quot;, kitchen.equipment_status);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">{:=&lt;50}</span><span>&quot;, &quot;&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Test individual recipe
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">🥗 Making Quinoa Bowl:</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">match</span><span> kitchen.</span><span style="color:#96b5b4;">prepare_quinoa_bowl</span><span>() {
+</span><span>        Ok(success) =&gt; println!(&quot;</span><span style="color:#a3be8c;">✅ </span><span style="color:#d08770;">{}</span><span>&quot;, success),
+</span><span>        Err(error) =&gt; println!(&quot;</span><span style="color:#a3be8c;">❌ Failed: </span><span style="color:#d08770;">{:?}</span><span>&quot;, error),
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Test recipe that will fail
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">🥤 Making Smoothie:</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">match</span><span> kitchen.</span><span style="color:#96b5b4;">prepare_smoothie</span><span>() {
+</span><span>        Ok(success) =&gt; println!(&quot;</span><span style="color:#a3be8c;">✅ </span><span style="color:#d08770;">{}</span><span>&quot;, success),
+</span><span>        Err(error) =&gt; println!(&quot;</span><span style="color:#a3be8c;">❌ Failed: </span><span style="color:#d08770;">{:?}</span><span>&quot;, error),
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Test full meal (will fail at smoothie step)
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">🍽️ Preparing Full Meal:</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">match</span><span> kitchen.</span><span style="color:#96b5b4;">prepare_full_meal</span><span>() {
+</span><span>        Ok(dishes) =&gt; {
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">✅ Meal completed!</span><span>&quot;);
+</span><span>            </span><span style="color:#b48ead;">for</span><span> dish in dishes {
+</span><span>                println!(&quot;</span><span style="color:#a3be8c;">   - </span><span style="color:#d08770;">{}</span><span>&quot;, dish);
+</span><span>            }
+</span><span>        }
+</span><span>        Err(error) =&gt; {
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">❌ Meal preparation failed: </span><span style="color:#d08770;">{:?}</span><span>&quot;, error);
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">   The error occurred during one of the recipe steps</span><span>&quot;);
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<p><strong>Benefits of the <code>?</code> Operator:</strong></p>
+<ul>
+<li>🎯 <strong>Concise code</strong> - No need for manual match statements</li>
+<li>🔄 <strong>Automatic propagation</strong> - Errors bubble up automatically</li>
+<li>📖 <strong>Readable flow</strong> - Focus on the happy path</li>
+<li>✅ <strong>Type safe</strong> - Compiler ensures error types match</li>
+<li>🚀 <strong>Performance</strong> - Zero runtime cost</li>
+</ul>
+<h2 id="advanced-result-t-e-patterns">Advanced Result&lt;T, E&gt; Patterns</h2>
+<h3 id="custom-error-types-with-context">Custom Error Types with Context</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>std::fmt;
+</span><span>
+</span><span>#[</span><span style="color:#bf616a;">derive</span><span>(Debug)]
+</span><span style="color:#b48ead;">enum </span><span>RestaurantError {
+</span><span>    Inventory {
+</span><span>        item: String,
+</span><span>        required: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>        available: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>    },
+</span><span>    Equipment {
+</span><span>        device: String,
+</span><span>        issue: String,
+</span><span>        maintenance_needed: </span><span style="color:#b48ead;">bool</span><span>,
+</span><span>    },
+</span><span>    Staff {
+</span><span>        problem: String,
+</span><span>        shift_affected: String,
+</span><span>    },
+</span><span>    Customer {
+</span><span>        complaint: String,
+</span><span>        severity: </span><span style="color:#b48ead;">u8</span><span>, </span><span style="color:#a7adba;">// 1-10 scale
+</span><span>        table_number: Option&lt;</span><span style="color:#b48ead;">u32</span><span>&gt;,
+</span><span>    },
+</span><span>    Supplier {
+</span><span>        supplier_name: String,
+</span><span>        delivery_issue: String,
+</span><span>        expected_date: String,
+</span><span>    },
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>fmt::Display </span><span style="color:#b48ead;">for </span><span>RestaurantError {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">fmt</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">f</span><span>: &amp;</span><span style="color:#b48ead;">mut </span><span>fmt::Formatter&lt;&#39;_&gt;) -&gt; fmt::Result {
+</span><span>        </span><span style="color:#b48ead;">match </span><span style="color:#bf616a;">self </span><span>{
+</span><span>            RestaurantError::Inventory { item, required, available } =&gt; {
+</span><span>                write!(f, &quot;</span><span style="color:#a3be8c;">Inventory shortage: need </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> of </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">, but only have </span><span style="color:#d08770;">{}</span><span>&quot;,
+</span><span>                       required, item, available)
+</span><span>            }
+</span><span>            RestaurantError::Equipment { device, issue, maintenance_needed } =&gt; {
+</span><span>                </span><span style="color:#b48ead;">let</span><span> action = </span><span style="color:#b48ead;">if </span><span>*maintenance_needed {
+</span><span>                    &quot;</span><span style="color:#a3be8c;"> - maintenance required</span><span>&quot;
+</span><span>                } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>                    &quot;</span><span style="color:#a3be8c;"> - minor issue</span><span>&quot;
+</span><span>                };
+</span><span>                write!(f, &quot;</span><span style="color:#a3be8c;">Equipment problem with </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">: </span><span style="color:#d08770;">{}{}</span><span>&quot;, device, issue, action)
+</span><span>            }
+</span><span>            RestaurantError::Staff { problem, shift_affected } =&gt; {
+</span><span>                write!(f, &quot;</span><span style="color:#a3be8c;">Staff issue during </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> shift: </span><span style="color:#d08770;">{}</span><span>&quot;, shift_affected, problem)
+</span><span>            }
+</span><span>            RestaurantError::Customer { complaint, severity, table_number } =&gt; {
+</span><span>                </span><span style="color:#b48ead;">let</span><span> location = table_number
+</span><span>                    .</span><span style="color:#96b5b4;">map</span><span>(|</span><span style="color:#bf616a;">t</span><span>| format!(&quot;</span><span style="color:#a3be8c;"> at table </span><span style="color:#d08770;">{}</span><span>&quot;, t))
+</span><span>                    .</span><span style="color:#96b5b4;">unwrap_or_else</span><span>(|| &quot;</span><span style="color:#a3be8c;"> (takeout)</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>());
+</span><span>                write!(f, &quot;</span><span style="color:#a3be8c;">Customer complaint</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> (severity </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">): </span><span style="color:#d08770;">{}</span><span>&quot;,
+</span><span>                       location, severity, complaint)
+</span><span>            }
+</span><span>            RestaurantError::Supplier { supplier_name, delivery_issue, expected_date } =&gt; {
+</span><span>                write!(f, &quot;</span><span style="color:#a3be8c;">Supplier </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> delivery problem: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> (expected: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">)</span><span>&quot;,
+</span><span>                       supplier_name, delivery_issue, expected_date)
+</span><span>            }
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">struct </span><span>VegetarianRestaurant {
+</span><span>    </span><span style="color:#bf616a;">name</span><span>: String,
+</span><span>    </span><span style="color:#bf616a;">daily_operations</span><span>: Vec&lt;String&gt;,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>VegetarianRestaurant {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#bf616a;">name</span><span>: String) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        VegetarianRestaurant {
+</span><span>            name,
+</span><span>            daily_operations: Vec::new(),
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">check_morning_inventory</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) -&gt; Result&lt;(), RestaurantError&gt; {
+</span><span>        </span><span style="color:#a7adba;">// Simulate inventory check
+</span><span>        </span><span style="color:#b48ead;">let</span><span> inventory_items = [
+</span><span>            (&quot;</span><span style="color:#a3be8c;">quinoa</span><span>&quot;, </span><span style="color:#d08770;">150</span><span>, </span><span style="color:#d08770;">200</span><span>),      </span><span style="color:#a7adba;">// (item, available, required)
+</span><span>            (&quot;</span><span style="color:#a3be8c;">vegetables</span><span>&quot;, </span><span style="color:#d08770;">80</span><span>, </span><span style="color:#d08770;">500</span><span>),   </span><span style="color:#a7adba;">// This will fail
+</span><span>            (&quot;</span><span style="color:#a3be8c;">olive oil</span><span>&quot;, </span><span style="color:#d08770;">300</span><span>, </span><span style="color:#d08770;">100</span><span>),
+</span><span>        ];
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">for </span><span>(item, available, required) in inventory_items {
+</span><span>            </span><span style="color:#b48ead;">if</span><span> available &lt; required {
+</span><span>                </span><span style="color:#b48ead;">return </span><span>Err(RestaurantError::Inventory {
+</span><span>                    item: item.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>                    required,
+</span><span>                    available,
+</span><span>                });
+</span><span>            }
+</span><span>        }
+</span><span>
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.daily_operations.</span><span style="color:#96b5b4;">push</span><span>(&quot;</span><span style="color:#a3be8c;">✅ Morning inventory check complete</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>());
+</span><span>        Ok(())
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">test_equipment</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) -&gt; Result&lt;(), RestaurantError&gt; {
+</span><span>        </span><span style="color:#a7adba;">// Simulate equipment checks
+</span><span>        </span><span style="color:#b48ead;">let</span><span> equipment_checks = [
+</span><span>            (&quot;</span><span style="color:#a3be8c;">oven</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">working</span><span>&quot;, </span><span style="color:#d08770;">false</span><span>),
+</span><span>            (&quot;</span><span style="color:#a3be8c;">blender</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">motor making noise</span><span>&quot;, </span><span style="color:#d08770;">true</span><span>), </span><span style="color:#a7adba;">// Needs maintenance
+</span><span>            (&quot;</span><span style="color:#a3be8c;">refrigerator</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">working</span><span>&quot;, </span><span style="color:#d08770;">false</span><span>),
+</span><span>        ];
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">for </span><span>(device, status, needs_maintenance) in equipment_checks {
+</span><span>            </span><span style="color:#b48ead;">if</span><span> status != &quot;</span><span style="color:#a3be8c;">working</span><span>&quot; {
+</span><span>                </span><span style="color:#b48ead;">return </span><span>Err(RestaurantError::Equipment {
+</span><span>                    device: device.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>                    issue: status.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>                    maintenance_needed: needs_maintenance,
+</span><span>                });
+</span><span>            }
+</span><span>        }
+</span><span>
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.daily_operations.</span><span style="color:#96b5b4;">push</span><span>(&quot;</span><span style="color:#a3be8c;">✅ Equipment check complete</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>());
+</span><span>        Ok(())
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">process_customer_feedback</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) -&gt; Result&lt;(), RestaurantError&gt; {
+</span><span>        </span><span style="color:#a7adba;">// Simulate customer complaint
+</span><span>        </span><span style="color:#b48ead;">return </span><span>Err(RestaurantError::Customer {
+</span><span>            complaint: &quot;</span><span style="color:#a3be8c;">Food arrived cold</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>            severity: </span><span style="color:#d08770;">7</span><span>,
+</span><span>            table_number: Some(</span><span style="color:#d08770;">12</span><span>),
+</span><span>        });
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">run_daily_operations</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) -&gt; Result&lt;String, RestaurantError&gt; {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">🌅 Starting daily operations for </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#bf616a;">self</span><span>.name);
+</span><span>
+</span><span>        </span><span style="color:#a7adba;">// Chain multiple operations - first error stops the chain
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.</span><span style="color:#96b5b4;">check_morning_inventory</span><span>()?;
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.</span><span style="color:#96b5b4;">test_equipment</span><span>()?;
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.</span><span style="color:#96b5b4;">process_customer_feedback</span><span>()?; </span><span style="color:#a7adba;">// This will fail
+</span><span>
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.daily_operations.</span><span style="color:#96b5b4;">push</span><span>(&quot;</span><span style="color:#a3be8c;">✅ All operations completed successfully</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>());
+</span><span>
+</span><span>        Ok(format!(&quot;</span><span style="color:#a3be8c;">Daily operations completed for </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#bf616a;">self</span><span>.name))
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">get_operations_log</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; &amp;[String] {
+</span><span>        &amp;</span><span style="color:#bf616a;">self</span><span>.daily_operations
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">handle_restaurant_error</span><span>(</span><span style="color:#bf616a;">error</span><span>: &amp;RestaurantError) -&gt; String {
+</span><span>    </span><span style="color:#b48ead;">match</span><span> error {
+</span><span>        RestaurantError::Inventory { item, required, available } =&gt; {
+</span><span>            format!(&quot;</span><span style="color:#a3be8c;">🛒 URGENT: Order </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> more </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> (need </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">, have </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">)</span><span>&quot;,
+</span><span>                   required - available, item, required, available)
+</span><span>        }
+</span><span>        RestaurantError::Equipment { device, maintenance_needed, .. } =&gt; {
+</span><span>            </span><span style="color:#b48ead;">if </span><span>*maintenance_needed {
+</span><span>                format!(&quot;</span><span style="color:#a3be8c;">🔧 MAINTENANCE: Schedule repair for </span><span style="color:#d08770;">{}</span><span>&quot;, device)
+</span><span>            } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>                format!(&quot;</span><span style="color:#a3be8c;">⚡ EQUIPMENT: Quick fix needed for </span><span style="color:#d08770;">{}</span><span>&quot;, device)
+</span><span>            }
+</span><span>        }
+</span><span>        RestaurantError::Staff { shift_affected, .. } =&gt; {
+</span><span>            format!(&quot;</span><span style="color:#a3be8c;">👥 STAFFING: Address </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> shift issue immediately</span><span>&quot;, shift_affected)
+</span><span>        }
+</span><span>        RestaurantError::Customer { severity, table_number, .. } =&gt; {
+</span><span>            </span><span style="color:#b48ead;">let</span><span> urgency = </span><span style="color:#b48ead;">if </span><span>*severity &gt;= </span><span style="color:#d08770;">8 </span><span>{ &quot;</span><span style="color:#a3be8c;">CRITICAL</span><span>&quot; } </span><span style="color:#b48ead;">else </span><span>{ &quot;</span><span style="color:#a3be8c;">HIGH</span><span>&quot; };
+</span><span>            </span><span style="color:#b48ead;">let</span><span> location = table_number
+</span><span>                .</span><span style="color:#96b5b4;">map</span><span>(|</span><span style="color:#bf616a;">t</span><span>| format!(&quot;</span><span style="color:#a3be8c;">table </span><span style="color:#d08770;">{}</span><span>&quot;, t))
+</span><span>                .</span><span style="color:#96b5b4;">unwrap_or_else</span><span>(|| &quot;</span><span style="color:#a3be8c;">takeout customer</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>());
+</span><span>            format!(&quot;</span><span style="color:#a3be8c;">📞 </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> PRIORITY: Resolve complaint from </span><span style="color:#d08770;">{}</span><span>&quot;, urgency, location)
+</span><span>        }
+</span><span>        RestaurantError::Supplier { supplier_name, expected_date, .. } =&gt; {
+</span><span>            format!(&quot;</span><span style="color:#a3be8c;">🚚 LOGISTICS: Contact </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> about delivery (due </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">)</span><span>&quot;,
+</span><span>                   supplier_name, expected_date)
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> restaurant = VegetarianRestaurant::new(&quot;</span><span style="color:#a3be8c;">Green Garden Bistro</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>());
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">match</span><span> restaurant.</span><span style="color:#96b5b4;">run_daily_operations</span><span>() {
+</span><span>        Ok(success_message) =&gt; {
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">🎉 </span><span style="color:#d08770;">{}</span><span>&quot;, success_message);
+</span><span>            println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">📋 Operations Log:</span><span>&quot;);
+</span><span>            </span><span style="color:#b48ead;">for</span><span> log_entry in restaurant.</span><span style="color:#96b5b4;">get_operations_log</span><span>() {
+</span><span>                println!(&quot;   </span><span style="color:#d08770;">{}</span><span>&quot;, log_entry);
+</span><span>            }
+</span><span>        }
+</span><span>        Err(error) =&gt; {
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">❌ Operations failed: </span><span style="color:#d08770;">{}</span><span>&quot;, error);
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">📋 Action required: </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#96b5b4;">handle_restaurant_error</span><span>(&amp;error));
+</span><span>
+</span><span>            println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">📝 Completed operations before failure:</span><span>&quot;);
+</span><span>            </span><span style="color:#b48ead;">for</span><span> log_entry in restaurant.</span><span style="color:#96b5b4;">get_operations_log</span><span>() {
+</span><span>                println!(&quot;   </span><span style="color:#d08770;">{}</span><span>&quot;, log_entry);
+</span><span>            }
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h3 id="working-with-collections-of-results">Working with Collections of Results</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">process_multiple_orders</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> order_requests = [
+</span><span>        (&quot;</span><span style="color:#a3be8c;">Quinoa Bowl</span><span>&quot;, </span><span style="color:#d08770;">2</span><span>),
+</span><span>        (&quot;</span><span style="color:#a3be8c;">Pasta Primavera</span><span>&quot;, </span><span style="color:#d08770;">4</span><span>),
+</span><span>        (&quot;</span><span style="color:#a3be8c;">Invalid Dish</span><span>&quot;, </span><span style="color:#d08770;">1</span><span>),
+</span><span>        (&quot;</span><span style="color:#a3be8c;">Lentil Soup</span><span>&quot;, </span><span style="color:#d08770;">6</span><span>),
+</span><span>    ];
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// collect() on Results - stops at first error
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">🍽️ Processing all orders (stop on first error):</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> all_orders_result: Result&lt;Vec&lt;_&gt;, _&gt; = order_requests
+</span><span>        .</span><span style="color:#96b5b4;">iter</span><span>()
+</span><span>        .</span><span style="color:#96b5b4;">map</span><span>(|(</span><span style="color:#bf616a;">dish</span><span>, </span><span style="color:#bf616a;">servings</span><span>)| </span><span style="color:#96b5b4;">validate_order</span><span>(dish, *servings))
+</span><span>        .</span><span style="color:#96b5b4;">collect</span><span>();
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">match</span><span> all_orders_result {
+</span><span>        Ok(orders) =&gt; {
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">✅ All orders validated successfully:</span><span>&quot;);
+</span><span>            </span><span style="color:#b48ead;">for</span><span> order in orders {
+</span><span>                println!(&quot;   </span><span style="color:#d08770;">{}</span><span>&quot;, order);
+</span><span>            }
+</span><span>        }
+</span><span>        Err(error) =&gt; {
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">❌ Order processing stopped at first error: </span><span style="color:#d08770;">{}</span><span>&quot;, error);
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// partition() - separate successes and failures
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">📊 Processing all orders (collect successes and failures):</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">let </span><span>(successes, failures): (Vec&lt;_&gt;, Vec&lt;_&gt;) = order_requests
+</span><span>        .</span><span style="color:#96b5b4;">iter</span><span>()
+</span><span>        .</span><span style="color:#96b5b4;">map</span><span>(|(</span><span style="color:#bf616a;">dish</span><span>, </span><span style="color:#bf616a;">servings</span><span>)| </span><span style="color:#96b5b4;">validate_order</span><span>(dish, *servings))
+</span><span>        .</span><span style="color:#96b5b4;">partition</span><span>(Result::is_ok);
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> successful_orders: Vec&lt;_&gt; = successes.</span><span style="color:#96b5b4;">into_iter</span><span>().</span><span style="color:#96b5b4;">map</span><span>(Result::unwrap).</span><span style="color:#96b5b4;">collect</span><span>();
+</span><span>    </span><span style="color:#b48ead;">let</span><span> failed_orders: Vec&lt;_&gt; = failures.</span><span style="color:#96b5b4;">into_iter</span><span>().</span><span style="color:#96b5b4;">map</span><span>(Result::unwrap_err).</span><span style="color:#96b5b4;">collect</span><span>();
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">✅ Successful orders (</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">):</span><span>&quot;, successful_orders.</span><span style="color:#96b5b4;">len</span><span>());
+</span><span>    </span><span style="color:#b48ead;">for</span><span> order in successful_orders {
+</span><span>        println!(&quot;   </span><span style="color:#d08770;">{}</span><span>&quot;, order);
+</span><span>    }
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">❌ Failed orders (</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">):</span><span>&quot;, failed_orders.</span><span style="color:#96b5b4;">len</span><span>());
+</span><span>    </span><span style="color:#b48ead;">for</span><span> error in failed_orders {
+</span><span>        println!(&quot;   </span><span style="color:#d08770;">{}</span><span>&quot;, error);
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// filter_map() - keep only successes
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">🎯 Only successful orders:</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> good_orders: Vec&lt;_&gt; = order_requests
+</span><span>        .</span><span style="color:#96b5b4;">iter</span><span>()
+</span><span>        .</span><span style="color:#96b5b4;">filter_map</span><span>(|(</span><span style="color:#bf616a;">dish</span><span>, </span><span style="color:#bf616a;">servings</span><span>)| {
+</span><span>            </span><span style="color:#96b5b4;">validate_order</span><span>(dish, *servings).</span><span style="color:#96b5b4;">ok</span><span>()
+</span><span>        })
+</span><span>        .</span><span style="color:#96b5b4;">collect</span><span>();
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">for</span><span> order in good_orders {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">   ✅ </span><span style="color:#d08770;">{}</span><span>&quot;, order);
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">validate_order</span><span>(</span><span style="color:#bf616a;">dish</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>, </span><span style="color:#bf616a;">servings</span><span>: </span><span style="color:#b48ead;">u32</span><span>) -&gt; Result&lt;String, String&gt; {
+</span><span>    </span><span style="color:#b48ead;">if</span><span> servings == </span><span style="color:#d08770;">0 </span><span>{
+</span><span>        </span><span style="color:#b48ead;">return </span><span>Err(&quot;</span><span style="color:#a3be8c;">Cannot make 0 servings</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>());
+</span><span>    }
+</span><span>    </span><span style="color:#b48ead;">if</span><span> servings &gt; </span><span style="color:#d08770;">10 </span><span>{
+</span><span>        </span><span style="color:#b48ead;">return </span><span>Err(format!(&quot;</span><span style="color:#a3be8c;">Cannot make </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> servings - maximum is 10</span><span>&quot;, servings));
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">match</span><span> dish {
+</span><span>        &quot;</span><span style="color:#a3be8c;">Quinoa Bowl</span><span>&quot; | &quot;</span><span style="color:#a3be8c;">Pasta Primavera</span><span>&quot; | &quot;</span><span style="color:#a3be8c;">Lentil Soup</span><span>&quot; =&gt; {
+</span><span>            Ok(format!(&quot;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> for </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> people</span><span>&quot;, dish, servings))
+</span><span>        }
+</span><span>        _ =&gt; Err(format!(&quot;</span><span style="color:#a3be8c;">&#39;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">&#39; is not on our menu</span><span>&quot;, dish)),
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#96b5b4;">process_multiple_orders</span><span>();
+</span><span>}
+</span></code></pre>
+<h3 id="result-with-custom-types-and-conversions">Result with Custom Types and Conversions</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>std::str::FromStr;
+</span><span>
+</span><span>#[</span><span style="color:#bf616a;">derive</span><span>(Debug)]
+</span><span style="color:#b48ead;">struct </span><span>Temperature {
+</span><span>    </span><span style="color:#bf616a;">celsius</span><span>: </span><span style="color:#b48ead;">f64</span><span>,
+</span><span>}
+</span><span>
+</span><span>#[</span><span style="color:#bf616a;">derive</span><span>(Debug)]
+</span><span style="color:#b48ead;">enum </span><span>TemperatureError {
+</span><span>    TooHot(</span><span style="color:#b48ead;">f64</span><span>),
+</span><span>    TooCold(</span><span style="color:#b48ead;">f64</span><span>),
+</span><span>    InvalidFormat(String),
+</span><span>    OutOfRange(String),
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>fmt::Display </span><span style="color:#b48ead;">for </span><span>TemperatureError {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">fmt</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">f</span><span>: &amp;</span><span style="color:#b48ead;">mut </span><span>fmt::Formatter&lt;&#39;_&gt;) -&gt; fmt::Result {
+</span><span>        </span><span style="color:#b48ead;">match </span><span style="color:#bf616a;">self </span><span>{
+</span><span>            TemperatureError::TooHot(temp) =&gt; {
+</span><span>                write!(f, &quot;</span><span style="color:#a3be8c;">Temperature </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">°C is dangerously hot for cooking</span><span>&quot;, temp)
+</span><span>            }
+</span><span>            TemperatureError::TooCold(temp) =&gt; {
+</span><span>                write!(f, &quot;</span><span style="color:#a3be8c;">Temperature </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">°C is too cold for proper cooking</span><span>&quot;, temp)
+</span><span>            }
+</span><span>            TemperatureError::InvalidFormat(input) =&gt; {
+</span><span>                write!(f, &quot;</span><span style="color:#a3be8c;">&#39;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">&#39; is not a valid temperature format</span><span>&quot;, input)
+</span><span>            }
+</span><span>            TemperatureError::OutOfRange(msg) =&gt; {
+</span><span>                write!(f, &quot;</span><span style="color:#a3be8c;">Temperature out of range: </span><span style="color:#d08770;">{}</span><span>&quot;, msg)
+</span><span>            }
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>Temperature {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#bf616a;">celsius</span><span>: </span><span style="color:#b48ead;">f64</span><span>) -&gt; Result&lt;</span><span style="color:#b48ead;">Self</span><span>, TemperatureError&gt; {
+</span><span>        </span><span style="color:#b48ead;">if</span><span> celsius &lt; -</span><span style="color:#d08770;">273.15 </span><span>{
+</span><span>            Err(TemperatureError::OutOfRange(
+</span><span>                format!(&quot;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">°C is below absolute zero</span><span>&quot;, celsius)
+</span><span>            ))
+</span><span>        } </span><span style="color:#b48ead;">else if</span><span> celsius &lt; </span><span style="color:#d08770;">0.0 </span><span>{
+</span><span>            Err(TemperatureError::TooCold(celsius))
+</span><span>        } </span><span style="color:#b48ead;">else if</span><span> celsius &gt; </span><span style="color:#d08770;">300.0 </span><span>{
+</span><span>            Err(TemperatureError::TooHot(celsius))
+</span><span>        } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>            Ok(Temperature { celsius })
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">from_fahrenheit</span><span>(</span><span style="color:#bf616a;">fahrenheit</span><span>: </span><span style="color:#b48ead;">f64</span><span>) -&gt; Result&lt;</span><span style="color:#b48ead;">Self</span><span>, TemperatureError&gt; {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> celsius = (fahrenheit - </span><span style="color:#d08770;">32.0</span><span>) * </span><span style="color:#d08770;">5.0 </span><span>/ </span><span style="color:#d08770;">9.0</span><span>;
+</span><span>        </span><span style="color:#b48ead;">Self</span><span>::new(celsius)
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">to_fahrenheit</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; </span><span style="color:#b48ead;">f64 </span><span>{
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.celsius * </span><span style="color:#d08770;">9.0 </span><span>/ </span><span style="color:#d08770;">5.0 </span><span>+ </span><span style="color:#d08770;">32.0
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">is_suitable_for_cooking</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; </span><span style="color:#b48ead;">bool </span><span>{
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.celsius &gt;= </span><span style="color:#d08770;">60.0 </span><span>&amp;&amp; </span><span style="color:#bf616a;">self</span><span>.celsius &lt;= </span><span style="color:#d08770;">250.0
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">get_cooking_method</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; &amp;</span><span style="color:#b48ead;">str </span><span>{
+</span><span>        </span><span style="color:#b48ead;">match </span><span style="color:#bf616a;">self</span><span>.celsius {
+</span><span>            temp </span><span style="color:#b48ead;">if</span><span> temp &lt; </span><span style="color:#d08770;">60.0 </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">too cold for cooking</span><span>&quot;,
+</span><span>            </span><span style="color:#d08770;">60.0</span><span>..=</span><span style="color:#d08770;">80.0 </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">suitable for warming</span><span>&quot;,
+</span><span>            </span><span style="color:#d08770;">81.0</span><span>..=</span><span style="color:#d08770;">100.0 </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">good for simmering</span><span>&quot;,
+</span><span>            </span><span style="color:#d08770;">101.0</span><span>..=</span><span style="color:#d08770;">150.0 </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">perfect for sautéing</span><span>&quot;,
+</span><span>            </span><span style="color:#d08770;">151.0</span><span>..=</span><span style="color:#d08770;">200.0 </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">ideal for roasting</span><span>&quot;,
+</span><span>            </span><span style="color:#d08770;">201.0</span><span>..=</span><span style="color:#d08770;">250.0 </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">high heat cooking</span><span>&quot;,
+</span><span>            _ =&gt; &quot;</span><span style="color:#a3be8c;">too hot - dangerous</span><span>&quot;,
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>FromStr </span><span style="color:#b48ead;">for </span><span>Temperature {
+</span><span>    </span><span style="color:#b48ead;">type </span><span>Err = TemperatureError;
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">from_str</span><span>(</span><span style="color:#bf616a;">s</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; Result&lt;</span><span style="color:#b48ead;">Self</span><span>, </span><span style="color:#b48ead;">Self::</span><span>Err&gt; {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> s = s.</span><span style="color:#96b5b4;">trim</span><span>();
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">if</span><span> s.</span><span style="color:#96b5b4;">ends_with</span><span>(&quot;</span><span style="color:#a3be8c;">°C</span><span>&quot;) {
+</span><span>            </span><span style="color:#b48ead;">let</span><span> num_part = &amp;s[..s.</span><span style="color:#96b5b4;">len</span><span>()-</span><span style="color:#d08770;">2</span><span>];
+</span><span>            </span><span style="color:#b48ead;">match</span><span> num_part.parse::&lt;</span><span style="color:#b48ead;">f64</span><span>&gt;() {
+</span><span>                Ok(celsius) =&gt; </span><span style="color:#b48ead;">Self</span><span>::new(celsius),
+</span><span>                Err(_) =&gt; Err(TemperatureError::InvalidFormat(s.</span><span style="color:#96b5b4;">to_string</span><span>())),
+</span><span>            }
+</span><span>        } </span><span style="color:#b48ead;">else if</span><span> s.</span><span style="color:#96b5b4;">ends_with</span><span>(&quot;</span><span style="color:#a3be8c;">°F</span><span>&quot;) {
+</span><span>            </span><span style="color:#b48ead;">let</span><span> num_part = &amp;s[..s.</span><span style="color:#96b5b4;">len</span><span>()-</span><span style="color:#d08770;">2</span><span>];
+</span><span>            </span><span style="color:#b48ead;">match</span><span> num_part.parse::&lt;</span><span style="color:#b48ead;">f64</span><span>&gt;() {
+</span><span>                Ok(fahrenheit) =&gt; </span><span style="color:#b48ead;">Self</span><span>::from_fahrenheit(fahrenheit),
+</span><span>                Err(_) =&gt; Err(TemperatureError::InvalidFormat(s.</span><span style="color:#96b5b4;">to_string</span><span>())),
+</span><span>            }
+</span><span>        } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>            </span><span style="color:#a7adba;">// Assume Celsius if no unit specified
+</span><span>            </span><span style="color:#b48ead;">match</span><span> s.parse::&lt;</span><span style="color:#b48ead;">f64</span><span>&gt;() {
+</span><span>                Ok(celsius) =&gt; </span><span style="color:#b48ead;">Self</span><span>::new(celsius),
+</span><span>                Err(_) =&gt; Err(TemperatureError::InvalidFormat(s.</span><span style="color:#96b5b4;">to_string</span><span>())),
+</span><span>            }
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">process_cooking_temperatures</span><span>(</span><span style="color:#bf616a;">temp_strings</span><span>: &amp;[&amp;</span><span style="color:#b48ead;">str</span><span>]) {
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">🌡️ Processing Cooking Temperatures:</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">{:=&lt;60}</span><span>&quot;, &quot;&quot;);
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">for</span><span> temp_str in temp_strings {
+</span><span>        </span><span style="color:#b48ead;">match</span><span> temp_str.parse::&lt;Temperature&gt;() {
+</span><span>            Ok(temp) =&gt; {
+</span><span>                println!(&quot;</span><span style="color:#a3be8c;">✅ </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">: </span><span style="color:#d08770;">{:.1}</span><span style="color:#a3be8c;">°C (</span><span style="color:#d08770;">{:.1}</span><span style="color:#a3be8c;">°F)</span><span>&quot;,
+</span><span>                         temp_str, temp.celsius, temp.</span><span style="color:#96b5b4;">to_fahrenheit</span><span>());
+</span><span>                println!(&quot;</span><span style="color:#a3be8c;">   Cooking method: </span><span style="color:#d08770;">{}</span><span>&quot;, temp.</span><span style="color:#96b5b4;">get_cooking_method</span><span>());
+</span><span>                </span><span style="color:#b48ead;">if</span><span> temp.</span><span style="color:#96b5b4;">is_suitable_for_cooking</span><span>() {
+</span><span>                    println!(&quot;</span><span style="color:#a3be8c;">   🍳 Safe for cooking</span><span>&quot;);
+</span><span>                } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>                    println!(&quot;</span><span style="color:#a3be8c;">   ⚠️ Not suitable for cooking</span><span>&quot;);
+</span><span>                }
+</span><span>            }
+</span><span>            Err(error) =&gt; {
+</span><span>                println!(&quot;</span><span style="color:#a3be8c;">❌ </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">: </span><span style="color:#d08770;">{}</span><span>&quot;, temp_str, error);
+</span><span>
+</span><span>                </span><span style="color:#a7adba;">// Provide helpful suggestions based on error type
+</span><span>                </span><span style="color:#b48ead;">match</span><span> error {
+</span><span>                    TemperatureError::TooHot(_) =&gt; {
+</span><span>                        println!(&quot;</span><span style="color:#a3be8c;">   💡 Suggestion: Lower the heat for safety</span><span>&quot;);
+</span><span>                    }
+</span><span>                    TemperatureError::TooCold(_) =&gt; {
+</span><span>                        println!(&quot;</span><span style="color:#a3be8c;">   💡 Suggestion: Increase temperature for proper cooking</span><span>&quot;);
+</span><span>                    }
+</span><span>                    TemperatureError::InvalidFormat(_) =&gt; {
+</span><span>                        println!(&quot;</span><span style="color:#a3be8c;">   💡 Suggestion: Use format like &#39;180°C&#39; or &#39;350°F&#39;</span><span>&quot;);
+</span><span>                    }
+</span><span>                    TemperatureError::OutOfRange(_) =&gt; {
+</span><span>                        println!(&quot;</span><span style="color:#a3be8c;">   💡 Suggestion: Check your thermometer calibration</span><span>&quot;);
+</span><span>                    }
+</span><span>                }
+</span><span>            }
+</span><span>        }
+</span><span>        println!();
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> temperature_inputs = [
+</span><span>        &quot;</span><span style="color:#a3be8c;">180°C</span><span>&quot;,      </span><span style="color:#a7adba;">// Good cooking temperature
+</span><span>        &quot;</span><span style="color:#a3be8c;">350°F</span><span>&quot;,      </span><span style="color:#a7adba;">// Good cooking temperature in Fahrenheit
+</span><span>        &quot;</span><span style="color:#a3be8c;">25°C</span><span>&quot;,       </span><span style="color:#a7adba;">// Too cold
+</span><span>        &quot;</span><span style="color:#a3be8c;">400°C</span><span>&quot;,      </span><span style="color:#a7adba;">// Too hot
+</span><span>        &quot;</span><span style="color:#a3be8c;">-300°C</span><span>&quot;,     </span><span style="color:#a7adba;">// Below absolute zero
+</span><span>        &quot;</span><span style="color:#a3be8c;">abc°C</span><span>&quot;,      </span><span style="color:#a7adba;">// Invalid format
+</span><span>        &quot;</span><span style="color:#a3be8c;">200</span><span>&quot;,        </span><span style="color:#a7adba;">// No unit (assumes Celsius)
+</span><span>        &quot;</span><span style="color:#a3be8c;">invalid</span><span>&quot;,    </span><span style="color:#a7adba;">// Invalid
+</span><span>    ];
+</span><span>
+</span><span>    </span><span style="color:#96b5b4;">process_cooking_temperatures</span><span>(&amp;temperature_inputs);
+</span><span>}
+</span></code></pre>
+<h2 id="best-practices-and-patterns">Best Practices and Patterns</h2>
+<h3 id="1-prefer-specific-error-types">1. Prefer Specific Error Types</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// ❌ Generic string errors - not helpful
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">bad_parse_recipe</span><span>(</span><span style="color:#bf616a;">input</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; Result&lt;Recipe, String&gt; {
+</span><span>    </span><span style="color:#b48ead;">if</span><span> input.</span><span style="color:#96b5b4;">is_empty</span><span>() {
+</span><span>        Err(&quot;</span><span style="color:#a3be8c;">bad input</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>())  </span><span style="color:#a7adba;">// Not descriptive
+</span><span>    } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>        </span><span style="color:#a7adba;">// ...
+</span><span>        Err(&quot;</span><span style="color:#a3be8c;">something wrong</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>())  </span><span style="color:#a7adba;">// Vague
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// ✅ Specific error types with context
+</span><span>#[</span><span style="color:#bf616a;">derive</span><span>(Debug)]
+</span><span style="color:#b48ead;">enum </span><span>RecipeParseError {
+</span><span>    EmptyInput,
+</span><span>    MissingName,
+</span><span>    InvalidServings { input: String, reason: String },
+</span><span>    MissingIngredients,
+</span><span>    InvalidIngredient { line: </span><span style="color:#b48ead;">usize</span><span>, content: String },
+</span><span>    UnsupportedFormat { expected: String, found: String },
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>fmt::Display </span><span style="color:#b48ead;">for </span><span>RecipeParseError {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">fmt</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">f</span><span>: &amp;</span><span style="color:#b48ead;">mut </span><span>fmt::Formatter&lt;&#39;_&gt;) -&gt; fmt::Result {
+</span><span>        </span><span style="color:#b48ead;">match </span><span style="color:#bf616a;">self </span><span>{
+</span><span>            RecipeParseError::EmptyInput =&gt; {
+</span><span>                write!(f, &quot;</span><span style="color:#a3be8c;">Recipe input cannot be empty</span><span>&quot;)
+</span><span>            }
+</span><span>            RecipeParseError::MissingName =&gt; {
+</span><span>                write!(f, &quot;</span><span style="color:#a3be8c;">Recipe must have a name on the first line</span><span>&quot;)
+</span><span>            }
+</span><span>            RecipeParseError::InvalidServings { input, reason } =&gt; {
+</span><span>                write!(f, &quot;</span><span style="color:#a3be8c;">Invalid servings &#39;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">&#39;: </span><span style="color:#d08770;">{}</span><span>&quot;, input, reason)
+</span><span>            }
+</span><span>            RecipeParseError::MissingIngredients =&gt; {
+</span><span>                write!(f, &quot;</span><span style="color:#a3be8c;">Recipe must have at least one ingredient</span><span>&quot;)
+</span><span>            }
+</span><span>            RecipeParseError::InvalidIngredient { line, content } =&gt; {
+</span><span>                write!(f, &quot;</span><span style="color:#a3be8c;">Invalid ingredient on line </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">: &#39;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">&#39;</span><span>&quot;, line, content)
+</span><span>            }
+</span><span>            RecipeParseError::UnsupportedFormat { expected, found } =&gt; {
+</span><span>                write!(f, &quot;</span><span style="color:#a3be8c;">Expected </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> format, but found </span><span style="color:#d08770;">{}</span><span>&quot;, expected, found)
+</span><span>            }
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">good_parse_recipe</span><span>(</span><span style="color:#bf616a;">input</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; Result&lt;Recipe, RecipeParseError&gt; {
+</span><span>    </span><span style="color:#b48ead;">if</span><span> input.</span><span style="color:#96b5b4;">trim</span><span>().</span><span style="color:#96b5b4;">is_empty</span><span>() {
+</span><span>        </span><span style="color:#b48ead;">return </span><span>Err(RecipeParseError::EmptyInput);
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> lines: Vec&lt;&amp;</span><span style="color:#b48ead;">str</span><span>&gt; = input.</span><span style="color:#96b5b4;">lines</span><span>().</span><span style="color:#96b5b4;">collect</span><span>();
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">if</span><span> lines.</span><span style="color:#96b5b4;">is_empty</span><span>() {
+</span><span>        </span><span style="color:#b48ead;">return </span><span>Err(RecipeParseError::MissingName);
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> name = lines[^</span><span style="color:#d08770;">0</span><span>].</span><span style="color:#96b5b4;">trim</span><span>();
+</span><span>    </span><span style="color:#b48ead;">if</span><span> name.</span><span style="color:#96b5b4;">is_empty</span><span>() {
+</span><span>        </span><span style="color:#b48ead;">return </span><span>Err(RecipeParseError::MissingName);
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// More parsing logic...
+</span><span>    Ok(Recipe {
+</span><span>        name: name.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        servings: </span><span style="color:#d08770;">4</span><span>,
+</span><span>        estimated_time: </span><span style="color:#d08770;">30</span><span>,
+</span><span>    })
+</span><span>}
+</span></code></pre>
+<h3 id="2-use-for-clean-error-propagation">2. Use ? for Clean Error Propagation</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Chain operations that can fail
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">prepare_complex_dish</span><span>() -&gt; Result&lt;String, KitchenError&gt; {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> ingredients = </span><span style="color:#96b5b4;">gather_ingredients</span><span>()?;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> prepared_ingredients = </span><span style="color:#96b5b4;">prep_ingredients</span><span>(ingredients)?;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> cooked_components = </span><span style="color:#96b5b4;">cook_components</span><span>(prepared_ingredients)?;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> final_dish = </span><span style="color:#96b5b4;">plate_dish</span><span>(cooked_components)?;
+</span><span>
+</span><span>    Ok(format!(&quot;</span><span style="color:#a3be8c;">Successfully prepared: </span><span style="color:#d08770;">{}</span><span>&quot;, final_dish))
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Individual steps that can fail
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">gather_ingredients</span><span>() -&gt; Result&lt;Vec&lt;String&gt;, KitchenError&gt; {
+</span><span>    </span><span style="color:#a7adba;">// Check pantry, return list of available ingredients
+</span><span>    Ok(vec![&quot;</span><span style="color:#a3be8c;">quinoa</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), &quot;</span><span style="color:#a3be8c;">vegetables</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()])
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">prep_ingredients</span><span>(</span><span style="color:#bf616a;">ingredients</span><span>: Vec&lt;String&gt;) -&gt; Result&lt;Vec&lt;String&gt;, KitchenError&gt; {
+</span><span>    </span><span style="color:#a7adba;">// Wash, chop, measure ingredients
+</span><span>    Ok(ingredients) </span><span style="color:#a7adba;">// Simplified
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">cook_components</span><span>(</span><span style="color:#bf616a;">ingredients</span><span>: Vec&lt;String&gt;) -&gt; Result&lt;Vec&lt;String&gt;, KitchenError&gt; {
+</span><span>    </span><span style="color:#a7adba;">// Cook each component
+</span><span>    Ok(ingredients) </span><span style="color:#a7adba;">// Simplified
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">plate_dish</span><span>(</span><span style="color:#bf616a;">components</span><span>: Vec&lt;String&gt;) -&gt; Result&lt;String, KitchenError&gt; {
+</span><span>    </span><span style="color:#a7adba;">// Combine and present
+</span><span>    Ok(&quot;</span><span style="color:#a3be8c;">Beautiful quinoa bowl</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>())
+</span><span>}
+</span></code></pre>
+<h3 id="3-provide-meaningful-error-context">3. Provide Meaningful Error Context</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">impl </span><span>From&lt;std::num::ParseIntError&gt; </span><span style="color:#b48ead;">for </span><span>RecipeParseError {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">from</span><span>(</span><span style="color:#bf616a;">error</span><span>: std::num::ParseIntError) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        RecipeParseError::InvalidServings {
+</span><span>            input: &quot;</span><span style="color:#a3be8c;">parsing error</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>            reason: format!(&quot;</span><span style="color:#a3be8c;">Not a valid number: </span><span style="color:#d08770;">{}</span><span>&quot;, error),
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// This allows automatic conversion with ?
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">parse_servings</span><span>(</span><span style="color:#bf616a;">input</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; Result&lt;</span><span style="color:#b48ead;">u32</span><span>, RecipeParseError&gt; {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> servings = input.parse::&lt;</span><span style="color:#b48ead;">u32</span><span>&gt;()?; </span><span style="color:#a7adba;">// Automatically converts ParseIntError
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">if</span><span> servings == </span><span style="color:#d08770;">0 </span><span>{
+</span><span>        Err(RecipeParseError::InvalidServings {
+</span><span>            input: input.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>            reason: &quot;</span><span style="color:#a3be8c;">Must serve at least 1 person</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        })
+</span><span>    } </span><span style="color:#b48ead;">else if</span><span> servings &gt; </span><span style="color:#d08770;">50 </span><span>{
+</span><span>        Err(RecipeParseError::InvalidServings {
+</span><span>            input: input.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>            reason: &quot;</span><span style="color:#a3be8c;">Cannot serve more than 50 people</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        })
+</span><span>    } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>        Ok(servings)
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h3 id="4-handle-results-at-the-right-level">4. Handle Results at the Right Level</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Low-level functions return Results
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">read_ingredient_database</span><span>() -&gt; Result&lt;Database, DatabaseError&gt; {
+</span><span>    </span><span style="color:#a7adba;">// ... implementation
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">find_recipe</span><span>(</span><span style="color:#bf616a;">db</span><span>: &amp;Database, </span><span style="color:#bf616a;">name</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; Result&lt;Recipe, RecipeError&gt; {
+</span><span>    </span><span style="color:#a7adba;">// ... implementation
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// High-level functions handle multiple Results
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">prepare_meal_plan</span><span>(</span><span style="color:#bf616a;">recipe_names</span><span>: &amp;[&amp;</span><span style="color:#b48ead;">str</span><span>]) -&gt; Vec&lt;MealPlanResult&gt; {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> database = </span><span style="color:#b48ead;">match </span><span style="color:#96b5b4;">read_ingredient_database</span><span>() {
+</span><span>        Ok(db) =&gt; db,
+</span><span>        Err(e) =&gt; {
+</span><span>            </span><span style="color:#b48ead;">return </span><span>vec![MealPlanResult::DatabaseError(e.</span><span style="color:#96b5b4;">to_string</span><span>())];
+</span><span>        }
+</span><span>    };
+</span><span>
+</span><span>    recipe_names
+</span><span>        .</span><span style="color:#96b5b4;">iter</span><span>()
+</span><span>        .</span><span style="color:#96b5b4;">map</span><span>(|</span><span style="color:#bf616a;">name</span><span>| {
+</span><span>            </span><span style="color:#b48ead;">match </span><span style="color:#96b5b4;">find_recipe</span><span>(&amp;database, name) {
+</span><span>                Ok(recipe) =&gt; MealPlanResult::Success(recipe),
+</span><span>                Err(e) =&gt; MealPlanResult::RecipeError {
+</span><span>                    recipe_name: name.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>                    error: e.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>                },
+</span><span>            }
+</span><span>        })
+</span><span>        .</span><span style="color:#96b5b4;">collect</span><span>()
+</span><span>}
+</span><span>
+</span><span>#[</span><span style="color:#bf616a;">derive</span><span>(Debug)]
+</span><span style="color:#b48ead;">enum </span><span>MealPlanResult {
+</span><span>    Success(Recipe),
+</span><span>    RecipeError { recipe_name: String, error: String },
+</span><span>    DatabaseError(String),
+</span><span>}
+</span></code></pre>
+<h2 id="common-mistakes-to-avoid">Common Mistakes to Avoid</h2>
+<h3 id="mistake-1-using-unwrap-carelessly">Mistake 1: Using unwrap() Carelessly</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// ❌ Dangerous - can crash your program
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">dangerous_cooking</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> temp_str = &quot;</span><span style="color:#a3be8c;">invalid</span><span>&quot;;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> temperature = temp_str.parse::&lt;</span><span style="color:#b48ead;">u32</span><span>&gt;().</span><span style="color:#96b5b4;">unwrap</span><span>(); </span><span style="color:#a7adba;">// 💥 PANIC!
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Cooking at </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">°F</span><span>&quot;, temperature);
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// ✅ Safe - handle the error properly
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">safe_cooking</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> temp_str = &quot;</span><span style="color:#a3be8c;">invalid</span><span>&quot;;
+</span><span>    </span><span style="color:#b48ead;">match</span><span> temp_str.parse::&lt;</span><span style="color:#b48ead;">u32</span><span>&gt;() {
+</span><span>        Ok(temperature) =&gt; {
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">✅ Cooking at </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">°F</span><span>&quot;, temperature);
+</span><span>        }
+</span><span>        Err(error) =&gt; {
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">❌ Invalid temperature &#39;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">&#39;: </span><span style="color:#d08770;">{}</span><span>&quot;, temp_str, error);
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">💡 Please provide a valid number</span><span>&quot;);
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// ✅ Also safe - provide a default
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">safe_cooking_with_default</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> temp_str = &quot;</span><span style="color:#a3be8c;">invalid</span><span>&quot;;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> temperature = temp_str.parse::&lt;</span><span style="color:#b48ead;">u32</span><span>&gt;().</span><span style="color:#96b5b4;">unwrap_or</span><span>(</span><span style="color:#d08770;">350</span><span>);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">🍳 Cooking at </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">°F (default if invalid)</span><span>&quot;, temperature);
+</span><span>}
+</span></code></pre>
+<h3 id="mistake-2-not-providing-helpful-error-messages">Mistake 2: Not Providing Helpful Error Messages</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// ❌ Vague error messages
+</span><span>#[</span><span style="color:#bf616a;">derive</span><span>(Debug)]
+</span><span style="color:#b48ead;">enum </span><span>BadError {
+</span><span>    Failed,
+</span><span>    Wrong,
+</span><span>    Problem,
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// ✅ Specific, actionable error messages
+</span><span>#[</span><span style="color:#bf616a;">derive</span><span>(Debug)]
+</span><span style="color:#b48ead;">enum </span><span>GoodError {
+</span><span>    InsufficientIngredients {
+</span><span>        required: HashMap&lt;String, </span><span style="color:#b48ead;">u32</span><span>&gt;,
+</span><span>        available: HashMap&lt;String, </span><span style="color:#b48ead;">u32</span><span>&gt;,
+</span><span>        missing: Vec&lt;String&gt;,
+</span><span>    },
+</span><span>    EquipmentUnavailable {
+</span><span>        equipment: String,
+</span><span>        reason: String,
+</span><span>        alternative: Option&lt;String&gt;,
+</span><span>    },
+</span><span>    TemperatureOutOfRange {
+</span><span>        current: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>        min_required: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>        max_required: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>        adjustment_needed: String,
+</span><span>    },
+</span><span>}
+</span></code></pre>
+<h3 id="mistake-3-mixing-error-handling-styles">Mistake 3: Mixing Error Handling Styles</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// ❌ Inconsistent - some functions panic, others return Results
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">inconsistent_function_1</span><span>(</span><span style="color:#bf616a;">input</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; String {
+</span><span>    input.parse::&lt;</span><span style="color:#b48ead;">u32</span><span>&gt;().</span><span style="color:#96b5b4;">unwrap</span><span>().</span><span style="color:#96b5b4;">to_string</span><span>() </span><span style="color:#a7adba;">// Can panic!
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">inconsistent_function_2</span><span>(</span><span style="color:#bf616a;">input</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; Result&lt;String, String&gt; {
+</span><span>    </span><span style="color:#b48ead;">match</span><span> input.parse::&lt;</span><span style="color:#b48ead;">u32</span><span>&gt;() {
+</span><span>        Ok(num) =&gt; Ok(num.</span><span style="color:#96b5b4;">to_string</span><span>()),
+</span><span>        Err(e) =&gt; Err(e.</span><span style="color:#96b5b4;">to_string</span><span>()),
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// ✅ Consistent - all functions use Result for error handling
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">consistent_function_1</span><span>(</span><span style="color:#bf616a;">input</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; Result&lt;String, ParseError&gt; {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> num = input.parse::&lt;</span><span style="color:#b48ead;">u32</span><span>&gt;()
+</span><span>        .</span><span style="color:#96b5b4;">map_err</span><span>(|</span><span style="color:#bf616a;">e</span><span>| ParseError::InvalidNumber(input.</span><span style="color:#96b5b4;">to_string</span><span>(), e.</span><span style="color:#96b5b4;">to_string</span><span>()))?;
+</span><span>    Ok(num.</span><span style="color:#96b5b4;">to_string</span><span>())
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">consistent_function_2</span><span>(</span><span style="color:#bf616a;">input</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; Result&lt;String, ParseError&gt; {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> num = input.parse::&lt;</span><span style="color:#b48ead;">u32</span><span>&gt;()
+</span><span>        .</span><span style="color:#96b5b4;">map_err</span><span>(|</span><span style="color:#bf616a;">e</span><span>| ParseError::InvalidNumber(input.</span><span style="color:#96b5b4;">to_string</span><span>(), e.</span><span style="color:#96b5b4;">to_string</span><span>()))?;
+</span><span>    Ok(format!(&quot;</span><span style="color:#a3be8c;">Processed: </span><span style="color:#d08770;">{}</span><span>&quot;, num))
+</span><span>}
+</span><span>
+</span><span>#[</span><span style="color:#bf616a;">derive</span><span>(Debug)]
+</span><span style="color:#b48ead;">enum </span><span>ParseError {
+</span><span>    InvalidNumber(String, String),
+</span><span>    EmptyInput,
+</span><span>    OutOfRange(String),
+</span><span>}
+</span></code></pre>
+<h2 id="summary-and-key-takeaways">Summary and Key Takeaways</h2>
+<h3 id="mental-model-the-professional-kitchen-incident-report-system"><strong>Mental Model: The Professional Kitchen Incident Report System</strong></h3>
+<p>Remember the kitchen analogy:</p>
+<ul>
+<li>🎯 <strong>Ok(success)</strong> = Dish prepared perfectly with details of what was made</li>
+<li>❌ <strong>Err(error)</strong> = Something went wrong with specific details about the problem</li>
+<li>📋 <strong>Pattern matching</strong> = Kitchen manager reviewing incident reports</li>
+<li>🔄 <strong>Error propagation (?)</strong> = Problems automatically reported up the chain of command</li>
+<li>🛠️ <strong>Error handling</strong> = Taking specific action based on what went wrong</li>
+</ul>
+<h3 id="essential-principles"><strong>Essential Principles</strong></h3>
+<ol>
+<li><strong>Explicit error handling</strong> - Every operation that can fail returns a Result</li>
+<li><strong>Rich error information</strong> - Errors contain context about what went wrong</li>
+<li><strong>Composable operations</strong> - Chain operations safely with <code>?</code> operator</li>
+<li><strong>Type safety</strong> - Compiler ensures you handle both success and error cases</li>
+<li><strong>No hidden failures</strong> - All potential failures are visible in the type system</li>
+</ol>
+<h3 id="when-to-use-result-t-e"><strong>When to Use Result&lt;T, E&gt;</strong></h3>
+<table><thead><tr><th style="text-align: left"><strong>Use Case</strong></th><th style="text-align: left"><strong>Example</strong></th><th style="text-align: left"><strong>Why Result Works</strong></th></tr></thead><tbody>
+<tr><td style="text-align: left"><strong>I/O operations</strong></td><td style="text-align: left">Reading files, network requests</td><td style="text-align: left">Operations can fail for many reasons</td></tr>
+<tr><td style="text-align: left"><strong>Parsing</strong></td><td style="text-align: left">String to number conversion</td><td style="text-align: left">Input might be invalid</td></tr>
+<tr><td style="text-align: left"><strong>User input</strong></td><td style="text-align: left">Form validation</td><td style="text-align: left">Users can enter invalid data</td></tr>
+<tr><td style="text-align: left"><strong>External services</strong></td><td style="text-align: left">API calls, database queries</td><td style="text-align: left">Services can be unavailable</td></tr>
+<tr><td style="text-align: left"><strong>Business logic</strong></td><td style="text-align: left">Order processing</td><td style="text-align: left">Business rules can be violated</td></tr>
+<tr><td style="text-align: left"><strong>Resource allocation</strong></td><td style="text-align: left">Memory, file handles</td><td style="text-align: left">Resources can be exhausted</td></tr>
+</tbody></table>
+<h3 id="result-t-e-method-quick-reference"><strong>Result&lt;T, E&gt; Method Quick Reference</strong></h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">let</span><span> success: Result&lt;</span><span style="color:#b48ead;">i32</span><span>, String&gt; = Ok(</span><span style="color:#d08770;">42</span><span>);
+</span><span style="color:#b48ead;">let</span><span> failure: Result&lt;</span><span style="color:#b48ead;">i32</span><span>, String&gt; = Err(&quot;</span><span style="color:#a3be8c;">oops</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>());
+</span><span>
+</span><span style="color:#a7adba;">// Checking
+</span><span>success.</span><span style="color:#96b5b4;">is_ok</span><span>()                    </span><span style="color:#a7adba;">// true
+</span><span>success.</span><span style="color:#96b5b4;">is_err</span><span>()                   </span><span style="color:#a7adba;">// false
+</span><span>
+</span><span style="color:#a7adba;">// Safe extraction
+</span><span>success.</span><span style="color:#96b5b4;">unwrap_or</span><span>(</span><span style="color:#d08770;">0</span><span>)               </span><span style="color:#a7adba;">// 42
+</span><span>failure.</span><span style="color:#96b5b4;">unwrap_or</span><span>(</span><span style="color:#d08770;">0</span><span>)               </span><span style="color:#a7adba;">// 0
+</span><span>failure.</span><span style="color:#96b5b4;">unwrap_or_else</span><span>(|_| -</span><span style="color:#d08770;">1</span><span>)     </span><span style="color:#a7adba;">// -1
+</span><span>
+</span><span style="color:#a7adba;">// Transformation
+</span><span>success.</span><span style="color:#96b5b4;">map</span><span>(|</span><span style="color:#bf616a;">x</span><span>| x * </span><span style="color:#d08770;">2</span><span>)             </span><span style="color:#a7adba;">// Ok(84)
+</span><span>failure.</span><span style="color:#96b5b4;">map_err</span><span>(|</span><span style="color:#bf616a;">e</span><span>| format!(&quot;</span><span style="color:#a3be8c;">Error: </span><span style="color:#d08770;">{}</span><span>&quot;, e))
+</span><span>
+</span><span style="color:#a7adba;">// Chaining
+</span><span>success.</span><span style="color:#96b5b4;">and_then</span><span>(|</span><span style="color:#bf616a;">x</span><span>| Ok(x + </span><span style="color:#d08770;">1</span><span>))    </span><span style="color:#a7adba;">// Ok(43)
+</span><span>success.</span><span style="color:#96b5b4;">and_then</span><span>(|</span><span style="color:#bf616a;">x</span><span>| </span><span style="color:#b48ead;">if</span><span> x &gt; </span><span style="color:#d08770;">50 </span><span>{ Ok(x) } </span><span style="color:#b48ead;">else </span><span>{ Err(&quot;</span><span style="color:#a3be8c;">too small</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()) })
+</span><span>
+</span><span style="color:#a7adba;">// Error propagation
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">chain_operations</span><span>() -&gt; Result&lt;</span><span style="color:#b48ead;">i32</span><span>, String&gt; {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> a = </span><span style="color:#96b5b4;">might_fail_1</span><span>()?;       </span><span style="color:#a7adba;">// Early return on error
+</span><span>    </span><span style="color:#b48ead;">let</span><span> b = </span><span style="color:#96b5b4;">might_fail_2</span><span>(a)?;      </span><span style="color:#a7adba;">// Early return on error
+</span><span>    </span><span style="color:#b48ead;">let</span><span> c = </span><span style="color:#96b5b4;">might_fail_3</span><span>(b)?;      </span><span style="color:#a7adba;">// Early return on error
+</span><span>    Ok(c)
+</span><span>}
+</span></code></pre>
+<h3 id="best-practices-summary"><strong>Best Practices Summary</strong></h3>
+<p><strong>✅ DO:</strong></p>
+<ul>
+<li>Use specific error types with context</li>
+<li>Leverage the <code>?</code> operator for clean propagation</li>
+<li>Handle errors at appropriate levels</li>
+<li>Provide actionable error messages</li>
+<li>Use <code>match</code> for complex error handling</li>
+<li>Design errors to be helpful for debugging</li>
+</ul>
+<p><strong>❌ DON'T:</strong></p>
+<ul>
+<li>Use <code>unwrap()</code> without good reason</li>
+<li>Create vague or generic error messages</li>
+<li>Mix panicking and Result-returning functions</li>
+<li>Ignore error context</li>
+<li>Make errors that don't help users understand what went wrong</li>
+</ul>
+<h3 id="the-bigger-picture"><strong>The Bigger Picture</strong></h3>
+<p><strong>Result&lt;T, E&gt; is like having a world-class incident management system</strong> in your vegetarian restaurant kitchen:</p>
+<ul>
+<li>📊 <strong>Complete transparency</strong> - Every success and failure is documented</li>
+<li>🎯 <strong>Actionable information</strong> - Errors tell you exactly what to fix</li>
+<li>🔄 <strong>Scalable handling</strong> - Errors automatically propagate where they need to go</li>
+<li>✅ <strong>Guaranteed coverage</strong> - Compiler ensures no error goes unhandled</li>
+<li>📈 <strong>Continuous improvement</strong> - Rich error data helps improve processes</li>
+</ul>
+<p><strong>Result&lt;T, E&gt; eliminates entire categories of bugs</strong> by making failure modes explicit and forcing you to think about what can go wrong. It's the foundation of Rust's reliability - like having a kitchen that never serves a bad dish because every step of the cooking process is monitored, validated, and error-checked. When something does go wrong, you know exactly what happened and can fix it immediately!</p>
+<p>This explicit error handling might feel like extra work at first, but it leads to incredibly robust programs that handle real-world problems gracefully - just like a professional kitchen that runs smoothly even when ingredients run out, equipment breaks, or unexpected orders come in, because every possible problem has been anticipated and planned for.</p>
+<ol>
+<li>https://doc.rust-lang.org/rust-by-example/std/result.html</li>
+<li>https://doc.rust-lang.org/std/result/enum.Result.html</li>
+<li>https://doc.rust-lang.org/std/result/</li>
+<li>https://www.geeksforgeeks.org/rust/rust-result-type/</li>
+<li>https://web.mit.edu/rust-lang_v1.25/arch/amd64_ubuntu1404/share/doc/rust/html/std/result/enum.Result.html</li>
+<li>https://codedamn.com/news/rust/advanced-error-handling-rust-exploring-power-result-type</li>
+<li>https://dev.to/leapcell/rusts-result-type-error-handling-made-easy-58i</li>
+<li>https://blog.logrocket.com/understanding-rust-option-results-enums/</li>
+<li>https://reintech.io/blog/understanding-implementing-rust-option-result-types</li>
+<li>https://labex.io/tutorials/rust-exploring-rust-s-result-type-99239</li>
+<li>https://labex.io/tutorials/rust-exploring-rust-s-result-enum-99257</li>
+<li>https://doc.rust-lang.org/rust-by-example/error/result.html</li>
+<li>https://www.youtube.com/watch?v=NSqN2r0h8DE</li>
+<li>https://stackoverflow.com/questions/69218879/rust-extend-built-in-enum-result</li>
+<li>https://web.mit.edu/rust-lang_v1.25/arch/amd64_ubuntu1404/share/doc/rust/html/std/result/index.html</li>
+<li>https://www.youtube.com/watch?v=s5S2Ed5T-dc</li>
+<li>https://oida.dev/rust-enums-wrapping-errors/</li>
+<li>https://www.reddit.com/r/rust/comments/10c23qc/what_does_result_mean/</li>
+<li>https://dhghomon.github.io/easy_rust/Chapter_31.html</li>
+<li>https://en.wikipedia.org/wiki/Result_type</li>
+</ol>
+
+    
+        </div>
+
+    </article>
+</main>
+
+
+    <script type="text/javascript" src="http://localhost/elasticlunr.min.js" defer></script>
+    <script type="text/javascript" src="http://localhost/search_index.en.js" defer></script>
+<script type="text/javascript" src="http://localhost/js.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,1044 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://localhost/main.css">
+    <link rel="icon" href="https://www.rust-lang.org/static/images/favicon-16x16.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Rust Programming Course! | Match Expressions in Rust: Powerful Pattern Matching </title>
+</head>
+<body>
+
+<main>
+    
+    <nav>
+            <a href="http:&#x2F;&#x2F;localhost">
+                        <img src="https://www.rust-lang.org/static/images/rust-logo-blk.svg" alt="logo"/>
+                    </a>
+                <!-- -->
+
+            <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+            <div id="trees">
+                <input class="tree-toggle" type="checkbox" id="day-1-introduction"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-1-introduction">Day 1: Introduction</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 1/chapter-1/">What is Rust and why use it?</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-2/">Installing Rust Toolchain (rustup, cargo)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-3/">Setting up Development (VS Code + Hello World)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-4/">Understanding Cargo Project Structure</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-2-basic-syntax-variables"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-2-basic-syntax-variables">Day 2: Basic Syntax &amp; Variables</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 2/chapter-1/">Variables and Mutability in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-2/">Data Types in Rust: Integers, Floats, Booleans, and Characters</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-3/">Constants vs Variables</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-4/">Understanding Shadowing in Rust: A Practical Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-5/">Basic Input&#x2F;Output</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-3-functions-control-flow"
+                           checked/>
+                    <label class="tree-toggle-label"
+                           for="day-3-functions-control-flow">Day 3: Functions &amp; Control Flow</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 3/chapter-1/">Function Syntax and Parameters in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-2/">Return Values and Expressions vs Statements</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-3/">If&#x2F;Else Statements in Rust</a>
+                            </li>
+
+                            <li class="active">
+                                <a href="http://localhost/day 3/chapter-4/">Match Expressions in Rust: Powerful Pattern Matching</a>
+                            </li>
+
+                            
+                                    
+                                    
+                                        <ul id="toc">
+                                            <li><a href="
+                                                        http://localhost/day 3/chapter-4/#match-expressions-in-rust-a-detailed-guide">Match Expressions in Rust: A Detailed Guide</a>
+                                                    <ul>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-4/#what-is-a-match-expression">What is a Match Expression?</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-4/#basic-match-syntax">Basic Match Syntax</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-4/#simple-value-matching">Simple Value Matching</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-4/#single-value-patterns">Single Value Patterns</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-4/#day-of-week-example">Day of Week Example</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-4/#multiple-pattern-matching">Multiple Pattern Matching</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-4/#or-patterns">OR Patterns</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-4/#prime-number-checker">Prime Number Checker</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-4/#range-matching">Range Matching</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-4/#numeric-ranges">Numeric Ranges</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-4/#character-ranges">Character Ranges</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-4/#match-as-an-expression">Match as an Expression</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-4/#returning-values">Returning Values</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-4/#function-returns">Function Returns</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-4/#exhaustiveness-checking">Exhaustiveness Checking</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-4/#compiler-enforcement">Compiler Enforcement</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-4/#using-catch-all-pattern">Using Catch-All Pattern</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-4/#boolean-matching">Boolean Matching</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-4/#block-expressions-in-match-arms">Block Expressions in Match Arms</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-4/#single-vs-block-expressions">Single vs Block Expressions</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-4/#practical-examples">Practical Examples</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-4/#http-status-code-handler">HTTP Status Code Handler</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-4/#traffic-light-system">Traffic Light System</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-4/#age-category-classifier">Age Category Classifier</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-4/#match-vs-if-else-comparison">Match vs If&#x2F;Else Comparison</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-4/#when-to-use-match">When to Use Match</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-4/#when-to-use-if-else">When to Use If&#x2F;Else</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-4/#type-requirements-and-restrictions">Type Requirements and Restrictions</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-4/#all-arms-must-return-same-type">All Arms Must Return Same Type</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-4/#order-matters">Order Matters</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-4/#best-practices">Best Practices</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-4/#use-match-for-multiple-discrete-values">Use Match for Multiple Discrete Values</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-4/#order-patterns-from-specific-to-general">Order Patterns from Specific to General</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-4/#use-descriptive-variable-names">Use Descriptive Variable Names</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-4/#common-patterns">Common Patterns</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-4/#configuration-matching">Configuration Matching</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-4/#error-code-handling">Error Code Handling</a>
+                                                                </li>
+                                                            </ul>
+                                                    </li>
+                                            </ul>
+                                    <li >
+                                <a href="http://localhost/day 3/chapter-5/">Loops in Rust: loop, while, for Explained</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-4-data-types-deep-dive"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-4-data-types-deep-dive">Day 4: Data Types Deep Dive</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 4/chapter-1/">Compound Types (Tuples, Arrays)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-2/">String vs &amp;str in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-3/">Vector Basics in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-4/">Type Annotations and Inference in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-5/">Practical Rust Exercises</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-5-practice-review"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-5-practice-review">Day 5: Practice &amp; Review</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 5/chapter-1/">Day 5: Practice &amp; Review</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-6-ownership-fundamentals"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-6-ownership-fundamentals">Day 6: Ownership Fundamentals</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 6/chapter-1/">Ownership in Rust: A Detailed Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-2/">Stack vs Heap in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-3/">Understanding Ownership in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-4/">Move Semantics in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-5/">Copy Trait in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-7-references-borrowing"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-7-references-borrowing">Day 7: References &amp; Borrowing</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 7/chapter-1/">Immutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-2/">Mutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-3/">Borrowing Rules</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-4/">Reference Lifetime Basics</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-5/">Common Borrowing Errors and Solutions</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-8-slices"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-8-slices">Day 8: Slices</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 8/chapter-1/">String Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-2/">Array Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-3/">Slice Syntax and Usage</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-4/">Practical Applications</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-5/">Memory Safety Benefits</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-9-advanced-ownership"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-9-advanced-ownership">Day 9: Advanced Ownership</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 9/chapter-1/">Clone Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-2/">Drop Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-3/">RAII Pattern</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-4/">Memory Management Comparison with Other Languages</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-5/">Best Practices (Advanced Ownership)</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-10-ownership-practice"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-10-ownership-practice">Day 10: Ownership Practice</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 10/chapter-1/">Complex Ownership Scenarios</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-2/">Debugging Ownership Errors</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-3/">Code Refactoring Exercises</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-4/">Group Problem-Solving</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-11-structs-basics"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-11-structs-basics">Day 11: Structs Basics</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 11/chapter-1/">Defining and Instantiating Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-2/">Field Access and Modification</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-3/">Tuple Structs and Unit Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-4/">Struct Update Syntax</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-5/">Ownership of Struct Data</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-12-methods-associated-functions"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-12-methods-associated-functions">Day 12: Methods &amp; Associated Functions</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 12/chapter-1/">Implementing Methods with impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-2/">&amp;self, &amp;mut self, and self</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-3/">Associated Functions (like Constructors)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-4/">Multiple impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-5/">Method Chaining</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-13-advanced-struct-concepts"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-13-advanced-struct-concepts">Day 13: Advanced Struct Concepts</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 13/chapter-1/">Struct Lifetime Parameters</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-2/">Debug Trait and Custom Formatting</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-3/">Builder Pattern Implementation</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-4/">Struct Composition</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-5/">Best Practices for Struct Design</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-14-enums-pattern-matching"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-14-enums-pattern-matching">Day 14: Enums &amp; Pattern Matching</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 14/chapter-1/">Defining Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-2/">Enum Variants with Data</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-3/">Option&lt;T&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-4/">Result&lt;T, E&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-5/">Advanced Match Patterns in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-15-practice-project"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-15-practice-project">Day 15: Practice Project</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 15/chapter-1/">Building a Simple CLI Calculator in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-16-vectors"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-16-vectors">Day 16: Vectors</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 16/chapter-1/">Creating and Updating Vectors</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-2/">Vector Methods: push, pop, iter</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-3/">Accessing Vector Elements Safely</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-4/">Vector of Different Types with Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-5/">Performance Considerations</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-17-hashmaps-other-collections"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-17-hashmaps-other-collections">Day 17: HashMaps &amp; Other Collections</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 17/chapter-1/">HashMap Creation and Manipulation</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-2/">Keys and Values Ownership</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-3/">HashMap Methods and Iteration</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-4/">When to Use Different Collections</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-5/">BTreeMap Introduction</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-18-error-handling"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-18-error-handling">Day 18: Error Handling</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 18/chapter-1/">Panic! and When to Use It</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 18/chapter-2/">Result&lt;T, E&gt; in Depth</a>
+                            </li>
+
+                            </ul>
+                </div>
+        </nav>
+    <article>
+
+        <div id="on_right">
+                <span id="search-ico" class="ms-Icon--Search"></span>
+            </div>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="Search as you type...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        <div id="wrap">
+            
+        <h1 id="match-expressions-in-rust-a-detailed-guide">Match Expressions in Rust: A Detailed Guide</h1>
+<p>Building on your understanding of if/else conditionals, let's explore Rust's <strong>match expressions</strong> - a far more powerful and flexible way to handle multiple conditions and patterns. While <code>if/else</code> is great for simple binary decisions, <code>match</code> excels when you have multiple possibilities and need pattern matching capabilities.</p>
+<h2 id="what-is-a-match-expression">What is a Match Expression?</h2>
+<p>A <strong>match expression</strong> in Rust is like a supercharged <code>switch</code> statement that compares a value against multiple patterns and executes code based on which pattern matches<a href="https://doc.rust-lang.org/reference/expressions/match-expr.html">1</a>. Unlike simple <code>if/else</code> chains, match expressions provide <strong>pattern matching</strong>, <strong>exhaustiveness checking</strong>, and <strong>expression-based returns</strong>.</p>
+<h2 id="basic-match-syntax">Basic Match Syntax</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">match </span><span style="color:#d08770;">VALUE </span><span>{
+</span><span>    </span><span style="color:#d08770;">PATTERN </span><span>=&gt; </span><span style="color:#d08770;">EXPRESSION</span><span>,
+</span><span>    </span><span style="color:#d08770;">PATTERN </span><span>=&gt; </span><span style="color:#d08770;">EXPRESSION</span><span>,
+</span><span>    </span><span style="color:#d08770;">PATTERN </span><span>=&gt; </span><span style="color:#d08770;">EXPRESSION</span><span>,
+</span><span>    _ =&gt; </span><span style="color:#d08770;">EXPRESSION</span><span>,  </span><span style="color:#a7adba;">// Catch-all pattern
+</span><span>}
+</span><span>
+</span></code></pre>
+<p>The structure consists of<a href="https://doc.rust-lang.org/reference/expressions/match-expr.html">1</a><a href="https://www.w3schools.com/rust/rust_match.php">2</a>:</p>
+<ul>
+<li><strong><code>match</code>**** keyword</strong> followed by the value to examine</li>
+<li><strong>Match arms</strong> inside curly braces <code>{}</code></li>
+<li>Each arm has a <strong>pattern</strong>, the <strong>fat arrow</strong> (<code>=&gt;</code>), and an <strong>expression</strong></li>
+<li>The <strong>underscore</strong> (<code>_</code>) serves as a catch-all pattern</li>
+</ul>
+<h2 id="simple-value-matching">Simple Value Matching</h2>
+<p>Let's start with basic literal value matching:</p>
+<h2 id="single-value-patterns">Single Value Patterns</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> number = </span><span style="color:#d08770;">3</span><span>;
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">match</span><span> number {
+</span><span>        </span><span style="color:#d08770;">1 </span><span>=&gt; println!(&quot;</span><span style="color:#a3be8c;">One!</span><span>&quot;),
+</span><span>        </span><span style="color:#d08770;">2 </span><span>=&gt; println!(&quot;</span><span style="color:#a3be8c;">Two!</span><span>&quot;),
+</span><span>        </span><span style="color:#d08770;">3 </span><span>=&gt; println!(&quot;</span><span style="color:#a3be8c;">Three!</span><span>&quot;),
+</span><span>        </span><span style="color:#d08770;">4 </span><span>=&gt; println!(&quot;</span><span style="color:#a3be8c;">Four!</span><span>&quot;),
+</span><span>        </span><span style="color:#d08770;">5 </span><span>=&gt; println!(&quot;</span><span style="color:#a3be8c;">Five!</span><span>&quot;),
+</span><span>        _ =&gt; println!(&quot;</span><span style="color:#a3be8c;">Something else</span><span>&quot;),
+</span><span>    }
+</span><span>}
+</span><span>
+</span></code></pre>
+<p><strong>Output:</strong><code>Three!</code></p>
+<h2 id="day-of-week-example">Day of Week Example</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> day = </span><span style="color:#d08770;">4</span><span>;
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">match</span><span> day {
+</span><span>        </span><span style="color:#d08770;">1 </span><span>=&gt; println!(&quot;</span><span style="color:#a3be8c;">Monday</span><span>&quot;),
+</span><span>        </span><span style="color:#d08770;">2 </span><span>=&gt; println!(&quot;</span><span style="color:#a3be8c;">Tuesday</span><span>&quot;),
+</span><span>        </span><span style="color:#d08770;">3 </span><span>=&gt; println!(&quot;</span><span style="color:#a3be8c;">Wednesday</span><span>&quot;),
+</span><span>        </span><span style="color:#d08770;">4 </span><span>=&gt; println!(&quot;</span><span style="color:#a3be8c;">Thursday</span><span>&quot;),
+</span><span>        </span><span style="color:#d08770;">5 </span><span>=&gt; println!(&quot;</span><span style="color:#a3be8c;">Friday</span><span>&quot;),
+</span><span>        </span><span style="color:#d08770;">6 </span><span>=&gt; println!(&quot;</span><span style="color:#a3be8c;">Saturday</span><span>&quot;),
+</span><span>        </span><span style="color:#d08770;">7 </span><span>=&gt; println!(&quot;</span><span style="color:#a3be8c;">Sunday</span><span>&quot;),
+</span><span>        _ =&gt; println!(&quot;</span><span style="color:#a3be8c;">Invalid day</span><span>&quot;),
+</span><span>    }
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="multiple-pattern-matching">Multiple Pattern Matching</h2>
+<p>You can match <strong>multiple values in a single arm</strong> using the <code>|</code> (OR) operator<a href="https://www.w3schools.com/rust/rust_match.php">2</a><a href="https://doc.rust-lang.org/beta/book/ch19-03-pattern-syntax.html">3</a>:</p>
+<h2 id="or-patterns">OR Patterns</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> day = </span><span style="color:#d08770;">6</span><span>;
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">match</span><span> day {
+</span><span>        </span><span style="color:#d08770;">1 </span><span>| </span><span style="color:#d08770;">2 </span><span>| </span><span style="color:#d08770;">3 </span><span>| </span><span style="color:#d08770;">4 </span><span>| </span><span style="color:#d08770;">5 </span><span>=&gt; println!(&quot;</span><span style="color:#a3be8c;">Weekday</span><span>&quot;),
+</span><span>        </span><span style="color:#d08770;">6 </span><span>| </span><span style="color:#d08770;">7 </span><span>=&gt; println!(&quot;</span><span style="color:#a3be8c;">Weekend</span><span>&quot;),
+</span><span>        _ =&gt; println!(&quot;</span><span style="color:#a3be8c;">Invalid day</span><span>&quot;),
+</span><span>    }
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="prime-number-checker">Prime Number Checker</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> number = </span><span style="color:#d08770;">13</span><span>;
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">match</span><span> number {
+</span><span>        </span><span style="color:#d08770;">2 </span><span>| </span><span style="color:#d08770;">3 </span><span>| </span><span style="color:#d08770;">5 </span><span>| </span><span style="color:#d08770;">7 </span><span>| </span><span style="color:#d08770;">11 </span><span>| </span><span style="color:#d08770;">13 </span><span>| </span><span style="color:#d08770;">17 </span><span>| </span><span style="color:#d08770;">19 </span><span>=&gt; println!(&quot;</span><span style="color:#a3be8c;">This is a prime number!</span><span>&quot;),
+</span><span>        </span><span style="color:#d08770;">1 </span><span>=&gt; println!(&quot;</span><span style="color:#a3be8c;">One is neither prime nor composite</span><span>&quot;),
+</span><span>        _ =&gt; println!(&quot;</span><span style="color:#a3be8c;">This might not be prime</span><span>&quot;),
+</span><span>    }
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="range-matching">Range Matching</h2>
+<p>Rust supports <strong>inclusive range matching</strong> with <code>..=</code> syntax<a href="https://doc.rust-lang.org/beta/book/ch19-03-pattern-syntax.html">3</a>:</p>
+<h2 id="numeric-ranges">Numeric Ranges</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> score = </span><span style="color:#d08770;">85</span><span>;
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">match</span><span> score {
+</span><span>        </span><span style="color:#d08770;">90</span><span>..=</span><span style="color:#d08770;">100 </span><span>=&gt; println!(&quot;</span><span style="color:#a3be8c;">Grade: A</span><span>&quot;),
+</span><span>        </span><span style="color:#d08770;">80</span><span>..=</span><span style="color:#d08770;">89 </span><span>=&gt; println!(&quot;</span><span style="color:#a3be8c;">Grade: B</span><span>&quot;),
+</span><span>        </span><span style="color:#d08770;">70</span><span>..=</span><span style="color:#d08770;">79 </span><span>=&gt; println!(&quot;</span><span style="color:#a3be8c;">Grade: C</span><span>&quot;),
+</span><span>        </span><span style="color:#d08770;">60</span><span>..=</span><span style="color:#d08770;">69 </span><span>=&gt; println!(&quot;</span><span style="color:#a3be8c;">Grade: D</span><span>&quot;),
+</span><span>        </span><span style="color:#d08770;">0</span><span>..=</span><span style="color:#d08770;">59 </span><span>=&gt; println!(&quot;</span><span style="color:#a3be8c;">Grade: F</span><span>&quot;),
+</span><span>        _ =&gt; println!(&quot;</span><span style="color:#a3be8c;">Invalid score</span><span>&quot;),
+</span><span>    }
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="character-ranges">Character Ranges</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> letter = &#39;</span><span style="color:#a3be8c;">c</span><span>&#39;;
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">match</span><span> letter {
+</span><span>        &#39;</span><span style="color:#a3be8c;">a</span><span>&#39;..=&#39;</span><span style="color:#a3be8c;">j</span><span>&#39; =&gt; println!(&quot;</span><span style="color:#a3be8c;">Early ASCII letter</span><span>&quot;),
+</span><span>        &#39;</span><span style="color:#a3be8c;">k</span><span>&#39;..=&#39;</span><span style="color:#a3be8c;">z</span><span>&#39; =&gt; println!(&quot;</span><span style="color:#a3be8c;">Late ASCII letter</span><span>&quot;),
+</span><span>        &#39;</span><span style="color:#a3be8c;">A</span><span>&#39;..=&#39;</span><span style="color:#a3be8c;">Z</span><span>&#39; =&gt; println!(&quot;</span><span style="color:#a3be8c;">Uppercase letter</span><span>&quot;),
+</span><span>        _ =&gt; println!(&quot;</span><span style="color:#a3be8c;">Not a letter</span><span>&quot;),
+</span><span>    }
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="match-as-an-expression">Match as an Expression</h2>
+<p>Just like <code>if</code>, <strong>match is an expression</strong> that returns a value<a href="https://www.w3schools.com/rust/rust_match.php">2</a><a href="https://google.github.io/comprehensive-rust/control-flow-basics/match.html">4</a>:</p>
+<h2 id="returning-values">Returning Values</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> day = </span><span style="color:#d08770;">4</span><span>;
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> day_name = </span><span style="color:#b48ead;">match</span><span> day {
+</span><span>        </span><span style="color:#d08770;">1 </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">Monday</span><span>&quot;,
+</span><span>        </span><span style="color:#d08770;">2 </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">Tuesday</span><span>&quot;, 
+</span><span>        </span><span style="color:#d08770;">3 </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">Wednesday</span><span>&quot;,
+</span><span>        </span><span style="color:#d08770;">4 </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">Thursday</span><span>&quot;,
+</span><span>        </span><span style="color:#d08770;">5 </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">Friday</span><span>&quot;,
+</span><span>        </span><span style="color:#d08770;">6 </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">Saturday</span><span>&quot;,
+</span><span>        </span><span style="color:#d08770;">7 </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">Sunday</span><span>&quot;,
+</span><span>        _ =&gt; &quot;</span><span style="color:#a3be8c;">Invalid day</span><span>&quot;,
+</span><span>    };
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Day </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">: </span><span style="color:#d08770;">{}</span><span>&quot;, day, day_name);
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="function-returns">Function Returns</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">get_grade</span><span>(</span><span style="color:#bf616a;">score</span><span>: </span><span style="color:#b48ead;">i32</span><span>) -&gt; </span><span style="color:#b48ead;">char </span><span>{
+</span><span>    </span><span style="color:#b48ead;">match</span><span> score {
+</span><span>        </span><span style="color:#d08770;">90</span><span>..=</span><span style="color:#d08770;">100 </span><span>=&gt; &#39;</span><span style="color:#a3be8c;">A</span><span>&#39;,
+</span><span>        </span><span style="color:#d08770;">80</span><span>..=</span><span style="color:#d08770;">89 </span><span>=&gt; &#39;</span><span style="color:#a3be8c;">B</span><span>&#39;,
+</span><span>        </span><span style="color:#d08770;">70</span><span>..=</span><span style="color:#d08770;">79 </span><span>=&gt; &#39;</span><span style="color:#a3be8c;">C</span><span>&#39;, 
+</span><span>        </span><span style="color:#d08770;">60</span><span>..=</span><span style="color:#d08770;">69 </span><span>=&gt; &#39;</span><span style="color:#a3be8c;">D</span><span>&#39;,
+</span><span>        _ =&gt; &#39;</span><span style="color:#a3be8c;">F</span><span>&#39;,
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> student_score = </span><span style="color:#d08770;">87</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> grade = </span><span style="color:#96b5b4;">get_grade</span><span>(student_score);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Score: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">, Grade: </span><span style="color:#d08770;">{}</span><span>&quot;, student_score, grade);
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="exhaustiveness-checking">Exhaustiveness Checking</h2>
+<p>One of match's most powerful features is <strong>exhaustiveness checking</strong> - Rust ensures all possible values are handled<a href="https://www.cs.brandeis.edu/~cs146a/rust/doc-02-21-2015/book/match.html">5</a>:</p>
+<h2 id="compiler-enforcement">Compiler Enforcement</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> value = </span><span style="color:#d08770;">1</span><span>;
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// This will cause a compilation error!
+</span><span>    </span><span style="color:#b48ead;">match</span><span> value {
+</span><span>        </span><span style="color:#d08770;">1 </span><span>=&gt; println!(&quot;</span><span style="color:#a3be8c;">one</span><span>&quot;),
+</span><span>        </span><span style="color:#d08770;">2 </span><span>=&gt; println!(&quot;</span><span style="color:#a3be8c;">two</span><span>&quot;),
+</span><span>        </span><span style="color:#a7adba;">// Missing other possible values and catch-all
+</span><span>    }
+</span><span>}
+</span><span>
+</span></code></pre>
+<p><strong>Error message:</strong></p>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>error[E0004]: non-exhaustive patterns: `i32::MIN..=0i32` and `3i32..=i32::MAX` not covered
+</span><span>
+</span></code></pre>
+<h2 id="using-catch-all-pattern">Using Catch-All Pattern</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> value = </span><span style="color:#d08770;">100</span><span>;
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">match</span><span> value {
+</span><span>        </span><span style="color:#d08770;">1 </span><span>=&gt; println!(&quot;</span><span style="color:#a3be8c;">one</span><span>&quot;),
+</span><span>        </span><span style="color:#d08770;">2 </span><span>=&gt; println!(&quot;</span><span style="color:#a3be8c;">two</span><span>&quot;), 
+</span><span>        </span><span style="color:#d08770;">3 </span><span>=&gt; println!(&quot;</span><span style="color:#a3be8c;">three</span><span>&quot;),
+</span><span>        _ =&gt; println!(&quot;</span><span style="color:#a3be8c;">something else</span><span>&quot;), </span><span style="color:#a7adba;">// Handles all other cases
+</span><span>    }
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="boolean-matching">Boolean Matching</h2>
+<p>Match works perfectly with boolean values:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> is_enabled = </span><span style="color:#d08770;">true</span><span>;
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> status = </span><span style="color:#b48ead;">match</span><span> is_enabled {
+</span><span>        </span><span style="color:#d08770;">true </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">System is ON</span><span>&quot;,
+</span><span>        </span><span style="color:#d08770;">false </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">System is OFF</span><span>&quot;,
+</span><span>    };
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, status);
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="block-expressions-in-match-arms">Block Expressions in Match Arms</h2>
+<p>Match arms can contain <strong>code blocks</strong> for complex logic:</p>
+<h2 id="single-vs-block-expressions">Single vs Block Expressions</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> number = </span><span style="color:#d08770;">3</span><span>;
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">match</span><span> number {
+</span><span>        </span><span style="color:#d08770;">1 </span><span>=&gt; println!(&quot;</span><span style="color:#a3be8c;">One!</span><span>&quot;),                    </span><span style="color:#a7adba;">// Single expression
+</span><span>        </span><span style="color:#d08770;">2 </span><span>=&gt; {                                    </span><span style="color:#a7adba;">// Block expression
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">Two!</span><span>&quot;);
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">This is an even number</span><span>&quot;);
+</span><span>        },
+</span><span>        </span><span style="color:#d08770;">3 </span><span>=&gt; {
+</span><span>            </span><span style="color:#b48ead;">let</span><span> message = &quot;</span><span style="color:#a3be8c;">Three!</span><span>&quot;;
+</span><span>            println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, message);
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">This is an odd number</span><span>&quot;);
+</span><span>        },
+</span><span>        _ =&gt; println!(&quot;</span><span style="color:#a3be8c;">Something else</span><span>&quot;),
+</span><span>    }
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="practical-examples">Practical Examples</h2>
+<h2 id="http-status-code-handler">HTTP Status Code Handler</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">handle_status_code</span><span>(</span><span style="color:#bf616a;">code</span><span>: </span><span style="color:#b48ead;">u16</span><span>) -&gt; &amp;</span><span style="color:#b48ead;">&#39;static str </span><span>{
+</span><span>    </span><span style="color:#b48ead;">match</span><span> code {
+</span><span>        </span><span style="color:#d08770;">200 </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">OK</span><span>&quot;,
+</span><span>        </span><span style="color:#d08770;">201 </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">Created</span><span>&quot;, 
+</span><span>        </span><span style="color:#d08770;">400 </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">Bad Request</span><span>&quot;,
+</span><span>        </span><span style="color:#d08770;">401 </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">Unauthorized</span><span>&quot;,
+</span><span>        </span><span style="color:#d08770;">403 </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">Forbidden</span><span>&quot;,
+</span><span>        </span><span style="color:#d08770;">404 </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">Not Found</span><span>&quot;,
+</span><span>        </span><span style="color:#d08770;">500</span><span>..=</span><span style="color:#d08770;">599 </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">Server Error</span><span>&quot;,
+</span><span>        _ =&gt; &quot;</span><span style="color:#a3be8c;">Unknown Status</span><span>&quot;,
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> status = </span><span style="color:#d08770;">404</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> message = </span><span style="color:#96b5b4;">handle_status_code</span><span>(status);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Status </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">: </span><span style="color:#d08770;">{}</span><span>&quot;, status, message);
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="traffic-light-system">Traffic Light System</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> light_color = &quot;</span><span style="color:#a3be8c;">yellow</span><span>&quot;;
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> action = </span><span style="color:#b48ead;">match</span><span> light_color {
+</span><span>        &quot;</span><span style="color:#a3be8c;">red</span><span>&quot; =&gt; &quot;</span><span style="color:#a3be8c;">Stop</span><span>&quot;,
+</span><span>        &quot;</span><span style="color:#a3be8c;">yellow</span><span>&quot; | &quot;</span><span style="color:#a3be8c;">amber</span><span>&quot; =&gt; &quot;</span><span style="color:#a3be8c;">Prepare to stop</span><span>&quot;,
+</span><span>        &quot;</span><span style="color:#a3be8c;">green</span><span>&quot; =&gt; &quot;</span><span style="color:#a3be8c;">Go</span><span>&quot;,
+</span><span>        _ =&gt; &quot;</span><span style="color:#a3be8c;">Invalid light color</span><span>&quot;,
+</span><span>    };
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Traffic light is </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">: </span><span style="color:#d08770;">{}</span><span>&quot;, light_color, action);
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="age-category-classifier">Age Category Classifier</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">classify_age</span><span>(</span><span style="color:#bf616a;">age</span><span>: </span><span style="color:#b48ead;">u32</span><span>) -&gt; &amp;</span><span style="color:#b48ead;">&#39;static str </span><span>{
+</span><span>    </span><span style="color:#b48ead;">match</span><span> age {
+</span><span>        </span><span style="color:#d08770;">0</span><span>..=</span><span style="color:#d08770;">2 </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">Infant</span><span>&quot;,
+</span><span>        </span><span style="color:#d08770;">3</span><span>..=</span><span style="color:#d08770;">12 </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">Child</span><span>&quot;, 
+</span><span>        </span><span style="color:#d08770;">13</span><span>..=</span><span style="color:#d08770;">19 </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">Teenager</span><span>&quot;,
+</span><span>        </span><span style="color:#d08770;">20</span><span>..=</span><span style="color:#d08770;">64 </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">Adult</span><span>&quot;,
+</span><span>        </span><span style="color:#d08770;">65</span><span>..=</span><span style="color:#d08770;">150 </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">Senior</span><span>&quot;,
+</span><span>        _ =&gt; &quot;</span><span style="color:#a3be8c;">Invalid age</span><span>&quot;,
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> ages = [</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">8</span><span>, </span><span style="color:#d08770;">16</span><span>, </span><span style="color:#d08770;">30</span><span>, </span><span style="color:#d08770;">70</span><span>, </span><span style="color:#d08770;">200</span><span>];
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">for</span><span> age in ages.</span><span style="color:#96b5b4;">iter</span><span>() {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> category = </span><span style="color:#96b5b4;">classify_age</span><span>(*age);
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Age </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">: </span><span style="color:#d08770;">{}</span><span>&quot;, age, category);
+</span><span>    }
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="match-vs-if-else-comparison">Match vs If/Else Comparison</h2>
+<h2 id="when-to-use-match">When to Use Match</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Better with match - multiple distinct values
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">get_day_type</span><span>(</span><span style="color:#bf616a;">day</span><span>: </span><span style="color:#b48ead;">u32</span><span>) -&gt; &amp;</span><span style="color:#b48ead;">&#39;static str </span><span>{
+</span><span>    </span><span style="color:#b48ead;">match</span><span> day {
+</span><span>        </span><span style="color:#d08770;">1</span><span>..=</span><span style="color:#d08770;">5 </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">Weekday</span><span>&quot;,
+</span><span>        </span><span style="color:#d08770;">6 </span><span>| </span><span style="color:#d08770;">7 </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">Weekend</span><span>&quot;, 
+</span><span>        _ =&gt; &quot;</span><span style="color:#a3be8c;">Invalid</span><span>&quot;,
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// If/else becomes unwieldy
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">get_day_type_if</span><span>(</span><span style="color:#bf616a;">day</span><span>: </span><span style="color:#b48ead;">u32</span><span>) -&gt; &amp;</span><span style="color:#b48ead;">&#39;static str </span><span>{
+</span><span>    </span><span style="color:#b48ead;">if</span><span> day &gt;= </span><span style="color:#d08770;">1 </span><span>&amp;&amp; day &lt;= </span><span style="color:#d08770;">5 </span><span>{
+</span><span>        &quot;</span><span style="color:#a3be8c;">Weekday</span><span>&quot;
+</span><span>    } </span><span style="color:#b48ead;">else if</span><span> day == </span><span style="color:#d08770;">6 </span><span>|| day == </span><span style="color:#d08770;">7 </span><span>{
+</span><span>        &quot;</span><span style="color:#a3be8c;">Weekend</span><span>&quot;
+</span><span>    } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>        &quot;</span><span style="color:#a3be8c;">Invalid</span><span>&quot;
+</span><span>    }
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="when-to-use-if-else">When to Use If/Else</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Better with if/else - simple binary condition
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">is_positive</span><span>(</span><span style="color:#bf616a;">number</span><span>: </span><span style="color:#b48ead;">i32</span><span>) -&gt; </span><span style="color:#b48ead;">bool </span><span>{
+</span><span>    </span><span style="color:#b48ead;">if</span><span> number &gt; </span><span style="color:#d08770;">0 </span><span>{
+</span><span>        </span><span style="color:#d08770;">true
+</span><span>    } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>        </span><span style="color:#d08770;">false
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Match is overkill here
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">is_positive_match</span><span>(</span><span style="color:#bf616a;">number</span><span>: </span><span style="color:#b48ead;">i32</span><span>) -&gt; </span><span style="color:#b48ead;">bool </span><span>{
+</span><span>    </span><span style="color:#b48ead;">match</span><span> number {
+</span><span>        </span><span style="color:#d08770;">1</span><span>..=</span><span style="color:#b48ead;">i32</span><span>::</span><span style="color:#d08770;">MAX </span><span>=&gt; </span><span style="color:#d08770;">true</span><span>,
+</span><span>        _ =&gt; </span><span style="color:#d08770;">false</span><span>,
+</span><span>    }
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="type-requirements-and-restrictions">Type Requirements and Restrictions</h2>
+<h2 id="all-arms-must-return-same-type">All Arms Must Return Same Type</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> number = </span><span style="color:#d08770;">1</span><span>;
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// This works - all arms return &amp;str
+</span><span>    </span><span style="color:#b48ead;">let</span><span> result = </span><span style="color:#b48ead;">match</span><span> number {
+</span><span>        </span><span style="color:#d08770;">1 </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">one</span><span>&quot;,
+</span><span>        </span><span style="color:#d08770;">2 </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">two</span><span>&quot;,
+</span><span>        _ =&gt; &quot;</span><span style="color:#a3be8c;">other</span><span>&quot;,
+</span><span>    };
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// This would fail - mixed types
+</span><span>    </span><span style="color:#a7adba;">/* 
+</span><span style="color:#a7adba;">    let invalid = match number {
+</span><span style="color:#a7adba;">        1 =&gt; &quot;one&quot;,      // &amp;str
+</span><span style="color:#a7adba;">        2 =&gt; 2,          // i32 - ERROR!
+</span><span style="color:#a7adba;">        _ =&gt; &quot;other&quot;,    // &amp;str
+</span><span style="color:#a7adba;">    };
+</span><span style="color:#a7adba;">    */
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="order-matters">Order Matters</h2>
+<p>Match arms are <strong>evaluated from top to bottom</strong>, and the <strong>first match wins</strong><a href="https://google.github.io/comprehensive-rust/control-flow-basics/match.html">4</a>:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> number = </span><span style="color:#d08770;">5</span><span>;
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">match</span><span> number {
+</span><span>        </span><span style="color:#d08770;">1</span><span>..=</span><span style="color:#d08770;">10 </span><span>=&gt; println!(&quot;</span><span style="color:#a3be8c;">Single digit</span><span>&quot;), </span><span style="color:#a7adba;">// This matches first
+</span><span>        </span><span style="color:#d08770;">5 </span><span>=&gt; println!(&quot;</span><span style="color:#a3be8c;">Five</span><span>&quot;),              </span><span style="color:#a7adba;">// This never executes
+</span><span>        _ =&gt; println!(&quot;</span><span style="color:#a3be8c;">Other</span><span>&quot;),
+</span><span>    }
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="best-practices">Best Practices</h2>
+<h2 id="use-match-for-multiple-discrete-values"><strong>Use Match for Multiple Discrete Values</strong></h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Good - clear, exhaustive, and readable
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">process_command</span><span>(</span><span style="color:#bf616a;">cmd</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) {
+</span><span>    </span><span style="color:#b48ead;">match</span><span> cmd {
+</span><span>        &quot;</span><span style="color:#a3be8c;">start</span><span>&quot; =&gt; println!(&quot;</span><span style="color:#a3be8c;">Starting system...</span><span>&quot;),
+</span><span>        &quot;</span><span style="color:#a3be8c;">stop</span><span>&quot; =&gt; println!(&quot;</span><span style="color:#a3be8c;">Stopping system...</span><span>&quot;),
+</span><span>        &quot;</span><span style="color:#a3be8c;">restart</span><span>&quot; =&gt; println!(&quot;</span><span style="color:#a3be8c;">Restarting system...</span><span>&quot;),
+</span><span>        &quot;</span><span style="color:#a3be8c;">status</span><span>&quot; =&gt; println!(&quot;</span><span style="color:#a3be8c;">System status: OK</span><span>&quot;),
+</span><span>        _ =&gt; println!(&quot;</span><span style="color:#a3be8c;">Unknown command: </span><span style="color:#d08770;">{}</span><span>&quot;, cmd),
+</span><span>    }
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="order-patterns-from-specific-to-general"><strong>Order Patterns from Specific to General</strong></h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Good - specific patterns first
+</span><span style="color:#b48ead;">match</span><span> value {
+</span><span>    </span><span style="color:#d08770;">0 </span><span>=&gt; println!(&quot;</span><span style="color:#a3be8c;">Zero</span><span>&quot;),
+</span><span>    </span><span style="color:#d08770;">1</span><span>..=</span><span style="color:#d08770;">10 </span><span>=&gt; println!(&quot;</span><span style="color:#a3be8c;">Small number</span><span>&quot;),
+</span><span>    _ =&gt; println!(&quot;</span><span style="color:#a3be8c;">Large number</span><span>&quot;),
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Bad - general pattern masks specific ones
+</span><span style="color:#b48ead;">match</span><span> value {
+</span><span>    _ =&gt; println!(&quot;</span><span style="color:#a3be8c;">Any number</span><span>&quot;),      </span><span style="color:#a7adba;">// This catches everything!
+</span><span>    </span><span style="color:#d08770;">0 </span><span>=&gt; println!(&quot;</span><span style="color:#a3be8c;">Zero</span><span>&quot;),           </span><span style="color:#a7adba;">// Never reached
+</span><span>    </span><span style="color:#d08770;">1</span><span>..=</span><span style="color:#d08770;">10 </span><span>=&gt; println!(&quot;</span><span style="color:#a3be8c;">Small</span><span>&quot;),     </span><span style="color:#a7adba;">// Never reached
+</span><span>}
+</span></code></pre>
+<h2 id="use-descriptive-variable-names"><strong>Use Descriptive Variable Names</strong></h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Good - clear intent
+</span><span style="color:#b48ead;">match</span><span> http_status_code {
+</span><span>    </span><span style="color:#d08770;">200 </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">Success</span><span>&quot;,
+</span><span>    </span><span style="color:#d08770;">404 </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">Not Found</span><span>&quot;, 
+</span><span>    _ =&gt; &quot;</span><span style="color:#a3be8c;">Error</span><span>&quot;,
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Less clear
+</span><span style="color:#b48ead;">match</span><span> x {
+</span><span>    </span><span style="color:#d08770;">200 </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">Success</span><span>&quot;,
+</span><span>    </span><span style="color:#d08770;">404 </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">Not Found</span><span>&quot;,
+</span><span>    _ =&gt; &quot;</span><span style="color:#a3be8c;">Error</span><span>&quot;, 
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="common-patterns">Common Patterns</h2>
+<h2 id="configuration-matching">Configuration Matching</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">get_log_level</span><span>(</span><span style="color:#bf616a;">debug</span><span>: </span><span style="color:#b48ead;">bool</span><span>, </span><span style="color:#bf616a;">verbose</span><span>: </span><span style="color:#b48ead;">bool</span><span>) -&gt; &amp;</span><span style="color:#b48ead;">&#39;static str </span><span>{
+</span><span>    </span><span style="color:#b48ead;">match </span><span>(debug, verbose) {
+</span><span>        (</span><span style="color:#d08770;">true</span><span>, </span><span style="color:#d08770;">true</span><span>) =&gt; &quot;</span><span style="color:#a3be8c;">DEBUG_VERBOSE</span><span>&quot;,
+</span><span>        (</span><span style="color:#d08770;">true</span><span>, </span><span style="color:#d08770;">false</span><span>) =&gt; &quot;</span><span style="color:#a3be8c;">DEBUG</span><span>&quot;, 
+</span><span>        (</span><span style="color:#d08770;">false</span><span>, </span><span style="color:#d08770;">true</span><span>) =&gt; &quot;</span><span style="color:#a3be8c;">VERBOSE</span><span>&quot;,
+</span><span>        (</span><span style="color:#d08770;">false</span><span>, </span><span style="color:#d08770;">false</span><span>) =&gt; &quot;</span><span style="color:#a3be8c;">INFO</span><span>&quot;,
+</span><span>    }
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="error-code-handling">Error Code Handling</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">handle_exit_code</span><span>(</span><span style="color:#bf616a;">code</span><span>: </span><span style="color:#b48ead;">i32</span><span>) {
+</span><span>    </span><span style="color:#b48ead;">match</span><span> code {
+</span><span>        </span><span style="color:#d08770;">0 </span><span>=&gt; println!(&quot;</span><span style="color:#a3be8c;">Success</span><span>&quot;),
+</span><span>        </span><span style="color:#d08770;">1</span><span>..=</span><span style="color:#d08770;">125 </span><span>=&gt; println!(&quot;</span><span style="color:#a3be8c;">General error (code: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">)</span><span>&quot;, code),
+</span><span>        </span><span style="color:#d08770;">126 </span><span>=&gt; println!(&quot;</span><span style="color:#a3be8c;">Command not executable</span><span>&quot;), 
+</span><span>        </span><span style="color:#d08770;">127 </span><span>=&gt; println!(&quot;</span><span style="color:#a3be8c;">Command not found</span><span>&quot;),
+</span><span>        </span><span style="color:#d08770;">128</span><span>..=</span><span style="color:#d08770;">255 </span><span>=&gt; println!(&quot;</span><span style="color:#a3be8c;">Fatal error signal</span><span>&quot;),
+</span><span>        _ =&gt; println!(&quot;</span><span style="color:#a3be8c;">Invalid exit code</span><span>&quot;),
+</span><span>    }
+</span><span>}
+</span><span>
+</span></code></pre>
+<p>Understanding match expressions is crucial for writing idiomatic Rust code. <strong>Match provides exhaustiveness checking, pattern matching capabilities, and clear, readable code structure</strong>. It's particularly powerful when combined with Rust's enums and structs, which we'll explore in future topics. The expression-based nature and compiler guarantees make match both safe and efficient for handling complex conditional logic.</p>
+<ol>
+<li>https://doc.rust-lang.org/reference/expressions/match-expr.html</li>
+<li>https://www.w3schools.com/rust/rust_match.php</li>
+<li>https://doc.rust-lang.org/beta/book/ch19-03-pattern-syntax.html</li>
+<li>https://google.github.io/comprehensive-rust/control-flow-basics/match.html</li>
+<li>https://www.cs.brandeis.edu/~cs146a/rust/doc-02-21-2015/book/match.html</li>
+<li>https://doc.rust-lang.org/rust-by-example/flow_control/match.html</li>
+<li>https://www.programiz.com/rust/pattern-matching</li>
+<li>https://www.youtube.com/watch?v=pf8eQwWkTaY</li>
+<li>https://dev.to/abbasogaji/learning-rust-match-statements-220l</li>
+<li>https://web.mit.edu/rust-lang_v1.25/arch/amd64_ubuntu1404/share/doc/rust/html/book/second-edition/ch06-02-match.html</li>
+</ol>
+
+    
+        </div>
+
+    </article>
+</main>
+
+
+    <script type="text/javascript" src="http://localhost/elasticlunr.min.js" defer></script>
+    <script type="text/javascript" src="http://localhost/search_index.en.js" defer></script>
+<script type="text/javascript" src="http://localhost/js.js" defer></script>
+
+</body>
+</html>

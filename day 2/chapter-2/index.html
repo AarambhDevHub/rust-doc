@@ -1,0 +1,778 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://localhost/main.css">
+    <link rel="icon" href="https://www.rust-lang.org/static/images/favicon-16x16.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Rust Programming Course! | Data Types in Rust: Integers, Floats, Booleans, and Characters </title>
+</head>
+<body>
+
+<main>
+    
+    <nav>
+            <a href="http:&#x2F;&#x2F;localhost">
+                        <img src="https://www.rust-lang.org/static/images/rust-logo-blk.svg" alt="logo"/>
+                    </a>
+                <!-- -->
+
+            <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+            <div id="trees">
+                <input class="tree-toggle" type="checkbox" id="day-1-introduction"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-1-introduction">Day 1: Introduction</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 1/chapter-1/">What is Rust and why use it?</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-2/">Installing Rust Toolchain (rustup, cargo)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-3/">Setting up Development (VS Code + Hello World)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-4/">Understanding Cargo Project Structure</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-2-basic-syntax-variables"
+                           checked/>
+                    <label class="tree-toggle-label"
+                           for="day-2-basic-syntax-variables">Day 2: Basic Syntax &amp; Variables</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 2/chapter-1/">Variables and Mutability in Rust</a>
+                            </li>
+
+                            <li class="active">
+                                <a href="http://localhost/day 2/chapter-2/">Data Types in Rust: Integers, Floats, Booleans, and Characters</a>
+                            </li>
+
+                            
+                                    
+                                    
+                                        <ul id="toc">
+                                            <li><a href="
+                                                        http://localhost/day 2/chapter-2/#data-types-in-rust-integers-floats-booleans-and-characters">Data Types in Rust: Integers, Floats, Booleans, and Characters</a>
+                                                    <ul>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-2/#integer-types">Integer Types</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-2/#integer-type-categories">Integer Type Categories</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-2/#integer-examples">Integer Examples</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-2/#integer-literals">Integer Literals</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-2/#floating-point-types">Floating-Point Types</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-2/#floating-point-examples">Floating-Point Examples</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-2/#floating-point-precision">Floating-Point Precision</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-2/#boolean-type">Boolean Type</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-2/#boolean-examples">Boolean Examples</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-2/#boolean-in-practice">Boolean in Practice</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-2/#character-type">Character Type</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-2/#character-features">Character Features</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-2/#character-examples">Character Examples:</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-2/#character-vs-string">Character vs String</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-2/#type-inference-vs-explicit-typing">Type Inference vs Explicit Typing</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-2/#type-safety-and-conversion">Type Safety and Conversion</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-2/#best-practices">Best Practices</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-2/#use-appropriate-sizes">Use Appropriate Sizes</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-2/#prefer-defaults-when-unsure">Prefer Defaults When Unsure</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-2/#use-type-annotations-for-clarity">Use Type Annotations for Clarity</a>
+                                                                </li>
+                                                            </ul>
+                                                    </li>
+                                            </ul>
+                                    <li >
+                                <a href="http://localhost/day 2/chapter-3/">Constants vs Variables</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-4/">Understanding Shadowing in Rust: A Practical Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-5/">Basic Input&#x2F;Output</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-3-functions-control-flow"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-3-functions-control-flow">Day 3: Functions &amp; Control Flow</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 3/chapter-1/">Function Syntax and Parameters in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-2/">Return Values and Expressions vs Statements</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-3/">If&#x2F;Else Statements in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-4/">Match Expressions in Rust: Powerful Pattern Matching</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-5/">Loops in Rust: loop, while, for Explained</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-4-data-types-deep-dive"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-4-data-types-deep-dive">Day 4: Data Types Deep Dive</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 4/chapter-1/">Compound Types (Tuples, Arrays)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-2/">String vs &amp;str in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-3/">Vector Basics in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-4/">Type Annotations and Inference in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-5/">Practical Rust Exercises</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-5-practice-review"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-5-practice-review">Day 5: Practice &amp; Review</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 5/chapter-1/">Day 5: Practice &amp; Review</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-6-ownership-fundamentals"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-6-ownership-fundamentals">Day 6: Ownership Fundamentals</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 6/chapter-1/">Ownership in Rust: A Detailed Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-2/">Stack vs Heap in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-3/">Understanding Ownership in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-4/">Move Semantics in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-5/">Copy Trait in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-7-references-borrowing"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-7-references-borrowing">Day 7: References &amp; Borrowing</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 7/chapter-1/">Immutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-2/">Mutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-3/">Borrowing Rules</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-4/">Reference Lifetime Basics</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-5/">Common Borrowing Errors and Solutions</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-8-slices"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-8-slices">Day 8: Slices</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 8/chapter-1/">String Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-2/">Array Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-3/">Slice Syntax and Usage</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-4/">Practical Applications</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-5/">Memory Safety Benefits</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-9-advanced-ownership"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-9-advanced-ownership">Day 9: Advanced Ownership</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 9/chapter-1/">Clone Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-2/">Drop Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-3/">RAII Pattern</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-4/">Memory Management Comparison with Other Languages</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-5/">Best Practices (Advanced Ownership)</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-10-ownership-practice"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-10-ownership-practice">Day 10: Ownership Practice</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 10/chapter-1/">Complex Ownership Scenarios</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-2/">Debugging Ownership Errors</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-3/">Code Refactoring Exercises</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-4/">Group Problem-Solving</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-11-structs-basics"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-11-structs-basics">Day 11: Structs Basics</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 11/chapter-1/">Defining and Instantiating Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-2/">Field Access and Modification</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-3/">Tuple Structs and Unit Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-4/">Struct Update Syntax</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-5/">Ownership of Struct Data</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-12-methods-associated-functions"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-12-methods-associated-functions">Day 12: Methods &amp; Associated Functions</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 12/chapter-1/">Implementing Methods with impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-2/">&amp;self, &amp;mut self, and self</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-3/">Associated Functions (like Constructors)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-4/">Multiple impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-5/">Method Chaining</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-13-advanced-struct-concepts"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-13-advanced-struct-concepts">Day 13: Advanced Struct Concepts</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 13/chapter-1/">Struct Lifetime Parameters</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-2/">Debug Trait and Custom Formatting</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-3/">Builder Pattern Implementation</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-4/">Struct Composition</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-5/">Best Practices for Struct Design</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-14-enums-pattern-matching"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-14-enums-pattern-matching">Day 14: Enums &amp; Pattern Matching</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 14/chapter-1/">Defining Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-2/">Enum Variants with Data</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-3/">Option&lt;T&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-4/">Result&lt;T, E&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-5/">Advanced Match Patterns in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-15-practice-project"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-15-practice-project">Day 15: Practice Project</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 15/chapter-1/">Building a Simple CLI Calculator in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-16-vectors"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-16-vectors">Day 16: Vectors</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 16/chapter-1/">Creating and Updating Vectors</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-2/">Vector Methods: push, pop, iter</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-3/">Accessing Vector Elements Safely</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-4/">Vector of Different Types with Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-5/">Performance Considerations</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-17-hashmaps-other-collections"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-17-hashmaps-other-collections">Day 17: HashMaps &amp; Other Collections</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 17/chapter-1/">HashMap Creation and Manipulation</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-2/">Keys and Values Ownership</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-3/">HashMap Methods and Iteration</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-4/">When to Use Different Collections</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-5/">BTreeMap Introduction</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-18-error-handling"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-18-error-handling">Day 18: Error Handling</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 18/chapter-1/">Panic! and When to Use It</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 18/chapter-2/">Result&lt;T, E&gt; in Depth</a>
+                            </li>
+
+                            </ul>
+                </div>
+        </nav>
+    <article>
+
+        <div id="on_right">
+                <span id="search-ico" class="ms-Icon--Search"></span>
+            </div>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="Search as you type...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        <div id="wrap">
+            
+        <h1 id="data-types-in-rust-integers-floats-booleans-and-characters">Data Types in Rust: Integers, Floats, Booleans, and Characters</h1>
+<p>Building on your understanding of variables and mutability, let's explore Rust's <strong>scalar data types</strong> - the fundamental building blocks for storing and manipulating data. Rust has four primary scalar types that represent single values: <strong>integers</strong>, <strong>floating-point numbers</strong>, <strong>booleans</strong>, and <strong>characters</strong>.</p>
+<h2 id="integer-types">Integer Types</h2>
+<p>Integers in Rust represent <strong>whole numbers</strong> (positive or negative) without fractional components. Rust provides multiple integer types with different sizes and signed/unsigned variants.</p>
+<h2 id="integer-type-categories">Integer Type Categories</h2>
+<p><strong>Signed Integers</strong> (can store negative numbers):</p>
+<ul>
+<li><code>i8</code>: -128 to 127 (8-bit)</li>
+<li><code>i16</code>: -32,768 to 32,767 (16-bit)</li>
+<li><code>i32</code>: -2,147,483,648 to 2,147,483,647 (32-bit) - <strong>default</strong></li>
+<li><code>i64</code>: -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 (64-bit)</li>
+<li><code>i128</code>: 128-bit signed integer</li>
+<li><code>isize</code>: pointer-sized (32-bit on 32-bit systems, 64-bit on 64-bit systems)</li>
+</ul>
+<p><strong>Unsigned Integers</strong> (only positive numbers):</p>
+<ul>
+<li><code>u8</code>: 0 to 255 (8-bit)</li>
+<li><code>u16</code>: 0 to 65,535 (16-bit)</li>
+<li><code>u32</code>: 0 to 4,294,967,295 (32-bit)</li>
+<li><code>u64</code>: 0 to 18,446,744,073,709,551,615 (64-bit)</li>
+<li><code>u128</code>: 128-bit unsigned integer</li>
+<li><code>usize</code>: pointer-sized unsigned integer</li>
+</ul>
+<h2 id="integer-examples">Integer Examples</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// Default i32 type (inferred)
+</span><span>    </span><span style="color:#b48ead;">let</span><span> default_int = </span><span style="color:#d08770;">42</span><span>;
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Explicit type annotations
+</span><span>    </span><span style="color:#b48ead;">let</span><span> small_number: </span><span style="color:#b48ead;">i8 </span><span>= -</span><span style="color:#d08770;">50</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> large_number: </span><span style="color:#b48ead;">u64 </span><span>= </span><span style="color:#d08770;">1_000_000_000</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> byte_value: </span><span style="color:#b48ead;">u8 </span><span>= </span><span style="color:#d08770;">255</span><span>;
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Using underscores for readability
+</span><span>    </span><span style="color:#b48ead;">let</span><span> million: </span><span style="color:#b48ead;">i32 </span><span>= </span><span style="color:#d08770;">1_000_000</span><span>;
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Default: </span><span style="color:#d08770;">{}</span><span>&quot;, default_int);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Small: </span><span style="color:#d08770;">{}</span><span>&quot;, small_number);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Large: </span><span style="color:#d08770;">{}</span><span>&quot;, large_number);
+</span><span>}
+</span></code></pre>
+<h2 id="integer-literals">Integer Literals</h2>
+<p>Rust supports multiple number literal formats:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> decimal = </span><span style="color:#d08770;">98_222</span><span>;        </span><span style="color:#a7adba;">// Decimal
+</span><span>    </span><span style="color:#b48ead;">let</span><span> hex = </span><span style="color:#d08770;">0xff</span><span>;              </span><span style="color:#a7adba;">// Hexadecimal
+</span><span>    </span><span style="color:#b48ead;">let</span><span> octal = </span><span style="color:#d08770;">0o77</span><span>;            </span><span style="color:#a7adba;">// Octal
+</span><span>    </span><span style="color:#b48ead;">let</span><span> binary = </span><span style="color:#d08770;">0b1111_0000</span><span>;    </span><span style="color:#a7adba;">// Binary
+</span><span>    </span><span style="color:#b48ead;">let</span><span> byte = </span><span style="color:#b48ead;">b</span><span>&#39;</span><span style="color:#a3be8c;">A</span><span>&#39;;             </span><span style="color:#a7adba;">// Byte (u8 only)
+</span><span>}
+</span></code></pre>
+<h2 id="floating-point-types">Floating-Point Types</h2>
+<p>Floating-point numbers represent <strong>numbers with decimal points</strong>. Rust has two floating-point types that follow the IEEE-754 standard:</p>
+<ul>
+<li><code>f32</code>: 32-bit single-precision floating point</li>
+<li><code>f64</code>: 64-bit double-precision floating point - <strong>default</strong></li>
+</ul>
+<h2 id="floating-point-examples">Floating-Point Examples</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// Default f64 type (inferred)
+</span><span>    </span><span style="color:#b48ead;">let</span><span> pi = </span><span style="color:#d08770;">3.14159</span><span>;
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Explicit type annotations
+</span><span>    </span><span style="color:#b48ead;">let</span><span> price: </span><span style="color:#b48ead;">f32 </span><span>= </span><span style="color:#d08770;">19.99</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> scientific: </span><span style="color:#b48ead;">f64 </span><span>= </span><span style="color:#d08770;">2.5e10</span><span>;  </span><span style="color:#a7adba;">// Scientific notation
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Mathematical operations
+</span><span>    </span><span style="color:#b48ead;">let</span><span> sum = </span><span style="color:#d08770;">5.5 </span><span>+ </span><span style="color:#d08770;">10.2</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> difference = </span><span style="color:#d08770;">95.5 </span><span>- </span><span style="color:#d08770;">4.3</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> product = </span><span style="color:#d08770;">4.0 </span><span>* </span><span style="color:#d08770;">30.0</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> quotient = </span><span style="color:#d08770;">56.7 </span><span>/ </span><span style="color:#d08770;">32.2</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> remainder = </span><span style="color:#d08770;">43.0 </span><span>% </span><span style="color:#d08770;">5.0</span><span>;
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Pi: </span><span style="color:#d08770;">{}</span><span>&quot;, pi);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Price: $</span><span style="color:#d08770;">{}</span><span>&quot;, price);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Scientific: </span><span style="color:#d08770;">{}</span><span>&quot;, scientific);
+</span><span>}
+</span></code></pre>
+<h2 id="floating-point-precision">Floating-Point Precision</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> f32_val: </span><span style="color:#b48ead;">f32 </span><span>= </span><span style="color:#d08770;">3.14159265359</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> f64_val: </span><span style="color:#b48ead;">f64 </span><span>= </span><span style="color:#d08770;">3.14159265359</span><span>;
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">f32: </span><span style="color:#d08770;">{}</span><span>&quot;, f32_val);  </span><span style="color:#a7adba;">// Less precision
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">f64: </span><span style="color:#d08770;">{}</span><span>&quot;, f64_val);  </span><span style="color:#a7adba;">// More precision
+</span><span>}
+</span></code></pre>
+<h2 id="boolean-type">Boolean Type</h2>
+<p>The <code>bool</code> type represents <strong>logical values</strong> with only two possible states: <code>true</code> or <code>false</code>. Booleans are <strong>one byte in size</strong> and are primarily used in conditional statements and logical operations.</p>
+<h2 id="boolean-examples">Boolean Examples</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// Direct assignment
+</span><span>    </span><span style="color:#b48ead;">let</span><span> is_active = </span><span style="color:#d08770;">true</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> is_complete: </span><span style="color:#b48ead;">bool </span><span>= </span><span style="color:#d08770;">false</span><span>;  </span><span style="color:#a7adba;">// Explicit type annotation
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// From comparisons
+</span><span>    </span><span style="color:#b48ead;">let</span><span> is_greater = </span><span style="color:#d08770;">5 </span><span>&gt; </span><span style="color:#d08770;">3</span><span>;        </span><span style="color:#a7adba;">// true
+</span><span>    </span><span style="color:#b48ead;">let</span><span> is_equal = </span><span style="color:#d08770;">10 </span><span>== </span><span style="color:#d08770;">15</span><span>;       </span><span style="color:#a7adba;">// false
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Logical operations
+</span><span>    </span><span style="color:#b48ead;">let</span><span> and_result = </span><span style="color:#d08770;">true </span><span>&amp;&amp; </span><span style="color:#d08770;">false</span><span>;   </span><span style="color:#a7adba;">// false
+</span><span>    </span><span style="color:#b48ead;">let</span><span> or_result = </span><span style="color:#d08770;">true </span><span>|| </span><span style="color:#d08770;">false</span><span>;    </span><span style="color:#a7adba;">// true
+</span><span>    </span><span style="color:#b48ead;">let</span><span> not_result = !</span><span style="color:#d08770;">true</span><span>;           </span><span style="color:#a7adba;">// false
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Using in conditionals
+</span><span>    </span><span style="color:#b48ead;">if</span><span> is_active {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">System is active</span><span>&quot;);
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">if </span><span>!is_complete {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Task is not complete</span><span>&quot;);
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h2 id="boolean-in-practice">Boolean in Practice</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> temperature = </span><span style="color:#d08770;">25</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> is_sunny = </span><span style="color:#d08770;">true</span><span>;
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> is_good_weather = temperature &gt; </span><span style="color:#d08770;">20 </span><span>&amp;&amp; is_sunny;
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">if</span><span> is_good_weather {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Perfect day for outdoor activities!</span><span>&quot;);
+</span><span>    } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Maybe stay inside today.</span><span>&quot;);
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h2 id="character-type">Character Type</h2>
+<p>The <code>char</code> type represents a <strong>single Unicode character</strong> and is Rust's most primitive alphabetic type. Characters are <strong>four bytes in size</strong> and can represent much more than just ASCII characters.</p>
+<h2 id="character-features">Character Features</h2>
+<ul>
+<li>Uses <strong>single quotes</strong> (not double quotes like strings)</li>
+<li>Represents <strong>Unicode Scalar Values</strong> from <code>U+0000</code> to <code>U+D7FF</code> and <code>U+E000</code> to <code>U+10FFFF</code></li>
+<li>Can store ASCII letters, accented characters, Chinese/Japanese/Korean characters, emojis, and more</li>
+</ul>
+<h2 id="character-examples">Character Examples:</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// Basic ASCII characters
+</span><span>    </span><span style="color:#b48ead;">let</span><span> letter = &#39;</span><span style="color:#a3be8c;">A</span><span>&#39;;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> digit: </span><span style="color:#b48ead;">char </span><span>= &#39;</span><span style="color:#a3be8c;">5</span><span>&#39;;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> symbol = &#39;</span><span style="color:#a3be8c;">@</span><span>&#39;;
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Unicode characters
+</span><span>    </span><span style="color:#b48ead;">let</span><span> accented = &#39;</span><span style="color:#a3be8c;">ñ</span><span>&#39;;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> chinese = &#39;</span><span style="color:#a3be8c;">中</span><span>&#39;;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> mathematical = &#39;</span><span style="color:#a3be8c;">ℤ</span><span>&#39;;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> emoji = &#39;</span><span style="color:#a3be8c;">😻</span><span>&#39;;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> heart = &#39;</span><span style="color:#a3be8c;">♥</span><span>&#39;;
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Special characters
+</span><span>    </span><span style="color:#b48ead;">let</span><span> newline = &#39;</span><span style="color:#96b5b4;">\n</span><span>&#39;;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> tab = &#39;</span><span style="color:#96b5b4;">\t</span><span>&#39;;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> backslash = &#39;</span><span style="color:#96b5b4;">\\</span><span>&#39;;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> quote = &#39;</span><span style="color:#96b5b4;">\&#39;</span><span>&#39;;
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Letter: </span><span style="color:#d08770;">{}</span><span>&quot;, letter);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Emoji: </span><span style="color:#d08770;">{}</span><span>&quot;, emoji);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Math symbol: </span><span style="color:#d08770;">{}</span><span>&quot;, mathematical);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Chinese: </span><span style="color:#d08770;">{}</span><span>&quot;, chinese);
+</span><span>}
+</span></code></pre>
+<h2 id="character-vs-string">Character vs String</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> single_char = &#39;</span><span style="color:#a3be8c;">A</span><span>&#39;;        </span><span style="color:#a7adba;">// char - single quotes
+</span><span>    </span><span style="color:#b48ead;">let</span><span> string_slice = &quot;</span><span style="color:#a3be8c;">A</span><span>&quot;;       </span><span style="color:#a7adba;">// &amp;str - double quotes
+</span><span>    </span><span style="color:#b48ead;">let</span><span> string_literal = &quot;</span><span style="color:#a3be8c;">Hello</span><span>&quot;; </span><span style="color:#a7adba;">// &amp;str - multiple characters
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// This would be an error:
+</span><span>    </span><span style="color:#a7adba;">// let invalid = &#39;AB&#39;;  // Error: char can only hold one character
+</span><span>}
+</span></code></pre>
+<h2 id="type-inference-vs-explicit-typing">Type Inference vs Explicit Typing</h2>
+<p>Rust can often <strong>infer types</strong> from context, but you can always specify them explicitly:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// Type inference
+</span><span>    </span><span style="color:#b48ead;">let</span><span> age = </span><span style="color:#d08770;">25</span><span>;          </span><span style="color:#a7adba;">// Inferred as i32
+</span><span>    </span><span style="color:#b48ead;">let</span><span> price = </span><span style="color:#d08770;">19.99</span><span>;     </span><span style="color:#a7adba;">// Inferred as f64
+</span><span>    </span><span style="color:#b48ead;">let</span><span> is_valid = </span><span style="color:#d08770;">true</span><span>;   </span><span style="color:#a7adba;">// Inferred as bool
+</span><span>    </span><span style="color:#b48ead;">let</span><span> grade = &#39;</span><span style="color:#a3be8c;">A</span><span>&#39;;       </span><span style="color:#a7adba;">// Inferred as char
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Explicit typing
+</span><span>    </span><span style="color:#b48ead;">let</span><span> age: </span><span style="color:#b48ead;">u16 </span><span>= </span><span style="color:#d08770;">25</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> price: </span><span style="color:#b48ead;">f32 </span><span>= </span><span style="color:#d08770;">19.99</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> is_valid: </span><span style="color:#b48ead;">bool </span><span>= </span><span style="color:#d08770;">true</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> grade: </span><span style="color:#b48ead;">char </span><span>= &#39;</span><span style="color:#a3be8c;">A</span><span>&#39;;
+</span><span>}
+</span></code></pre>
+<h2 id="type-safety-and-conversion">Type Safety and Conversion</h2>
+<p>Rust is <strong>strongly typed</strong> and doesn't allow implicit conversions between different numeric types:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> integer: </span><span style="color:#b48ead;">i32 </span><span>= </span><span style="color:#d08770;">42</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> float: </span><span style="color:#b48ead;">f64 </span><span>= </span><span style="color:#d08770;">3.14</span><span>;
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// This would cause a compilation error:
+</span><span>    </span><span style="color:#a7adba;">// let result = integer + float;  // Error: mismatched types
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Explicit conversion is required:
+</span><span>    </span><span style="color:#b48ead;">let</span><span> result = integer as </span><span style="color:#b48ead;">f64 </span><span>+ float;  </span><span style="color:#a7adba;">// OK
+</span><span>    </span><span style="color:#b48ead;">let</span><span> converted = float as </span><span style="color:#b48ead;">i32</span><span>;         </span><span style="color:#a7adba;">// OK (truncates decimal)
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Result: </span><span style="color:#d08770;">{}</span><span>&quot;, result);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Converted: </span><span style="color:#d08770;">{}</span><span>&quot;, converted);
+</span><span>}
+</span></code></pre>
+<h2 id="best-practices">Best Practices</h2>
+<h2 id="use-appropriate-sizes"><strong>Use Appropriate Sizes</strong></h2>
+<p>Choose the smallest type that can hold your data to save memory, but don't micro-optimize unless necessary:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> age: </span><span style="color:#b48ead;">u8 </span><span>= </span><span style="color:#d08770;">25</span><span>;        </span><span style="color:#a7adba;">// Age rarely exceeds 255
+</span><span>    </span><span style="color:#b48ead;">let</span><span> population: </span><span style="color:#b48ead;">u32 </span><span>= </span><span style="color:#d08770;">1_000_000</span><span>;  </span><span style="color:#a7adba;">// Large numbers need larger types
+</span><span>}
+</span></code></pre>
+<h2 id="prefer-defaults-when-unsure"><strong>Prefer Defaults When Unsure</strong></h2>
+<p>Use <code>i32</code> for integers and <code>f64</code> for floating-point numbers unless you have specific requirements.</p>
+<h2 id="use-type-annotations-for-clarity"><strong>Use Type Annotations for Clarity</strong></h2>
+<p>When the type isn't obvious from context, explicit annotations improve code readability:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> user_input: </span><span style="color:#b48ead;">i32 </span><span>= &quot;</span><span style="color:#a3be8c;">42</span><span>&quot;.</span><span style="color:#96b5b4;">parse</span><span>().</span><span style="color:#96b5b4;">unwrap</span><span>();  </span><span style="color:#a7adba;">// Clear intent
+</span><span>    </span><span style="color:#b48ead;">let</span><span> percentage: </span><span style="color:#b48ead;">f32 </span><span>= </span><span style="color:#96b5b4;">calculate_percentage</span><span>();   </span><span style="color:#a7adba;">// Explicit precision
+</span><span>}
+</span></code></pre>
+<p>Understanding these fundamental data types is crucial for effective Rust programming. Each type has specific use cases, memory requirements, and performance characteristics that influence how you structure your programs. These scalar types form the foundation for more complex data structures you'll encounter as you continue learning Rust.</p>
+
+    
+        </div>
+
+    </article>
+</main>
+
+
+    <script type="text/javascript" src="http://localhost/elasticlunr.min.js" defer></script>
+    <script type="text/javascript" src="http://localhost/search_index.en.js" defer></script>
+<script type="text/javascript" src="http://localhost/js.js" defer></script>
+
+</body>
+</html>

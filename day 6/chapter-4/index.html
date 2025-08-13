@@ -1,0 +1,1300 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://localhost/main.css">
+    <link rel="icon" href="https://www.rust-lang.org/static/images/favicon-16x16.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Rust Programming Course! | Move Semantics in Rust </title>
+</head>
+<body>
+
+<main>
+    
+    <nav>
+            <a href="http:&#x2F;&#x2F;localhost">
+                        <img src="https://www.rust-lang.org/static/images/rust-logo-blk.svg" alt="logo"/>
+                    </a>
+                <!-- -->
+
+            <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+            <div id="trees">
+                <input class="tree-toggle" type="checkbox" id="day-1-introduction"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-1-introduction">Day 1: Introduction</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 1/chapter-1/">What is Rust and why use it?</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-2/">Installing Rust Toolchain (rustup, cargo)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-3/">Setting up Development (VS Code + Hello World)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-4/">Understanding Cargo Project Structure</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-2-basic-syntax-variables"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-2-basic-syntax-variables">Day 2: Basic Syntax &amp; Variables</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 2/chapter-1/">Variables and Mutability in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-2/">Data Types in Rust: Integers, Floats, Booleans, and Characters</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-3/">Constants vs Variables</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-4/">Understanding Shadowing in Rust: A Practical Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-5/">Basic Input&#x2F;Output</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-3-functions-control-flow"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-3-functions-control-flow">Day 3: Functions &amp; Control Flow</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 3/chapter-1/">Function Syntax and Parameters in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-2/">Return Values and Expressions vs Statements</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-3/">If&#x2F;Else Statements in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-4/">Match Expressions in Rust: Powerful Pattern Matching</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-5/">Loops in Rust: loop, while, for Explained</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-4-data-types-deep-dive"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-4-data-types-deep-dive">Day 4: Data Types Deep Dive</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 4/chapter-1/">Compound Types (Tuples, Arrays)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-2/">String vs &amp;str in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-3/">Vector Basics in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-4/">Type Annotations and Inference in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-5/">Practical Rust Exercises</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-5-practice-review"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-5-practice-review">Day 5: Practice &amp; Review</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 5/chapter-1/">Day 5: Practice &amp; Review</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-6-ownership-fundamentals"
+                           checked/>
+                    <label class="tree-toggle-label"
+                           for="day-6-ownership-fundamentals">Day 6: Ownership Fundamentals</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 6/chapter-1/">Ownership in Rust: A Detailed Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-2/">Stack vs Heap in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-3/">Understanding Ownership in Rust</a>
+                            </li>
+
+                            <li class="active">
+                                <a href="http://localhost/day 6/chapter-4/">Move Semantics in Rust</a>
+                            </li>
+
+                            
+                                    
+                                    
+                                        <ul id="toc">
+                                            <li><a href="
+                                                        http://localhost/day 6/chapter-4/#move-semantics-in-rust-comprehensive-documentation">Move Semantics in Rust: Comprehensive Documentation</a>
+                                                    <ul>
+                                                            <li>
+                                                                    <a href="http://localhost/day 6/chapter-4/#what-are-move-semantics">What are Move Semantics?</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 6/chapter-4/#why-move-semantics-exist">Why Move Semantics Exist</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 6/chapter-4/#how-move-semantics-work">How Move Semantics Work</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 6/chapter-4/#types-that-move-vs-copy">Types That Move vs Copy</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 6/chapter-4/#move-semantics-in-different-contexts">Move Semantics in Different Contexts</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 6/chapter-4/#advanced-move-patterns">Advanced Move Patterns</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 6/chapter-4/#performance-implications-of-move-semantics">Performance Implications of Move Semantics</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 6/chapter-4/#common-move-patterns-and-idioms">Common Move Patterns and Idioms</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 6/chapter-4/#working-with-moves-best-practices">Working with Moves: Best Practices</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 6/chapter-4/#troubleshooting-move-errors">Troubleshooting Move Errors</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 6/chapter-4/#performance-monitoring-and-optimization">Performance Monitoring and Optimization</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 6/chapter-4/#summary">Summary</a>
+                                                                </li>
+                                                            </ul>
+                                                    </li>
+                                            </ul>
+                                    <li >
+                                <a href="http://localhost/day 6/chapter-5/">Copy Trait in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-7-references-borrowing"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-7-references-borrowing">Day 7: References &amp; Borrowing</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 7/chapter-1/">Immutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-2/">Mutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-3/">Borrowing Rules</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-4/">Reference Lifetime Basics</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-5/">Common Borrowing Errors and Solutions</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-8-slices"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-8-slices">Day 8: Slices</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 8/chapter-1/">String Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-2/">Array Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-3/">Slice Syntax and Usage</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-4/">Practical Applications</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-5/">Memory Safety Benefits</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-9-advanced-ownership"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-9-advanced-ownership">Day 9: Advanced Ownership</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 9/chapter-1/">Clone Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-2/">Drop Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-3/">RAII Pattern</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-4/">Memory Management Comparison with Other Languages</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-5/">Best Practices (Advanced Ownership)</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-10-ownership-practice"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-10-ownership-practice">Day 10: Ownership Practice</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 10/chapter-1/">Complex Ownership Scenarios</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-2/">Debugging Ownership Errors</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-3/">Code Refactoring Exercises</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-4/">Group Problem-Solving</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-11-structs-basics"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-11-structs-basics">Day 11: Structs Basics</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 11/chapter-1/">Defining and Instantiating Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-2/">Field Access and Modification</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-3/">Tuple Structs and Unit Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-4/">Struct Update Syntax</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-5/">Ownership of Struct Data</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-12-methods-associated-functions"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-12-methods-associated-functions">Day 12: Methods &amp; Associated Functions</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 12/chapter-1/">Implementing Methods with impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-2/">&amp;self, &amp;mut self, and self</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-3/">Associated Functions (like Constructors)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-4/">Multiple impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-5/">Method Chaining</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-13-advanced-struct-concepts"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-13-advanced-struct-concepts">Day 13: Advanced Struct Concepts</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 13/chapter-1/">Struct Lifetime Parameters</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-2/">Debug Trait and Custom Formatting</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-3/">Builder Pattern Implementation</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-4/">Struct Composition</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-5/">Best Practices for Struct Design</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-14-enums-pattern-matching"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-14-enums-pattern-matching">Day 14: Enums &amp; Pattern Matching</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 14/chapter-1/">Defining Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-2/">Enum Variants with Data</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-3/">Option&lt;T&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-4/">Result&lt;T, E&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-5/">Advanced Match Patterns in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-15-practice-project"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-15-practice-project">Day 15: Practice Project</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 15/chapter-1/">Building a Simple CLI Calculator in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-16-vectors"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-16-vectors">Day 16: Vectors</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 16/chapter-1/">Creating and Updating Vectors</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-2/">Vector Methods: push, pop, iter</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-3/">Accessing Vector Elements Safely</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-4/">Vector of Different Types with Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-5/">Performance Considerations</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-17-hashmaps-other-collections"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-17-hashmaps-other-collections">Day 17: HashMaps &amp; Other Collections</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 17/chapter-1/">HashMap Creation and Manipulation</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-2/">Keys and Values Ownership</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-3/">HashMap Methods and Iteration</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-4/">When to Use Different Collections</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-5/">BTreeMap Introduction</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-18-error-handling"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-18-error-handling">Day 18: Error Handling</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 18/chapter-1/">Panic! and When to Use It</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 18/chapter-2/">Result&lt;T, E&gt; in Depth</a>
+                            </li>
+
+                            </ul>
+                </div>
+        </nav>
+    <article>
+
+        <div id="on_right">
+                <span id="search-ico" class="ms-Icon--Search"></span>
+            </div>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="Search as you type...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        <div id="wrap">
+            
+        <h1 id="move-semantics-in-rust-comprehensive-documentation">Move Semantics in Rust: Comprehensive Documentation</h1>
+<p><strong>Move semantics</strong> is Rust's fundamental mechanism for transferring ownership of data from one variable to another without copying the underlying data. This concept is central to Rust's ownership system and distinguishes it from languages that rely on copying or garbage collection. Understanding move semantics is essential for writing efficient, memory-safe Rust code.</p>
+<h2 id="what-are-move-semantics">What are Move Semantics?</h2>
+<p><strong>Move semantics</strong> refers to the process of <strong>transferring ownership</strong> of a value from one variable to another, rather than copying the data. When a move occurs, the original variable becomes invalid and can no longer be used, while the new variable takes full ownership of the data.</p>
+<h3 id="conceptual-overview">Conceptual Overview</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> original = String::from(&quot;</span><span style="color:#a3be8c;">Hello, World!</span><span>&quot;);  </span><span style="color:#a7adba;">// original owns the data
+</span><span>    </span><span style="color:#b48ead;">let</span><span> moved_to = original;                       </span><span style="color:#a7adba;">// ownership moves to moved_to
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// original is now invalid - cannot be used anymore
+</span><span>    </span><span style="color:#a7adba;">// println!(&quot;{}&quot;, original);  // Compilation error!
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, moved_to);  </span><span style="color:#a7adba;">// moved_to now owns the data
+</span><span>}
+</span></code></pre>
+<p><strong>Key insight</strong>: No data is copied during a move - only ownership transfers. The heap-allocated string data remains in the same memory location, but responsibility for managing it shifts from <code>original</code> to <code>moved_to</code>.</p>
+<h2 id="why-move-semantics-exist">Why Move Semantics Exist</h2>
+<p>Move semantics solve several critical problems:</p>
+<h3 id="1-avoiding-expensive-copies"><strong>1. Avoiding Expensive Copies</strong></h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">without_move_semantics</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// Hypothetical world without moves - everything copied
+</span><span>    </span><span style="color:#b48ead;">let</span><span> large_data = vec![</span><span style="color:#d08770;">0</span><span>; </span><span style="color:#d08770;">1_000_000</span><span>];  </span><span style="color:#a7adba;">// 1 million integers
+</span><span>    </span><span style="color:#b48ead;">let</span><span> copy1 = large_data;  </span><span style="color:#a7adba;">// Would copy 4MB of data
+</span><span>    </span><span style="color:#b48ead;">let</span><span> copy2 = large_data;  </span><span style="color:#a7adba;">// Would copy another 4MB
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Memory usage: 12MB (original + 2 copies)
+</span><span>    </span><span style="color:#a7adba;">// Performance: Slow due to unnecessary copying
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">with_move_semantics</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> large_data = vec![</span><span style="color:#d08770;">0</span><span>; </span><span style="color:#d08770;">1_000_000</span><span>];  </span><span style="color:#a7adba;">// 1 million integers
+</span><span>    </span><span style="color:#b48ead;">let</span><span> moved1 = large_data;              </span><span style="color:#a7adba;">// No copying - just ownership transfer
+</span><span>    </span><span style="color:#b48ead;">let</span><span> moved2 = moved1;                  </span><span style="color:#a7adba;">// No copying - just ownership transfer
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Memory usage: 4MB (only one copy of data)
+</span><span>    </span><span style="color:#a7adba;">// Performance: Fast - no data copying
+</span><span>}
+</span></code></pre>
+<h3 id="2-preventing-double-free-errors"><strong>2. Preventing Double-Free Errors</strong></h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Move semantics prevent this dangerous scenario:
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> data = String::from(&quot;</span><span style="color:#a3be8c;">important</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> moved = data;  </span><span style="color:#a7adba;">// data becomes invalid
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// If both variables were valid, both would try to free
+</span><span>    </span><span style="color:#a7adba;">// the same memory when going out of scope - double free!
+</span><span>    </span><span style="color:#a7adba;">// Move semantics prevent this by invalidating &#39;data&#39;
+</span><span>}
+</span></code></pre>
+<h3 id="3-enabling-zero-cost-abstractions"><strong>3. Enabling Zero-Cost Abstractions</strong></h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">zero_cost_transfer</span><span>(</span><span style="color:#bf616a;">data</span><span>: Vec) -&gt; Vec {
+</span><span>    </span><span style="color:#a7adba;">// No runtime overhead - just pointer transfer
+</span><span>    data  </span><span style="color:#a7adba;">// Ownership moves to caller
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> numbers = vec![</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">2</span><span>, </span><span style="color:#d08770;">3</span><span>, </span><span style="color:#d08770;">4</span><span>, </span><span style="color:#d08770;">5</span><span>];
+</span><span>    </span><span style="color:#b48ead;">let</span><span> result = </span><span style="color:#96b5b4;">zero_cost_transfer</span><span>(numbers);  </span><span style="color:#a7adba;">// Zero runtime cost
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// numbers is invalid, result owns the data
+</span><span>}
+</span></code></pre>
+<h2 id="how-move-semantics-work">How Move Semantics Work</h2>
+<h3 id="memory-layout-during-moves">Memory Layout During Moves</h3>
+<p>When a move occurs, only the <strong>stack-allocated metadata</strong> is copied, not the heap data:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">demonstrate_move_mechanics</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> s1 = String::from(&quot;</span><span style="color:#a3be8c;">hello</span><span>&quot;);
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Before move:
+</span><span>    </span><span style="color:#a7adba;">// Stack (s1):          Heap:
+</span><span>    </span><span style="color:#a7adba;">// ┌─────────────┐      ┌─────────────┐
+</span><span>    </span><span style="color:#a7adba;">// │ ptr: 0x1000 │ ──-&gt; │ &quot;hello&quot;     │
+</span><span>    </span><span style="color:#a7adba;">// │ len: 5      │      │             │
+</span><span>    </span><span style="color:#a7adba;">// │ cap: 5      │      │             │
+</span><span>    </span><span style="color:#a7adba;">// └─────────────┘      └─────────────┘
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> s2 = s1;  </span><span style="color:#a7adba;">// Move occurs
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// After move:
+</span><span>    </span><span style="color:#a7adba;">// Stack (s1):          Stack (s2):          Heap:
+</span><span>    </span><span style="color:#a7adba;">// ┌─────────────┐      ┌─────────────┐      ┌─────────────┐
+</span><span>    </span><span style="color:#a7adba;">// │ INVALID     │      │ ptr: 0x1000 │ ──-&gt; │ &quot;hello&quot;     │
+</span><span>    </span><span style="color:#a7adba;">// │             │      │ len: 5      │      │             │
+</span><span>    </span><span style="color:#a7adba;">// │             │      │ cap: 5      │      │             │
+</span><span>    </span><span style="color:#a7adba;">// └─────────────┘      └─────────────┘      └─────────────┘
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Only the stack metadata was copied; heap data unchanged
+</span><span>}
+</span></code></pre>
+<h3 id="move-vs-copy-the-fundamental-difference">Move vs Copy: The Fundamental Difference</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">move_vs_copy_demonstration</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// Copy semantics (for simple types)
+</span><span>    </span><span style="color:#b48ead;">let</span><span> x = </span><span style="color:#d08770;">5</span><span>;        </span><span style="color:#a7adba;">// Stack-allocated integer
+</span><span>    </span><span style="color:#b48ead;">let</span><span> y = x;        </span><span style="color:#a7adba;">// x is copied to y
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">x: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">, y: </span><span style="color:#d08770;">{}</span><span>&quot;, x, y);  </span><span style="color:#a7adba;">// Both valid
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Move semantics (for complex types)
+</span><span>    </span><span style="color:#b48ead;">let</span><span> s1 = String::from(&quot;</span><span style="color:#a3be8c;">hello</span><span>&quot;);  </span><span style="color:#a7adba;">// Heap-allocated string
+</span><span>    </span><span style="color:#b48ead;">let</span><span> s2 = s1;      </span><span style="color:#a7adba;">// s1 is moved to s2
+</span><span>    </span><span style="color:#a7adba;">// println!(&quot;s1: {}, s2: {}&quot;, s1, s2);  // Error: s1 moved
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">s2: </span><span style="color:#d08770;">{}</span><span>&quot;, s2);  </span><span style="color:#a7adba;">// Only s2 valid
+</span><span>}
+</span></code></pre>
+<h2 id="types-that-move-vs-copy">Types That Move vs Copy</h2>
+<p>Understanding which types move and which types copy is crucial:</p>
+<h3 id="move-types-no-copy-trait">Move Types (No Copy Trait)</h3>
+<p>These types are <strong>moved by default</strong> because they manage heap-allocated resources:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">move_types_examples</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// String - owns heap-allocated text data
+</span><span>    </span><span style="color:#b48ead;">let</span><span> string1 = String::from(&quot;</span><span style="color:#a3be8c;">owned</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> string2 = string1;  </span><span style="color:#a7adba;">// Moved
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Vec - owns heap-allocated array
+</span><span>    </span><span style="color:#b48ead;">let</span><span> vec1 = vec![</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">2</span><span>, </span><span style="color:#d08770;">3</span><span>];
+</span><span>    </span><span style="color:#b48ead;">let</span><span> vec2 = vec1;  </span><span style="color:#a7adba;">// Moved
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// HashMap - owns heap-allocated hash table
+</span><span>    </span><span style="color:#b48ead;">use </span><span>std::collections::HashMap;
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> map1 = HashMap::new();
+</span><span>    map1.</span><span style="color:#96b5b4;">insert</span><span>(&quot;</span><span style="color:#a3be8c;">key</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">value</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> map2 = map1;  </span><span style="color:#a7adba;">// Moved
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Box - owns heap-allocated value
+</span><span>    </span><span style="color:#b48ead;">let</span><span> box1 = Box::new(</span><span style="color:#d08770;">42</span><span>);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> box2 = box1;  </span><span style="color:#a7adba;">// Moved
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Custom structs (unless they implement Copy)
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>User {
+</span><span>        </span><span style="color:#bf616a;">name</span><span>: String,
+</span><span>        </span><span style="color:#bf616a;">age</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> user1 = User {
+</span><span>        name: String::from(&quot;</span><span style="color:#a3be8c;">Alice</span><span>&quot;),
+</span><span>        age: </span><span style="color:#d08770;">30</span><span>,
+</span><span>    };
+</span><span>    </span><span style="color:#b48ead;">let</span><span> user2 = user1;  </span><span style="color:#a7adba;">// Moved
+</span><span>}
+</span></code></pre>
+<h3 id="copy-types-implement-copy-trait">Copy Types (Implement Copy Trait)</h3>
+<p>These types are <strong>copied by default</strong> because they're simple, stack-allocated values:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">copy_types_examples</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// Primitive integers
+</span><span>    </span><span style="color:#b48ead;">let</span><span> i1: </span><span style="color:#b48ead;">i32 </span><span>= </span><span style="color:#d08770;">42</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> i2 = i1;  </span><span style="color:#a7adba;">// Copied
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Both valid: i1=</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">, i2=</span><span style="color:#d08770;">{}</span><span>&quot;, i1, i2);
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Floating-point numbers
+</span><span>    </span><span style="color:#b48ead;">let</span><span> f1: </span><span style="color:#b48ead;">f64 </span><span>= </span><span style="color:#d08770;">3.14</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> f2 = f1;  </span><span style="color:#a7adba;">// Copied
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Booleans
+</span><span>    </span><span style="color:#b48ead;">let</span><span> b1 = </span><span style="color:#d08770;">true</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> b2 = b1;  </span><span style="color:#a7adba;">// Copied
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Characters
+</span><span>    </span><span style="color:#b48ead;">let</span><span> c1 = &#39;</span><span style="color:#a3be8c;">A</span><span>&#39;;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> c2 = c1;  </span><span style="color:#a7adba;">// Copied
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Arrays of Copy types
+</span><span>    </span><span style="color:#b48ead;">let</span><span> arr1 = [</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">2</span><span>, </span><span style="color:#d08770;">3</span><span>, </span><span style="color:#d08770;">4</span><span>, </span><span style="color:#d08770;">5</span><span>];
+</span><span>    </span><span style="color:#b48ead;">let</span><span> arr2 = arr1;  </span><span style="color:#a7adba;">// Copied
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Tuples of Copy types
+</span><span>    </span><span style="color:#b48ead;">let</span><span> tuple1 = (</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">2.0</span><span>, </span><span style="color:#d08770;">true</span><span>);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> tuple2 = tuple1;  </span><span style="color:#a7adba;">// Copied
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// References (the reference itself, not the data)
+</span><span>    </span><span style="color:#b48ead;">let</span><span> value = </span><span style="color:#d08770;">42</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> ref1 = &amp;value;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> ref2 = ref1;  </span><span style="color:#a7adba;">// Reference copied (both point to same data)
+</span><span>}
+</span></code></pre>
+<h3 id="custom-copy-types">Custom Copy Types</h3>
+<p>You can implement <code>Copy</code> for your own types if all fields implement <code>Copy</code>:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// This struct can implement Copy because all fields are Copy
+</span><span>#[</span><span style="color:#bf616a;">derive</span><span>(Copy, Clone, Debug)]
+</span><span style="color:#b48ead;">struct </span><span>Point {
+</span><span>    </span><span style="color:#bf616a;">x</span><span>: </span><span style="color:#b48ead;">f64</span><span>,  </span><span style="color:#a7adba;">// f64 implements Copy
+</span><span>    </span><span style="color:#bf616a;">y</span><span>: </span><span style="color:#b48ead;">f64</span><span>,  </span><span style="color:#a7adba;">// f64 implements Copy
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// This struct CANNOT implement Copy because String doesn&#39;t implement Copy
+</span><span style="color:#b48ead;">struct </span><span>Person {
+</span><span>    </span><span style="color:#bf616a;">name</span><span>: String,  </span><span style="color:#a7adba;">// String does NOT implement Copy
+</span><span>    </span><span style="color:#bf616a;">age</span><span>: </span><span style="color:#b48ead;">u32</span><span>,      </span><span style="color:#a7adba;">// u32 implements Copy
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">custom_copy_example</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> point1 = Point { x: </span><span style="color:#d08770;">1.0</span><span>, y: </span><span style="color:#d08770;">2.0 </span><span>};
+</span><span>    </span><span style="color:#b48ead;">let</span><span> point2 = point1;  </span><span style="color:#a7adba;">// Copied, both valid
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">point1: </span><span style="color:#d08770;">{:?}</span><span style="color:#a3be8c;">, point2: </span><span style="color:#d08770;">{:?}</span><span>&quot;, point1, point2);
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> person1 = Person {
+</span><span>        name: String::from(&quot;</span><span style="color:#a3be8c;">Alice</span><span>&quot;),
+</span><span>        age: </span><span style="color:#d08770;">30</span><span>,
+</span><span>    };
+</span><span>    </span><span style="color:#b48ead;">let</span><span> person2 = person1;  </span><span style="color:#a7adba;">// Moved, person1 invalid
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// println!(&quot;{:?}&quot;, person1);  // Error: person1 moved
+</span><span>}
+</span></code></pre>
+<h2 id="move-semantics-in-different-contexts">Move Semantics in Different Contexts</h2>
+<h3 id="1-variable-assignment">1. Variable Assignment</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">assignment_moves</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// Simple assignment move
+</span><span>    </span><span style="color:#b48ead;">let</span><span> original = String::from(&quot;</span><span style="color:#a3be8c;">data</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> moved = original;  </span><span style="color:#a7adba;">// Move occurs here
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Chained assignment moves
+</span><span>    </span><span style="color:#b48ead;">let</span><span> data1 = String::from(&quot;</span><span style="color:#a3be8c;">chain</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> data2 = data1;  </span><span style="color:#a7adba;">// data1 -&gt; data2
+</span><span>    </span><span style="color:#b48ead;">let</span><span> data3 = data2;  </span><span style="color:#a7adba;">// data2 -&gt; data3
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Only data3 is valid at this point
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Final owner: </span><span style="color:#d08770;">{}</span><span>&quot;, data3);
+</span><span>}
+</span></code></pre>
+<h3 id="2-function-parameters">2. Function Parameters</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">take_ownership</span><span>(</span><span style="color:#bf616a;">s</span><span>: String) {  </span><span style="color:#a7adba;">// Parameter takes ownership
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Function owns: </span><span style="color:#d08770;">{}</span><span>&quot;, s);
+</span><span>}  </span><span style="color:#a7adba;">// s is dropped here
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">function_parameter_moves</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> my_string = String::from(&quot;</span><span style="color:#a3be8c;">parameter</span><span>&quot;);
+</span><span>    </span><span style="color:#96b5b4;">take_ownership</span><span>(my_string);  </span><span style="color:#a7adba;">// my_string moved to function
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// my_string is no longer valid
+</span><span>    </span><span style="color:#a7adba;">// println!(&quot;{}&quot;, my_string);  // Compilation error
+</span><span>}
+</span></code></pre>
+<h3 id="3-function-return-values">3. Function Return Values</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">create_and_return</span><span>() -&gt; String {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> created = String::from(&quot;</span><span style="color:#a3be8c;">returned</span><span>&quot;);
+</span><span>    created  </span><span style="color:#a7adba;">// Ownership moves to caller
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">take_and_return</span><span>(</span><span style="color:#bf616a;">s</span><span>: String) -&gt; String {
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Processing: </span><span style="color:#d08770;">{}</span><span>&quot;, s);
+</span><span>    s  </span><span style="color:#a7adba;">// Ownership moves back to caller
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">return_value_moves</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> received = </span><span style="color:#96b5b4;">create_and_return</span><span>();  </span><span style="color:#a7adba;">// Ownership received
+</span><span>    </span><span style="color:#b48ead;">let</span><span> processed = </span><span style="color:#96b5b4;">take_and_return</span><span>(received);  </span><span style="color:#a7adba;">// received moved in, processed received back
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Only processed is valid
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Final result: </span><span style="color:#d08770;">{}</span><span>&quot;, processed);
+</span><span>}
+</span></code></pre>
+<h3 id="4-collection-operations">4. Collection Operations</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">collection_moves</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> vec = Vec::new();
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> item1 = String::from(&quot;</span><span style="color:#a3be8c;">first</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> item2 = String::from(&quot;</span><span style="color:#a3be8c;">second</span><span>&quot;);
+</span><span>    
+</span><span>    vec.</span><span style="color:#96b5b4;">push</span><span>(item1);  </span><span style="color:#a7adba;">// item1 moved into vector
+</span><span>    vec.</span><span style="color:#96b5b4;">push</span><span>(item2);  </span><span style="color:#a7adba;">// item2 moved into vector
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// item1 and item2 are no longer valid
+</span><span>    </span><span style="color:#a7adba;">// println!(&quot;{}&quot;, item1);  // Error
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Accessing elements
+</span><span>    </span><span style="color:#b48ead;">let</span><span> first = vec.</span><span style="color:#96b5b4;">remove</span><span>(</span><span style="color:#d08770;">0</span><span>);  </span><span style="color:#a7adba;">// Ownership moved out of vector
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Removed: </span><span style="color:#d08770;">{}</span><span>&quot;, first);
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Vector still owns remaining elements
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Remaining: </span><span style="color:#d08770;">{:?}</span><span>&quot;, vec);
+</span><span>}
+</span></code></pre>
+<h3 id="5-pattern-matching">5. Pattern Matching</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">enum </span><span>Message {
+</span><span>    Text(String),
+</span><span>    Number(</span><span style="color:#b48ead;">i32</span><span>),
+</span><span>    Quit,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">pattern_matching_moves</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> msg = Message::Text(String::from(&quot;</span><span style="color:#a3be8c;">hello</span><span>&quot;));
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">match</span><span> msg {  </span><span style="color:#a7adba;">// msg moved into match
+</span><span>        Message::Text(s) =&gt; {
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">Got text: </span><span style="color:#d08770;">{}</span><span>&quot;, s);  </span><span style="color:#a7adba;">// s owns the String
+</span><span>            </span><span style="color:#a7adba;">// s is dropped at end of this arm
+</span><span>        },
+</span><span>        Message::Number(n) =&gt; {
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">Got number: </span><span style="color:#d08770;">{}</span><span>&quot;, n);
+</span><span>        },
+</span><span>        Message::Quit =&gt; {
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">Quit message</span><span>&quot;);
+</span><span>        },
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// msg is no longer valid after match
+</span><span>    </span><span style="color:#a7adba;">// println!(&quot;{:?}&quot;, msg);  // Error
+</span><span>}
+</span></code></pre>
+<h3 id="6-closure-captures">6. Closure Captures</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">closure_moves</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> data = String::from(&quot;</span><span style="color:#a3be8c;">captured</span><span>&quot;);
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Move closure takes ownership
+</span><span>    </span><span style="color:#b48ead;">let</span><span> move_closure = </span><span style="color:#b48ead;">move </span><span>|| {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Closure owns: </span><span style="color:#d08770;">{}</span><span>&quot;, data);  </span><span style="color:#a7adba;">// data moved into closure
+</span><span>    };
+</span><span>    
+</span><span>    </span><span style="color:#96b5b4;">move_closure</span><span>();
+</span><span>    </span><span style="color:#a7adba;">// println!(&quot;{}&quot;, data);  // Error: data moved into closure
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Non-move closure borrows (covered in borrowing chapter)
+</span><span>    </span><span style="color:#b48ead;">let</span><span> data2 = String::from(&quot;</span><span style="color:#a3be8c;">borrowed</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">let </span><span style="color:#8fa1b3;">borrow_closure </span><span>= || {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Closure borrows: </span><span style="color:#d08770;">{}</span><span>&quot;, data2);
+</span><span>    };
+</span><span>    
+</span><span>    </span><span style="color:#96b5b4;">borrow_closure</span><span>();
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Still accessible: </span><span style="color:#d08770;">{}</span><span>&quot;, data2);  </span><span style="color:#a7adba;">// data2 still owned by main
+</span><span>}
+</span></code></pre>
+<h2 id="advanced-move-patterns">Advanced Move Patterns</h2>
+<h3 id="conditional-moves">Conditional Moves</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">conditional_move</span><span>(</span><span style="color:#bf616a;">condition</span><span>: </span><span style="color:#b48ead;">bool</span><span>) -&gt; String {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> option1 = String::from(&quot;</span><span style="color:#a3be8c;">first choice</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> option2 = String::from(&quot;</span><span style="color:#a3be8c;">second choice</span><span>&quot;);
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">if</span><span> condition {
+</span><span>        option1  </span><span style="color:#a7adba;">// option1 moved, option2 dropped
+</span><span>    } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>        option2  </span><span style="color:#a7adba;">// option2 moved, option1 dropped
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">conditional_moves_example</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> result1 = </span><span style="color:#96b5b4;">conditional_move</span><span>(</span><span style="color:#d08770;">true</span><span>);   </span><span style="color:#a7adba;">// Gets &quot;first choice&quot;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> result2 = </span><span style="color:#96b5b4;">conditional_move</span><span>(</span><span style="color:#d08770;">false</span><span>);  </span><span style="color:#a7adba;">// Gets &quot;second choice&quot;
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Results: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">, </span><span style="color:#d08770;">{}</span><span>&quot;, result1, result2);
+</span><span>}
+</span></code></pre>
+<h3 id="partial-moves-from-structs">Partial Moves from Structs</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">struct </span><span>Container {
+</span><span>    </span><span style="color:#bf616a;">data</span><span>: String,
+</span><span>    </span><span style="color:#bf616a;">metadata</span><span>: Vec,
+</span><span>    </span><span style="color:#bf616a;">count</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">partial_struct_moves</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> container = Container {
+</span><span>        data: String::from(&quot;</span><span style="color:#a3be8c;">important</span><span>&quot;),
+</span><span>        metadata: vec![String::from(&quot;</span><span style="color:#a3be8c;">meta1</span><span>&quot;), String::from(&quot;</span><span style="color:#a3be8c;">meta2</span><span>&quot;)],
+</span><span>        count: </span><span style="color:#d08770;">42</span><span>,
+</span><span>    };
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Move specific fields
+</span><span>    </span><span style="color:#b48ead;">let</span><span> extracted_data = container.data;      </span><span style="color:#a7adba;">// Move data field
+</span><span>    </span><span style="color:#b48ead;">let</span><span> extracted_meta = container.metadata; </span><span style="color:#a7adba;">// Move metadata field
+</span><span>    </span><span style="color:#b48ead;">let</span><span> copy_count = container.count;         </span><span style="color:#a7adba;">// Copy count field (u32 is Copy)
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// container is now partially moved - cannot be used as a whole
+</span><span>    </span><span style="color:#a7adba;">// println!(&quot;{:?}&quot;, container);  // Error: partial move
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// But we can still access non-moved fields
+</span><span>    </span><span style="color:#a7adba;">// println!(&quot;Count: {}&quot;, container.count);  // This would work
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Extracted data: </span><span style="color:#d08770;">{}</span><span>&quot;, extracted_data);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Extracted metadata: </span><span style="color:#d08770;">{:?}</span><span>&quot;, extracted_meta);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Copied count: </span><span style="color:#d08770;">{}</span><span>&quot;, copy_count);
+</span><span>}
+</span></code></pre>
+<h3 id="move-with-destructuring">Move with Destructuring</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">destructuring_moves</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> tuple = (String::from(&quot;</span><span style="color:#a3be8c;">first</span><span>&quot;), String::from(&quot;</span><span style="color:#a3be8c;">second</span><span>&quot;), </span><span style="color:#d08770;">42</span><span>);
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Destructure and move
+</span><span>    </span><span style="color:#b48ead;">let </span><span>(first, second, number) = tuple;  </span><span style="color:#a7adba;">// tuple moved, components extracted
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// tuple is no longer valid
+</span><span>    </span><span style="color:#a7adba;">// println!(&quot;{:?}&quot;, tuple);  // Error
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// But individual components are owned
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">First: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">, Second: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">, Number: </span><span style="color:#d08770;">{}</span><span>&quot;, first, second, number);
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Partial destructuring
+</span><span>    </span><span style="color:#b48ead;">let</span><span> another_tuple = (String::from(&quot;</span><span style="color:#a3be8c;">a</span><span>&quot;), String::from(&quot;</span><span style="color:#a3be8c;">b</span><span>&quot;), String::from(&quot;</span><span style="color:#a3be8c;">c</span><span>&quot;));
+</span><span>    </span><span style="color:#b48ead;">let </span><span>(x, _, z) = another_tuple;  </span><span style="color:#a7adba;">// Only x and z moved, middle element dropped
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Extracted: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">, </span><span style="color:#d08770;">{}</span><span>&quot;, x, z);
+</span><span>}
+</span></code></pre>
+<h2 id="performance-implications-of-move-semantics">Performance Implications of Move Semantics</h2>
+<h3 id="zero-cost-moves">Zero-Cost Moves</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">demonstrate_zero_cost</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">use </span><span>std::time::Instant;
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Create large data structure
+</span><span>    </span><span style="color:#b48ead;">let</span><span> large_vec = vec![</span><span style="color:#d08770;">0</span><span style="color:#b48ead;">u8</span><span>; </span><span style="color:#d08770;">1_000_000</span><span>];  </span><span style="color:#a7adba;">// 1MB of data
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Time the move operation
+</span><span>    </span><span style="color:#b48ead;">let</span><span> start = Instant::now();
+</span><span>    </span><span style="color:#b48ead;">let</span><span> moved_vec = large_vec;  </span><span style="color:#a7adba;">// This is extremely fast - just pointer copy
+</span><span>    </span><span style="color:#b48ead;">let</span><span> move_time = start.</span><span style="color:#96b5b4;">elapsed</span><span>();
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Move of 1MB took: </span><span style="color:#d08770;">{:?}</span><span>&quot;, move_time);  </span><span style="color:#a7adba;">// Typically nanoseconds
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Compare with cloning (actual data copy)
+</span><span>    </span><span style="color:#b48ead;">let</span><span> another_vec = vec![</span><span style="color:#d08770;">0</span><span style="color:#b48ead;">u8</span><span>; </span><span style="color:#d08770;">1_000_000</span><span>];
+</span><span>    </span><span style="color:#b48ead;">let</span><span> start = Instant::now();
+</span><span>    </span><span style="color:#b48ead;">let</span><span> cloned_vec = another_vec.</span><span style="color:#96b5b4;">clone</span><span>();  </span><span style="color:#a7adba;">// This copies all 1MB
+</span><span>    </span><span style="color:#b48ead;">let</span><span> clone_time = start.</span><span style="color:#96b5b4;">elapsed</span><span>();
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Clone of 1MB took: </span><span style="color:#d08770;">{:?}</span><span>&quot;, clone_time);  </span><span style="color:#a7adba;">// Much slower
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Clone is </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">x slower than move</span><span>&quot;, 
+</span><span>             clone_time.</span><span style="color:#96b5b4;">as_nanos</span><span>() / move_time.</span><span style="color:#96b5b4;">as_nanos</span><span>().</span><span style="color:#96b5b4;">max</span><span>(</span><span style="color:#d08770;">1</span><span>));
+</span><span>}
+</span></code></pre>
+<h3 id="memory-efficiency">Memory Efficiency</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">memory_efficiency_example</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// Without move semantics (hypothetical)
+</span><span>    </span><span style="color:#a7adba;">// let data1 = create_large_data();     // 10MB allocated
+</span><span>    </span><span style="color:#a7adba;">// let data2 = data1;                   // Another 10MB copied
+</span><span>    </span><span style="color:#a7adba;">// let data3 = process(data2);          // Another 10MB copied
+</span><span>    </span><span style="color:#a7adba;">// Total memory: 30MB for processing one piece of data
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// With move semantics (actual Rust)
+</span><span>    </span><span style="color:#b48ead;">let</span><span> data1 = </span><span style="color:#96b5b4;">create_large_data</span><span>();        </span><span style="color:#a7adba;">// 10MB allocated
+</span><span>    </span><span style="color:#b48ead;">let</span><span> data2 = data1;                      </span><span style="color:#a7adba;">// 0MB - just ownership transfer
+</span><span>    </span><span style="color:#b48ead;">let</span><span> data3 = </span><span style="color:#96b5b4;">process</span><span>(data2);             </span><span style="color:#a7adba;">// 0MB - just ownership transfer
+</span><span>    </span><span style="color:#a7adba;">// Total memory: 10MB throughout entire process
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Processed data ready</span><span>&quot;);
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">create_large_data</span><span>() -&gt; Vec {
+</span><span>    vec![</span><span style="color:#d08770;">0</span><span style="color:#b48ead;">u8</span><span>; </span><span style="color:#d08770;">10_000_000</span><span>]  </span><span style="color:#a7adba;">// 10MB vector
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">process</span><span>(</span><span style="color:#bf616a;">data</span><span>: Vec) -&gt; Vec {
+</span><span>    </span><span style="color:#a7adba;">// Process and return data
+</span><span>    data  </span><span style="color:#a7adba;">// Move ownership back
+</span><span>}
+</span></code></pre>
+<h2 id="common-move-patterns-and-idioms">Common Move Patterns and Idioms</h2>
+<h3 id="the-builder-pattern-with-moves">The Builder Pattern with Moves</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">struct </span><span>ConfigBuilder {
+</span><span>    </span><span style="color:#bf616a;">host</span><span>: Option,
+</span><span>    </span><span style="color:#bf616a;">port</span><span>: Option,
+</span><span>    </span><span style="color:#bf616a;">timeout</span><span>: Option,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>ConfigBuilder {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>() -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        ConfigBuilder {
+</span><span>            host: None,
+</span><span>            port: None,
+</span><span>            timeout: None,
+</span><span>        }
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Methods take and return self by value (move semantics)
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">host</span><span>(</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">host</span><span>: String) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.host = Some(host);
+</span><span>        </span><span style="color:#bf616a;">self  </span><span style="color:#a7adba;">// Move self back to caller
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">port</span><span>(</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">port</span><span>: </span><span style="color:#b48ead;">u16</span><span>) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.port = Some(port);
+</span><span>        </span><span style="color:#bf616a;">self
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">timeout</span><span>(</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">timeout</span><span>: </span><span style="color:#b48ead;">u64</span><span>) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.timeout = Some(timeout);
+</span><span>        </span><span style="color:#bf616a;">self
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">build</span><span>(</span><span style="color:#bf616a;">self</span><span>) -&gt; Config {  </span><span style="color:#a7adba;">// Consume builder
+</span><span>        Config {
+</span><span>            host: </span><span style="color:#bf616a;">self</span><span>.host.</span><span style="color:#96b5b4;">unwrap_or_else</span><span>(|| String::from(&quot;</span><span style="color:#a3be8c;">localhost</span><span>&quot;)),
+</span><span>            port: </span><span style="color:#bf616a;">self</span><span>.port.</span><span style="color:#96b5b4;">unwrap_or</span><span>(</span><span style="color:#d08770;">8080</span><span>),
+</span><span>            timeout: </span><span style="color:#bf616a;">self</span><span>.timeout.</span><span style="color:#96b5b4;">unwrap_or</span><span>(</span><span style="color:#d08770;">30</span><span>),
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">struct </span><span>Config {
+</span><span>    </span><span style="color:#bf616a;">host</span><span>: String,
+</span><span>    </span><span style="color:#bf616a;">port</span><span>: </span><span style="color:#b48ead;">u16</span><span>,
+</span><span>    </span><span style="color:#bf616a;">timeout</span><span>: </span><span style="color:#b48ead;">u64</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">builder_pattern_moves</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> config = ConfigBuilder::new()
+</span><span>        .</span><span style="color:#96b5b4;">host</span><span>(String::from(&quot;</span><span style="color:#a3be8c;">example.com</span><span>&quot;))  </span><span style="color:#a7adba;">// Builder moved through chain
+</span><span>        .</span><span style="color:#96b5b4;">port</span><span>(</span><span style="color:#d08770;">9000</span><span>)
+</span><span>        .</span><span style="color:#96b5b4;">timeout</span><span>(</span><span style="color:#d08770;">60</span><span>)
+</span><span>        .</span><span style="color:#96b5b4;">build</span><span>();  </span><span style="color:#a7adba;">// Final move consumes builder
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Config: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">:</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> (timeout: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">)</span><span>&quot;, config.host, config.port, config.timeout);
+</span><span>}
+</span></code></pre>
+<h3 id="the-take-and-replace-pattern">The Take and Replace Pattern</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">take_and_replace_pattern</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> optional_data: Option = Some(String::from(&quot;</span><span style="color:#a3be8c;">valuable data</span><span>&quot;));
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Take ownership of the data, leaving None
+</span><span>    </span><span style="color:#b48ead;">if let </span><span>Some(data) = optional_data.</span><span style="color:#96b5b4;">take</span><span>() {  </span><span style="color:#a7adba;">// take() moves data out
+</span><span>        </span><span style="color:#b48ead;">let</span><span> processed = format!(&quot;</span><span style="color:#a3be8c;">Processed: </span><span style="color:#d08770;">{}</span><span>&quot;, data);
+</span><span>        optional_data = Some(processed);  </span><span style="color:#a7adba;">// Replace with new data
+</span><span>    }
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Result: </span><span style="color:#d08770;">{:?}</span><span>&quot;, optional_data);
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Alternative with std::mem::replace
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> container = vec![String::from(&quot;</span><span style="color:#a3be8c;">old data</span><span>&quot;)];
+</span><span>    </span><span style="color:#b48ead;">let</span><span> old_data = std::mem::replace(&amp;</span><span style="color:#b48ead;">mut</span><span> container, vec![String::from(&quot;</span><span style="color:#a3be8c;">new data</span><span>&quot;)]);
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Old: </span><span style="color:#d08770;">{:?}</span><span style="color:#a3be8c;">, New: </span><span style="color:#d08770;">{:?}</span><span>&quot;, old_data, container);
+</span><span>}
+</span></code></pre>
+<h3 id="move-guards-for-resource-management">Move Guards for Resource Management</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">struct </span><span>FileHandle {
+</span><span>    </span><span style="color:#bf616a;">path</span><span>: String,
+</span><span>    </span><span style="color:#a7adba;">// In real implementation, would contain actual file handle
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>FileHandle {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">open</span><span>(</span><span style="color:#bf616a;">path</span><span>: String) -&gt; Result {
+</span><span>        </span><span style="color:#a7adba;">// Move path into struct
+</span><span>        Ok(FileHandle { path })
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Consume self to prevent use after close
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">close</span><span>(</span><span style="color:#bf616a;">self</span><span>) -&gt; Result {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Closing file: </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#bf616a;">self</span><span>.path);
+</span><span>        </span><span style="color:#a7adba;">// File is closed, self is consumed
+</span><span>        Ok(())
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">move_guard_pattern</span><span>() -&gt; Result {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> file = FileHandle::open(String::from(&quot;</span><span style="color:#a3be8c;">data.txt</span><span>&quot;))?;
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Use the file...
+</span><span>    
+</span><span>    file.</span><span style="color:#96b5b4;">close</span><span>()?;  </span><span style="color:#a7adba;">// file is moved and consumed
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// file.close()?;  // Compilation error - cannot use moved value
+</span><span>    
+</span><span>    Ok(())
+</span><span>}
+</span></code></pre>
+<h2 id="working-with-moves-best-practices">Working with Moves: Best Practices</h2>
+<h3 id="1-design-apis-to-minimize-unnecessary-moves">1. Design APIs to Minimize Unnecessary Moves</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Good: Borrow when you don&#39;t need ownership
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">analyze_data</span><span>(</span><span style="color:#bf616a;">data</span><span>: &amp;Vec) -&gt; </span><span style="color:#b48ead;">usize </span><span>{
+</span><span>    data.</span><span style="color:#96b5b4;">len</span><span>()
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Less ideal: Take ownership when not needed
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">analyze_data_owned</span><span>(</span><span style="color:#bf616a;">data</span><span>: Vec) -&gt; </span><span style="color:#b48ead;">usize </span><span>{
+</span><span>    data.</span><span style="color:#96b5b4;">len</span><span>()  </span><span style="color:#a7adba;">// Could have borrowed instead
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">api_design_example</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> my_data = vec![String::from(&quot;</span><span style="color:#a3be8c;">item1</span><span>&quot;), String::from(&quot;</span><span style="color:#a3be8c;">item2</span><span>&quot;)];
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> count = </span><span style="color:#96b5b4;">analyze_data</span><span>(&amp;my_data);  </span><span style="color:#a7adba;">// my_data still available
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Count: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">, Data: </span><span style="color:#d08770;">{:?}</span><span>&quot;, count, my_data);
+</span><span>}
+</span></code></pre>
+<h3 id="2-use-moves-for-transformations">2. Use Moves for Transformations</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Good: Take ownership for transformation
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">transform_data</span><span>(</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">data</span><span>: Vec) -&gt; Vec {
+</span><span>    data.</span><span style="color:#96b5b4;">iter_mut</span><span>().</span><span style="color:#96b5b4;">for_each</span><span>(|</span><span style="color:#bf616a;">s</span><span>| s.</span><span style="color:#96b5b4;">push_str</span><span>(&quot;</span><span style="color:#a3be8c;">_transformed</span><span>&quot;));
+</span><span>    data  </span><span style="color:#a7adba;">// Return transformed data
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Less efficient: Borrow and clone
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">transform_data_clone</span><span>(</span><span style="color:#bf616a;">data</span><span>: &amp;Vec) -&gt; Vec {
+</span><span>    data.</span><span style="color:#96b5b4;">iter</span><span>()
+</span><span>        .</span><span style="color:#96b5b4;">map</span><span>(|</span><span style="color:#bf616a;">s</span><span>| format!(&quot;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">_transformed</span><span>&quot;, s))  </span><span style="color:#a7adba;">// Creates new strings
+</span><span>        .</span><span style="color:#96b5b4;">collect</span><span>()
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">transformation_example</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> original = vec![String::from(&quot;</span><span style="color:#a3be8c;">data1</span><span>&quot;), String::from(&quot;</span><span style="color:#a3be8c;">data2</span><span>&quot;)];
+</span><span>    </span><span style="color:#b48ead;">let</span><span> transformed = </span><span style="color:#96b5b4;">transform_data</span><span>(original);  </span><span style="color:#a7adba;">// original consumed
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Transformed: </span><span style="color:#d08770;">{:?}</span><span>&quot;, transformed);
+</span><span>}
+</span></code></pre>
+<h3 id="3-use-clone-judiciously">3. Use Clone Judiciously</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">strategic_cloning</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> important_data = String::from(&quot;</span><span style="color:#a3be8c;">must preserve</span><span>&quot;);
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Clone when you need both original and moved version
+</span><span>    </span><span style="color:#b48ead;">let</span><span> backup = important_data.</span><span style="color:#96b5b4;">clone</span><span>();  </span><span style="color:#a7adba;">// Explicit cost
+</span><span>    </span><span style="color:#b48ead;">let</span><span> processed = </span><span style="color:#96b5b4;">process_string</span><span>(important_data);  </span><span style="color:#a7adba;">// Move original
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Backup: </span><span style="color:#d08770;">{}</span><span>&quot;, backup);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Processed: </span><span style="color:#d08770;">{}</span><span>&quot;, processed);
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">process_string</span><span>(</span><span style="color:#bf616a;">s</span><span>: String) -&gt; String {
+</span><span>    format!(&quot;</span><span style="color:#a3be8c;">Processed: </span><span style="color:#d08770;">{}</span><span>&quot;, s)
+</span><span>}
+</span></code></pre>
+<h3 id="4-document-move-semantics-in-apis">4. Document Move Semantics in APIs</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">/// Consumes the input vector and returns a sorted version.
+</span><span style="color:#a7adba;">/// The original vector is no longer accessible after this call.
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">sort_and_consume</span><span>(</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">data</span><span>: Vec) -&gt; Vec {
+</span><span>    data.</span><span style="color:#96b5b4;">sort</span><span>();
+</span><span>    data
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">/// Borrows the input vector and returns statistics without consuming it.
+</span><span style="color:#a7adba;">/// The original vector remains available to the caller.
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">calculate_stats</span><span>(</span><span style="color:#bf616a;">data</span><span>: &amp;[</span><span style="color:#b48ead;">i32</span><span>]) -&gt; (</span><span style="color:#b48ead;">i32</span><span>, </span><span style="color:#b48ead;">i32</span><span>, </span><span style="color:#b48ead;">f64</span><span>) {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> min = *data.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">min</span><span>().</span><span style="color:#96b5b4;">unwrap_or</span><span>(&amp;</span><span style="color:#d08770;">0</span><span>);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> max = *data.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">max</span><span>().</span><span style="color:#96b5b4;">unwrap_or</span><span>(&amp;</span><span style="color:#d08770;">0</span><span>);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> avg = data.</span><span style="color:#96b5b4;">iter</span><span>().sum::() as </span><span style="color:#b48ead;">f64 </span><span>/ data.</span><span style="color:#96b5b4;">len</span><span>() as </span><span style="color:#b48ead;">f64</span><span>;
+</span><span>    (min, max, avg)
+</span><span>}
+</span></code></pre>
+<h2 id="troubleshooting-move-errors">Troubleshooting Move Errors</h2>
+<h3 id="common-move-error-messages">Common Move Error Messages</h3>
+<h4 id="1-value-used-after-move">1. Value Used After Move</h4>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> s = String::from(&quot;</span><span style="color:#a3be8c;">hello</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> s2 = s;  </span><span style="color:#a7adba;">// s moved here
+</span><span>    println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, s);  </span><span style="color:#a7adba;">// Error: borrow of moved value
+</span><span>}
+</span></code></pre>
+<p><strong>Solution</strong>: Use references or clone when needed:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> s = String::from(&quot;</span><span style="color:#a3be8c;">hello</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> s2 = &amp;s;  </span><span style="color:#a7adba;">// Borrow instead of move
+</span><span>    println!(&quot;</span><span style="color:#d08770;">{} {}</span><span>&quot;, s, s2);  </span><span style="color:#a7adba;">// Both valid
+</span><span>}
+</span></code></pre>
+<h4 id="2-move-occurs-in-loop">2. Move Occurs in Loop</h4>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> items = vec![String::from(&quot;</span><span style="color:#a3be8c;">a</span><span>&quot;), String::from(&quot;</span><span style="color:#a3be8c;">b</span><span>&quot;)];
+</span><span>    </span><span style="color:#b48ead;">for</span><span> item in items {  </span><span style="color:#a7adba;">// items moved into loop
+</span><span>        println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, item);
+</span><span>    }
+</span><span>    println!(&quot;</span><span style="color:#d08770;">{:?}</span><span>&quot;, items);  </span><span style="color:#a7adba;">// Error: use of moved value
+</span><span>}
+</span></code></pre>
+<p><strong>Solution</strong>: Borrow in the loop:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> items = vec![String::from(&quot;</span><span style="color:#a3be8c;">a</span><span>&quot;), String::from(&quot;</span><span style="color:#a3be8c;">b</span><span>&quot;)];
+</span><span>    </span><span style="color:#b48ead;">for</span><span> item in &amp;items {  </span><span style="color:#a7adba;">// Borrow items
+</span><span>        println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, item);
+</span><span>    }
+</span><span>    println!(&quot;</span><span style="color:#d08770;">{:?}</span><span>&quot;, items);  </span><span style="color:#a7adba;">// items still valid
+</span><span>}
+</span></code></pre>
+<h4 id="3-partial-move-in-match">3. Partial Move in Match</h4>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">struct </span><span>Data {
+</span><span>    </span><span style="color:#bf616a;">field1</span><span>: String,
+</span><span>    </span><span style="color:#bf616a;">field2</span><span>: </span><span style="color:#b48ead;">i32</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> data = Data {
+</span><span>        field1: String::from(&quot;</span><span style="color:#a3be8c;">hello</span><span>&quot;),
+</span><span>        field2: </span><span style="color:#d08770;">42</span><span>,
+</span><span>    };
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">match</span><span> data {
+</span><span>        Data { field1, .. } =&gt; {  </span><span style="color:#a7adba;">// field1 moved
+</span><span>            println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, field1);
+</span><span>        }
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// println!(&quot;{}&quot;, data.field2);  // Error: data partially moved
+</span><span>}
+</span></code></pre>
+<p><strong>Solution</strong>: Borrow in the pattern:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> data = Data {
+</span><span>        field1: String::from(&quot;</span><span style="color:#a3be8c;">hello</span><span>&quot;),
+</span><span>        field2: </span><span style="color:#d08770;">42</span><span>,
+</span><span>    };
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">match </span><span>&amp;data {  </span><span style="color:#a7adba;">// Borrow data
+</span><span>        Data { field1, .. } =&gt; {
+</span><span>            println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, field1);
+</span><span>        }
+</span><span>    }
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, data.field2);  </span><span style="color:#a7adba;">// data still valid
+</span><span>}
+</span></code></pre>
+<h2 id="performance-monitoring-and-optimization">Performance Monitoring and Optimization</h2>
+<h3 id="identifying-unnecessary-moves">Identifying Unnecessary Moves</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Use tools like clippy to identify suboptimal patterns
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">inefficient_pattern</span><span>(</span><span style="color:#bf616a;">data</span><span>: Vec) -&gt; Vec {
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> result = data.</span><span style="color:#96b5b4;">clone</span><span>();  </span><span style="color:#a7adba;">// Unnecessary clone
+</span><span>    result.</span><span style="color:#96b5b4;">push</span><span>(String::from(&quot;</span><span style="color:#a3be8c;">added</span><span>&quot;));
+</span><span>    result
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Better: Use move semantics
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">efficient_pattern</span><span>(</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">data</span><span>: Vec) -&gt; Vec {
+</span><span>    data.</span><span style="color:#96b5b4;">push</span><span>(String::from(&quot;</span><span style="color:#a3be8c;">added</span><span>&quot;));  </span><span style="color:#a7adba;">// Modify in place
+</span><span>    data
+</span><span>}
+</span></code></pre>
+<h3 id="benchmarking-move-vs-clone">Benchmarking Move vs Clone</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>std::time::Instant;
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">benchmark_move_vs_clone</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> data = vec![String::from(&quot;</span><span style="color:#a3be8c;">data</span><span>&quot;); </span><span style="color:#d08770;">100_000</span><span>];
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Benchmark move
+</span><span>    </span><span style="color:#b48ead;">let</span><span> start = Instant::now();
+</span><span>    </span><span style="color:#b48ead;">let</span><span> moved = data;  </span><span style="color:#a7adba;">// Move
+</span><span>    </span><span style="color:#b48ead;">let</span><span> move_time = start.</span><span style="color:#96b5b4;">elapsed</span><span>();
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Benchmark clone
+</span><span>    </span><span style="color:#b48ead;">let</span><span> data2 = vec![String::from(&quot;</span><span style="color:#a3be8c;">data</span><span>&quot;); </span><span style="color:#d08770;">100_000</span><span>];
+</span><span>    </span><span style="color:#b48ead;">let</span><span> start = Instant::now();
+</span><span>    </span><span style="color:#b48ead;">let</span><span> cloned = data2.</span><span style="color:#96b5b4;">clone</span><span>();  </span><span style="color:#a7adba;">// Clone
+</span><span>    </span><span style="color:#b48ead;">let</span><span> clone_time = start.</span><span style="color:#96b5b4;">elapsed</span><span>();
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Move time: </span><span style="color:#d08770;">{:?}</span><span>&quot;, move_time);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Clone time: </span><span style="color:#d08770;">{:?}</span><span>&quot;, clone_time);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Clone is </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">x slower</span><span>&quot;, 
+</span><span>             clone_time.</span><span style="color:#96b5b4;">as_nanos</span><span>() / move_time.</span><span style="color:#96b5b4;">as_nanos</span><span>().</span><span style="color:#96b5b4;">max</span><span>(</span><span style="color:#d08770;">1</span><span>));
+</span><span>}
+</span></code></pre>
+<h2 id="summary">Summary</h2>
+<p><strong>Move semantics</strong> is a foundational concept in Rust that enables:</p>
+<h3 id="memory-efficiency-1"><strong>Memory Efficiency</strong></h3>
+<ul>
+<li>Zero-cost ownership transfers</li>
+<li>No unnecessary data copying</li>
+<li>Optimal memory usage patterns</li>
+</ul>
+<h3 id="safety-guarantees"><strong>Safety Guarantees</strong></h3>
+<ul>
+<li>Prevention of double-free errors</li>
+<li>Elimination of use-after-move bugs</li>
+<li>Compile-time ownership tracking</li>
+</ul>
+<h3 id="performance-benefits"><strong>Performance Benefits</strong></h3>
+<ul>
+<li>Zero runtime overhead for ownership transfers</li>
+<li>Cache-friendly memory access patterns</li>
+<li>Predictable performance characteristics</li>
+</ul>
+<h3 id="key-principles"><strong>Key Principles</strong></h3>
+<ul>
+<li><strong>Move by default</strong> for heap-allocated types</li>
+<li><strong>Copy by explicit choice</strong> for stack-allocated types</li>
+<li><strong>Ownership transfer</strong> without data duplication</li>
+<li><strong>Compile-time enforcement</strong> of move semantics</li>
+</ul>
+<h3 id="best-practices"><strong>Best Practices</strong></h3>
+<ul>
+<li>Design APIs to minimize unnecessary moves</li>
+<li>Use moves for data transformations</li>
+<li>Clone only when multiple ownership is truly needed</li>
+<li>Document move semantics in public APIs</li>
+</ul>
+<p>Understanding move semantics is crucial for writing efficient Rust code. <strong>It enables zero-cost abstractions while maintaining memory safety</strong>, making Rust unique among systems programming languages. The combination of performance and safety that move semantics provides is fundamental to Rust's value proposition as a systems programming language.</p>
+
+    
+        </div>
+
+    </article>
+</main>
+
+
+    <script type="text/javascript" src="http://localhost/elasticlunr.min.js" defer></script>
+    <script type="text/javascript" src="http://localhost/search_index.en.js" defer></script>
+<script type="text/javascript" src="http://localhost/js.js" defer></script>
+
+</body>
+</html>

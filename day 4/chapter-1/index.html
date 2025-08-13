@@ -1,0 +1,954 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://localhost/main.css">
+    <link rel="icon" href="https://www.rust-lang.org/static/images/favicon-16x16.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Rust Programming Course! | Compound Types (Tuples, Arrays) </title>
+</head>
+<body>
+
+<main>
+    
+    <nav>
+            <a href="http:&#x2F;&#x2F;localhost">
+                        <img src="https://www.rust-lang.org/static/images/rust-logo-blk.svg" alt="logo"/>
+                    </a>
+                <!-- -->
+
+            <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+            <div id="trees">
+                <input class="tree-toggle" type="checkbox" id="day-1-introduction"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-1-introduction">Day 1: Introduction</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 1/chapter-1/">What is Rust and why use it?</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-2/">Installing Rust Toolchain (rustup, cargo)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-3/">Setting up Development (VS Code + Hello World)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-4/">Understanding Cargo Project Structure</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-2-basic-syntax-variables"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-2-basic-syntax-variables">Day 2: Basic Syntax &amp; Variables</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 2/chapter-1/">Variables and Mutability in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-2/">Data Types in Rust: Integers, Floats, Booleans, and Characters</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-3/">Constants vs Variables</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-4/">Understanding Shadowing in Rust: A Practical Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-5/">Basic Input&#x2F;Output</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-3-functions-control-flow"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-3-functions-control-flow">Day 3: Functions &amp; Control Flow</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 3/chapter-1/">Function Syntax and Parameters in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-2/">Return Values and Expressions vs Statements</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-3/">If&#x2F;Else Statements in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-4/">Match Expressions in Rust: Powerful Pattern Matching</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-5/">Loops in Rust: loop, while, for Explained</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-4-data-types-deep-dive"
+                           checked/>
+                    <label class="tree-toggle-label"
+                           for="day-4-data-types-deep-dive">Day 4: Data Types Deep Dive</label>
+
+                    <ul class="subtree">
+                        <li class="active">
+                                <a href="http://localhost/day 4/chapter-1/">Compound Types (Tuples, Arrays)</a>
+                            </li>
+
+                            
+                                    
+                                    
+                                        <ul id="toc">
+                                            <li><a href="
+                                                        http://localhost/day 4/chapter-1/#compound-types-in-rust-tuples-and-arrays-in-detail">Compound Types in Rust: Tuples and Arrays in Detail</a>
+                                                    <ul>
+                                                            <li>
+                                                                    <a href="http://localhost/day 4/chapter-1/#tuples-heterogeneous-collections">Tuples - Heterogeneous Collections</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 4/chapter-1/#arrays-homogeneous-collections">Arrays - Homogeneous Collections</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 4/chapter-1/#comparison-tuples-vs-arrays">Comparison: Tuples vs Arrays</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 4/chapter-1/#practical-examples">Practical Examples</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 4/chapter-1/#best-practices">Best Practices</a>
+                                                                </li>
+                                                            </ul>
+                                                    </li>
+                                            </ul>
+                                    <li >
+                                <a href="http://localhost/day 4/chapter-2/">String vs &amp;str in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-3/">Vector Basics in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-4/">Type Annotations and Inference in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-5/">Practical Rust Exercises</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-5-practice-review"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-5-practice-review">Day 5: Practice &amp; Review</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 5/chapter-1/">Day 5: Practice &amp; Review</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-6-ownership-fundamentals"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-6-ownership-fundamentals">Day 6: Ownership Fundamentals</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 6/chapter-1/">Ownership in Rust: A Detailed Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-2/">Stack vs Heap in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-3/">Understanding Ownership in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-4/">Move Semantics in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-5/">Copy Trait in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-7-references-borrowing"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-7-references-borrowing">Day 7: References &amp; Borrowing</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 7/chapter-1/">Immutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-2/">Mutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-3/">Borrowing Rules</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-4/">Reference Lifetime Basics</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-5/">Common Borrowing Errors and Solutions</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-8-slices"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-8-slices">Day 8: Slices</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 8/chapter-1/">String Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-2/">Array Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-3/">Slice Syntax and Usage</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-4/">Practical Applications</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-5/">Memory Safety Benefits</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-9-advanced-ownership"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-9-advanced-ownership">Day 9: Advanced Ownership</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 9/chapter-1/">Clone Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-2/">Drop Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-3/">RAII Pattern</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-4/">Memory Management Comparison with Other Languages</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-5/">Best Practices (Advanced Ownership)</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-10-ownership-practice"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-10-ownership-practice">Day 10: Ownership Practice</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 10/chapter-1/">Complex Ownership Scenarios</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-2/">Debugging Ownership Errors</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-3/">Code Refactoring Exercises</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-4/">Group Problem-Solving</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-11-structs-basics"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-11-structs-basics">Day 11: Structs Basics</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 11/chapter-1/">Defining and Instantiating Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-2/">Field Access and Modification</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-3/">Tuple Structs and Unit Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-4/">Struct Update Syntax</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-5/">Ownership of Struct Data</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-12-methods-associated-functions"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-12-methods-associated-functions">Day 12: Methods &amp; Associated Functions</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 12/chapter-1/">Implementing Methods with impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-2/">&amp;self, &amp;mut self, and self</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-3/">Associated Functions (like Constructors)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-4/">Multiple impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-5/">Method Chaining</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-13-advanced-struct-concepts"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-13-advanced-struct-concepts">Day 13: Advanced Struct Concepts</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 13/chapter-1/">Struct Lifetime Parameters</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-2/">Debug Trait and Custom Formatting</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-3/">Builder Pattern Implementation</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-4/">Struct Composition</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-5/">Best Practices for Struct Design</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-14-enums-pattern-matching"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-14-enums-pattern-matching">Day 14: Enums &amp; Pattern Matching</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 14/chapter-1/">Defining Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-2/">Enum Variants with Data</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-3/">Option&lt;T&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-4/">Result&lt;T, E&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-5/">Advanced Match Patterns in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-15-practice-project"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-15-practice-project">Day 15: Practice Project</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 15/chapter-1/">Building a Simple CLI Calculator in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-16-vectors"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-16-vectors">Day 16: Vectors</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 16/chapter-1/">Creating and Updating Vectors</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-2/">Vector Methods: push, pop, iter</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-3/">Accessing Vector Elements Safely</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-4/">Vector of Different Types with Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-5/">Performance Considerations</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-17-hashmaps-other-collections"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-17-hashmaps-other-collections">Day 17: HashMaps &amp; Other Collections</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 17/chapter-1/">HashMap Creation and Manipulation</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-2/">Keys and Values Ownership</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-3/">HashMap Methods and Iteration</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-4/">When to Use Different Collections</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-5/">BTreeMap Introduction</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-18-error-handling"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-18-error-handling">Day 18: Error Handling</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 18/chapter-1/">Panic! and When to Use It</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 18/chapter-2/">Result&lt;T, E&gt; in Depth</a>
+                            </li>
+
+                            </ul>
+                </div>
+        </nav>
+    <article>
+
+        <div id="on_right">
+                <span id="search-ico" class="ms-Icon--Search"></span>
+            </div>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="Search as you type...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        <div id="wrap">
+            
+        <h1 id="compound-types-in-rust-tuples-and-arrays-in-detail">Compound Types in Rust: Tuples and Arrays in Detail</h1>
+<p>Building on your understanding of basic data types and loops, let's explore Rust's <strong>compound types</strong> - data structures that can group multiple values together. Rust provides several compound types, but the two most fundamental are <strong>tuples</strong> and <strong>arrays</strong>. These types allow you to store multiple values in a single variable while maintaining Rust's safety guarantees.</p>
+<h2 id="tuples-heterogeneous-collections">Tuples - Heterogeneous Collections</h2>
+<p><strong>Tuples</strong> are compound types that can hold multiple values of <strong>different types</strong> together. They have a <strong>fixed length</strong> and are created by grouping values in parentheses with comma separation.</p>
+<h3 id="basic-tuple-syntax">Basic Tuple Syntax</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// Basic tuple creation
+</span><span>    </span><span style="color:#b48ead;">let</span><span> tuple: (</span><span style="color:#b48ead;">i32</span><span>, </span><span style="color:#b48ead;">f64</span><span>, </span><span style="color:#b48ead;">bool</span><span>) = (</span><span style="color:#d08770;">42</span><span>, </span><span style="color:#d08770;">3.14</span><span>, </span><span style="color:#d08770;">true</span><span>);
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Type inference also works
+</span><span>    </span><span style="color:#b48ead;">let</span><span> coordinates = (</span><span style="color:#d08770;">10</span><span>, </span><span style="color:#d08770;">20</span><span>);        </span><span style="color:#a7adba;">// (i32, i32)
+</span><span>    </span><span style="color:#b48ead;">let</span><span> person = (&quot;</span><span style="color:#a3be8c;">Alice</span><span>&quot;, </span><span style="color:#d08770;">30</span><span>, </span><span style="color:#d08770;">true</span><span>);  </span><span style="color:#a7adba;">// (&amp;str, i32, bool)
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Tuple: </span><span style="color:#d08770;">{:?}</span><span>&quot;, tuple);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Person: </span><span style="color:#d08770;">{:?}</span><span>&quot;, person);
+</span><span>}
+</span></code></pre>
+<p><strong>Output:</strong></p>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>Tuple: (42, 3.14, true)
+</span><span>Person: (&quot;Alice&quot;, 30, true)
+</span></code></pre>
+<h3 id="accessing-tuple-elements">Accessing Tuple Elements</h3>
+<p>There are multiple ways to access tuple elements:</p>
+<h4 id="1-dot-notation-with-index">1. Dot Notation with Index</h4>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> point = (</span><span style="color:#d08770;">3</span><span>, </span><span style="color:#d08770;">4</span><span>);
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> x = point.</span><span style="color:#d08770;">0</span><span>;  </span><span style="color:#a7adba;">// First element (index 0)
+</span><span>    </span><span style="color:#b48ead;">let</span><span> y = point.</span><span style="color:#d08770;">1</span><span>;  </span><span style="color:#a7adba;">// Second element (index 1)
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Point: (</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">, </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">)</span><span>&quot;, x, y);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">X: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">, Y: </span><span style="color:#d08770;">{}</span><span>&quot;, point.</span><span style="color:#d08770;">0</span><span>, point.</span><span style="color:#d08770;">1</span><span>);
+</span><span>}
+</span></code></pre>
+<h4 id="2-destructuring-assignment">2. Destructuring Assignment</h4>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> person = (&quot;</span><span style="color:#a3be8c;">Bob</span><span>&quot;, </span><span style="color:#d08770;">25</span><span>, </span><span style="color:#d08770;">false</span><span>);
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Destructure the tuple
+</span><span>    </span><span style="color:#b48ead;">let </span><span>(name, age, is_student) = person;
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Name: </span><span style="color:#d08770;">{}</span><span>&quot;, name);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Age: </span><span style="color:#d08770;">{}</span><span>&quot;, age);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Is student: </span><span style="color:#d08770;">{}</span><span>&quot;, is_student);
+</span><span>}
+</span></code></pre>
+<h4 id="3-partial-destructuring">3. Partial Destructuring</h4>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> data = (</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">2</span><span>, </span><span style="color:#d08770;">3</span><span>, </span><span style="color:#d08770;">4</span><span>, </span><span style="color:#d08770;">5</span><span>);
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Only extract what you need
+</span><span>    </span><span style="color:#b48ead;">let </span><span>(first, _, third, ..) = data;  </span><span style="color:#a7adba;">// Skip second, ignore rest
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">First: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">, Third: </span><span style="color:#d08770;">{}</span><span>&quot;, first, third);
+</span><span>}
+</span></code></pre>
+<h3 id="tuple-types-and-mixed-data">Tuple Types and Mixed Data</h3>
+<p><strong>Tuples can contain any combination of types</strong>:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// Mixed types in a single tuple
+</span><span>    </span><span style="color:#b48ead;">let</span><span> mixed = (
+</span><span>        </span><span style="color:#d08770;">42</span><span>,                    </span><span style="color:#a7adba;">// i32
+</span><span>        </span><span style="color:#d08770;">3.14159</span><span>,              </span><span style="color:#a7adba;">// f64
+</span><span>        &quot;</span><span style="color:#a3be8c;">hello</span><span>&quot;,              </span><span style="color:#a7adba;">// &amp;str
+</span><span>        </span><span style="color:#d08770;">true</span><span>,                 </span><span style="color:#a7adba;">// bool
+</span><span>        [</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">2</span><span>, </span><span style="color:#d08770;">3</span><span>],           </span><span style="color:#a7adba;">// array
+</span><span>        (&#39;</span><span style="color:#a3be8c;">a</span><span>&#39;, &#39;</span><span style="color:#a3be8c;">b</span><span>&#39;),          </span><span style="color:#a7adba;">// nested tuple
+</span><span>    );
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Integer: </span><span style="color:#d08770;">{}</span><span>&quot;, mixed.</span><span style="color:#d08770;">0</span><span>);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Float: </span><span style="color:#d08770;">{}</span><span>&quot;, mixed.</span><span style="color:#d08770;">1</span><span>);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">String: </span><span style="color:#d08770;">{}</span><span>&quot;, mixed.</span><span style="color:#d08770;">2</span><span>);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Boolean: </span><span style="color:#d08770;">{}</span><span>&quot;, mixed.</span><span style="color:#d08770;">3</span><span>);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Array: </span><span style="color:#d08770;">{:?}</span><span>&quot;, mixed.</span><span style="color:#d08770;">4</span><span>);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Nested tuple: </span><span style="color:#d08770;">{:?}</span><span>&quot;, mixed.</span><span style="color:#d08770;">5</span><span>);
+</span><span>}
+</span></code></pre>
+<h3 id="empty-and-single-element-tuples">Empty and Single-Element Tuples</h3>
+<h4 id="unit-tuple">Unit Tuple <code>()</code></h4>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> unit = ();  </span><span style="color:#a7adba;">// Unit type - represents no meaningful value
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Unit: </span><span style="color:#d08770;">{:?}</span><span>&quot;, unit);
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Functions that don&#39;t return anything implicitly return ()
+</span><span>    </span><span style="color:#b48ead;">let</span><span> result = println!(&quot;</span><span style="color:#a3be8c;">Hello</span><span>&quot;);  </span><span style="color:#a7adba;">// result is ()
+</span><span>}
+</span></code></pre>
+<h4 id="single-element-tuple">Single-Element Tuple</h4>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> single = (</span><span style="color:#d08770;">42</span><span>,);  </span><span style="color:#a7adba;">// Note the comma! Without it, it&#39;s just parentheses
+</span><span>    </span><span style="color:#b48ead;">let</span><span> not_tuple = (</span><span style="color:#d08770;">42</span><span>); </span><span style="color:#a7adba;">// This is just an i32 in parentheses
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Single tuple: </span><span style="color:#d08770;">{:?}</span><span>&quot;, single);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Not a tuple: </span><span style="color:#d08770;">{:?}</span><span>&quot;, not_tuple);
+</span><span>}
+</span></code></pre>
+<h3 id="tuples-in-functions">Tuples in Functions</h3>
+<h4 id="returning-multiple-values">Returning Multiple Values</h4>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">calculate_stats</span><span>(</span><span style="color:#bf616a;">numbers</span><span>: &amp;[</span><span style="color:#b48ead;">i32</span><span>]) -&gt; (</span><span style="color:#b48ead;">i32</span><span>, </span><span style="color:#b48ead;">i32</span><span>, </span><span style="color:#b48ead;">f64</span><span>) {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> min = *numbers.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">min</span><span>().</span><span style="color:#96b5b4;">unwrap</span><span>();
+</span><span>    </span><span style="color:#b48ead;">let</span><span> max = *numbers.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">max</span><span>().</span><span style="color:#96b5b4;">unwrap</span><span>();
+</span><span>    </span><span style="color:#b48ead;">let</span><span> avg = numbers.</span><span style="color:#96b5b4;">iter</span><span>().sum::&lt;</span><span style="color:#b48ead;">i32</span><span>&gt;() as </span><span style="color:#b48ead;">f64 </span><span>/ numbers.</span><span style="color:#96b5b4;">len</span><span>() as </span><span style="color:#b48ead;">f64</span><span>;
+</span><span>    
+</span><span>    (min, max, avg)  </span><span style="color:#a7adba;">// Return tuple
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> data = [</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">5</span><span>, </span><span style="color:#d08770;">3</span><span>, </span><span style="color:#d08770;">9</span><span>, </span><span style="color:#d08770;">2</span><span>, </span><span style="color:#d08770;">7</span><span>];
+</span><span>    </span><span style="color:#b48ead;">let </span><span>(min, max, average) = </span><span style="color:#96b5b4;">calculate_stats</span><span>(&amp;data);
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Min: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">, Max: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">, Average: </span><span style="color:#d08770;">{:.2}</span><span>&quot;, min, max, average);
+</span><span>}
+</span></code></pre>
+<h4 id="function-parameters">Function Parameters</h4>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">distance_from_origin</span><span>(</span><span style="color:#bf616a;">point</span><span>: (</span><span style="color:#bf616a;">f64</span><span>, </span><span style="color:#bf616a;">f64</span><span>)) -&gt; </span><span style="color:#b48ead;">f64 </span><span>{
+</span><span>    </span><span style="color:#b48ead;">let </span><span>(x, y) = point;
+</span><span>    (x * x + y * y).</span><span style="color:#96b5b4;">sqrt</span><span>()
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">print_coordinates</span><span>((</span><span style="color:#bf616a;">x</span><span>, </span><span style="color:#bf616a;">y</span><span>): (</span><span style="color:#b48ead;">i32</span><span>, </span><span style="color:#b48ead;">i32</span><span>)) {  </span><span style="color:#a7adba;">// Direct destructuring in parameter
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Point at (</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">, </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">)</span><span>&quot;, x, y);
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> point = (</span><span style="color:#d08770;">3.0</span><span>, </span><span style="color:#d08770;">4.0</span><span>);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> dist = </span><span style="color:#96b5b4;">distance_from_origin</span><span>(point);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Distance: </span><span style="color:#d08770;">{:.2}</span><span>&quot;, dist);
+</span><span>    
+</span><span>    </span><span style="color:#96b5b4;">print_coordinates</span><span>((</span><span style="color:#d08770;">10</span><span>, </span><span style="color:#d08770;">20</span><span>));
+</span><span>}
+</span></code></pre>
+<h3 id="when-to-use-tuples">When to Use Tuples</h3>
+<p><strong>Use tuples when:</strong></p>
+<ul>
+<li>You need to return multiple related values from a function</li>
+<li>Values are of different types but conceptually related</li>
+<li>The grouping is temporary or internal to a function</li>
+<li>You have a small, fixed set of values (typically 2-4 elements)</li>
+</ul>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Good use cases
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">divide_with_remainder</span><span>(</span><span style="color:#bf616a;">dividend</span><span>: </span><span style="color:#b48ead;">i32</span><span>, </span><span style="color:#bf616a;">divisor</span><span>: </span><span style="color:#b48ead;">i32</span><span>) -&gt; (</span><span style="color:#b48ead;">i32</span><span>, </span><span style="color:#b48ead;">i32</span><span>) {
+</span><span>    (dividend / divisor, dividend % divisor)
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">parse_coordinate</span><span>(</span><span style="color:#bf616a;">input</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; Option&lt;(</span><span style="color:#b48ead;">f64</span><span>, </span><span style="color:#b48ead;">f64</span><span>)&gt; {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> parts: Vec&lt;&amp;</span><span style="color:#b48ead;">str</span><span>&gt; = input.</span><span style="color:#96b5b4;">split</span><span>(&#39;</span><span style="color:#a3be8c;">,</span><span>&#39;).</span><span style="color:#96b5b4;">collect</span><span>();
+</span><span>    </span><span style="color:#b48ead;">if</span><span> parts.</span><span style="color:#96b5b4;">len</span><span>() == </span><span style="color:#d08770;">2 </span><span>{
+</span><span>        </span><span style="color:#b48ead;">if let </span><span>(Ok(x), Ok(y)) = (parts[</span><span style="color:#d08770;">0</span><span>].</span><span style="color:#96b5b4;">trim</span><span>().</span><span style="color:#96b5b4;">parse</span><span>(), parts[</span><span style="color:#d08770;">1</span><span>].</span><span style="color:#96b5b4;">trim</span><span>().</span><span style="color:#96b5b4;">parse</span><span>()) {
+</span><span>            </span><span style="color:#b48ead;">return </span><span>Some((x, y));
+</span><span>        }
+</span><span>    }
+</span><span>    None
+</span><span>}
+</span></code></pre>
+<h2 id="arrays-homogeneous-collections">Arrays - Homogeneous Collections</h2>
+<p><strong>Arrays</strong> in Rust are collections of elements that:</p>
+<ul>
+<li>All have the <strong>same type</strong></li>
+<li>Have a <strong>fixed size</strong> known at compile time</li>
+<li>Are stored on the <strong>stack</strong> (not heap)</li>
+<li>Use <strong>zero-based indexing</strong></li>
+</ul>
+<h3 id="basic-array-syntax">Basic Array Syntax</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// Explicit type and size
+</span><span>    </span><span style="color:#b48ead;">let</span><span> numbers: [</span><span style="color:#b48ead;">i32</span><span>; </span><span style="color:#d08770;">5</span><span>] = [</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">2</span><span>, </span><span style="color:#d08770;">3</span><span>, </span><span style="color:#d08770;">4</span><span>, </span><span style="color:#d08770;">5</span><span>];
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Type inference
+</span><span>    </span><span style="color:#b48ead;">let</span><span> fruits = [&quot;</span><span style="color:#a3be8c;">apple</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">banana</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">cherry</span><span>&quot;];
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Repeat syntax - initialize with same value
+</span><span>    </span><span style="color:#b48ead;">let</span><span> zeros = [</span><span style="color:#d08770;">0</span><span>; </span><span style="color:#d08770;">10</span><span>];  </span><span style="color:#a7adba;">// [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Numbers: </span><span style="color:#d08770;">{:?}</span><span>&quot;, numbers);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Fruits: </span><span style="color:#d08770;">{:?}</span><span>&quot;, fruits);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Zeros: </span><span style="color:#d08770;">{:?}</span><span>&quot;, zeros);
+</span><span>}
+</span></code></pre>
+<h3 id="accessing-array-elements">Accessing Array Elements</h3>
+<h4 id="index-access">Index Access</h4>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> colors = [&quot;</span><span style="color:#a3be8c;">red</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">green</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">blue</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">yellow</span><span>&quot;];
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Direct index access
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">First color: </span><span style="color:#d08770;">{}</span><span>&quot;, colors[</span><span style="color:#d08770;">0</span><span>]);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Last color: </span><span style="color:#d08770;">{}</span><span>&quot;, colors[</span><span style="color:#d08770;">3</span><span>]);
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Using variables as index
+</span><span>    </span><span style="color:#b48ead;">let</span><span> index = </span><span style="color:#d08770;">2</span><span>;
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Color at index </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">: </span><span style="color:#d08770;">{}</span><span>&quot;, index, colors[index]);
+</span><span>}
+</span></code></pre>
+<h4 id="safe-access-with-get">Safe Access with <code>get()</code></h4>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> numbers = [</span><span style="color:#d08770;">10</span><span>, </span><span style="color:#d08770;">20</span><span>, </span><span style="color:#d08770;">30</span><span>, </span><span style="color:#d08770;">40</span><span>, </span><span style="color:#d08770;">50</span><span>];
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Safe access returns Option&lt;T&gt;
+</span><span>    </span><span style="color:#b48ead;">match</span><span> numbers.</span><span style="color:#96b5b4;">get</span><span>(</span><span style="color:#d08770;">2</span><span>) {
+</span><span>        Some(value) =&gt; println!(&quot;</span><span style="color:#a3be8c;">Found: </span><span style="color:#d08770;">{}</span><span>&quot;, value),
+</span><span>        None =&gt; println!(&quot;</span><span style="color:#a3be8c;">Index out of bounds</span><span>&quot;),
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Out of bounds access
+</span><span>    </span><span style="color:#b48ead;">match</span><span> numbers.</span><span style="color:#96b5b4;">get</span><span>(</span><span style="color:#d08770;">10</span><span>) {
+</span><span>        Some(value) =&gt; println!(&quot;</span><span style="color:#a3be8c;">Found: </span><span style="color:#d08770;">{}</span><span>&quot;, value),
+</span><span>        None =&gt; println!(&quot;</span><span style="color:#a3be8c;">Index 10 is out of bounds</span><span>&quot;),
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h4 id="runtime-bounds-checking">Runtime Bounds Checking</h4>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> data = [</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">2</span><span>, </span><span style="color:#d08770;">3</span><span>];
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// This will panic at runtime if index is out of bounds
+</span><span>    </span><span style="color:#a7adba;">// let value = data[5];  // thread &#39;main&#39; panicked at &#39;index out of bounds&#39;
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Safe alternative
+</span><span>    </span><span style="color:#b48ead;">if let </span><span>Some(value) = data.</span><span style="color:#96b5b4;">get</span><span>(</span><span style="color:#d08770;">5</span><span>) {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Value: </span><span style="color:#d08770;">{}</span><span>&quot;, value);
+</span><span>    } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Index out of bounds</span><span>&quot;);
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h3 id="array-properties-and-methods">Array Properties and Methods</h3>
+<h4 id="length-and-properties">Length and Properties</h4>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> numbers = [</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">2</span><span>, </span><span style="color:#d08770;">3</span><span>, </span><span style="color:#d08770;">4</span><span>, </span><span style="color:#d08770;">5</span><span>];
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Array length: </span><span style="color:#d08770;">{}</span><span>&quot;, numbers.</span><span style="color:#96b5b4;">len</span><span>());
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Is empty: </span><span style="color:#d08770;">{}</span><span>&quot;, numbers.</span><span style="color:#96b5b4;">is_empty</span><span>());
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">First element: </span><span style="color:#d08770;">{:?}</span><span>&quot;, numbers.</span><span style="color:#96b5b4;">first</span><span>());
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Last element: </span><span style="color:#d08770;">{:?}</span><span>&quot;, numbers.</span><span style="color:#96b5b4;">last</span><span>());
+</span><span>}
+</span></code></pre>
+<h4 id="iteration-over-arrays">Iteration Over Arrays</h4>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> temperatures = [</span><span style="color:#d08770;">20</span><span>, </span><span style="color:#d08770;">25</span><span>, </span><span style="color:#d08770;">30</span><span>, </span><span style="color:#d08770;">28</span><span>, </span><span style="color:#d08770;">22</span><span>];
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Direct iteration
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Temperatures:</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">for</span><span> temp in temperatures {
+</span><span>        println!(&quot;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">°C</span><span>&quot;, temp);
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Iteration with index
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">Indexed temperatures:</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">for </span><span>(index, temp) in temperatures.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">enumerate</span><span>() {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Day </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">°C</span><span>&quot;, index + </span><span style="color:#d08770;">1</span><span>, temp);
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Iterator methods
+</span><span>    </span><span style="color:#b48ead;">let</span><span> max_temp = temperatures.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">max</span><span>().</span><span style="color:#96b5b4;">unwrap</span><span>();
+</span><span>    </span><span style="color:#b48ead;">let</span><span> avg_temp: </span><span style="color:#b48ead;">f64 </span><span>= temperatures.</span><span style="color:#96b5b4;">iter</span><span>().sum::&lt;</span><span style="color:#b48ead;">i32</span><span>&gt;() as </span><span style="color:#b48ead;">f64 </span><span>/ temperatures.</span><span style="color:#96b5b4;">len</span><span>() as </span><span style="color:#b48ead;">f64</span><span>;
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Max temperature: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">°C</span><span>&quot;, max_temp);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Average temperature: </span><span style="color:#d08770;">{:.1}</span><span style="color:#a3be8c;">°C</span><span>&quot;, avg_temp);
+</span><span>}
+</span></code></pre>
+<h3 id="multi-dimensional-arrays">Multi-dimensional Arrays</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// 2D array (array of arrays)
+</span><span>    </span><span style="color:#b48ead;">let</span><span> matrix: [[</span><span style="color:#b48ead;">i32</span><span>; </span><span style="color:#d08770;">3</span><span>]; </span><span style="color:#d08770;">2</span><span>] = [
+</span><span>        [</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">2</span><span>, </span><span style="color:#d08770;">3</span><span>],
+</span><span>        [</span><span style="color:#d08770;">4</span><span>, </span><span style="color:#d08770;">5</span><span>, </span><span style="color:#d08770;">6</span><span>]
+</span><span>    ];
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Matrix: </span><span style="color:#d08770;">{:?}</span><span>&quot;, matrix);
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Accessing 2D array elements
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Element [0][1]: </span><span style="color:#d08770;">{}</span><span>&quot;, matrix[</span><span style="color:#d08770;">0</span><span>][</span><span style="color:#d08770;">1</span><span>]);
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Iterating 2D arrays
+</span><span>    </span><span style="color:#b48ead;">for </span><span>(row_index, row) in matrix.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">enumerate</span><span>() {
+</span><span>        </span><span style="color:#b48ead;">for </span><span>(col_index, value) in row.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">enumerate</span><span>() {
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">matrix[</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">][</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">] = </span><span style="color:#d08770;">{}</span><span>&quot;, row_index, col_index, value);
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h3 id="arrays-in-functions">Arrays in Functions</h3>
+<h4 id="function-parameters-1">Function Parameters</h4>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">sum_array</span><span>(</span><span style="color:#bf616a;">numbers</span><span>: [</span><span style="color:#b48ead;">i32</span><span>; 5]) -&gt; </span><span style="color:#b48ead;">i32 </span><span>{
+</span><span>    numbers.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">sum</span><span>()
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">print_array</span><span>(</span><span style="color:#bf616a;">arr</span><span>: &amp;[</span><span style="color:#b48ead;">i32</span><span>]) {  </span><span style="color:#a7adba;">// Slice parameter - more flexible
+</span><span>    </span><span style="color:#b48ead;">for </span><span>(i, value) in arr.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">enumerate</span><span>() {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Index </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">: </span><span style="color:#d08770;">{}</span><span>&quot;, i, value);
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> data = [</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">2</span><span>, </span><span style="color:#d08770;">3</span><span>, </span><span style="color:#d08770;">4</span><span>, </span><span style="color:#d08770;">5</span><span>];
+</span><span>    </span><span style="color:#b48ead;">let</span><span> total = </span><span style="color:#96b5b4;">sum_array</span><span>(data);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Sum: </span><span style="color:#d08770;">{}</span><span>&quot;, total);
+</span><span>    
+</span><span>    </span><span style="color:#96b5b4;">print_array</span><span>(&amp;data);  </span><span style="color:#a7adba;">// Pass reference to array
+</span><span>}
+</span></code></pre>
+<h4 id="returning-arrays">Returning Arrays</h4>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">create_sequence</span><span>(</span><span style="color:#bf616a;">start</span><span>: </span><span style="color:#b48ead;">i32</span><span>) -&gt; [</span><span style="color:#b48ead;">i32</span><span>; </span><span style="color:#d08770;">5</span><span>] {
+</span><span>    [start, start + </span><span style="color:#d08770;">1</span><span>, start + </span><span style="color:#d08770;">2</span><span>, start + </span><span style="color:#d08770;">3</span><span>, start + </span><span style="color:#d08770;">4</span><span>]
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">initialize_grid</span><span>() -&gt; [[</span><span style="color:#b48ead;">i32</span><span>; </span><span style="color:#d08770;">3</span><span>]; </span><span style="color:#d08770;">3</span><span>] {
+</span><span>    [
+</span><span>        [</span><span style="color:#d08770;">0</span><span>, </span><span style="color:#d08770;">0</span><span>, </span><span style="color:#d08770;">0</span><span>],
+</span><span>        [</span><span style="color:#d08770;">0</span><span>, </span><span style="color:#d08770;">0</span><span>, </span><span style="color:#d08770;">0</span><span>], 
+</span><span>        [</span><span style="color:#d08770;">0</span><span>, </span><span style="color:#d08770;">0</span><span>, </span><span style="color:#d08770;">0</span><span>]
+</span><span>    ]
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> sequence = </span><span style="color:#96b5b4;">create_sequence</span><span>(</span><span style="color:#d08770;">10</span><span>);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Sequence: </span><span style="color:#d08770;">{:?}</span><span>&quot;, sequence);
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> grid = </span><span style="color:#96b5b4;">initialize_grid</span><span>();
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Grid: </span><span style="color:#d08770;">{:?}</span><span>&quot;, grid);
+</span><span>}
+</span></code></pre>
+<h2 id="comparison-tuples-vs-arrays">Comparison: Tuples vs Arrays</h2>
+<table><thead><tr><th>Feature</th><th>Tuples</th><th>Arrays</th></tr></thead><tbody>
+<tr><td><strong>Element Types</strong></td><td>Different types allowed</td><td>All elements same type</td></tr>
+<tr><td><strong>Size</strong></td><td>Fixed at compile time</td><td>Fixed at compile time</td></tr>
+<tr><td><strong>Access Method</strong></td><td>Dot notation with index</td><td>Square bracket notation</td></tr>
+<tr><td><strong>Indexing</strong></td><td>Compile-time only</td><td>Runtime indexing supported</td></tr>
+<tr><td><strong>Bounds Checking</strong></td><td>Always safe (compile-time)</td><td>Runtime bounds checking</td></tr>
+<tr><td><strong>Iteration</strong></td><td>Not directly iterable</td><td>Iterable with for loops</td></tr>
+<tr><td><strong>Memory</strong></td><td>Stack allocated</td><td>Stack allocated</td></tr>
+<tr><td><strong>Use Case</strong></td><td>Related but different data</td><td>Collection of same data</td></tr>
+</tbody></table>
+<h2 id="practical-examples">Practical Examples</h2>
+<h3 id="coordinate-system-with-tuples">Coordinate System with Tuples</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">type </span><span>Point2D = (</span><span style="color:#b48ead;">f64</span><span>, </span><span style="color:#b48ead;">f64</span><span>);
+</span><span style="color:#b48ead;">type </span><span>Point3D = (</span><span style="color:#b48ead;">f64</span><span>, </span><span style="color:#b48ead;">f64</span><span>, </span><span style="color:#b48ead;">f64</span><span>);
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">distance_2d</span><span>(</span><span style="color:#bf616a;">p1</span><span>: Point2D, </span><span style="color:#bf616a;">p2</span><span>: Point2D) -&gt; </span><span style="color:#b48ead;">f64 </span><span>{
+</span><span>    </span><span style="color:#b48ead;">let </span><span>(x1, y1) = p1;
+</span><span>    </span><span style="color:#b48ead;">let </span><span>(x2, y2) = p2;
+</span><span>    ((x2 - x1).</span><span style="color:#96b5b4;">powi</span><span>(</span><span style="color:#d08770;">2</span><span>) + (y2 - y1).</span><span style="color:#96b5b4;">powi</span><span>(</span><span style="color:#d08770;">2</span><span>)).</span><span style="color:#96b5b4;">sqrt</span><span>()
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> origin: Point2D = (</span><span style="color:#d08770;">0.0</span><span>, </span><span style="color:#d08770;">0.0</span><span>);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> point: Point2D = (</span><span style="color:#d08770;">3.0</span><span>, </span><span style="color:#d08770;">4.0</span><span>);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> point3d: Point3D = (</span><span style="color:#d08770;">1.0</span><span>, </span><span style="color:#d08770;">2.0</span><span>, </span><span style="color:#d08770;">3.0</span><span>);
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Distance from origin: </span><span style="color:#d08770;">{:.2}</span><span>&quot;, </span><span style="color:#96b5b4;">distance_2d</span><span>(origin, point));
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">3D Point: </span><span style="color:#d08770;">{:?}</span><span>&quot;, point3d);
+</span><span>}
+</span></code></pre>
+<h3 id="grade-management-with-arrays">Grade Management with Arrays</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">analyze_grades</span><span>(</span><span style="color:#bf616a;">grades</span><span>: &amp;[</span><span style="color:#b48ead;">i32</span><span>]) -&gt; (</span><span style="color:#b48ead;">i32</span><span>, </span><span style="color:#b48ead;">i32</span><span>, </span><span style="color:#b48ead;">f64</span><span>, </span><span style="color:#b48ead;">char</span><span>) {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> min = *grades.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">min</span><span>().</span><span style="color:#96b5b4;">unwrap</span><span>();
+</span><span>    </span><span style="color:#b48ead;">let</span><span> max = *grades.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">max</span><span>().</span><span style="color:#96b5b4;">unwrap</span><span>();
+</span><span>    </span><span style="color:#b48ead;">let</span><span> avg = grades.</span><span style="color:#96b5b4;">iter</span><span>().sum::&lt;</span><span style="color:#b48ead;">i32</span><span>&gt;() as </span><span style="color:#b48ead;">f64 </span><span>/ grades.</span><span style="color:#96b5b4;">len</span><span>() as </span><span style="color:#b48ead;">f64</span><span>;
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> letter_grade = </span><span style="color:#b48ead;">match</span><span> avg as </span><span style="color:#b48ead;">i32 </span><span>{
+</span><span>        </span><span style="color:#d08770;">90</span><span>..=</span><span style="color:#d08770;">100 </span><span>=&gt; &#39;</span><span style="color:#a3be8c;">A</span><span>&#39;,
+</span><span>        </span><span style="color:#d08770;">80</span><span>..=</span><span style="color:#d08770;">89 </span><span>=&gt; &#39;</span><span style="color:#a3be8c;">B</span><span>&#39;,
+</span><span>        </span><span style="color:#d08770;">70</span><span>..=</span><span style="color:#d08770;">79 </span><span>=&gt; &#39;</span><span style="color:#a3be8c;">C</span><span>&#39;,
+</span><span>        </span><span style="color:#d08770;">60</span><span>..=</span><span style="color:#d08770;">69 </span><span>=&gt; &#39;</span><span style="color:#a3be8c;">D</span><span>&#39;,
+</span><span>        _ =&gt; &#39;</span><span style="color:#a3be8c;">F</span><span>&#39;,
+</span><span>    };
+</span><span>    
+</span><span>    (min, max, avg, letter_grade)
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> student_grades = [</span><span style="color:#d08770;">95</span><span>, </span><span style="color:#d08770;">87</span><span>, </span><span style="color:#d08770;">92</span><span>, </span><span style="color:#d08770;">88</span><span>, </span><span style="color:#d08770;">91</span><span>];
+</span><span>    </span><span style="color:#b48ead;">let </span><span>(min, max, avg, grade) = </span><span style="color:#96b5b4;">analyze_grades</span><span>(&amp;student_grades);
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Grades: </span><span style="color:#d08770;">{:?}</span><span>&quot;, student_grades);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Min: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">, Max: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">, Average: </span><span style="color:#d08770;">{:.1}</span><span style="color:#a3be8c;">, Letter Grade: </span><span style="color:#d08770;">{}</span><span>&quot;, 
+</span><span>             min, max, avg, grade);
+</span><span>}
+</span></code></pre>
+<h3 id="data-processing-pipeline">Data Processing Pipeline</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">process_sensor_data</span><span>() -&gt; [(String, </span><span style="color:#b48ead;">f64</span><span>, </span><span style="color:#b48ead;">bool</span><span>); </span><span style="color:#d08770;">3</span><span>] {
+</span><span>    [
+</span><span>        (&quot;</span><span style="color:#a3be8c;">Temperature</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), </span><span style="color:#d08770;">23.5</span><span>, </span><span style="color:#d08770;">true</span><span>),
+</span><span>        (&quot;</span><span style="color:#a3be8c;">Humidity</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), </span><span style="color:#d08770;">65.0</span><span>, </span><span style="color:#d08770;">true</span><span>),
+</span><span>        (&quot;</span><span style="color:#a3be8c;">Pressure</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), </span><span style="color:#d08770;">1013.25</span><span>, </span><span style="color:#d08770;">false</span><span>),
+</span><span>    ]
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> sensor_readings = </span><span style="color:#96b5b4;">process_sensor_data</span><span>();
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Sensor Data:</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">for </span><span>(i, (sensor, value, active)) in sensor_readings.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">enumerate</span><span>() {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> status = </span><span style="color:#b48ead;">if </span><span>*active { &quot;</span><span style="color:#a3be8c;">Active</span><span>&quot; } </span><span style="color:#b48ead;">else </span><span>{ &quot;</span><span style="color:#a3be8c;">Inactive</span><span>&quot; };
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Sensor </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> = </span><span style="color:#d08770;">{:.2}</span><span style="color:#a3be8c;"> (</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">)</span><span>&quot;, i + </span><span style="color:#d08770;">1</span><span>, sensor, value, status);
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="choose-the-right-type"><strong>Choose the Right Type</strong></h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Use tuple for related but different types
+</span><span style="color:#b48ead;">let</span><span> person_info = (&quot;</span><span style="color:#a3be8c;">Alice</span><span>&quot;, </span><span style="color:#d08770;">30</span><span>, &quot;</span><span style="color:#a3be8c;">Engineer</span><span>&quot;);  </span><span style="color:#a7adba;">// Good
+</span><span>
+</span><span style="color:#a7adba;">// Use array for collections of same type
+</span><span style="color:#b48ead;">let</span><span> scores = [</span><span style="color:#d08770;">95</span><span>, </span><span style="color:#d08770;">87</span><span>, </span><span style="color:#d08770;">92</span><span>, </span><span style="color:#d08770;">88</span><span>];  </span><span style="color:#a7adba;">// Good
+</span><span>
+</span><span style="color:#a7adba;">// Don&#39;t use array for different types
+</span><span style="color:#a7adba;">// let mixed = [42, &quot;hello&quot;];  // Error: mismatched types
+</span></code></pre>
+<h3 id="prefer-descriptive-type-aliases"><strong>Prefer Descriptive Type Aliases</strong></h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">type </span><span>Rgb = (</span><span style="color:#b48ead;">u8</span><span>, </span><span style="color:#b48ead;">u8</span><span>, </span><span style="color:#b48ead;">u8</span><span>);
+</span><span style="color:#b48ead;">type </span><span>Matrix3x3 = [[</span><span style="color:#b48ead;">f64</span><span>; </span><span style="color:#d08770;">3</span><span>]; </span><span style="color:#d08770;">3</span><span>];
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">create_color</span><span>(</span><span style="color:#bf616a;">r</span><span>: </span><span style="color:#b48ead;">u8</span><span>, </span><span style="color:#bf616a;">g</span><span>: </span><span style="color:#b48ead;">u8</span><span>, </span><span style="color:#bf616a;">b</span><span>: </span><span style="color:#b48ead;">u8</span><span>) -&gt; Rgb {
+</span><span>    (r, g, b)
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">identity_matrix</span><span>() -&gt; Matrix3x3 {
+</span><span>    [
+</span><span>        [</span><span style="color:#d08770;">1.0</span><span>, </span><span style="color:#d08770;">0.0</span><span>, </span><span style="color:#d08770;">0.0</span><span>],
+</span><span>        [</span><span style="color:#d08770;">0.0</span><span>, </span><span style="color:#d08770;">1.0</span><span>, </span><span style="color:#d08770;">0.0</span><span>],
+</span><span>        [</span><span style="color:#d08770;">0.0</span><span>, </span><span style="color:#d08770;">0.0</span><span>, </span><span style="color:#d08770;">1.0</span><span>],
+</span><span>    ]
+</span><span>}
+</span></code></pre>
+<h3 id="use-safe-access-for-runtime-indices"><strong>Use Safe Access for Runtime Indices</strong></h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">safe_array_access</span><span>(</span><span style="color:#bf616a;">arr</span><span>: &amp;[</span><span style="color:#b48ead;">i32</span><span>], </span><span style="color:#bf616a;">index</span><span>: </span><span style="color:#b48ead;">usize</span><span>) -&gt; Option&lt;</span><span style="color:#b48ead;">i32</span><span>&gt; {
+</span><span>    arr.</span><span style="color:#96b5b4;">get</span><span>(index).</span><span style="color:#96b5b4;">copied</span><span>()  </span><span style="color:#a7adba;">// Safe access
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Avoid direct indexing with runtime values
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">unsafe_access</span><span>(</span><span style="color:#bf616a;">arr</span><span>: &amp;[</span><span style="color:#b48ead;">i32</span><span>], </span><span style="color:#bf616a;">index</span><span>: </span><span style="color:#b48ead;">usize</span><span>) -&gt; </span><span style="color:#b48ead;">i32 </span><span>{
+</span><span>    arr[index]  </span><span style="color:#a7adba;">// Can panic!
+</span><span>}
+</span></code></pre>
+<h3 id="destructure-for-clarity"><strong>Destructure for Clarity</strong></h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Good - clear what each value represents
+</span><span style="color:#b48ead;">let </span><span>(width, height) = </span><span style="color:#96b5b4;">get_dimensions</span><span>();
+</span><span>
+</span><span style="color:#a7adba;">// Less clear
+</span><span style="color:#b48ead;">let</span><span> dimensions = </span><span style="color:#96b5b4;">get_dimensions</span><span>();
+</span><span style="color:#b48ead;">let</span><span> width = dimensions.</span><span style="color:#d08770;">0</span><span>;
+</span><span style="color:#b48ead;">let</span><span> height = dimensions.</span><span style="color:#d08770;">1</span><span>;
+</span></code></pre>
+<p>Understanding tuples and arrays is fundamental to working with data in Rust. <strong>Tuples excel at grouping related but different types of data</strong>, while <strong>arrays provide efficient storage for collections of homogeneous data</strong>. Both types maintain Rust's safety guarantees while providing the performance benefits of stack allocation. These compound types serve as building blocks for more complex data structures you'll encounter as you continue learning Rust.</p>
+
+    
+        </div>
+
+    </article>
+</main>
+
+
+    <script type="text/javascript" src="http://localhost/elasticlunr.min.js" defer></script>
+    <script type="text/javascript" src="http://localhost/search_index.en.js" defer></script>
+<script type="text/javascript" src="http://localhost/js.js" defer></script>
+
+</body>
+</html>

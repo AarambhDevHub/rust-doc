@@ -1,0 +1,893 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://localhost/main.css">
+    <link rel="icon" href="https://www.rust-lang.org/static/images/favicon-16x16.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Rust Programming Course! | Return Values and Expressions vs Statements </title>
+</head>
+<body>
+
+<main>
+    
+    <nav>
+            <a href="http:&#x2F;&#x2F;localhost">
+                        <img src="https://www.rust-lang.org/static/images/rust-logo-blk.svg" alt="logo"/>
+                    </a>
+                <!-- -->
+
+            <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+            <div id="trees">
+                <input class="tree-toggle" type="checkbox" id="day-1-introduction"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-1-introduction">Day 1: Introduction</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 1/chapter-1/">What is Rust and why use it?</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-2/">Installing Rust Toolchain (rustup, cargo)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-3/">Setting up Development (VS Code + Hello World)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-4/">Understanding Cargo Project Structure</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-2-basic-syntax-variables"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-2-basic-syntax-variables">Day 2: Basic Syntax &amp; Variables</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 2/chapter-1/">Variables and Mutability in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-2/">Data Types in Rust: Integers, Floats, Booleans, and Characters</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-3/">Constants vs Variables</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-4/">Understanding Shadowing in Rust: A Practical Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-5/">Basic Input&#x2F;Output</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-3-functions-control-flow"
+                           checked/>
+                    <label class="tree-toggle-label"
+                           for="day-3-functions-control-flow">Day 3: Functions &amp; Control Flow</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 3/chapter-1/">Function Syntax and Parameters in Rust</a>
+                            </li>
+
+                            <li class="active">
+                                <a href="http://localhost/day 3/chapter-2/">Return Values and Expressions vs Statements</a>
+                            </li>
+
+                            
+                                    
+                                    
+                                        <ul id="toc">
+                                            <li><a href="
+                                                        http://localhost/day 3/chapter-2/#return-values-and-expressions-vs-statements-in-rust">Return Values and Expressions vs Statements in Rust</a>
+                                                    <ul>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-2/#expressions-vs-statements-the-core-difference">Expressions vs Statements: The Core Difference</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-2/#statements">Statements</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-2/#expressions">Expressions</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-2/#function-return-values">Function Return Values</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-2/#1-implicit-return-expression-based">1. Implicit Return (Expression-based)</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-2/#2-explicit-return">2. Explicit Return</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-2/#types-of-expressions">Types of Expressions</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-2/#literal-expressions">Literal Expressions</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-2/#arithmetic-expressions">Arithmetic Expressions</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-2/#block-expressions">Block Expressions</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-2/#conditional-expressions">Conditional Expressions</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-2/#match-expressions">Match Expressions</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-2/#function-call-expressions">Function Call Expressions</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-2/#the-semicolon-effect">The Semicolon Effect</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-2/#fixing-the-semicolon-problem">Fixing the Semicolon Problem</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-2/#multiple-return-points">Multiple Return Points</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-2/#unit-type-the-nothing-value">Unit Type () - The &quot;Nothing&quot; Value</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-2/#statements-return-unit-type">Statements Return Unit Type</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-2/#practical-examples">Practical Examples</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-2/#data-processing-pipeline">Data Processing Pipeline</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-2/#configuration-builder">Configuration Builder</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-2/#common-patterns">Common Patterns</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-2/#option-and-result-returns">Option and Result Returns</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-2/#complex-block-returns">Complex Block Returns</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-2/#best-practices">Best Practices</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-2/#prefer-expression-based-returns">Prefer Expression-based Returns</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-2/#use-early-returns-for-error-handling">Use Early Returns for Error Handling</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-2/#avoid-unnecessary-returns">Avoid Unnecessary Returns</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-2/#debugging-return-values">Debugging Return Values</a>
+                                                                </li>
+                                                            </ul>
+                                                    </li>
+                                            </ul>
+                                    <li >
+                                <a href="http://localhost/day 3/chapter-3/">If&#x2F;Else Statements in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-4/">Match Expressions in Rust: Powerful Pattern Matching</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-5/">Loops in Rust: loop, while, for Explained</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-4-data-types-deep-dive"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-4-data-types-deep-dive">Day 4: Data Types Deep Dive</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 4/chapter-1/">Compound Types (Tuples, Arrays)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-2/">String vs &amp;str in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-3/">Vector Basics in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-4/">Type Annotations and Inference in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-5/">Practical Rust Exercises</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-5-practice-review"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-5-practice-review">Day 5: Practice &amp; Review</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 5/chapter-1/">Day 5: Practice &amp; Review</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-6-ownership-fundamentals"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-6-ownership-fundamentals">Day 6: Ownership Fundamentals</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 6/chapter-1/">Ownership in Rust: A Detailed Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-2/">Stack vs Heap in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-3/">Understanding Ownership in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-4/">Move Semantics in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-5/">Copy Trait in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-7-references-borrowing"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-7-references-borrowing">Day 7: References &amp; Borrowing</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 7/chapter-1/">Immutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-2/">Mutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-3/">Borrowing Rules</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-4/">Reference Lifetime Basics</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-5/">Common Borrowing Errors and Solutions</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-8-slices"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-8-slices">Day 8: Slices</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 8/chapter-1/">String Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-2/">Array Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-3/">Slice Syntax and Usage</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-4/">Practical Applications</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-5/">Memory Safety Benefits</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-9-advanced-ownership"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-9-advanced-ownership">Day 9: Advanced Ownership</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 9/chapter-1/">Clone Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-2/">Drop Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-3/">RAII Pattern</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-4/">Memory Management Comparison with Other Languages</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-5/">Best Practices (Advanced Ownership)</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-10-ownership-practice"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-10-ownership-practice">Day 10: Ownership Practice</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 10/chapter-1/">Complex Ownership Scenarios</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-2/">Debugging Ownership Errors</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-3/">Code Refactoring Exercises</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-4/">Group Problem-Solving</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-11-structs-basics"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-11-structs-basics">Day 11: Structs Basics</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 11/chapter-1/">Defining and Instantiating Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-2/">Field Access and Modification</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-3/">Tuple Structs and Unit Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-4/">Struct Update Syntax</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-5/">Ownership of Struct Data</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-12-methods-associated-functions"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-12-methods-associated-functions">Day 12: Methods &amp; Associated Functions</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 12/chapter-1/">Implementing Methods with impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-2/">&amp;self, &amp;mut self, and self</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-3/">Associated Functions (like Constructors)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-4/">Multiple impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-5/">Method Chaining</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-13-advanced-struct-concepts"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-13-advanced-struct-concepts">Day 13: Advanced Struct Concepts</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 13/chapter-1/">Struct Lifetime Parameters</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-2/">Debug Trait and Custom Formatting</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-3/">Builder Pattern Implementation</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-4/">Struct Composition</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-5/">Best Practices for Struct Design</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-14-enums-pattern-matching"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-14-enums-pattern-matching">Day 14: Enums &amp; Pattern Matching</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 14/chapter-1/">Defining Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-2/">Enum Variants with Data</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-3/">Option&lt;T&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-4/">Result&lt;T, E&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-5/">Advanced Match Patterns in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-15-practice-project"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-15-practice-project">Day 15: Practice Project</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 15/chapter-1/">Building a Simple CLI Calculator in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-16-vectors"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-16-vectors">Day 16: Vectors</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 16/chapter-1/">Creating and Updating Vectors</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-2/">Vector Methods: push, pop, iter</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-3/">Accessing Vector Elements Safely</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-4/">Vector of Different Types with Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-5/">Performance Considerations</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-17-hashmaps-other-collections"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-17-hashmaps-other-collections">Day 17: HashMaps &amp; Other Collections</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 17/chapter-1/">HashMap Creation and Manipulation</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-2/">Keys and Values Ownership</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-3/">HashMap Methods and Iteration</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-4/">When to Use Different Collections</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-5/">BTreeMap Introduction</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-18-error-handling"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-18-error-handling">Day 18: Error Handling</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 18/chapter-1/">Panic! and When to Use It</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 18/chapter-2/">Result&lt;T, E&gt; in Depth</a>
+                            </li>
+
+                            </ul>
+                </div>
+        </nav>
+    <article>
+
+        <div id="on_right">
+                <span id="search-ico" class="ms-Icon--Search"></span>
+            </div>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="Search as you type...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        <div id="wrap">
+            
+        <h1 id="return-values-and-expressions-vs-statements-in-rust">Return Values and Expressions vs Statements in Rust</h1>
+<p>Building on your understanding of function syntax and parameters, let's explore one of Rust's most fundamental concepts: the distinction between <strong>expressions and statements</strong>, and how this affects function return values. This concept is crucial for writing idiomatic Rust code and understanding how data flows through your programs.</p>
+<h2 id="expressions-vs-statements-the-core-difference">Expressions vs Statements: The Core Difference</h2>
+<p>In Rust, there are two main categories of code constructs:</p>
+<h2 id="statements"><strong>Statements</strong></h2>
+<p>Statements are instructions that <strong>perform some action but do not return a value</strong>. They end with a semicolon (<code>;</code>) and evaluate to the unit type <code>()</code>.</p>
+<h2 id="expressions"><strong>Expressions</strong></h2>
+<p>Expressions <strong>evaluate to a value</strong> and can be used wherever a value is expected. They do <strong>not</strong> end with a semicolon when used as return values.</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// Statements (do something, return nothing)
+</span><span>    </span><span style="color:#b48ead;">let</span><span> x = </span><span style="color:#d08770;">5</span><span>;                    </span><span style="color:#a7adba;">// Variable binding statement
+</span><span>    </span><span style="color:#b48ead;">let</span><span> y = </span><span style="color:#d08770;">10</span><span>;                   </span><span style="color:#a7adba;">// Another statement
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Expression (evaluates to a value)
+</span><span>    </span><span style="color:#b48ead;">let</span><span> sum = x + y;              </span><span style="color:#a7adba;">// x + y is an expression that evaluates to 15
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Expression used as a statement (note the semicolon)
+</span><span>    x + y;                        </span><span style="color:#a7adba;">// Same expression, but now it&#39;s a statement (value discarded)
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="function-return-values">Function Return Values</h2>
+<p>Functions in Rust can return values in two ways:</p>
+<h2 id="1-implicit-return-expression-based">1. Implicit Return (Expression-based)</h2>
+<p>The <strong>last expression</strong> in a function body is automatically returned if it doesn't end with a semicolon:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">add</span><span>(</span><span style="color:#bf616a;">a</span><span>: </span><span style="color:#b48ead;">i32</span><span>, </span><span style="color:#bf616a;">b</span><span>: </span><span style="color:#b48ead;">i32</span><span>) -&gt; </span><span style="color:#b48ead;">i32 </span><span>{
+</span><span>    a + b  </span><span style="color:#a7adba;">// Expression without semicolon - this value is returned
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">multiply</span><span>(</span><span style="color:#bf616a;">a</span><span>: </span><span style="color:#b48ead;">i32</span><span>, </span><span style="color:#bf616a;">b</span><span>: </span><span style="color:#b48ead;">i32</span><span>) -&gt; </span><span style="color:#b48ead;">i32 </span><span>{
+</span><span>    </span><span style="color:#b48ead;">let</span><span> result = a * b;  </span><span style="color:#a7adba;">// Statement
+</span><span>    result               </span><span style="color:#a7adba;">// Expression - returned implicitly
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="2-explicit-return">2. Explicit Return</h2>
+<p>Use the <code>return</code> keyword to return early or make intentions explicit:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">divide</span><span>(</span><span style="color:#bf616a;">a</span><span>: </span><span style="color:#b48ead;">i32</span><span>, </span><span style="color:#bf616a;">b</span><span>: </span><span style="color:#b48ead;">i32</span><span>) -&gt; Option&lt;</span><span style="color:#b48ead;">i32</span><span>&gt; {
+</span><span>    </span><span style="color:#b48ead;">if</span><span> b == </span><span style="color:#d08770;">0 </span><span>{
+</span><span>        </span><span style="color:#b48ead;">return </span><span>None;  </span><span style="color:#a7adba;">// Early return with explicit return keyword
+</span><span>    }
+</span><span>    Some(a / b)       </span><span style="color:#a7adba;">// Implicit return of expression
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="types-of-expressions">Types of Expressions</h2>
+<h2 id="literal-expressions"><strong>Literal Expressions</strong></h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">get_number</span><span>() -&gt; </span><span style="color:#b48ead;">i32 </span><span>{
+</span><span>    </span><span style="color:#d08770;">42  </span><span style="color:#a7adba;">// Literal expression
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">get_text</span><span>() -&gt; &amp;</span><span style="color:#b48ead;">&#39;static str </span><span>{
+</span><span>    &quot;</span><span style="color:#a3be8c;">Hello, Rust!</span><span>&quot;  </span><span style="color:#a7adba;">// String literal expression
+</span><span>}
+</span></code></pre>
+<h2 id="arithmetic-expressions"><strong>Arithmetic Expressions</strong></h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">calculate</span><span>() -&gt; </span><span style="color:#b48ead;">i32 </span><span>{
+</span><span>    </span><span style="color:#d08770;">5 </span><span>+ </span><span style="color:#d08770;">3 </span><span>* </span><span style="color:#d08770;">2  </span><span style="color:#a7adba;">// Arithmetic expression evaluating to 11
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="block-expressions"><strong>Block Expressions</strong></h2>
+<p>Code blocks <code>{}</code> are expressions that evaluate to their last expression:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">complex_calculation</span><span>() -&gt; </span><span style="color:#b48ead;">i32 </span><span>{
+</span><span>    {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> x = </span><span style="color:#d08770;">10</span><span>;
+</span><span>        </span><span style="color:#b48ead;">let</span><span> y = </span><span style="color:#d08770;">20</span><span>;
+</span><span>        x + y  </span><span style="color:#a7adba;">// This block expression evaluates to 30
+</span><span>    }  </span><span style="color:#a7adba;">// No semicolon, so the block&#39;s value is returned
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="conditional-expressions"><strong>Conditional Expressions</strong></h2>
+<p><code>if</code> statements are expressions in Rust:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">absolute_value</span><span>(</span><span style="color:#bf616a;">x</span><span>: </span><span style="color:#b48ead;">i32</span><span>) -&gt; </span><span style="color:#b48ead;">i32 </span><span>{
+</span><span>    </span><span style="color:#b48ead;">if</span><span> x &lt; </span><span style="color:#d08770;">0 </span><span>{
+</span><span>        -x  </span><span style="color:#a7adba;">// Expression in if branch
+</span><span>    } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>        x   </span><span style="color:#a7adba;">// Expression in else branch
+</span><span>    }  </span><span style="color:#a7adba;">// The entire if expression returns one of these values
+</span><span>}
+</span></code></pre>
+<h2 id="match-expressions"><strong>Match Expressions</strong></h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">describe_number</span><span>(</span><span style="color:#bf616a;">x</span><span>: </span><span style="color:#b48ead;">i32</span><span>) -&gt; &amp;</span><span style="color:#b48ead;">&#39;static str </span><span>{
+</span><span>    </span><span style="color:#b48ead;">match</span><span> x {
+</span><span>        </span><span style="color:#d08770;">0 </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">zero</span><span>&quot;,
+</span><span>        </span><span style="color:#d08770;">1</span><span>..=</span><span style="color:#d08770;">10 </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">small</span><span>&quot;,
+</span><span>        _ =&gt; &quot;</span><span style="color:#a3be8c;">large</span><span>&quot;,
+</span><span>    }  </span><span style="color:#a7adba;">// Match expression returns the selected string
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="function-call-expressions"><strong>Function Call Expressions</strong></h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">double</span><span>(</span><span style="color:#bf616a;">x</span><span>: </span><span style="color:#b48ead;">i32</span><span>) -&gt; </span><span style="color:#b48ead;">i32 </span><span>{ x * </span><span style="color:#d08770;">2 </span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">quadruple</span><span>(</span><span style="color:#bf616a;">x</span><span>: </span><span style="color:#b48ead;">i32</span><span>) -&gt; </span><span style="color:#b48ead;">i32 </span><span>{
+</span><span>    </span><span style="color:#96b5b4;">double</span><span>(</span><span style="color:#96b5b4;">double</span><span>(x))  </span><span style="color:#a7adba;">// Function calls are expressions
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="the-semicolon-effect">The Semicolon Effect</h2>
+<p><strong>Adding a semicolon transforms an expression into a statement</strong>:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">correct_return</span><span>() -&gt; </span><span style="color:#b48ead;">i32 </span><span>{
+</span><span>    </span><span style="color:#d08770;">5 </span><span>+ </span><span style="color:#d08770;">3  </span><span style="color:#a7adba;">// Expression - returns 8
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">incorrect_return</span><span>() -&gt; </span><span style="color:#b48ead;">i32 </span><span>{
+</span><span>    </span><span style="color:#d08770;">5 </span><span>+ </span><span style="color:#d08770;">3</span><span>;  </span><span style="color:#a7adba;">// Statement - returns () and causes compilation error!
+</span><span>    </span><span style="color:#a7adba;">// Error: mismatched types, expected `i32`, found `()`
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="fixing-the-semicolon-problem">Fixing the Semicolon Problem</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">fixed_return</span><span>() -&gt; </span><span style="color:#b48ead;">i32 </span><span>{
+</span><span>    </span><span style="color:#d08770;">5 </span><span>+ </span><span style="color:#d08770;">3</span><span>;  </span><span style="color:#a7adba;">// Statement
+</span><span>    </span><span style="color:#d08770;">8       </span><span style="color:#a7adba;">// Expression - this is what gets returned
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Or use explicit return
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">explicit_return</span><span>() -&gt; </span><span style="color:#b48ead;">i32 </span><span>{
+</span><span>    </span><span style="color:#b48ead;">return </span><span style="color:#d08770;">5 </span><span>+ </span><span style="color:#d08770;">3</span><span>;  </span><span style="color:#a7adba;">// Explicit return statement (note the semicolon is OK here)
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="multiple-return-points">Multiple Return Points</h2>
+<p>Functions can have multiple return paths using explicit returns:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">classify_number</span><span>(</span><span style="color:#bf616a;">x</span><span>: </span><span style="color:#b48ead;">i32</span><span>) -&gt; &amp;</span><span style="color:#b48ead;">&#39;static str </span><span>{
+</span><span>    </span><span style="color:#b48ead;">if</span><span> x &lt; </span><span style="color:#d08770;">0 </span><span>{
+</span><span>        </span><span style="color:#b48ead;">return </span><span>&quot;</span><span style="color:#a3be8c;">negative</span><span>&quot;;  </span><span style="color:#a7adba;">// Early return
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">if</span><span> x == </span><span style="color:#d08770;">0 </span><span>{
+</span><span>        </span><span style="color:#b48ead;">return </span><span>&quot;</span><span style="color:#a3be8c;">zero</span><span>&quot;;      </span><span style="color:#a7adba;">// Another early return
+</span><span>    }
+</span><span>    
+</span><span>    &quot;</span><span style="color:#a3be8c;">positive</span><span>&quot;              </span><span style="color:#a7adba;">// Implicit return
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="unit-type-the-nothing-value">Unit Type <code>()</code> - The "Nothing" Value</h2>
+<p>When a function doesn't explicitly return a value, it returns the <strong>unit type</strong><code>()</code>:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">print_message</span><span>() {  </span><span style="color:#a7adba;">// No return type specified = returns ()
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Hello!</span><span>&quot;);
+</span><span>    </span><span style="color:#a7adba;">// Implicit return of ()
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Equivalent to:
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">print_message_explicit</span><span>() -&gt; () {
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Hello!</span><span>&quot;);
+</span><span>    ()  </span><span style="color:#a7adba;">// Explicit unit return
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="statements-return-unit-type">Statements Return Unit Type</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">demonstrate_statements</span><span>() -&gt; () {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> x = </span><span style="color:#d08770;">5</span><span>;          </span><span style="color:#a7adba;">// Statement, evaluates to ()
+</span><span>    </span><span style="color:#b48ead;">let</span><span> y = x + </span><span style="color:#d08770;">1</span><span>;      </span><span style="color:#a7adba;">// Statement, evaluates to ()
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Done</span><span>&quot;);   </span><span style="color:#a7adba;">// Statement, evaluates to ()
+</span><span>}  </span><span style="color:#a7adba;">// Function implicitly returns ()
+</span><span>
+</span></code></pre>
+<h2 id="practical-examples">Practical Examples</h2>
+<h2 id="data-processing-pipeline">Data Processing Pipeline</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">process_data</span><span>(</span><span style="color:#bf616a;">input</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; Result&lt;</span><span style="color:#b48ead;">i32</span><span>, &amp;</span><span style="color:#b48ead;">&#39;static str</span><span>&gt; {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> trimmed = input.</span><span style="color:#96b5b4;">trim</span><span>();
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">if</span><span> trimmed.</span><span style="color:#96b5b4;">is_empty</span><span>() {
+</span><span>        </span><span style="color:#b48ead;">return </span><span>Err(&quot;</span><span style="color:#a3be8c;">Empty input</span><span>&quot;);  </span><span style="color:#a7adba;">// Early return
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> parsed = </span><span style="color:#b48ead;">match</span><span> trimmed.parse::&lt;</span><span style="color:#b48ead;">i32</span><span>&gt;() {
+</span><span>        Ok(n) =&gt; n,
+</span><span>        Err(_) =&gt; </span><span style="color:#b48ead;">return </span><span>Err(&quot;</span><span style="color:#a3be8c;">Invalid number</span><span>&quot;),  </span><span style="color:#a7adba;">// Early return
+</span><span>    };
+</span><span>    
+</span><span>    Ok(parsed * </span><span style="color:#d08770;">2</span><span>)  </span><span style="color:#a7adba;">// Implicit return of expression
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="configuration-builder">Configuration Builder</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">struct </span><span>Config {
+</span><span>    </span><span style="color:#bf616a;">debug</span><span>: </span><span style="color:#b48ead;">bool</span><span>,
+</span><span>    </span><span style="color:#bf616a;">timeout</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>Config {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>() -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        Config {
+</span><span>            debug: </span><span style="color:#d08770;">false</span><span>,
+</span><span>            timeout: </span><span style="color:#d08770;">30</span><span>,
+</span><span>        }  </span><span style="color:#a7adba;">// Struct expression returned implicitly
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">with_debug</span><span>(</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.debug = </span><span style="color:#d08770;">true</span><span>;
+</span><span>        </span><span style="color:#bf616a;">self  </span><span style="color:#a7adba;">// Return self for method chaining
+</span><span>    }
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="common-patterns">Common Patterns</h2>
+<h2 id="option-and-result-returns">Option and Result Returns</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">safe_divide</span><span>(</span><span style="color:#bf616a;">a</span><span>: </span><span style="color:#b48ead;">f64</span><span>, </span><span style="color:#bf616a;">b</span><span>: </span><span style="color:#b48ead;">f64</span><span>) -&gt; Option&lt;</span><span style="color:#b48ead;">f64</span><span>&gt; {
+</span><span>    </span><span style="color:#b48ead;">if</span><span> b == </span><span style="color:#d08770;">0.0 </span><span>{
+</span><span>        None  </span><span style="color:#a7adba;">// Expression
+</span><span>    } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>        Some(a / b)  </span><span style="color:#a7adba;">// Expression
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">safe_parse</span><span>(</span><span style="color:#bf616a;">s</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; Result&lt;</span><span style="color:#b48ead;">i32</span><span>, std::num::ParseIntError&gt; {
+</span><span>    s.</span><span style="color:#96b5b4;">parse</span><span>()  </span><span style="color:#a7adba;">// Expression (parse returns Result)
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="complex-block-returns">Complex Block Returns</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">analyze_score</span><span>(</span><span style="color:#bf616a;">score</span><span>: </span><span style="color:#b48ead;">i32</span><span>) -&gt; (String, </span><span style="color:#b48ead;">char</span><span>) {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> grade = </span><span style="color:#b48ead;">if</span><span> score &gt;= </span><span style="color:#d08770;">90 </span><span>{
+</span><span>        &#39;</span><span style="color:#a3be8c;">A</span><span>&#39;
+</span><span>    } </span><span style="color:#b48ead;">else if</span><span> score &gt;= </span><span style="color:#d08770;">80 </span><span>{
+</span><span>        &#39;</span><span style="color:#a3be8c;">B</span><span>&#39;
+</span><span>    } </span><span style="color:#b48ead;">else if</span><span> score &gt;= </span><span style="color:#d08770;">70 </span><span>{
+</span><span>        &#39;</span><span style="color:#a3be8c;">C</span><span>&#39;
+</span><span>    } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>        &#39;</span><span style="color:#a3be8c;">F</span><span>&#39;
+</span><span>    };
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> message = </span><span style="color:#b48ead;">match</span><span> grade {
+</span><span>        &#39;</span><span style="color:#a3be8c;">A</span><span>&#39; =&gt; &quot;</span><span style="color:#a3be8c;">Excellent!</span><span>&quot;,
+</span><span>        &#39;</span><span style="color:#a3be8c;">B</span><span>&#39; =&gt; &quot;</span><span style="color:#a3be8c;">Good job!</span><span>&quot;,
+</span><span>        &#39;</span><span style="color:#a3be8c;">C</span><span>&#39; =&gt; &quot;</span><span style="color:#a3be8c;">Satisfactory</span><span>&quot;,
+</span><span>        _ =&gt; &quot;</span><span style="color:#a3be8c;">Needs improvement</span><span>&quot;,
+</span><span>    };
+</span><span>    
+</span><span>    (message.</span><span style="color:#96b5b4;">to_string</span><span>(), grade)  </span><span style="color:#a7adba;">// Tuple expression
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="best-practices">Best Practices</h2>
+<h2 id="prefer-expression-based-returns"><strong>Prefer Expression-based Returns</strong></h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Idiomatic Rust
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">max</span><span>(</span><span style="color:#bf616a;">a</span><span>: </span><span style="color:#b48ead;">i32</span><span>, </span><span style="color:#bf616a;">b</span><span>: </span><span style="color:#b48ead;">i32</span><span>) -&gt; </span><span style="color:#b48ead;">i32 </span><span>{
+</span><span>    </span><span style="color:#b48ead;">if</span><span> a &gt; b { a } </span><span style="color:#b48ead;">else </span><span>{ b }
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Less idiomatic
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">max_verbose</span><span>(</span><span style="color:#bf616a;">a</span><span>: </span><span style="color:#b48ead;">i32</span><span>, </span><span style="color:#bf616a;">b</span><span>: </span><span style="color:#b48ead;">i32</span><span>) -&gt; </span><span style="color:#b48ead;">i32 </span><span>{
+</span><span>    </span><span style="color:#b48ead;">if</span><span> a &gt; b {
+</span><span>        </span><span style="color:#b48ead;">return</span><span> a;
+</span><span>    } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>        </span><span style="color:#b48ead;">return</span><span> b;
+</span><span>    }
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="use-early-returns-for-error-handling"><strong>Use Early Returns for Error Handling</strong></h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">validate_and_process</span><span>(</span><span style="color:#bf616a;">input</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; Result&lt;</span><span style="color:#b48ead;">i32</span><span>, String&gt; {
+</span><span>    </span><span style="color:#b48ead;">if</span><span> input.</span><span style="color:#96b5b4;">is_empty</span><span>() {
+</span><span>        </span><span style="color:#b48ead;">return </span><span>Err(&quot;</span><span style="color:#a3be8c;">Input cannot be empty</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>());
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> number = </span><span style="color:#b48ead;">match</span><span> input.parse::&lt;</span><span style="color:#b48ead;">i32</span><span>&gt;() {
+</span><span>        Ok(n) =&gt; n,
+</span><span>        Err(_) =&gt; </span><span style="color:#b48ead;">return </span><span>Err(&quot;</span><span style="color:#a3be8c;">Invalid number format</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()),
+</span><span>    };
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">if</span><span> number &lt; </span><span style="color:#d08770;">0 </span><span>{
+</span><span>        </span><span style="color:#b48ead;">return </span><span>Err(&quot;</span><span style="color:#a3be8c;">Number must be positive</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>());
+</span><span>    }
+</span><span>    
+</span><span>    Ok(number * </span><span style="color:#d08770;">2</span><span>)
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="avoid-unnecessary-returns"><strong>Avoid Unnecessary Returns</strong></h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Don&#39;t do this
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">calculate</span><span>() -&gt; </span><span style="color:#b48ead;">i32 </span><span>{
+</span><span>    </span><span style="color:#b48ead;">let</span><span> result = </span><span style="color:#d08770;">5 </span><span>+ </span><span style="color:#d08770;">3</span><span>;
+</span><span>    </span><span style="color:#b48ead;">return</span><span> result;  </span><span style="color:#a7adba;">// Unnecessary explicit return
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Do this instead
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">calculate</span><span>() -&gt; </span><span style="color:#b48ead;">i32 </span><span>{
+</span><span>    </span><span style="color:#b48ead;">let</span><span> result = </span><span style="color:#d08770;">5 </span><span>+ </span><span style="color:#d08770;">3</span><span>;
+</span><span>    result  </span><span style="color:#a7adba;">// Implicit return
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Or even better
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">calculate</span><span>() -&gt; </span><span style="color:#b48ead;">i32 </span><span>{
+</span><span>    </span><span style="color:#d08770;">5 </span><span>+ </span><span style="color:#d08770;">3  </span><span style="color:#a7adba;">// Direct expression return
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="debugging-return-values">Debugging Return Values</h2>
+<p>When debugging, remember that <strong>expressions produce values</strong> while <strong>statements do not</strong>:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">debug_example</span><span>() -&gt; </span><span style="color:#b48ead;">i32 </span><span>{
+</span><span>    </span><span style="color:#b48ead;">let</span><span> x = {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> inner = </span><span style="color:#d08770;">5</span><span>;
+</span><span>        inner + </span><span style="color:#d08770;">1  </span><span style="color:#a7adba;">// Expression: this block evaluates to 6
+</span><span>    };  </span><span style="color:#a7adba;">// x now equals 6
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> y = {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> inner = </span><span style="color:#d08770;">10</span><span>;
+</span><span>        inner + </span><span style="color:#d08770;">2</span><span>;  </span><span style="color:#a7adba;">// Statement: semicolon makes this return ()
+</span><span>    };  </span><span style="color:#a7adba;">// y now equals () - compilation error!
+</span><span>    
+</span><span>    x  </span><span style="color:#a7adba;">// Return x
+</span><span>}
+</span><span>
+</span></code></pre>
+<p>Understanding expressions vs statements is fundamental to writing idiomatic Rust. <strong>Use expressions for concise, functional-style code where values flow naturally through your program</strong>. <strong>Use statements when you need to perform actions without immediately using the result</strong>. This distinction makes Rust code both more predictable and more expressive than languages where everything is a statement.</p>
+
+    
+        </div>
+
+    </article>
+</main>
+
+
+    <script type="text/javascript" src="http://localhost/elasticlunr.min.js" defer></script>
+    <script type="text/javascript" src="http://localhost/search_index.en.js" defer></script>
+<script type="text/javascript" src="http://localhost/js.js" defer></script>
+
+</body>
+</html>

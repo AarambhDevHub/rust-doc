@@ -1,0 +1,996 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://localhost/main.css">
+    <link rel="icon" href="https://www.rust-lang.org/static/images/favicon-16x16.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Rust Programming Course! | If&#x2F;Else Statements in Rust </title>
+</head>
+<body>
+
+<main>
+    
+    <nav>
+            <a href="http:&#x2F;&#x2F;localhost">
+                        <img src="https://www.rust-lang.org/static/images/rust-logo-blk.svg" alt="logo"/>
+                    </a>
+                <!-- -->
+
+            <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+            <div id="trees">
+                <input class="tree-toggle" type="checkbox" id="day-1-introduction"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-1-introduction">Day 1: Introduction</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 1/chapter-1/">What is Rust and why use it?</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-2/">Installing Rust Toolchain (rustup, cargo)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-3/">Setting up Development (VS Code + Hello World)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-4/">Understanding Cargo Project Structure</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-2-basic-syntax-variables"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-2-basic-syntax-variables">Day 2: Basic Syntax &amp; Variables</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 2/chapter-1/">Variables and Mutability in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-2/">Data Types in Rust: Integers, Floats, Booleans, and Characters</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-3/">Constants vs Variables</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-4/">Understanding Shadowing in Rust: A Practical Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-5/">Basic Input&#x2F;Output</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-3-functions-control-flow"
+                           checked/>
+                    <label class="tree-toggle-label"
+                           for="day-3-functions-control-flow">Day 3: Functions &amp; Control Flow</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 3/chapter-1/">Function Syntax and Parameters in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-2/">Return Values and Expressions vs Statements</a>
+                            </li>
+
+                            <li class="active">
+                                <a href="http://localhost/day 3/chapter-3/">If&#x2F;Else Statements in Rust</a>
+                            </li>
+
+                            
+                                    
+                                    
+                                        <ul id="toc">
+                                            <li><a href="
+                                                        http://localhost/day 3/chapter-3/#if-else-statements-in-rust-a-detailed-guide">If&#x2F;Else Statements in Rust: A Detailed Guide</a>
+                                                    <ul>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-3/#basic-if-else-syntax">Basic If&#x2F;Else Syntax</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-3/#simple-example">Simple Example</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-3/#if-else-chains-with-else-if">If&#x2F;Else Chains with else if</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-3/#if-as-an-expression">If as an Expression</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-3/#basic-expression-usage">Basic Expression Usage</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-3/#more-complex-example">More Complex Example</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-3/#type-requirements-for-if-expressions">Type Requirements for If Expressions</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-3/#valid-same-types">Valid - Same Types</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-3/#invalid-different-types">Invalid - Different Types</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-3/#boolean-conditions-and-operators">Boolean Conditions and Operators</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-3/#comparison-operators">Comparison Operators</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-3/#logical-operators">Logical Operators</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-3/#no-implicit-boolean-conversion">No Implicit Boolean Conversion</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-3/#advanced-conditional-patterns">Advanced Conditional Patterns</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-3/#if-let-pattern-matching">If Let Pattern Matching</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-3/#nested-conditions">Nested Conditions</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-3/#if-expressions-in-function-returns">If Expressions in Function Returns</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-3/#practical-examples">Practical Examples</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-3/#input-validation">Input Validation</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-3/#configuration-based-logic">Configuration-Based Logic</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-3/#mathematical-operations">Mathematical Operations</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-3/#best-practices">Best Practices</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-3/#use-if-expressions-for-assignment">Use If Expressions for Assignment</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-3/#keep-conditions-simple-and-readable">Keep Conditions Simple and Readable</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-3/#use-early-returns-for-guard-clauses">Use Early Returns for Guard Clauses</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-3/#consider-match-for-complex-conditions">Consider Match for Complex Conditions</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-3/#common-pitfalls">Common Pitfalls</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-3/#missing-else-branch-in-expressions">Missing Else Branch in Expressions</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-3/#different-types-in-branches">Different Types in Branches</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-3/#using-assignment-instead-of-comparison">Using Assignment Instead of Comparison</a>
+                                                                </li>
+                                                            </ul>
+                                                    </li>
+                                            </ul>
+                                    <li >
+                                <a href="http://localhost/day 3/chapter-4/">Match Expressions in Rust: Powerful Pattern Matching</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-5/">Loops in Rust: loop, while, for Explained</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-4-data-types-deep-dive"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-4-data-types-deep-dive">Day 4: Data Types Deep Dive</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 4/chapter-1/">Compound Types (Tuples, Arrays)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-2/">String vs &amp;str in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-3/">Vector Basics in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-4/">Type Annotations and Inference in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-5/">Practical Rust Exercises</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-5-practice-review"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-5-practice-review">Day 5: Practice &amp; Review</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 5/chapter-1/">Day 5: Practice &amp; Review</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-6-ownership-fundamentals"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-6-ownership-fundamentals">Day 6: Ownership Fundamentals</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 6/chapter-1/">Ownership in Rust: A Detailed Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-2/">Stack vs Heap in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-3/">Understanding Ownership in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-4/">Move Semantics in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-5/">Copy Trait in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-7-references-borrowing"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-7-references-borrowing">Day 7: References &amp; Borrowing</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 7/chapter-1/">Immutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-2/">Mutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-3/">Borrowing Rules</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-4/">Reference Lifetime Basics</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-5/">Common Borrowing Errors and Solutions</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-8-slices"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-8-slices">Day 8: Slices</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 8/chapter-1/">String Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-2/">Array Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-3/">Slice Syntax and Usage</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-4/">Practical Applications</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-5/">Memory Safety Benefits</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-9-advanced-ownership"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-9-advanced-ownership">Day 9: Advanced Ownership</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 9/chapter-1/">Clone Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-2/">Drop Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-3/">RAII Pattern</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-4/">Memory Management Comparison with Other Languages</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-5/">Best Practices (Advanced Ownership)</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-10-ownership-practice"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-10-ownership-practice">Day 10: Ownership Practice</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 10/chapter-1/">Complex Ownership Scenarios</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-2/">Debugging Ownership Errors</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-3/">Code Refactoring Exercises</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-4/">Group Problem-Solving</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-11-structs-basics"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-11-structs-basics">Day 11: Structs Basics</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 11/chapter-1/">Defining and Instantiating Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-2/">Field Access and Modification</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-3/">Tuple Structs and Unit Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-4/">Struct Update Syntax</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-5/">Ownership of Struct Data</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-12-methods-associated-functions"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-12-methods-associated-functions">Day 12: Methods &amp; Associated Functions</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 12/chapter-1/">Implementing Methods with impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-2/">&amp;self, &amp;mut self, and self</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-3/">Associated Functions (like Constructors)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-4/">Multiple impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-5/">Method Chaining</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-13-advanced-struct-concepts"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-13-advanced-struct-concepts">Day 13: Advanced Struct Concepts</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 13/chapter-1/">Struct Lifetime Parameters</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-2/">Debug Trait and Custom Formatting</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-3/">Builder Pattern Implementation</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-4/">Struct Composition</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-5/">Best Practices for Struct Design</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-14-enums-pattern-matching"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-14-enums-pattern-matching">Day 14: Enums &amp; Pattern Matching</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 14/chapter-1/">Defining Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-2/">Enum Variants with Data</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-3/">Option&lt;T&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-4/">Result&lt;T, E&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-5/">Advanced Match Patterns in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-15-practice-project"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-15-practice-project">Day 15: Practice Project</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 15/chapter-1/">Building a Simple CLI Calculator in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-16-vectors"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-16-vectors">Day 16: Vectors</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 16/chapter-1/">Creating and Updating Vectors</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-2/">Vector Methods: push, pop, iter</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-3/">Accessing Vector Elements Safely</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-4/">Vector of Different Types with Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-5/">Performance Considerations</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-17-hashmaps-other-collections"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-17-hashmaps-other-collections">Day 17: HashMaps &amp; Other Collections</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 17/chapter-1/">HashMap Creation and Manipulation</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-2/">Keys and Values Ownership</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-3/">HashMap Methods and Iteration</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-4/">When to Use Different Collections</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-5/">BTreeMap Introduction</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-18-error-handling"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-18-error-handling">Day 18: Error Handling</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 18/chapter-1/">Panic! and When to Use It</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 18/chapter-2/">Result&lt;T, E&gt; in Depth</a>
+                            </li>
+
+                            </ul>
+                </div>
+        </nav>
+    <article>
+
+        <div id="on_right">
+                <span id="search-ico" class="ms-Icon--Search"></span>
+            </div>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="Search as you type...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        <div id="wrap">
+            
+        <h1 id="if-else-statements-in-rust-a-detailed-guide">If/Else Statements in Rust: A Detailed Guide</h1>
+<p>Building on your understanding of expressions vs statements and return values, let's explore <strong>if/else conditionals</strong> in Rust. Unlike many languages where <code>if</code> is just a statement, Rust treats <code>if</code> as an <strong>expression</strong>, making it both more powerful and more flexible than traditional conditional statements.</p>
+<h2 id="basic-if-else-syntax">Basic If/Else Syntax</h2>
+<p>The fundamental syntax for conditional logic in Rust follows this pattern:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">if</span><span> condition {
+</span><span>    </span><span style="color:#a7adba;">// code to execute if condition is true
+</span><span>} </span><span style="color:#b48ead;">else </span><span>{
+</span><span>    </span><span style="color:#a7adba;">// code to execute if condition is false
+</span><span>}
+</span><span>
+</span></code></pre>
+<p><strong>Key characteristics:</strong></p>
+<ul>
+<li><strong>No parentheses</strong> required around the condition (unlike C/C++/Java)</li>
+<li><strong>Curly braces are mandatory</strong> for all blocks</li>
+<li><strong>Condition must evaluate to ****<code>bool</code></strong> - no "truthy" values like in JavaScript</li>
+</ul>
+<h2 id="simple-example">Simple Example</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> number = </span><span style="color:#d08770;">42</span><span>;
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">if</span><span> number &gt; </span><span style="color:#d08770;">0 </span><span>{
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">The number is positive</span><span>&quot;);
+</span><span>    } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">The number is zero or negative</span><span>&quot;);
+</span><span>    }
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="if-else-chains-with-else-if">If/Else Chains with <code>else if</code></h2>
+<p>For multiple conditions, use <code>else if</code> to create a chain of tests:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> score = </span><span style="color:#d08770;">85</span><span>;
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">if</span><span> score &gt;= </span><span style="color:#d08770;">90 </span><span>{
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Grade: A</span><span>&quot;);
+</span><span>    } </span><span style="color:#b48ead;">else if</span><span> score &gt;= </span><span style="color:#d08770;">80 </span><span>{
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Grade: B</span><span>&quot;);
+</span><span>    } </span><span style="color:#b48ead;">else if</span><span> score &gt;= </span><span style="color:#d08770;">70 </span><span>{
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Grade: C</span><span>&quot;);
+</span><span>    } </span><span style="color:#b48ead;">else if</span><span> score &gt;= </span><span style="color:#d08770;">60 </span><span>{
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Grade: D</span><span>&quot;);
+</span><span>    } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Grade: F</span><span>&quot;);
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<p><strong>Important:</strong> Rust evaluates conditions <strong>from top to bottom</strong> and executes the <strong>first matching condition</strong>, ignoring all subsequent ones.</p>
+<h2 id="if-as-an-expression">If as an Expression</h2>
+<p>This is where Rust differs significantly from many other languages. <strong><code>if</code>**** is an expression that returns a value</strong>:</p>
+<h2 id="basic-expression-usage">Basic Expression Usage</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> condition = </span><span style="color:#d08770;">true</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> number = </span><span style="color:#b48ead;">if</span><span> condition { </span><span style="color:#d08770;">5 </span><span>} </span><span style="color:#b48ead;">else </span><span>{ </span><span style="color:#d08770;">6 </span><span>};
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">The value of number is: </span><span style="color:#d08770;">{}</span><span>&quot;, number); </span><span style="color:#a7adba;">// Prints: 5
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="more-complex-example">More Complex Example</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> temperature = </span><span style="color:#d08770;">25</span><span>;
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> weather_description = </span><span style="color:#b48ead;">if</span><span> temperature &gt; </span><span style="color:#d08770;">30 </span><span>{
+</span><span>        &quot;</span><span style="color:#a3be8c;">hot</span><span>&quot;
+</span><span>    } </span><span style="color:#b48ead;">else if</span><span> temperature &gt; </span><span style="color:#d08770;">20 </span><span>{
+</span><span>        &quot;</span><span style="color:#a3be8c;">warm</span><span>&quot;
+</span><span>    } </span><span style="color:#b48ead;">else if</span><span> temperature &gt; </span><span style="color:#d08770;">10 </span><span>{
+</span><span>        &quot;</span><span style="color:#a3be8c;">cool</span><span>&quot;
+</span><span>    } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>        &quot;</span><span style="color:#a3be8c;">cold</span><span>&quot;
+</span><span>    };
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">It&#39;s </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> today</span><span>&quot;, weather_description);
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="type-requirements-for-if-expressions">Type Requirements for If Expressions</h2>
+<p>When using <code>if</code> as an expression, <strong>all branches must return the same type</strong>:</p>
+<h2 id="valid-same-types">Valid - Same Types</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> condition = </span><span style="color:#d08770;">true</span><span>;
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> result = </span><span style="color:#b48ead;">if</span><span> condition {
+</span><span>        &quot;</span><span style="color:#a3be8c;">success</span><span>&quot;  </span><span style="color:#a7adba;">// &amp;str
+</span><span>    } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>        &quot;</span><span style="color:#a3be8c;">failure</span><span>&quot;  </span><span style="color:#a7adba;">// &amp;str
+</span><span>    };
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, result);
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="invalid-different-types">Invalid - Different Types</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> condition = </span><span style="color:#d08770;">true</span><span>;
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// This will cause a compilation error
+</span><span>    </span><span style="color:#b48ead;">let</span><span> result = </span><span style="color:#b48ead;">if</span><span> condition {
+</span><span>        </span><span style="color:#d08770;">5          </span><span style="color:#a7adba;">// i32
+</span><span>    } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>        &quot;</span><span style="color:#a3be8c;">hello</span><span>&quot;    </span><span style="color:#a7adba;">// &amp;str - different type!
+</span><span>    };
+</span><span>}
+</span><span>
+</span></code></pre>
+<p><strong>Error message:</strong></p>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>error[E0308]: `if` and `else` have incompatible types
+</span><span>expected integer, found `&amp;str`
+</span><span>
+</span></code></pre>
+<h2 id="boolean-conditions-and-operators">Boolean Conditions and Operators</h2>
+<p>Rust requires explicit boolean conditions. You cannot use implicit truthiness:</p>
+<h2 id="comparison-operators">Comparison Operators</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> x = </span><span style="color:#d08770;">10</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> y = </span><span style="color:#d08770;">20</span><span>;
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Comparison operators
+</span><span>    </span><span style="color:#b48ead;">if</span><span> x == y { println!(&quot;</span><span style="color:#a3be8c;">Equal</span><span>&quot;); }           </span><span style="color:#a7adba;">// Equality
+</span><span>    </span><span style="color:#b48ead;">if</span><span> x != y { println!(&quot;</span><span style="color:#a3be8c;">Not equal</span><span>&quot;); }       </span><span style="color:#a7adba;">// Inequality
+</span><span>    </span><span style="color:#b48ead;">if</span><span> x &lt; y { println!(&quot;</span><span style="color:#a3be8c;">Less than</span><span>&quot;); }        </span><span style="color:#a7adba;">// Less than
+</span><span>    </span><span style="color:#b48ead;">if</span><span> x &lt;= y { println!(&quot;</span><span style="color:#a3be8c;">Less or equal</span><span>&quot;); }   </span><span style="color:#a7adba;">// Less than or equal
+</span><span>    </span><span style="color:#b48ead;">if</span><span> x &gt; y { println!(&quot;</span><span style="color:#a3be8c;">Greater than</span><span>&quot;); }     </span><span style="color:#a7adba;">// Greater than
+</span><span>    </span><span style="color:#b48ead;">if</span><span> x &gt;= y { println!(&quot;</span><span style="color:#a3be8c;">Greater or equal</span><span>&quot;); } </span><span style="color:#a7adba;">// Greater than or equal
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="logical-operators">Logical Operators</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> age = </span><span style="color:#d08770;">25</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> has_license = </span><span style="color:#d08770;">true</span><span>;
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Logical AND
+</span><span>    </span><span style="color:#b48ead;">if</span><span> age &gt;= </span><span style="color:#d08770;">18 </span><span>&amp;&amp; has_license {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Can drive</span><span>&quot;);
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Logical OR
+</span><span>    </span><span style="color:#b48ead;">if</span><span> age &lt; </span><span style="color:#d08770;">16 </span><span>|| !has_license {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Cannot drive alone</span><span>&quot;);
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Logical NOT
+</span><span>    </span><span style="color:#b48ead;">if </span><span>!has_license {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Need to get a license</span><span>&quot;);
+</span><span>    }
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="no-implicit-boolean-conversion">No Implicit Boolean Conversion</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> number = </span><span style="color:#d08770;">5</span><span>;
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// This is INVALID in Rust:
+</span><span>    </span><span style="color:#a7adba;">// if number { ... }  // Error: expected `bool`, found integer
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Must be explicit:
+</span><span>    </span><span style="color:#b48ead;">if</span><span> number != </span><span style="color:#d08770;">0 </span><span>{
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Number is non-zero</span><span>&quot;);
+</span><span>    }
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="advanced-conditional-patterns">Advanced Conditional Patterns</h2>
+<h2 id="if-let-pattern-matching">If Let Pattern Matching</h2>
+<p>For pattern matching with <code>Option</code> and <code>Result</code> types:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> some_value = Some(</span><span style="color:#d08770;">3</span><span>);
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">if let </span><span>Some(x) = some_value {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Got a value: </span><span style="color:#d08770;">{}</span><span>&quot;, x);
+</span><span>    } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Got None</span><span>&quot;);
+</span><span>    }
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="nested-conditions">Nested Conditions</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> weather = &quot;</span><span style="color:#a3be8c;">sunny</span><span>&quot;;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> temperature = </span><span style="color:#d08770;">25</span><span>;
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">if</span><span> weather == &quot;</span><span style="color:#a3be8c;">sunny</span><span>&quot; {
+</span><span>        </span><span style="color:#b48ead;">if</span><span> temperature &gt; </span><span style="color:#d08770;">20 </span><span>{
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">Perfect day for a picnic!</span><span>&quot;);
+</span><span>        } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">Sunny but a bit cold</span><span>&quot;);
+</span><span>        }
+</span><span>    } </span><span style="color:#b48ead;">else if</span><span> weather == &quot;</span><span style="color:#a3be8c;">rainy</span><span>&quot; {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Stay inside</span><span>&quot;);
+</span><span>    } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Check the weather app</span><span>&quot;);
+</span><span>    }
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="if-expressions-in-function-returns">If Expressions in Function Returns</h2>
+<p>Since <code>if</code> is an expression, you can use it directly as a return value:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">determine_grade</span><span>(</span><span style="color:#bf616a;">score</span><span>: </span><span style="color:#b48ead;">i32</span><span>) -&gt; </span><span style="color:#b48ead;">char </span><span>{
+</span><span>    </span><span style="color:#b48ead;">if</span><span> score &gt;= </span><span style="color:#d08770;">90 </span><span>{
+</span><span>        &#39;</span><span style="color:#a3be8c;">A</span><span>&#39;
+</span><span>    } </span><span style="color:#b48ead;">else if</span><span> score &gt;= </span><span style="color:#d08770;">80 </span><span>{
+</span><span>        &#39;</span><span style="color:#a3be8c;">B</span><span>&#39;
+</span><span>    } </span><span style="color:#b48ead;">else if</span><span> score &gt;= </span><span style="color:#d08770;">70 </span><span>{
+</span><span>        &#39;</span><span style="color:#a3be8c;">C</span><span>&#39;
+</span><span>    } </span><span style="color:#b48ead;">else if</span><span> score &gt;= </span><span style="color:#d08770;">60 </span><span>{
+</span><span>        &#39;</span><span style="color:#a3be8c;">D</span><span>&#39;
+</span><span>    } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>        &#39;</span><span style="color:#a3be8c;">F</span><span>&#39;
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> my_score = </span><span style="color:#d08770;">87</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> grade = </span><span style="color:#96b5b4;">determine_grade</span><span>(my_score);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Your grade is: </span><span style="color:#d08770;">{}</span><span>&quot;, grade);
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="practical-examples">Practical Examples</h2>
+<h2 id="input-validation">Input Validation</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>std::io;
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Enter your age:</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> input = String::new();
+</span><span>    io::stdin().</span><span style="color:#96b5b4;">read_line</span><span>(&amp;</span><span style="color:#b48ead;">mut</span><span> input).</span><span style="color:#96b5b4;">expect</span><span>(&quot;</span><span style="color:#a3be8c;">Failed to read input</span><span>&quot;);
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> age: </span><span style="color:#b48ead;">i32 </span><span>= </span><span style="color:#b48ead;">match</span><span> input.</span><span style="color:#96b5b4;">trim</span><span>().</span><span style="color:#96b5b4;">parse</span><span>() {
+</span><span>        Ok(num) =&gt; num,
+</span><span>        Err(_) =&gt; {
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">Invalid input</span><span>&quot;);
+</span><span>            </span><span style="color:#b48ead;">return</span><span>;
+</span><span>        }
+</span><span>    };
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> status = </span><span style="color:#b48ead;">if</span><span> age &gt;= </span><span style="color:#d08770;">18 </span><span>{
+</span><span>        &quot;</span><span style="color:#a3be8c;">adult</span><span>&quot;
+</span><span>    } </span><span style="color:#b48ead;">else if</span><span> age &gt;= </span><span style="color:#d08770;">13 </span><span>{
+</span><span>        &quot;</span><span style="color:#a3be8c;">teenager</span><span>&quot;
+</span><span>    } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>        &quot;</span><span style="color:#a3be8c;">child</span><span>&quot;
+</span><span>    };
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">You are classified as: </span><span style="color:#d08770;">{}</span><span>&quot;, status);
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="configuration-based-logic">Configuration-Based Logic</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> debug_mode = </span><span style="color:#d08770;">true</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> verbose = </span><span style="color:#d08770;">false</span><span>;
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> log_level = </span><span style="color:#b48ead;">if</span><span> debug_mode &amp;&amp; verbose {
+</span><span>        &quot;</span><span style="color:#a3be8c;">DEBUG_VERBOSE</span><span>&quot;
+</span><span>    } </span><span style="color:#b48ead;">else if</span><span> debug_mode {
+</span><span>        &quot;</span><span style="color:#a3be8c;">DEBUG</span><span>&quot;
+</span><span>    } </span><span style="color:#b48ead;">else if</span><span> verbose {
+</span><span>        &quot;</span><span style="color:#a3be8c;">VERBOSE</span><span>&quot;
+</span><span>    } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>        &quot;</span><span style="color:#a3be8c;">INFO</span><span>&quot;
+</span><span>    };
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Log level set to: </span><span style="color:#d08770;">{}</span><span>&quot;, log_level);
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="mathematical-operations">Mathematical Operations</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">absolute_value</span><span>(</span><span style="color:#bf616a;">x</span><span>: </span><span style="color:#b48ead;">i32</span><span>) -&gt; </span><span style="color:#b48ead;">i32 </span><span>{
+</span><span>    </span><span style="color:#b48ead;">if</span><span> x &lt; </span><span style="color:#d08770;">0 </span><span>{
+</span><span>        -x  </span><span style="color:#a7adba;">// Make negative numbers positive
+</span><span>    } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>        x   </span><span style="color:#a7adba;">// Keep positive numbers as is
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">max</span><span>(</span><span style="color:#bf616a;">a</span><span>: </span><span style="color:#b48ead;">i32</span><span>, </span><span style="color:#bf616a;">b</span><span>: </span><span style="color:#b48ead;">i32</span><span>) -&gt; </span><span style="color:#b48ead;">i32 </span><span>{
+</span><span>    </span><span style="color:#b48ead;">if</span><span> a &gt; b {
+</span><span>        a
+</span><span>    } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>        b
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Absolute value of -5: </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#96b5b4;">absolute_value</span><span>(-</span><span style="color:#d08770;">5</span><span>));
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Max of 10 and 20: </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#96b5b4;">max</span><span>(</span><span style="color:#d08770;">10</span><span>, </span><span style="color:#d08770;">20</span><span>));
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="best-practices">Best Practices</h2>
+<h2 id="use-if-expressions-for-assignment"><strong>Use If Expressions for Assignment</strong></h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Good - concise and clear
+</span><span style="color:#b48ead;">let</span><span> status = </span><span style="color:#b48ead;">if</span><span> is_logged_in { &quot;</span><span style="color:#a3be8c;">online</span><span>&quot; } </span><span style="color:#b48ead;">else </span><span>{ &quot;</span><span style="color:#a3be8c;">offline</span><span>&quot; };
+</span><span>
+</span><span style="color:#a7adba;">// Less idiomatic
+</span><span style="color:#b48ead;">let</span><span> status;
+</span><span style="color:#b48ead;">if</span><span> is_logged_in {
+</span><span>    status = &quot;</span><span style="color:#a3be8c;">online</span><span>&quot;;
+</span><span>} </span><span style="color:#b48ead;">else </span><span>{
+</span><span>    status = &quot;</span><span style="color:#a3be8c;">offline</span><span>&quot;;
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="keep-conditions-simple-and-readable"><strong>Keep Conditions Simple and Readable</strong></h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Good - clear and readable
+</span><span style="color:#b48ead;">if</span><span> user.</span><span style="color:#96b5b4;">is_authenticated</span><span>() &amp;&amp; user.</span><span style="color:#96b5b4;">has_permission</span><span>(&quot;</span><span style="color:#a3be8c;">read</span><span>&quot;) {
+</span><span>    </span><span style="color:#a7adba;">// grant access
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Less readable
+</span><span style="color:#b48ead;">if</span><span> user.</span><span style="color:#96b5b4;">is_authenticated</span><span>() &amp;&amp; user.</span><span style="color:#96b5b4;">has_permission</span><span>(&quot;</span><span style="color:#a3be8c;">read</span><span>&quot;) &amp;&amp; user.account_active &amp;&amp; !user.is_banned &amp;&amp; user.subscription_valid {
+</span><span>    </span><span style="color:#a7adba;">// grant access
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="use-early-returns-for-guard-clauses"><strong>Use Early Returns for Guard Clauses</strong></h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">process_user</span><span>(</span><span style="color:#bf616a;">user</span><span>: Option&lt;User&gt;) {
+</span><span>    </span><span style="color:#a7adba;">// Guard clause - early return
+</span><span>    </span><span style="color:#b48ead;">if</span><span> user.</span><span style="color:#96b5b4;">is_none</span><span>() {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">No user provided</span><span>&quot;);
+</span><span>        </span><span style="color:#b48ead;">return</span><span>;
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> user = user.</span><span style="color:#96b5b4;">unwrap</span><span>();
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Main logic continues here
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Processing user: </span><span style="color:#d08770;">{}</span><span>&quot;, user.name);
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="consider-match-for-complex-conditions"><strong>Consider Match for Complex Conditions</strong></h2>
+<p>When you have many conditions or pattern matching needs, <code>match</code> might be more appropriate:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Complex if-else chain
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">process_status</span><span>(</span><span style="color:#bf616a;">status</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) {
+</span><span>    </span><span style="color:#b48ead;">if</span><span> status == &quot;</span><span style="color:#a3be8c;">active</span><span>&quot; {
+</span><span>        </span><span style="color:#a7adba;">// handle active
+</span><span>    } </span><span style="color:#b48ead;">else if</span><span> status == &quot;</span><span style="color:#a3be8c;">inactive</span><span>&quot; {
+</span><span>        </span><span style="color:#a7adba;">// handle inactive
+</span><span>    } </span><span style="color:#b48ead;">else if</span><span> status == &quot;</span><span style="color:#a3be8c;">pending</span><span>&quot; {
+</span><span>        </span><span style="color:#a7adba;">// handle pending
+</span><span>    } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>        </span><span style="color:#a7adba;">// handle unknown
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Better with match
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">process_status</span><span>(</span><span style="color:#bf616a;">status</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) {
+</span><span>    </span><span style="color:#b48ead;">match</span><span> status {
+</span><span>        &quot;</span><span style="color:#a3be8c;">active</span><span>&quot; =&gt; {</span><span style="color:#a7adba;">/* handle active */</span><span>},
+</span><span>        &quot;</span><span style="color:#a3be8c;">inactive</span><span>&quot; =&gt; {</span><span style="color:#a7adba;">/* handle inactive */</span><span>},
+</span><span>        &quot;</span><span style="color:#a3be8c;">pending</span><span>&quot; =&gt; {</span><span style="color:#a7adba;">/* handle pending */</span><span>},
+</span><span>        _ =&gt; {</span><span style="color:#a7adba;">/* handle unknown */</span><span>},
+</span><span>    }
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="common-pitfalls">Common Pitfalls</h2>
+<h2 id="missing-else-branch-in-expressions"><strong>Missing Else Branch in Expressions</strong></h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// This will cause an error if used as an expression
+</span><span style="color:#b48ead;">let</span><span> value = </span><span style="color:#b48ead;">if</span><span> condition {
+</span><span>    </span><span style="color:#d08770;">42
+</span><span>    </span><span style="color:#a7adba;">// Missing else branch!
+</span><span>};
+</span><span>
+</span></code></pre>
+<h2 id="different-types-in-branches"><strong>Different Types in Branches</strong></h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Error: incompatible types
+</span><span style="color:#b48ead;">let</span><span> result = </span><span style="color:#b48ead;">if</span><span> condition {
+</span><span>    </span><span style="color:#d08770;">42      </span><span style="color:#a7adba;">// i32
+</span><span>} </span><span style="color:#b48ead;">else </span><span>{
+</span><span>    &quot;</span><span style="color:#a3be8c;">text</span><span>&quot;  </span><span style="color:#a7adba;">// &amp;str
+</span><span>};
+</span><span>
+</span></code></pre>
+<h2 id="using-assignment-instead-of-comparison"><strong>Using Assignment Instead of Comparison</strong></h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">let</span><span> x = </span><span style="color:#d08770;">5</span><span>;
+</span><span>
+</span><span style="color:#a7adba;">// Wrong - this is assignment, not comparison
+</span><span style="color:#a7adba;">// if x = 10 { ... }  // Error!
+</span><span>
+</span><span style="color:#a7adba;">// Correct - this is comparison
+</span><span style="color:#b48ead;">if</span><span> x == </span><span style="color:#d08770;">10 </span><span>{ 
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">x equals 10</span><span>&quot;);
+</span><span>}
+</span><span>
+</span></code></pre>
+<p>Understanding <code>if/else</code> as expressions rather than just statements is fundamental to writing idiomatic Rust. This approach leads to more concise, readable code and aligns with Rust's functional programming influences. The expression-based nature allows for elegant data flow and reduces the need for mutable variables in many scenarios.</p>
+<ol>
+<li>https://www.w3schools.com/rust/rust_if_else.php</li>
+<li>https://en.wikibooks.org/wiki/Rust_for_the_Novice_Programmer/If_statements_and_booleans</li>
+<li>https://docs.rs/if_chain/latest/if_chain/</li>
+<li>https://www.geeksforgeeks.org/rust/rust-if-else-statement/</li>
+<li>https://www.cs.brandeis.edu/~cs146a/rust/doc-02-21-2015/book/if.html</li>
+<li>https://blog.ihatereality.space/05-if-else-chains-considered-harmful/</li>
+<li>https://www.programiz.com/rust/if-else</li>
+<li>https://dev.to/crusty-rustacean/rust-decisions-decisions-591</li>
+<li>https://rust-lang.github.io/rfcs/2497-if-let-chains.html</li>
+<li>https://doc.rust-lang.org/rust-by-example/flow_control/if_else.html</li>
+<li>https://nickymeuleman.netlify.app/garden/rust-expression-statement/</li>
+<li>https://dev.to/realacjoshua/rust-basics-3-control-flow-conditional-statements-and-loops-25b6</li>
+<li>https://doc.rust-lang.org/reference/expressions/if-expr.html</li>
+<li>https://web.mit.edu/rust-lang_v1.25/arch/amd64_ubuntu1404/share/doc/rust/html/book/first-edition/functions.html</li>
+<li>https://users.rust-lang.org/t/match-operators-vs-if-else-if-else-errors4-rustlings/63129</li>
+<li>https://www.codecademy.com/resources/docs/rust/conditionals</li>
+<li>https://www.reddit.com/r/learnrust/comments/12o09rh/expression_vs_statement_in_rust/</li>
+<li>https://stackoverflow.com/questions/71267256/how-to-avoid-nested-chains-of-if-let</li>
+<li>https://itsfoss.com/rust-if-else/</li>
+<li>https://doc.rust-lang.org/reference/statements-and-expressions.html</li>
+</ol>
+
+    
+        </div>
+
+    </article>
+</main>
+
+
+    <script type="text/javascript" src="http://localhost/elasticlunr.min.js" defer></script>
+    <script type="text/javascript" src="http://localhost/search_index.en.js" defer></script>
+<script type="text/javascript" src="http://localhost/js.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,1058 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://localhost/main.css">
+    <link rel="icon" href="https://www.rust-lang.org/static/images/favicon-16x16.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Rust Programming Course! | Vector Basics in Rust </title>
+</head>
+<body>
+
+<main>
+    
+    <nav>
+            <a href="http:&#x2F;&#x2F;localhost">
+                        <img src="https://www.rust-lang.org/static/images/rust-logo-blk.svg" alt="logo"/>
+                    </a>
+                <!-- -->
+
+            <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+            <div id="trees">
+                <input class="tree-toggle" type="checkbox" id="day-1-introduction"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-1-introduction">Day 1: Introduction</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 1/chapter-1/">What is Rust and why use it?</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-2/">Installing Rust Toolchain (rustup, cargo)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-3/">Setting up Development (VS Code + Hello World)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-4/">Understanding Cargo Project Structure</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-2-basic-syntax-variables"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-2-basic-syntax-variables">Day 2: Basic Syntax &amp; Variables</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 2/chapter-1/">Variables and Mutability in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-2/">Data Types in Rust: Integers, Floats, Booleans, and Characters</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-3/">Constants vs Variables</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-4/">Understanding Shadowing in Rust: A Practical Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-5/">Basic Input&#x2F;Output</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-3-functions-control-flow"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-3-functions-control-flow">Day 3: Functions &amp; Control Flow</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 3/chapter-1/">Function Syntax and Parameters in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-2/">Return Values and Expressions vs Statements</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-3/">If&#x2F;Else Statements in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-4/">Match Expressions in Rust: Powerful Pattern Matching</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-5/">Loops in Rust: loop, while, for Explained</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-4-data-types-deep-dive"
+                           checked/>
+                    <label class="tree-toggle-label"
+                           for="day-4-data-types-deep-dive">Day 4: Data Types Deep Dive</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 4/chapter-1/">Compound Types (Tuples, Arrays)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-2/">String vs &amp;str in Rust</a>
+                            </li>
+
+                            <li class="active">
+                                <a href="http://localhost/day 4/chapter-3/">Vector Basics in Rust</a>
+                            </li>
+
+                            
+                                    
+                                    
+                                        <ul id="toc">
+                                            <li><a href="
+                                                        http://localhost/day 4/chapter-3/#vector-basics-in-rust-a-detailed-guide">Vector Basics in Rust: A Detailed Guide</a>
+                                                    <ul>
+                                                            <li>
+                                                                    <a href="http://localhost/day 4/chapter-3/#what-is-a-vector">What is a Vector?</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 4/chapter-3/#creating-vectors">Creating Vectors</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 4/chapter-3/#accessing-vector-elements">Accessing Vector Elements</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 4/chapter-3/#modifying-vectors">Modifying Vectors</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 4/chapter-3/#vector-methods-and-properties">Vector Methods and Properties</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 4/chapter-3/#iterating-over-vectors">Iterating Over Vectors</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 4/chapter-3/#vector-slicing">Vector Slicing</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 4/chapter-3/#memory-management-and-performance">Memory Management and Performance</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 4/chapter-3/#practical-examples">Practical Examples</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 4/chapter-3/#best-practices">Best Practices</a>
+                                                                </li>
+                                                            </ul>
+                                                    </li>
+                                            </ul>
+                                    <li >
+                                <a href="http://localhost/day 4/chapter-4/">Type Annotations and Inference in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-5/">Practical Rust Exercises</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-5-practice-review"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-5-practice-review">Day 5: Practice &amp; Review</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 5/chapter-1/">Day 5: Practice &amp; Review</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-6-ownership-fundamentals"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-6-ownership-fundamentals">Day 6: Ownership Fundamentals</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 6/chapter-1/">Ownership in Rust: A Detailed Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-2/">Stack vs Heap in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-3/">Understanding Ownership in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-4/">Move Semantics in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-5/">Copy Trait in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-7-references-borrowing"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-7-references-borrowing">Day 7: References &amp; Borrowing</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 7/chapter-1/">Immutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-2/">Mutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-3/">Borrowing Rules</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-4/">Reference Lifetime Basics</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-5/">Common Borrowing Errors and Solutions</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-8-slices"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-8-slices">Day 8: Slices</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 8/chapter-1/">String Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-2/">Array Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-3/">Slice Syntax and Usage</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-4/">Practical Applications</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-5/">Memory Safety Benefits</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-9-advanced-ownership"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-9-advanced-ownership">Day 9: Advanced Ownership</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 9/chapter-1/">Clone Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-2/">Drop Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-3/">RAII Pattern</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-4/">Memory Management Comparison with Other Languages</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-5/">Best Practices (Advanced Ownership)</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-10-ownership-practice"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-10-ownership-practice">Day 10: Ownership Practice</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 10/chapter-1/">Complex Ownership Scenarios</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-2/">Debugging Ownership Errors</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-3/">Code Refactoring Exercises</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-4/">Group Problem-Solving</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-11-structs-basics"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-11-structs-basics">Day 11: Structs Basics</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 11/chapter-1/">Defining and Instantiating Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-2/">Field Access and Modification</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-3/">Tuple Structs and Unit Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-4/">Struct Update Syntax</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-5/">Ownership of Struct Data</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-12-methods-associated-functions"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-12-methods-associated-functions">Day 12: Methods &amp; Associated Functions</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 12/chapter-1/">Implementing Methods with impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-2/">&amp;self, &amp;mut self, and self</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-3/">Associated Functions (like Constructors)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-4/">Multiple impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-5/">Method Chaining</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-13-advanced-struct-concepts"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-13-advanced-struct-concepts">Day 13: Advanced Struct Concepts</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 13/chapter-1/">Struct Lifetime Parameters</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-2/">Debug Trait and Custom Formatting</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-3/">Builder Pattern Implementation</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-4/">Struct Composition</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-5/">Best Practices for Struct Design</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-14-enums-pattern-matching"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-14-enums-pattern-matching">Day 14: Enums &amp; Pattern Matching</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 14/chapter-1/">Defining Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-2/">Enum Variants with Data</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-3/">Option&lt;T&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-4/">Result&lt;T, E&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-5/">Advanced Match Patterns in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-15-practice-project"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-15-practice-project">Day 15: Practice Project</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 15/chapter-1/">Building a Simple CLI Calculator in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-16-vectors"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-16-vectors">Day 16: Vectors</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 16/chapter-1/">Creating and Updating Vectors</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-2/">Vector Methods: push, pop, iter</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-3/">Accessing Vector Elements Safely</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-4/">Vector of Different Types with Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-5/">Performance Considerations</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-17-hashmaps-other-collections"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-17-hashmaps-other-collections">Day 17: HashMaps &amp; Other Collections</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 17/chapter-1/">HashMap Creation and Manipulation</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-2/">Keys and Values Ownership</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-3/">HashMap Methods and Iteration</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-4/">When to Use Different Collections</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-5/">BTreeMap Introduction</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-18-error-handling"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-18-error-handling">Day 18: Error Handling</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 18/chapter-1/">Panic! and When to Use It</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 18/chapter-2/">Result&lt;T, E&gt; in Depth</a>
+                            </li>
+
+                            </ul>
+                </div>
+        </nav>
+    <article>
+
+        <div id="on_right">
+                <span id="search-ico" class="ms-Icon--Search"></span>
+            </div>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="Search as you type...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        <div id="wrap">
+            
+        <h1 id="vector-basics-in-rust-a-detailed-guide">Vector Basics in Rust: A Detailed Guide</h1>
+<p>Building on your understanding of compound types like tuples, arrays, and strings, let's explore <strong>Vectors</strong> (<code>Vec&lt;T&gt;</code>) - Rust's most versatile and commonly used collection type. While arrays have fixed sizes known at compile time, vectors are <strong>resizable arrays that can grow and shrink dynamically at runtime</strong>.</p>
+<h2 id="what-is-a-vector">What is a Vector?</h2>
+<p>A <strong>Vector</strong> (<code>Vec&lt;T&gt;</code>) is Rust's growable array type that stores elements of the same type in a contiguous, heap-allocated memory block. Unlike arrays, vectors can change their size during program execution, making them perfect for collections where the number of elements isn't known at compile time.</p>
+<h3 id="key-characteristics">Key Characteristics</h3>
+<ul>
+<li><strong>Homogeneous</strong>: All elements must be of the same type</li>
+<li><strong>Dynamic size</strong>: Can grow and shrink at runtime</li>
+<li><strong>Heap-allocated</strong>: Data is stored on the heap, not the stack</li>
+<li><strong>Contiguous memory</strong>: Elements are stored sequentially in memory</li>
+<li><strong>Zero-indexed</strong>: First element is at index 0</li>
+</ul>
+<h3 id="memory-structure">Memory Structure</h3>
+<p>A vector is represented using three components:</p>
+<ul>
+<li><strong>Pointer</strong>: Points to the heap-allocated data</li>
+<li><strong>Length</strong>: Current number of elements</li>
+<li><strong>Capacity</strong>: Total allocated space (may be larger than length for efficiency)</li>
+</ul>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> numbers = vec![</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">2</span><span>, </span><span style="color:#d08770;">3</span><span>];
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Length: </span><span style="color:#d08770;">{}</span><span>&quot;, numbers.</span><span style="color:#96b5b4;">len</span><span>());      </span><span style="color:#a7adba;">// Current number of elements
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Capacity: </span><span style="color:#d08770;">{}</span><span>&quot;, numbers.</span><span style="color:#96b5b4;">capacity</span><span>()); </span><span style="color:#a7adba;">// Allocated space
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Size in memory: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> bytes</span><span>&quot;, std::mem::size_of_val(&amp;numbers));
+</span><span>}
+</span></code></pre>
+<h2 id="creating-vectors">Creating Vectors</h2>
+<p>There are several ways to create vectors in Rust:</p>
+<h3 id="1-using-the-vec-macro">1. Using the <code>vec!</code> Macro</h3>
+<p>The most common and idiomatic way to create a vector with initial values:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// Create vector with initial values
+</span><span>    </span><span style="color:#b48ead;">let</span><span> fruits = vec![&quot;</span><span style="color:#a3be8c;">apple</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">banana</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">cherry</span><span>&quot;];
+</span><span>    </span><span style="color:#b48ead;">let</span><span> numbers = vec![</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">2</span><span>, </span><span style="color:#d08770;">3</span><span>, </span><span style="color:#d08770;">4</span><span>, </span><span style="color:#d08770;">5</span><span>];
+</span><span>    </span><span style="color:#b48ead;">let</span><span> mixed_types = vec![</span><span style="color:#d08770;">1.5</span><span>, </span><span style="color:#d08770;">2.7</span><span>, </span><span style="color:#d08770;">3.14</span><span>]; </span><span style="color:#a7adba;">// All elements must be same type
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Fruits: </span><span style="color:#d08770;">{:?}</span><span>&quot;, fruits);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Numbers: </span><span style="color:#d08770;">{:?}</span><span>&quot;, numbers);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Floats: </span><span style="color:#d08770;">{:?}</span><span>&quot;, mixed_types);
+</span><span>}
+</span></code></pre>
+<h3 id="2-using-vec-new-constructor">2. Using <code>Vec::new()</code> Constructor</h3>
+<p>Create an empty vector and add elements later:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// Create empty vector with explicit type annotation
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> empty_numbers: Vec&lt;</span><span style="color:#b48ead;">i32</span><span>&gt; = Vec::new();
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Add elements
+</span><span>    empty_numbers.</span><span style="color:#96b5b4;">push</span><span>(</span><span style="color:#d08770;">10</span><span>);
+</span><span>    empty_numbers.</span><span style="color:#96b5b4;">push</span><span>(</span><span style="color:#d08770;">20</span><span>);
+</span><span>    empty_numbers.</span><span style="color:#96b5b4;">push</span><span>(</span><span style="color:#d08770;">30</span><span>);
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Numbers: </span><span style="color:#d08770;">{:?}</span><span>&quot;, empty_numbers); </span><span style="color:#a7adba;">// [10, 20, 30]
+</span><span>}
+</span></code></pre>
+<h3 id="3-using-vec-with-capacity">3. Using <code>Vec::with_capacity()</code></h3>
+<p>Create a vector with pre-allocated capacity for performance optimization:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// Pre-allocate space for 100 elements
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> optimized_vec: Vec&lt;</span><span style="color:#b48ead;">i32</span><span>&gt; = Vec::with_capacity(</span><span style="color:#d08770;">100</span><span>);
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Length: </span><span style="color:#d08770;">{}</span><span>&quot;, optimized_vec.</span><span style="color:#96b5b4;">len</span><span>());      </span><span style="color:#a7adba;">// 0
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Capacity: </span><span style="color:#d08770;">{}</span><span>&quot;, optimized_vec.</span><span style="color:#96b5b4;">capacity</span><span>()); </span><span style="color:#a7adba;">// 100
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Adding elements won&#39;t trigger reallocation until capacity is exceeded
+</span><span>    </span><span style="color:#b48ead;">for</span><span> i in </span><span style="color:#d08770;">1</span><span>..=</span><span style="color:#d08770;">50 </span><span>{
+</span><span>        optimized_vec.</span><span style="color:#96b5b4;">push</span><span>(i);
+</span><span>    }
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">After adding 50 elements:</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Length: </span><span style="color:#d08770;">{}</span><span>&quot;, optimized_vec.</span><span style="color:#96b5b4;">len</span><span>());      </span><span style="color:#a7adba;">// 50
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Capacity: </span><span style="color:#d08770;">{}</span><span>&quot;, optimized_vec.</span><span style="color:#96b5b4;">capacity</span><span>()); </span><span style="color:#a7adba;">// Still 100
+</span><span>}
+</span></code></pre>
+<h3 id="4-repeat-initialization">4. Repeat Initialization</h3>
+<p>Create a vector with repeated values:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// Create vector with 5 zeros
+</span><span>    </span><span style="color:#b48ead;">let</span><span> zeros = vec![</span><span style="color:#d08770;">0</span><span>; </span><span style="color:#d08770;">5</span><span>];  </span><span style="color:#a7adba;">// [0, 0, 0, 0, 0]
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Create vector with 3 strings
+</span><span>    </span><span style="color:#b48ead;">let</span><span> default_names = vec![&quot;</span><span style="color:#a3be8c;">Unknown</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(); </span><span style="color:#d08770;">3</span><span>];
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Zeros: </span><span style="color:#d08770;">{:?}</span><span>&quot;, zeros);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Names: </span><span style="color:#d08770;">{:?}</span><span>&quot;, default_names);
+</span><span>}
+</span></code></pre>
+<h2 id="accessing-vector-elements">Accessing Vector Elements</h2>
+<h3 id="1-index-access-direct-access">1. Index Access (Direct Access)</h3>
+<p>Direct access using square bracket notation, which can panic if index is out of bounds:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> colors = vec![&quot;</span><span style="color:#a3be8c;">red</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">green</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">blue</span><span>&quot;];
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Direct access - will panic if index is out of bounds
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">First color: </span><span style="color:#d08770;">{}</span><span>&quot;, colors[^</span><span style="color:#d08770;">0</span><span>]);    </span><span style="color:#a7adba;">// &quot;red&quot;
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Second color: </span><span style="color:#d08770;">{}</span><span>&quot;, colors[^</span><span style="color:#d08770;">1</span><span>]);   </span><span style="color:#a7adba;">// &quot;green&quot;
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// This would panic at runtime:
+</span><span>    </span><span style="color:#a7adba;">// println!(&quot;Invalid: {}&quot;, colors[^10]); // thread &#39;main&#39; panicked
+</span><span>}
+</span></code></pre>
+<h3 id="2-safe-access-with-get-method">2. Safe Access with <code>.get()</code> Method</h3>
+<p>Returns <code>Option&lt;&amp;T&gt;</code> for safe access that won't panic:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> numbers = vec![</span><span style="color:#d08770;">10</span><span>, </span><span style="color:#d08770;">20</span><span>, </span><span style="color:#d08770;">30</span><span>, </span><span style="color:#d08770;">40</span><span>, </span><span style="color:#d08770;">50</span><span>];
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Safe access returns Option
+</span><span>    </span><span style="color:#b48ead;">match</span><span> numbers.</span><span style="color:#96b5b4;">get</span><span>(</span><span style="color:#d08770;">2</span><span>) {
+</span><span>        Some(value) =&gt; println!(&quot;</span><span style="color:#a3be8c;">Found value: </span><span style="color:#d08770;">{}</span><span>&quot;, value), </span><span style="color:#a7adba;">// &quot;Found value: 30&quot;
+</span><span>        None =&gt; println!(&quot;</span><span style="color:#a3be8c;">Index out of bounds</span><span>&quot;),
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Out of bounds access
+</span><span>    </span><span style="color:#b48ead;">match</span><span> numbers.</span><span style="color:#96b5b4;">get</span><span>(</span><span style="color:#d08770;">10</span><span>) {
+</span><span>        Some(value) =&gt; println!(&quot;</span><span style="color:#a3be8c;">Found: </span><span style="color:#d08770;">{}</span><span>&quot;, value),
+</span><span>        None =&gt; println!(&quot;</span><span style="color:#a3be8c;">Index 10 is out of bounds</span><span>&quot;), </span><span style="color:#a7adba;">// This executes
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Using if let for cleaner code
+</span><span>    </span><span style="color:#b48ead;">if let </span><span>Some(first) = numbers.</span><span style="color:#96b5b4;">get</span><span>(</span><span style="color:#d08770;">0</span><span>) {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">First element: </span><span style="color:#d08770;">{}</span><span>&quot;, first);
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h3 id="3-first-and-last-element-access">3. First and Last Element Access</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> data = vec![</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">2</span><span>, </span><span style="color:#d08770;">3</span><span>, </span><span style="color:#d08770;">4</span><span>, </span><span style="color:#d08770;">5</span><span>];
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Get first and last elements safely
+</span><span>    </span><span style="color:#b48ead;">if let </span><span>Some(first) = data.</span><span style="color:#96b5b4;">first</span><span>() {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">First: </span><span style="color:#d08770;">{}</span><span>&quot;, first);
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">if let </span><span>Some(last) = data.</span><span style="color:#96b5b4;">last</span><span>() {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Last: </span><span style="color:#d08770;">{}</span><span>&quot;, last);
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Empty vector handling
+</span><span>    </span><span style="color:#b48ead;">let</span><span> empty_vec: Vec&lt;</span><span style="color:#b48ead;">i32</span><span>&gt; = vec![];
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Empty first: </span><span style="color:#d08770;">{:?}</span><span>&quot;, empty_vec.</span><span style="color:#96b5b4;">first</span><span>()); </span><span style="color:#a7adba;">// None
+</span><span>}
+</span></code></pre>
+<h2 id="modifying-vectors">Modifying Vectors</h2>
+<p>Vectors must be declared as mutable (<code>mut</code>) to modify their contents:</p>
+<h3 id="adding-elements">Adding Elements</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> fruits = vec![&quot;</span><span style="color:#a3be8c;">apple</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">banana</span><span>&quot;];
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Add single element to the end
+</span><span>    fruits.</span><span style="color:#96b5b4;">push</span><span>(&quot;</span><span style="color:#a3be8c;">cherry</span><span>&quot;);
+</span><span>    fruits.</span><span style="color:#96b5b4;">push</span><span>(&quot;</span><span style="color:#a3be8c;">date</span><span>&quot;);
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">After push: </span><span style="color:#d08770;">{:?}</span><span>&quot;, fruits); </span><span style="color:#a7adba;">// [&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;, &quot;date&quot;]
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Add multiple elements
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> more_fruits = vec![&quot;</span><span style="color:#a3be8c;">elderberry</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">fig</span><span>&quot;];
+</span><span>    fruits.</span><span style="color:#96b5b4;">append</span><span>(&amp;</span><span style="color:#b48ead;">mut</span><span> more_fruits);
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">After append: </span><span style="color:#d08770;">{:?}</span><span>&quot;, fruits);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">More fruits (now empty): </span><span style="color:#d08770;">{:?}</span><span>&quot;, more_fruits); </span><span style="color:#a7adba;">// []
+</span><span>}
+</span></code></pre>
+<h3 id="removing-elements">Removing Elements</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> numbers = vec![</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">2</span><span>, </span><span style="color:#d08770;">3</span><span>, </span><span style="color:#d08770;">4</span><span>, </span><span style="color:#d08770;">5</span><span>];
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Remove last element
+</span><span>    </span><span style="color:#b48ead;">if let </span><span>Some(last) = numbers.</span><span style="color:#96b5b4;">pop</span><span>() {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Popped: </span><span style="color:#d08770;">{}</span><span>&quot;, last); </span><span style="color:#a7adba;">// 5
+</span><span>    }
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">After pop: </span><span style="color:#d08770;">{:?}</span><span>&quot;, numbers); </span><span style="color:#a7adba;">// [1, 2, 3, 4]
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Remove element at specific index
+</span><span>    </span><span style="color:#b48ead;">let</span><span> removed = numbers.</span><span style="color:#96b5b4;">remove</span><span>(</span><span style="color:#d08770;">1</span><span>); </span><span style="color:#a7adba;">// Removes element at index 1
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Removed: </span><span style="color:#d08770;">{}</span><span>&quot;, removed); </span><span style="color:#a7adba;">// 2
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">After remove: </span><span style="color:#d08770;">{:?}</span><span>&quot;, numbers); </span><span style="color:#a7adba;">// [1, 3, 4]
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Remove first element
+</span><span>    </span><span style="color:#b48ead;">if </span><span>!numbers.</span><span style="color:#96b5b4;">is_empty</span><span>() {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> first = numbers.</span><span style="color:#96b5b4;">remove</span><span>(</span><span style="color:#d08770;">0</span><span>);
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Removed first: </span><span style="color:#d08770;">{}</span><span>&quot;, first); </span><span style="color:#a7adba;">// 1
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h3 id="modifying-existing-elements">Modifying Existing Elements</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> scores = vec![</span><span style="color:#d08770;">85</span><span>, </span><span style="color:#d08770;">90</span><span>, </span><span style="color:#d08770;">78</span><span>, </span><span style="color:#d08770;">92</span><span>];
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Modify element by index
+</span><span>    scores[^</span><span style="color:#d08770;">2</span><span>] = </span><span style="color:#d08770;">88</span><span>; </span><span style="color:#a7adba;">// Change third score from 78 to 88
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Safely modify element
+</span><span>    </span><span style="color:#b48ead;">if let </span><span>Some(first_score) = scores.</span><span style="color:#96b5b4;">get_mut</span><span>(</span><span style="color:#d08770;">0</span><span>) {
+</span><span>        *first_score += </span><span style="color:#d08770;">5</span><span>; </span><span style="color:#a7adba;">// Increase first score by 5
+</span><span>    }
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Updated scores: </span><span style="color:#d08770;">{:?}</span><span>&quot;, scores); </span><span style="color:#a7adba;">// [90, 90, 88, 92]
+</span><span>}
+</span></code></pre>
+<h2 id="vector-methods-and-properties">Vector Methods and Properties</h2>
+<h3 id="common-methods">Common Methods</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> data = vec![</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">2</span><span>, </span><span style="color:#d08770;">3</span><span>, </span><span style="color:#d08770;">4</span><span>, </span><span style="color:#d08770;">5</span><span>];
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Basic properties
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Length: </span><span style="color:#d08770;">{}</span><span>&quot;, data.</span><span style="color:#96b5b4;">len</span><span>());           </span><span style="color:#a7adba;">// 5
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Is empty: </span><span style="color:#d08770;">{}</span><span>&quot;, data.</span><span style="color:#96b5b4;">is_empty</span><span>());    </span><span style="color:#a7adba;">// false
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Capacity: </span><span style="color:#d08770;">{}</span><span>&quot;, data.</span><span style="color:#96b5b4;">capacity</span><span>());    </span><span style="color:#a7adba;">// varies
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Check if contains element
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Contains 3: </span><span style="color:#d08770;">{}</span><span>&quot;, data.</span><span style="color:#96b5b4;">contains</span><span>(&amp;</span><span style="color:#d08770;">3</span><span>)); </span><span style="color:#a7adba;">// true
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Contains 10: </span><span style="color:#d08770;">{}</span><span>&quot;, data.</span><span style="color:#96b5b4;">contains</span><span>(&amp;</span><span style="color:#d08770;">10</span><span>)); </span><span style="color:#a7adba;">// false
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Clear all elements
+</span><span>    data.</span><span style="color:#96b5b4;">clear</span><span>();
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">After clear - Length: </span><span style="color:#d08770;">{}</span><span>&quot;, data.</span><span style="color:#96b5b4;">len</span><span>());     </span><span style="color:#a7adba;">// 0
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">After clear - Is empty: </span><span style="color:#d08770;">{}</span><span>&quot;, data.</span><span style="color:#96b5b4;">is_empty</span><span>()); </span><span style="color:#a7adba;">// true
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">After clear - Capacity: </span><span style="color:#d08770;">{}</span><span>&quot;, data.</span><span style="color:#96b5b4;">capacity</span><span>()); </span><span style="color:#a7adba;">// Still allocated
+</span><span>}
+</span></code></pre>
+<h3 id="insertion-at-specific-positions">Insertion at Specific Positions</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> words = vec![&quot;</span><span style="color:#a3be8c;">hello</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">world</span><span>&quot;];
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Insert at specific index
+</span><span>    words.</span><span style="color:#96b5b4;">insert</span><span>(</span><span style="color:#d08770;">1</span><span>, &quot;</span><span style="color:#a3be8c;">beautiful</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">After insert: </span><span style="color:#d08770;">{:?}</span><span>&quot;, words); </span><span style="color:#a7adba;">// [&quot;hello&quot;, &quot;beautiful&quot;, &quot;world&quot;]
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Insert at beginning
+</span><span>    words.</span><span style="color:#96b5b4;">insert</span><span>(</span><span style="color:#d08770;">0</span><span>, &quot;</span><span style="color:#a3be8c;">say</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">After insert at 0: </span><span style="color:#d08770;">{:?}</span><span>&quot;, words); </span><span style="color:#a7adba;">// [&quot;say&quot;, &quot;hello&quot;, &quot;beautiful&quot;, &quot;world&quot;]
+</span><span>}
+</span></code></pre>
+<h2 id="iterating-over-vectors">Iterating Over Vectors</h2>
+<h3 id="basic-iteration">Basic Iteration</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> numbers = vec![</span><span style="color:#d08770;">10</span><span>, </span><span style="color:#d08770;">20</span><span>, </span><span style="color:#d08770;">30</span><span>, </span><span style="color:#d08770;">40</span><span>, </span><span style="color:#d08770;">50</span><span>];
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Iterate by value (consumes the vector)
+</span><span>    </span><span style="color:#b48ead;">for</span><span> number in numbers {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Number: </span><span style="color:#d08770;">{}</span><span>&quot;, number);
+</span><span>    }
+</span><span>    </span><span style="color:#a7adba;">// numbers is no longer accessible here
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Iterate by reference (doesn&#39;t consume)
+</span><span>    </span><span style="color:#b48ead;">let</span><span> colors = vec![&quot;</span><span style="color:#a3be8c;">red</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">green</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">blue</span><span>&quot;];
+</span><span>    </span><span style="color:#b48ead;">for</span><span> color in &amp;colors {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Color: </span><span style="color:#d08770;">{}</span><span>&quot;, color);
+</span><span>    }
+</span><span>    </span><span style="color:#a7adba;">// colors is still accessible here
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Iterate with index
+</span><span>    </span><span style="color:#b48ead;">for </span><span>(index, color) in colors.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">enumerate</span><span>() {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Index </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">: </span><span style="color:#d08770;">{}</span><span>&quot;, index, color);
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h3 id="iterator-methods">Iterator Methods</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> numbers = vec![</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">2</span><span>, </span><span style="color:#d08770;">3</span><span>, </span><span style="color:#d08770;">4</span><span>, </span><span style="color:#d08770;">5</span><span>, </span><span style="color:#d08770;">6</span><span>, </span><span style="color:#d08770;">7</span><span>, </span><span style="color:#d08770;">8</span><span>, </span><span style="color:#d08770;">9</span><span>, </span><span style="color:#d08770;">10</span><span>];
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Filter even numbers
+</span><span>    </span><span style="color:#b48ead;">let</span><span> even_numbers: Vec&lt;</span><span style="color:#b48ead;">i32</span><span>&gt; = numbers.</span><span style="color:#96b5b4;">iter</span><span>()
+</span><span>        .</span><span style="color:#96b5b4;">filter</span><span>(|&amp;</span><span style="color:#bf616a;">n</span><span>| n % </span><span style="color:#d08770;">2 </span><span>== </span><span style="color:#d08770;">0</span><span>)
+</span><span>        .</span><span style="color:#96b5b4;">cloned</span><span>()
+</span><span>        .</span><span style="color:#96b5b4;">collect</span><span>();
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Even numbers: </span><span style="color:#d08770;">{:?}</span><span>&quot;, even_numbers); </span><span style="color:#a7adba;">// [2, 4, 6, 8, 10]
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Transform elements
+</span><span>    </span><span style="color:#b48ead;">let</span><span> doubled: Vec&lt;</span><span style="color:#b48ead;">i32</span><span>&gt; = numbers.</span><span style="color:#96b5b4;">iter</span><span>()
+</span><span>        .</span><span style="color:#96b5b4;">map</span><span>(|&amp;</span><span style="color:#bf616a;">n</span><span>| n * </span><span style="color:#d08770;">2</span><span>)
+</span><span>        .</span><span style="color:#96b5b4;">collect</span><span>();
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Doubled: </span><span style="color:#d08770;">{:?}</span><span>&quot;, doubled); </span><span style="color:#a7adba;">// [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Find element
+</span><span>    </span><span style="color:#b48ead;">let</span><span> found = numbers.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">find</span><span>(|&amp;</span><span style="color:#bf616a;">n</span><span>| *n &gt; </span><span style="color:#d08770;">5</span><span>);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">First number &gt; 5: </span><span style="color:#d08770;">{:?}</span><span>&quot;, found); </span><span style="color:#a7adba;">// Some(6)
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Sum all elements
+</span><span>    </span><span style="color:#b48ead;">let</span><span> sum: </span><span style="color:#b48ead;">i32 </span><span>= numbers.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">sum</span><span>();
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Sum: </span><span style="color:#d08770;">{}</span><span>&quot;, sum); </span><span style="color:#a7adba;">// 55
+</span><span>}
+</span></code></pre>
+<h2 id="vector-slicing">Vector Slicing</h2>
+<p>Vectors support slicing similar to arrays:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> data = vec![</span><span style="color:#d08770;">0</span><span>, </span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">2</span><span>, </span><span style="color:#d08770;">3</span><span>, </span><span style="color:#d08770;">4</span><span>, </span><span style="color:#d08770;">5</span><span>, </span><span style="color:#d08770;">6</span><span>, </span><span style="color:#d08770;">7</span><span>, </span><span style="color:#d08770;">8</span><span>, </span><span style="color:#d08770;">9</span><span>];
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Get slice of vector
+</span><span>    </span><span style="color:#b48ead;">let</span><span> slice = &amp;data[</span><span style="color:#d08770;">2</span><span>..</span><span style="color:#d08770;">6</span><span>];  </span><span style="color:#a7adba;">// Elements at indices 2, 3, 4, 5
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Slice: </span><span style="color:#d08770;">{:?}</span><span>&quot;, slice); </span><span style="color:#a7adba;">// [2, 3, 4, 5]
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Different slice ranges
+</span><span>    </span><span style="color:#b48ead;">let</span><span> first_half = &amp;data[..</span><span style="color:#d08770;">5</span><span>];       </span><span style="color:#a7adba;">// First 5 elements
+</span><span>    </span><span style="color:#b48ead;">let</span><span> second_half = &amp;data[</span><span style="color:#d08770;">5</span><span>..];      </span><span style="color:#a7adba;">// From index 5 to end
+</span><span>    </span><span style="color:#b48ead;">let</span><span> middle = &amp;data[</span><span style="color:#d08770;">3</span><span>..</span><span style="color:#d08770;">7</span><span>];          </span><span style="color:#a7adba;">// Indices 3 to 6
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">First half: </span><span style="color:#d08770;">{:?}</span><span>&quot;, first_half);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Second half: </span><span style="color:#d08770;">{:?}</span><span>&quot;, second_half);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Middle: </span><span style="color:#d08770;">{:?}</span><span>&quot;, middle);
+</span><span>}
+</span></code></pre>
+<h2 id="memory-management-and-performance">Memory Management and Performance</h2>
+<h3 id="growth-strategy">Growth Strategy</h3>
+<p>Vectors use a <strong>doubling strategy</strong> for capacity growth to minimize allocations:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> vec = Vec::new();
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Watch capacity grow
+</span><span>    </span><span style="color:#b48ead;">for</span><span> i in </span><span style="color:#d08770;">0</span><span>..</span><span style="color:#d08770;">10 </span><span>{
+</span><span>        vec.</span><span style="color:#96b5b4;">push</span><span>(i);
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Length: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">, Capacity: </span><span style="color:#d08770;">{}</span><span>&quot;, vec.</span><span style="color:#96b5b4;">len</span><span>(), vec.</span><span style="color:#96b5b4;">capacity</span><span>());
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Manually control capacity
+</span><span>    vec.</span><span style="color:#96b5b4;">reserve</span><span>(</span><span style="color:#d08770;">50</span><span>); </span><span style="color:#a7adba;">// Reserve additional space
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">After reserve - Capacity: </span><span style="color:#d08770;">{}</span><span>&quot;, vec.</span><span style="color:#96b5b4;">capacity</span><span>());
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Shrink to fit actual size
+</span><span>    vec.</span><span style="color:#96b5b4;">shrink_to_fit</span><span>();
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">After shrink_to_fit - Capacity: </span><span style="color:#d08770;">{}</span><span>&quot;, vec.</span><span style="color:#96b5b4;">capacity</span><span>());
+</span><span>}
+</span></code></pre>
+<h3 id="performance-considerations">Performance Considerations</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// Inefficient - multiple allocations
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> slow_vec = Vec::new();
+</span><span>    </span><span style="color:#b48ead;">for</span><span> i in </span><span style="color:#d08770;">0</span><span>..</span><span style="color:#d08770;">1000 </span><span>{
+</span><span>        slow_vec.</span><span style="color:#96b5b4;">push</span><span>(i); </span><span style="color:#a7adba;">// May trigger multiple reallocations
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Efficient - single allocation
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> fast_vec = Vec::with_capacity(</span><span style="color:#d08770;">1000</span><span>);
+</span><span>    </span><span style="color:#b48ead;">for</span><span> i in </span><span style="color:#d08770;">0</span><span>..</span><span style="color:#d08770;">1000 </span><span>{
+</span><span>        fast_vec.</span><span style="color:#96b5b4;">push</span><span>(i); </span><span style="color:#a7adba;">// No reallocation needed
+</span><span>    }
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Both vectors created efficiently!</span><span>&quot;);
+</span><span>}
+</span></code></pre>
+<h2 id="practical-examples">Practical Examples</h2>
+<h3 id="student-grade-manager">Student Grade Manager</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span>#[</span><span style="color:#bf616a;">derive</span><span>(Debug)]
+</span><span style="color:#b48ead;">struct </span><span>Student {
+</span><span>    </span><span style="color:#bf616a;">name</span><span>: String,
+</span><span>    </span><span style="color:#bf616a;">grades</span><span>: Vec&lt;</span><span style="color:#b48ead;">f64</span><span>&gt;,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>Student {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#bf616a;">name</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        Student {
+</span><span>            name: name.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>            grades: Vec::new(),
+</span><span>        }
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">add_grade</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">grade</span><span>: </span><span style="color:#b48ead;">f64</span><span>) {
+</span><span>        </span><span style="color:#b48ead;">if</span><span> grade &gt;= </span><span style="color:#d08770;">0.0 </span><span>&amp;&amp; grade &lt;= </span><span style="color:#d08770;">100.0 </span><span>{
+</span><span>            </span><span style="color:#bf616a;">self</span><span>.grades.</span><span style="color:#96b5b4;">push</span><span>(grade);
+</span><span>        }
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">average</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; Option&lt;</span><span style="color:#b48ead;">f64</span><span>&gt; {
+</span><span>        </span><span style="color:#b48ead;">if </span><span style="color:#bf616a;">self</span><span>.grades.</span><span style="color:#96b5b4;">is_empty</span><span>() {
+</span><span>            None
+</span><span>        } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>            Some(</span><span style="color:#bf616a;">self</span><span>.grades.</span><span style="color:#96b5b4;">iter</span><span>().sum::&lt;</span><span style="color:#b48ead;">f64</span><span>&gt;() / </span><span style="color:#bf616a;">self</span><span>.grades.</span><span style="color:#96b5b4;">len</span><span>() as </span><span style="color:#b48ead;">f64</span><span>)
+</span><span>        }
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">highest_grade</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; Option&lt;</span><span style="color:#b48ead;">f64</span><span>&gt; {
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.grades.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">cloned</span><span>().</span><span style="color:#96b5b4;">fold</span><span>(None, |</span><span style="color:#bf616a;">max</span><span>, </span><span style="color:#bf616a;">grade</span><span>| {
+</span><span>            </span><span style="color:#b48ead;">match</span><span> max {
+</span><span>                None =&gt; Some(grade),
+</span><span>                Some(current_max) =&gt; Some(current_max.</span><span style="color:#96b5b4;">max</span><span>(grade)),
+</span><span>            }
+</span><span>        })
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> student = Student::new(&quot;</span><span style="color:#a3be8c;">Alice</span><span>&quot;);
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Add grades
+</span><span>    student.</span><span style="color:#96b5b4;">add_grade</span><span>(</span><span style="color:#d08770;">85.5</span><span>);
+</span><span>    student.</span><span style="color:#96b5b4;">add_grade</span><span>(</span><span style="color:#d08770;">92.0</span><span>);
+</span><span>    student.</span><span style="color:#96b5b4;">add_grade</span><span>(</span><span style="color:#d08770;">78.5</span><span>);
+</span><span>    student.</span><span style="color:#96b5b4;">add_grade</span><span>(</span><span style="color:#d08770;">96.0</span><span>);
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Student: </span><span style="color:#d08770;">{:?}</span><span>&quot;, student);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Average: </span><span style="color:#d08770;">{:?}</span><span>&quot;, student.</span><span style="color:#96b5b4;">average</span><span>());
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Highest: </span><span style="color:#d08770;">{:?}</span><span>&quot;, student.</span><span style="color:#96b5b4;">highest_grade</span><span>());
+</span><span>}
+</span></code></pre>
+<h3 id="shopping-cart-implementation">Shopping Cart Implementation</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span>#[</span><span style="color:#bf616a;">derive</span><span>(Debug, Clone)]
+</span><span style="color:#b48ead;">struct </span><span>Item {
+</span><span>    </span><span style="color:#bf616a;">name</span><span>: String,
+</span><span>    </span><span style="color:#bf616a;">price</span><span>: </span><span style="color:#b48ead;">f64</span><span>,
+</span><span>    </span><span style="color:#bf616a;">quantity</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>Item {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#bf616a;">name</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>, </span><span style="color:#bf616a;">price</span><span>: </span><span style="color:#b48ead;">f64</span><span>, </span><span style="color:#bf616a;">quantity</span><span>: </span><span style="color:#b48ead;">u32</span><span>) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        Item {
+</span><span>            name: name.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>            price,
+</span><span>            quantity,
+</span><span>        }
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">total_cost</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; </span><span style="color:#b48ead;">f64 </span><span>{
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.price * </span><span style="color:#bf616a;">self</span><span>.quantity as </span><span style="color:#b48ead;">f64
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">struct </span><span>ShoppingCart {
+</span><span>    </span><span style="color:#bf616a;">items</span><span>: Vec&lt;Item&gt;,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>ShoppingCart {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>() -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        ShoppingCart {
+</span><span>            items: Vec::new(),
+</span><span>        }
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">add_item</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">item</span><span>: Item) {
+</span><span>        </span><span style="color:#a7adba;">// Check if item already exists
+</span><span>        </span><span style="color:#b48ead;">if let </span><span>Some(existing_item) = </span><span style="color:#bf616a;">self</span><span>.items.</span><span style="color:#96b5b4;">iter_mut</span><span>()
+</span><span>            .</span><span style="color:#96b5b4;">find</span><span>(|</span><span style="color:#bf616a;">i</span><span>| i.name == item.name) {
+</span><span>            existing_item.quantity += item.quantity;
+</span><span>        } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>            </span><span style="color:#bf616a;">self</span><span>.items.</span><span style="color:#96b5b4;">push</span><span>(item);
+</span><span>        }
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">remove_item</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">name</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; Option&lt;Item&gt; {
+</span><span>        </span><span style="color:#b48ead;">if let </span><span>Some(pos) = </span><span style="color:#bf616a;">self</span><span>.items.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">position</span><span>(|</span><span style="color:#bf616a;">item</span><span>| item.name == name) {
+</span><span>            Some(</span><span style="color:#bf616a;">self</span><span>.items.</span><span style="color:#96b5b4;">remove</span><span>(pos))
+</span><span>        } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>            None
+</span><span>        }
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">total_cost</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; </span><span style="color:#b48ead;">f64 </span><span>{
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.items.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">map</span><span>(|</span><span style="color:#bf616a;">item</span><span>| item.</span><span style="color:#96b5b4;">total_cost</span><span>()).</span><span style="color:#96b5b4;">sum</span><span>()
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">item_count</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; </span><span style="color:#b48ead;">u32 </span><span>{
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.items.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">map</span><span>(|</span><span style="color:#bf616a;">item</span><span>| item.quantity).</span><span style="color:#96b5b4;">sum</span><span>()
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> cart = ShoppingCart::new();
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Add items
+</span><span>    cart.</span><span style="color:#96b5b4;">add_item</span><span>(Item::new(&quot;</span><span style="color:#a3be8c;">Apple</span><span>&quot;, </span><span style="color:#d08770;">0.99</span><span>, </span><span style="color:#d08770;">6</span><span>));
+</span><span>    cart.</span><span style="color:#96b5b4;">add_item</span><span>(Item::new(&quot;</span><span style="color:#a3be8c;">Bread</span><span>&quot;, </span><span style="color:#d08770;">2.50</span><span>, </span><span style="color:#d08770;">1</span><span>));
+</span><span>    cart.</span><span style="color:#96b5b4;">add_item</span><span>(Item::new(&quot;</span><span style="color:#a3be8c;">Apple</span><span>&quot;, </span><span style="color:#d08770;">0.99</span><span>, </span><span style="color:#d08770;">2</span><span>)); </span><span style="color:#a7adba;">// Will update quantity
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Cart items: </span><span style="color:#d08770;">{:?}</span><span>&quot;, cart.items);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Total cost: $</span><span style="color:#d08770;">{:.2}</span><span>&quot;, cart.</span><span style="color:#96b5b4;">total_cost</span><span>());
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Total items: </span><span style="color:#d08770;">{}</span><span>&quot;, cart.</span><span style="color:#96b5b4;">item_count</span><span>());
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Remove an item
+</span><span>    </span><span style="color:#b48ead;">if let </span><span>Some(removed) = cart.</span><span style="color:#96b5b4;">remove_item</span><span>(&quot;</span><span style="color:#a3be8c;">Bread</span><span>&quot;) {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Removed: </span><span style="color:#d08770;">{:?}</span><span>&quot;, removed);
+</span><span>    }
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">After removal - Total cost: $</span><span style="color:#d08770;">{:.2}</span><span>&quot;, cart.</span><span style="color:#96b5b4;">total_cost</span><span>());
+</span><span>}
+</span></code></pre>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="choose-the-right-initialization-method"><strong>Choose the Right Initialization Method</strong></h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Use vec! for known initial values
+</span><span style="color:#b48ead;">let</span><span> known_data = vec![</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">2</span><span>, </span><span style="color:#d08770;">3</span><span>, </span><span style="color:#d08770;">4</span><span>, </span><span style="color:#d08770;">5</span><span>];
+</span><span>
+</span><span style="color:#a7adba;">// Use Vec::new() for empty vectors where type can be inferred
+</span><span style="color:#b48ead;">let mut</span><span> dynamic_data = Vec::new();
+</span><span>dynamic_data.</span><span style="color:#96b5b4;">push</span><span>(</span><span style="color:#d08770;">42</span><span>); </span><span style="color:#a7adba;">// Type inferred as Vec&lt;i32&gt;
+</span><span>
+</span><span style="color:#a7adba;">// Use Vec::with_capacity() for performance-critical code
+</span><span style="color:#b48ead;">let mut</span><span> optimized = Vec::with_capacity(</span><span style="color:#d08770;">1000</span><span>);
+</span></code></pre>
+<h3 id="prefer-safe-access-methods"><strong>Prefer Safe Access Methods</strong></h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Good - safe access
+</span><span style="color:#b48ead;">if let </span><span>Some(value) = vector.</span><span style="color:#96b5b4;">get</span><span>(index) {
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Value: </span><span style="color:#d08770;">{}</span><span>&quot;, value);
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Risky - can panic
+</span><span style="color:#a7adba;">// let value = vector[index]; // Use only when you&#39;re certain index is valid
+</span></code></pre>
+<h3 id="use-iterator-methods-for-efficiency"><strong>Use Iterator Methods for Efficiency</strong></h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Efficient - uses iterator chain
+</span><span style="color:#b48ead;">let</span><span> processed: Vec&lt;</span><span style="color:#b48ead;">i32</span><span>&gt; = data.</span><span style="color:#96b5b4;">iter</span><span>()
+</span><span>    .</span><span style="color:#96b5b4;">filter</span><span>(|&amp;</span><span style="color:#bf616a;">x</span><span>| x &gt; </span><span style="color:#d08770;">0</span><span>)
+</span><span>    .</span><span style="color:#96b5b4;">map</span><span>(|&amp;</span><span style="color:#bf616a;">x</span><span>| x * </span><span style="color:#d08770;">2</span><span>)
+</span><span>    .</span><span style="color:#96b5b4;">collect</span><span>();
+</span><span>
+</span><span style="color:#a7adba;">// Less efficient - multiple passes
+</span><span style="color:#b48ead;">let mut</span><span> temp = Vec::new();
+</span><span style="color:#b48ead;">for </span><span>&amp;item in &amp;data {
+</span><span>    </span><span style="color:#b48ead;">if</span><span> item &gt; </span><span style="color:#d08770;">0 </span><span>{
+</span><span>        temp.</span><span style="color:#96b5b4;">push</span><span>(item);
+</span><span>    }
+</span><span>}
+</span><span style="color:#b48ead;">let mut</span><span> processed = Vec::new();
+</span><span style="color:#b48ead;">for</span><span> item in temp {
+</span><span>    processed.</span><span style="color:#96b5b4;">push</span><span>(item * </span><span style="color:#d08770;">2</span><span>);
+</span><span>}
+</span></code></pre>
+<h3 id="consider-memory-usage"><strong>Consider Memory Usage</strong></h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// If you know the approximate size, pre-allocate
+</span><span style="color:#b48ead;">let mut</span><span> large_vec = Vec::with_capacity(</span><span style="color:#d08770;">10000</span><span>);
+</span><span>
+</span><span style="color:#a7adba;">// Clean up unused capacity when done growing
+</span><span>large_vec.</span><span style="color:#96b5b4;">shrink_to_fit</span><span>();
+</span></code></pre>
+<p>Understanding vectors is crucial for Rust programming as they're the go-to choice for dynamic collections. <strong>Vectors provide the flexibility of dynamic sizing while maintaining memory safety and performance</strong>. They serve as the foundation for many other data structures and are essential for building real-world applications. The combination of safety, performance, and ease of use makes vectors one of Rust's most powerful features.</p>
+<h6 id="sources">Sources</h6>
+<p>https://www.programiz.com/rust/vector</p>
+<p>https://dev.to/iamdipankarpaul/understanding-vectors-in-rust-a-comprehensive-guide-1j7p</p>
+<p>https://www.w3schools.com/rust/rust_vectors.php</p>
+<p>https://www.youtube.com/watch?v=f4a8rWkSl8U</p>
+<p>https://www.geeksforgeeks.org/rust/rust-vectors/</p>
+<p>https://codesignal.com/learn/courses/exploring-data-structures-in-rust/lessons/vectors-in-rust</p>
+<p>https://www.youtube.com/watch?v=Xew671U8-to</p>
+<p>https://doc.rust-lang.org/rust-by-example/std/vec.html</p>
+<p>https://onecompiler.com/tutorials/rust/collections/vectors</p>
+
+    
+        </div>
+
+    </article>
+</main>
+
+
+    <script type="text/javascript" src="http://localhost/elasticlunr.min.js" defer></script>
+    <script type="text/javascript" src="http://localhost/search_index.en.js" defer></script>
+<script type="text/javascript" src="http://localhost/js.js" defer></script>
+
+</body>
+</html>

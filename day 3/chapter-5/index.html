@@ -1,0 +1,815 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://localhost/main.css">
+    <link rel="icon" href="https://www.rust-lang.org/static/images/favicon-16x16.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Rust Programming Course! | Loops in Rust: loop, while, for Explained </title>
+</head>
+<body>
+
+<main>
+    
+    <nav>
+            <a href="http:&#x2F;&#x2F;localhost">
+                        <img src="https://www.rust-lang.org/static/images/rust-logo-blk.svg" alt="logo"/>
+                    </a>
+                <!-- -->
+
+            <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+            <div id="trees">
+                <input class="tree-toggle" type="checkbox" id="day-1-introduction"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-1-introduction">Day 1: Introduction</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 1/chapter-1/">What is Rust and why use it?</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-2/">Installing Rust Toolchain (rustup, cargo)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-3/">Setting up Development (VS Code + Hello World)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-4/">Understanding Cargo Project Structure</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-2-basic-syntax-variables"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-2-basic-syntax-variables">Day 2: Basic Syntax &amp; Variables</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 2/chapter-1/">Variables and Mutability in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-2/">Data Types in Rust: Integers, Floats, Booleans, and Characters</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-3/">Constants vs Variables</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-4/">Understanding Shadowing in Rust: A Practical Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-5/">Basic Input&#x2F;Output</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-3-functions-control-flow"
+                           checked/>
+                    <label class="tree-toggle-label"
+                           for="day-3-functions-control-flow">Day 3: Functions &amp; Control Flow</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 3/chapter-1/">Function Syntax and Parameters in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-2/">Return Values and Expressions vs Statements</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-3/">If&#x2F;Else Statements in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-4/">Match Expressions in Rust: Powerful Pattern Matching</a>
+                            </li>
+
+                            <li class="active">
+                                <a href="http://localhost/day 3/chapter-5/">Loops in Rust: loop, while, for Explained</a>
+                            </li>
+
+                            
+                                    
+                                    
+                                        <ul id="toc">
+                                            <li><a href="
+                                                        http://localhost/day 3/chapter-5/#loops-in-rust-a-detailed-guide-loop-while-for">Loops in Rust: A Detailed Guide (loop, while, for)</a>
+                                                    <ul>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-5/#overview-of-rust-s-loop-types">Overview of Rust&#x27;s Loop Types</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-5/#the-loop-infinite-loop">The loop - Infinite Loop</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-5/#basic-infinite-loop">Basic Infinite Loop</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-5/#controlled-loop-with-break">Controlled Loop with Break</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-5/#loop-with-return-value">Loop with Return Value</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-5/#when-to-use-loop">When to Use loop</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-5/#the-while-loop-conditional-repetition">The while Loop - Conditional Repetition</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-5/#basic-while-loop-syntax">Basic While Loop Syntax</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-5/#countdown-example">Countdown Example</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-5/#practical-examples">Practical Examples</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-5/#user-input-loop">User Input Loop</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-5/#sum-until-threshold">Sum Until Threshold</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-5/#when-to-use-while">When to Use while</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-5/#the-for-loop-iterator-based-repetition">The for Loop - Iterator-Based Repetition</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-5/#basic-for-loop-syntax">Basic For Loop Syntax</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-5/#range-iteration">Range Iteration</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-5/#exclusive-range">Exclusive Range (..)</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-5/#inclusive-range">Inclusive Range (..=)</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-5/#array-iteration">Array Iteration</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-5/#direct-iteration">Direct Iteration</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-5/#iterator-method">Iterator Method</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-5/#enumerated-iteration-with-index">Enumerated Iteration (with index)</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-5/#practical-examples-1">Practical Examples</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-5/#sum-calculation">Sum Calculation</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-5/#processing-user-data">Processing User Data</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-5/#when-to-use-for">When to Use for</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-5/#loop-control-break-and-continue">Loop Control: break and continue</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-5/#break-exit-the-loop">break - Exit the Loop</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-5/#continue-skip-to-next-iteration">continue - Skip to Next Iteration</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-5/#nested-loop-control-with-labels">Nested Loop Control with Labels</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-5/#performance-and-idiom-considerations">Performance and Idiom Considerations</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-5/#why-no-c-style-for-loop">Why No C-Style For Loop?</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-5/#loop-type-selection-guide">Loop Type Selection Guide</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-5/#common-patterns-and-examples">Common Patterns and Examples</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-5/#input-validation-loop">Input Validation Loop</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-5/#finding-maximum-value">Finding Maximum Value</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-5/#menu-system">Menu System</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-5/#best-practices">Best Practices</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-5/#choose-the-right-loop-type">Choose the Right Loop Type</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-5/#avoid-infinite-loops-by-accident">Avoid Infinite Loops by Accident</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-5/#use-iterator-methods-when-appropriate">Use Iterator Methods When Appropriate</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 3/chapter-5/#prefer-early-break-continue-for-readability">Prefer Early Break&#x2F;Continue for Readability</a>
+                                                                </li>
+                                                            </ul>
+                                                    </li>
+                                            </ul>
+                                    </ul>
+                <input class="tree-toggle" type="checkbox" id="day-4-data-types-deep-dive"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-4-data-types-deep-dive">Day 4: Data Types Deep Dive</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 4/chapter-1/">Compound Types (Tuples, Arrays)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-2/">String vs &amp;str in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-3/">Vector Basics in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-4/">Type Annotations and Inference in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-5/">Practical Rust Exercises</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-5-practice-review"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-5-practice-review">Day 5: Practice &amp; Review</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 5/chapter-1/">Day 5: Practice &amp; Review</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-6-ownership-fundamentals"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-6-ownership-fundamentals">Day 6: Ownership Fundamentals</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 6/chapter-1/">Ownership in Rust: A Detailed Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-2/">Stack vs Heap in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-3/">Understanding Ownership in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-4/">Move Semantics in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-5/">Copy Trait in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-7-references-borrowing"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-7-references-borrowing">Day 7: References &amp; Borrowing</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 7/chapter-1/">Immutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-2/">Mutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-3/">Borrowing Rules</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-4/">Reference Lifetime Basics</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-5/">Common Borrowing Errors and Solutions</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-8-slices"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-8-slices">Day 8: Slices</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 8/chapter-1/">String Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-2/">Array Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-3/">Slice Syntax and Usage</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-4/">Practical Applications</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-5/">Memory Safety Benefits</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-9-advanced-ownership"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-9-advanced-ownership">Day 9: Advanced Ownership</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 9/chapter-1/">Clone Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-2/">Drop Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-3/">RAII Pattern</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-4/">Memory Management Comparison with Other Languages</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-5/">Best Practices (Advanced Ownership)</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-10-ownership-practice"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-10-ownership-practice">Day 10: Ownership Practice</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 10/chapter-1/">Complex Ownership Scenarios</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-2/">Debugging Ownership Errors</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-3/">Code Refactoring Exercises</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-4/">Group Problem-Solving</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-11-structs-basics"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-11-structs-basics">Day 11: Structs Basics</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 11/chapter-1/">Defining and Instantiating Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-2/">Field Access and Modification</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-3/">Tuple Structs and Unit Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-4/">Struct Update Syntax</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-5/">Ownership of Struct Data</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-12-methods-associated-functions"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-12-methods-associated-functions">Day 12: Methods &amp; Associated Functions</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 12/chapter-1/">Implementing Methods with impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-2/">&amp;self, &amp;mut self, and self</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-3/">Associated Functions (like Constructors)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-4/">Multiple impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-5/">Method Chaining</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-13-advanced-struct-concepts"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-13-advanced-struct-concepts">Day 13: Advanced Struct Concepts</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 13/chapter-1/">Struct Lifetime Parameters</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-2/">Debug Trait and Custom Formatting</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-3/">Builder Pattern Implementation</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-4/">Struct Composition</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-5/">Best Practices for Struct Design</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-14-enums-pattern-matching"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-14-enums-pattern-matching">Day 14: Enums &amp; Pattern Matching</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 14/chapter-1/">Defining Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-2/">Enum Variants with Data</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-3/">Option&lt;T&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-4/">Result&lt;T, E&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-5/">Advanced Match Patterns in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-15-practice-project"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-15-practice-project">Day 15: Practice Project</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 15/chapter-1/">Building a Simple CLI Calculator in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-16-vectors"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-16-vectors">Day 16: Vectors</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 16/chapter-1/">Creating and Updating Vectors</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-2/">Vector Methods: push, pop, iter</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-3/">Accessing Vector Elements Safely</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-4/">Vector of Different Types with Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-5/">Performance Considerations</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-17-hashmaps-other-collections"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-17-hashmaps-other-collections">Day 17: HashMaps &amp; Other Collections</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 17/chapter-1/">HashMap Creation and Manipulation</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-2/">Keys and Values Ownership</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-3/">HashMap Methods and Iteration</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-4/">When to Use Different Collections</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-5/">BTreeMap Introduction</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-18-error-handling"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-18-error-handling">Day 18: Error Handling</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 18/chapter-1/">Panic! and When to Use It</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 18/chapter-2/">Result&lt;T, E&gt; in Depth</a>
+                            </li>
+
+                            </ul>
+                </div>
+        </nav>
+    <article>
+
+        <div id="on_right">
+                <span id="search-ico" class="ms-Icon--Search"></span>
+            </div>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="Search as you type...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        <div id="wrap">
+            
+        <h1 id="loops-in-rust-a-detailed-guide-loop-while-for">Loops in Rust: A Detailed Guide (loop, while, for)</h1>
+<p>Building on your understanding of match expressions and control flow, let's explore <strong>loops</strong> - one of the most fundamental programming constructs for repeating code execution. Rust provides three distinct types of loops, each designed for specific use cases: <code>loop</code>, <code>while</code>, and <code>for</code>. Understanding when and how to use each type is essential for writing efficient and idiomatic Rust code.</p>
+<h2 id="overview-of-rust-s-loop-types">Overview of Rust's Loop Types</h2>
+<p>Rust offers three loop constructs, each with distinct characteristics:</p>
+<ul>
+<li><strong><code>loop</code></strong> - An infinite loop that runs until explicitly stopped<a href="https://www.w3schools.com/rust/rust_loops_for.php">1</a><a href="https://doc.rust-lang.org/rust-by-example/flow_control/loop.html">2</a></li>
+<li><strong><code>while</code></strong> - A conditional loop that continues while a condition is true<a href="https://www.w3schools.com/rust/rust_loops_for.php">1</a><a href="https://www.geeksforgeeks.org/rust/loops-in-rust/">3</a></li>
+<li><strong><code>for</code></strong> - An iterator-based loop for traversing collections or ranges<a href="https://www.w3schools.com/rust/rust_loops_for.php">1</a><a href="https://www.programiz.com/rust/for-loop">4</a></li>
+</ul>
+<p>Each loop type serves different purposes and provides specific advantages depending on your use case.</p>
+<h2 id="the-loop-infinite-loop">The <code>loop</code> - Infinite Loop</h2>
+<p>The <code>loop</code> keyword creates an <strong>infinite loop</strong> that continues executing until you explicitly break out of it using the <code>break</code> statement<a href="https://www.w3schools.com/rust/rust_loops_for.php">1</a><a href="https://doc.rust-lang.org/rust-by-example/flow_control/loop.html">2</a>.</p>
+<h2 id="basic-infinite-loop">Basic Infinite Loop</h2>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>fnmain(){loop{println!(&quot;This will repeat forever!&quot;);// Warning: This never stops! Use Ctrl+C to terminate}}
+</span></code></pre>
+<h2 id="controlled-loop-with-break">Controlled Loop with Break</h2>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>fnmain(){letmut count =0;loop{ count +=1;println!(&quot;Count: {}&quot;, count);if count ==5{println!(&quot;Breaking out of loop&quot;);break;}}println!(&quot;Loop finished&quot;);}
+</span></code></pre>
+<p><strong>Output:</strong></p>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>Count: 1 Count: 2 Count: 3 Count: 4 Count: 5 Breaking out of loop Loop finished 
+</span></code></pre>
+<h2 id="loop-with-return-value">Loop with Return Value</h2>
+<p>One of <code>loop</code>'s unique features is the ability to <strong>return a value</strong> when breaking<a href="https://www.w3schools.com/rust/rust_loops.php">5</a>:</p>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>fnmain(){letmut counter =0;let result =loop{ counter +=1;if counter ==10{break counter *2;// Return value from loop}};println!(&quot;The result is: {}&quot;, result);// Prints: 20}
+</span></code></pre>
+<p><strong>Key Points:</strong></p>
+<ul>
+<li>The value after <code>break</code> becomes the loop's return value</li>
+<li>The entire loop expression can be assigned to a variable</li>
+<li>Must end with a semicolon when assigning to a variable<a href="https://www.w3schools.com/rust/rust_loops.php">5</a></li>
+</ul>
+<h2 id="when-to-use-loop">When to Use <code>loop</code></h2>
+<p>Use <code>loop</code> when:</p>
+<ul>
+<li>You don't know in advance how many iterations you need<a href="https://www.w3schools.com/rust/rust_loops_for.php">1</a></li>
+<li>Implementing event loops or server main loops</li>
+<li>Creating retry mechanisms with complex exit conditions</li>
+<li>You need to return a value from the loop</li>
+</ul>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>fnfind_first_even(numbers:&amp;[i32])-&gt;Option&lt;i32&gt;{letmut index =0;loop{if index &gt;= numbers.len(){breakNone;// Not found}if numbers[index]%2==0{breakSome(numbers[index]);// Found even number} index +=1;}}
+</span></code></pre>
+<h2 id="the-while-loop-conditional-repetition">The <code>while</code> Loop - Conditional Repetition</h2>
+<p>The <code>while</code> loop executes code <strong>as long as a condition remains true</strong><a href="https://www.geeksforgeeks.org/rust/loops-in-rust/">3</a><a href="https://www.codecademy.com/resources/docs/rust/loops">6</a>. It checks the condition before each iteration.</p>
+<h2 id="basic-while-loop-syntax">Basic While Loop Syntax</h2>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>while condition {// code to execute while condition is true}
+</span></code></pre>
+<h2 id="countdown-example">Countdown Example</h2>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>fnmain(){letmut number =5;while number !=0{println!(&quot;{}!&quot;, number); number -=1;}println!(&quot;LIFTOFF!&quot;);}
+</span></code></pre>
+<p><strong>Output:</strong></p>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>5! 4! 3! 2! 1! LIFTOFF! 
+</span></code></pre>
+<h2 id="practical-examples">Practical Examples</h2>
+<h2 id="user-input-loop">User Input Loop</h2>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>usestd::io;fnmain(){letmut input =String::new();while input.trim()!=&quot;quit&quot;{println!(&quot;Enter &#39;quit&#39; to exit, or anything else to continue:&quot;); input.clear();io::stdin().read_line(&amp;mut input).expect(&quot;Failed to read line&quot;);if input.trim()!=&quot;quit&quot;{println!(&quot;You entered: {}&quot;, input.trim());}}println!(&quot;Goodbye!&quot;);}
+</span></code></pre>
+<h2 id="sum-until-threshold">Sum Until Threshold</h2>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>fnmain(){letmut sum =0;letmut current =1;while sum &lt;100{ sum += current;println!(&quot;Added {}, sum is now {}&quot;, current, sum); current +=1;}println!(&quot;Final sum: {}&quot;, sum);}
+</span></code></pre>
+<h2 id="when-to-use-while">When to Use <code>while</code></h2>
+<p>Use <code>while</code> when:</p>
+<ul>
+<li>You want to repeat code until a specific condition is met<a href="https://www.w3schools.com/rust/rust_loops_for.php">1</a></li>
+<li>The number of iterations depends on changing conditions</li>
+<li>You need to check a condition before each iteration</li>
+<li>Implementing search algorithms or waiting for events</li>
+</ul>
+<h2 id="the-for-loop-iterator-based-repetition">The <code>for</code> Loop - Iterator-Based Repetition</h2>
+<p>The <code>for</code> loop is used to <strong>iterate over collections or ranges</strong><a href="https://www.programiz.com/rust/for-loop">4</a><a href="https://www.codecademy.com/resources/docs/rust/loops">6</a>. It's the most commonly used loop in Rust and provides safe, efficient iteration.</p>
+<h2 id="basic-for-loop-syntax">Basic For Loop Syntax</h2>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>for variable in iterator {// code to execute for each item}
+</span></code></pre>
+<h2 id="range-iteration">Range Iteration</h2>
+<h2 id="exclusive-range">Exclusive Range (<code>..</code>)</h2>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>fnmain(){for i in1..6{println!(&quot;Number: {}&quot;, i);}}
+</span></code></pre>
+<p><strong>Output:</strong></p>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>Number: 1 Number: 2 Number: 3 Number: 4 Number: 5 
+</span></code></pre>
+<h2 id="inclusive-range">Inclusive Range (<code>..=</code>)</h2>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>fnmain(){for i in1..=5{println!(&quot;Number: {}&quot;, i);}}
+</span></code></pre>
+<p><strong>Output:</strong></p>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>Number: 1 Number: 2 Number: 3 Number: 4 Number: 5 
+</span></code></pre>
+<h2 id="array-iteration">Array Iteration</h2>
+<h2 id="direct-iteration">Direct Iteration</h2>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>fnmain(){let fruits =[&quot;apple&quot;,&quot;banana&quot;,&quot;cherry&quot;];for fruit in fruits {println!(&quot;Fruit: {}&quot;, fruit);}}
+</span></code></pre>
+<h2 id="iterator-method">Iterator Method</h2>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>fnmain(){let numbers =[1,2,3,4,5];for num in numbers.iter(){println!(&quot;Number: {}&quot;, num);}}
+</span></code></pre>
+<h2 id="enumerated-iteration-with-index">Enumerated Iteration (with index)</h2>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>fnmain(){let colors =[&quot;red&quot;,&quot;green&quot;,&quot;blue&quot;];for(index, color)in colors.iter().enumerate(){println!(&quot;Color {} is {}&quot;, index, color);}}
+</span></code></pre>
+<p><strong>Output:</strong></p>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>Color 0 is red Color 1 is green Color 2 is blue 
+</span></code></pre>
+<h2 id="practical-examples-1">Practical Examples</h2>
+<h2 id="sum-calculation">Sum Calculation</h2>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>fnmain(){let numbers =[1,2,3,4,5,6,7,8,9,10];letmut sum =0;for number in numbers.iter(){ sum += number;}println!(&quot;Sum: {}&quot;, sum);// Prints: 55}
+</span></code></pre>
+<h2 id="processing-user-data">Processing User Data</h2>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>fnmain(){let names =[&quot;Alice&quot;,&quot;Bob&quot;,&quot;Charlie&quot;,&quot;Diana&quot;];for(i, name)in names.iter().enumerate(){println!(&quot;Student {}: {}&quot;, i +1, name);}}
+</span></code></pre>
+<h2 id="when-to-use-for">When to Use <code>for</code></h2>
+<p>Use <code>for</code> when:</p>
+<ul>
+<li>You know exactly what to loop through<a href="https://www.w3schools.com/rust/rust_loops_for.php">1</a></li>
+<li>Iterating over collections (arrays, vectors, strings)</li>
+<li>Working with ranges of numbers</li>
+<li>You want the safest and most idiomatic iteration</li>
+</ul>
+<h2 id="loop-control-break-and-continue">Loop Control: <code>break</code> and <code>continue</code></h2>
+<p>All loop types support <strong>flow control</strong> with <code>break</code> and <code>continue</code> statements<a href="https://doc.rust-lang.org/rust-by-example/flow_control/loop.html">2</a>.</p>
+<h2 id="break-exit-the-loop"><code>break</code> - Exit the Loop</h2>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>fnmain(){for number in1..10{if number ==5{println!(&quot;Breaking at {}&quot;, number);break;}println!(&quot;Number: {}&quot;, number);}println!(&quot;Loop ended&quot;);}
+</span></code></pre>
+<p><strong>Output:</strong></p>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>Number: 1 Number: 2 Number: 3 Number: 4 Breaking at 5 Loop ended 
+</span></code></pre>
+<h2 id="continue-skip-to-next-iteration"><code>continue</code> - Skip to Next Iteration</h2>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>fnmain(){for number in1..6{if number ==3{println!(&quot;Skipping {}&quot;, number);continue;}println!(&quot;Processing {}&quot;, number);}}
+</span></code></pre>
+<p><strong>Output:</strong></p>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>Processing 1 Processing 2 Skipping 3 Processing 4 Processing 5 
+</span></code></pre>
+<h2 id="nested-loop-control-with-labels">Nested Loop Control with Labels</h2>
+<p>For nested loops, you can use <strong>loop labels</strong> to control which loop to break or continue:</p>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>fnmain(){&#39;outer:for i in1..4{&#39;inner:for j in1..4{if i ==2&amp;&amp; j ==2{println!(&quot;Breaking outer loop at i={}, j={}&quot;, i, j);break&#39;outer;}println!(&quot;i: {}, j: {}&quot;, i, j);}}println!(&quot;Done&quot;);}
+</span></code></pre>
+<h2 id="performance-and-idiom-considerations">Performance and Idiom Considerations</h2>
+<h2 id="why-no-c-style-for-loop">Why No C-Style For Loop?</h2>
+<p>Rust deliberately <strong>doesn't have C-style for loops</strong> like <code>for (i = 0; i &lt; 10; i++)</code><a href="https://www.programiz.com/rust/for-loop">4</a>. This design choice prevents common bugs:</p>
+<ul>
+<li><strong>Index out of bounds errors</strong></li>
+<li><strong>Off-by-one errors</strong></li>
+<li><strong>Uninitialized variables</strong></li>
+<li><strong>Incorrect loop conditions</strong></li>
+</ul>
+<p>Instead, Rust's iterator-based approach provides:</p>
+<ul>
+<li><strong>Memory safety</strong></li>
+<li><strong>Better performance</strong> (zero-cost abstractions)</li>
+<li><strong>More readable code</strong></li>
+<li><strong>Automatic bounds checking</strong></li>
+</ul>
+<h2 id="loop-type-selection-guide">Loop Type Selection Guide</h2>
+<table><thead><tr><th>Use Case</th><th>Recommended Loop</th><th>Reason</th></tr></thead><tbody>
+<tr><td><strong>Unknown iteration count</strong></td><td><code>loop</code></td><td>Most flexible, can return values</td></tr>
+<tr><td><strong>Condition-based repetition</strong></td><td><code>while</code></td><td>Clear intent, checks condition first</td></tr>
+<tr><td><strong>Collection iteration</strong></td><td><code>for</code></td><td>Safest, most idiomatic</td></tr>
+<tr><td><strong>Range iteration</strong></td><td><code>for</code></td><td>Prevents index errors</td></tr>
+<tr><td><strong>Event loops</strong></td><td><code>loop</code></td><td>Runs until external condition</td></tr>
+</tbody></table>
+<h2 id="common-patterns-and-examples">Common Patterns and Examples</h2>
+<h2 id="input-validation-loop">Input Validation Loop</h2>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>usestd::io;fnget_positive_number()-&gt;i32{loop{println!(&quot;Enter a positive number:&quot;);letmut input =String::new();io::stdin().read_line(&amp;mut input).expect(&quot;Failed to read input&quot;);match input.trim().parse::&lt;i32&gt;(){Ok(num)if num &gt;0=&gt;break num,Ok(_)=&gt;println!(&quot;Number must be positive!&quot;),Err(_)=&gt;println!(&quot;Please enter a valid number!&quot;),}}}
+</span></code></pre>
+<h2 id="finding-maximum-value">Finding Maximum Value</h2>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>fnfind_max(numbers:&amp;[i32])-&gt;Option&lt;i32&gt;{letmut max =None;for&amp;number in numbers.iter(){match max {None=&gt; max =Some(number),Some(current_max)if number &gt; current_max =&gt; max =Some(number), _ =&gt;{}}} max }
+</span></code></pre>
+<h2 id="menu-system">Menu System</h2>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>usestd::io;fnmain(){loop{println!(&quot;\n=== Menu ===&quot;);println!(&quot;1. Option A&quot;);println!(&quot;2. Option B&quot;);println!(&quot;3. Exit&quot;);println!(&quot;Choose an option:&quot;);letmut input =String::new();io::stdin().read_line(&amp;mut input).expect(&quot;Failed to read input&quot;);match input.trim(){&quot;1&quot;=&gt;println!(&quot;You selected Option A&quot;),&quot;2&quot;=&gt;println!(&quot;You selected Option B&quot;),&quot;3&quot;=&gt;{println!(&quot;Goodbye!&quot;);break;}, _ =&gt;println!(&quot;Invalid option, please try again&quot;),}}}
+</span></code></pre>
+<h2 id="best-practices">Best Practices</h2>
+<h2 id="choose-the-right-loop-type"><strong>Choose the Right Loop Type</strong></h2>
+<ul>
+<li>Use <code>for</code> for iterating over known collections or ranges</li>
+<li>Use <code>while</code> when you have a clear termination condition</li>
+<li>Use <code>loop</code> for complex control flow or when returning values</li>
+</ul>
+<h2 id="avoid-infinite-loops-by-accident"><strong>Avoid Infinite Loops by Accident</strong></h2>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>// Be careful with conditions that might never become falseletmut x =1;while x &gt;0{ x +=1;// This will run forever!}
+</span></code></pre>
+<h2 id="use-iterator-methods-when-appropriate"><strong>Use Iterator Methods When Appropriate</strong></h2>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>// Instead of manual looplet numbers =vec![1,2,3,4,5];let sum:i32= numbers.iter().sum();// More idiomatic// Rather thanletmut sum =0;for number in numbers.iter(){ sum += number;}
+</span></code></pre>
+<h2 id="prefer-early-break-continue-for-readability"><strong>Prefer Early Break/Continue for Readability</strong></h2>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>// Good - early continue for clarityfor item in items {if item.is_invalid(){continue;}// Process valid itemprocess_item(item);}// Less clear - nested conditionsfor item in items {if item.is_valid(){process_item(item);}}
+</span></code></pre>
+<p>Understanding Rust's loop constructs enables you to write efficient, safe, and readable repetitive code. The combination of <code>loop</code>, <code>while</code>, and <code>for</code> provides all the tools necessary for any iteration scenario, while Rust's design prevents common loop-related bugs that plague other languages.</p>
+<ol>
+<li>https://www.w3schools.com/rust/rust_loops_for.php</li>
+<li>https://doc.rust-lang.org/rust-by-example/flow_control/loop.html</li>
+<li>https://www.geeksforgeeks.org/rust/loops-in-rust/</li>
+<li>https://www.programiz.com/rust/for-loop</li>
+<li>https://www.w3schools.com/rust/rust_loops.php</li>
+<li>https://www.codecademy.com/resources/docs/rust/loops</li>
+<li>https://blog.devgenius.io/mastering-loops-in-rust-an-in-depth-guide-with-examples-83d516e1b3b2?gi=c2716dd32509</li>
+<li>https://dev.to/crusty-rustacean/rust-controlling-the-flow-2715</li>
+<li>https://doc.rust-lang.org/reference/expressions/loop-expr.html</li>
+<li>https://web.mit.edu/rust-lang_v1.25/arch/amd64_ubuntu1404/share/doc/rust/html/book/first-edition/loops.html</li>
+</ol>
+
+    
+        </div>
+
+    </article>
+</main>
+
+
+    <script type="text/javascript" src="http://localhost/elasticlunr.min.js" defer></script>
+    <script type="text/javascript" src="http://localhost/search_index.en.js" defer></script>
+<script type="text/javascript" src="http://localhost/js.js" defer></script>
+
+</body>
+</html>

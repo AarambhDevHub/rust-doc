@@ -1,0 +1,1582 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://localhost/main.css">
+    <link rel="icon" href="https://www.rust-lang.org/static/images/favicon-16x16.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Rust Programming Course! | RAII Pattern </title>
+</head>
+<body>
+
+<main>
+    
+    <nav>
+            <a href="http:&#x2F;&#x2F;localhost">
+                        <img src="https://www.rust-lang.org/static/images/rust-logo-blk.svg" alt="logo"/>
+                    </a>
+                <!-- -->
+
+            <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+            <div id="trees">
+                <input class="tree-toggle" type="checkbox" id="day-1-introduction"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-1-introduction">Day 1: Introduction</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 1/chapter-1/">What is Rust and why use it?</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-2/">Installing Rust Toolchain (rustup, cargo)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-3/">Setting up Development (VS Code + Hello World)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-4/">Understanding Cargo Project Structure</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-2-basic-syntax-variables"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-2-basic-syntax-variables">Day 2: Basic Syntax &amp; Variables</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 2/chapter-1/">Variables and Mutability in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-2/">Data Types in Rust: Integers, Floats, Booleans, and Characters</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-3/">Constants vs Variables</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-4/">Understanding Shadowing in Rust: A Practical Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-5/">Basic Input&#x2F;Output</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-3-functions-control-flow"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-3-functions-control-flow">Day 3: Functions &amp; Control Flow</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 3/chapter-1/">Function Syntax and Parameters in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-2/">Return Values and Expressions vs Statements</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-3/">If&#x2F;Else Statements in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-4/">Match Expressions in Rust: Powerful Pattern Matching</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-5/">Loops in Rust: loop, while, for Explained</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-4-data-types-deep-dive"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-4-data-types-deep-dive">Day 4: Data Types Deep Dive</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 4/chapter-1/">Compound Types (Tuples, Arrays)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-2/">String vs &amp;str in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-3/">Vector Basics in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-4/">Type Annotations and Inference in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-5/">Practical Rust Exercises</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-5-practice-review"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-5-practice-review">Day 5: Practice &amp; Review</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 5/chapter-1/">Day 5: Practice &amp; Review</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-6-ownership-fundamentals"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-6-ownership-fundamentals">Day 6: Ownership Fundamentals</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 6/chapter-1/">Ownership in Rust: A Detailed Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-2/">Stack vs Heap in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-3/">Understanding Ownership in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-4/">Move Semantics in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-5/">Copy Trait in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-7-references-borrowing"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-7-references-borrowing">Day 7: References &amp; Borrowing</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 7/chapter-1/">Immutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-2/">Mutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-3/">Borrowing Rules</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-4/">Reference Lifetime Basics</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-5/">Common Borrowing Errors and Solutions</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-8-slices"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-8-slices">Day 8: Slices</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 8/chapter-1/">String Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-2/">Array Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-3/">Slice Syntax and Usage</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-4/">Practical Applications</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-5/">Memory Safety Benefits</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-9-advanced-ownership"
+                           checked/>
+                    <label class="tree-toggle-label"
+                           for="day-9-advanced-ownership">Day 9: Advanced Ownership</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 9/chapter-1/">Clone Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-2/">Drop Trait</a>
+                            </li>
+
+                            <li class="active">
+                                <a href="http://localhost/day 9/chapter-3/">RAII Pattern</a>
+                            </li>
+
+                            
+                                    
+                                    
+                                        <ul id="toc">
+                                            <li><a href="
+                                                        http://localhost/day 9/chapter-3/#raii-pattern-in-rust-comprehensive-documentation">RAII Pattern in Rust: Comprehensive Documentation</a>
+                                                    <ul>
+                                                            <li>
+                                                                    <a href="http://localhost/day 9/chapter-3/#what-is-raii">What is RAII?</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 9/chapter-3/#raii-in-rust-vs-other-languages">RAII in Rust vs Other Languages</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 9/chapter-3/#the-drop-trait-rust-s-raii-implementation">The Drop Trait: Rust&#x27;s RAII Implementation</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 9/chapter-3/#raii-patterns-in-rust">RAII Patterns in Rust</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 9/chapter-3/#advanced-raii-patterns">Advanced RAII Patterns</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 9/chapter-3/#raii-best-practices-in-rust">RAII Best Practices in Rust</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 9/chapter-3/#performance-benefits-of-raii-in-rust">Performance Benefits of RAII in Rust</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 9/chapter-3/#common-raii-pitfalls-and-solutions">Common RAII Pitfalls and Solutions</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 9/chapter-3/#raii-vs-manual-resource-management">RAII vs Manual Resource Management</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 9/chapter-3/#integration-with-rust-s-ownership-system">Integration with Rust&#x27;s Ownership System</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 9/chapter-3/#testing-raii-implementation">Testing RAII Implementation</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 9/chapter-3/#summary-and-key-takeaways">Summary and Key Takeaways</a>
+                                                                </li>
+                                                            </ul>
+                                                    </li>
+                                            </ul>
+                                    <li >
+                                <a href="http://localhost/day 9/chapter-4/">Memory Management Comparison with Other Languages</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-5/">Best Practices (Advanced Ownership)</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-10-ownership-practice"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-10-ownership-practice">Day 10: Ownership Practice</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 10/chapter-1/">Complex Ownership Scenarios</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-2/">Debugging Ownership Errors</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-3/">Code Refactoring Exercises</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-4/">Group Problem-Solving</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-11-structs-basics"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-11-structs-basics">Day 11: Structs Basics</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 11/chapter-1/">Defining and Instantiating Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-2/">Field Access and Modification</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-3/">Tuple Structs and Unit Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-4/">Struct Update Syntax</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-5/">Ownership of Struct Data</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-12-methods-associated-functions"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-12-methods-associated-functions">Day 12: Methods &amp; Associated Functions</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 12/chapter-1/">Implementing Methods with impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-2/">&amp;self, &amp;mut self, and self</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-3/">Associated Functions (like Constructors)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-4/">Multiple impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-5/">Method Chaining</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-13-advanced-struct-concepts"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-13-advanced-struct-concepts">Day 13: Advanced Struct Concepts</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 13/chapter-1/">Struct Lifetime Parameters</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-2/">Debug Trait and Custom Formatting</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-3/">Builder Pattern Implementation</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-4/">Struct Composition</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-5/">Best Practices for Struct Design</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-14-enums-pattern-matching"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-14-enums-pattern-matching">Day 14: Enums &amp; Pattern Matching</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 14/chapter-1/">Defining Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-2/">Enum Variants with Data</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-3/">Option&lt;T&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-4/">Result&lt;T, E&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-5/">Advanced Match Patterns in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-15-practice-project"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-15-practice-project">Day 15: Practice Project</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 15/chapter-1/">Building a Simple CLI Calculator in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-16-vectors"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-16-vectors">Day 16: Vectors</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 16/chapter-1/">Creating and Updating Vectors</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-2/">Vector Methods: push, pop, iter</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-3/">Accessing Vector Elements Safely</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-4/">Vector of Different Types with Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-5/">Performance Considerations</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-17-hashmaps-other-collections"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-17-hashmaps-other-collections">Day 17: HashMaps &amp; Other Collections</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 17/chapter-1/">HashMap Creation and Manipulation</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-2/">Keys and Values Ownership</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-3/">HashMap Methods and Iteration</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-4/">When to Use Different Collections</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-5/">BTreeMap Introduction</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-18-error-handling"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-18-error-handling">Day 18: Error Handling</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 18/chapter-1/">Panic! and When to Use It</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 18/chapter-2/">Result&lt;T, E&gt; in Depth</a>
+                            </li>
+
+                            </ul>
+                </div>
+        </nav>
+    <article>
+
+        <div id="on_right">
+                <span id="search-ico" class="ms-Icon--Search"></span>
+            </div>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="Search as you type...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        <div id="wrap">
+            
+        <h1 id="raii-pattern-in-rust-comprehensive-documentation">RAII Pattern in Rust: Comprehensive Documentation</h1>
+<p><strong>Resource Acquisition Is Initialization (RAII)</strong> is a fundamental programming pattern that Rust enforces at the language level to ensure safe, automatic resource management. In Rust, RAII means that <strong>resource acquisition happens during object initialization</strong> and <strong>resource cleanup happens automatically when the object goes out of scope</strong>, providing memory safety and preventing resource leaks without garbage collection overhead.</p>
+<h2 id="what-is-raii">What is RAII?</h2>
+<p><strong>RAII</strong> stands for "Resource Acquisition Is Initialization" - a programming idiom where:</p>
+<ol>
+<li><strong>Resources are acquired</strong> during object creation (constructor/initialization)</li>
+<li><strong>Resources are automatically released</strong> when the object is destroyed (destructor/drop)</li>
+<li><strong>Resource lifetime is tied to object lifetime</strong> - ensuring no leaks or dangling resources</li>
+</ol>
+<h3 id="core-principles">Core Principles</h3>
+<ul>
+<li><strong>Deterministic cleanup</strong> - Resources are freed at predictable, compile-time-determined points</li>
+<li><strong>Exception safety</strong> - Resources are cleaned up even if errors occur</li>
+<li><strong>Zero-cost abstractions</strong> - No runtime overhead for resource management</li>
+<li><strong>Automatic management</strong> - No manual memory management required</li>
+</ul>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> data = String::from(&quot;</span><span style="color:#a3be8c;">Hello, RAII!</span><span>&quot;); </span><span style="color:#a7adba;">// Resource acquired
+</span><span>        println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, data);
+</span><span>        </span><span style="color:#a7adba;">// Resource automatically freed when data goes out of scope
+</span><span>    }
+</span><span>    </span><span style="color:#a7adba;">// data is no longer accessible, memory has been freed
+</span><span>}
+</span></code></pre>
+<h2 id="raii-in-rust-vs-other-languages">RAII in Rust vs Other Languages</h2>
+<h3 id="rust-s-implementation">Rust's Implementation</h3>
+<p>Rust <strong>enforces RAII</strong> through its ownership system, making resource management both safe and efficient:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">demonstrate_raii</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> box1 = Box::new(</span><span style="color:#d08770;">42</span><span>);     </span><span style="color:#a7adba;">// Heap allocation - resource acquired
+</span><span>
+</span><span>    {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> box2 = Box::new(</span><span style="color:#d08770;">84</span><span>); </span><span style="color:#a7adba;">// Another heap allocation
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">box2: </span><span style="color:#d08770;">{}</span><span>&quot;, box2);
+</span><span>    } </span><span style="color:#a7adba;">// box2 automatically freed here - RAII in action
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">box1: </span><span style="color:#d08770;">{}</span><span>&quot;, box1);
+</span><span>} </span><span style="color:#a7adba;">// box1 automatically freed here
+</span></code></pre>
+<p><strong>Key advantages of Rust's RAII:</strong></p>
+<ul>
+<li><strong>Compile-time enforcement</strong> - Impossible to forget resource cleanup</li>
+<li><strong>Zero runtime overhead</strong> - No garbage collector or reference counting</li>
+<li><strong>Memory safety guarantees</strong> - No use-after-free or double-free bugs</li>
+<li><strong>Predictable performance</strong> - Deterministic cleanup timing</li>
+</ul>
+<h2 id="the-drop-trait-rust-s-raii-implementation">The Drop Trait: Rust's RAII Implementation</h2>
+<p>The <strong>Drop trait</strong> is Rust's mechanism for implementing RAII custom cleanup logic[1]:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">pub trait </span><span>Drop {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">drop</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>);
+</span><span>}
+</span></code></pre>
+<h3 id="automatic-drop-implementation">Automatic Drop Implementation</h3>
+<p>Most types get automatic Drop implementations, but you can customize cleanup behavior:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">struct </span><span>FileManager {
+</span><span>    </span><span style="color:#bf616a;">filename</span><span>: String,
+</span><span>    </span><span style="color:#bf616a;">handle</span><span>: std::fs::File,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>Drop </span><span style="color:#b48ead;">for </span><span>FileManager {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">drop</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Closing file: </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#bf616a;">self</span><span>.filename);
+</span><span>        </span><span style="color:#a7adba;">// File handle is automatically closed by std::fs::File&#39;s Drop
+</span><span>        </span><span style="color:#a7adba;">// Custom cleanup logic can be added here
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> manager = FileManager {
+</span><span>            filename: &quot;</span><span style="color:#a3be8c;">data.txt</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>            handle: std::fs::File::create(&quot;</span><span style="color:#a3be8c;">data.txt</span><span>&quot;).</span><span style="color:#96b5b4;">unwrap</span><span>(),
+</span><span>        };
+</span><span>
+</span><span>        </span><span style="color:#a7adba;">// Use the file manager
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">File manager active</span><span>&quot;);
+</span><span>    } </span><span style="color:#a7adba;">// Drop::drop() called automatically here
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">File manager has been dropped</span><span>&quot;);
+</span><span>}
+</span></code></pre>
+<h2 id="raii-patterns-in-rust">RAII Patterns in Rust</h2>
+<h3 id="1-memory-management">1. Memory Management</h3>
+<p>The most common RAII use case - automatic memory management[1]:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">memory_raii_demo</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// Stack allocation - automatically managed
+</span><span>    </span><span style="color:#b48ead;">let</span><span> number = </span><span style="color:#d08770;">42</span><span>;
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Heap allocation via Box - RAII managed
+</span><span>    </span><span style="color:#b48ead;">let</span><span> boxed_data = Box::new(vec![</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">2</span><span>, </span><span style="color:#d08770;">3</span><span>, </span><span style="color:#d08770;">4</span><span>, </span><span style="color:#d08770;">5</span><span>]);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// String - heap-allocated, RAII managed
+</span><span>    </span><span style="color:#b48ead;">let</span><span> text = String::from(&quot;</span><span style="color:#a3be8c;">RAII manages this memory</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Vector - dynamic array, RAII managed
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> dynamic_array = Vec::new();
+</span><span>    dynamic_array.</span><span style="color:#96b5b4;">push</span><span>(</span><span style="color:#d08770;">10</span><span>);
+</span><span>    dynamic_array.</span><span style="color:#96b5b4;">push</span><span>(</span><span style="color:#d08770;">20</span><span>);
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">All resources active</span><span>&quot;);
+</span><span>} </span><span style="color:#a7adba;">// All heap memory automatically freed here through RAII
+</span></code></pre>
+<h3 id="2-file-handle-management">2. File Handle Management</h3>
+<p>RAII ensures files are properly closed and flushed:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>std::fs::File;
+</span><span style="color:#b48ead;">use </span><span>std::io::Write;
+</span><span>
+</span><span style="color:#b48ead;">struct </span><span>SafeFileWriter {
+</span><span>    </span><span style="color:#bf616a;">file</span><span>: File,
+</span><span>    </span><span style="color:#bf616a;">name</span><span>: String,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>SafeFileWriter {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#bf616a;">filename</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; std::io::Result {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> file = File::create(filename)?;
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Opened file: </span><span style="color:#d08770;">{}</span><span>&quot;, filename);
+</span><span>
+</span><span>        Ok(SafeFileWriter {
+</span><span>            file,
+</span><span>            name: filename.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        })
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">write_data</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">data</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; std::io::Result {
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.file.</span><span style="color:#96b5b4;">write_all</span><span>(data.</span><span style="color:#96b5b4;">as_bytes</span><span>())
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>Drop </span><span style="color:#b48ead;">for </span><span>SafeFileWriter {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">drop</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) {
+</span><span>        </span><span style="color:#a7adba;">// Ensure data is flushed before file is closed
+</span><span>        </span><span style="color:#b48ead;">if let </span><span>Err(e) = </span><span style="color:#bf616a;">self</span><span>.file.</span><span style="color:#96b5b4;">flush</span><span>() {
+</span><span>            eprintln!(&quot;</span><span style="color:#a3be8c;">Warning: Failed to flush </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">: </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#bf616a;">self</span><span>.name, e);
+</span><span>        }
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">File </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> safely closed via RAII</span><span>&quot;, </span><span style="color:#bf616a;">self</span><span>.name);
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() -&gt; std::io::Result {
+</span><span>    {
+</span><span>        </span><span style="color:#b48ead;">let mut</span><span> writer = SafeFileWriter::new(&quot;</span><span style="color:#a3be8c;">output.txt</span><span>&quot;)?;
+</span><span>        writer.</span><span style="color:#96b5b4;">write_data</span><span>(&quot;</span><span style="color:#a3be8c;">Hello, RAII file management!</span><span style="color:#96b5b4;">\n</span><span>&quot;)?;
+</span><span>        writer.</span><span style="color:#96b5b4;">write_data</span><span>(&quot;</span><span style="color:#a3be8c;">Files are automatically closed.</span><span style="color:#96b5b4;">\n</span><span>&quot;)?;
+</span><span>    } </span><span style="color:#a7adba;">// File automatically flushed and closed here
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">File operations completed safely</span><span>&quot;);
+</span><span>    Ok(())
+</span><span>}
+</span></code></pre>
+<h3 id="3-lock-management-raii-guards">3. Lock Management (RAII Guards)</h3>
+<p>RAII guards ensure locks are always released[2]:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>std::sync::{Mutex, Arc};
+</span><span style="color:#b48ead;">use </span><span>std::thread;
+</span><span>
+</span><span style="color:#b48ead;">struct </span><span>LockGuard {
+</span><span>    </span><span style="color:#bf616a;">mutex</span><span>: Arc&gt;,
+</span><span>    </span><span style="color:#bf616a;">name</span><span>: String,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>LockGuard {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#bf616a;">mutex</span><span>: Arc&gt;, </span><span style="color:#bf616a;">name</span><span>: String) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Acquiring lock: </span><span style="color:#d08770;">{}</span><span>&quot;, name);
+</span><span>        LockGuard { mutex, name }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">with_lock</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">f</span><span>: F) -&gt; R
+</span><span>    </span><span style="color:#b48ead;">where
+</span><span>        F: FnOnce(&amp;</span><span style="color:#b48ead;">mut</span><span> T) -&gt; R,
+</span><span>    {
+</span><span>        </span><span style="color:#b48ead;">let mut</span><span> guard = </span><span style="color:#bf616a;">self</span><span>.mutex.</span><span style="color:#96b5b4;">lock</span><span>().</span><span style="color:#96b5b4;">unwrap</span><span>();
+</span><span>        </span><span style="color:#96b5b4;">f</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span>*guard)
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>Drop </span><span style="color:#b48ead;">for </span><span>LockGuard {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">drop</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Releasing lock: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> (RAII cleanup)</span><span>&quot;, </span><span style="color:#bf616a;">self</span><span>.name);
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> data = Arc::new(Mutex::new(</span><span style="color:#d08770;">0</span><span>));
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Spawn multiple threads that use RAII lock guards
+</span><span>    </span><span style="color:#b48ead;">let</span><span> handles: Vec = (</span><span style="color:#d08770;">0</span><span>..</span><span style="color:#d08770;">3</span><span>)
+</span><span>        .</span><span style="color:#96b5b4;">map</span><span>(|</span><span style="color:#bf616a;">i</span><span>| {
+</span><span>            </span><span style="color:#b48ead;">let</span><span> data_clone = Arc::clone(&amp;data);
+</span><span>            thread::spawn(</span><span style="color:#b48ead;">move </span><span>|| {
+</span><span>                </span><span style="color:#b48ead;">let</span><span> guard = LockGuard::new(
+</span><span>                    data_clone,
+</span><span>                    format!(&quot;</span><span style="color:#a3be8c;">Thread-</span><span style="color:#d08770;">{}</span><span>&quot;, i)
+</span><span>                );
+</span><span>
+</span><span>                guard.</span><span style="color:#96b5b4;">with_lock</span><span>(|</span><span style="color:#bf616a;">value</span><span>| {
+</span><span>                    *value += </span><span style="color:#d08770;">1</span><span>;
+</span><span>                    println!(&quot;</span><span style="color:#a3be8c;">Thread </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> incremented value</span><span>&quot;, i);
+</span><span>                    thread::sleep(std::time::Duration::from_millis(</span><span style="color:#d08770;">100</span><span>));
+</span><span>                });
+</span><span>
+</span><span>                </span><span style="color:#a7adba;">// Lock automatically released when guard goes out of scope
+</span><span>            })
+</span><span>        })
+</span><span>        .</span><span style="color:#96b5b4;">collect</span><span>();
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">for</span><span> handle in handles {
+</span><span>        handle.</span><span style="color:#96b5b4;">join</span><span>().</span><span style="color:#96b5b4;">unwrap</span><span>();
+</span><span>    }
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Final value: </span><span style="color:#d08770;">{}</span><span>&quot;, *data.</span><span style="color:#96b5b4;">lock</span><span>().</span><span style="color:#96b5b4;">unwrap</span><span>());
+</span><span>}
+</span></code></pre>
+<h3 id="4-network-resource-management">4. Network Resource Management</h3>
+<p>RAII for managing network connections:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>std::net::TcpStream;
+</span><span style="color:#b48ead;">use </span><span>std::io::{Read, Write};
+</span><span>
+</span><span style="color:#b48ead;">struct </span><span>ManagedConnection {
+</span><span>    </span><span style="color:#bf616a;">stream</span><span>: TcpStream,
+</span><span>    </span><span style="color:#bf616a;">connection_id</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>    </span><span style="color:#bf616a;">bytes_transferred</span><span>: </span><span style="color:#b48ead;">usize</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>ManagedConnection {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">connect</span><span>(</span><span style="color:#bf616a;">address</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>, </span><span style="color:#bf616a;">id</span><span>: </span><span style="color:#b48ead;">u32</span><span>) -&gt; std::io::Result {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> stream = TcpStream::connect(address)?;
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Connection </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> established to </span><span style="color:#d08770;">{}</span><span>&quot;, id, address);
+</span><span>
+</span><span>        Ok(ManagedConnection {
+</span><span>            stream,
+</span><span>            connection_id: id,
+</span><span>            bytes_transferred: </span><span style="color:#d08770;">0</span><span>,
+</span><span>        })
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">send_data</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">data</span><span>: &amp;[</span><span style="color:#b48ead;">u8</span><span>]) -&gt; std::io::Result {
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.stream.</span><span style="color:#96b5b4;">write_all</span><span>(data)?;
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.bytes_transferred += data.</span><span style="color:#96b5b4;">len</span><span>();
+</span><span>        Ok(())
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">read_data</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">buffer</span><span>: &amp;</span><span style="color:#b48ead;">mut</span><span> [</span><span style="color:#b48ead;">u8</span><span>]) -&gt; std::io::Result {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> bytes_read = </span><span style="color:#bf616a;">self</span><span>.stream.</span><span style="color:#96b5b4;">read</span><span>(buffer)?;
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.bytes_transferred += bytes_read;
+</span><span>        Ok(bytes_read)
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>Drop </span><span style="color:#b48ead;">for </span><span>ManagedConnection {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">drop</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) {
+</span><span>        println!(
+</span><span>            &quot;</span><span style="color:#a3be8c;">RAII cleanup: Connection </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> closing (transferred </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> bytes)</span><span>&quot;,
+</span><span>            </span><span style="color:#bf616a;">self</span><span>.connection_id, </span><span style="color:#bf616a;">self</span><span>.bytes_transferred
+</span><span>        );
+</span><span>
+</span><span>        </span><span style="color:#a7adba;">// Graceful shutdown
+</span><span>        </span><span style="color:#b48ead;">if let </span><span>Err(e) = </span><span style="color:#bf616a;">self</span><span>.stream.</span><span style="color:#96b5b4;">shutdown</span><span>(std::net::Shutdown::Both) {
+</span><span>            eprintln!(&quot;</span><span style="color:#a3be8c;">Warning: Error during connection cleanup: </span><span style="color:#d08770;">{}</span><span>&quot;, e);
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Example usage (commented out as it requires a real server)
+</span><span style="color:#a7adba;">/*
+</span><span style="color:#a7adba;">fn main() -&gt; std::io::Result {
+</span><span style="color:#a7adba;">    {
+</span><span style="color:#a7adba;">        let mut conn = ManagedConnection::connect(&quot;127.0.0.1:8080&quot;, 1)?;
+</span><span style="color:#a7adba;">        conn.send_data(b&quot;Hello, server!&quot;)?;
+</span><span style="color:#a7adba;">
+</span><span style="color:#a7adba;">        let mut buffer = [0; 1024];
+</span><span style="color:#a7adba;">        let bytes_read = conn.read_data(&amp;mut buffer)?;
+</span><span style="color:#a7adba;">        println!(&quot;Received {} bytes&quot;, bytes_read);
+</span><span style="color:#a7adba;">    } // Connection automatically closed via RAII
+</span><span style="color:#a7adba;">
+</span><span style="color:#a7adba;">    Ok(())
+</span><span style="color:#a7adba;">}
+</span><span style="color:#a7adba;">*/
+</span></code></pre>
+<h3 id="5-custom-resource-pool">5. Custom Resource Pool</h3>
+<p>RAII for managing resource pools:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>std::collections::VecDeque;
+</span><span>
+</span><span style="color:#b48ead;">struct </span><span>ResourcePool {
+</span><span>    </span><span style="color:#bf616a;">available</span><span>: VecDeque,
+</span><span>    </span><span style="color:#bf616a;">name</span><span>: String,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>ResourcePool {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#bf616a;">name</span><span>: String, </span><span style="color:#bf616a;">resources</span><span>: Vec) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        ResourcePool {
+</span><span>            available: resources.</span><span style="color:#96b5b4;">into</span><span>(),
+</span><span>            name,
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">acquire</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) -&gt; Option&gt; {
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.available.</span><span style="color:#96b5b4;">pop_front</span><span>().</span><span style="color:#96b5b4;">map</span><span>(|</span><span style="color:#bf616a;">resource</span><span>| {
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">Resource acquired from pool: </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#bf616a;">self</span><span>.name);
+</span><span>            PooledResource {
+</span><span>                resource: Some(resource),
+</span><span>                pool_name: </span><span style="color:#bf616a;">self</span><span>.name.</span><span style="color:#96b5b4;">clone</span><span>(),
+</span><span>            }
+</span><span>        })
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">return_resource</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">resource</span><span>: T) {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Resource returned to pool: </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#bf616a;">self</span><span>.name);
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.available.</span><span style="color:#96b5b4;">push_back</span><span>(resource);
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">struct </span><span>PooledResource {
+</span><span>    </span><span style="color:#bf616a;">resource</span><span>: Option,
+</span><span>    </span><span style="color:#bf616a;">pool_name</span><span>: String,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>PooledResource {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">get</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; Option {
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.resource.</span><span style="color:#96b5b4;">as_ref</span><span>()
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">get_mut</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) -&gt; Option {
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.resource.</span><span style="color:#96b5b4;">as_mut</span><span>()
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>Drop </span><span style="color:#b48ead;">for </span><span>PooledResource {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">drop</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) {
+</span><span>        </span><span style="color:#b48ead;">if let </span><span>Some(resource) = </span><span style="color:#bf616a;">self</span><span>.resource.</span><span style="color:#96b5b4;">take</span><span>() {
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">RAII: Returning resource to pool </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#bf616a;">self</span><span>.pool_name);
+</span><span>            </span><span style="color:#a7adba;">// In a real implementation, you&#39;d need a way to return to the pool
+</span><span>            </span><span style="color:#a7adba;">// This is simplified for demonstration
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> pool = ResourcePool::new(
+</span><span>        &quot;</span><span style="color:#a3be8c;">DatabaseConnections</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        vec![&quot;</span><span style="color:#a3be8c;">conn1</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">conn2</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">conn3</span><span>&quot;].</span><span style="color:#96b5b4;">into_iter</span><span>()
+</span><span>            .</span><span style="color:#96b5b4;">map</span><span>(|</span><span style="color:#bf616a;">s</span><span>| s.</span><span style="color:#96b5b4;">to_string</span><span>())
+</span><span>            .</span><span style="color:#96b5b4;">collect</span><span>(),
+</span><span>    );
+</span><span>
+</span><span>    {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> resource1 = pool.</span><span style="color:#96b5b4;">acquire</span><span>().</span><span style="color:#96b5b4;">unwrap</span><span>();
+</span><span>        </span><span style="color:#b48ead;">let</span><span> resource2 = pool.</span><span style="color:#96b5b4;">acquire</span><span>().</span><span style="color:#96b5b4;">unwrap</span><span>();
+</span><span>
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Using resources: </span><span style="color:#d08770;">{:?}</span><span style="color:#a3be8c;">, </span><span style="color:#d08770;">{:?}</span><span>&quot;,
+</span><span>                 resource1.</span><span style="color:#96b5b4;">get</span><span>(), resource2.</span><span style="color:#96b5b4;">get</span><span>());
+</span><span>
+</span><span>        </span><span style="color:#a7adba;">// Resources automatically returned via RAII when they go out of scope
+</span><span>    }
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">All resources returned to pool</span><span>&quot;);
+</span><span>}
+</span></code></pre>
+<h2 id="advanced-raii-patterns">Advanced RAII Patterns</h2>
+<h3 id="raii-with-ownership-transfer">RAII with Ownership Transfer</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">struct </span><span>OwnedResource {
+</span><span>    </span><span style="color:#bf616a;">data</span><span>: Vec,
+</span><span>    </span><span style="color:#bf616a;">name</span><span>: String,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>OwnedResource {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#bf616a;">name</span><span>: String, </span><span style="color:#bf616a;">size</span><span>: </span><span style="color:#b48ead;">usize</span><span>) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">RAII: Acquiring resource &#39;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">&#39;</span><span>&quot;, name);
+</span><span>        OwnedResource {
+</span><span>            data: vec![</span><span style="color:#d08770;">0</span><span>; size],
+</span><span>            name,
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Transfer ownership while maintaining RAII
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">transfer_to</span><span>(</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">new_name</span><span>: String) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">RAII: Transferring resource &#39;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">&#39; to &#39;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">&#39;</span><span>&quot;,
+</span><span>                 </span><span style="color:#bf616a;">self</span><span>.name, new_name);
+</span><span>
+</span><span>        OwnedResource {
+</span><span>            data: </span><span style="color:#bf616a;">self</span><span>.data,  </span><span style="color:#a7adba;">// Ownership transferred
+</span><span>            name: new_name,
+</span><span>        }
+</span><span>        </span><span style="color:#a7adba;">// Original self is consumed, no Drop called
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>Drop </span><span style="color:#b48ead;">for </span><span>OwnedResource {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">drop</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">RAII: Releasing resource &#39;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">&#39;</span><span>&quot;, </span><span style="color:#bf616a;">self</span><span>.name);
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> resource1 = OwnedResource::new(&quot;</span><span style="color:#a3be8c;">ResourceA</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), </span><span style="color:#d08770;">1024</span><span>);
+</span><span>        </span><span style="color:#b48ead;">let</span><span> resource2 = resource1.</span><span style="color:#96b5b4;">transfer_to</span><span>(&quot;</span><span style="color:#a3be8c;">ResourceB</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>());
+</span><span>
+</span><span>        </span><span style="color:#a7adba;">// Only resource2 will be dropped, not resource1 (consumed by transfer)
+</span><span>    } </span><span style="color:#a7adba;">// resource2 dropped here via RAII
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Resource management completed</span><span>&quot;);
+</span><span>}
+</span></code></pre>
+<h3 id="raii-with-conditional-cleanup">RAII with Conditional Cleanup</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">struct </span><span>ConditionalResource {
+</span><span>    </span><span style="color:#bf616a;">data</span><span>: String,
+</span><span>    </span><span style="color:#bf616a;">should_cleanup</span><span>: </span><span style="color:#b48ead;">bool</span><span>,
+</span><span>    </span><span style="color:#bf616a;">cleanup_performed</span><span>: </span><span style="color:#b48ead;">bool</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>ConditionalResource {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#bf616a;">data</span><span>: String) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">RAII: Creating resource with data: </span><span style="color:#d08770;">{}</span><span>&quot;, data);
+</span><span>        ConditionalResource {
+</span><span>            data,
+</span><span>            should_cleanup: </span><span style="color:#d08770;">true</span><span>,
+</span><span>            cleanup_performed: </span><span style="color:#d08770;">false</span><span>,
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">disable_cleanup</span><span>(</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.should_cleanup = </span><span style="color:#d08770;">false</span><span>;
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">RAII: Cleanup disabled for resource</span><span>&quot;);
+</span><span>        </span><span style="color:#bf616a;">self
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">manual_cleanup</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) {
+</span><span>        </span><span style="color:#b48ead;">if </span><span>!</span><span style="color:#bf616a;">self</span><span>.cleanup_performed {
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">RAII: Manual cleanup performed for: </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#bf616a;">self</span><span>.data);
+</span><span>            </span><span style="color:#bf616a;">self</span><span>.cleanup_performed = </span><span style="color:#d08770;">true</span><span>;
+</span><span>            </span><span style="color:#a7adba;">// Perform actual cleanup here
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>Drop </span><span style="color:#b48ead;">for </span><span>ConditionalResource {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">drop</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) {
+</span><span>        </span><span style="color:#b48ead;">if </span><span style="color:#bf616a;">self</span><span>.should_cleanup &amp;&amp; !</span><span style="color:#bf616a;">self</span><span>.cleanup_performed {
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">RAII: Automatic cleanup for: </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#bf616a;">self</span><span>.data);
+</span><span>            </span><span style="color:#a7adba;">// Perform cleanup
+</span><span>        } </span><span style="color:#b48ead;">else if </span><span style="color:#bf616a;">self</span><span>.cleanup_performed {
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">RAII: Resource already cleaned up: </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#bf616a;">self</span><span>.data);
+</span><span>        } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">RAII: Cleanup disabled for: </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#bf616a;">self</span><span>.data);
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// Normal RAII cleanup
+</span><span>    {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> _resource1 = ConditionalResource::new(&quot;</span><span style="color:#a3be8c;">Auto-cleanup</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>());
+</span><span>    } </span><span style="color:#a7adba;">// Automatic cleanup via Drop
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Disabled cleanup
+</span><span>    {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> _resource2 = ConditionalResource::new(&quot;</span><span style="color:#a3be8c;">No-cleanup</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>())
+</span><span>            .</span><span style="color:#96b5b4;">disable_cleanup</span><span>();
+</span><span>    } </span><span style="color:#a7adba;">// No cleanup performed
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Manual cleanup before Drop
+</span><span>    {
+</span><span>        </span><span style="color:#b48ead;">let mut</span><span> resource3 = ConditionalResource::new(&quot;</span><span style="color:#a3be8c;">Manual</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>());
+</span><span>        resource3.</span><span style="color:#96b5b4;">manual_cleanup</span><span>();
+</span><span>    } </span><span style="color:#a7adba;">// Drop recognizes cleanup already performed
+</span><span>}
+</span></code></pre>
+<h2 id="raii-best-practices-in-rust">RAII Best Practices in Rust</h2>
+<h3 id="1-design-for-automatic-cleanup"><strong>1. Design for Automatic Cleanup</strong></h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Good: Resources automatically managed
+</span><span style="color:#b48ead;">struct </span><span>GoodFileProcessor {
+</span><span>    </span><span style="color:#bf616a;">input</span><span>: std::fs::File,
+</span><span>    </span><span style="color:#bf616a;">output</span><span>: std::fs::File,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>GoodFileProcessor {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#bf616a;">input_path</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>, </span><span style="color:#bf616a;">output_path</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; std::io::Result {
+</span><span>        Ok(GoodFileProcessor {
+</span><span>            input: std::fs::File::open(input_path)?,
+</span><span>            output: std::fs::File::create(output_path)?,
+</span><span>        })
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Files automatically closed when struct is dropped
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Avoid: Manual resource management
+</span><span style="color:#b48ead;">struct </span><span>BadFileProcessor {
+</span><span>    </span><span style="color:#bf616a;">input_path</span><span>: String,
+</span><span>    </span><span style="color:#bf616a;">output_path</span><span>: String,
+</span><span>    </span><span style="color:#bf616a;">files_open</span><span>: </span><span style="color:#b48ead;">bool</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>BadFileProcessor {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">open_files</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) -&gt; std::io::Result {
+</span><span>        </span><span style="color:#a7adba;">// Manual file opening - error-prone
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.files_open = </span><span style="color:#d08770;">true</span><span>;
+</span><span>        Ok(())
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">close_files</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) {
+</span><span>        </span><span style="color:#a7adba;">// Manual closing - easy to forget
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.files_open = </span><span style="color:#d08770;">false</span><span>;
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h3 id="2-leverage-scope-based-management"><strong>2. Leverage Scope-Based Management</strong></h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">scope_based_raii</span><span>() {
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Starting operations</span><span>&quot;);
+</span><span>
+</span><span>    {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> _database = DatabaseConnection::new(&quot;</span><span style="color:#a3be8c;">main_db</span><span>&quot;);
+</span><span>        </span><span style="color:#b48ead;">let</span><span> _cache = CacheManager::new(</span><span style="color:#d08770;">1000</span><span>);
+</span><span>        </span><span style="color:#b48ead;">let</span><span> _logger = Logger::new(&quot;</span><span style="color:#a3be8c;">operations.log</span><span>&quot;);
+</span><span>
+</span><span>        </span><span style="color:#a7adba;">// Perform operations
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">All resources active</span><span>&quot;);
+</span><span>
+</span><span>        </span><span style="color:#a7adba;">// All resources automatically cleaned up at end of scope
+</span><span>    }
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">All resources cleaned up via RAII</span><span>&quot;);
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Dummy implementations for demonstration
+</span><span style="color:#b48ead;">struct </span><span>DatabaseConnection(String);
+</span><span style="color:#b48ead;">impl </span><span>DatabaseConnection {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#bf616a;">name</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">RAII: Opening database </span><span style="color:#d08770;">{}</span><span>&quot;, name);
+</span><span>        DatabaseConnection(name.</span><span style="color:#96b5b4;">to_string</span><span>())
+</span><span>    }
+</span><span>}
+</span><span style="color:#b48ead;">impl </span><span>Drop </span><span style="color:#b48ead;">for </span><span>DatabaseConnection {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">drop</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">RAII: Closing database </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#bf616a;">self</span><span>.</span><span style="color:#d08770;">0</span><span>);
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">struct </span><span>CacheManager(</span><span style="color:#b48ead;">usize</span><span>);
+</span><span style="color:#b48ead;">impl </span><span>CacheManager {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#bf616a;">size</span><span>: </span><span style="color:#b48ead;">usize</span><span>) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">RAII: Initializing cache with </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> entries</span><span>&quot;, size);
+</span><span>        CacheManager(size)
+</span><span>    }
+</span><span>}
+</span><span style="color:#b48ead;">impl </span><span>Drop </span><span style="color:#b48ead;">for </span><span>CacheManager {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">drop</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">RAII: Flushing and closing cache</span><span>&quot;);
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">struct </span><span>Logger(String);
+</span><span style="color:#b48ead;">impl </span><span>Logger {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#bf616a;">filename</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">RAII: Opening log file </span><span style="color:#d08770;">{}</span><span>&quot;, filename);
+</span><span>        Logger(filename.</span><span style="color:#96b5b4;">to_string</span><span>())
+</span><span>    }
+</span><span>}
+</span><span style="color:#b48ead;">impl </span><span>Drop </span><span style="color:#b48ead;">for </span><span>Logger {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">drop</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">RAII: Closing log file </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#bf616a;">self</span><span>.</span><span style="color:#d08770;">0</span><span>);
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h3 id="3-handle-errors-gracefully-in-drop"><strong>3. Handle Errors Gracefully in Drop</strong></h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">struct </span><span>SafeResource {
+</span><span>    </span><span style="color:#bf616a;">name</span><span>: String,
+</span><span>    </span><span style="color:#bf616a;">critical</span><span>: </span><span style="color:#b48ead;">bool</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>Drop </span><span style="color:#b48ead;">for </span><span>SafeResource {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">drop</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) {
+</span><span>        </span><span style="color:#b48ead;">match </span><span style="color:#bf616a;">self</span><span>.</span><span style="color:#96b5b4;">cleanup</span><span>() {
+</span><span>            Ok(()) =&gt; println!(&quot;</span><span style="color:#a3be8c;">RAII: Successfully cleaned up </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#bf616a;">self</span><span>.name),
+</span><span>            Err(e) =&gt; {
+</span><span>                </span><span style="color:#b48ead;">if </span><span style="color:#bf616a;">self</span><span>.critical {
+</span><span>                    eprintln!(&quot;</span><span style="color:#a3be8c;">CRITICAL: Failed to cleanup </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">: </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#bf616a;">self</span><span>.name, e);
+</span><span>                    </span><span style="color:#a7adba;">// In critical cases, might want to terminate
+</span><span>                } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>                    eprintln!(&quot;</span><span style="color:#a3be8c;">Warning: Cleanup error for </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">: </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#bf616a;">self</span><span>.name, e);
+</span><span>                    </span><span style="color:#a7adba;">// Non-critical resources can continue
+</span><span>                }
+</span><span>            }
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>SafeResource {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#bf616a;">name</span><span>: String, </span><span style="color:#bf616a;">critical</span><span>: </span><span style="color:#b48ead;">bool</span><span>) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        SafeResource { name, critical }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">cleanup</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; Result {
+</span><span>        </span><span style="color:#a7adba;">// Simulate cleanup that might fail
+</span><span>        </span><span style="color:#b48ead;">if </span><span style="color:#bf616a;">self</span><span>.name.</span><span style="color:#96b5b4;">contains</span><span>(&quot;</span><span style="color:#a3be8c;">fail</span><span>&quot;) {
+</span><span>            Err(&quot;</span><span style="color:#a3be8c;">Simulated cleanup failure</span><span>&quot;)
+</span><span>        } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>            Ok(())
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> _safe = SafeResource::new(&quot;</span><span style="color:#a3be8c;">safe_resource</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), </span><span style="color:#d08770;">false</span><span>);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> _critical = SafeResource::new(&quot;</span><span style="color:#a3be8c;">critical_resource</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), </span><span style="color:#d08770;">true</span><span>);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> _failing = SafeResource::new(&quot;</span><span style="color:#a3be8c;">fail_resource</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), </span><span style="color:#d08770;">false</span><span>);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// All resources cleaned up with appropriate error handling
+</span><span>}
+</span></code></pre>
+<h3 id="4-use-raii-for-complex-state-management"><strong>4. Use RAII for Complex State Management</strong></h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">struct </span><span>StateMachine {
+</span><span>    </span><span style="color:#bf616a;">state</span><span>: String,
+</span><span>    </span><span style="color:#bf616a;">transitions</span><span>: Vec,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>StateMachine {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#bf616a;">initial_state</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">RAII: Starting state machine in state &#39;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">&#39;</span><span>&quot;, initial_state);
+</span><span>        StateMachine {
+</span><span>            state: initial_state.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>            transitions: vec![format!(&quot;</span><span style="color:#a3be8c;">START -&gt; </span><span style="color:#d08770;">{}</span><span>&quot;, initial_state)],
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">transition_to</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">new_state</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">RAII: State transition </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> -&gt; </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#bf616a;">self</span><span>.state, new_state);
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.transitions.</span><span style="color:#96b5b4;">push</span><span>(format!(&quot;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> -&gt; </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#bf616a;">self</span><span>.state, new_state));
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.state = new_state.</span><span style="color:#96b5b4;">to_string</span><span>();
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>Drop </span><span style="color:#b48ead;">for </span><span>StateMachine {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">drop</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">RAII: Finalizing state machine</span><span>&quot;);
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Final state: </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#bf616a;">self</span><span>.state);
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Transition history:</span><span>&quot;);
+</span><span>        </span><span style="color:#b48ead;">for</span><span> transition in &amp;</span><span style="color:#bf616a;">self</span><span>.transitions {
+</span><span>            println!(&quot;  </span><span style="color:#d08770;">{}</span><span>&quot;, transition);
+</span><span>        }
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">RAII: State machine cleaned up</span><span>&quot;);
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    {
+</span><span>        </span><span style="color:#b48ead;">let mut</span><span> machine = StateMachine::new(&quot;</span><span style="color:#a3be8c;">INIT</span><span>&quot;);
+</span><span>        machine.</span><span style="color:#96b5b4;">transition_to</span><span>(&quot;</span><span style="color:#a3be8c;">PROCESSING</span><span>&quot;);
+</span><span>        machine.</span><span style="color:#96b5b4;">transition_to</span><span>(&quot;</span><span style="color:#a3be8c;">COMPLETE</span><span>&quot;);
+</span><span>    } </span><span style="color:#a7adba;">// Complete state history logged via RAII
+</span><span>}
+</span></code></pre>
+<h2 id="performance-benefits-of-raii-in-rust">Performance Benefits of RAII in Rust</h2>
+<h3 id="zero-cost-abstractions">Zero-Cost Abstractions</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>std::time::Instant;
+</span><span>
+</span><span style="color:#b48ead;">struct </span><span>TimedResource {
+</span><span>    </span><span style="color:#bf616a;">name</span><span>: String,
+</span><span>    </span><span style="color:#bf616a;">start_time</span><span>: Instant,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>TimedResource {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#bf616a;">name</span><span>: String) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        TimedResource {
+</span><span>            name,
+</span><span>            start_time: Instant::now(),
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>Drop </span><span style="color:#b48ead;">for </span><span>TimedResource {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">drop</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> duration = </span><span style="color:#bf616a;">self</span><span>.start_time.</span><span style="color:#96b5b4;">elapsed</span><span>();
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">RAII: Resource &#39;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">&#39; lived for </span><span style="color:#d08770;">{:?}</span><span>&quot;, </span><span style="color:#bf616a;">self</span><span>.name, duration);
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">benchmark_raii_overhead</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> start = Instant::now();
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Create and destroy many RAII resources
+</span><span>    </span><span style="color:#b48ead;">for</span><span> i in </span><span style="color:#d08770;">0</span><span>..</span><span style="color:#d08770;">100_000 </span><span>{
+</span><span>        </span><span style="color:#b48ead;">let</span><span> _resource = TimedResource::new(format!(&quot;</span><span style="color:#a3be8c;">resource_</span><span style="color:#d08770;">{}</span><span>&quot;, i));
+</span><span>        </span><span style="color:#a7adba;">// Resource automatically destroyed at end of loop iteration
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> total_time = start.</span><span style="color:#96b5b4;">elapsed</span><span>();
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">RAII overhead for 100k resources: </span><span style="color:#d08770;">{:?}</span><span>&quot;, total_time);
+</span><span>    </span><span style="color:#a7adba;">// Typically shows minimal overhead due to compile-time optimization
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#96b5b4;">benchmark_raii_overhead</span><span>();
+</span><span>}
+</span></code></pre>
+<h2 id="common-raii-pitfalls-and-solutions">Common RAII Pitfalls and Solutions</h2>
+<h3 id="1-avoid-panic-in-drop"><strong>1. Avoid Panic in Drop</strong></h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">struct </span><span>PanickingResource;
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>Drop </span><span style="color:#b48ead;">for </span><span>PanickingResource {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">drop</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) {
+</span><span>        </span><span style="color:#a7adba;">// DON&#39;T DO THIS - can cause double panic and program termination
+</span><span>        </span><span style="color:#a7adba;">// panic!(&quot;Resource cleanup failed!&quot;);
+</span><span>
+</span><span>        </span><span style="color:#a7adba;">// DO THIS INSTEAD - handle errors gracefully
+</span><span>        </span><span style="color:#b48ead;">if let </span><span>Err(e) = </span><span style="color:#bf616a;">self</span><span>.</span><span style="color:#96b5b4;">safe_cleanup</span><span>() {
+</span><span>            eprintln!(&quot;</span><span style="color:#a3be8c;">Cleanup warning: </span><span style="color:#d08770;">{}</span><span>&quot;, e);
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>PanickingResource {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">safe_cleanup</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; Result {
+</span><span>        </span><span style="color:#a7adba;">// Perform cleanup that might fail
+</span><span>        Ok(())
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h3 id="2-handle-drop-order-dependencies"><strong>2. Handle Drop Order Dependencies</strong></h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">struct </span><span>DatabaseConnection {
+</span><span>    </span><span style="color:#bf616a;">name</span><span>: String,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">struct </span><span>DatabaseQuery {
+</span><span>    </span><span style="color:#bf616a;">connection_name</span><span>: String,
+</span><span>    </span><span style="color:#bf616a;">query</span><span>: String,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>Drop </span><span style="color:#b48ead;">for </span><span>DatabaseConnection {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">drop</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">RAII: Closing database connection </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#bf616a;">self</span><span>.name);
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>Drop </span><span style="color:#b48ead;">for </span><span>DatabaseQuery {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">drop</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">RAII: Finalizing query &#39;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">&#39; on connection &#39;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">&#39;</span><span>&quot;,
+</span><span>                 </span><span style="color:#bf616a;">self</span><span>.query, </span><span style="color:#bf616a;">self</span><span>.connection_name);
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> connection = DatabaseConnection {
+</span><span>        name: &quot;</span><span style="color:#a3be8c;">main_db</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> query = DatabaseQuery {
+</span><span>        connection_name: connection.name.</span><span style="color:#96b5b4;">clone</span><span>(),
+</span><span>        query: &quot;</span><span style="color:#a3be8c;">SELECT * FROM users</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Drop order: query first, then connection (reverse of creation order)
+</span><span>    </span><span style="color:#a7adba;">// This ensures query is cleaned up before its connection
+</span><span>}
+</span></code></pre>
+<h2 id="raii-vs-manual-resource-management">RAII vs Manual Resource Management</h2>
+<h3 id="traditional-manual-management-what-raii-prevents">Traditional Manual Management (What RAII Prevents)</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// This pattern is NOT used in idiomatic Rust
+</span><span style="color:#b48ead;">struct </span><span>ManualResource {
+</span><span>    </span><span style="color:#bf616a;">data</span><span>: Option&gt;,
+</span><span>    </span><span style="color:#bf616a;">allocated</span><span>: </span><span style="color:#b48ead;">bool</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>ManualResource {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>() -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        ManualResource {
+</span><span>            data: None,
+</span><span>            allocated: </span><span style="color:#d08770;">false</span><span>,
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">allocate</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">size</span><span>: </span><span style="color:#b48ead;">usize</span><span>) -&gt; Result {
+</span><span>        </span><span style="color:#b48ead;">if </span><span style="color:#bf616a;">self</span><span>.allocated {
+</span><span>            </span><span style="color:#b48ead;">return </span><span>Err(&quot;</span><span style="color:#a3be8c;">Already allocated</span><span>&quot;);
+</span><span>        }
+</span><span>
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.data = Some(vec![</span><span style="color:#d08770;">0</span><span>; size]);
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.allocated = </span><span style="color:#d08770;">true</span><span>;
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Manual: Resource allocated</span><span>&quot;);
+</span><span>        Ok(())
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">deallocate</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) -&gt; Result {
+</span><span>        </span><span style="color:#b48ead;">if </span><span>!</span><span style="color:#bf616a;">self</span><span>.allocated {
+</span><span>            </span><span style="color:#b48ead;">return </span><span>Err(&quot;</span><span style="color:#a3be8c;">Not allocated</span><span>&quot;);
+</span><span>        }
+</span><span>
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.data = None;
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.allocated = </span><span style="color:#d08770;">false</span><span>;
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Manual: Resource deallocated</span><span>&quot;);
+</span><span>        Ok(())
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Problems with manual management:
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">problematic_manual_usage</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> resource = ManualResource::new();
+</span><span>    resource.</span><span style="color:#96b5b4;">allocate</span><span>(</span><span style="color:#d08770;">1024</span><span>).</span><span style="color:#96b5b4;">unwrap</span><span>();
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Easy to forget deallocation
+</span><span>    </span><span style="color:#a7adba;">// Easy to double-deallocate
+</span><span>    </span><span style="color:#a7adba;">// Error handling complicates cleanup
+</span><span>    </span><span style="color:#a7adba;">// Resource leaks on early returns
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Manual cleanup required:
+</span><span>    resource.</span><span style="color:#96b5b4;">deallocate</span><span>().</span><span style="color:#96b5b4;">unwrap</span><span>();
+</span><span>}
+</span></code></pre>
+<h3 id="raii-solution-idiomatic-rust">RAII Solution (Idiomatic Rust)</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">struct </span><span>RaiiResource {
+</span><span>    </span><span style="color:#bf616a;">data</span><span>: Vec,
+</span><span>    </span><span style="color:#bf616a;">name</span><span>: String,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>RaiiResource {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#bf616a;">name</span><span>: String, </span><span style="color:#bf616a;">size</span><span>: </span><span style="color:#b48ead;">usize</span><span>) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">RAII: Allocating resource &#39;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">&#39;</span><span>&quot;, name);
+</span><span>        RaiiResource {
+</span><span>            data: vec![</span><span style="color:#d08770;">0</span><span>; size],
+</span><span>            name,
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">use_resource</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) {
+</span><span>        </span><span style="color:#a7adba;">// Use the resource
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.data[</span><span style="color:#d08770;">0</span><span>] = </span><span style="color:#d08770;">42</span><span>;
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>Drop </span><span style="color:#b48ead;">for </span><span>RaiiResource {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">drop</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">RAII: Automatically deallocating resource &#39;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">&#39;</span><span>&quot;, </span><span style="color:#bf616a;">self</span><span>.name);
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">clean_raii_usage</span><span>() -&gt; Result {
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> resource = RaiiResource::new(&quot;</span><span style="color:#a3be8c;">main_resource</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), </span><span style="color:#d08770;">1024</span><span>);
+</span><span>
+</span><span>    resource.</span><span style="color:#96b5b4;">use_resource</span><span>();
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Early return - resource still cleaned up automatically
+</span><span>    </span><span style="color:#b48ead;">if </span><span style="color:#d08770;">true </span><span>{
+</span><span>        </span><span style="color:#b48ead;">return </span><span>Ok(());
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Resource automatically cleaned up on any exit path
+</span><span>    Ok(())
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#96b5b4;">clean_raii_usage</span><span>().</span><span style="color:#96b5b4;">unwrap</span><span>();
+</span><span>}
+</span></code></pre>
+<h2 id="integration-with-rust-s-ownership-system">Integration with Rust's Ownership System</h2>
+<p>RAII works seamlessly with Rust's ownership, borrowing, and lifetime systems[1][3]:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">ownership_and_raii</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> resource1 = String::from(&quot;</span><span style="color:#a3be8c;">First resource</span><span>&quot;);     </span><span style="color:#a7adba;">// RAII managed
+</span><span>
+</span><span>    {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> resource2 = String::from(&quot;</span><span style="color:#a3be8c;">Second resource</span><span>&quot;); </span><span style="color:#a7adba;">// RAII managed
+</span><span>
+</span><span>        </span><span style="color:#a7adba;">// Borrowing doesn&#39;t affect RAII
+</span><span>        </span><span style="color:#b48ead;">let</span><span> borrowed = &amp;resource1;
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Borrowed: </span><span style="color:#d08770;">{}</span><span>&quot;, borrowed);
+</span><span>
+</span><span>        </span><span style="color:#a7adba;">// Move transfers RAII responsibility
+</span><span>        </span><span style="color:#b48ead;">let</span><span> moved_resource = resource2;  </span><span style="color:#a7adba;">// ownership transferred
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Moved: </span><span style="color:#d08770;">{}</span><span>&quot;, moved_resource);
+</span><span>
+</span><span>        </span><span style="color:#a7adba;">// resource2 no longer valid, moved_resource will be dropped
+</span><span>    } </span><span style="color:#a7adba;">// moved_resource dropped here via RAII
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// resource1 still valid
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Still valid: </span><span style="color:#d08770;">{}</span><span>&quot;, resource1);
+</span><span>} </span><span style="color:#a7adba;">// resource1 dropped here via RAII
+</span></code></pre>
+<h2 id="testing-raii-implementation">Testing RAII Implementation</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span>#[</span><span style="color:#bf616a;">cfg</span><span>(test)]
+</span><span style="color:#b48ead;">mod </span><span>tests {
+</span><span>    </span><span style="color:#b48ead;">use super</span><span>::*;
+</span><span>    </span><span style="color:#b48ead;">use </span><span>std::sync::{Arc, Mutex};
+</span><span>
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Clone)]
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>TestTracker {
+</span><span>        </span><span style="color:#bf616a;">counter</span><span>: Arc&gt;,
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">impl </span><span>TestTracker {
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>() -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>            TestTracker {
+</span><span>                counter: Arc::new(Mutex::new(</span><span style="color:#d08770;">0</span><span>)),
+</span><span>            }
+</span><span>        }
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">increment</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) {
+</span><span>            *</span><span style="color:#bf616a;">self</span><span>.counter.</span><span style="color:#96b5b4;">lock</span><span>().</span><span style="color:#96b5b4;">unwrap</span><span>() += </span><span style="color:#d08770;">1</span><span>;
+</span><span>        }
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">decrement</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) {
+</span><span>            *</span><span style="color:#bf616a;">self</span><span>.counter.</span><span style="color:#96b5b4;">lock</span><span>().</span><span style="color:#96b5b4;">unwrap</span><span>() -= </span><span style="color:#d08770;">1</span><span>;
+</span><span>        }
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">count</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; </span><span style="color:#b48ead;">i32 </span><span>{
+</span><span>            *</span><span style="color:#bf616a;">self</span><span>.counter.</span><span style="color:#96b5b4;">lock</span><span>().</span><span style="color:#96b5b4;">unwrap</span><span>()
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>TrackedResource {
+</span><span>        </span><span style="color:#bf616a;">id</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>        </span><span style="color:#bf616a;">tracker</span><span>: TestTracker,
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">impl </span><span>TrackedResource {
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#bf616a;">id</span><span>: </span><span style="color:#b48ead;">u32</span><span>, </span><span style="color:#bf616a;">tracker</span><span>: TestTracker) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>            tracker.</span><span style="color:#96b5b4;">increment</span><span>();
+</span><span>            TrackedResource { id, tracker }
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">impl </span><span>Drop </span><span style="color:#b48ead;">for </span><span>TrackedResource {
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">drop</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) {
+</span><span>            </span><span style="color:#bf616a;">self</span><span>.tracker.</span><span style="color:#96b5b4;">decrement</span><span>();
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    #[</span><span style="color:#bf616a;">test</span><span>]
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">test_raii_cleanup</span><span>() {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> tracker = TestTracker::new();
+</span><span>        assert_eq!(tracker.</span><span style="color:#96b5b4;">count</span><span>(), </span><span style="color:#d08770;">0</span><span>);
+</span><span>
+</span><span>        {
+</span><span>            </span><span style="color:#b48ead;">let</span><span> _resource1 = TrackedResource::new(</span><span style="color:#d08770;">1</span><span>, tracker.</span><span style="color:#96b5b4;">clone</span><span>());
+</span><span>            </span><span style="color:#b48ead;">let</span><span> _resource2 = TrackedResource::new(</span><span style="color:#d08770;">2</span><span>, tracker.</span><span style="color:#96b5b4;">clone</span><span>());
+</span><span>            assert_eq!(tracker.</span><span style="color:#96b5b4;">count</span><span>(), </span><span style="color:#d08770;">2</span><span>);
+</span><span>        } </span><span style="color:#a7adba;">// Both resources dropped here
+</span><span>
+</span><span>        assert_eq!(tracker.</span><span style="color:#96b5b4;">count</span><span>(), </span><span style="color:#d08770;">0</span><span>); </span><span style="color:#a7adba;">// RAII cleanup verified
+</span><span>    }
+</span><span>
+</span><span>    #[</span><span style="color:#bf616a;">test</span><span>]
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">test_early_drop</span><span>() {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> tracker = TestTracker::new();
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">let</span><span> resource = TrackedResource::new(</span><span style="color:#d08770;">1</span><span>, tracker.</span><span style="color:#96b5b4;">clone</span><span>());
+</span><span>        assert_eq!(tracker.</span><span style="color:#96b5b4;">count</span><span>(), </span><span style="color:#d08770;">1</span><span>);
+</span><span>
+</span><span>        std::mem::drop(resource); </span><span style="color:#a7adba;">// Force early drop
+</span><span>        assert_eq!(tracker.</span><span style="color:#96b5b4;">count</span><span>(), </span><span style="color:#d08770;">0</span><span>); </span><span style="color:#a7adba;">// RAII cleanup immediate
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h2 id="summary-and-key-takeaways">Summary and Key Takeaways</h2>
+<h3 id="core-benefits-of-raii-in-rust"><strong>Core Benefits of RAII in Rust</strong></h3>
+<ul>
+<li><strong>Automatic resource management</strong> - No manual cleanup required[1]</li>
+<li><strong>Memory safety</strong> - Prevents leaks, use-after-free, and double-free bugs</li>
+<li><strong>Exception safety</strong> - Resources cleaned up even on panics or early returns</li>
+<li><strong>Zero-cost abstractions</strong> - No runtime overhead for resource management[3]</li>
+<li><strong>Deterministic cleanup</strong> - Resources freed at predictable, compile-time points</li>
+</ul>
+<h3 id="key-principles"><strong>Key Principles</strong></h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// RAII Principles in Action
+</span><span style="color:#b48ead;">struct </span><span>ExampleResource {
+</span><span>    </span><span style="color:#bf616a;">name</span><span>: String,
+</span><span>    </span><span style="color:#bf616a;">data</span><span>: Vec,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>ExampleResource {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#bf616a;">name</span><span>: String, </span><span style="color:#bf616a;">size</span><span>: </span><span style="color:#b48ead;">usize</span><span>) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        </span><span style="color:#a7adba;">// 1. Resource Acquisition during Initialization
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">RAII: Acquiring </span><span style="color:#d08770;">{}</span><span>&quot;, name);
+</span><span>        ExampleResource {
+</span><span>            name,
+</span><span>            data: vec![</span><span style="color:#d08770;">0</span><span>; size], </span><span style="color:#a7adba;">// Memory allocated here
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>Drop </span><span style="color:#b48ead;">for </span><span>ExampleResource {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">drop</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) {
+</span><span>        </span><span style="color:#a7adba;">// 2. Resource Release during Destruction
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">RAII: Releasing </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#bf616a;">self</span><span>.name);
+</span><span>        </span><span style="color:#a7adba;">// Memory automatically freed when Vec is dropped
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// 3. Lifetime tied to scope
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">demonstrate_principles</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> resource = ExampleResource::new(&quot;</span><span style="color:#a3be8c;">demo</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), </span><span style="color:#d08770;">1024</span><span>);
+</span><span>    </span><span style="color:#a7adba;">// Resource active here
+</span><span>} </span><span style="color:#a7adba;">// Resource automatically destroyed here
+</span></code></pre>
+<h3 id="when-to-use-raii"><strong>When to Use RAII</strong></h3>
+<p><strong>Use RAII for:</strong></p>
+<ul>
+<li><strong>File handles</strong> - Automatic closing and flushing</li>
+<li><strong>Network connections</strong> - Graceful connection termination</li>
+<li><strong>Locks and mutexes</strong> - Guaranteed lock release</li>
+<li><strong>Database connections</strong> - Connection pool management</li>
+<li><strong>Memory allocations</strong> - Automatic deallocation</li>
+<li><strong>Custom resources</strong> - Any resource requiring cleanup</li>
+</ul>
+<h3 id="performance-characteristics"><strong>Performance Characteristics</strong></h3>
+<ul>
+<li><strong>Compile-time optimization</strong> - Drop calls are often optimized away</li>
+<li><strong>Stack-based cleanup</strong> - Follows natural stack unwinding</li>
+<li><strong>No garbage collection overhead</strong> - Deterministic, immediate cleanup</li>
+<li><strong>Cache-friendly</strong> - Resources freed in stack order</li>
+</ul>
+<h3 id="memory-safety-guarantees"><strong>Memory Safety Guarantees</strong></h3>
+<p>RAII in Rust provides <strong>complete memory safety</strong>:</p>
+<ul>
+<li><strong>No resource leaks</strong> - Automatic cleanup prevents leaks</li>
+<li><strong>No use-after-free</strong> - Ownership system prevents access after Drop</li>
+<li><strong>No double-free</strong> - Move semantics ensure single ownership</li>
+<li><strong>Exception safety</strong> - Cleanup occurs even during panics</li>
+</ul>
+<p><strong>RAII is fundamental to Rust's zero-cost abstractions philosophy</strong>, providing C++-like performance with memory safety guarantees that surpass even garbage-collected languages. Understanding and leveraging RAII patterns is essential for writing idiomatic, efficient, and safe Rust code.</p>
+<ol>
+<li>https://doc.rust-lang.org/rust-by-example/scope/raii.html</li>
+<li>https://rust-unofficial.github.io/patterns/patterns/behavioural/RAII.html</li>
+<li>https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html</li>
+<li>https://stackoverflow.com/questions/75568035/rust-solution-for-raii-pattern-to-modify-another-object-on-new-and-drop</li>
+<li>https://www.thecodedmessage.com/posts/raii/</li>
+<li>https://users.rust-lang.org/t/how-to-do-raii-pattern-with-rust/36881</li>
+<li>https://aloso.github.io/2021/03/18/raii-guards.html</li>
+<li>https://www.geeksforgeeks.org/rust/rust-raii-enforcement/</li>
+<li>https://stackoverflow.com/questions/48065129/how-does-rust-enforce-implement-raii</li>
+<li>https://effective-rust.com/raii.html</li>
+<li>https://www.youtube.com/watch?v=7IqTXoYR9hk</li>
+<li>https://news.ycombinator.com/item?id=42291417</li>
+<li>https://www.reddit.com/r/rust/comments/y1dwg6/blog_post_my_perspective_on_raii_and_memory/</li>
+<li>https://en.wikipedia.org/wiki/Resource_acquisition_is_initialization</li>
+<li>https://www.youtube.com/watch?v=LU62nNsigjs</li>
+<li>https://stackoverflow.com/questions/2321511/what-is-meant-by-resource-acquisition-is-initialization-raii</li>
+<li>https://web.mit.edu/rust-lang_v1.25/arch/amd64_ubuntu1404/share/doc/rust/html/rust-by-example/scope/raii.html</li>
+<li>https://labex.io/tutorials/rust-rust-raii-resource-management-99194</li>
+<li>https://moldstud.com/articles/p-common-rust-patterns-boost-your-code-quality-and-readability</li>
+<li>https://www.eventhelix.com/design-patterns/resource-manager/</li>
+<li>https://www.youtube.com/watch?v=AnFaf-L_DfE</li>
+<li>https://doc.rust-lang.org/nomicon/obrm.html</li>
+<li>https://www.reddit.com/r/rust/comments/uf7yoy/design_patternguidelines_to_architecture_rust_code/</li>
+<li>https://web.mit.edu/rust-lang_v1.25/arch/amd64_ubuntu1404/share/doc/rust/html/nomicon/obrm.html</li>
+<li>https://www.hackingwithrust.net/2023/10/15/an-object-pool-in-rust-two-implementations/</li>
+<li>https://www.cs.brandeis.edu/~cs146a/rust/rustbyexample-02-21-2015/raii.html</li>
+<li>https://java-design-patterns.com/patterns/resource-acquisition-is-initialization/</li>
+<li>https://www.geeksforgeeks.org/cpp/resource-acquisition-is-initialization/</li>
+<li>https://en.cppreference.com/w/cpp/language/raii.html</li>
+<li>https://learn.microsoft.com/en-us/cpp/cpp/object-lifetime-and-resource-management-modern-cpp?view=msvc-170</li>
+<li>https://www.youtube.com/watch?v=uT3wL9K0DoQ</li>
+<li>https://theastarbulletin.news/about-rust-and-raii-memory-management-3c8f77c525ac</li>
+</ol>
+
+    
+        </div>
+
+    </article>
+</main>
+
+
+    <script type="text/javascript" src="http://localhost/elasticlunr.min.js" defer></script>
+    <script type="text/javascript" src="http://localhost/search_index.en.js" defer></script>
+<script type="text/javascript" src="http://localhost/js.js" defer></script>
+
+</body>
+</html>

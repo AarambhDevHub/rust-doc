@@ -1,0 +1,1543 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://localhost/main.css">
+    <link rel="icon" href="https://www.rust-lang.org/static/images/favicon-16x16.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Rust Programming Course! | Vector Methods: push, pop, iter </title>
+</head>
+<body>
+
+<main>
+    
+    <nav>
+            <a href="http:&#x2F;&#x2F;localhost">
+                        <img src="https://www.rust-lang.org/static/images/rust-logo-blk.svg" alt="logo"/>
+                    </a>
+                <!-- -->
+
+            <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+            <div id="trees">
+                <input class="tree-toggle" type="checkbox" id="day-1-introduction"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-1-introduction">Day 1: Introduction</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 1/chapter-1/">What is Rust and why use it?</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-2/">Installing Rust Toolchain (rustup, cargo)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-3/">Setting up Development (VS Code + Hello World)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-4/">Understanding Cargo Project Structure</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-2-basic-syntax-variables"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-2-basic-syntax-variables">Day 2: Basic Syntax &amp; Variables</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 2/chapter-1/">Variables and Mutability in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-2/">Data Types in Rust: Integers, Floats, Booleans, and Characters</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-3/">Constants vs Variables</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-4/">Understanding Shadowing in Rust: A Practical Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-5/">Basic Input&#x2F;Output</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-3-functions-control-flow"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-3-functions-control-flow">Day 3: Functions &amp; Control Flow</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 3/chapter-1/">Function Syntax and Parameters in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-2/">Return Values and Expressions vs Statements</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-3/">If&#x2F;Else Statements in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-4/">Match Expressions in Rust: Powerful Pattern Matching</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-5/">Loops in Rust: loop, while, for Explained</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-4-data-types-deep-dive"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-4-data-types-deep-dive">Day 4: Data Types Deep Dive</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 4/chapter-1/">Compound Types (Tuples, Arrays)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-2/">String vs &amp;str in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-3/">Vector Basics in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-4/">Type Annotations and Inference in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-5/">Practical Rust Exercises</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-5-practice-review"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-5-practice-review">Day 5: Practice &amp; Review</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 5/chapter-1/">Day 5: Practice &amp; Review</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-6-ownership-fundamentals"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-6-ownership-fundamentals">Day 6: Ownership Fundamentals</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 6/chapter-1/">Ownership in Rust: A Detailed Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-2/">Stack vs Heap in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-3/">Understanding Ownership in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-4/">Move Semantics in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-5/">Copy Trait in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-7-references-borrowing"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-7-references-borrowing">Day 7: References &amp; Borrowing</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 7/chapter-1/">Immutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-2/">Mutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-3/">Borrowing Rules</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-4/">Reference Lifetime Basics</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-5/">Common Borrowing Errors and Solutions</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-8-slices"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-8-slices">Day 8: Slices</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 8/chapter-1/">String Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-2/">Array Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-3/">Slice Syntax and Usage</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-4/">Practical Applications</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-5/">Memory Safety Benefits</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-9-advanced-ownership"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-9-advanced-ownership">Day 9: Advanced Ownership</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 9/chapter-1/">Clone Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-2/">Drop Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-3/">RAII Pattern</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-4/">Memory Management Comparison with Other Languages</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-5/">Best Practices (Advanced Ownership)</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-10-ownership-practice"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-10-ownership-practice">Day 10: Ownership Practice</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 10/chapter-1/">Complex Ownership Scenarios</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-2/">Debugging Ownership Errors</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-3/">Code Refactoring Exercises</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-4/">Group Problem-Solving</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-11-structs-basics"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-11-structs-basics">Day 11: Structs Basics</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 11/chapter-1/">Defining and Instantiating Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-2/">Field Access and Modification</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-3/">Tuple Structs and Unit Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-4/">Struct Update Syntax</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-5/">Ownership of Struct Data</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-12-methods-associated-functions"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-12-methods-associated-functions">Day 12: Methods &amp; Associated Functions</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 12/chapter-1/">Implementing Methods with impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-2/">&amp;self, &amp;mut self, and self</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-3/">Associated Functions (like Constructors)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-4/">Multiple impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-5/">Method Chaining</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-13-advanced-struct-concepts"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-13-advanced-struct-concepts">Day 13: Advanced Struct Concepts</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 13/chapter-1/">Struct Lifetime Parameters</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-2/">Debug Trait and Custom Formatting</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-3/">Builder Pattern Implementation</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-4/">Struct Composition</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-5/">Best Practices for Struct Design</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-14-enums-pattern-matching"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-14-enums-pattern-matching">Day 14: Enums &amp; Pattern Matching</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 14/chapter-1/">Defining Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-2/">Enum Variants with Data</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-3/">Option&lt;T&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-4/">Result&lt;T, E&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-5/">Advanced Match Patterns in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-15-practice-project"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-15-practice-project">Day 15: Practice Project</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 15/chapter-1/">Building a Simple CLI Calculator in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-16-vectors"
+                           checked/>
+                    <label class="tree-toggle-label"
+                           for="day-16-vectors">Day 16: Vectors</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 16/chapter-1/">Creating and Updating Vectors</a>
+                            </li>
+
+                            <li class="active">
+                                <a href="http://localhost/day 16/chapter-2/">Vector Methods: push, pop, iter</a>
+                            </li>
+
+                            
+                                    
+                                    
+                                        <ul id="toc">
+                                            <li><a href="
+                                                        http://localhost/day 16/chapter-2/#vector-methods-in-rust-push-pop-iter-comprehensive-documentation-for-beginners">Vector Methods in Rust: push, pop, iter - Comprehensive Documentation for Beginners</a>
+                                                    <ul>
+                                                            <li>
+                                                                    <a href="http://localhost/day 16/chapter-2/#the-dynamic-kitchen-operations-analogy-fork-knife-plate">The Dynamic Kitchen Operations Analogy 🍽️</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 16/chapter-2/#the-push-method-adding-items-to-your-collection">The push() Method - Adding Items to Your Collection</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 16/chapter-2/#the-pop-method-removing-items-from-your-collection">The pop() Method - Removing Items from Your Collection</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 16/chapter-2/#the-iter-method-examining-your-collection">The iter() Method - Examining Your Collection</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 16/chapter-2/#advanced-patterns-and-best-practices">Advanced Patterns and Best Practices</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 16/chapter-2/#summary-and-key-takeaways">Summary and Key Takeaways</a>
+                                                                </li>
+                                                            </ul>
+                                                    </li>
+                                            </ul>
+                                    <li >
+                                <a href="http://localhost/day 16/chapter-3/">Accessing Vector Elements Safely</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-4/">Vector of Different Types with Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-5/">Performance Considerations</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-17-hashmaps-other-collections"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-17-hashmaps-other-collections">Day 17: HashMaps &amp; Other Collections</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 17/chapter-1/">HashMap Creation and Manipulation</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-2/">Keys and Values Ownership</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-3/">HashMap Methods and Iteration</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-4/">When to Use Different Collections</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-5/">BTreeMap Introduction</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-18-error-handling"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-18-error-handling">Day 18: Error Handling</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 18/chapter-1/">Panic! and When to Use It</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 18/chapter-2/">Result&lt;T, E&gt; in Depth</a>
+                            </li>
+
+                            </ul>
+                </div>
+        </nav>
+    <article>
+
+        <div id="on_right">
+                <span id="search-ico" class="ms-Icon--Search"></span>
+            </div>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="Search as you type...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        <div id="wrap">
+            
+        <h1 id="vector-methods-in-rust-push-pop-iter-comprehensive-documentation-for-beginners">Vector Methods in Rust: push, pop, iter - Comprehensive Documentation for Beginners</h1>
+<p>Understanding Rust's core vector methods is like learning to <strong>manage the daily operations of a bustling vegetarian restaurant kitchen</strong> - you need to efficiently add ingredients to your prep stations (<code>push</code>), remove items when they're used up (<code>pop</code>), and systematically go through your inventory to check what you have (<code>iter</code>). Just as a professional kitchen has streamlined processes for stocking, using, and reviewing ingredients, Rust's vector methods provide elegant, safe ways to add, remove, and examine data in your collections.</p>
+<h2 id="the-dynamic-kitchen-operations-analogy-fork-knife-plate">The Dynamic Kitchen Operations Analogy 🍽️</h2>
+<h3 id="imagine-you-re-managing-real-time-kitchen-operations">Imagine You're Managing Real-Time Kitchen Operations</h3>
+<p><strong>The Three Essential Operations:</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Your kitchen&#39;s ingredient management system
+</span><span style="color:#b48ead;">let mut</span><span> prep_station = Vec::new();
+</span><span>
+</span><span style="color:#a7adba;">// 📥 PUSH - Receiving new ingredients
+</span><span>prep_station.</span><span style="color:#96b5b4;">push</span><span>(&quot;</span><span style="color:#a3be8c;">Fresh Tomatoes</span><span>&quot;);    </span><span style="color:#a7adba;">// New delivery arrives
+</span><span>prep_station.</span><span style="color:#96b5b4;">push</span><span>(&quot;</span><span style="color:#a3be8c;">Organic Lettuce</span><span>&quot;);   </span><span style="color:#a7adba;">// Another ingredient added
+</span><span>
+</span><span style="color:#a7adba;">// 📤 POP - Using ingredients for orders
+</span><span style="color:#b48ead;">let</span><span> ingredient = prep_station.</span><span style="color:#96b5b4;">pop</span><span>();    </span><span style="color:#a7adba;">// Chef needs something for current dish
+</span><span>
+</span><span style="color:#a7adba;">// 🔍 ITER - Checking inventory status
+</span><span style="color:#b48ead;">for</span><span> item in prep_station.</span><span style="color:#96b5b4;">iter</span><span>() {       </span><span style="color:#a7adba;">// Systematic inventory review
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Available: </span><span style="color:#d08770;">{}</span><span>&quot;, item);
+</span><span>}
+</span></code></pre>
+<p><strong>Why These Methods Are Essential:</strong></p>
+<ul>
+<li>🎯 <strong>Push</strong> = <strong>Receiving shipments</strong> - Add new items efficiently to the end</li>
+<li>📦 <strong>Pop</strong> = <strong>Using supplies</strong> - Remove items safely from the end (LIFO)</li>
+<li>👁️ <strong>Iter</strong> = <strong>Inventory check</strong> - Review all items without disturbing them</li>
+<li>⚡ <strong>Performance</strong> - All operations are fast and memory-efficient</li>
+<li>🛡️ <strong>Safety</strong> - Rust prevents common mistakes like accessing empty vectors</li>
+</ul>
+<h2 id="the-push-method-adding-items-to-your-collection">The push() Method - Adding Items to Your Collection</h2>
+<h3 id="understanding-push-operations">Understanding Push Operations</h3>
+<p>The <code>push()</code> method <strong>adds an element to the end of a vector</strong>, like stocking new ingredients at the end of your prep line. It's the most common way to grow a vector dynamically.[^1][^2]</p>
+<p><strong>Core Characteristics:</strong></p>
+<ul>
+<li><strong>Appends to the end</strong> - Always adds at the last position</li>
+<li><strong>Requires mutability</strong> - Vector must be declared as <code>mut</code></li>
+<li><strong>Automatic growth</strong> - Vector expands capacity as needed</li>
+<li><strong>O(1) amortized</strong> - Usually very fast, occasional reallocation</li>
+</ul>
+<h3 id="basic-push-examples">Basic Push Examples</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">demonstrate_push_basics</span><span>() {
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">🥬 Kitchen Prep Station - Adding Ingredients</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">{:=&lt;50}</span><span>&quot;, &quot;&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Start with empty prep station
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> prep_ingredients = Vec::new();
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">📦 Initial prep station: </span><span style="color:#d08770;">{:?}</span><span>&quot;, prep_ingredients);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Capacity: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">, Length: </span><span style="color:#d08770;">{}</span><span>&quot;,
+</span><span>             prep_ingredients.</span><span style="color:#96b5b4;">capacity</span><span>(), prep_ingredients.</span><span style="color:#96b5b4;">len</span><span>());
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Add ingredients one by one - like receiving deliveries
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">📥 Receiving morning delivery:</span><span>&quot;);
+</span><span>    prep_ingredients.</span><span style="color:#96b5b4;">push</span><span>(&quot;</span><span style="color:#a3be8c;">Organic Tomatoes</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>());
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Added tomatoes: </span><span style="color:#d08770;">{:?}</span><span>&quot;, prep_ingredients);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Capacity: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">, Length: </span><span style="color:#d08770;">{}</span><span>&quot;,
+</span><span>             prep_ingredients.</span><span style="color:#96b5b4;">capacity</span><span>(), prep_ingredients.</span><span style="color:#96b5b4;">len</span><span>());
+</span><span>
+</span><span>    prep_ingredients.</span><span style="color:#96b5b4;">push</span><span>(&quot;</span><span style="color:#a3be8c;">Fresh Basil</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>());
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Added basil: </span><span style="color:#d08770;">{:?}</span><span>&quot;, prep_ingredients);
+</span><span>
+</span><span>    prep_ingredients.</span><span style="color:#96b5b4;">push</span><span>(&quot;</span><span style="color:#a3be8c;">Red Onions</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>());
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Added onions: </span><span style="color:#d08770;">{:?}</span><span>&quot;, prep_ingredients);
+</span><span>
+</span><span>    prep_ingredients.</span><span style="color:#96b5b4;">push</span><span>(&quot;</span><span style="color:#a3be8c;">Bell Peppers</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>());
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Added peppers: </span><span style="color:#d08770;">{:?}</span><span>&quot;, prep_ingredients);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Notice how capacity grows automatically
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">📊 Final status:</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Ingredients: </span><span style="color:#d08770;">{}</span><span>&quot;, prep_ingredients.</span><span style="color:#96b5b4;">len</span><span>());
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Storage capacity: </span><span style="color:#d08770;">{}</span><span>&quot;, prep_ingredients.</span><span style="color:#96b5b4;">capacity</span><span>());
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Full inventory: </span><span style="color:#d08770;">{:?}</span><span>&quot;, prep_ingredients);
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#96b5b4;">demonstrate_push_basics</span><span>();
+</span><span>}
+</span></code></pre>
+<h3 id="advanced-push-patterns">Advanced Push Patterns</h3>
+<p><strong>Working with different data types:</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Push with different value types
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">demonstrate_push_patterns</span><span>() {
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">🍽️ Advanced Kitchen Management</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">{:=&lt;40}</span><span>&quot;, &quot;&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// 1. Working with numbers - quantities
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> ingredient_counts = Vec::new();
+</span><span>    ingredient_counts.</span><span style="color:#96b5b4;">push</span><span>(</span><span style="color:#d08770;">50</span><span>);    </span><span style="color:#a7adba;">// 50 tomatoes
+</span><span>    ingredient_counts.</span><span style="color:#96b5b4;">push</span><span>(</span><span style="color:#d08770;">30</span><span>);    </span><span style="color:#a7adba;">// 30 onions
+</span><span>    ingredient_counts.</span><span style="color:#96b5b4;">push</span><span>(</span><span style="color:#d08770;">25</span><span>);    </span><span style="color:#a7adba;">// 25 peppers
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">📊 Ingredient quantities: </span><span style="color:#d08770;">{:?}</span><span>&quot;, ingredient_counts);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// 2. Working with structured data
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Debug)]
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>Ingredient {
+</span><span>        </span><span style="color:#bf616a;">name</span><span>: String,
+</span><span>        </span><span style="color:#bf616a;">quantity</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>        </span><span style="color:#bf616a;">unit</span><span>: String,
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> inventory = Vec::new();
+</span><span>
+</span><span>    inventory.</span><span style="color:#96b5b4;">push</span><span>(Ingredient {
+</span><span>        name: &quot;</span><span style="color:#a3be8c;">Cherry Tomatoes</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        quantity: </span><span style="color:#d08770;">500</span><span>,
+</span><span>        unit: &quot;</span><span style="color:#a3be8c;">grams</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>    });
+</span><span>
+</span><span>    inventory.</span><span style="color:#96b5b4;">push</span><span>(Ingredient {
+</span><span>        name: &quot;</span><span style="color:#a3be8c;">Fresh Mozzarella</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        quantity: </span><span style="color:#d08770;">250</span><span>,
+</span><span>        unit: &quot;</span><span style="color:#a3be8c;">grams</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>    });
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">📋 Detailed inventory:</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">for</span><span> item in &amp;inventory {
+</span><span>        println!(&quot;   </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> - </span><span style="color:#d08770;">{} {}</span><span>&quot;, item.name, item.quantity, item.unit);
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// 3. Conditional pushing - smart inventory management
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> seasonal_menu = Vec::new();
+</span><span>    </span><span style="color:#b48ead;">let</span><span> new_items = [&quot;</span><span style="color:#a3be8c;">Butternut Squash</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Sweet Potatoes</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Brussels Sprouts</span><span>&quot;];
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">for</span><span> item in new_items {
+</span><span>        </span><span style="color:#a7adba;">// Only add if not already present
+</span><span>        </span><span style="color:#b48ead;">if </span><span>!seasonal_menu.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">any</span><span>(|</span><span style="color:#bf616a;">existing</span><span>| existing == &amp;item) {
+</span><span>            seasonal_menu.</span><span style="color:#96b5b4;">push</span><span>(item);
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">   Added seasonal item: </span><span style="color:#d08770;">{}</span><span>&quot;, item);
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// 4. Batch pushing with extend
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> daily_specials = vec![&quot;</span><span style="color:#a3be8c;">Quinoa Salad</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Lentil Soup</span><span>&quot;];
+</span><span>    </span><span style="color:#b48ead;">let</span><span> additional_specials = [&quot;</span><span style="color:#a3be8c;">Veggie Wrap</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Mushroom Risotto</span><span>&quot;];
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">🍽️ Daily specials before: </span><span style="color:#d08770;">{:?}</span><span>&quot;, daily_specials);
+</span><span>    daily_specials.</span><span style="color:#96b5b4;">extend</span><span>(additional_specials.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">map</span><span>(|</span><span style="color:#bf616a;">s</span><span>| s.</span><span style="color:#96b5b4;">to_string</span><span>()));
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   After adding more: </span><span style="color:#d08770;">{:?}</span><span>&quot;, daily_specials);
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#96b5b4;">demonstrate_push_patterns</span><span>();
+</span><span>}
+</span></code></pre>
+<h3 id="performance-considerations-with-push">Performance Considerations with Push</h3>
+<p><strong>Understanding capacity management:</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">demonstrate_push_performance</span><span>() {
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">⚡ Understanding Push Performance</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">{:=&lt;40}</span><span>&quot;, &quot;&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// 1. Observing capacity growth
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> ingredients = Vec::new();
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">📈 Watching capacity grow:</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">for</span><span> i in </span><span style="color:#d08770;">1</span><span>..=</span><span style="color:#d08770;">10 </span><span>{
+</span><span>        </span><span style="color:#b48ead;">let</span><span> item = format!(&quot;</span><span style="color:#a3be8c;">Ingredient </span><span style="color:#d08770;">{}</span><span>&quot;, i);
+</span><span>        ingredients.</span><span style="color:#96b5b4;">push</span><span>(item);
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">   After </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> items - Length: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">, Capacity: </span><span style="color:#d08770;">{}</span><span>&quot;,
+</span><span>                 i, ingredients.</span><span style="color:#96b5b4;">len</span><span>(), ingredients.</span><span style="color:#96b5b4;">capacity</span><span>());
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// 2. Pre-allocating for better performance
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">🚀 Optimized approach with pre-allocation:</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> optimized_inventory = Vec::with_capacity(</span><span style="color:#d08770;">20</span><span>);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Pre-allocated capacity: </span><span style="color:#d08770;">{}</span><span>&quot;, optimized_inventory.</span><span style="color:#96b5b4;">capacity</span><span>());
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Add items without frequent reallocations
+</span><span>    </span><span style="color:#b48ead;">for</span><span> i in </span><span style="color:#d08770;">1</span><span>..=</span><span style="color:#d08770;">15 </span><span>{
+</span><span>        optimized_inventory.</span><span style="color:#96b5b4;">push</span><span>(format!(&quot;</span><span style="color:#a3be8c;">Optimized Item </span><span style="color:#d08770;">{}</span><span>&quot;, i));
+</span><span>    }
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   After 15 items - Length: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">, Capacity: </span><span style="color:#d08770;">{}</span><span>&quot;,
+</span><span>             optimized_inventory.</span><span style="color:#96b5b4;">len</span><span>(), optimized_inventory.</span><span style="color:#96b5b4;">capacity</span><span>());
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// 3. Measuring performance difference
+</span><span>    </span><span style="color:#b48ead;">use </span><span>std::time::Instant;
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Slow approach - frequent reallocations
+</span><span>    </span><span style="color:#b48ead;">let</span><span> start = Instant::now();
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> slow_vec = Vec::new();
+</span><span>    </span><span style="color:#b48ead;">for</span><span> i in </span><span style="color:#d08770;">0</span><span>..</span><span style="color:#d08770;">10000 </span><span>{
+</span><span>        slow_vec.</span><span style="color:#96b5b4;">push</span><span>(i);
+</span><span>    }
+</span><span>    </span><span style="color:#b48ead;">let</span><span> slow_time = start.</span><span style="color:#96b5b4;">elapsed</span><span>();
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Fast approach - pre-allocated
+</span><span>    </span><span style="color:#b48ead;">let</span><span> start = Instant::now();
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> fast_vec = Vec::with_capacity(</span><span style="color:#d08770;">10000</span><span>);
+</span><span>    </span><span style="color:#b48ead;">for</span><span> i in </span><span style="color:#d08770;">0</span><span>..</span><span style="color:#d08770;">10000 </span><span>{
+</span><span>        fast_vec.</span><span style="color:#96b5b4;">push</span><span>(i);
+</span><span>    }
+</span><span>    </span><span style="color:#b48ead;">let</span><span> fast_time = start.</span><span style="color:#96b5b4;">elapsed</span><span>();
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">📊 Performance comparison:</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Without pre-allocation: </span><span style="color:#d08770;">{:?}</span><span>&quot;, slow_time);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   With pre-allocation: </span><span style="color:#d08770;">{:?}</span><span>&quot;, fast_time);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Speed improvement: </span><span style="color:#d08770;">{:.2}</span><span style="color:#a3be8c;">x</span><span>&quot;,
+</span><span>             slow_time.</span><span style="color:#96b5b4;">as_nanos</span><span>() as </span><span style="color:#b48ead;">f64 </span><span>/ fast_time.</span><span style="color:#96b5b4;">as_nanos</span><span>() as </span><span style="color:#b48ead;">f64</span><span>);
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#96b5b4;">demonstrate_push_performance</span><span>();
+</span><span>}
+</span></code></pre>
+<h2 id="the-pop-method-removing-items-from-your-collection">The pop() Method - Removing Items from Your Collection</h2>
+<h3 id="understanding-pop-operations">Understanding Pop Operations</h3>
+<p>The <code>pop()</code> method <strong>removes and returns the last element</strong> from a vector, like taking the most recently added ingredient from your prep station. It returns <code>Option&lt;T&gt;</code> for safety - <code>Some(value)</code> if successful, <code>None</code> if the vector is empty.[^3][^4]</p>
+<p><strong>Core Characteristics:</strong></p>
+<ul>
+<li><strong>Removes from the end</strong> - LIFO (Last In, First Out) behavior</li>
+<li><strong>Returns Option<T></strong> - Safe handling of empty vectors</li>
+<li><strong>Requires mutability</strong> - Vector must be declared as <code>mut</code></li>
+<li><strong>O(1) operation</strong> - Always fast, no shifting required</li>
+</ul>
+<h3 id="basic-pop-examples">Basic Pop Examples</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">demonstrate_pop_basics</span><span>() {
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">📤 Kitchen Operations - Using Ingredients</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">{:=&lt;45}</span><span>&quot;, &quot;&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Start with stocked prep station
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> prep_station = vec![
+</span><span>        &quot;</span><span style="color:#a3be8c;">Tomatoes</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        &quot;</span><span style="color:#a3be8c;">Onions</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        &quot;</span><span style="color:#a3be8c;">Bell Peppers</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        &quot;</span><span style="color:#a3be8c;">Fresh Herbs</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>    ];
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">🥬 Initial prep station: </span><span style="color:#d08770;">{:?}</span><span>&quot;, prep_station);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Items available: </span><span style="color:#d08770;">{}</span><span>&quot;, prep_station.</span><span style="color:#96b5b4;">len</span><span>());
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Chef needs ingredients for orders
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">👨‍🍳 Chef taking ingredients:</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Safe way to use pop - handle the Option
+</span><span>    </span><span style="color:#b48ead;">match</span><span> prep_station.</span><span style="color:#96b5b4;">pop</span><span>() {
+</span><span>        Some(ingredient) =&gt; {
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">   ✅ Used: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> for pasta dish</span><span>&quot;, ingredient);
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">   Remaining: </span><span style="color:#d08770;">{:?}</span><span>&quot;, prep_station);
+</span><span>        }
+</span><span>        None =&gt; {
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">   ❌ No ingredients available!</span><span>&quot;);
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Another order comes in
+</span><span>    </span><span style="color:#b48ead;">if let </span><span>Some(ingredient) = prep_station.</span><span style="color:#96b5b4;">pop</span><span>() {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">   ✅ Used: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> for salad</span><span>&quot;, ingredient);
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">   Remaining: </span><span style="color:#d08770;">{:?}</span><span>&quot;, prep_station);
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Continue until empty
+</span><span>    </span><span style="color:#b48ead;">while let </span><span>Some(ingredient) = prep_station.</span><span style="color:#96b5b4;">pop</span><span>() {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">   ✅ Used: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> for soup</span><span>&quot;, ingredient);
+</span><span>    }
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Final status: </span><span style="color:#d08770;">{:?}</span><span style="color:#a3be8c;"> (length: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">)</span><span>&quot;, prep_station, prep_station.</span><span style="color:#96b5b4;">len</span><span>());
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Try to pop from empty vector
+</span><span>    </span><span style="color:#b48ead;">match</span><span> prep_station.</span><span style="color:#96b5b4;">pop</span><span>() {
+</span><span>        Some(ingredient) =&gt; println!(&quot;</span><span style="color:#a3be8c;">   Got: </span><span style="color:#d08770;">{}</span><span>&quot;, ingredient),
+</span><span>        None =&gt; println!(&quot;</span><span style="color:#a3be8c;">   🛒 Prep station is empty - need to restock!</span><span>&quot;),
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#96b5b4;">demonstrate_pop_basics</span><span>();
+</span><span>}
+</span></code></pre>
+<h3 id="advanced-pop-patterns">Advanced Pop Patterns</h3>
+<p><strong>Different ways to handle pop results:</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">demonstrate_pop_patterns</span><span>() {
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">🎯 Advanced Pop Usage Patterns</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">{:=&lt;40}</span><span>&quot;, &quot;&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Pattern 1: Using unwrap_or for defaults
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> ingredient_queue = vec![&quot;</span><span style="color:#a3be8c;">Basil</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Oregano</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Thyme</span><span>&quot;];
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">🌿 Spice usage with defaults:</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> spice1 = ingredient_queue.</span><span style="color:#96b5b4;">pop</span><span>().</span><span style="color:#96b5b4;">unwrap_or</span><span>(&quot;</span><span style="color:#a3be8c;">Salt</span><span>&quot;); </span><span style="color:#a7adba;">// Safe default
+</span><span>    </span><span style="color:#b48ead;">let</span><span> spice2 = ingredient_queue.</span><span style="color:#96b5b4;">pop</span><span>().</span><span style="color:#96b5b4;">unwrap_or</span><span>(&quot;</span><span style="color:#a3be8c;">Pepper</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Using spices: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> and </span><span style="color:#d08770;">{}</span><span>&quot;, spice1, spice2);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Queue after: </span><span style="color:#d08770;">{:?}</span><span>&quot;, ingredient_queue);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Pattern 2: Pop with validation
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> order_queue: Vec&lt;</span><span style="color:#b48ead;">u32</span><span>&gt; = vec![</span><span style="color:#d08770;">101</span><span>, </span><span style="color:#d08770;">102</span><span>, </span><span style="color:#d08770;">103</span><span>, </span><span style="color:#d08770;">104</span><span>];
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">📋 Order processing with validation:</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">while let </span><span>Some(order_id) = order_queue.</span><span style="color:#96b5b4;">pop</span><span>() {
+</span><span>        </span><span style="color:#b48ead;">if</span><span> order_id &gt; </span><span style="color:#d08770;">100 </span><span>{
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">   ✅ Processing valid order: #</span><span style="color:#d08770;">{}</span><span>&quot;, order_id);
+</span><span>        } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">   ❌ Invalid order ID: #</span><span style="color:#d08770;">{}</span><span>&quot;, order_id);
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Pattern 3: Pop and transform
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> raw_ingredients = vec![&quot;</span><span style="color:#a3be8c;">tomatoes</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">onions</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">peppers</span><span>&quot;];
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> processed_ingredients = Vec::new();
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">⚗️ Processing ingredients:</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">while let </span><span>Some(raw) = raw_ingredients.</span><span style="color:#96b5b4;">pop</span><span>() {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> processed = format!(&quot;</span><span style="color:#a3be8c;">diced </span><span style="color:#d08770;">{}</span><span>&quot;, raw);
+</span><span>        processed_ingredients.</span><span style="color:#96b5b4;">push</span><span>(processed.</span><span style="color:#96b5b4;">clone</span><span>());
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">   Processed: </span><span style="color:#d08770;">{}</span><span>&quot;, processed);
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Pattern 4: Pop with counting
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> task_list = vec![&quot;</span><span style="color:#a3be8c;">Prep vegetables</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Make sauce</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Cook pasta</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Plate dish</span><span>&quot;];
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> completed_tasks = </span><span style="color:#d08770;">0</span><span>;
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">✅ Task completion tracking:</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">while let </span><span>Some(task) = task_list.</span><span style="color:#96b5b4;">pop</span><span>() {
+</span><span>        completed_tasks += </span><span style="color:#d08770;">1</span><span>;
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">   Task </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> completed: </span><span style="color:#d08770;">{}</span><span>&quot;, completed_tasks, task);
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">if</span><span> completed_tasks &gt;= </span><span style="color:#d08770;">3 </span><span>{
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">   🎯 Enough tasks completed for now</span><span>&quot;);
+</span><span>            </span><span style="color:#b48ead;">break</span><span>;
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Remaining tasks: </span><span style="color:#d08770;">{:?}</span><span>&quot;, task_list);
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Working with structured data
+</span><span>#[</span><span style="color:#bf616a;">derive</span><span>(Debug)]
+</span><span style="color:#b48ead;">struct </span><span>Order {
+</span><span>    </span><span style="color:#bf616a;">id</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>    </span><span style="color:#bf616a;">dish</span><span>: String,
+</span><span>    </span><span style="color:#bf616a;">priority</span><span>: </span><span style="color:#b48ead;">u8</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">demonstrate_pop_with_structs</span><span>() {
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">📊 Pop with Structured Data</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">{:=&lt;35}</span><span>&quot;, &quot;&quot;);
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> order_stack = vec![
+</span><span>        Order { id: </span><span style="color:#d08770;">101</span><span>, dish: &quot;</span><span style="color:#a3be8c;">Caesar Salad</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), priority: </span><span style="color:#d08770;">1 </span><span>},
+</span><span>        Order { id: </span><span style="color:#d08770;">102</span><span>, dish: &quot;</span><span style="color:#a3be8c;">Veggie Burger</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), priority: </span><span style="color:#d08770;">3 </span><span>},
+</span><span>        Order { id: </span><span style="color:#d08770;">103</span><span>, dish: &quot;</span><span style="color:#a3be8c;">Pasta Primavera</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), priority: </span><span style="color:#d08770;">2 </span><span>},
+</span><span>    ];
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">📋 Processing orders (LIFO - Last In, First Out):</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">while let </span><span>Some(order) = order_stack.</span><span style="color:#96b5b4;">pop</span><span>() {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> priority_text = </span><span style="color:#b48ead;">match</span><span> order.priority {
+</span><span>            </span><span style="color:#d08770;">3 </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">🔥 HIGH</span><span>&quot;,
+</span><span>            </span><span style="color:#d08770;">2 </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">⚡ MEDIUM</span><span>&quot;,
+</span><span>            </span><span style="color:#d08770;">1 </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">📝 LOW</span><span>&quot;,
+</span><span>            _ =&gt; &quot;</span><span style="color:#a3be8c;">❓ UNKNOWN</span><span>&quot;,
+</span><span>        };
+</span><span>
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">   Processing Order #</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> [</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">]</span><span>&quot;,
+</span><span>                 order.id, order.dish, priority_text);
+</span><span>    }
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   All orders processed!</span><span>&quot;);
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#96b5b4;">demonstrate_pop_patterns</span><span>();
+</span><span>    </span><span style="color:#96b5b4;">demonstrate_pop_with_structs</span><span>();
+</span><span>}
+</span></code></pre>
+<h3 id="pop-safety-and-error-prevention">Pop Safety and Error Prevention</h3>
+<p><strong>Avoiding common pop mistakes:</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">demonstrate_pop_safety</span><span>() {
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">🛡️ Safe Pop Operations</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">{:=&lt;30}</span><span>&quot;, &quot;&quot;);
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> ingredients = vec![&quot;</span><span style="color:#a3be8c;">Tomato</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Lettuce</span><span>&quot;];
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// ❌ DANGEROUS: Using unwrap without checking
+</span><span>    </span><span style="color:#a7adba;">// let ingredient = ingredients.pop().unwrap(); // Could panic!
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// ✅ SAFE: Pattern matching
+</span><span>    </span><span style="color:#b48ead;">match</span><span> ingredients.</span><span style="color:#96b5b4;">pop</span><span>() {
+</span><span>        Some(ingredient) =&gt; println!(&quot;</span><span style="color:#a3be8c;">✅ Safely got: </span><span style="color:#d08770;">{}</span><span>&quot;, ingredient),
+</span><span>        None =&gt; println!(&quot;</span><span style="color:#a3be8c;">❌ No ingredients available</span><span>&quot;),
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// ✅ SAFE: if let pattern
+</span><span>    </span><span style="color:#b48ead;">if let </span><span>Some(ingredient) = ingredients.</span><span style="color:#96b5b4;">pop</span><span>() {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">✅ Using: </span><span style="color:#d08770;">{}</span><span>&quot;, ingredient);
+</span><span>    } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">🛒 Need to restock ingredients</span><span>&quot;);
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// ✅ SAFE: Check before popping
+</span><span>    </span><span style="color:#b48ead;">if </span><span>!ingredients.</span><span style="color:#96b5b4;">is_empty</span><span>() {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> ingredient = ingredients.</span><span style="color:#96b5b4;">pop</span><span>().</span><span style="color:#96b5b4;">unwrap</span><span>(); </span><span style="color:#a7adba;">// Safe because we checked
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">✅ Last ingredient: </span><span style="color:#d08770;">{}</span><span>&quot;, ingredient);
+</span><span>    } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">📦 Ingredient storage is empty</span><span>&quot;);
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// ✅ SAFE: Using unwrap_or for graceful fallback
+</span><span>    </span><span style="color:#b48ead;">let</span><span> backup_ingredient = ingredients.</span><span style="color:#96b5b4;">pop</span><span>().</span><span style="color:#96b5b4;">unwrap_or</span><span>(&quot;</span><span style="color:#a3be8c;">Emergency seasoning</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">✅ Using ingredient: </span><span style="color:#d08770;">{}</span><span>&quot;, backup_ingredient);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// ✅ SAFE: expect with descriptive message
+</span><span>    ingredients.</span><span style="color:#96b5b4;">push</span><span>(&quot;</span><span style="color:#a3be8c;">Guaranteed ingredient</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> ingredient = ingredients.</span><span style="color:#96b5b4;">pop</span><span>()
+</span><span>        .</span><span style="color:#96b5b4;">expect</span><span>(&quot;</span><span style="color:#a3be8c;">This should never fail - we just added an ingredient</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">✅ Got expected ingredient: </span><span style="color:#d08770;">{}</span><span>&quot;, ingredient);
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#96b5b4;">demonstrate_pop_safety</span><span>();
+</span><span>}
+</span></code></pre>
+<h2 id="the-iter-method-examining-your-collection">The iter() Method - Examining Your Collection</h2>
+<h3 id="understanding-iteration">Understanding Iteration</h3>
+<p>The <code>iter()</code> method <strong>creates an iterator over references to elements</strong> in your vector, like systematically reviewing your inventory without disturbing it. It provides <strong>immutable access</strong> to each element.[^5][^6]</p>
+<p><strong>Core Characteristics:</strong></p>
+<ul>
+<li><strong>Borrows elements</strong> - Gets <code>&amp;T</code> references, doesn't move data</li>
+<li><strong>Non-destructive</strong> - Original vector remains unchanged</li>
+<li><strong>Memory efficient</strong> - No copying or cloning</li>
+<li><strong>Chainable</strong> - Works with other iterator methods</li>
+</ul>
+<h3 id="basic-iter-examples">Basic Iter Examples</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">demonstrate_iter_basics</span><span>() {
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">🔍 Kitchen Inventory Review</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">{:=&lt;35}</span><span>&quot;, &quot;&quot;);
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> kitchen_inventory = vec![
+</span><span>        &quot;</span><span style="color:#a3be8c;">Organic Tomatoes</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        &quot;</span><span style="color:#a3be8c;">Fresh Basil</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        &quot;</span><span style="color:#a3be8c;">Red Onions</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        &quot;</span><span style="color:#a3be8c;">Bell Peppers</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        &quot;</span><span style="color:#a3be8c;">Olive Oil</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>    ];
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">📦 Current inventory:</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Basic iteration - read-only access
+</span><span>    </span><span style="color:#b48ead;">for </span><span>(index, ingredient) in kitchen_inventory.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">enumerate</span><span>() {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">   Slot </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">: </span><span style="color:#d08770;">{}</span><span>&quot;, index + </span><span style="color:#d08770;">1</span><span>, ingredient);
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Vector is still available after iteration
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">📊 Inventory summary:</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Total items: </span><span style="color:#d08770;">{}</span><span>&quot;, kitchen_inventory.</span><span style="color:#96b5b4;">len</span><span>());
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   First item: </span><span style="color:#d08770;">{}</span><span>&quot;, kitchen_inventory[^</span><span style="color:#d08770;">0</span><span>]);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Last item: </span><span style="color:#d08770;">{}</span><span>&quot;, kitchen_inventory[kitchen_inventory.</span><span style="color:#96b5b4;">len</span><span>() - </span><span style="color:#d08770;">1</span><span>]);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Different iteration patterns
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">🔍 Detailed inventory check:</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Check for specific items
+</span><span>    </span><span style="color:#b48ead;">let</span><span> essential_items = [&quot;</span><span style="color:#a3be8c;">Tomatoes</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Basil</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Olive Oil</span><span>&quot;];
+</span><span>    </span><span style="color:#b48ead;">for</span><span> essential in essential_items {
+</span><span>        </span><span style="color:#b48ead;">if</span><span> kitchen_inventory.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">any</span><span>(|</span><span style="color:#bf616a;">item</span><span>| item.</span><span style="color:#96b5b4;">contains</span><span>(essential)) {
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">   ✅ </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> - In stock</span><span>&quot;, essential);
+</span><span>        } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">   ❌ </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> - Need to order</span><span>&quot;, essential);
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Count items by category
+</span><span>    </span><span style="color:#b48ead;">let</span><span> organic_count = kitchen_inventory.</span><span style="color:#96b5b4;">iter</span><span>()
+</span><span>        .</span><span style="color:#96b5b4;">filter</span><span>(|</span><span style="color:#bf616a;">item</span><span>| item.</span><span style="color:#96b5b4;">contains</span><span>(&quot;</span><span style="color:#a3be8c;">Organic</span><span>&quot;))
+</span><span>        .</span><span style="color:#96b5b4;">count</span><span>();
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">🌱 Organic items available: </span><span style="color:#d08770;">{}</span><span>&quot;, organic_count);
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#96b5b4;">demonstrate_iter_basics</span><span>();
+</span><span>}
+</span></code></pre>
+<h3 id="iterator-methods-and-transformations">Iterator Methods and Transformations</h3>
+<p><strong>Powerful operations with iter():</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">demonstrate_iterator_methods</span><span>() {
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">⚗️ Advanced Inventory Analysis</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">{:=&lt;40}</span><span>&quot;, &quot;&quot;);
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> menu_items = vec![
+</span><span>        &quot;</span><span style="color:#a3be8c;">Caesar Salad</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        &quot;</span><span style="color:#a3be8c;">Margherita Pizza</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        &quot;</span><span style="color:#a3be8c;">Veggie Burger</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        &quot;</span><span style="color:#a3be8c;">Mushroom Risotto</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        &quot;</span><span style="color:#a3be8c;">Greek Salad</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        &quot;</span><span style="color:#a3be8c;">Pasta Primavera</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>    ];
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">🍽️ Menu analysis:</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// 1. Filter - find items matching criteria
+</span><span>    </span><span style="color:#b48ead;">let</span><span> salads: Vec&lt;&amp;String&gt; = menu_items.</span><span style="color:#96b5b4;">iter</span><span>()
+</span><span>        .</span><span style="color:#96b5b4;">filter</span><span>(|</span><span style="color:#bf616a;">item</span><span>| item.</span><span style="color:#96b5b4;">contains</span><span>(&quot;</span><span style="color:#a3be8c;">Salad</span><span>&quot;))
+</span><span>        .</span><span style="color:#96b5b4;">collect</span><span>();
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">🥗 Salad options: </span><span style="color:#d08770;">{:?}</span><span>&quot;, salads);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// 2. Map - transform each item
+</span><span>    </span><span style="color:#b48ead;">let</span><span> uppercase_menu: Vec&lt;String&gt; = menu_items.</span><span style="color:#96b5b4;">iter</span><span>()
+</span><span>        .</span><span style="color:#96b5b4;">map</span><span>(|</span><span style="color:#bf616a;">item</span><span>| item.</span><span style="color:#96b5b4;">to_uppercase</span><span>())
+</span><span>        .</span><span style="color:#96b5b4;">collect</span><span>();
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">📢 Menu in caps: </span><span style="color:#d08770;">{:?}</span><span>&quot;, uppercase_menu);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// 3. Find - locate specific item
+</span><span>    </span><span style="color:#b48ead;">match</span><span> menu_items.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">find</span><span>(|</span><span style="color:#bf616a;">item</span><span>| item.</span><span style="color:#96b5b4;">contains</span><span>(&quot;</span><span style="color:#a3be8c;">Pizza</span><span>&quot;)) {
+</span><span>        Some(pizza) =&gt; println!(&quot;</span><span style="color:#a3be8c;">🍕 Found pizza: </span><span style="color:#d08770;">{}</span><span>&quot;, pizza),
+</span><span>        None =&gt; println!(&quot;</span><span style="color:#a3be8c;">🤷 No pizza available</span><span>&quot;),
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// 4. Position - find index of item
+</span><span>    </span><span style="color:#b48ead;">if let </span><span>Some(index) = menu_items.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">position</span><span>(|</span><span style="color:#bf616a;">item</span><span>| item.</span><span style="color:#96b5b4;">contains</span><span>(&quot;</span><span style="color:#a3be8c;">Burger</span><span>&quot;)) {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">🍔 Burger found at menu position: </span><span style="color:#d08770;">{}</span><span>&quot;, index + </span><span style="color:#d08770;">1</span><span>);
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// 5. Count items by criteria
+</span><span>    </span><span style="color:#b48ead;">let</span><span> pasta_count = menu_items.</span><span style="color:#96b5b4;">iter</span><span>()
+</span><span>        .</span><span style="color:#96b5b4;">filter</span><span>(|</span><span style="color:#bf616a;">item</span><span>| item.</span><span style="color:#96b5b4;">contains</span><span>(&quot;</span><span style="color:#a3be8c;">Pasta</span><span>&quot;) || item.</span><span style="color:#96b5b4;">contains</span><span>(&quot;</span><span style="color:#a3be8c;">Risotto</span><span>&quot;))
+</span><span>        .</span><span style="color:#96b5b4;">count</span><span>();
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">🍝 Pasta dishes available: </span><span style="color:#d08770;">{}</span><span>&quot;, pasta_count);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// 6. Check all/any conditions
+</span><span>    </span><span style="color:#b48ead;">let</span><span> all_have_vowels = menu_items.</span><span style="color:#96b5b4;">iter</span><span>()
+</span><span>        .</span><span style="color:#96b5b4;">all</span><span>(|</span><span style="color:#bf616a;">item</span><span>| item.</span><span style="color:#96b5b4;">chars</span><span>().</span><span style="color:#96b5b4;">any</span><span>(|</span><span style="color:#bf616a;">c</span><span>| &quot;</span><span style="color:#a3be8c;">aeiouAEIOU</span><span>&quot;.</span><span style="color:#96b5b4;">contains</span><span>(c)));
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">🔤 All items have vowels: </span><span style="color:#d08770;">{}</span><span>&quot;, all_have_vowels);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// 7. Complex chaining
+</span><span>    </span><span style="color:#b48ead;">let</span><span> popular_items: Vec&lt;String&gt; = menu_items.</span><span style="color:#96b5b4;">iter</span><span>()
+</span><span>        .</span><span style="color:#96b5b4;">filter</span><span>(|</span><span style="color:#bf616a;">item</span><span>| item.</span><span style="color:#96b5b4;">len</span><span>() &gt; </span><span style="color:#d08770;">10</span><span>)  </span><span style="color:#a7adba;">// Longer names are often popular
+</span><span>        .</span><span style="color:#96b5b4;">map</span><span>(|</span><span style="color:#bf616a;">item</span><span>| format!(&quot;</span><span style="color:#a3be8c;">⭐ </span><span style="color:#d08770;">{}</span><span>&quot;, item))
+</span><span>        .</span><span style="color:#96b5b4;">collect</span><span>();
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">🌟 Likely popular items: </span><span style="color:#d08770;">{:?}</span><span>&quot;, popular_items);
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Working with structured data
+</span><span>#[</span><span style="color:#bf616a;">derive</span><span>(Debug)]
+</span><span style="color:#b48ead;">struct </span><span>Dish {
+</span><span>    </span><span style="color:#bf616a;">name</span><span>: String,
+</span><span>    </span><span style="color:#bf616a;">price</span><span>: </span><span style="color:#b48ead;">f64</span><span>,
+</span><span>    </span><span style="color:#bf616a;">category</span><span>: String,
+</span><span>    </span><span style="color:#bf616a;">vegetarian</span><span>: </span><span style="color:#b48ead;">bool</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">demonstrate_struct_iteration</span><span>() {
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">📊 Restaurant Menu Analysis</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">{:=&lt;35}</span><span>&quot;, &quot;&quot;);
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> menu = vec![
+</span><span>        Dish {
+</span><span>            name: &quot;</span><span style="color:#a3be8c;">Caesar Salad</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>            price: </span><span style="color:#d08770;">12.99</span><span>,
+</span><span>            category: &quot;</span><span style="color:#a3be8c;">Salads</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>            vegetarian: </span><span style="color:#d08770;">true</span><span>,
+</span><span>        },
+</span><span>        Dish {
+</span><span>            name: &quot;</span><span style="color:#a3be8c;">Margherita Pizza</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>            price: </span><span style="color:#d08770;">15.99</span><span>,
+</span><span>            category: &quot;</span><span style="color:#a3be8c;">Pizza</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>            vegetarian: </span><span style="color:#d08770;">true</span><span>,
+</span><span>        },
+</span><span>        Dish {
+</span><span>            name: &quot;</span><span style="color:#a3be8c;">Veggie Burger</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>            price: </span><span style="color:#d08770;">13.99</span><span>,
+</span><span>            category: &quot;</span><span style="color:#a3be8c;">Burgers</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>            vegetarian: </span><span style="color:#d08770;">true</span><span>,
+</span><span>        },
+</span><span>    ];
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">💰 Menu pricing analysis:</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Calculate average price
+</span><span>    </span><span style="color:#b48ead;">let</span><span> average_price: </span><span style="color:#b48ead;">f64 </span><span>= menu.</span><span style="color:#96b5b4;">iter</span><span>()
+</span><span>        .</span><span style="color:#96b5b4;">map</span><span>(|</span><span style="color:#bf616a;">dish</span><span>| dish.price)
+</span><span>        .sum::&lt;</span><span style="color:#b48ead;">f64</span><span>&gt;() / menu.</span><span style="color:#96b5b4;">len</span><span>() as </span><span style="color:#b48ead;">f64</span><span>;
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Average price: $</span><span style="color:#d08770;">{:.2}</span><span>&quot;, average_price);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Find most expensive dish
+</span><span>    </span><span style="color:#b48ead;">if let </span><span>Some(expensive_dish) = menu.</span><span style="color:#96b5b4;">iter</span><span>()
+</span><span>        .</span><span style="color:#96b5b4;">max_by</span><span>(|</span><span style="color:#bf616a;">a</span><span>, </span><span style="color:#bf616a;">b</span><span>| a.price.</span><span style="color:#96b5b4;">partial_cmp</span><span>(&amp;b.price).</span><span style="color:#96b5b4;">unwrap</span><span>()) {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">   Most expensive: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> ($</span><span style="color:#d08770;">{:.2}</span><span style="color:#a3be8c;">)</span><span>&quot;, expensive_dish.name, expensive_dish.price);
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// List dishes by category
+</span><span>    </span><span style="color:#b48ead;">let</span><span> categories: std::collections::HashSet&lt;&amp;String&gt; = menu.</span><span style="color:#96b5b4;">iter</span><span>()
+</span><span>        .</span><span style="color:#96b5b4;">map</span><span>(|</span><span style="color:#bf616a;">dish</span><span>| &amp;dish.category)
+</span><span>        .</span><span style="color:#96b5b4;">collect</span><span>();
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">for</span><span> category in categories {
+</span><span>        println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">📂 </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> category:</span><span>&quot;);
+</span><span>        </span><span style="color:#b48ead;">for</span><span> dish in menu.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">filter</span><span>(|</span><span style="color:#bf616a;">d</span><span>| &amp;d.category == category) {
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">   • </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> - $</span><span style="color:#d08770;">{:.2}</span><span>&quot;, dish.name, dish.price);
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Check vegetarian options
+</span><span>    </span><span style="color:#b48ead;">let</span><span> veggie_count = menu.</span><span style="color:#96b5b4;">iter</span><span>()
+</span><span>        .</span><span style="color:#96b5b4;">filter</span><span>(|</span><span style="color:#bf616a;">dish</span><span>| dish.vegetarian)
+</span><span>        .</span><span style="color:#96b5b4;">count</span><span>();
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">🌱 Vegetarian options: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">/</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> dishes</span><span>&quot;, veggie_count, menu.</span><span style="color:#96b5b4;">len</span><span>());
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#96b5b4;">demonstrate_iterator_methods</span><span>();
+</span><span>    </span><span style="color:#96b5b4;">demonstrate_struct_iteration</span><span>();
+</span><span>}
+</span></code></pre>
+<h3 id="different-types-of-iteration">Different Types of Iteration</h3>
+<p><strong>Understanding iter(), iter_mut(), and into_iter():</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">demonstrate_iteration_types</span><span>() {
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">🔄 Different Types of Iteration</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">{:=&lt;40}</span><span>&quot;, &quot;&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// 1. iter() - Borrowing (read-only)
+</span><span>    </span><span style="color:#b48ead;">let</span><span> ingredients = vec![&quot;</span><span style="color:#a3be8c;">Tomato</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Onion</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Pepper</span><span>&quot;];
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">👀 Read-only iteration with iter():</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">for</span><span> ingredient in ingredients.</span><span style="color:#96b5b4;">iter</span><span>() {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">   Available: </span><span style="color:#d08770;">{}</span><span>&quot;, ingredient);
+</span><span>        </span><span style="color:#a7adba;">// ingredient is &amp;str here - we&#39;re borrowing
+</span><span>    }
+</span><span>    </span><span style="color:#a7adba;">// Vector is still usable
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Original vector still available: </span><span style="color:#d08770;">{:?}</span><span>&quot;, ingredients);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// 2. iter_mut() - Mutable borrowing
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> prep_list = vec![&quot;</span><span style="color:#a3be8c;">tomato</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">onion</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">pepper</span><span>&quot;];
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">✏️ Modifying with iter_mut():</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">for</span><span> ingredient in prep_list.</span><span style="color:#96b5b4;">iter_mut</span><span>() {
+</span><span>        *ingredient = &amp;ingredient.</span><span style="color:#96b5b4;">to_uppercase</span><span>();
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">   Processed: </span><span style="color:#d08770;">{}</span><span>&quot;, ingredient);
+</span><span>    }
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Modified vector: </span><span style="color:#d08770;">{:?}</span><span>&quot;, prep_list);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// 3. into_iter() - Taking ownership
+</span><span>    </span><span style="color:#b48ead;">let</span><span> consumable_ingredients = vec![&quot;</span><span style="color:#a3be8c;">Basil</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Oregano</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Thyme</span><span>&quot;];
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">🔄 Consuming with into_iter():</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">for</span><span> ingredient in consumable_ingredients.</span><span style="color:#96b5b4;">into_iter</span><span>() {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">   Used up: </span><span style="color:#d08770;">{}</span><span>&quot;, ingredient);
+</span><span>        </span><span style="color:#a7adba;">// ingredient is String here - we own it
+</span><span>    }
+</span><span>    </span><span style="color:#a7adba;">// Vector is no longer usable - it was consumed
+</span><span>    </span><span style="color:#a7adba;">// println!(&quot;{:?}&quot;, consumable_ingredients); // This would error!
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// 4. Practical example: processing orders
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> orders = vec![
+</span><span>        &quot;</span><span style="color:#a3be8c;">Order 1: Caesar Salad</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        &quot;</span><span style="color:#a3be8c;">Order 2: Veggie Burger</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        &quot;</span><span style="color:#a3be8c;">Order 3: Pasta</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>    ];
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">📋 Order processing example:</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Check orders without modifying
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Reviewing orders:</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">for</span><span> order in orders.</span><span style="color:#96b5b4;">iter</span><span>() {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">     📝 </span><span style="color:#d08770;">{}</span><span>&quot;, order);
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Update order status
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Updating order status:</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">for</span><span> order in orders.</span><span style="color:#96b5b4;">iter_mut</span><span>() {
+</span><span>        order.</span><span style="color:#96b5b4;">push_str</span><span>(&quot;</span><span style="color:#a3be8c;"> [IN PROGRESS]</span><span>&quot;);
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">     ✅ </span><span style="color:#d08770;">{}</span><span>&quot;, order);
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Finally consume orders when complete
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Completing orders:</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">for</span><span> order in orders.</span><span style="color:#96b5b4;">into_iter</span><span>() {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> completed = order.</span><span style="color:#96b5b4;">replace</span><span>(&quot;</span><span style="color:#a3be8c;">[IN PROGRESS]</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">[COMPLETED]</span><span>&quot;);
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">     🎉 </span><span style="color:#d08770;">{}</span><span>&quot;, completed);
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#96b5b4;">demonstrate_iteration_types</span><span>();
+</span><span>}
+</span></code></pre>
+<h2 id="advanced-patterns-and-best-practices">Advanced Patterns and Best Practices</h2>
+<h3 id="combining-methods-effectively">Combining Methods Effectively</h3>
+<p><strong>Real-world patterns using push, pop, and iter together:</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">demonstrate_combined_operations</span><span>() {
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">🎯 Combined Vector Operations</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">{:=&lt;40}</span><span>&quot;, &quot;&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Restaurant order processing system
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> order_queue = Vec::new();
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> completed_orders = Vec::new();
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Receiving orders (push)
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">📥 Receiving orders:</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> incoming_orders = [
+</span><span>        &quot;</span><span style="color:#a3be8c;">Table 1: Caesar Salad</span><span>&quot;,
+</span><span>        &quot;</span><span style="color:#a3be8c;">Table 2: Veggie Burger</span><span>&quot;,
+</span><span>        &quot;</span><span style="color:#a3be8c;">Table 3: Pasta Primavera</span><span>&quot;,
+</span><span>        &quot;</span><span style="color:#a3be8c;">Table 4: Greek Salad</span><span>&quot;,
+</span><span>    ];
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">for</span><span> order in incoming_orders {
+</span><span>        order_queue.</span><span style="color:#96b5b4;">push</span><span>(order.</span><span style="color:#96b5b4;">to_string</span><span>());
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">   Added: </span><span style="color:#d08770;">{}</span><span>&quot;, order);
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Review current queue (iter)
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">📋 Current queue status:</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">for </span><span>(position, order) in order_queue.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">enumerate</span><span>() {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">   Position </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">: </span><span style="color:#d08770;">{}</span><span>&quot;, position + </span><span style="color:#d08770;">1</span><span>, order);
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Process orders (pop)
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">👨‍🍳 Processing orders:</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">while let </span><span>Some(order) = order_queue.</span><span style="color:#96b5b4;">pop</span><span>() {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">   🍽️ Preparing: </span><span style="color:#d08770;">{}</span><span>&quot;, order);
+</span><span>
+</span><span>        </span><span style="color:#a7adba;">// Simulate processing time check
+</span><span>        </span><span style="color:#b48ead;">if</span><span> order.</span><span style="color:#96b5b4;">contains</span><span>(&quot;</span><span style="color:#a3be8c;">Pasta</span><span>&quot;) {
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">     ⏰ Complex dish - extra prep time needed</span><span>&quot;);
+</span><span>        }
+</span><span>
+</span><span>        </span><span style="color:#a7adba;">// Mark as completed
+</span><span>        </span><span style="color:#b48ead;">let</span><span> completed = format!(&quot;</span><span style="color:#a3be8c;">✅ </span><span style="color:#d08770;">{}</span><span>&quot;, order);
+</span><span>        completed_orders.</span><span style="color:#96b5b4;">push</span><span>(completed);
+</span><span>
+</span><span>        </span><span style="color:#a7adba;">// Show remaining queue
+</span><span>        </span><span style="color:#b48ead;">if </span><span>!order_queue.</span><span style="color:#96b5b4;">is_empty</span><span>() {
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">     📦 Remaining in queue: </span><span style="color:#d08770;">{}</span><span>&quot;, order_queue.</span><span style="color:#96b5b4;">len</span><span>());
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Review completed orders (iter)
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">🎉 Completed orders:</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">for</span><span> order in completed_orders.</span><span style="color:#96b5b4;">iter</span><span>() {
+</span><span>        println!(&quot;   </span><span style="color:#d08770;">{}</span><span>&quot;, order);
+</span><span>    }
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">📊 Summary:</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Orders processed: </span><span style="color:#d08770;">{}</span><span>&quot;, completed_orders.</span><span style="color:#96b5b4;">len</span><span>());
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Queue status: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> items remaining</span><span>&quot;, order_queue.</span><span style="color:#96b5b4;">len</span><span>());
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Inventory management with all three methods
+</span><span>#[</span><span style="color:#bf616a;">derive</span><span>(Debug, Clone)]
+</span><span style="color:#b48ead;">struct </span><span>InventoryItem {
+</span><span>    </span><span style="color:#bf616a;">name</span><span>: String,
+</span><span>    </span><span style="color:#bf616a;">quantity</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>    </span><span style="color:#bf616a;">min_threshold</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">demonstrate_inventory_management</span><span>() {
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">📦 Complete Inventory Management System</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">{:=&lt;45}</span><span>&quot;, &quot;&quot;);
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> inventory = Vec::new();
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> reorder_list = Vec::new();
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Stock initial inventory (push)
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">📥 Initial stocking:</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> initial_stock = [
+</span><span>        (&quot;</span><span style="color:#a3be8c;">Tomatoes</span><span>&quot;, </span><span style="color:#d08770;">100</span><span>, </span><span style="color:#d08770;">20</span><span>),
+</span><span>        (&quot;</span><span style="color:#a3be8c;">Lettuce</span><span>&quot;, </span><span style="color:#d08770;">50</span><span>, </span><span style="color:#d08770;">15</span><span>),
+</span><span>        (&quot;</span><span style="color:#a3be8c;">Onions</span><span>&quot;, </span><span style="color:#d08770;">80</span><span>, </span><span style="color:#d08770;">25</span><span>),
+</span><span>        (&quot;</span><span style="color:#a3be8c;">Peppers</span><span>&quot;, </span><span style="color:#d08770;">30</span><span>, </span><span style="color:#d08770;">10</span><span>),
+</span><span>    ];
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">for </span><span>(name, quantity, min_threshold) in initial_stock {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> item = InventoryItem {
+</span><span>            name: name.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>            quantity,
+</span><span>            min_threshold,
+</span><span>        };
+</span><span>        inventory.</span><span style="color:#96b5b4;">push</span><span>(item);
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">   Stocked: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> (qty: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">)</span><span>&quot;, name, quantity);
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Simulate daily usage (modify quantities)
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">📉 Simulating daily usage:</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> daily_usage = [(&quot;</span><span style="color:#a3be8c;">Tomatoes</span><span>&quot;, </span><span style="color:#d08770;">25</span><span>), (&quot;</span><span style="color:#a3be8c;">Lettuce</span><span>&quot;, </span><span style="color:#d08770;">40</span><span>), (&quot;</span><span style="color:#a3be8c;">Peppers</span><span>&quot;, </span><span style="color:#d08770;">25</span><span>)];
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">for </span><span>(item_name, used) in daily_usage {
+</span><span>        </span><span style="color:#a7adba;">// Find and update item (iter_mut would work here too)
+</span><span>        </span><span style="color:#b48ead;">if let </span><span>Some(item) = inventory.</span><span style="color:#96b5b4;">iter_mut</span><span>().</span><span style="color:#96b5b4;">find</span><span>(|</span><span style="color:#bf616a;">i</span><span>| i.name == item_name) {
+</span><span>            item.quantity = item.quantity.</span><span style="color:#96b5b4;">saturating_sub</span><span>(used);
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">   Used </span><span style="color:#d08770;">{} {}</span><span style="color:#a3be8c;"> - remaining: </span><span style="color:#d08770;">{}</span><span>&quot;, used, item_name, item.quantity);
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Check for low stock (iter)
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">⚠️ Low stock check:</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">for</span><span> item in inventory.</span><span style="color:#96b5b4;">iter</span><span>() {
+</span><span>        </span><span style="color:#b48ead;">if</span><span> item.quantity &lt;= item.min_threshold {
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">   🚨 LOW: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> - </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> remaining (min: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">)</span><span>&quot;,
+</span><span>                     item.name, item.quantity, item.min_threshold);
+</span><span>
+</span><span>            </span><span style="color:#a7adba;">// Add to reorder list
+</span><span>            reorder_list.</span><span style="color:#96b5b4;">push</span><span>(item.</span><span style="color:#96b5b4;">clone</span><span>());
+</span><span>        } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">   ✅ OK: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> - </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> remaining</span><span>&quot;, item.name, item.quantity);
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Process reorders (pop and push)
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">🛒 Processing reorders:</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">while let </span><span>Some(item) = reorder_list.</span><span style="color:#96b5b4;">pop</span><span>() {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">   📞 Ordering </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> (current: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">, min: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">)</span><span>&quot;,
+</span><span>                 item.name, item.quantity, item.min_threshold);
+</span><span>
+</span><span>        </span><span style="color:#a7adba;">// Find in main inventory and update
+</span><span>        </span><span style="color:#b48ead;">if let </span><span>Some(inventory_item) = inventory.</span><span style="color:#96b5b4;">iter_mut</span><span>()
+</span><span>            .</span><span style="color:#96b5b4;">find</span><span>(|</span><span style="color:#bf616a;">i</span><span>| i.name == item.name) {
+</span><span>            inventory_item.quantity += </span><span style="color:#d08770;">100</span><span>; </span><span style="color:#a7adba;">// Standard reorder quantity
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">     ✅ Restocked </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> - new quantity: </span><span style="color:#d08770;">{}</span><span>&quot;,
+</span><span>                     item.name, inventory_item.quantity);
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Final inventory report (iter)
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">📊 Final inventory report:</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">for</span><span> item in inventory.</span><span style="color:#96b5b4;">iter</span><span>() {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> status = </span><span style="color:#b48ead;">if</span><span> item.quantity &gt; item.min_threshold { &quot;</span><span style="color:#a3be8c;">✅</span><span>&quot; } </span><span style="color:#b48ead;">else </span><span>{ &quot;</span><span style="color:#a3be8c;">⚠️</span><span>&quot; };
+</span><span>        println!(&quot;   </span><span style="color:#d08770;">{} {}</span><span style="color:#a3be8c;"> - </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> units</span><span>&quot;, status, item.name, item.quantity);
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#96b5b4;">demonstrate_combined_operations</span><span>();
+</span><span>    </span><span style="color:#96b5b4;">demonstrate_inventory_management</span><span>();
+</span><span>}
+</span></code></pre>
+<h3 id="performance-tips-and-best-practices">Performance Tips and Best Practices</h3>
+<p><strong>Optimizing vector operations:</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">demonstrate_performance_tips</span><span>() {
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">⚡ Vector Performance Best Practices</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">{:=&lt;45}</span><span>&quot;, &quot;&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// 1. Pre-allocate when size is known
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">🚀 Pre-allocation benefits:</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> expected_orders = </span><span style="color:#d08770;">1000</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> efficient_queue = Vec::with_capacity(expected_orders);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Pre-allocated capacity: </span><span style="color:#d08770;">{}</span><span>&quot;, efficient_queue.</span><span style="color:#96b5b4;">capacity</span><span>());
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// This won&#39;t cause reallocations
+</span><span>    </span><span style="color:#b48ead;">for</span><span> i in </span><span style="color:#d08770;">0</span><span>..expected_orders {
+</span><span>        efficient_queue.</span><span style="color:#96b5b4;">push</span><span>(format!(&quot;</span><span style="color:#a3be8c;">Order </span><span style="color:#d08770;">{}</span><span>&quot;, i));
+</span><span>    }
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Added </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> items without reallocation</span><span>&quot;, efficient_queue.</span><span style="color:#96b5b4;">len</span><span>());
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// 2. Use iterator methods instead of loops when possible
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">📊 Efficient data processing:</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> prices = vec![</span><span style="color:#d08770;">10.99</span><span>, </span><span style="color:#d08770;">15.50</span><span>, </span><span style="color:#d08770;">8.75</span><span>, </span><span style="color:#d08770;">12.25</span><span>, </span><span style="color:#d08770;">18.99</span><span>];
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// ✅ Efficient: Use iterator methods
+</span><span>    </span><span style="color:#b48ead;">let</span><span> total: </span><span style="color:#b48ead;">f64 </span><span>= prices.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">sum</span><span>();
+</span><span>    </span><span style="color:#b48ead;">let</span><span> average = total / prices.</span><span style="color:#96b5b4;">len</span><span>() as </span><span style="color:#b48ead;">f64</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> expensive_count = prices.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">filter</span><span>(|&amp;&amp;</span><span style="color:#bf616a;">price</span><span>| price &gt; </span><span style="color:#d08770;">15.0</span><span>).</span><span style="color:#96b5b4;">count</span><span>();
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Total: $</span><span style="color:#d08770;">{:.2}</span><span style="color:#a3be8c;">, Average: $</span><span style="color:#d08770;">{:.2}</span><span style="color:#a3be8c;">, Expensive items: </span><span style="color:#d08770;">{}</span><span>&quot;,
+</span><span>             total, average, expensive_count);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// 3. Avoid unnecessary cloning during iteration
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">♻️ Memory-efficient iteration:</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> menu_items = vec![
+</span><span>        &quot;</span><span style="color:#a3be8c;">Caesar Salad</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        &quot;</span><span style="color:#a3be8c;">Veggie Burger</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        &quot;</span><span style="color:#a3be8c;">Pasta Primavera</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>    ];
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// ✅ Good: Use references
+</span><span>    </span><span style="color:#b48ead;">let</span><span> item_lengths: Vec&lt;</span><span style="color:#b48ead;">usize</span><span>&gt; = menu_items.</span><span style="color:#96b5b4;">iter</span><span>()
+</span><span>        .</span><span style="color:#96b5b4;">map</span><span>(|</span><span style="color:#bf616a;">item</span><span>| item.</span><span style="color:#96b5b4;">len</span><span>())  </span><span style="color:#a7adba;">// No cloning
+</span><span>        .</span><span style="color:#96b5b4;">collect</span><span>();
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Item lengths: </span><span style="color:#d08770;">{:?}</span><span>&quot;, item_lengths);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// 4. Reuse vectors instead of creating new ones
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">🔄 Vector reuse pattern:</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> reusable_buffer = Vec::with_capacity(</span><span style="color:#d08770;">100</span><span>);
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">for</span><span> batch in </span><span style="color:#d08770;">0</span><span>..</span><span style="color:#d08770;">3 </span><span>{
+</span><span>        reusable_buffer.</span><span style="color:#96b5b4;">clear</span><span>(); </span><span style="color:#a7adba;">// Clear but keep capacity
+</span><span>
+</span><span>        </span><span style="color:#a7adba;">// Fill with new data
+</span><span>        </span><span style="color:#b48ead;">for</span><span> i in </span><span style="color:#d08770;">0</span><span>..</span><span style="color:#d08770;">10 </span><span>{
+</span><span>            reusable_buffer.</span><span style="color:#96b5b4;">push</span><span>(format!(&quot;</span><span style="color:#a3be8c;">Batch </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> Item </span><span style="color:#d08770;">{}</span><span>&quot;, batch, i));
+</span><span>        }
+</span><span>
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">   Batch </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> processed - capacity preserved: </span><span style="color:#d08770;">{}</span><span>&quot;,
+</span><span>                 batch, reusable_buffer.</span><span style="color:#96b5b4;">capacity</span><span>());
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// 5. Choose the right removal method
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">🗑️ Efficient removal strategies:</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> demo_vec = vec![</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">2</span><span>, </span><span style="color:#d08770;">3</span><span>, </span><span style="color:#d08770;">4</span><span>, </span><span style="color:#d08770;">5</span><span>];
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Original: </span><span style="color:#d08770;">{:?}</span><span>&quot;, demo_vec);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// For end removal - use pop() (fastest)
+</span><span>    </span><span style="color:#b48ead;">let</span><span> last = demo_vec.</span><span style="color:#96b5b4;">pop</span><span>();
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   After pop(): </span><span style="color:#d08770;">{:?}</span><span style="color:#a3be8c;"> (removed: </span><span style="color:#d08770;">{:?}</span><span style="color:#a3be8c;">)</span><span>&quot;, demo_vec, last);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// For middle removal when order doesn&#39;t matter - use swap_remove()
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> demo_vec2 = vec![</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">2</span><span>, </span><span style="color:#d08770;">3</span><span>, </span><span style="color:#d08770;">4</span><span>, </span><span style="color:#d08770;">5</span><span>];
+</span><span>    </span><span style="color:#b48ead;">let</span><span> removed = demo_vec2.</span><span style="color:#96b5b4;">swap_remove</span><span>(</span><span style="color:#d08770;">1</span><span>); </span><span style="color:#a7adba;">// Faster than remove()
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   After swap_remove(1): </span><span style="color:#d08770;">{:?}</span><span style="color:#a3be8c;"> (removed: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">)</span><span>&quot;, demo_vec2, removed);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// 6. Batch operations when possible
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">📦 Batch processing:</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> order_queue = Vec::new();
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Add multiple items at once
+</span><span>    </span><span style="color:#b48ead;">let</span><span> new_orders = [&quot;</span><span style="color:#a3be8c;">Order A</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Order B</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Order C</span><span>&quot;];
+</span><span>    order_queue.</span><span style="color:#96b5b4;">extend</span><span>(new_orders.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">map</span><span>(|</span><span style="color:#bf616a;">s</span><span>| s.</span><span style="color:#96b5b4;">to_string</span><span>()));
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Added batch: </span><span style="color:#d08770;">{:?}</span><span>&quot;, order_queue);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Process in chunks
+</span><span>    </span><span style="color:#b48ead;">for </span><span>(chunk_num, chunk) in order_queue.</span><span style="color:#96b5b4;">chunks</span><span>(</span><span style="color:#d08770;">2</span><span>).</span><span style="color:#96b5b4;">enumerate</span><span>() {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">   Processing chunk </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">: </span><span style="color:#d08770;">{:?}</span><span>&quot;, chunk_num, chunk);
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#96b5b4;">demonstrate_performance_tips</span><span>();
+</span><span>}
+</span></code></pre>
+<h2 id="summary-and-key-takeaways">Summary and Key Takeaways</h2>
+<h3 id="mental-model-the-professional-kitchen-operations"><strong>Mental Model: The Professional Kitchen Operations</strong></h3>
+<p>Remember our kitchen operations analogy:</p>
+<ul>
+<li>📥 <strong>push()</strong> = <strong>Receiving ingredients</strong> - Efficiently stock your prep station</li>
+<li>📤 <strong>pop()</strong> = <strong>Using supplies</strong> - Safely remove items when needed (LIFO)</li>
+<li>🔍 <strong>iter()</strong> = <strong>Inventory inspection</strong> - Review everything without disruption</li>
+<li>🎯 <strong>Combined operations</strong> = <strong>Complete workflow</strong> - Seamless kitchen management</li>
+</ul>
+<h3 id="essential-method-characteristics"><strong>Essential Method Characteristics</strong></h3>
+<table><thead><tr><th style="text-align: left"><strong>Method</strong></th><th style="text-align: left"><strong>Purpose</strong></th><th style="text-align: left"><strong>Returns</strong></th><th style="text-align: left"><strong>Safety</strong></th><th style="text-align: left"><strong>Performance</strong></th></tr></thead><tbody>
+<tr><td style="text-align: left"><strong><code>push()</code></strong></td><td style="text-align: left">Add to end</td><td style="text-align: left"><code>()</code></td><td style="text-align: left">Always safe</td><td style="text-align: left">O(1) amortized</td></tr>
+<tr><td style="text-align: left"><strong><code>pop()</code></strong></td><td style="text-align: left">Remove from end</td><td style="text-align: left"><code>Option&lt;T&gt;</code></td><td style="text-align: left">Safe with Option</td><td style="text-align: left">O(1) always</td></tr>
+<tr><td style="text-align: left"><strong><code>iter()</code></strong></td><td style="text-align: left">Read elements</td><td style="text-align: left"><code>Iterator&lt;&amp;T&gt;</code></td><td style="text-align: left">Always safe</td><td style="text-align: left">O(1) to start</td></tr>
+</tbody></table>
+<h3 id="quick-usage-reference"><strong>Quick Usage Reference</strong></h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Creating and adding (push)
+</span><span style="color:#b48ead;">let mut</span><span> kitchen_items = Vec::new();
+</span><span>kitchen_items.</span><span style="color:#96b5b4;">push</span><span>(&quot;</span><span style="color:#a3be8c;">Tomatoes</span><span>&quot;);        </span><span style="color:#a7adba;">// Add single item
+</span><span>kitchen_items.</span><span style="color:#96b5b4;">extend</span><span>([&quot;</span><span style="color:#a3be8c;">Onions</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Peppers</span><span>&quot;]);  </span><span style="color:#a7adba;">// Add multiple
+</span><span>
+</span><span style="color:#a7adba;">// Removing safely (pop)
+</span><span style="color:#b48ead;">match</span><span> kitchen_items.</span><span style="color:#96b5b4;">pop</span><span>() {
+</span><span>    Some(item) =&gt; println!(&quot;</span><span style="color:#a3be8c;">Used: </span><span style="color:#d08770;">{}</span><span>&quot;, item),
+</span><span>    None =&gt; println!(&quot;</span><span style="color:#a3be8c;">Nothing to use</span><span>&quot;),
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Examining contents (iter)
+</span><span style="color:#b48ead;">for</span><span> item in kitchen_items.</span><span style="color:#96b5b4;">iter</span><span>() {
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Available: </span><span style="color:#d08770;">{}</span><span>&quot;, item);    </span><span style="color:#a7adba;">// Read-only access
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Modifying contents (iter_mut)
+</span><span style="color:#b48ead;">for</span><span> item in kitchen_items.</span><span style="color:#96b5b4;">iter_mut</span><span>() {
+</span><span>    *item = &amp;item.</span><span style="color:#96b5b4;">to_uppercase</span><span>();       </span><span style="color:#a7adba;">// Modify in place
+</span><span>}
+</span></code></pre>
+<h3 id="best-practices-summary"><strong>Best Practices Summary</strong></h3>
+<p><strong>✅ DO:</strong></p>
+<ul>
+<li>Use <code>with_capacity()</code> when you know the approximate size[^2]</li>
+<li>Handle <code>pop()</code> results with pattern matching, not <code>unwrap()</code>[^3]</li>
+<li>Use <code>iter()</code> for read-only operations to avoid unnecessary moves[^6]</li>
+<li>Combine methods for efficient workflows (push + iter + pop)[^2]</li>
+<li>Use iterator methods (<code>filter</code>, <code>map</code>, <code>collect</code>) for data processing[^5]</li>
+</ul>
+<p><strong>❌ DON'T:</strong></p>
+<ul>
+<li>Call <code>unwrap()</code> on <code>pop()</code> results without checking emptiness[^4]</li>
+<li>Use <code>remove()</code> when <code>pop()</code> or <code>swap_remove()</code> would work</li>
+<li>Clone data unnecessarily during iteration</li>
+<li>Create new vectors when you can reuse existing ones</li>
+<li>Ignore capacity management for performance-critical code</li>
+</ul>
+<h3 id="real-world-applications"><strong>Real-World Applications</strong></h3>
+<p><strong>These methods are perfect for:</strong></p>
+<ul>
+<li>🍽️ <strong>Order queues</strong> - LIFO processing with push/pop</li>
+<li>📦 <strong>Inventory management</strong> - Adding stock, using items, checking levels</li>
+<li>📊 <strong>Data processing</strong> - Collecting, filtering, and transforming information</li>
+<li>🎮 <strong>Game development</strong> - Managing entities, items, and game states</li>
+<li>🔄 <strong>Task management</strong> - Adding tasks, completing them, reviewing progress</li>
+</ul>
+<p><strong>Vector methods are the foundation of dynamic data management in Rust</strong> - they provide the essential operations you need for real-world programming. Like a well-trained kitchen staff that efficiently receives supplies, uses ingredients, and maintains inventory, mastering <code>push()</code>, <code>pop()</code>, and <code>iter()</code> gives you the tools to build robust, efficient programs that handle changing data gracefully and safely.</p>
+<p>Just as a professional restaurant kitchen runs smoothly because every operation is systematic and safe, Rust vectors with their core methods ensure your programs handle data changes reliably, preventing the common bugs that plague other languages while maintaining excellent performance!</p>
+<ol>
+<li>https://www.programiz.com/rust/vector</li>
+<li>https://dev.to/iamdipankarpaul/understanding-vectors-in-rust-a-comprehensive-guide-1j7p</li>
+<li>https://www.reddit.com/r/learnrust/comments/n9vked/pop_an_element_from_a_vector/</li>
+<li>https://stackoverflow.com/questions/64206004/how-to-get-value-from-vecpop</li>
+<li>https://www.optimum-web.com/iterators-in-rust-what-are-they-and-how-to-iterate-over-a-vector/</li>
+<li>https://github.com/rustomax/rust-iterators</li>
+<li>https://doc.rust-lang.org/std/vec/struct.Vec.html</li>
+<li>https://stackoverflow.com/questions/72163796/pushing-array-values-to-a-vector-in-rust</li>
+<li>https://doc.rust-lang.org/rust-by-example/std/vec.html</li>
+<li>https://www.reddit.com/r/rust/comments/x10t1d/best_expression_to_push_or_append_to_vec_and/</li>
+<li>https://blog.coolhead.in/implementing-a-queue-in-rust-using-a-vector</li>
+<li>https://www.linkedin.com/pulse/vector-creation-iteration-rust-amit-nadiger</li>
+<li>https://www.w3schools.com/rust/rust_vectors.php</li>
+<li>https://www.newline.co/@kkostov/prelude-to-vectors-in-the-rust-programming-language--a541ac47</li>
+<li>https://doc.rust-lang.org/book/ch13-02-iterators.html</li>
+<li>https://www.alexdwilson.dev/learning-in-public/using-vectors-in-rust-for-push-pop-ops</li>
+<li>https://stackoverflow.com/questions/36672845/in-rust-is-a-vector-an-iterator</li>
+<li>https://doc.rust-lang.org/book/ch08-01-vectors.html</li>
+<li>https://www.programiz.com/rust/iterator</li>
+<li>https://codesignal.com/learn/courses/exploring-data-structures-in-rust/lessons/vectors-in-rust</li>
+<li>https://dev.to/francescoxx/iterators-in-rust-2o0b</li>
+<li>https://doc.rust-lang.org/std/iter/trait.Iterator.html</li>
+<li>https://www.youtube.com/watch?v=f4a8rWkSl8U</li>
+<li>https://labex.io/tutorials/rust-rust-vectors-resizable-array-essentials-99253</li>
+<li>https://rust-book.cs.brown.edu/ch08-01-vectors.html</li>
+<li>https://www.youtube.com/watch?v=81CC2V9uR5Y</li>
+<li>https://www.risein.com/courses/rust-programming/introduction-to-iterator-and-its-types-in-rust</li>
+<li>https://docs.rs/vec-option</li>
+<li>https://doc.rust-lang.org/nomicon/vec/vec-push-pop.html</li>
+<li>https://web.mit.edu/rust-lang_v1.25/arch/amd64_ubuntu1404/share/doc/rust/html/std/vec/struct.Vec.html</li>
+<li>https://www.geeksforgeeks.org/rust/rust-vectors/</li>
+</ol>
+
+    
+        </div>
+
+    </article>
+</main>
+
+
+    <script type="text/javascript" src="http://localhost/elasticlunr.min.js" defer></script>
+    <script type="text/javascript" src="http://localhost/search_index.en.js" defer></script>
+<script type="text/javascript" src="http://localhost/js.js" defer></script>
+
+</body>
+</html>

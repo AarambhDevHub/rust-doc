@@ -1,0 +1,1042 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://localhost/main.css">
+    <link rel="icon" href="https://www.rust-lang.org/static/images/favicon-16x16.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Rust Programming Course! | Stack vs Heap in Rust </title>
+</head>
+<body>
+
+<main>
+    
+    <nav>
+            <a href="http:&#x2F;&#x2F;localhost">
+                        <img src="https://www.rust-lang.org/static/images/rust-logo-blk.svg" alt="logo"/>
+                    </a>
+                <!-- -->
+
+            <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+            <div id="trees">
+                <input class="tree-toggle" type="checkbox" id="day-1-introduction"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-1-introduction">Day 1: Introduction</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 1/chapter-1/">What is Rust and why use it?</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-2/">Installing Rust Toolchain (rustup, cargo)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-3/">Setting up Development (VS Code + Hello World)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-4/">Understanding Cargo Project Structure</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-2-basic-syntax-variables"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-2-basic-syntax-variables">Day 2: Basic Syntax &amp; Variables</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 2/chapter-1/">Variables and Mutability in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-2/">Data Types in Rust: Integers, Floats, Booleans, and Characters</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-3/">Constants vs Variables</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-4/">Understanding Shadowing in Rust: A Practical Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-5/">Basic Input&#x2F;Output</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-3-functions-control-flow"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-3-functions-control-flow">Day 3: Functions &amp; Control Flow</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 3/chapter-1/">Function Syntax and Parameters in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-2/">Return Values and Expressions vs Statements</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-3/">If&#x2F;Else Statements in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-4/">Match Expressions in Rust: Powerful Pattern Matching</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-5/">Loops in Rust: loop, while, for Explained</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-4-data-types-deep-dive"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-4-data-types-deep-dive">Day 4: Data Types Deep Dive</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 4/chapter-1/">Compound Types (Tuples, Arrays)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-2/">String vs &amp;str in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-3/">Vector Basics in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-4/">Type Annotations and Inference in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-5/">Practical Rust Exercises</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-5-practice-review"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-5-practice-review">Day 5: Practice &amp; Review</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 5/chapter-1/">Day 5: Practice &amp; Review</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-6-ownership-fundamentals"
+                           checked/>
+                    <label class="tree-toggle-label"
+                           for="day-6-ownership-fundamentals">Day 6: Ownership Fundamentals</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 6/chapter-1/">Ownership in Rust: A Detailed Guide</a>
+                            </li>
+
+                            <li class="active">
+                                <a href="http://localhost/day 6/chapter-2/">Stack vs Heap in Rust</a>
+                            </li>
+
+                            
+                                    
+                                    
+                                        <ul id="toc">
+                                            <li><a href="
+                                                        http://localhost/day 6/chapter-2/#stack-vs-heap-memory-in-rust-a-detailed-documentation-guide">Stack vs Heap Memory in Rust: A Detailed Documentation Guide</a>
+                                                    <ul>
+                                                            <li>
+                                                                    <a href="http://localhost/day 6/chapter-2/#what-are-stack-and-heap">What are Stack and Heap?</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 6/chapter-2/#stack-memory-the-fast-lane">Stack Memory - The Fast Lane</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 6/chapter-2/#heap-memory-the-flexible-space">Heap Memory - The Flexible Space</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 6/chapter-2/#performance-comparison">Performance Comparison</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 6/chapter-2/#mixed-stack-heap-data-structures">Mixed Stack-Heap Data Structures</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 6/chapter-2/#ownership-and-memory-management">Ownership and Memory Management</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 6/chapter-2/#choosing-between-stack-and-heap">Choosing Between Stack and Heap</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 6/chapter-2/#stack-overflow-and-heap-exhaustion">Stack Overflow and Heap Exhaustion</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 6/chapter-2/#memory-efficient-programming-patterns">Memory-Efficient Programming Patterns</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 6/chapter-2/#debugging-memory-usage">Debugging Memory Usage</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 6/chapter-2/#best-practices-summary">Best Practices Summary</a>
+                                                                </li>
+                                                            </ul>
+                                                    </li>
+                                            </ul>
+                                    <li >
+                                <a href="http://localhost/day 6/chapter-3/">Understanding Ownership in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-4/">Move Semantics in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-5/">Copy Trait in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-7-references-borrowing"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-7-references-borrowing">Day 7: References &amp; Borrowing</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 7/chapter-1/">Immutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-2/">Mutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-3/">Borrowing Rules</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-4/">Reference Lifetime Basics</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-5/">Common Borrowing Errors and Solutions</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-8-slices"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-8-slices">Day 8: Slices</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 8/chapter-1/">String Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-2/">Array Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-3/">Slice Syntax and Usage</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-4/">Practical Applications</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-5/">Memory Safety Benefits</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-9-advanced-ownership"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-9-advanced-ownership">Day 9: Advanced Ownership</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 9/chapter-1/">Clone Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-2/">Drop Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-3/">RAII Pattern</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-4/">Memory Management Comparison with Other Languages</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-5/">Best Practices (Advanced Ownership)</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-10-ownership-practice"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-10-ownership-practice">Day 10: Ownership Practice</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 10/chapter-1/">Complex Ownership Scenarios</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-2/">Debugging Ownership Errors</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-3/">Code Refactoring Exercises</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-4/">Group Problem-Solving</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-11-structs-basics"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-11-structs-basics">Day 11: Structs Basics</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 11/chapter-1/">Defining and Instantiating Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-2/">Field Access and Modification</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-3/">Tuple Structs and Unit Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-4/">Struct Update Syntax</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-5/">Ownership of Struct Data</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-12-methods-associated-functions"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-12-methods-associated-functions">Day 12: Methods &amp; Associated Functions</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 12/chapter-1/">Implementing Methods with impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-2/">&amp;self, &amp;mut self, and self</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-3/">Associated Functions (like Constructors)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-4/">Multiple impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-5/">Method Chaining</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-13-advanced-struct-concepts"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-13-advanced-struct-concepts">Day 13: Advanced Struct Concepts</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 13/chapter-1/">Struct Lifetime Parameters</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-2/">Debug Trait and Custom Formatting</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-3/">Builder Pattern Implementation</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-4/">Struct Composition</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-5/">Best Practices for Struct Design</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-14-enums-pattern-matching"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-14-enums-pattern-matching">Day 14: Enums &amp; Pattern Matching</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 14/chapter-1/">Defining Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-2/">Enum Variants with Data</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-3/">Option&lt;T&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-4/">Result&lt;T, E&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-5/">Advanced Match Patterns in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-15-practice-project"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-15-practice-project">Day 15: Practice Project</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 15/chapter-1/">Building a Simple CLI Calculator in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-16-vectors"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-16-vectors">Day 16: Vectors</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 16/chapter-1/">Creating and Updating Vectors</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-2/">Vector Methods: push, pop, iter</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-3/">Accessing Vector Elements Safely</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-4/">Vector of Different Types with Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-5/">Performance Considerations</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-17-hashmaps-other-collections"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-17-hashmaps-other-collections">Day 17: HashMaps &amp; Other Collections</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 17/chapter-1/">HashMap Creation and Manipulation</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-2/">Keys and Values Ownership</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-3/">HashMap Methods and Iteration</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-4/">When to Use Different Collections</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-5/">BTreeMap Introduction</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-18-error-handling"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-18-error-handling">Day 18: Error Handling</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 18/chapter-1/">Panic! and When to Use It</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 18/chapter-2/">Result&lt;T, E&gt; in Depth</a>
+                            </li>
+
+                            </ul>
+                </div>
+        </nav>
+    <article>
+
+        <div id="on_right">
+                <span id="search-ico" class="ms-Icon--Search"></span>
+            </div>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="Search as you type...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        <div id="wrap">
+            
+        <h1 id="stack-vs-heap-memory-in-rust-a-detailed-documentation-guide">Stack vs Heap Memory in Rust: A Detailed Documentation Guide</h1>
+<p>Building on the ownership concepts we just covered, let's dive deep into <strong>stack and heap memory</strong> - the fundamental memory models that underpin Rust's ownership system. Understanding how these memory regions work is crucial for writing efficient Rust code and grasping why ownership rules exist.</p>
+<h2 id="what-are-stack-and-heap">What are Stack and Heap?</h2>
+<p><strong>Stack</strong> and <strong>heap</strong> are two distinct regions of memory that your program uses to store data. Each has different characteristics, performance implications, and use cases. Rust's ownership system is designed around efficiently managing both types of memory.</p>
+<h3 id="memory-layout-overview">Memory Layout Overview</h3>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>┌─────────────────────────────────────┐
+</span><span>│            PROGRAM MEMORY           │
+</span><span>├─────────────────────────────────────┤
+</span><span>│              CODE                   │  ← Your compiled program
+</span><span>├─────────────────────────────────────┤
+</span><span>│              STACK                  │  ← Fast, automatic, limited
+</span><span>├─────────────────────────────────────┤
+</span><span>│              HEAP                   │  ← Flexible, manual, unlimited
+</span><span>└─────────────────────────────────────┘
+</span></code></pre>
+<h2 id="stack-memory-the-fast-lane">Stack Memory - The Fast Lane</h2>
+<p>The <strong>stack</strong> is a region of memory that operates on a <strong>Last In, First Out (LIFO)</strong> principle, like a stack of plates. It's extremely fast but has limitations.</p>
+<h3 id="stack-characteristics">Stack Characteristics</h3>
+<table><thead><tr><th>Feature</th><th>Description</th></tr></thead><tbody>
+<tr><td><strong>Speed</strong></td><td>Very fast allocation and deallocation</td></tr>
+<tr><td><strong>Organization</strong></td><td>LIFO (Last In, First Out)</td></tr>
+<tr><td><strong>Size Limit</strong></td><td>Small (typically 1-8 MB per thread)</td></tr>
+<tr><td><strong>Data Types</strong></td><td>Fixed-size data known at compile time</td></tr>
+<tr><td><strong>Management</strong></td><td>Automatic - compiler handles everything</td></tr>
+<tr><td><strong>Memory Layout</strong></td><td>Contiguous, predictable addresses</td></tr>
+</tbody></table>
+<h3 id="how-stack-memory-works">How Stack Memory Works</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> x = </span><span style="color:#d08770;">5</span><span>;        </span><span style="color:#a7adba;">// Pushed onto stack
+</span><span>    </span><span style="color:#b48ead;">let</span><span> y = </span><span style="color:#d08770;">10</span><span>;       </span><span style="color:#a7adba;">// Pushed onto stack  
+</span><span>    </span><span style="color:#b48ead;">let</span><span> z = x + y;    </span><span style="color:#a7adba;">// Pushed onto stack
+</span><span>    
+</span><span>    {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> a = </span><span style="color:#d08770;">20</span><span>;   </span><span style="color:#a7adba;">// Pushed onto stack
+</span><span>        </span><span style="color:#b48ead;">let</span><span> b = </span><span style="color:#d08770;">30</span><span>;   </span><span style="color:#a7adba;">// Pushed onto stack
+</span><span>        </span><span style="color:#a7adba;">// Stack now contains: x, y, z, a, b (bottom to top)
+</span><span>    }  </span><span style="color:#a7adba;">// a and b automatically popped from stack
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Stack now contains: x, y, z
+</span><span>    println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, z);
+</span><span>}  </span><span style="color:#a7adba;">// x, y, z automatically popped when main ends
+</span></code></pre>
+<h3 id="stack-memory-layout-visualization">Stack Memory Layout Visualization</h3>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>Stack Growth (downward)
+</span><span>┌─────────────────────┐ ← High Memory Address
+</span><span>│                     │
+</span><span>│        ...          │
+</span><span>├─────────────────────┤
+</span><span>│    b: 30 (i32)     │ ← Most recent
+</span><span>├─────────────────────┤
+</span><span>│    a: 20 (i32)     │
+</span><span>├─────────────────────┤
+</span><span>│    z: 15 (i32)     │
+</span><span>├─────────────────────┤
+</span><span>│    y: 10 (i32)     │
+</span><span>├─────────────────────┤
+</span><span>│    x: 5 (i32)      │ ← First pushed
+</span><span>└─────────────────────┘ ← Low Memory Address (Stack Pointer)
+</span></code></pre>
+<h3 id="data-types-that-use-stack-memory">Data Types That Use Stack Memory</h3>
+<p><strong>All these types are stored entirely on the stack:</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// Primitive types
+</span><span>    </span><span style="color:#b48ead;">let</span><span> integer: </span><span style="color:#b48ead;">i32 </span><span>= </span><span style="color:#d08770;">42</span><span>;           </span><span style="color:#a7adba;">// 4 bytes on stack
+</span><span>    </span><span style="color:#b48ead;">let</span><span> float: </span><span style="color:#b48ead;">f64 </span><span>= </span><span style="color:#d08770;">3.14</span><span>;           </span><span style="color:#a7adba;">// 8 bytes on stack
+</span><span>    </span><span style="color:#b48ead;">let</span><span> boolean: </span><span style="color:#b48ead;">bool </span><span>= </span><span style="color:#d08770;">true</span><span>;        </span><span style="color:#a7adba;">// 1 byte on stack
+</span><span>    </span><span style="color:#b48ead;">let</span><span> character: </span><span style="color:#b48ead;">char </span><span>= &#39;</span><span style="color:#a3be8c;">A</span><span>&#39;;       </span><span style="color:#a7adba;">// 4 bytes on stack (Unicode)
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Fixed-size arrays
+</span><span>    </span><span style="color:#b48ead;">let</span><span> array: [</span><span style="color:#b48ead;">i32</span><span>; </span><span style="color:#d08770;">5</span><span>] = [</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">2</span><span>, </span><span style="color:#d08770;">3</span><span>, </span><span style="color:#d08770;">4</span><span>, </span><span style="color:#d08770;">5</span><span>];  </span><span style="color:#a7adba;">// 20 bytes on stack
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Tuples (if all elements are stack types)
+</span><span>    </span><span style="color:#b48ead;">let</span><span> tuple: (</span><span style="color:#b48ead;">i32</span><span>, </span><span style="color:#b48ead;">f64</span><span>, </span><span style="color:#b48ead;">bool</span><span>) = (</span><span style="color:#d08770;">42</span><span>, </span><span style="color:#d08770;">3.14</span><span>, </span><span style="color:#d08770;">true</span><span>);  </span><span style="color:#a7adba;">// 13 bytes on stack
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Structs (if all fields are stack types)
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>Point {
+</span><span>        </span><span style="color:#bf616a;">x</span><span>: </span><span style="color:#b48ead;">f64</span><span>,  </span><span style="color:#a7adba;">// 8 bytes
+</span><span>        </span><span style="color:#bf616a;">y</span><span>: </span><span style="color:#b48ead;">f64</span><span>,  </span><span style="color:#a7adba;">// 8 bytes
+</span><span>    }
+</span><span>    </span><span style="color:#b48ead;">let</span><span> point = Point { x: </span><span style="color:#d08770;">10.0</span><span>, y: </span><span style="color:#d08770;">20.0 </span><span>};  </span><span style="color:#a7adba;">// 16 bytes on stack
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">All data is on the stack!</span><span>&quot;);
+</span><span>}
+</span></code></pre>
+<h3 id="stack-allocation-performance">Stack Allocation Performance</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">stack_performance_demo</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// These operations are extremely fast
+</span><span>    </span><span style="color:#b48ead;">let</span><span> start = std::time::Instant::now();
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">for </span><span>_ in </span><span style="color:#d08770;">0</span><span>..</span><span style="color:#d08770;">1_000_000 </span><span>{
+</span><span>        </span><span style="color:#b48ead;">let</span><span> x = </span><span style="color:#d08770;">42</span><span>;           </span><span style="color:#a7adba;">// Stack allocation - nanoseconds
+</span><span>        </span><span style="color:#b48ead;">let</span><span> y = x * </span><span style="color:#d08770;">2</span><span>;        </span><span style="color:#a7adba;">// Stack operation
+</span><span>        </span><span style="color:#b48ead;">let</span><span> z = (x, y);       </span><span style="color:#a7adba;">// Stack tuple creation
+</span><span>        </span><span style="color:#a7adba;">// All automatically cleaned up
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> duration = start.</span><span style="color:#96b5b4;">elapsed</span><span>();
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Stack operations took: </span><span style="color:#d08770;">{:?}</span><span>&quot;, duration);
+</span><span>}
+</span></code></pre>
+<h2 id="heap-memory-the-flexible-space">Heap Memory - The Flexible Space</h2>
+<p>The <strong>heap</strong> is a region of memory used for <strong>dynamic allocation</strong> - data whose size might not be known at compile time or might change during program execution.</p>
+<h3 id="heap-characteristics">Heap Characteristics</h3>
+<table><thead><tr><th>Feature</th><th>Description</th></tr></thead><tbody>
+<tr><td><strong>Speed</strong></td><td>Slower allocation and deallocation</td></tr>
+<tr><td><strong>Organization</strong></td><td>Unordered, fragmented</td></tr>
+<tr><td><strong>Size Limit</strong></td><td>Large (limited by system RAM)</td></tr>
+<tr><td><strong>Data Types</strong></td><td>Dynamic-size data, unknown at compile time</td></tr>
+<tr><td><strong>Management</strong></td><td>Manual - programmer/runtime manages</td></tr>
+<tr><td><strong>Memory Layout</strong></td><td>Non-contiguous, unpredictable addresses</td></tr>
+</tbody></table>
+<h3 id="how-heap-memory-works">How Heap Memory Works</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// Stack: pointer to heap data
+</span><span>    </span><span style="color:#b48ead;">let</span><span> s1 = String::from(&quot;</span><span style="color:#a3be8c;">hello</span><span>&quot;);  
+</span><span>    </span><span style="color:#a7adba;">// ┌─────────────────────┐ Stack
+</span><span>    </span><span style="color:#a7adba;">// │ ptr: 0x1234        │ ← Points to heap
+</span><span>    </span><span style="color:#a7adba;">// │ len: 5             │
+</span><span>    </span><span style="color:#a7adba;">// │ cap: 5             │
+</span><span>    </span><span style="color:#a7adba;">// └─────────────────────┘
+</span><span>    </span><span style="color:#a7adba;">//           │
+</span><span>    </span><span style="color:#a7adba;">//           ▼
+</span><span>    </span><span style="color:#a7adba;">// ┌─────────────────────┐ Heap
+</span><span>    </span><span style="color:#a7adba;">// │ h e l l o          │ ← Actual string data
+</span><span>    </span><span style="color:#a7adba;">// └─────────────────────┘
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> s2 = s1;  </span><span style="color:#a7adba;">// Move: heap data unchanged, stack pointer copied
+</span><span>    </span><span style="color:#a7adba;">// s1 is now invalid, s2 owns the heap data
+</span><span>}
+</span></code></pre>
+<h3 id="heap-memory-layout-visualization">Heap Memory Layout Visualization</h3>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>Stack                           Heap
+</span><span>┌─────────────────────┐        ┌──────────────────────────┐
+</span><span>│ String s1:          │        │                          │
+</span><span>│   ptr: 0x2000   ────┼────────┼→ &quot;hello&quot; (5 bytes)      │
+</span><span>│   len: 5            │        │                          │
+</span><span>│   cap: 8            │        │    [unused capacity]     │
+</span><span>├─────────────────────┤        ├──────────────────────────┤
+</span><span>│ Vec numbers:   │        │                          │
+</span><span>│   ptr: 0x3000   ────┼────────┼→ [1, 2, 3, 4] (16 bytes)│
+</span><span>│   len: 4            │        │                          │
+</span><span>│   cap: 4            │        │                          │
+</span><span>└─────────────────────┘        └──────────────────────────┘
+</span></code></pre>
+<h3 id="data-types-that-use-heap-memory">Data Types That Use Heap Memory</h3>
+<p><strong>These types store their data on the heap:</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// Dynamic strings
+</span><span>    </span><span style="color:#b48ead;">let</span><span> string = String::from(&quot;</span><span style="color:#a3be8c;">Hello, world!</span><span>&quot;);  </span><span style="color:#a7adba;">// Data on heap
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> growable = String::new();            </span><span style="color:#a7adba;">// Can grow dynamically
+</span><span>    growable.</span><span style="color:#96b5b4;">push_str</span><span>(&quot;</span><span style="color:#a3be8c;">Growing...</span><span>&quot;);
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Vectors (dynamic arrays)
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> numbers = Vec::new();                </span><span style="color:#a7adba;">// Data on heap
+</span><span>    numbers.</span><span style="color:#96b5b4;">push</span><span>(</span><span style="color:#d08770;">1</span><span>);
+</span><span>    numbers.</span><span style="color:#96b5b4;">push</span><span>(</span><span style="color:#d08770;">2</span><span>);
+</span><span>    numbers.</span><span style="color:#96b5b4;">push</span><span>(</span><span style="color:#d08770;">3</span><span>);
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Hash maps
+</span><span>    </span><span style="color:#b48ead;">use </span><span>std::collections::HashMap;
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> map = HashMap::new();                </span><span style="color:#a7adba;">// Data on heap
+</span><span>    map.</span><span style="color:#96b5b4;">insert</span><span>(&quot;</span><span style="color:#a3be8c;">key</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">value</span><span>&quot;);
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Boxed values
+</span><span>    </span><span style="color:#b48ead;">let</span><span> boxed_int = Box::new(</span><span style="color:#d08770;">42</span><span>);                </span><span style="color:#a7adba;">// Forces heap allocation
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Dynamic trait objects
+</span><span>    </span><span style="color:#b48ead;">let</span><span> dynamic: Box = Box::new(&quot;</span><span style="color:#a3be8c;">Hello</span><span>&quot;);
+</span><span>}
+</span></code></pre>
+<h3 id="heap-allocation-process">Heap Allocation Process</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">heap_allocation_demo</span><span>() {
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Creating heap-allocated data...</span><span>&quot;);
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// 1. Request memory from OS
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> data = Vec::with_capacity(</span><span style="color:#d08770;">1000</span><span>);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Allocated capacity for 1000 elements</span><span>&quot;);
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// 2. Use the allocated memory  
+</span><span>    </span><span style="color:#b48ead;">for</span><span> i in </span><span style="color:#d08770;">0</span><span>..</span><span style="color:#d08770;">500 </span><span>{
+</span><span>        data.</span><span style="color:#96b5b4;">push</span><span>(i);
+</span><span>    }
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Used 500 elements, 500 unused</span><span>&quot;);
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// 3. Memory is automatically freed when `data` goes out of scope
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Memory will be freed automatically</span><span>&quot;);
+</span><span>}
+</span></code></pre>
+<h2 id="performance-comparison">Performance Comparison</h2>
+<h3 id="speed-differences">Speed Differences</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>std::time::Instant;
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">performance_comparison</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">const </span><span style="color:#d08770;">ITERATIONS</span><span>: </span><span style="color:#b48ead;">usize </span><span>= </span><span style="color:#d08770;">1_000_000</span><span>;
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Stack allocation performance
+</span><span>    </span><span style="color:#b48ead;">let</span><span> start = Instant::now();
+</span><span>    </span><span style="color:#b48ead;">for </span><span>_ in </span><span style="color:#d08770;">0</span><span>..</span><span style="color:#d08770;">ITERATIONS </span><span>{
+</span><span>        </span><span style="color:#b48ead;">let</span><span> _x = [</span><span style="color:#d08770;">0</span><span>; </span><span style="color:#d08770;">100</span><span>];  </span><span style="color:#a7adba;">// 400 bytes on stack
+</span><span>    }
+</span><span>    </span><span style="color:#b48ead;">let</span><span> stack_time = start.</span><span style="color:#96b5b4;">elapsed</span><span>();
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Heap allocation performance
+</span><span>    </span><span style="color:#b48ead;">let</span><span> start = Instant::now();
+</span><span>    </span><span style="color:#b48ead;">for </span><span>_ in </span><span style="color:#d08770;">0</span><span>..</span><span style="color:#d08770;">ITERATIONS </span><span>{
+</span><span>        </span><span style="color:#b48ead;">let</span><span> _v = vec![</span><span style="color:#d08770;">0</span><span>; </span><span style="color:#d08770;">100</span><span>];  </span><span style="color:#a7adba;">// 400 bytes on heap
+</span><span>    }
+</span><span>    </span><span style="color:#b48ead;">let</span><span> heap_time = start.</span><span style="color:#96b5b4;">elapsed</span><span>();
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Stack allocation: </span><span style="color:#d08770;">{:?}</span><span>&quot;, stack_time);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Heap allocation: </span><span style="color:#d08770;">{:?}</span><span>&quot;, heap_time);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Heap is ~</span><span style="color:#d08770;">{:.1}</span><span style="color:#a3be8c;">x slower</span><span>&quot;, 
+</span><span>             heap_time.</span><span style="color:#96b5b4;">as_nanos</span><span>() as </span><span style="color:#b48ead;">f64 </span><span>/ stack_time.</span><span style="color:#96b5b4;">as_nanos</span><span>() as </span><span style="color:#b48ead;">f64</span><span>);
+</span><span>}
+</span></code></pre>
+<p><strong>Typical results:</strong> Heap allocation is often 10-100x slower than stack allocation.</p>
+<h3 id="memory-access-patterns">Memory Access Patterns</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">access_pattern_demo</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// Stack: Excellent cache locality
+</span><span>    </span><span style="color:#b48ead;">let</span><span> stack_array = [</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">2</span><span>, </span><span style="color:#d08770;">3</span><span>, </span><span style="color:#d08770;">4</span><span>, </span><span style="color:#d08770;">5</span><span>, </span><span style="color:#d08770;">6</span><span>, </span><span style="color:#d08770;">7</span><span>, </span><span style="color:#d08770;">8</span><span>, </span><span style="color:#d08770;">9</span><span>, </span><span style="color:#d08770;">10</span><span>];
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> sum = </span><span style="color:#d08770;">0</span><span>;
+</span><span>    </span><span style="color:#b48ead;">for </span><span>&amp;value in &amp;stack_array {
+</span><span>        sum += value;  </span><span style="color:#a7adba;">// Very fast - contiguous memory
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Heap: Potential cache misses
+</span><span>    </span><span style="color:#b48ead;">let</span><span> heap_vec = vec![</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">2</span><span>, </span><span style="color:#d08770;">3</span><span>, </span><span style="color:#d08770;">4</span><span>, </span><span style="color:#d08770;">5</span><span>, </span><span style="color:#d08770;">6</span><span>, </span><span style="color:#d08770;">7</span><span>, </span><span style="color:#d08770;">8</span><span>, </span><span style="color:#d08770;">9</span><span>, </span><span style="color:#d08770;">10</span><span>];
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> sum2 = </span><span style="color:#d08770;">0</span><span>;
+</span><span>    </span><span style="color:#b48ead;">for </span><span>&amp;value in &amp;heap_vec {
+</span><span>        sum2 += value;  </span><span style="color:#a7adba;">// Slower - requires pointer indirection
+</span><span>    }
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Sums: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> (stack), </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> (heap)</span><span>&quot;, sum, sum2);
+</span><span>}
+</span></code></pre>
+<h2 id="mixed-stack-heap-data-structures">Mixed Stack-Heap Data Structures</h2>
+<p>Many Rust types combine stack and heap storage:</p>
+<h3 id="string-structure">String Structure</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">string_memory_layout</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> s = String::from(&quot;</span><span style="color:#a3be8c;">Hello, Rust programming!</span><span>&quot;);
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Stack portion (String struct):
+</span><span>    </span><span style="color:#a7adba;">// - ptr: 8 bytes (pointer to heap)
+</span><span>    </span><span style="color:#a7adba;">// - len: 8 bytes (current length)
+</span><span>    </span><span style="color:#a7adba;">// - cap: 8 bytes (allocated capacity)
+</span><span>    </span><span style="color:#a7adba;">// Total: 24 bytes on stack
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Heap portion:
+</span><span>    </span><span style="color:#a7adba;">// - Actual character data: 26 bytes
+</span><span>    </span><span style="color:#a7adba;">// - May have additional capacity for growth
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">String length: </span><span style="color:#d08770;">{}</span><span>&quot;, s.</span><span style="color:#96b5b4;">len</span><span>());
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">String capacity: </span><span style="color:#d08770;">{}</span><span>&quot;, s.</span><span style="color:#96b5b4;">capacity</span><span>());
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Stack size: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> bytes</span><span>&quot;, std::mem::size_of_val(&amp;s));
+</span><span>}
+</span></code></pre>
+<h3 id="vector-structure">Vector Structure</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">vector_memory_layout</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> v = Vec::with_capacity(</span><span style="color:#d08770;">10</span><span>);
+</span><span>    v.</span><span style="color:#96b5b4;">push</span><span>(</span><span style="color:#d08770;">1</span><span>);
+</span><span>    v.</span><span style="color:#96b5b4;">push</span><span>(</span><span style="color:#d08770;">2</span><span>);
+</span><span>    v.</span><span style="color:#96b5b4;">push</span><span>(</span><span style="color:#d08770;">3</span><span>);
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Stack portion (Vec struct):
+</span><span>    </span><span style="color:#a7adba;">// - ptr: 8 bytes (pointer to heap)
+</span><span>    </span><span style="color:#a7adba;">// - len: 8 bytes (current length: 3)
+</span><span>    </span><span style="color:#a7adba;">// - cap: 8 bytes (allocated capacity: 10)
+</span><span>    </span><span style="color:#a7adba;">// Total: 24 bytes on stack
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Heap portion:
+</span><span>    </span><span style="color:#a7adba;">// - 3 i32 values: 12 bytes used
+</span><span>    </span><span style="color:#a7adba;">// - 7 i32 slots unused: 28 bytes reserved
+</span><span>    </span><span style="color:#a7adba;">// - Total heap allocation: 40 bytes
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Vector length: </span><span style="color:#d08770;">{}</span><span>&quot;, v.</span><span style="color:#96b5b4;">len</span><span>());
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Vector capacity: </span><span style="color:#d08770;">{}</span><span>&quot;, v.</span><span style="color:#96b5b4;">capacity</span><span>());
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Stack size: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> bytes</span><span>&quot;, std::mem::size_of_val(&amp;v));
+</span><span>}
+</span></code></pre>
+<h2 id="ownership-and-memory-management">Ownership and Memory Management</h2>
+<h3 id="stack-memory-automatic-management">Stack Memory - Automatic Management</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">stack_scope_demo</span><span>() {
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Entering outer scope</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> x = </span><span style="color:#d08770;">10</span><span>;  </span><span style="color:#a7adba;">// Allocated on stack
+</span><span>    
+</span><span>    {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Entering inner scope</span><span>&quot;);
+</span><span>        </span><span style="color:#b48ead;">let</span><span> y = </span><span style="color:#d08770;">20</span><span>;  </span><span style="color:#a7adba;">// Allocated on stack
+</span><span>        </span><span style="color:#b48ead;">let</span><span> z = x + y;  </span><span style="color:#a7adba;">// Allocated on stack
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">x: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">, y: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">, z: </span><span style="color:#d08770;">{}</span><span>&quot;, x, y, z);
+</span><span>    }  </span><span style="color:#a7adba;">// y and z automatically deallocated (popped from stack)
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Back in outer scope, x: </span><span style="color:#d08770;">{}</span><span>&quot;, x);
+</span><span>}  </span><span style="color:#a7adba;">// x automatically deallocated
+</span></code></pre>
+<h3 id="heap-memory-ownership-based-management">Heap Memory - Ownership-Based Management</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">heap_ownership_demo</span><span>() {
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Creating heap data</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> s1 = String::from(&quot;</span><span style="color:#a3be8c;">Hello</span><span>&quot;);  </span><span style="color:#a7adba;">// Heap allocation
+</span><span>    
+</span><span>    {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> s2 = s1;  </span><span style="color:#a7adba;">// Ownership transfer - no new allocation
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">s2 owns the data: </span><span style="color:#d08770;">{}</span><span>&quot;, s2);
+</span><span>    }  </span><span style="color:#a7adba;">// s2 goes out of scope, heap memory freed
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// println!(&quot;{}&quot;, s1);  // Error: s1 no longer owns the data
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Create new heap data
+</span><span>    </span><span style="color:#b48ead;">let</span><span> s3 = String::from(&quot;</span><span style="color:#a3be8c;">World</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> s4 = s3.</span><span style="color:#96b5b4;">clone</span><span>();  </span><span style="color:#a7adba;">// New heap allocation - expensive!
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Both valid: </span><span style="color:#d08770;">{} {}</span><span>&quot;, s3, s4);
+</span><span>}  </span><span style="color:#a7adba;">// Both s3 and s4 heap data freed
+</span></code></pre>
+<h2 id="choosing-between-stack-and-heap">Choosing Between Stack and Heap</h2>
+<h3 id="use-stack-when">Use Stack When:</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">prefer_stack</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// Fixed-size data known at compile time
+</span><span>    </span><span style="color:#b48ead;">let</span><span> coordinates = (</span><span style="color:#d08770;">10.5</span><span>, </span><span style="color:#d08770;">20.3</span><span>);      </span><span style="color:#a7adba;">// Good: tuple on stack
+</span><span>    </span><span style="color:#b48ead;">let</span><span> color = [</span><span style="color:#d08770;">255</span><span>, </span><span style="color:#d08770;">128</span><span>, </span><span style="color:#d08770;">0</span><span>];           </span><span style="color:#a7adba;">// Good: array on stack
+</span><span>    </span><span style="color:#b48ead;">let</span><span> point = Point { x: </span><span style="color:#d08770;">1.0</span><span>, y: </span><span style="color:#d08770;">2.0 </span><span>}; </span><span style="color:#a7adba;">// Good: struct on stack
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Small, temporary calculations
+</span><span>    </span><span style="color:#b48ead;">let</span><span> result = </span><span style="color:#96b5b4;">calculate_area</span><span>(</span><span style="color:#d08770;">10.0</span><span>, </span><span style="color:#d08770;">20.0</span><span>);  </span><span style="color:#a7adba;">// Good: function params/returns on stack
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">struct </span><span>Point {
+</span><span>    </span><span style="color:#bf616a;">x</span><span>: </span><span style="color:#b48ead;">f64</span><span>,
+</span><span>    </span><span style="color:#bf616a;">y</span><span>: </span><span style="color:#b48ead;">f64</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">calculate_area</span><span>(</span><span style="color:#bf616a;">width</span><span>: </span><span style="color:#b48ead;">f64</span><span>, </span><span style="color:#bf616a;">height</span><span>: </span><span style="color:#b48ead;">f64</span><span>) -&gt; </span><span style="color:#b48ead;">f64 </span><span>{
+</span><span>    width * height  </span><span style="color:#a7adba;">// All on stack - very fast
+</span><span>}
+</span></code></pre>
+<h3 id="use-heap-when">Use Heap When:</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">prefer_heap</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// Dynamic size or unknown at compile time
+</span><span>    </span><span style="color:#b48ead;">let</span><span> user_input = String::new();           </span><span style="color:#a7adba;">// Good: can grow
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> items = Vec::new();               </span><span style="color:#a7adba;">// Good: dynamic collection
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Large data structures
+</span><span>    </span><span style="color:#b48ead;">let</span><span> large_buffer = vec![</span><span style="color:#d08770;">0</span><span style="color:#b48ead;">u8</span><span>; </span><span style="color:#d08770;">1_000_000</span><span>];  </span><span style="color:#a7adba;">// Good: too big for stack
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Data that needs to outlive current scope
+</span><span>    </span><span style="color:#b48ead;">let</span><span> persistent_data = </span><span style="color:#96b5b4;">create_user_data</span><span>(); </span><span style="color:#a7adba;">// Good: returned from function
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Polymorphic data
+</span><span>    </span><span style="color:#b48ead;">let</span><span> drawable: Box = Box::new(Circle::new(</span><span style="color:#d08770;">5.0</span><span>)); </span><span style="color:#a7adba;">// Good: trait object
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">create_user_data</span><span>() -&gt; Vec {
+</span><span>    vec![&quot;</span><span style="color:#a3be8c;">Alice</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), &quot;</span><span style="color:#a3be8c;">Bob</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()]
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">trait </span><span>Draw {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">draw</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>);
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">struct </span><span>Circle {
+</span><span>    </span><span style="color:#bf616a;">radius</span><span>: </span><span style="color:#b48ead;">f64</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>Circle {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#bf616a;">radius</span><span>: </span><span style="color:#b48ead;">f64</span><span>) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        Circle { radius }
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>Draw </span><span style="color:#b48ead;">for </span><span>Circle {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">draw</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Drawing circle with radius </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#bf616a;">self</span><span>.radius);
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h2 id="stack-overflow-and-heap-exhaustion">Stack Overflow and Heap Exhaustion</h2>
+<h3 id="stack-overflow">Stack Overflow</h3>
+<p>Stack space is limited. Deep recursion or large stack allocations can cause stack overflow:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">stack_overflow_example</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// This will cause stack overflow
+</span><span>    </span><span style="color:#b48ead;">let</span><span> large_array = [</span><span style="color:#d08770;">0</span><span style="color:#b48ead;">u8</span><span>; </span><span style="color:#d08770;">10_000_000</span><span>];  </span><span style="color:#a7adba;">// Too big for stack!
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Array created: </span><span style="color:#d08770;">{}</span><span>&quot;, large_array.</span><span style="color:#96b5b4;">len</span><span>());
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">infinite_recursion</span><span>(</span><span style="color:#bf616a;">n</span><span>: </span><span style="color:#b48ead;">u32</span><span>) -&gt; </span><span style="color:#b48ead;">u32 </span><span>{
+</span><span>    </span><span style="color:#96b5b4;">infinite_recursion</span><span>(n + </span><span style="color:#d08770;">1</span><span>)  </span><span style="color:#a7adba;">// Stack overflow - no base case
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Better: Use heap for large data
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">heap_alternative</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> large_vec = vec![</span><span style="color:#d08770;">0</span><span style="color:#b48ead;">u8</span><span>; </span><span style="color:#d08770;">10_000_000</span><span>];  </span><span style="color:#a7adba;">// Safe: on heap
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Vector created: </span><span style="color:#d08770;">{}</span><span>&quot;, large_vec.</span><span style="color:#96b5b4;">len</span><span>());
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Better: Use iteration instead of deep recursion
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">iterative_solution</span><span>(</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">n</span><span>: </span><span style="color:#b48ead;">u32</span><span>) -&gt; </span><span style="color:#b48ead;">u32 </span><span>{
+</span><span>    </span><span style="color:#b48ead;">loop </span><span>{
+</span><span>        n += </span><span style="color:#d08770;">1</span><span>;
+</span><span>        </span><span style="color:#b48ead;">if</span><span> n &gt; </span><span style="color:#d08770;">1000 </span><span>{ </span><span style="color:#b48ead;">break</span><span> n; }
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h3 id="heap-exhaustion">Heap Exhaustion</h3>
+<p>Heap memory is limited by system RAM:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">heap_exhaustion_example</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> vectors = Vec::new();
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// This will eventually exhaust heap memory
+</span><span>    </span><span style="color:#b48ead;">loop </span><span>{
+</span><span>        </span><span style="color:#b48ead;">let</span><span> big_vec = vec![</span><span style="color:#d08770;">0</span><span style="color:#b48ead;">u8</span><span>; </span><span style="color:#d08770;">1_000_000</span><span>];
+</span><span>        vectors.</span><span style="color:#96b5b4;">push</span><span>(big_vec);
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Allocated </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> MB</span><span>&quot;, vectors.</span><span style="color:#96b5b4;">len</span><span>());
+</span><span>        
+</span><span>        </span><span style="color:#a7adba;">// In a real program, you&#39;d have proper error handling
+</span><span>        </span><span style="color:#b48ead;">if</span><span> vectors.</span><span style="color:#96b5b4;">len</span><span>() &gt; </span><span style="color:#d08770;">1000 </span><span>{
+</span><span>            </span><span style="color:#b48ead;">break</span><span>;  </span><span style="color:#a7adba;">// Prevent actual exhaustion
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h2 id="memory-efficient-programming-patterns">Memory-Efficient Programming Patterns</h2>
+<h3 id="1-prefer-stack-when-possible">1. Prefer Stack When Possible</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Good: Use stack-allocated arrays for known sizes
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">process_coordinates</span><span>(</span><span style="color:#bf616a;">points</span><span>: &amp;[(</span><span style="color:#bf616a;">f64</span><span>, </span><span style="color:#bf616a;">f64</span><span>)]) -&gt; </span><span style="color:#b48ead;">f64 </span><span>{
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> sum = </span><span style="color:#d08770;">0.0</span><span>;
+</span><span>    </span><span style="color:#b48ead;">for </span><span>(x, y) in points {
+</span><span>        sum += (x * x + y * y).</span><span style="color:#96b5b4;">sqrt</span><span>();
+</span><span>    }
+</span><span>    sum
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Less optimal: Unnecessary heap allocation
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">process_coordinates_heap</span><span>(</span><span style="color:#bf616a;">points</span><span>: &amp;[(</span><span style="color:#bf616a;">f64</span><span>, </span><span style="color:#bf616a;">f64</span><span>)]) -&gt; </span><span style="color:#b48ead;">f64 </span><span>{
+</span><span>    </span><span style="color:#b48ead;">let</span><span> distances: Vec = points.</span><span style="color:#96b5b4;">iter</span><span>()
+</span><span>        .</span><span style="color:#96b5b4;">map</span><span>(|(</span><span style="color:#bf616a;">x</span><span>, </span><span style="color:#bf616a;">y</span><span>)| (x * x + y * y).</span><span style="color:#96b5b4;">sqrt</span><span>())
+</span><span>        .</span><span style="color:#96b5b4;">collect</span><span>();  </span><span style="color:#a7adba;">// Heap allocation
+</span><span>    distances.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">sum</span><span>()
+</span><span>}
+</span></code></pre>
+<h3 id="2-reuse-heap-allocations">2. Reuse Heap Allocations</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">efficient_string_processing</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> buffer = String::with_capacity(</span><span style="color:#d08770;">1000</span><span>);  </span><span style="color:#a7adba;">// Pre-allocate
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">for</span><span> i in </span><span style="color:#d08770;">0</span><span>..</span><span style="color:#d08770;">100 </span><span>{
+</span><span>        buffer.</span><span style="color:#96b5b4;">clear</span><span>();  </span><span style="color:#a7adba;">// Reuse existing capacity
+</span><span>        buffer.</span><span style="color:#96b5b4;">push_str</span><span>(&amp;format!(&quot;</span><span style="color:#a3be8c;">Processing item </span><span style="color:#d08770;">{}</span><span>&quot;, i));
+</span><span>        
+</span><span>        </span><span style="color:#a7adba;">// Process buffer
+</span><span>        println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, buffer);
+</span><span>    }
+</span><span>    </span><span style="color:#a7adba;">// Only one heap allocation for all iterations
+</span><span>}
+</span></code></pre>
+<h3 id="3-use-references-to-avoid-cloning">3. Use References to Avoid Cloning</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Good: Pass references to avoid heap allocation
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">process_data</span><span>(</span><span style="color:#bf616a;">data</span><span>: &amp;[String]) -&gt; </span><span style="color:#b48ead;">usize </span><span>{
+</span><span>    data.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">map</span><span>(|</span><span style="color:#bf616a;">s</span><span>| s.</span><span style="color:#96b5b4;">len</span><span>()).</span><span style="color:#96b5b4;">sum</span><span>()
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Less efficient: Cloning creates new heap allocations
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">process_data_clone</span><span>(</span><span style="color:#bf616a;">data</span><span>: Vec) -&gt; </span><span style="color:#b48ead;">usize </span><span>{
+</span><span>    </span><span style="color:#b48ead;">let</span><span> cloned_data = data.</span><span style="color:#96b5b4;">clone</span><span>();  </span><span style="color:#a7adba;">// Expensive heap copying
+</span><span>    cloned_data.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">map</span><span>(|</span><span style="color:#bf616a;">s</span><span>| s.</span><span style="color:#96b5b4;">len</span><span>()).</span><span style="color:#96b5b4;">sum</span><span>()
+</span><span>}
+</span></code></pre>
+<h2 id="debugging-memory-usage">Debugging Memory Usage</h2>
+<h3 id="tools-and-techniques">Tools and Techniques</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">memory_debugging</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// Check size of types
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Size of i32: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> bytes</span><span>&quot;, std::mem::size_of::());
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Size of String: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> bytes</span><span>&quot;, std::mem::size_of::());
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Size of Vec: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> bytes</span><span>&quot;, std::mem::size_of::&gt;());
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Check alignment
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Alignment of String: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> bytes</span><span>&quot;, std::mem::align_of::());
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Check actual memory usage
+</span><span>    </span><span style="color:#b48ead;">let</span><span> s = String::from(&quot;</span><span style="color:#a3be8c;">Hello</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">String heap capacity: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> bytes</span><span>&quot;, s.</span><span style="color:#96b5b4;">capacity</span><span>());
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> v = vec![</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">2</span><span>, </span><span style="color:#d08770;">3</span><span>, </span><span style="color:#d08770;">4</span><span>, </span><span style="color:#d08770;">5</span><span>];
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Vector heap capacity: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> elements</span><span>&quot;, v.</span><span style="color:#96b5b4;">capacity</span><span>());
+</span><span>}
+</span></code></pre>
+<h2 id="best-practices-summary">Best Practices Summary</h2>
+<h3 id="design-for-performance"><strong>Design for Performance</strong></h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Good: Stack-first approach
+</span><span style="color:#b48ead;">struct </span><span>Config {
+</span><span>    </span><span style="color:#bf616a;">max_connections</span><span>: </span><span style="color:#b48ead;">u32</span><span>,    </span><span style="color:#a7adba;">// Stack
+</span><span>    </span><span style="color:#bf616a;">timeout_seconds</span><span>: </span><span style="color:#b48ead;">u32</span><span>,    </span><span style="color:#a7adba;">// Stack
+</span><span>    </span><span style="color:#bf616a;">server_name</span><span>: String,     </span><span style="color:#a7adba;">// Heap only when necessary
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Good: Use heap when it provides value
+</span><span style="color:#b48ead;">struct </span><span>UserSession {
+</span><span>    </span><span style="color:#bf616a;">user_id</span><span>: </span><span style="color:#b48ead;">u64</span><span>,           </span><span style="color:#a7adba;">// Stack
+</span><span>    </span><span style="color:#bf616a;">permissions</span><span>: Vec, </span><span style="color:#a7adba;">// Heap - dynamic list
+</span><span>    </span><span style="color:#bf616a;">data</span><span>: HashMap, </span><span style="color:#a7adba;">// Heap - dynamic mapping
+</span><span>}
+</span></code></pre>
+<h3 id="measure-don-t-assume"><strong>Measure, Don't Assume</strong></h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">benchmark_memory_patterns</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">use </span><span>std::time::Instant;
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> start = Instant::now();
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Test your memory usage patterns
+</span><span>    </span><span style="color:#b48ead;">for </span><span>_ in </span><span style="color:#d08770;">0</span><span>..</span><span style="color:#d08770;">10_000 </span><span>{
+</span><span>        </span><span style="color:#b48ead;">let</span><span> _data = [</span><span style="color:#d08770;">0</span><span>; </span><span style="color:#d08770;">1000</span><span>];  </span><span style="color:#a7adba;">// Stack allocation
+</span><span>    }
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Stack pattern took: </span><span style="color:#d08770;">{:?}</span><span>&quot;, start.</span><span style="color:#96b5b4;">elapsed</span><span>());
+</span><span>}
+</span></code></pre>
+<p>Understanding stack vs heap memory is fundamental to writing efficient Rust code. <strong>The stack provides speed and automatic management for fixed-size data, while the heap offers flexibility for dynamic data</strong>. Rust's ownership system ensures memory safety for both, but knowing when to use each type of memory helps you write programs that are both safe and performant. The key is to <strong>default to stack allocation when possible and use heap allocation when you need the flexibility</strong>.</p>
+
+    
+        </div>
+
+    </article>
+</main>
+
+
+    <script type="text/javascript" src="http://localhost/elasticlunr.min.js" defer></script>
+    <script type="text/javascript" src="http://localhost/search_index.en.js" defer></script>
+<script type="text/javascript" src="http://localhost/js.js" defer></script>
+
+</body>
+</html>

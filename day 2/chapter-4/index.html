@@ -1,0 +1,828 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://localhost/main.css">
+    <link rel="icon" href="https://www.rust-lang.org/static/images/favicon-16x16.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Rust Programming Course! | Understanding Shadowing in Rust: A Practical Guide </title>
+</head>
+<body>
+
+<main>
+    
+    <nav>
+            <a href="http:&#x2F;&#x2F;localhost">
+                        <img src="https://www.rust-lang.org/static/images/rust-logo-blk.svg" alt="logo"/>
+                    </a>
+                <!-- -->
+
+            <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+            <div id="trees">
+                <input class="tree-toggle" type="checkbox" id="day-1-introduction"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-1-introduction">Day 1: Introduction</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 1/chapter-1/">What is Rust and why use it?</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-2/">Installing Rust Toolchain (rustup, cargo)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-3/">Setting up Development (VS Code + Hello World)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-4/">Understanding Cargo Project Structure</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-2-basic-syntax-variables"
+                           checked/>
+                    <label class="tree-toggle-label"
+                           for="day-2-basic-syntax-variables">Day 2: Basic Syntax &amp; Variables</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 2/chapter-1/">Variables and Mutability in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-2/">Data Types in Rust: Integers, Floats, Booleans, and Characters</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-3/">Constants vs Variables</a>
+                            </li>
+
+                            <li class="active">
+                                <a href="http://localhost/day 2/chapter-4/">Understanding Shadowing in Rust: A Practical Guide</a>
+                            </li>
+
+                            
+                                    
+                                    
+                                        <ul id="toc">
+                                            <li><a href="
+                                                        http://localhost/day 2/chapter-4/#shadowing-concept-in-rust-a-detailed-exploration">Shadowing Concept in Rust: A Detailed Exploration</a>
+                                                    <ul>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-4/#what-is-shadowing">What is Shadowing?</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-4/#basic-shadowing-example">Basic Shadowing Example</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-4/#shadowing-vs-mutability-key-differences">Shadowing vs Mutability: Key Differences</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-4/#shadowing-creates-new-variables">Shadowing Creates New Variables</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-4/#mutability-changes-existing-variables">Mutability Changes Existing Variables</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-4/#scope-based-shadowing">Scope-Based Shadowing</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-4/#inner-scope-shadowing">Inner Scope Shadowing</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-4/#multiple-shadowing-in-same-scope">Multiple Shadowing in Same Scope</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-4/#memory-behavior-of-shadowing">Memory Behavior of Shadowing</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-4/#practical-use-cases-for-shadowing">Practical Use Cases for Shadowing</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-4/#1-data-transformation-pipelines">1. Data Transformation Pipelines</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-4/#2-type-conversion-workflows">2. Type Conversion Workflows</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-4/#3-configuration-processing">3. Configuration Processing</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-4/#4-preventing-accidental-use-of-raw-data">4. Preventing Accidental Use of Raw Data</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-4/#shadowing-rules-and-restrictions">Shadowing Rules and Restrictions</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-4/#1-requires-let-keyword">1. Requires let Keyword</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-4/#2-cannot-shadow-constants">2. Cannot Shadow Constants</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-4/#3-function-parameter-shadowing">3. Function Parameter Shadowing</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-4/#best-practices-for-shadowing">Best Practices for Shadowing</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-4/#use-for-data-transformations">Use for Data Transformations</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-4/#avoid-excessive-shadowing">Avoid Excessive Shadowing</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-4/#use-descriptive-names-when-appropriate">Use Descriptive Names When Appropriate</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-4/#combine-with-error-handling">Combine with Error Handling</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-4/#common-patterns-and-idioms">Common Patterns and Idioms</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-4/#the-unwrap-pattern">The unwrap() Pattern</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 2/chapter-4/#option-processing">Option Processing</a>
+                                                                </li>
+                                                            </ul>
+                                                    </li>
+                                            </ul>
+                                    <li >
+                                <a href="http://localhost/day 2/chapter-5/">Basic Input&#x2F;Output</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-3-functions-control-flow"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-3-functions-control-flow">Day 3: Functions &amp; Control Flow</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 3/chapter-1/">Function Syntax and Parameters in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-2/">Return Values and Expressions vs Statements</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-3/">If&#x2F;Else Statements in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-4/">Match Expressions in Rust: Powerful Pattern Matching</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-5/">Loops in Rust: loop, while, for Explained</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-4-data-types-deep-dive"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-4-data-types-deep-dive">Day 4: Data Types Deep Dive</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 4/chapter-1/">Compound Types (Tuples, Arrays)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-2/">String vs &amp;str in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-3/">Vector Basics in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-4/">Type Annotations and Inference in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-5/">Practical Rust Exercises</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-5-practice-review"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-5-practice-review">Day 5: Practice &amp; Review</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 5/chapter-1/">Day 5: Practice &amp; Review</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-6-ownership-fundamentals"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-6-ownership-fundamentals">Day 6: Ownership Fundamentals</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 6/chapter-1/">Ownership in Rust: A Detailed Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-2/">Stack vs Heap in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-3/">Understanding Ownership in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-4/">Move Semantics in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-5/">Copy Trait in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-7-references-borrowing"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-7-references-borrowing">Day 7: References &amp; Borrowing</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 7/chapter-1/">Immutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-2/">Mutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-3/">Borrowing Rules</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-4/">Reference Lifetime Basics</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-5/">Common Borrowing Errors and Solutions</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-8-slices"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-8-slices">Day 8: Slices</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 8/chapter-1/">String Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-2/">Array Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-3/">Slice Syntax and Usage</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-4/">Practical Applications</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-5/">Memory Safety Benefits</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-9-advanced-ownership"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-9-advanced-ownership">Day 9: Advanced Ownership</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 9/chapter-1/">Clone Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-2/">Drop Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-3/">RAII Pattern</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-4/">Memory Management Comparison with Other Languages</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-5/">Best Practices (Advanced Ownership)</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-10-ownership-practice"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-10-ownership-practice">Day 10: Ownership Practice</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 10/chapter-1/">Complex Ownership Scenarios</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-2/">Debugging Ownership Errors</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-3/">Code Refactoring Exercises</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-4/">Group Problem-Solving</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-11-structs-basics"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-11-structs-basics">Day 11: Structs Basics</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 11/chapter-1/">Defining and Instantiating Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-2/">Field Access and Modification</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-3/">Tuple Structs and Unit Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-4/">Struct Update Syntax</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-5/">Ownership of Struct Data</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-12-methods-associated-functions"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-12-methods-associated-functions">Day 12: Methods &amp; Associated Functions</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 12/chapter-1/">Implementing Methods with impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-2/">&amp;self, &amp;mut self, and self</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-3/">Associated Functions (like Constructors)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-4/">Multiple impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-5/">Method Chaining</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-13-advanced-struct-concepts"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-13-advanced-struct-concepts">Day 13: Advanced Struct Concepts</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 13/chapter-1/">Struct Lifetime Parameters</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-2/">Debug Trait and Custom Formatting</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-3/">Builder Pattern Implementation</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-4/">Struct Composition</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-5/">Best Practices for Struct Design</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-14-enums-pattern-matching"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-14-enums-pattern-matching">Day 14: Enums &amp; Pattern Matching</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 14/chapter-1/">Defining Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-2/">Enum Variants with Data</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-3/">Option&lt;T&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-4/">Result&lt;T, E&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-5/">Advanced Match Patterns in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-15-practice-project"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-15-practice-project">Day 15: Practice Project</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 15/chapter-1/">Building a Simple CLI Calculator in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-16-vectors"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-16-vectors">Day 16: Vectors</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 16/chapter-1/">Creating and Updating Vectors</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-2/">Vector Methods: push, pop, iter</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-3/">Accessing Vector Elements Safely</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-4/">Vector of Different Types with Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-5/">Performance Considerations</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-17-hashmaps-other-collections"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-17-hashmaps-other-collections">Day 17: HashMaps &amp; Other Collections</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 17/chapter-1/">HashMap Creation and Manipulation</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-2/">Keys and Values Ownership</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-3/">HashMap Methods and Iteration</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-4/">When to Use Different Collections</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-5/">BTreeMap Introduction</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-18-error-handling"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-18-error-handling">Day 18: Error Handling</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 18/chapter-1/">Panic! and When to Use It</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 18/chapter-2/">Result&lt;T, E&gt; in Depth</a>
+                            </li>
+
+                            </ul>
+                </div>
+        </nav>
+    <article>
+
+        <div id="on_right">
+                <span id="search-ico" class="ms-Icon--Search"></span>
+            </div>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="Search as you type...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        <div id="wrap">
+            
+        <h1 id="shadowing-concept-in-rust-a-detailed-exploration">Shadowing Concept in Rust: A Detailed Exploration</h1>
+<p>Building on your understanding of variables and constants, let's dive deep into <strong>shadowing</strong> - one of Rust's most unique and powerful features. Shadowing allows you to declare a new variable with the same name as a previous variable, effectively "hiding" or "shadowing" the original variable.</p>
+<h2 id="what-is-shadowing">What is Shadowing?</h2>
+<p><strong>Shadowing occurs when you declare a new variable with the same name as a previous variable</strong><a href="https://doc.rust-lang.org/rust-by-example/variable_bindings/scope.html">1</a><a href="https://dev.to/francescoxx/variables-shadowing-and-constants-in-rust-1fcj">3</a>. The new variable shadows the previous one, making the original variable inaccessible from that point forward in the current scope. This is fundamentally different from mutation - you're creating an entirely new variable that happens to have the same name.</p>
+<h2 id="basic-shadowing-example">Basic Shadowing Example</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> x = </span><span style="color:#d08770;">5</span><span>;
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">The value of x is: </span><span style="color:#d08770;">{}</span><span>&quot;, x);  </span><span style="color:#a7adba;">// Prints: 5
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> x = x + </span><span style="color:#d08770;">1</span><span>;  </span><span style="color:#a7adba;">// This creates a NEW variable named x
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">The value of x is: </span><span style="color:#d08770;">{}</span><span>&quot;, x);  </span><span style="color:#a7adba;">// Prints: 6
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> x = x * </span><span style="color:#d08770;">2</span><span>;  </span><span style="color:#a7adba;">// Another NEW variable named x
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">The value of x is: </span><span style="color:#d08770;">{}</span><span>&quot;, x);  </span><span style="color:#a7adba;">// Prints: 12
+</span><span>}
+</span></code></pre>
+<p>Each <code>let x = ...</code> statement creates a completely new variable that shadows the previous one<a href="https://reintech.io/blog/understanding-implementing-rust-shadowing">7</a>.</p>
+<h2 id="shadowing-vs-mutability-key-differences">Shadowing vs Mutability: Key Differences</h2>
+<p>Understanding the distinction between shadowing and mutability is crucial:</p>
+<h2 id="shadowing-creates-new-variables">Shadowing Creates New Variables</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> spaces = &quot;   &quot;;        </span><span style="color:#a7adba;">// String type
+</span><span>    </span><span style="color:#b48ead;">let</span><span> spaces = spaces.</span><span style="color:#96b5b4;">len</span><span>(); </span><span style="color:#a7adba;">// Integer type - completely different variable
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Length: </span><span style="color:#d08770;">{}</span><span>&quot;, spaces);  </span><span style="color:#a7adba;">// Prints: 3
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="mutability-changes-existing-variables">Mutability Changes Existing Variables</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> spaces = &quot;   &quot;;
+</span><span>    </span><span style="color:#a7adba;">// spaces = spaces.len();  // ERROR: cannot change type!
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// With mutability, you can only change the VALUE, not the TYPE
+</span><span>    spaces = &quot;    &quot;;  </span><span style="color:#a7adba;">// This works - same type
+</span><span>}
+</span><span>
+</span></code></pre>
+<p><strong>Key Differences:</strong></p>
+<table><thead><tr><th>Feature</th><th>Shadowing</th><th>Mutability</th></tr></thead><tbody>
+<tr><td><strong>Variable creation</strong></td><td>Creates new variable</td><td>Modifies existing variable</td></tr>
+<tr><td><strong>Type changes</strong></td><td>Allowed</td><td>Not allowed</td></tr>
+<tr><td><strong>Memory behavior</strong></td><td>New memory location</td><td>Same memory location</td></tr>
+<tr><td><strong>Keyword required</strong></td><td><code>let</code> (again)</td><td><code>mut</code> (once)</td></tr>
+<tr><td><strong>Immutability</strong></td><td>Maintains immutability</td><td>Requires mutability</td></tr>
+</tbody></table>
+<h2 id="scope-based-shadowing">Scope-Based Shadowing</h2>
+<p><strong>Shadowing behavior changes based on scope</strong><a href="https://doc.rust-lang.org/rust-by-example/variable_bindings/scope.html">1</a><a href="https://www.geeksforgeeks.org/rust/rust-concept-of-scope-block-and-shadowing/">6</a>. Variables can shadow outer scope variables, and when the inner scope ends, the outer variable becomes accessible again:</p>
+<h2 id="inner-scope-shadowing">Inner Scope Shadowing</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> x = </span><span style="color:#d08770;">8</span><span>;  </span><span style="color:#a7adba;">// Outer scope variable
+</span><span>    
+</span><span>    {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> y = </span><span style="color:#d08770;">5</span><span>;          </span><span style="color:#a7adba;">// Inner scope only
+</span><span>        </span><span style="color:#b48ead;">let</span><span> x = </span><span style="color:#d08770;">3</span><span>;          </span><span style="color:#a7adba;">// Shadows outer x
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Inner x: </span><span style="color:#d08770;">{}</span><span>&quot;, x);    </span><span style="color:#a7adba;">// Prints: 3
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Inner y: </span><span style="color:#d08770;">{}</span><span>&quot;, y);    </span><span style="color:#a7adba;">// Prints: 5
+</span><span>    }
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Outer x: </span><span style="color:#d08770;">{}</span><span>&quot;, x);  </span><span style="color:#a7adba;">// Prints: 8 (original value restored)
+</span><span>    </span><span style="color:#a7adba;">// println!(&quot;y: {}&quot;, y);     // ERROR: y is out of scope
+</span><span>}
+</span><span>
+</span></code></pre>
+<p><strong>Important:</strong> The outer variable is <strong>not destroyed</strong> - it's temporarily hidden and becomes accessible again when the inner scope ends<a href="https://colobu.com/comprehensive-rust/control-flow-basics/blocks-and-scopes/scopes.html">9</a>.</p>
+<h2 id="multiple-shadowing-in-same-scope">Multiple Shadowing in Same Scope</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> a = </span><span style="color:#d08770;">10</span><span>;
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">before: </span><span style="color:#d08770;">{}</span><span>&quot;, a);      </span><span style="color:#a7adba;">// Prints: 10
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> a = &quot;</span><span style="color:#a3be8c;">hello</span><span>&quot;;               </span><span style="color:#a7adba;">// Different type
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">shadowed: </span><span style="color:#d08770;">{}</span><span>&quot;, a);   </span><span style="color:#a7adba;">// Prints: hello
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> a = </span><span style="color:#d08770;">true</span><span>;                  </span><span style="color:#a7adba;">// Another different type
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">final: </span><span style="color:#d08770;">{}</span><span>&quot;, a);      </span><span style="color:#a7adba;">// Prints: true
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="memory-behavior-of-shadowing">Memory Behavior of Shadowing</h2>
+<p><strong>Shadowing is different from mutation because both variables' memory locations exist simultaneously</strong><a href="https://colobu.com/comprehensive-rust/control-flow-basics/blocks-and-scopes/scopes.html">9</a>. The compiler keeps track of which variable is currently "active" based on scope:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> x = </span><span style="color:#d08770;">5</span><span>;        </span><span style="color:#a7adba;">// Memory location A
+</span><span>    {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> x = </span><span style="color:#d08770;">10</span><span>;   </span><span style="color:#a7adba;">// Memory location B (shadows A)
+</span><span>        </span><span style="color:#a7adba;">// At this point, both values exist in memory
+</span><span>        </span><span style="color:#a7adba;">// but only the inner x (10) is accessible
+</span><span>    }
+</span><span>    </span><span style="color:#a7adba;">// Now outer x (5) is accessible again
+</span><span>    </span><span style="color:#a7adba;">// Both memory locations still exist until they go out of scope
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="practical-use-cases-for-shadowing">Practical Use Cases for Shadowing</h2>
+<h2 id="1-data-transformation-pipelines">1. Data Transformation Pipelines</h2>
+<p><strong>Shadowing is excellent for sequential data transformations</strong><a href="https://www.reddit.com/r/rust/comments/xx6ibp/what_is_the_logic_behind_shadowing/">2</a>:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> input = &quot;</span><span style="color:#a3be8c;">42</span><span>&quot;;                        </span><span style="color:#a7adba;">// String
+</span><span>    </span><span style="color:#b48ead;">let</span><span> input = input.</span><span style="color:#96b5b4;">trim</span><span>();                </span><span style="color:#a7adba;">// Trimmed string
+</span><span>    </span><span style="color:#b48ead;">let</span><span> input: </span><span style="color:#b48ead;">i32 </span><span>= input.</span><span style="color:#96b5b4;">parse</span><span>().</span><span style="color:#96b5b4;">unwrap</span><span>(); </span><span style="color:#a7adba;">// Integer
+</span><span>    </span><span style="color:#b48ead;">let</span><span> input = input * </span><span style="color:#d08770;">2</span><span>;                   </span><span style="color:#a7adba;">// Transformed integer
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Final result: </span><span style="color:#d08770;">{}</span><span>&quot;, input);    </span><span style="color:#a7adba;">// Prints: 84
+</span><span>}
+</span><span>
+</span></code></pre>
+<p>Without shadowing, you'd need multiple variable names:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> input_str = &quot;</span><span style="color:#a3be8c;">42</span><span>&quot;;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> trimmed_input = input_str.</span><span style="color:#96b5b4;">trim</span><span>();
+</span><span>    </span><span style="color:#b48ead;">let</span><span> parsed_input: </span><span style="color:#b48ead;">i32 </span><span>= trimmed_input.</span><span style="color:#96b5b4;">parse</span><span>().</span><span style="color:#96b5b4;">unwrap</span><span>();
+</span><span>    </span><span style="color:#b48ead;">let</span><span> final_input = parsed_input * </span><span style="color:#d08770;">2</span><span>;
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// More verbose and error-prone
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="2-type-conversion-workflows">2. Type Conversion Workflows</h2>
+<p><strong>Shadowing allows clean type transitions</strong><a href="https://reintech.io/blog/understanding-implementing-rust-shadowing">7</a>:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> user_input = &quot;</span><span style="color:#a3be8c;">123.45</span><span>&quot;;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> user_input: </span><span style="color:#b48ead;">f64 </span><span>= user_input.</span><span style="color:#96b5b4;">parse</span><span>().</span><span style="color:#96b5b4;">unwrap</span><span>();
+</span><span>    </span><span style="color:#b48ead;">let</span><span> user_input = user_input.</span><span style="color:#96b5b4;">round</span><span>() as </span><span style="color:#b48ead;">i32</span><span>;
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Rounded: </span><span style="color:#d08770;">{}</span><span>&quot;, user_input);  </span><span style="color:#a7adba;">// Prints: 123
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="3-configuration-processing">3. Configuration Processing</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> config = </span><span style="color:#96b5b4;">read_config_file</span><span>();        </span><span style="color:#a7adba;">// Raw string
+</span><span>    </span><span style="color:#b48ead;">let</span><span> config = </span><span style="color:#96b5b4;">parse_json</span><span>(&amp;config);       </span><span style="color:#a7adba;">// JSON object
+</span><span>    </span><span style="color:#b48ead;">let</span><span> config = </span><span style="color:#96b5b4;">validate_config</span><span>(config);   </span><span style="color:#a7adba;">// Validated config
+</span><span>    </span><span style="color:#b48ead;">let</span><span> config = </span><span style="color:#96b5b4;">apply_defaults</span><span>(config);    </span><span style="color:#a7adba;">// Final config
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Clean progression without cluttering namespace
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="4-preventing-accidental-use-of-raw-data">4. Preventing Accidental Use of Raw Data</h2>
+<p><strong>Shadowing can prevent bugs by making raw, unprocessed data inaccessible</strong><a href="https://www.reddit.com/r/rust/comments/xx6ibp/what_is_the_logic_behind_shadowing/">2</a>:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> password = </span><span style="color:#96b5b4;">get_user_password</span><span>();     </span><span style="color:#a7adba;">// Raw password
+</span><span>    </span><span style="color:#b48ead;">let</span><span> password = </span><span style="color:#96b5b4;">hash_password</span><span>(password); </span><span style="color:#a7adba;">// Hashed - raw is now inaccessible
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Impossible to accidentally use the raw password
+</span><span>    </span><span style="color:#96b5b4;">store_password</span><span>(password);
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="shadowing-rules-and-restrictions">Shadowing Rules and Restrictions</h2>
+<h2 id="1-requires-let-keyword">1. Requires <code>let</code> Keyword</h2>
+<p><strong>Shadowing always requires the <strong><strong><code>let</code></strong></strong> keyword</strong><a href="https://codesignal.com/learn/courses/functions-scope-and-ownership-in-rust/lessons/mastering-variable-shadowing-and-scope-in-rust-functions">5</a>:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> x = </span><span style="color:#d08770;">5</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> x = </span><span style="color:#d08770;">10</span><span>;  </span><span style="color:#a7adba;">// ✓ Valid shadowing
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// x = 15;   // ✗ Error: cannot assign to immutable variable
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="2-cannot-shadow-constants">2. Cannot Shadow Constants</h2>
+<p><strong>Constants cannot be shadowed in the same scope</strong>:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">const </span><span style="color:#d08770;">VALUE</span><span>: </span><span style="color:#b48ead;">i32 </span><span>= </span><span style="color:#d08770;">5</span><span>;
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// const VALUE: i32 = 10;  // Error: duplicate definition
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let </span><span style="color:#d08770;">VALUE </span><span>= </span><span style="color:#d08770;">10</span><span>;  </span><span style="color:#a7adba;">// ✓ This is allowed - different from const
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="3-function-parameter-shadowing">3. Function Parameter Shadowing</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">process_data</span><span>(</span><span style="color:#bf616a;">x</span><span>: </span><span style="color:#b48ead;">i32</span><span>) {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> x = x * </span><span style="color:#d08770;">2</span><span>;  </span><span style="color:#a7adba;">// Shadows the parameter
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Processed: </span><span style="color:#d08770;">{}</span><span>&quot;, x);
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="best-practices-for-shadowing">Best Practices for Shadowing</h2>
+<h2 id="use-for-data-transformations"><strong>Use for Data Transformations</strong></h2>
+<p>Shadowing is ideal when you're transforming data and don't need the original value:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Good use of shadowing
+</span><span style="color:#b48ead;">let</span><span> data = </span><span style="color:#96b5b4;">fetch_raw_data</span><span>();
+</span><span style="color:#b48ead;">let</span><span> data = </span><span style="color:#96b5b4;">clean_data</span><span>(data);
+</span><span style="color:#b48ead;">let</span><span> data = </span><span style="color:#96b5b4;">validate_data</span><span>(data);
+</span><span>
+</span></code></pre>
+<h2 id="avoid-excessive-shadowing"><strong>Avoid Excessive Shadowing</strong></h2>
+<p>Don't overuse shadowing as it can make code harder to follow:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Potentially confusing
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> x = </span><span style="color:#d08770;">1</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> x = x + </span><span style="color:#d08770;">1</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> x = x * </span><span style="color:#d08770;">2</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> x = x - </span><span style="color:#d08770;">1</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> x = x / </span><span style="color:#d08770;">2</span><span>;
+</span><span>    </span><span style="color:#a7adba;">// What is x now?
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="use-descriptive-names-when-appropriate"><strong>Use Descriptive Names When Appropriate</strong></h2>
+<p>Sometimes explicit naming is clearer than shadowing:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Sometimes this is clearer
+</span><span style="color:#b48ead;">let</span><span> raw_input = </span><span style="color:#96b5b4;">get_input</span><span>();
+</span><span style="color:#b48ead;">let</span><span> parsed_number = raw_input.parse::&lt;</span><span style="color:#b48ead;">i32</span><span>&gt;().</span><span style="color:#96b5b4;">unwrap</span><span>();
+</span><span style="color:#b48ead;">let</span><span> doubled_result = parsed_number * </span><span style="color:#d08770;">2</span><span>;
+</span><span>
+</span></code></pre>
+<h2 id="combine-with-error-handling"><strong>Combine with Error Handling</strong></h2>
+<p>Shadowing works well with Rust's error handling patterns:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() -&gt; Result&lt;(), Box&lt;dyn std::error::Error&gt;&gt; {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> input = std::env::args().</span><span style="color:#96b5b4;">nth</span><span>(</span><span style="color:#d08770;">1</span><span>).</span><span style="color:#96b5b4;">ok_or</span><span>(&quot;</span><span style="color:#a3be8c;">Missing argument</span><span>&quot;)?;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> input = input.parse::&lt;</span><span style="color:#b48ead;">i32</span><span>&gt;()?;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> input = input.</span><span style="color:#96b5b4;">checked_mul</span><span>(</span><span style="color:#d08770;">2</span><span>).</span><span style="color:#96b5b4;">ok_or</span><span>(&quot;</span><span style="color:#a3be8c;">Overflow</span><span>&quot;)?;
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Result: </span><span style="color:#d08770;">{}</span><span>&quot;, input);
+</span><span>    Ok(())
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="common-patterns-and-idioms">Common Patterns and Idioms</h2>
+<h2 id="the-unwrap-pattern">The <code>unwrap()</code> Pattern</h2>
+<p><strong>Shadowing is commonly used after <strong><strong><code>.unwrap()</code></strong></strong> calls</strong><a href="https://colobu.com/comprehensive-rust/control-flow-basics/blocks-and-scopes/scopes.html">9</a>:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> result = </span><span style="color:#96b5b4;">risky_operation</span><span>();  </span><span style="color:#a7adba;">// Returns Result&lt;T, E&gt;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> result = result.</span><span style="color:#96b5b4;">unwrap</span><span>();    </span><span style="color:#a7adba;">// Now contains T, shadows Result
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Can&#39;t accidentally use the Result anymore
+</span><span>    </span><span style="color:#96b5b4;">process_value</span><span>(result);
+</span><span>}
+</span><span>
+</span></code></pre>
+<h2 id="option-processing">Option Processing</h2>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> maybe_value = Some(&quot;</span><span style="color:#a3be8c;">42</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> maybe_value = maybe_value.</span><span style="color:#96b5b4;">unwrap</span><span>();     </span><span style="color:#a7adba;">// String
+</span><span>    </span><span style="color:#b48ead;">let</span><span> maybe_value: </span><span style="color:#b48ead;">i32 </span><span>= maybe_value.</span><span style="color:#96b5b4;">parse</span><span>().</span><span style="color:#96b5b4;">unwrap</span><span>();  </span><span style="color:#a7adba;">// Integer
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Value: </span><span style="color:#d08770;">{}</span><span>&quot;, maybe_value);
+</span><span>}
+</span><span>
+</span></code></pre>
+<p>Shadowing is a powerful feature that enables clean, safe data transformations while maintaining Rust's immutability guarantees. It allows you to reuse variable names for logically connected but transformed data, preventing accidental use of raw or intermediate values while keeping your code readable and maintainable.</p>
+<ol>
+<li>https://doc.rust-lang.org/rust-by-example/variable_bindings/scope.html</li>
+<li>https://www.reddit.com/r/rust/comments/xx6ibp/what_is_the_logic_behind_shadowing/</li>
+<li>https://dev.to/francescoxx/variables-shadowing-and-constants-in-rust-1fcj</li>
+<li>https://users.rust-lang.org/t/a-few-questions-on-shadowing-and-the-let-keyword/110537</li>
+<li>https://codesignal.com/learn/courses/functions-scope-and-ownership-in-rust/lessons/mastering-variable-shadowing-and-scope-in-rust-functions</li>
+<li>https://www.geeksforgeeks.org/rust/rust-concept-of-scope-block-and-shadowing/</li>
+<li>https://reintech.io/blog/understanding-implementing-rust-shadowing</li>
+<li>https://www.youtube.com/watch?v=JpbI7ULFwiw</li>
+<li>https://colobu.com/comprehensive-rust/control-flow-basics/blocks-and-scopes/scopes.html</li>
+<li>https://labex.io/tutorials/rust-scope-and-shadowing-99292</li>
+</ol>
+
+    
+        </div>
+
+    </article>
+</main>
+
+
+    <script type="text/javascript" src="http://localhost/elasticlunr.min.js" defer></script>
+    <script type="text/javascript" src="http://localhost/search_index.en.js" defer></script>
+<script type="text/javascript" src="http://localhost/js.js" defer></script>
+
+</body>
+</html>

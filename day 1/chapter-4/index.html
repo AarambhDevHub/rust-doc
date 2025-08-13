@@ -1,0 +1,634 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://localhost/main.css">
+    <link rel="icon" href="https://www.rust-lang.org/static/images/favicon-16x16.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Rust Programming Course! | Understanding Cargo Project Structure </title>
+</head>
+<body>
+
+<main>
+    
+    <nav>
+            <a href="http:&#x2F;&#x2F;localhost">
+                        <img src="https://www.rust-lang.org/static/images/rust-logo-blk.svg" alt="logo"/>
+                    </a>
+                <!-- -->
+
+            <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+            <div id="trees">
+                <input class="tree-toggle" type="checkbox" id="day-1-introduction"
+                           checked/>
+                    <label class="tree-toggle-label"
+                           for="day-1-introduction">Day 1: Introduction</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 1/chapter-1/">What is Rust and why use it?</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-2/">Installing Rust Toolchain (rustup, cargo)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-3/">Setting up Development (VS Code + Hello World)</a>
+                            </li>
+
+                            <li class="active">
+                                <a href="http://localhost/day 1/chapter-4/">Understanding Cargo Project Structure</a>
+                            </li>
+
+                            
+                                    
+                                    
+                                        <ul id="toc">
+                                            <li><a href="
+                                                        http://localhost/day 1/chapter-4/#understanding-cargo-project-structure">Understanding Cargo Project Structure</a>
+                                                    <ul>
+                                                            <li>
+                                                                    <a href="http://localhost/day 1/chapter-4/#basic-project-structure">Basic Project Structure</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 1/chapter-4/#core-files">Core Files</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 1/chapter-4/#complete-project-layout">Complete Project Layout</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 1/chapter-4/#directory-purposes">Directory Purposes</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 1/chapter-4/#src-directory">src&#x2F; Directory</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 1/chapter-4/#other-directories">Other Directories</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 1/chapter-4/#binary-vs-library-crates">Binary vs Library Crates</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 1/chapter-4/#naming-conventions">Naming Conventions</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 1/chapter-4/#working-with-multiple-files">Working with Multiple Files</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 1/chapter-4/#project-organization-tips">Project Organization Tips</a>
+                                                                </li>
+                                                            </ul>
+                                                    </li>
+                                            </ul>
+                                    </ul>
+                <input class="tree-toggle" type="checkbox" id="day-2-basic-syntax-variables"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-2-basic-syntax-variables">Day 2: Basic Syntax &amp; Variables</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 2/chapter-1/">Variables and Mutability in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-2/">Data Types in Rust: Integers, Floats, Booleans, and Characters</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-3/">Constants vs Variables</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-4/">Understanding Shadowing in Rust: A Practical Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-5/">Basic Input&#x2F;Output</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-3-functions-control-flow"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-3-functions-control-flow">Day 3: Functions &amp; Control Flow</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 3/chapter-1/">Function Syntax and Parameters in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-2/">Return Values and Expressions vs Statements</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-3/">If&#x2F;Else Statements in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-4/">Match Expressions in Rust: Powerful Pattern Matching</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-5/">Loops in Rust: loop, while, for Explained</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-4-data-types-deep-dive"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-4-data-types-deep-dive">Day 4: Data Types Deep Dive</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 4/chapter-1/">Compound Types (Tuples, Arrays)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-2/">String vs &amp;str in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-3/">Vector Basics in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-4/">Type Annotations and Inference in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-5/">Practical Rust Exercises</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-5-practice-review"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-5-practice-review">Day 5: Practice &amp; Review</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 5/chapter-1/">Day 5: Practice &amp; Review</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-6-ownership-fundamentals"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-6-ownership-fundamentals">Day 6: Ownership Fundamentals</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 6/chapter-1/">Ownership in Rust: A Detailed Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-2/">Stack vs Heap in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-3/">Understanding Ownership in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-4/">Move Semantics in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-5/">Copy Trait in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-7-references-borrowing"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-7-references-borrowing">Day 7: References &amp; Borrowing</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 7/chapter-1/">Immutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-2/">Mutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-3/">Borrowing Rules</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-4/">Reference Lifetime Basics</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-5/">Common Borrowing Errors and Solutions</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-8-slices"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-8-slices">Day 8: Slices</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 8/chapter-1/">String Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-2/">Array Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-3/">Slice Syntax and Usage</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-4/">Practical Applications</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-5/">Memory Safety Benefits</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-9-advanced-ownership"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-9-advanced-ownership">Day 9: Advanced Ownership</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 9/chapter-1/">Clone Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-2/">Drop Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-3/">RAII Pattern</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-4/">Memory Management Comparison with Other Languages</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-5/">Best Practices (Advanced Ownership)</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-10-ownership-practice"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-10-ownership-practice">Day 10: Ownership Practice</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 10/chapter-1/">Complex Ownership Scenarios</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-2/">Debugging Ownership Errors</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-3/">Code Refactoring Exercises</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-4/">Group Problem-Solving</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-11-structs-basics"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-11-structs-basics">Day 11: Structs Basics</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 11/chapter-1/">Defining and Instantiating Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-2/">Field Access and Modification</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-3/">Tuple Structs and Unit Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-4/">Struct Update Syntax</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-5/">Ownership of Struct Data</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-12-methods-associated-functions"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-12-methods-associated-functions">Day 12: Methods &amp; Associated Functions</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 12/chapter-1/">Implementing Methods with impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-2/">&amp;self, &amp;mut self, and self</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-3/">Associated Functions (like Constructors)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-4/">Multiple impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-5/">Method Chaining</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-13-advanced-struct-concepts"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-13-advanced-struct-concepts">Day 13: Advanced Struct Concepts</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 13/chapter-1/">Struct Lifetime Parameters</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-2/">Debug Trait and Custom Formatting</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-3/">Builder Pattern Implementation</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-4/">Struct Composition</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-5/">Best Practices for Struct Design</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-14-enums-pattern-matching"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-14-enums-pattern-matching">Day 14: Enums &amp; Pattern Matching</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 14/chapter-1/">Defining Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-2/">Enum Variants with Data</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-3/">Option&lt;T&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-4/">Result&lt;T, E&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-5/">Advanced Match Patterns in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-15-practice-project"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-15-practice-project">Day 15: Practice Project</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 15/chapter-1/">Building a Simple CLI Calculator in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-16-vectors"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-16-vectors">Day 16: Vectors</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 16/chapter-1/">Creating and Updating Vectors</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-2/">Vector Methods: push, pop, iter</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-3/">Accessing Vector Elements Safely</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-4/">Vector of Different Types with Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-5/">Performance Considerations</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-17-hashmaps-other-collections"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-17-hashmaps-other-collections">Day 17: HashMaps &amp; Other Collections</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 17/chapter-1/">HashMap Creation and Manipulation</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-2/">Keys and Values Ownership</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-3/">HashMap Methods and Iteration</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-4/">When to Use Different Collections</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-5/">BTreeMap Introduction</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-18-error-handling"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-18-error-handling">Day 18: Error Handling</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 18/chapter-1/">Panic! and When to Use It</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 18/chapter-2/">Result&lt;T, E&gt; in Depth</a>
+                            </li>
+
+                            </ul>
+                </div>
+        </nav>
+    <article>
+
+        <div id="on_right">
+                <span id="search-ico" class="ms-Icon--Search"></span>
+            </div>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="Search as you type...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        <div id="wrap">
+            
+        <h1 id="understanding-cargo-project-structure">Understanding Cargo Project Structure</h1>
+<p>Now that you've created your first Rust project with <code>cargo new hello_world</code>, let's explore the <strong>standard Cargo project structure</strong> and understand what each file and directory is for.</p>
+<h2 id="basic-project-structure">Basic Project Structure</h2>
+<p>When you run <code>cargo new hello_world</code>, Cargo creates a standardized directory layout that follows Rust community conventions:</p>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>hello_world/
+</span><span>├── Cargo.toml
+</span><span>├── Cargo.lock
+</span><span>└── src/
+</span><span>    └── main.rs
+</span></code></pre>
+<h2 id="core-files">Core Files</h2>
+<p><strong>Cargo.toml</strong> - This is the <strong>project manifest file</strong> that contains all metadata Cargo needs to compile your project. It includes:</p>
+<ul>
+<li>Package information (name, version, edition)</li>
+<li>Dependencies</li>
+<li>Build configuration</li>
+<li>Author information</li>
+</ul>
+<p><strong>Cargo.lock</strong> - This file <strong>locks specific versions</strong> of dependencies to ensure reproducible builds. It's automatically generated and updated by Cargo.</p>
+<p><strong>src/main.rs</strong> - This is the <strong>crate root</strong> for binary crates and serves as the entry point for your application.</p>
+<h2 id="complete-project-layout">Complete Project Layout</h2>
+<p>For more complex projects, Cargo supports this comprehensive directory structure:</p>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>project_name/
+</span><span>├── Cargo.lock
+</span><span>├── Cargo.toml
+</span><span>├── src/
+</span><span>│   ├── lib.rs              # Default library file
+</span><span>│   ├── main.rs             # Default executable file
+</span><span>│   └── bin/                # Additional executables
+</span><span>│       ├── named-executable.rs
+</span><span>│       ├── another-executable.rs
+</span><span>│       └── multi-file-executable/
+</span><span>│           ├── main.rs
+</span><span>│           └── some_module.rs
+</span><span>├── benches/                # Benchmarks
+</span><span>│   ├── large-input.rs
+</span><span>│   └── multi-file-bench/
+</span><span>│       ├── main.rs
+</span><span>│       └── bench_module.rs
+</span><span>├── examples/               # Example programs
+</span><span>│   ├── simple.rs
+</span><span>│   └── multi-file-example/
+</span><span>│       ├── main.rs
+</span><span>│       └── ex_module.rs
+</span><span>└── tests/                  # Integration tests
+</span><span>    ├── some-integration-tests.rs
+</span><span>    └── multi-file-test/
+</span><span>        ├── main.rs
+</span><span>        └── test_module.rs
+</span></code></pre>
+<h2 id="directory-purposes">Directory Purposes</h2>
+<h2 id="src-directory">src/ Directory</h2>
+<p>The <strong>src</strong> directory is where all your source code lives:</p>
+<ul>
+<li><strong>src/main.rs</strong> - Entry point for <strong>binary crates</strong> (applications)</li>
+<li><strong>src/lib.rs</strong> - Entry point for <strong>library crates</strong> (reusable code)</li>
+<li><strong>src/bin/</strong> - Additional executable files that become separate binaries</li>
+</ul>
+<h2 id="other-directories">Other Directories</h2>
+<p><strong>tests/</strong> - Contains <strong>integration tests</strong> that test your crate from the outside, as if it were an external dependency</p>
+<p><strong>examples/</strong> - Contains <strong>example programs</strong> that demonstrate how to use your crate. These can be run with <code>cargo run --example example_name</code>.</p>
+<p><strong>benches/</strong> - Contains <strong>benchmark tests</strong> for performance testing using tools like Criterion.</p>
+<p><strong>target/</strong> - This directory is <strong>automatically created</strong> when you build your project and contains compiled artifacts:</p>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>target/
+</span><span>├── debug/          # Debug builds (cargo build)
+</span><span>└── release/        # Release builds (cargo build --release)
+</span></code></pre>
+<h2 id="binary-vs-library-crates">Binary vs Library Crates</h2>
+<p>Cargo supports two types of crates:</p>
+<p>Binary Crate</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">cargo</span><span> new my_app</span><span style="color:#bf616a;"> --bin    </span><span style="color:#a7adba;"># or just cargo new my_app
+</span></code></pre>
+<p>Creates:</p>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>├── Cargo.toml
+</span><span>└── src/
+</span><span>    └── main.rs
+</span></code></pre>
+<p>Library Crate</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">cargo</span><span> new my_lib</span><span style="color:#bf616a;"> --lib
+</span></code></pre>
+<p>Creates:</p>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>├── Cargo.toml
+</span><span>└── src/
+</span><span>    └── lib.rs
+</span></code></pre>
+<h2 id="naming-conventions">Naming Conventions</h2>
+<p>Cargo follows specific naming conventions:</p>
+<ul>
+<li><strong>Binaries, examples, benchmarks, and integration tests</strong>: Use <code>kebab-case</code> (e.g., <code>my-awesome-tool</code>)</li>
+<li><strong>Modules within targets</strong>: Use <code>snake_case</code> (e.g., <code>my_module</code>)</li>
+</ul>
+<h2 id="working-with-multiple-files">Working with Multiple Files</h2>
+<p>As your project grows, you can organize code into modules:</p>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>src/
+</span><span>├── main.rs
+</span><span>├── lib.rs
+</span><span>└── modules/
+</span><span>    ├── mod.rs
+</span><span>    ├── user.rs
+</span><span>    └── database.rs
+</span></code></pre>
+<h2 id="project-organization-tips">Project Organization Tips</h2>
+<ol>
+<li><strong>Keep the top-level directory clean</strong> - Use it only for README files, license information, and configuration files</li>
+<li><strong>Follow Cargo conventions</strong> - This makes your project familiar to other Rust developers</li>
+<li><strong>Separate concerns</strong> - Use different directories for different types of code (tests, examples, benchmarks)</li>
+<li><strong>Use workspaces for large projects</strong> - When your project becomes complex, consider using Cargo workspaces to manage multiple related crates</li>
+</ol>
+<p>This standardized structure helps you organize your projects effectively and makes it easy for other Rust developers to understand and contribute to your code. The conventions ensure that tools like <code>cargo build</code>, <code>cargo test</code>, and <code>cargo run</code> work seamlessly with your project.</p>
+
+    
+        </div>
+
+    </article>
+</main>
+
+
+    <script type="text/javascript" src="http://localhost/elasticlunr.min.js" defer></script>
+    <script type="text/javascript" src="http://localhost/search_index.en.js" defer></script>
+<script type="text/javascript" src="http://localhost/js.js" defer></script>
+
+</body>
+</html>

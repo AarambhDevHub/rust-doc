@@ -1,0 +1,1488 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://localhost/main.css">
+    <link rel="icon" href="https://www.rust-lang.org/static/images/favicon-16x16.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Rust Programming Course! | Debug Trait and Custom Formatting </title>
+</head>
+<body>
+
+<main>
+    
+    <nav>
+            <a href="http:&#x2F;&#x2F;localhost">
+                        <img src="https://www.rust-lang.org/static/images/rust-logo-blk.svg" alt="logo"/>
+                    </a>
+                <!-- -->
+
+            <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+            <div id="trees">
+                <input class="tree-toggle" type="checkbox" id="day-1-introduction"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-1-introduction">Day 1: Introduction</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 1/chapter-1/">What is Rust and why use it?</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-2/">Installing Rust Toolchain (rustup, cargo)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-3/">Setting up Development (VS Code + Hello World)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-4/">Understanding Cargo Project Structure</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-2-basic-syntax-variables"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-2-basic-syntax-variables">Day 2: Basic Syntax &amp; Variables</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 2/chapter-1/">Variables and Mutability in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-2/">Data Types in Rust: Integers, Floats, Booleans, and Characters</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-3/">Constants vs Variables</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-4/">Understanding Shadowing in Rust: A Practical Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-5/">Basic Input&#x2F;Output</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-3-functions-control-flow"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-3-functions-control-flow">Day 3: Functions &amp; Control Flow</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 3/chapter-1/">Function Syntax and Parameters in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-2/">Return Values and Expressions vs Statements</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-3/">If&#x2F;Else Statements in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-4/">Match Expressions in Rust: Powerful Pattern Matching</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-5/">Loops in Rust: loop, while, for Explained</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-4-data-types-deep-dive"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-4-data-types-deep-dive">Day 4: Data Types Deep Dive</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 4/chapter-1/">Compound Types (Tuples, Arrays)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-2/">String vs &amp;str in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-3/">Vector Basics in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-4/">Type Annotations and Inference in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-5/">Practical Rust Exercises</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-5-practice-review"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-5-practice-review">Day 5: Practice &amp; Review</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 5/chapter-1/">Day 5: Practice &amp; Review</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-6-ownership-fundamentals"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-6-ownership-fundamentals">Day 6: Ownership Fundamentals</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 6/chapter-1/">Ownership in Rust: A Detailed Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-2/">Stack vs Heap in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-3/">Understanding Ownership in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-4/">Move Semantics in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-5/">Copy Trait in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-7-references-borrowing"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-7-references-borrowing">Day 7: References &amp; Borrowing</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 7/chapter-1/">Immutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-2/">Mutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-3/">Borrowing Rules</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-4/">Reference Lifetime Basics</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-5/">Common Borrowing Errors and Solutions</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-8-slices"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-8-slices">Day 8: Slices</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 8/chapter-1/">String Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-2/">Array Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-3/">Slice Syntax and Usage</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-4/">Practical Applications</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-5/">Memory Safety Benefits</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-9-advanced-ownership"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-9-advanced-ownership">Day 9: Advanced Ownership</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 9/chapter-1/">Clone Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-2/">Drop Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-3/">RAII Pattern</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-4/">Memory Management Comparison with Other Languages</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-5/">Best Practices (Advanced Ownership)</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-10-ownership-practice"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-10-ownership-practice">Day 10: Ownership Practice</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 10/chapter-1/">Complex Ownership Scenarios</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-2/">Debugging Ownership Errors</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-3/">Code Refactoring Exercises</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-4/">Group Problem-Solving</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-11-structs-basics"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-11-structs-basics">Day 11: Structs Basics</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 11/chapter-1/">Defining and Instantiating Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-2/">Field Access and Modification</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-3/">Tuple Structs and Unit Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-4/">Struct Update Syntax</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-5/">Ownership of Struct Data</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-12-methods-associated-functions"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-12-methods-associated-functions">Day 12: Methods &amp; Associated Functions</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 12/chapter-1/">Implementing Methods with impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-2/">&amp;self, &amp;mut self, and self</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-3/">Associated Functions (like Constructors)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-4/">Multiple impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-5/">Method Chaining</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-13-advanced-struct-concepts"
+                           checked/>
+                    <label class="tree-toggle-label"
+                           for="day-13-advanced-struct-concepts">Day 13: Advanced Struct Concepts</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 13/chapter-1/">Struct Lifetime Parameters</a>
+                            </li>
+
+                            <li class="active">
+                                <a href="http://localhost/day 13/chapter-2/">Debug Trait and Custom Formatting</a>
+                            </li>
+
+                            
+                                    
+                                    
+                                        <ul id="toc">
+                                            <li><a href="
+                                                        http://localhost/day 13/chapter-2/#debug-trait-and-custom-formatting-in-rust-comprehensive-documentation-for-beginners">Debug Trait and Custom Formatting in Rust: Comprehensive Documentation for Beginners</a>
+                                                    <ul>
+                                                            <li>
+                                                                    <a href="http://localhost/day 13/chapter-2/#understanding-the-debug-trait-the-x-ray-vision-analogy">Understanding the Debug Trait - The X-ray Vision Analogy</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 13/chapter-2/#what-is-the-debug-trait">What is the Debug Trait?</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 13/chapter-2/#basic-debug-implementation">Basic Debug Implementation</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 13/chapter-2/#custom-debug-implementation">Custom Debug Implementation</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 13/chapter-2/#practical-real-world-examples">Practical Real-World Examples</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 13/chapter-2/#advanced-formatting-techniques">Advanced Formatting Techniques</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 13/chapter-2/#debugging-techniques-and-patterns">Debugging Techniques and Patterns</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 13/chapter-2/#best-practices-and-common-patterns">Best Practices and Common Patterns</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 13/chapter-2/#common-mistakes-and-solutions">Common Mistakes and Solutions</a>
+                                                                </li>
+                                                            </ul>
+                                                    </li>
+                                            </ul>
+                                    <li >
+                                <a href="http://localhost/day 13/chapter-3/">Builder Pattern Implementation</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-4/">Struct Composition</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-5/">Best Practices for Struct Design</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-14-enums-pattern-matching"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-14-enums-pattern-matching">Day 14: Enums &amp; Pattern Matching</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 14/chapter-1/">Defining Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-2/">Enum Variants with Data</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-3/">Option&lt;T&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-4/">Result&lt;T, E&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-5/">Advanced Match Patterns in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-15-practice-project"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-15-practice-project">Day 15: Practice Project</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 15/chapter-1/">Building a Simple CLI Calculator in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-16-vectors"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-16-vectors">Day 16: Vectors</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 16/chapter-1/">Creating and Updating Vectors</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-2/">Vector Methods: push, pop, iter</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-3/">Accessing Vector Elements Safely</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-4/">Vector of Different Types with Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-5/">Performance Considerations</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-17-hashmaps-other-collections"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-17-hashmaps-other-collections">Day 17: HashMaps &amp; Other Collections</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 17/chapter-1/">HashMap Creation and Manipulation</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-2/">Keys and Values Ownership</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-3/">HashMap Methods and Iteration</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-4/">When to Use Different Collections</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-5/">BTreeMap Introduction</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-18-error-handling"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-18-error-handling">Day 18: Error Handling</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 18/chapter-1/">Panic! and When to Use It</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 18/chapter-2/">Result&lt;T, E&gt; in Depth</a>
+                            </li>
+
+                            </ul>
+                </div>
+        </nav>
+    <article>
+
+        <div id="on_right">
+                <span id="search-ico" class="ms-Icon--Search"></span>
+            </div>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="Search as you type...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        <div id="wrap">
+            
+        <h1 id="debug-trait-and-custom-formatting-in-rust-comprehensive-documentation-for-beginners">Debug Trait and Custom Formatting in Rust: Comprehensive Documentation for Beginners</h1>
+<p>Understanding the Debug trait is like learning how to create <strong>X-ray vision for your data</strong> - it lets you see inside your structs and understand what's happening when your code runs. Think of it as creating a special "developer view" of your data that shows all the internal details in a readable way.</p>
+<h2 id="understanding-the-debug-trait-the-x-ray-vision-analogy">Understanding the Debug Trait - The X-ray Vision Analogy</h2>
+<h3 id="the-medical-scanner-metaphor">The Medical Scanner Metaphor</h3>
+<p><strong>Imagine you're a doctor with different types of medical scanners:</strong></p>
+<ul>
+<li>📱 <strong>Display trait</strong> = Taking a nice portrait photo (user-friendly, polished)</li>
+<li>🔬 <strong>Debug trait</strong> = X-ray machine (shows internal structure, technical details)</li>
+<li>🖨️ <strong>Print macros</strong> = Different printing modes on your scanner</li>
+</ul>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Think of this like a patient file
+</span><span>#[</span><span style="color:#bf616a;">derive</span><span>(Debug)]  </span><span style="color:#a7adba;">// 🔬 Enable X-ray vision
+</span><span style="color:#b48ead;">struct </span><span>Patient {
+</span><span>    </span><span style="color:#bf616a;">name</span><span>: String,
+</span><span>    </span><span style="color:#bf616a;">age</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>    </span><span style="color:#bf616a;">heart_rate</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>    </span><span style="color:#bf616a;">temperature</span><span>: </span><span style="color:#b48ead;">f64</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> patient = Patient {
+</span><span>        name: &quot;</span><span style="color:#a3be8c;">Alice</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        age: </span><span style="color:#d08770;">30</span><span>,
+</span><span>        heart_rate: </span><span style="color:#d08770;">72</span><span>,
+</span><span>        temperature: </span><span style="color:#d08770;">98.6</span><span>,
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// X-ray view (Debug) - shows all internal details
+</span><span>    println!(&quot;</span><span style="color:#d08770;">{:?}</span><span>&quot;, patient);
+</span><span>    </span><span style="color:#a7adba;">// Output: Patient { name: &quot;Alice&quot;, age: 30, heart_rate: 72, temperature: 98.6 }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// High-resolution X-ray (Pretty Debug) - easier to read
+</span><span>    println!(&quot;</span><span style="color:#d08770;">{:#?}</span><span>&quot;, patient);
+</span><span>    </span><span style="color:#a7adba;">// Output:
+</span><span>    </span><span style="color:#a7adba;">// Patient {
+</span><span>    </span><span style="color:#a7adba;">//     name: &quot;Alice&quot;,
+</span><span>    </span><span style="color:#a7adba;">//     age: 30,
+</span><span>    </span><span style="color:#a7adba;">//     heart_rate: 72,
+</span><span>    </span><span style="color:#a7adba;">//     temperature: 98.6,
+</span><span>    </span><span style="color:#a7adba;">// }
+</span><span>}
+</span></code></pre>
+<p><strong>Key Point:</strong> Debug gives you the "technical view" - perfect for developers to understand what's inside their data structures!</p>
+<h2 id="what-is-the-debug-trait">What is the Debug Trait?</h2>
+<h3 id="core-concept">Core Concept</h3>
+<p>The <strong>Debug trait</strong> allows types to provide a programmer-facing, debugging representation. It's Rust's way of saying "here's how to show the internals of this data structure to a developer."</p>
+<ul>
+<li><strong>Purpose</strong>: Show the internal state of data structures</li>
+<li><strong>Audience</strong>: Developers (not end users)</li>
+<li><strong>Usage</strong>: Debugging, logging, development tools</li>
+<li><strong>Format specifiers</strong>: <code>{:?}</code> (compact) and <code>{:#?}</code> (pretty-printed)</li>
+</ul>
+<h3 id="how-debug-works-under-the-hood">How Debug Works Under the Hood</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// This is what the Debug trait looks like internally
+</span><span style="color:#b48ead;">pub trait </span><span>Debug {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">fmt</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">f</span><span>: &amp;</span><span style="color:#b48ead;">mut</span><span> Formatter) -&gt; Result;
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// When you write println!(&quot;{:?}&quot;, my_struct)
+</span><span style="color:#a7adba;">// Rust calls my_struct.fmt(formatter) behind the scenes
+</span></code></pre>
+<h2 id="basic-debug-implementation">Basic Debug Implementation</h2>
+<h3 id="automatic-implementation-with-derive-debug">Automatic Implementation with #[derive(Debug)]</h3>
+<p>The easiest way to implement Debug is using the <code>derive</code> macro:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span>#[</span><span style="color:#bf616a;">derive</span><span>(Debug)]
+</span><span style="color:#b48ead;">struct </span><span>Smartphone {
+</span><span>    </span><span style="color:#bf616a;">brand</span><span>: String,
+</span><span>    </span><span style="color:#bf616a;">model</span><span>: String,
+</span><span>    </span><span style="color:#bf616a;">battery_percentage</span><span>: </span><span style="color:#b48ead;">u8</span><span>,
+</span><span>    </span><span style="color:#bf616a;">is_connected</span><span>: </span><span style="color:#b48ead;">bool</span><span>,
+</span><span>    </span><span style="color:#bf616a;">apps</span><span>: Vec,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> phone = Smartphone {
+</span><span>        brand: &quot;</span><span style="color:#a3be8c;">iPhone</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        model: &quot;</span><span style="color:#a3be8c;">14 Pro</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        battery_percentage: </span><span style="color:#d08770;">85</span><span>,
+</span><span>        is_connected: </span><span style="color:#d08770;">true</span><span>,
+</span><span>        apps: vec![
+</span><span>            &quot;</span><span style="color:#a3be8c;">Messages</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>            &quot;</span><span style="color:#a3be8c;">Camera</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>            &quot;</span><span style="color:#a3be8c;">Settings</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        ],
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Compact debug format
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Compact: </span><span style="color:#d08770;">{:?}</span><span>&quot;, phone);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Pretty debug format with indentation
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Pretty:</span><span style="color:#96b5b4;">\n</span><span style="color:#d08770;">{:#?}</span><span>&quot;, phone);
+</span><span>}
+</span></code></pre>
+<p><strong>Output:</strong></p>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>Compact: Smartphone { brand: &quot;iPhone&quot;, model: &quot;14 Pro&quot;, battery_percentage: 85, is_connected: true, apps: [&quot;Messages&quot;, &quot;Camera&quot;, &quot;Settings&quot;] }
+</span><span>
+</span><span>Pretty:
+</span><span>Smartphone {
+</span><span>    brand: &quot;iPhone&quot;,
+</span><span>    model: &quot;14 Pro&quot;,
+</span><span>    battery_percentage: 85,
+</span><span>    is_connected: true,
+</span><span>    apps: [
+</span><span>        &quot;Messages&quot;,
+</span><span>        &quot;Camera&quot;,
+</span><span>        &quot;Settings&quot;,
+</span><span>    ],
+</span><span>}
+</span></code></pre>
+<h3 id="when-derive-works-vs-when-it-doesn-t">When Derive Works vs When It Doesn't</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// ✅ This works - all fields implement Debug
+</span><span>#[</span><span style="color:#bf616a;">derive</span><span>(Debug)]
+</span><span style="color:#b48ead;">struct </span><span>WorkingStruct {
+</span><span>    </span><span style="color:#bf616a;">number</span><span>: </span><span style="color:#b48ead;">i32</span><span>,          </span><span style="color:#a7adba;">// primitives implement Debug
+</span><span>    </span><span style="color:#bf616a;">text</span><span>: String,         </span><span style="color:#a7adba;">// String implements Debug
+</span><span>    </span><span style="color:#bf616a;">list</span><span>: Vec,       </span><span style="color:#a7adba;">// Vec implements Debug if T does
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// ❌ This won&#39;t work if you have non-Debug fields
+</span><span style="color:#b48ead;">struct </span><span>CustomType {
+</span><span>    </span><span style="color:#bf616a;">value</span><span>: </span><span style="color:#b48ead;">i32</span><span>,
+</span><span>}
+</span><span style="color:#a7adba;">// CustomType doesn&#39;t implement Debug
+</span><span>
+</span><span style="color:#b48ead;">struct </span><span>ProblematicStruct {
+</span><span>    </span><span style="color:#bf616a;">working_field</span><span>: </span><span style="color:#b48ead;">i32</span><span>,
+</span><span>    </span><span style="color:#a7adba;">// problem_field: CustomType,  // This would prevent derive(Debug)
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Solution: Implement Debug for CustomType first
+</span><span style="color:#b48ead;">use </span><span>std::fmt;
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>fmt::Debug </span><span style="color:#b48ead;">for </span><span>CustomType {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">fmt</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">f</span><span>: &amp;</span><span style="color:#b48ead;">mut </span><span>fmt::Formatter) -&gt; fmt::Result {
+</span><span>        write!(f, &quot;</span><span style="color:#a3be8c;">CustomType(</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">)</span><span>&quot;, </span><span style="color:#bf616a;">self</span><span>.value)
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Now this works
+</span><span>#[</span><span style="color:#bf616a;">derive</span><span>(Debug)]
+</span><span style="color:#b48ead;">struct </span><span>FixedStruct {
+</span><span>    </span><span style="color:#bf616a;">working_field</span><span>: </span><span style="color:#b48ead;">i32</span><span>,
+</span><span>    </span><span style="color:#bf616a;">custom_field</span><span>: CustomType,
+</span><span>}
+</span></code></pre>
+<h2 id="custom-debug-implementation">Custom Debug Implementation</h2>
+<h3 id="basic-manual-implementation">Basic Manual Implementation</h3>
+<p>When you need control over the debug output:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>std::fmt;
+</span><span>
+</span><span style="color:#b48ead;">struct </span><span>BankAccount {
+</span><span>    </span><span style="color:#bf616a;">account_number</span><span>: String,
+</span><span>    </span><span style="color:#bf616a;">balance</span><span>: </span><span style="color:#b48ead;">f64</span><span>,
+</span><span>    </span><span style="color:#bf616a;">pin</span><span>: String,  </span><span style="color:#a7adba;">// Sensitive data we don&#39;t want to show
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>fmt::Debug </span><span style="color:#b48ead;">for </span><span>BankAccount {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">fmt</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">f</span><span>: &amp;</span><span style="color:#b48ead;">mut </span><span>fmt::Formatter) -&gt; fmt::Result {
+</span><span>        write!(f,
+</span><span>               &quot;</span><span style="color:#a3be8c;">BankAccount </span><span style="color:#96b5b4;">{{</span><span style="color:#a3be8c;"> account_number: </span><span style="color:#96b5b4;">\&quot;</span><span style="color:#d08770;">{}</span><span style="color:#96b5b4;">\&quot;</span><span style="color:#a3be8c;">, balance: $</span><span style="color:#d08770;">{:.2}</span><span style="color:#a3be8c;">, pin: </span><span style="color:#96b5b4;">\&quot;</span><span style="color:#a3be8c;">[HIDDEN]</span><span style="color:#96b5b4;">\&quot; }}</span><span>&quot;,
+</span><span>               </span><span style="color:#bf616a;">self</span><span>.account_number,
+</span><span>               </span><span style="color:#bf616a;">self</span><span>.balance)
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> account = BankAccount {
+</span><span>        account_number: &quot;</span><span style="color:#a3be8c;">ACC123456</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        balance: </span><span style="color:#d08770;">1250.75</span><span>,
+</span><span>        pin: &quot;</span><span style="color:#a3be8c;">1234</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),  </span><span style="color:#a7adba;">// This will be hidden in debug output
+</span><span>    };
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#d08770;">{:?}</span><span>&quot;, account);
+</span><span>    </span><span style="color:#a7adba;">// Output: BankAccount { account_number: &quot;ACC123456&quot;, balance: $1250.75, pin: &quot;[HIDDEN]&quot; }
+</span><span>}
+</span></code></pre>
+<h3 id="using-debug-helpers-for-better-formatting">Using Debug Helpers for Better Formatting</h3>
+<p>Rust provides helper methods to make custom Debug implementations easier:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>std::fmt;
+</span><span>
+</span><span style="color:#b48ead;">struct </span><span>GameCharacter {
+</span><span>    </span><span style="color:#bf616a;">name</span><span>: String,
+</span><span>    </span><span style="color:#bf616a;">level</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>    </span><span style="color:#bf616a;">health</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>    </span><span style="color:#bf616a;">max_health</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>    </span><span style="color:#bf616a;">inventory</span><span>: Vec,
+</span><span>    </span><span style="color:#bf616a;">secret_stats</span><span>: </span><span style="color:#b48ead;">u32</span><span>,  </span><span style="color:#a7adba;">// We want to hide this
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>fmt::Debug </span><span style="color:#b48ead;">for </span><span>GameCharacter {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">fmt</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">f</span><span>: &amp;</span><span style="color:#b48ead;">mut </span><span>fmt::Formatter) -&gt; fmt::Result {
+</span><span>        f.</span><span style="color:#96b5b4;">debug_struct</span><span>(&quot;</span><span style="color:#a3be8c;">GameCharacter</span><span>&quot;)
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">name</span><span>&quot;, &amp;</span><span style="color:#bf616a;">self</span><span>.name)
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">level</span><span>&quot;, &amp;</span><span style="color:#bf616a;">self</span><span>.level)
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">health</span><span>&quot;, &amp;format_args!(&quot;</span><span style="color:#a3be8c;">{}/{}</span><span>&quot;, </span><span style="color:#bf616a;">self</span><span>.health, </span><span style="color:#bf616a;">self</span><span>.max_health))
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">inventory</span><span>&quot;, &amp;</span><span style="color:#bf616a;">self</span><span>.inventory)
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">secret_stats</span><span>&quot;, &amp;&quot;</span><span style="color:#a3be8c;">[CLASSIFIED]</span><span>&quot;)
+</span><span>            .</span><span style="color:#96b5b4;">finish</span><span>()
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> character = GameCharacter {
+</span><span>        name: &quot;</span><span style="color:#a3be8c;">DragonSlayer99</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        level: </span><span style="color:#d08770;">42</span><span>,
+</span><span>        health: </span><span style="color:#d08770;">180</span><span>,
+</span><span>        max_health: </span><span style="color:#d08770;">200</span><span>,
+</span><span>        inventory: vec![&quot;</span><span style="color:#a3be8c;">Sword</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), &quot;</span><span style="color:#a3be8c;">Shield</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), &quot;</span><span style="color:#a3be8c;">Potion</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()],
+</span><span>        secret_stats: </span><span style="color:#d08770;">9999</span><span>,
+</span><span>    };
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#d08770;">{:#?}</span><span>&quot;, character);
+</span><span>}
+</span></code></pre>
+<p><strong>Output:</strong></p>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>GameCharacter {
+</span><span>    name: &quot;DragonSlayer99&quot;,
+</span><span>    level: 42,
+</span><span>    health: 180/200,
+</span><span>    inventory: [
+</span><span>        &quot;Sword&quot;,
+</span><span>        &quot;Shield&quot;,
+</span><span>        &quot;Potion&quot;,
+</span><span>    ],
+</span><span>    secret_stats: &quot;[CLASSIFIED]&quot;,
+</span><span>}
+</span></code></pre>
+<h3 id="advanced-custom-formatting">Advanced Custom Formatting</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>std::fmt;
+</span><span style="color:#b48ead;">use </span><span>std::collections::HashMap;
+</span><span>
+</span><span style="color:#b48ead;">struct </span><span>ServerStatus {
+</span><span>    </span><span style="color:#bf616a;">server_name</span><span>: String,
+</span><span>    </span><span style="color:#bf616a;">uptime_seconds</span><span>: </span><span style="color:#b48ead;">u64</span><span>,
+</span><span>    </span><span style="color:#bf616a;">active_connections</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>    </span><span style="color:#bf616a;">memory_usage_mb</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>    </span><span style="color:#bf616a;">errors</span><span>: Vec,
+</span><span>    </span><span style="color:#bf616a;">config</span><span>: HashMap,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>fmt::Debug </span><span style="color:#b48ead;">for </span><span>ServerStatus {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">fmt</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">f</span><span>: &amp;</span><span style="color:#b48ead;">mut </span><span>fmt::Formatter) -&gt; fmt::Result {
+</span><span>        </span><span style="color:#a7adba;">// Convert uptime to human readable format
+</span><span>        </span><span style="color:#b48ead;">let</span><span> hours = </span><span style="color:#bf616a;">self</span><span>.uptime_seconds / </span><span style="color:#d08770;">3600</span><span>;
+</span><span>        </span><span style="color:#b48ead;">let</span><span> minutes = (</span><span style="color:#bf616a;">self</span><span>.uptime_seconds % </span><span style="color:#d08770;">3600</span><span>) / </span><span style="color:#d08770;">60</span><span>;
+</span><span>        </span><span style="color:#b48ead;">let</span><span> seconds = </span><span style="color:#bf616a;">self</span><span>.uptime_seconds % </span><span style="color:#d08770;">60</span><span>;
+</span><span>
+</span><span>        </span><span style="color:#a7adba;">// Color code health based on errors
+</span><span>        </span><span style="color:#b48ead;">let</span><span> health_status = </span><span style="color:#b48ead;">if </span><span style="color:#bf616a;">self</span><span>.errors.</span><span style="color:#96b5b4;">is_empty</span><span>() {
+</span><span>            &quot;</span><span style="color:#a3be8c;">🟢 HEALTHY</span><span>&quot;
+</span><span>        } </span><span style="color:#b48ead;">else if </span><span style="color:#bf616a;">self</span><span>.errors.</span><span style="color:#96b5b4;">len</span><span>() &gt;())
+</span><span>            .</span><span style="color:#96b5b4;">finish</span><span>()
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> config = HashMap::new();
+</span><span>    config.</span><span style="color:#96b5b4;">insert</span><span>(&quot;</span><span style="color:#a3be8c;">port</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), &quot;</span><span style="color:#a3be8c;">8080</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>());
+</span><span>    config.</span><span style="color:#96b5b4;">insert</span><span>(&quot;</span><span style="color:#a3be8c;">max_connections</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), &quot;</span><span style="color:#a3be8c;">1000</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>());
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> server = ServerStatus {
+</span><span>        server_name: &quot;</span><span style="color:#a3be8c;">WebServer-01</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        uptime_seconds: </span><span style="color:#d08770;">7265</span><span>,  </span><span style="color:#a7adba;">// 2 hours, 1 minute, 5 seconds
+</span><span>        active_connections: </span><span style="color:#d08770;">234</span><span>,
+</span><span>        memory_usage_mb: </span><span style="color:#d08770;">512</span><span>,
+</span><span>        errors: vec![&quot;</span><span style="color:#a3be8c;">Connection timeout</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()],
+</span><span>        config,
+</span><span>    };
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#d08770;">{:#?}</span><span>&quot;, server);
+</span><span>}
+</span></code></pre>
+<h2 id="practical-real-world-examples">Practical Real-World Examples</h2>
+<h3 id="http-request-logger">HTTP Request Logger</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>std::fmt;
+</span><span style="color:#b48ead;">use </span><span>std::collections::HashMap;
+</span><span>
+</span><span style="color:#b48ead;">struct </span><span>HttpRequest {
+</span><span>    </span><span style="color:#bf616a;">method</span><span>: String,
+</span><span>    </span><span style="color:#bf616a;">url</span><span>: String,
+</span><span>    </span><span style="color:#bf616a;">headers</span><span>: HashMap,
+</span><span>    </span><span style="color:#bf616a;">body</span><span>: Option,
+</span><span>    </span><span style="color:#bf616a;">timestamp</span><span>: </span><span style="color:#b48ead;">u64</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>fmt::Debug </span><span style="color:#b48ead;">for </span><span>HttpRequest {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">fmt</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">f</span><span>: &amp;</span><span style="color:#b48ead;">mut </span><span>fmt::Formatter) -&gt; fmt::Result {
+</span><span>        </span><span style="color:#a7adba;">// Determine if we should use compact or pretty format
+</span><span>        </span><span style="color:#b48ead;">if</span><span> f.</span><span style="color:#96b5b4;">alternate</span><span>() {
+</span><span>            </span><span style="color:#a7adba;">// Pretty format for {:#?}
+</span><span>            f.</span><span style="color:#96b5b4;">debug_struct</span><span>(&quot;</span><span style="color:#a3be8c;">HttpRequest</span><span>&quot;)
+</span><span>                .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">method</span><span>&quot;, &amp;</span><span style="color:#bf616a;">self</span><span>.method)
+</span><span>                .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">url</span><span>&quot;, &amp;</span><span style="color:#bf616a;">self</span><span>.url)
+</span><span>                .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">timestamp</span><span>&quot;, &amp;</span><span style="color:#bf616a;">self</span><span>.timestamp)
+</span><span>                .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">headers</span><span>&quot;, &amp;</span><span style="color:#bf616a;">self</span><span>.</span><span style="color:#96b5b4;">format_headers</span><span>())
+</span><span>                .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">body</span><span>&quot;, &amp;</span><span style="color:#bf616a;">self</span><span>.</span><span style="color:#96b5b4;">format_body</span><span>())
+</span><span>                .</span><span style="color:#96b5b4;">finish</span><span>()
+</span><span>        } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>            </span><span style="color:#a7adba;">// Compact format for {:?}
+</span><span>            write!(f, &quot;</span><span style="color:#d08770;">{} {}</span><span style="color:#a3be8c;"> [</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">] (</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> headers)</span><span>&quot;,
+</span><span>                   </span><span style="color:#bf616a;">self</span><span>.method,
+</span><span>                   </span><span style="color:#bf616a;">self</span><span>.url,
+</span><span>                   </span><span style="color:#bf616a;">self</span><span>.timestamp,
+</span><span>                   </span><span style="color:#bf616a;">self</span><span>.headers.</span><span style="color:#96b5b4;">len</span><span>())
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>HttpRequest {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">format_headers</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; String {
+</span><span>        </span><span style="color:#b48ead;">if </span><span style="color:#bf616a;">self</span><span>.headers.</span><span style="color:#96b5b4;">is_empty</span><span>() {
+</span><span>            &quot;</span><span style="color:#a3be8c;">None</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()
+</span><span>        } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>            format!(&quot;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> headers</span><span>&quot;, </span><span style="color:#bf616a;">self</span><span>.headers.</span><span style="color:#96b5b4;">len</span><span>())
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">format_body</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; String {
+</span><span>        </span><span style="color:#b48ead;">match </span><span>&amp;</span><span style="color:#bf616a;">self</span><span>.body {
+</span><span>            None =&gt; &quot;</span><span style="color:#a3be8c;">No body</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>            Some(body) </span><span style="color:#b48ead;">if</span><span> body.</span><span style="color:#96b5b4;">len</span><span>() &gt; </span><span style="color:#d08770;">50 </span><span>=&gt; format!(&quot;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">... (</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> chars)</span><span>&quot;, &amp;body[..</span><span style="color:#d08770;">47</span><span>], body.</span><span style="color:#96b5b4;">len</span><span>()),
+</span><span>            Some(body) =&gt; body.</span><span style="color:#96b5b4;">clone</span><span>(),
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> headers = HashMap::new();
+</span><span>    headers.</span><span style="color:#96b5b4;">insert</span><span>(&quot;</span><span style="color:#a3be8c;">Content-Type</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), &quot;</span><span style="color:#a3be8c;">application/json</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>());
+</span><span>    headers.</span><span style="color:#96b5b4;">insert</span><span>(&quot;</span><span style="color:#a3be8c;">Authorization</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), &quot;</span><span style="color:#a3be8c;">Bearer token123</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>());
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> request = HttpRequest {
+</span><span>        method: &quot;</span><span style="color:#a3be8c;">POST</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        url: &quot;</span><span style="color:#a3be8c;">/api/users</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        headers,
+</span><span>        body: Some(</span><span style="color:#b48ead;">r</span><span>#&quot;</span><span style="color:#a3be8c;">{&quot;name&quot;: &quot;Alice&quot;, &quot;email&quot;: &quot;alice@example.com&quot;}</span><span>&quot;#.</span><span style="color:#96b5b4;">to_string</span><span>()),
+</span><span>        timestamp: </span><span style="color:#d08770;">1640995200</span><span>,
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Compact format
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Compact: </span><span style="color:#d08770;">{:?}</span><span>&quot;, request);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Pretty format
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Pretty:</span><span style="color:#96b5b4;">\n</span><span style="color:#d08770;">{:#?}</span><span>&quot;, request);
+</span><span>}
+</span></code></pre>
+<h3 id="database-connection-pool-monitor">Database Connection Pool Monitor</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>std::fmt;
+</span><span style="color:#b48ead;">use </span><span>std::time::{Duration, SystemTime};
+</span><span>
+</span><span>#[</span><span style="color:#bf616a;">derive</span><span>(Clone)]
+</span><span style="color:#b48ead;">struct </span><span>Connection {
+</span><span>    </span><span style="color:#bf616a;">id</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>    </span><span style="color:#bf616a;">created_at</span><span>: SystemTime,
+</span><span>    </span><span style="color:#bf616a;">last_used</span><span>: SystemTime,
+</span><span>    </span><span style="color:#bf616a;">is_active</span><span>: </span><span style="color:#b48ead;">bool</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">struct </span><span>ConnectionPool {
+</span><span>    </span><span style="color:#bf616a;">connections</span><span>: Vec,
+</span><span>    </span><span style="color:#bf616a;">max_size</span><span>: </span><span style="color:#b48ead;">usize</span><span>,
+</span><span>    </span><span style="color:#bf616a;">active_count</span><span>: </span><span style="color:#b48ead;">usize</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>fmt::Debug </span><span style="color:#b48ead;">for </span><span>Connection {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">fmt</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">f</span><span>: &amp;</span><span style="color:#b48ead;">mut </span><span>fmt::Formatter) -&gt; fmt::Result {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> age = </span><span style="color:#bf616a;">self</span><span>.created_at.</span><span style="color:#96b5b4;">elapsed</span><span>().</span><span style="color:#96b5b4;">unwrap_or</span><span>(Duration::from_secs(</span><span style="color:#d08770;">0</span><span>));
+</span><span>        </span><span style="color:#b48ead;">let</span><span> idle_time = </span><span style="color:#bf616a;">self</span><span>.last_used.</span><span style="color:#96b5b4;">elapsed</span><span>().</span><span style="color:#96b5b4;">unwrap_or</span><span>(Duration::from_secs(</span><span style="color:#d08770;">0</span><span>));
+</span><span>
+</span><span>        f.</span><span style="color:#96b5b4;">debug_struct</span><span>(&quot;</span><span style="color:#a3be8c;">Connection</span><span>&quot;)
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">id</span><span>&quot;, &amp;</span><span style="color:#bf616a;">self</span><span>.id)
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">status</span><span>&quot;, &amp;</span><span style="color:#b48ead;">if </span><span style="color:#bf616a;">self</span><span>.is_active { &quot;</span><span style="color:#a3be8c;">🟢 ACTIVE</span><span>&quot; } </span><span style="color:#b48ead;">else </span><span>{ &quot;</span><span style="color:#a3be8c;">⚪ IDLE</span><span>&quot; })
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">age</span><span>&quot;, &amp;format!(&quot;</span><span style="color:#d08770;">{:.1}</span><span style="color:#a3be8c;">s</span><span>&quot;, age.</span><span style="color:#96b5b4;">as_secs_f64</span><span>()))
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">idle_for</span><span>&quot;, &amp;format!(&quot;</span><span style="color:#d08770;">{:.1}</span><span style="color:#a3be8c;">s</span><span>&quot;, idle_time.</span><span style="color:#96b5b4;">as_secs_f64</span><span>()))
+</span><span>            .</span><span style="color:#96b5b4;">finish</span><span>()
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>fmt::Debug </span><span style="color:#b48ead;">for </span><span>ConnectionPool {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">fmt</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">f</span><span>: &amp;</span><span style="color:#b48ead;">mut </span><span>fmt::Formatter) -&gt; fmt::Result {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> utilization = (</span><span style="color:#bf616a;">self</span><span>.active_count as </span><span style="color:#b48ead;">f64 </span><span>/ </span><span style="color:#bf616a;">self</span><span>.max_size as </span><span style="color:#b48ead;">f64</span><span>) * </span><span style="color:#d08770;">100.0</span><span>;
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">let</span><span> health_indicator = </span><span style="color:#b48ead;">match</span><span> utilization {
+</span><span>            x </span><span style="color:#b48ead;">if</span><span> x  &quot;</span><span style="color:#a3be8c;">🟢 HEALTHY</span><span>&quot;,
+</span><span>            x </span><span style="color:#b48ead;">if</span><span> x  &quot;</span><span style="color:#a3be8c;">🟡 BUSY</span><span>&quot;,
+</span><span>            _ =&gt; &quot;</span><span style="color:#a3be8c;">🔴 OVERLOADED</span><span>&quot;,
+</span><span>        };
+</span><span>
+</span><span>        f.</span><span style="color:#96b5b4;">debug_struct</span><span>(&quot;</span><span style="color:#a3be8c;">ConnectionPool</span><span>&quot;)
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">health</span><span>&quot;, &amp;health_indicator)
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">utilization</span><span>&quot;, &amp;format!(&quot;</span><span style="color:#d08770;">{:.1}</span><span style="color:#a3be8c;">%</span><span>&quot;, utilization))
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">active</span><span>&quot;, &amp;</span><span style="color:#bf616a;">self</span><span>.active_count)
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">total</span><span>&quot;, &amp;</span><span style="color:#bf616a;">self</span><span>.connections.</span><span style="color:#96b5b4;">len</span><span>())
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">max_size</span><span>&quot;, &amp;</span><span style="color:#bf616a;">self</span><span>.max_size)
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">connections</span><span>&quot;, &amp;</span><span style="color:#b48ead;">if</span><span> f.</span><span style="color:#96b5b4;">alternate</span><span>() {
+</span><span>                &amp;</span><span style="color:#bf616a;">self</span><span>.connections
+</span><span>            } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>                &amp;</span><span style="color:#bf616a;">self</span><span>.connections[..</span><span style="color:#bf616a;">self</span><span>.active_count.</span><span style="color:#96b5b4;">min</span><span>(</span><span style="color:#d08770;">3</span><span>)] </span><span style="color:#a7adba;">// Show first 3 in compact mode
+</span><span>            })
+</span><span>            .</span><span style="color:#96b5b4;">finish</span><span>()
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> now = SystemTime::now();
+</span><span>    </span><span style="color:#b48ead;">let</span><span> connections = vec![
+</span><span>        Connection { id: </span><span style="color:#d08770;">1</span><span>, created_at: now, last_used: now, is_active: </span><span style="color:#d08770;">true </span><span>},
+</span><span>        Connection { id: </span><span style="color:#d08770;">2</span><span>, created_at: now, last_used: now, is_active: </span><span style="color:#d08770;">true </span><span>},
+</span><span>        Connection { id: </span><span style="color:#d08770;">3</span><span>, created_at: now, last_used: now, is_active: </span><span style="color:#d08770;">false </span><span>},
+</span><span>    ];
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> pool = ConnectionPool {
+</span><span>        connections,
+</span><span>        max_size: </span><span style="color:#d08770;">10</span><span>,
+</span><span>        active_count: </span><span style="color:#d08770;">2</span><span>,
+</span><span>    };
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Pool status: </span><span style="color:#d08770;">{:?}</span><span>&quot;, pool);
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">Detailed view:</span><span style="color:#96b5b4;">\n</span><span style="color:#d08770;">{:#?}</span><span>&quot;, pool);
+</span><span>}
+</span></code></pre>
+<h2 id="advanced-formatting-techniques">Advanced Formatting Techniques</h2>
+<h3 id="conditional-formatting-based-on-debug-flags">Conditional Formatting Based on Debug Flags</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>std::fmt;
+</span><span>
+</span><span style="color:#b48ead;">struct </span><span>ApiResponse {
+</span><span>    </span><span style="color:#bf616a;">status_code</span><span>: </span><span style="color:#b48ead;">u16</span><span>,
+</span><span>    </span><span style="color:#bf616a;">data</span><span>: T,
+</span><span>    </span><span style="color:#bf616a;">headers</span><span>: Vec,
+</span><span>    </span><span style="color:#bf616a;">processing_time_ms</span><span>: </span><span style="color:#b48ead;">u64</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>fmt::Debug </span><span style="color:#b48ead;">for </span><span>ApiResponse {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">fmt</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">f</span><span>: &amp;</span><span style="color:#b48ead;">mut </span><span>fmt::Formatter) -&gt; fmt::Result {
+</span><span>        </span><span style="color:#a7adba;">// Check formatting flags
+</span><span>        </span><span style="color:#b48ead;">let</span><span> show_headers = f.</span><span style="color:#96b5b4;">alternate</span><span>(); </span><span style="color:#a7adba;">// {:#?} shows headers, {:?} doesn&#39;t
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">let mut</span><span> debug_struct = f.</span><span style="color:#96b5b4;">debug_struct</span><span>(&quot;</span><span style="color:#a3be8c;">ApiResponse</span><span>&quot;);
+</span><span>
+</span><span>        </span><span style="color:#a7adba;">// Always show essential info
+</span><span>        debug_struct
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">status</span><span>&quot;, &amp;</span><span style="color:#bf616a;">self</span><span>.</span><span style="color:#96b5b4;">format_status</span><span>())
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">processing_time</span><span>&quot;, &amp;format!(&quot;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">ms</span><span>&quot;, </span><span style="color:#bf616a;">self</span><span>.processing_time_ms));
+</span><span>
+</span><span>        </span><span style="color:#a7adba;">// Conditionally show headers
+</span><span>        </span><span style="color:#b48ead;">if</span><span> show_headers {
+</span><span>            debug_struct.</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">headers</span><span>&quot;, &amp;</span><span style="color:#bf616a;">self</span><span>.headers);
+</span><span>        } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>            debug_struct.</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">header_count</span><span>&quot;, &amp;</span><span style="color:#bf616a;">self</span><span>.headers.</span><span style="color:#96b5b4;">len</span><span>());
+</span><span>        }
+</span><span>
+</span><span>        </span><span style="color:#a7adba;">// Always show data
+</span><span>        debug_struct.</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">data</span><span>&quot;, &amp;</span><span style="color:#bf616a;">self</span><span>.data);
+</span><span>
+</span><span>        debug_struct.</span><span style="color:#96b5b4;">finish</span><span>()
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>ApiResponse {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">format_status</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; String {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> emoji = </span><span style="color:#b48ead;">match </span><span style="color:#bf616a;">self</span><span>.status_code {
+</span><span>            </span><span style="color:#d08770;">200</span><span>..=</span><span style="color:#d08770;">299 </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">✅</span><span>&quot;,
+</span><span>            </span><span style="color:#d08770;">300</span><span>..=</span><span style="color:#d08770;">399 </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">↩️</span><span>&quot;,
+</span><span>            </span><span style="color:#d08770;">400</span><span>..=</span><span style="color:#d08770;">499 </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">❌</span><span>&quot;,
+</span><span>            </span><span style="color:#d08770;">500</span><span>..=</span><span style="color:#d08770;">599 </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">💥</span><span>&quot;,
+</span><span>            _ =&gt; &quot;</span><span style="color:#a3be8c;">❓</span><span>&quot;,
+</span><span>        };
+</span><span>
+</span><span>        format!(&quot;</span><span style="color:#d08770;">{} {}</span><span>&quot;, emoji, </span><span style="color:#bf616a;">self</span><span>.status_code)
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> response = ApiResponse {
+</span><span>        status_code: </span><span style="color:#d08770;">200</span><span>,
+</span><span>        data: vec![&quot;</span><span style="color:#a3be8c;">user1</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), &quot;</span><span style="color:#a3be8c;">user2</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()],
+</span><span>        headers: vec![
+</span><span>            (&quot;</span><span style="color:#a3be8c;">Content-Type</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), &quot;</span><span style="color:#a3be8c;">application/json</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()),
+</span><span>            (&quot;</span><span style="color:#a3be8c;">Cache-Control</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), &quot;</span><span style="color:#a3be8c;">no-cache</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()),
+</span><span>        ],
+</span><span>        processing_time_ms: </span><span style="color:#d08770;">125</span><span>,
+</span><span>    };
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Compact: </span><span style="color:#d08770;">{:?}</span><span>&quot;, response);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Detailed:</span><span style="color:#96b5b4;">\n</span><span style="color:#d08770;">{:#?}</span><span>&quot;, response);
+</span><span>}
+</span></code></pre>
+<h3 id="debug-for-complex-nested-structures">Debug for Complex Nested Structures</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>std::fmt;
+</span><span style="color:#b48ead;">use </span><span>std::collections::BTreeMap;
+</span><span>
+</span><span style="color:#b48ead;">struct </span><span>Application {
+</span><span>    </span><span style="color:#bf616a;">name</span><span>: String,
+</span><span>    </span><span style="color:#bf616a;">version</span><span>: String,
+</span><span>    </span><span style="color:#bf616a;">modules</span><span>: Vec,
+</span><span>    </span><span style="color:#bf616a;">config</span><span>: BTreeMap,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">struct </span><span>Module {
+</span><span>    </span><span style="color:#bf616a;">name</span><span>: String,
+</span><span>    </span><span style="color:#bf616a;">enabled</span><span>: </span><span style="color:#b48ead;">bool</span><span>,
+</span><span>    </span><span style="color:#bf616a;">dependencies</span><span>: Vec,
+</span><span>    </span><span style="color:#bf616a;">error_count</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>}
+</span><span>
+</span><span>#[</span><span style="color:#bf616a;">derive</span><span>(Debug)]
+</span><span style="color:#b48ead;">enum </span><span>ConfigValue {
+</span><span>    String(String),
+</span><span>    Number(</span><span style="color:#b48ead;">f64</span><span>),
+</span><span>    Boolean(</span><span style="color:#b48ead;">bool</span><span>),
+</span><span>    List(Vec),
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>fmt::Debug </span><span style="color:#b48ead;">for </span><span>Module {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">fmt</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">f</span><span>: &amp;</span><span style="color:#b48ead;">mut </span><span>fmt::Formatter) -&gt; fmt::Result {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> status = </span><span style="color:#b48ead;">if </span><span style="color:#bf616a;">self</span><span>.enabled {
+</span><span>            </span><span style="color:#b48ead;">if </span><span style="color:#bf616a;">self</span><span>.error_count == </span><span style="color:#d08770;">0 </span><span>{
+</span><span>                &quot;</span><span style="color:#a3be8c;">🟢 RUNNING</span><span>&quot;
+</span><span>            } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>                &quot;</span><span style="color:#a3be8c;">🟡 RUNNING_WITH_ERRORS</span><span>&quot;
+</span><span>            }
+</span><span>        } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>            &quot;</span><span style="color:#a3be8c;">⚪ DISABLED</span><span>&quot;
+</span><span>        };
+</span><span>
+</span><span>        f.</span><span style="color:#96b5b4;">debug_struct</span><span>(&quot;</span><span style="color:#a3be8c;">Module</span><span>&quot;)
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">name</span><span>&quot;, &amp;</span><span style="color:#bf616a;">self</span><span>.name)
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">status</span><span>&quot;, &amp;status)
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">dependencies</span><span>&quot;, &amp;</span><span style="color:#bf616a;">self</span><span>.dependencies.</span><span style="color:#96b5b4;">len</span><span>())
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">errors</span><span>&quot;, &amp;</span><span style="color:#bf616a;">self</span><span>.error_count)
+</span><span>            .</span><span style="color:#96b5b4;">finish</span><span>()
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>fmt::Debug </span><span style="color:#b48ead;">for </span><span>Application {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">fmt</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">f</span><span>: &amp;</span><span style="color:#b48ead;">mut </span><span>fmt::Formatter) -&gt; fmt::Result {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> enabled_modules = </span><span style="color:#bf616a;">self</span><span>.modules.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">filter</span><span>(|</span><span style="color:#bf616a;">m</span><span>| m.enabled).</span><span style="color:#96b5b4;">count</span><span>();
+</span><span>        </span><span style="color:#b48ead;">let</span><span> total_errors: </span><span style="color:#b48ead;">u32 </span><span>= </span><span style="color:#bf616a;">self</span><span>.modules.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">map</span><span>(|</span><span style="color:#bf616a;">m</span><span>| m.error_count).</span><span style="color:#96b5b4;">sum</span><span>();
+</span><span>
+</span><span>        f.</span><span style="color:#96b5b4;">debug_struct</span><span>(&quot;</span><span style="color:#a3be8c;">Application</span><span>&quot;)
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">name</span><span>&quot;, &amp;format!(&quot;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> v</span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#bf616a;">self</span><span>.name, </span><span style="color:#bf616a;">self</span><span>.version))
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">module_status</span><span>&quot;, &amp;format!(&quot;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">/</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> enabled</span><span>&quot;, enabled_modules, </span><span style="color:#bf616a;">self</span><span>.modules.</span><span style="color:#96b5b4;">len</span><span>()))
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">total_errors</span><span>&quot;, &amp;total_errors)
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">modules</span><span>&quot;, &amp;</span><span style="color:#b48ead;">if</span><span> f.</span><span style="color:#96b5b4;">alternate</span><span>() { &amp;</span><span style="color:#bf616a;">self</span><span>.modules } </span><span style="color:#b48ead;">else </span><span>{ &amp;</span><span style="color:#bf616a;">self</span><span>.modules[..enabled_modules.</span><span style="color:#96b5b4;">min</span><span>(</span><span style="color:#d08770;">2</span><span>)] })
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">config_keys</span><span>&quot;, &amp;</span><span style="color:#bf616a;">self</span><span>.config.</span><span style="color:#96b5b4;">keys</span><span>().collect::&gt;())
+</span><span>            .</span><span style="color:#96b5b4;">finish</span><span>()
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> config = BTreeMap::new();
+</span><span>    config.</span><span style="color:#96b5b4;">insert</span><span>(&quot;</span><span style="color:#a3be8c;">max_connections</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), ConfigValue::Number(</span><span style="color:#d08770;">1000.0</span><span>));
+</span><span>    config.</span><span style="color:#96b5b4;">insert</span><span>(&quot;</span><span style="color:#a3be8c;">debug_mode</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), ConfigValue::Boolean(</span><span style="color:#d08770;">true</span><span>));
+</span><span>    config.</span><span style="color:#96b5b4;">insert</span><span>(&quot;</span><span style="color:#a3be8c;">allowed_hosts</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), ConfigValue::List(vec![&quot;</span><span style="color:#a3be8c;">localhost</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()]));
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> app = Application {
+</span><span>        name: &quot;</span><span style="color:#a3be8c;">WebServer</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        version: &quot;</span><span style="color:#a3be8c;">1.2.3</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        modules: vec![
+</span><span>            Module {
+</span><span>                name: &quot;</span><span style="color:#a3be8c;">HTTP</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>                enabled: </span><span style="color:#d08770;">true</span><span>,
+</span><span>                dependencies: vec![&quot;</span><span style="color:#a3be8c;">logging</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()],
+</span><span>                error_count: </span><span style="color:#d08770;">0</span><span>,
+</span><span>            },
+</span><span>            Module {
+</span><span>                name: &quot;</span><span style="color:#a3be8c;">Database</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>                enabled: </span><span style="color:#d08770;">true</span><span>,
+</span><span>                dependencies: vec![&quot;</span><span style="color:#a3be8c;">connection_pool</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()],
+</span><span>                error_count: </span><span style="color:#d08770;">2</span><span>,
+</span><span>            },
+</span><span>            Module {
+</span><span>                name: &quot;</span><span style="color:#a3be8c;">Cache</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>                enabled: </span><span style="color:#d08770;">false</span><span>,
+</span><span>                dependencies: vec![],
+</span><span>                error_count: </span><span style="color:#d08770;">0</span><span>,
+</span><span>            },
+</span><span>        ],
+</span><span>        config,
+</span><span>    };
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Application overview: </span><span style="color:#d08770;">{:?}</span><span>&quot;, app);
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">Detailed view:</span><span style="color:#96b5b4;">\n</span><span style="color:#d08770;">{:#?}</span><span>&quot;, app);
+</span><span>}
+</span></code></pre>
+<h2 id="debugging-techniques-and-patterns">Debugging Techniques and Patterns</h2>
+<h3 id="wrapper-types-for-external-types">Wrapper Types for External Types</h3>
+<p>When you can't implement Debug for external types, create wrapper types:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>std::fmt;
+</span><span>
+</span><span style="color:#a7adba;">// Imagine this is from an external crate and doesn&#39;t implement Debug
+</span><span style="color:#b48ead;">struct </span><span>ExternalType {
+</span><span>    </span><span style="color:#bf616a;">value</span><span>: </span><span style="color:#b48ead;">i32</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Create a wrapper that implements Debug
+</span><span style="color:#b48ead;">struct </span><span>DebuggableExternal(&amp;</span><span style="color:#b48ead;">&#39;a</span><span> ExternalType);
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>fmt::Debug </span><span style="color:#b48ead;">for </span><span>DebuggableExternal {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">fmt</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">f</span><span>: &amp;</span><span style="color:#b48ead;">mut </span><span>fmt::Formatter) -&gt; fmt::Result {
+</span><span>        f.</span><span style="color:#96b5b4;">debug_struct</span><span>(&quot;</span><span style="color:#a3be8c;">ExternalType</span><span>&quot;)
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">value</span><span>&quot;, &amp;</span><span style="color:#bf616a;">self</span><span>.</span><span style="color:#d08770;">0.</span><span>value)
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">computed_square</span><span>&quot;, &amp;(</span><span style="color:#bf616a;">self</span><span>.</span><span style="color:#d08770;">0.</span><span>value * </span><span style="color:#bf616a;">self</span><span>.</span><span style="color:#d08770;">0.</span><span>value))
+</span><span>            .</span><span style="color:#96b5b4;">finish</span><span>()
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Helper function for easy wrapping
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">debug_external</span><span>(</span><span style="color:#bf616a;">ext</span><span>: &amp;ExternalType) -&gt; DebuggableExternal {
+</span><span>    DebuggableExternal(ext)
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> external = ExternalType { value: </span><span style="color:#d08770;">42 </span><span>};
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Can&#39;t do this: println!(&quot;{:?}&quot;, external);
+</span><span>    </span><span style="color:#a7adba;">// But can do this:
+</span><span>    println!(&quot;</span><span style="color:#d08770;">{:?}</span><span>&quot;, </span><span style="color:#96b5b4;">debug_external</span><span>(&amp;external));
+</span><span>}
+</span></code></pre>
+<h3 id="debug-for-collections-and-custom-data-structures">Debug for Collections and Custom Data Structures</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>std::fmt;
+</span><span>
+</span><span style="color:#b48ead;">struct </span><span>CircularBuffer {
+</span><span>    </span><span style="color:#bf616a;">data</span><span>: Vec&gt;,
+</span><span>    </span><span style="color:#bf616a;">head</span><span>: </span><span style="color:#b48ead;">usize</span><span>,
+</span><span>    </span><span style="color:#bf616a;">tail</span><span>: </span><span style="color:#b48ead;">usize</span><span>,
+</span><span>    </span><span style="color:#bf616a;">size</span><span>: </span><span style="color:#b48ead;">usize</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>fmt::Debug </span><span style="color:#b48ead;">for </span><span>CircularBuffer {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">fmt</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">f</span><span>: &amp;</span><span style="color:#b48ead;">mut </span><span>fmt::Formatter) -&gt; fmt::Result {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> current_items: Vec = </span><span style="color:#bf616a;">self</span><span>.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">collect</span><span>();
+</span><span>
+</span><span>        f.</span><span style="color:#96b5b4;">debug_struct</span><span>(&quot;</span><span style="color:#a3be8c;">CircularBuffer</span><span>&quot;)
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">capacity</span><span>&quot;, &amp;</span><span style="color:#bf616a;">self</span><span>.data.</span><span style="color:#96b5b4;">len</span><span>())
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">size</span><span>&quot;, &amp;</span><span style="color:#bf616a;">self</span><span>.size)
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">head</span><span>&quot;, &amp;</span><span style="color:#bf616a;">self</span><span>.head)
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">tail</span><span>&quot;, &amp;</span><span style="color:#bf616a;">self</span><span>.tail)
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">utilization</span><span>&quot;, &amp;format!(&quot;</span><span style="color:#d08770;">{:.1}</span><span style="color:#a3be8c;">%</span><span>&quot;, (</span><span style="color:#bf616a;">self</span><span>.size as </span><span style="color:#b48ead;">f64 </span><span>/ </span><span style="color:#bf616a;">self</span><span>.data.</span><span style="color:#96b5b4;">len</span><span>() as </span><span style="color:#b48ead;">f64</span><span>) * </span><span style="color:#d08770;">100.0</span><span>))
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">items</span><span>&quot;, &amp;current_items)
+</span><span>            .</span><span style="color:#96b5b4;">finish</span><span>()
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>CircularBuffer {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#bf616a;">capacity</span><span>: </span><span style="color:#b48ead;">usize</span><span>) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        CircularBuffer {
+</span><span>            data: (</span><span style="color:#d08770;">0</span><span>..capacity).</span><span style="color:#96b5b4;">map</span><span>(|_| None).</span><span style="color:#96b5b4;">collect</span><span>(),
+</span><span>            head: </span><span style="color:#d08770;">0</span><span>,
+</span><span>            tail: </span><span style="color:#d08770;">0</span><span>,
+</span><span>            size: </span><span style="color:#d08770;">0</span><span>,
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">push</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">item</span><span>: T) {
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.data[</span><span style="color:#bf616a;">self</span><span>.tail] = Some(item);
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.tail = (</span><span style="color:#bf616a;">self</span><span>.tail + </span><span style="color:#d08770;">1</span><span>) % </span><span style="color:#bf616a;">self</span><span>.data.</span><span style="color:#96b5b4;">len</span><span>();
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">if </span><span style="color:#bf616a;">self</span><span>.size  </span><span style="color:#b48ead;">impl </span><span>Iterator {
+</span><span>        (</span><span style="color:#d08770;">0</span><span>..</span><span style="color:#bf616a;">self</span><span>.size).</span><span style="color:#96b5b4;">map</span><span>(</span><span style="color:#b48ead;">move </span><span>|i| {
+</span><span>            </span><span style="color:#b48ead;">let</span><span> index = (</span><span style="color:#bf616a;">self</span><span>.head + i) % </span><span style="color:#bf616a;">self</span><span>.data.</span><span style="color:#96b5b4;">len</span><span>();
+</span><span>            </span><span style="color:#bf616a;">self</span><span>.data[index].</span><span style="color:#96b5b4;">as_ref</span><span>().</span><span style="color:#96b5b4;">unwrap</span><span>()
+</span><span>        })
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> buffer = CircularBuffer::new(</span><span style="color:#d08770;">5</span><span>);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Add some items
+</span><span>    </span><span style="color:#b48ead;">for</span><span> i in </span><span style="color:#d08770;">1</span><span>..=</span><span style="color:#d08770;">7 </span><span>{
+</span><span>        buffer.</span><span style="color:#96b5b4;">push</span><span>(format!(&quot;</span><span style="color:#a3be8c;">Item </span><span style="color:#d08770;">{}</span><span>&quot;, i));
+</span><span>    }
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#d08770;">{:#?}</span><span>&quot;, buffer);
+</span><span>}
+</span></code></pre>
+<h2 id="best-practices-and-common-patterns">Best Practices and Common Patterns</h2>
+<h3 id="1-security-aware-debug-implementation">1. Security-Aware Debug Implementation</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>std::fmt;
+</span><span>
+</span><span style="color:#b48ead;">struct </span><span>UserCredentials {
+</span><span>    </span><span style="color:#bf616a;">username</span><span>: String,
+</span><span>    </span><span style="color:#bf616a;">password_hash</span><span>: String,
+</span><span>    </span><span style="color:#bf616a;">api_key</span><span>: String,
+</span><span>    </span><span style="color:#bf616a;">last_login</span><span>: </span><span style="color:#b48ead;">u64</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>fmt::Debug </span><span style="color:#b48ead;">for </span><span>UserCredentials {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">fmt</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">f</span><span>: &amp;</span><span style="color:#b48ead;">mut </span><span>fmt::Formatter) -&gt; fmt::Result {
+</span><span>        f.</span><span style="color:#96b5b4;">debug_struct</span><span>(&quot;</span><span style="color:#a3be8c;">UserCredentials</span><span>&quot;)
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">username</span><span>&quot;, &amp;</span><span style="color:#bf616a;">self</span><span>.username)
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">password_hash</span><span>&quot;, &amp;&quot;</span><span style="color:#a3be8c;">[REDACTED]</span><span>&quot;)
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">api_key</span><span>&quot;, &amp;format!(&quot;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">...</span><span>&quot;, &amp;</span><span style="color:#bf616a;">self</span><span>.api_key[..</span><span style="color:#d08770;">8.</span><span style="color:#96b5b4;">min</span><span>(</span><span style="color:#bf616a;">self</span><span>.api_key.</span><span style="color:#96b5b4;">len</span><span>())]))
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">last_login</span><span>&quot;, &amp;</span><span style="color:#bf616a;">self</span><span>.last_login)
+</span><span>            .</span><span style="color:#96b5b4;">finish</span><span>()
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">struct </span><span>Session {
+</span><span>    </span><span style="color:#bf616a;">user</span><span>: UserCredentials,
+</span><span>    </span><span style="color:#bf616a;">token</span><span>: String,
+</span><span>    </span><span style="color:#bf616a;">expires_at</span><span>: </span><span style="color:#b48ead;">u64</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>fmt::Debug </span><span style="color:#b48ead;">for </span><span>Session {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">fmt</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">f</span><span>: &amp;</span><span style="color:#b48ead;">mut </span><span>fmt::Formatter) -&gt; fmt::Result {
+</span><span>        f.</span><span style="color:#96b5b4;">debug_struct</span><span>(&quot;</span><span style="color:#a3be8c;">Session</span><span>&quot;)
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">user</span><span>&quot;, &amp;</span><span style="color:#bf616a;">self</span><span>.user)  </span><span style="color:#a7adba;">// UserCredentials has secure Debug
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">token</span><span>&quot;, &amp;&quot;</span><span style="color:#a3be8c;">[PROTECTED]</span><span>&quot;)
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">expires_at</span><span>&quot;, &amp;</span><span style="color:#bf616a;">self</span><span>.expires_at)
+</span><span>            .</span><span style="color:#96b5b4;">finish</span><span>()
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h3 id="2-performance-aware-debug-implementation">2. Performance-Aware Debug Implementation</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>std::fmt;
+</span><span>
+</span><span style="color:#b48ead;">struct </span><span>LargeDataset {
+</span><span>    </span><span style="color:#bf616a;">name</span><span>: String,
+</span><span>    </span><span style="color:#bf616a;">data</span><span>: Vec,  </span><span style="color:#a7adba;">// Could be millions of items
+</span><span>    </span><span style="color:#bf616a;">processed</span><span>: </span><span style="color:#b48ead;">bool</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>fmt::Debug </span><span style="color:#b48ead;">for </span><span>LargeDataset {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">fmt</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">f</span><span>: &amp;</span><span style="color:#b48ead;">mut </span><span>fmt::Formatter) -&gt; fmt::Result {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> preview_size = </span><span style="color:#b48ead;">if</span><span> f.</span><span style="color:#96b5b4;">alternate</span><span>() { </span><span style="color:#d08770;">10 </span><span>} </span><span style="color:#b48ead;">else </span><span>{ </span><span style="color:#d08770;">3 </span><span>};
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">let</span><span> data_preview = </span><span style="color:#b48ead;">if </span><span style="color:#bf616a;">self</span><span>.data.</span><span style="color:#96b5b4;">len</span><span>()  String {
+</span><span>        </span><span style="color:#b48ead;">if </span><span style="color:#bf616a;">self</span><span>.data.</span><span style="color:#96b5b4;">is_empty</span><span>() {
+</span><span>            </span><span style="color:#b48ead;">return </span><span>&quot;</span><span style="color:#a3be8c;">No data</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>();
+</span><span>        }
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">let</span><span> sum: </span><span style="color:#b48ead;">f64 </span><span>= </span><span style="color:#bf616a;">self</span><span>.data.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">sum</span><span>();
+</span><span>        </span><span style="color:#b48ead;">let</span><span> avg = sum / </span><span style="color:#bf616a;">self</span><span>.data.</span><span style="color:#96b5b4;">len</span><span>() as </span><span style="color:#b48ead;">f64</span><span>;
+</span><span>        </span><span style="color:#b48ead;">let</span><span> min = </span><span style="color:#bf616a;">self</span><span>.data.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">fold</span><span>(</span><span style="color:#b48ead;">f64</span><span>::</span><span style="color:#d08770;">INFINITY</span><span>, |</span><span style="color:#bf616a;">a</span><span>, &amp;</span><span style="color:#bf616a;">b</span><span>| a.</span><span style="color:#96b5b4;">min</span><span>(b));
+</span><span>        </span><span style="color:#b48ead;">let</span><span> max = </span><span style="color:#bf616a;">self</span><span>.data.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">fold</span><span>(</span><span style="color:#b48ead;">f64</span><span>::</span><span style="color:#d08770;">NEG_INFINITY</span><span>, |</span><span style="color:#bf616a;">a</span><span>, &amp;</span><span style="color:#bf616a;">b</span><span>| a.</span><span style="color:#96b5b4;">max</span><span>(b));
+</span><span>
+</span><span>        format!(&quot;</span><span style="color:#a3be8c;">avg: </span><span style="color:#d08770;">{:.2}</span><span style="color:#a3be8c;">, min: </span><span style="color:#d08770;">{:.2}</span><span style="color:#a3be8c;">, max: </span><span style="color:#d08770;">{:.2}</span><span>&quot;, avg, min, max)
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h3 id="3-error-context-debug-implementation">3. Error-Context Debug Implementation</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>std::fmt;
+</span><span style="color:#b48ead;">use </span><span>std::error::Error;
+</span><span>
+</span><span>#[</span><span style="color:#bf616a;">derive</span><span>(Debug)]
+</span><span style="color:#b48ead;">enum </span><span>DatabaseError {
+</span><span>    ConnectionFailed(String),
+</span><span>    QueryTimeout,
+</span><span>    InvalidQuery(String),
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>fmt::Display </span><span style="color:#b48ead;">for </span><span>DatabaseError {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">fmt</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">f</span><span>: &amp;</span><span style="color:#b48ead;">mut </span><span>fmt::Formatter) -&gt; fmt::Result {
+</span><span>        </span><span style="color:#b48ead;">match </span><span style="color:#bf616a;">self </span><span>{
+</span><span>            DatabaseError::ConnectionFailed(msg) =&gt; write!(f, &quot;</span><span style="color:#a3be8c;">Connection failed: </span><span style="color:#d08770;">{}</span><span>&quot;, msg),
+</span><span>            DatabaseError::QueryTimeout =&gt; write!(f, &quot;</span><span style="color:#a3be8c;">Query timeout</span><span>&quot;),
+</span><span>            DatabaseError::InvalidQuery(query) =&gt; write!(f, &quot;</span><span style="color:#a3be8c;">Invalid query: </span><span style="color:#d08770;">{}</span><span>&quot;, query),
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>Error </span><span style="color:#b48ead;">for </span><span>DatabaseError {}
+</span><span>
+</span><span style="color:#b48ead;">struct </span><span>QueryResult {
+</span><span>    </span><span style="color:#bf616a;">data</span><span>: Option,
+</span><span>    </span><span style="color:#bf616a;">error</span><span>: Option,
+</span><span>    </span><span style="color:#bf616a;">query</span><span>: String,
+</span><span>    </span><span style="color:#bf616a;">execution_time_ms</span><span>: </span><span style="color:#b48ead;">u64</span><span>,
+</span><span>    </span><span style="color:#bf616a;">rows_affected</span><span>: </span><span style="color:#b48ead;">usize</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>fmt::Debug </span><span style="color:#b48ead;">for </span><span>QueryResult {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">fmt</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">f</span><span>: &amp;</span><span style="color:#b48ead;">mut </span><span>fmt::Formatter) -&gt; fmt::Result {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> status = </span><span style="color:#b48ead;">match </span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>.data, &amp;</span><span style="color:#bf616a;">self</span><span>.error) {
+</span><span>            (Some(_), None) =&gt; &quot;</span><span style="color:#a3be8c;">✅ SUCCESS</span><span>&quot;,
+</span><span>            (None, Some(_)) =&gt; &quot;</span><span style="color:#a3be8c;">❌ ERROR</span><span>&quot;,
+</span><span>            (None, None) =&gt; &quot;</span><span style="color:#a3be8c;">⚪ EMPTY</span><span>&quot;,
+</span><span>            (Some(_), Some(_)) =&gt; &quot;</span><span style="color:#a3be8c;">⚠️  WARNING</span><span>&quot;, </span><span style="color:#a7adba;">// Both data and error? Unusual but possible
+</span><span>        };
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">let mut</span><span> debug_struct = f.</span><span style="color:#96b5b4;">debug_struct</span><span>(&quot;</span><span style="color:#a3be8c;">QueryResult</span><span>&quot;);
+</span><span>        debug_struct
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">status</span><span>&quot;, &amp;status)
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">execution_time</span><span>&quot;, &amp;format!(&quot;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">ms</span><span>&quot;, </span><span style="color:#bf616a;">self</span><span>.execution_time_ms))
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">rows_affected</span><span>&quot;, &amp;</span><span style="color:#bf616a;">self</span><span>.rows_affected);
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">if let </span><span>Some(</span><span style="color:#b48ead;">ref</span><span> data) = </span><span style="color:#bf616a;">self</span><span>.data {
+</span><span>            debug_struct.</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">data</span><span>&quot;, data);
+</span><span>        }
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">if let </span><span>Some(</span><span style="color:#b48ead;">ref</span><span> error) = </span><span style="color:#bf616a;">self</span><span>.error {
+</span><span>            debug_struct.</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">error</span><span>&quot;, error);
+</span><span>        }
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">if</span><span> f.</span><span style="color:#96b5b4;">alternate</span><span>() {
+</span><span>            debug_struct.</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">query</span><span>&quot;, &amp;</span><span style="color:#bf616a;">self</span><span>.query);
+</span><span>        } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>            debug_struct.</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">query</span><span>&quot;, &amp;format!(&quot;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">...</span><span>&quot;, &amp;</span><span style="color:#bf616a;">self</span><span>.query[..</span><span style="color:#d08770;">50.</span><span style="color:#96b5b4;">min</span><span>(</span><span style="color:#bf616a;">self</span><span>.query.</span><span style="color:#96b5b4;">len</span><span>())]));
+</span><span>        }
+</span><span>
+</span><span>        debug_struct.</span><span style="color:#96b5b4;">finish</span><span>()
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h2 id="common-mistakes-and-solutions">Common Mistakes and Solutions</h2>
+<h3 id="mistake-1-infinite-recursion">Mistake 1: Infinite Recursion</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>std::fmt;
+</span><span>
+</span><span style="color:#a7adba;">// ❌ This can cause infinite recursion
+</span><span style="color:#b48ead;">struct </span><span>Node {
+</span><span>    </span><span style="color:#bf616a;">value</span><span>: </span><span style="color:#b48ead;">i32</span><span>,
+</span><span>    </span><span style="color:#bf616a;">children</span><span>: Vec,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>fmt::Debug </span><span style="color:#b48ead;">for </span><span>Node {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">fmt</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">f</span><span>: &amp;</span><span style="color:#b48ead;">mut </span><span>fmt::Formatter) -&gt; fmt::Result {
+</span><span>        </span><span style="color:#a7adba;">// If children contain references back to parent, this could recurse infinitely
+</span><span>        f.</span><span style="color:#96b5b4;">debug_struct</span><span>(&quot;</span><span style="color:#a3be8c;">Node</span><span>&quot;)
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">value</span><span>&quot;, &amp;</span><span style="color:#bf616a;">self</span><span>.value)
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">children</span><span>&quot;, &amp;</span><span style="color:#bf616a;">self</span><span>.children)  </span><span style="color:#a7adba;">// Potential infinite recursion
+</span><span>            .</span><span style="color:#96b5b4;">finish</span><span>()
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// ✅ Better approach - limit depth
+</span><span style="color:#b48ead;">struct </span><span>SafeNode {
+</span><span>    </span><span style="color:#bf616a;">value</span><span>: </span><span style="color:#b48ead;">i32</span><span>,
+</span><span>    </span><span style="color:#bf616a;">children</span><span>: Vec,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>fmt::Debug </span><span style="color:#b48ead;">for </span><span>SafeNode {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">fmt</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">f</span><span>: &amp;</span><span style="color:#b48ead;">mut </span><span>fmt::Formatter) -&gt; fmt::Result {
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.</span><span style="color:#96b5b4;">fmt_with_depth</span><span>(f, </span><span style="color:#d08770;">0</span><span>, </span><span style="color:#d08770;">3</span><span>) </span><span style="color:#a7adba;">// Max depth of 3
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>SafeNode {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">fmt_with_depth</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">f</span><span>: &amp;</span><span style="color:#b48ead;">mut </span><span>fmt::Formatter, </span><span style="color:#bf616a;">current_depth</span><span>: </span><span style="color:#b48ead;">usize</span><span>, </span><span style="color:#bf616a;">max_depth</span><span>: </span><span style="color:#b48ead;">usize</span><span>) -&gt; fmt::Result {
+</span><span>        </span><span style="color:#b48ead;">if</span><span> current_depth &gt;= max_depth {
+</span><span>            </span><span style="color:#b48ead;">return </span><span>write!(f, &quot;</span><span style="color:#a3be8c;">SafeNode </span><span style="color:#96b5b4;">{{</span><span style="color:#a3be8c;"> value: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">, children: [...] </span><span style="color:#96b5b4;">}}</span><span>&quot;, </span><span style="color:#bf616a;">self</span><span>.value);
+</span><span>        }
+</span><span>
+</span><span>        f.</span><span style="color:#96b5b4;">debug_struct</span><span>(&quot;</span><span style="color:#a3be8c;">SafeNode</span><span>&quot;)
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">value</span><span>&quot;, &amp;</span><span style="color:#bf616a;">self</span><span>.value)
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">children</span><span>&quot;, &amp;SafeNodeChildren {
+</span><span>                children: &amp;</span><span style="color:#bf616a;">self</span><span>.children,
+</span><span>                depth: current_depth + </span><span style="color:#d08770;">1</span><span>,
+</span><span>                max_depth
+</span><span>            })
+</span><span>            .</span><span style="color:#96b5b4;">finish</span><span>()
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">struct </span><span>SafeNodeChildren {
+</span><span>    </span><span style="color:#bf616a;">children</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a</span><span> [SafeNode],
+</span><span>    </span><span style="color:#bf616a;">depth</span><span>: </span><span style="color:#b48ead;">usize</span><span>,
+</span><span>    </span><span style="color:#bf616a;">max_depth</span><span>: </span><span style="color:#b48ead;">usize</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>fmt::Debug </span><span style="color:#b48ead;">for </span><span>SafeNodeChildren {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">fmt</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">f</span><span>: &amp;</span><span style="color:#b48ead;">mut </span><span>fmt::Formatter) -&gt; fmt::Result {
+</span><span>        </span><span style="color:#b48ead;">let mut</span><span> list = f.</span><span style="color:#96b5b4;">debug_list</span><span>();
+</span><span>        </span><span style="color:#b48ead;">for</span><span> child in </span><span style="color:#bf616a;">self</span><span>.children {
+</span><span>            list.</span><span style="color:#96b5b4;">entry</span><span>(&amp;SafeNodeDebugger { node: child, depth: </span><span style="color:#bf616a;">self</span><span>.depth, max_depth: </span><span style="color:#bf616a;">self</span><span>.max_depth });
+</span><span>        }
+</span><span>        list.</span><span style="color:#96b5b4;">finish</span><span>()
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">struct </span><span>SafeNodeDebugger {
+</span><span>    </span><span style="color:#bf616a;">node</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a</span><span> SafeNode,
+</span><span>    </span><span style="color:#bf616a;">depth</span><span>: </span><span style="color:#b48ead;">usize</span><span>,
+</span><span>    </span><span style="color:#bf616a;">max_depth</span><span>: </span><span style="color:#b48ead;">usize</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>fmt::Debug </span><span style="color:#b48ead;">for </span><span>SafeNodeDebugger {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">fmt</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">f</span><span>: &amp;</span><span style="color:#b48ead;">mut </span><span>fmt::Formatter) -&gt; fmt::Result {
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.node.</span><span style="color:#96b5b4;">fmt_with_depth</span><span>(f, </span><span style="color:#bf616a;">self</span><span>.depth, </span><span style="color:#bf616a;">self</span><span>.max_depth)
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h3 id="mistake-2-exposing-sensitive-information">Mistake 2: Exposing Sensitive Information</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// ❌ Bad - exposes sensitive data
+</span><span>#[</span><span style="color:#bf616a;">derive</span><span>(Debug)]
+</span><span style="color:#b48ead;">struct </span><span>BadUserAccount {
+</span><span>    </span><span style="color:#bf616a;">username</span><span>: String,
+</span><span>    </span><span style="color:#bf616a;">password</span><span>: String,      </span><span style="color:#a7adba;">// Sensitive!
+</span><span>    </span><span style="color:#bf616a;">credit_card</span><span>: String,   </span><span style="color:#a7adba;">// Very sensitive!
+</span><span>    </span><span style="color:#bf616a;">email</span><span>: String,
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// ✅ Good - custom implementation that hides sensitive data
+</span><span style="color:#b48ead;">struct </span><span>GoodUserAccount {
+</span><span>    </span><span style="color:#bf616a;">username</span><span>: String,
+</span><span>    </span><span style="color:#bf616a;">password</span><span>: String,
+</span><span>    </span><span style="color:#bf616a;">credit_card</span><span>: String,
+</span><span>    </span><span style="color:#bf616a;">email</span><span>: String,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>fmt::Debug </span><span style="color:#b48ead;">for </span><span>GoodUserAccount {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">fmt</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">f</span><span>: &amp;</span><span style="color:#b48ead;">mut </span><span>fmt::Formatter) -&gt; fmt::Result {
+</span><span>        f.</span><span style="color:#96b5b4;">debug_struct</span><span>(&quot;</span><span style="color:#a3be8c;">UserAccount</span><span>&quot;)
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">username</span><span>&quot;, &amp;</span><span style="color:#bf616a;">self</span><span>.username)
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">password</span><span>&quot;, &amp;&quot;</span><span style="color:#a3be8c;">[REDACTED]</span><span>&quot;)
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">credit_card</span><span>&quot;, &amp;&quot;</span><span style="color:#a3be8c;">[PROTECTED]</span><span>&quot;)
+</span><span>            .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">email</span><span>&quot;, &amp;</span><span style="color:#bf616a;">self</span><span>.</span><span style="color:#96b5b4;">mask_email</span><span>())
+</span><span>            .</span><span style="color:#96b5b4;">finish</span><span>()
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>GoodUserAccount {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">mask_email</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; String {
+</span><span>        </span><span style="color:#b48ead;">if let </span><span>Some(at_pos) = </span><span style="color:#bf616a;">self</span><span>.email.</span><span style="color:#96b5b4;">find</span><span>(&#39;</span><span style="color:#a3be8c;">@</span><span>&#39;) {
+</span><span>            </span><span style="color:#b48ead;">let </span><span>(local, domain) = </span><span style="color:#bf616a;">self</span><span>.email.</span><span style="color:#96b5b4;">split_at</span><span>(at_pos);
+</span><span>            </span><span style="color:#b48ead;">if</span><span> local.</span><span style="color:#96b5b4;">len</span><span>() ) -&gt; fmt::Result {
+</span><span>        </span><span style="color:#a7adba;">// Custom formatting logic
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// ✅ Use debug_struct helper for structured output
+</span><span>f.</span><span style="color:#96b5b4;">debug_struct</span><span>(&quot;</span><span style="color:#a3be8c;">MyStruct</span><span>&quot;)
+</span><span>    .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">field1</span><span>&quot;, &amp;</span><span style="color:#bf616a;">self</span><span>.field1)
+</span><span>    .</span><span style="color:#96b5b4;">field</span><span>(&quot;</span><span style="color:#a3be8c;">field2</span><span>&quot;, &amp;&quot;</span><span style="color:#a3be8c;">custom_value</span><span>&quot;)
+</span><span>    .</span><span style="color:#96b5b4;">finish</span><span>()
+</span></code></pre>
+<h3 id="common-patterns-summary"><strong>Common Patterns Summary</strong></h3>
+<table><thead><tr><th>Pattern</th><th>Use Case</th><th>Example</th></tr></thead><tbody>
+<tr><td><strong>Auto-derive</strong></td><td>Simple structs, all fields safe to show</td><td><code>#[derive(Debug)]</code></td></tr>
+<tr><td><strong>Security-aware</strong></td><td>Hide sensitive information</td><td><code>password: &amp;"[REDACTED]"</code></td></tr>
+<tr><td><strong>Performance-aware</strong></td><td>Large datasets, expensive computations</td><td>Show summaries, not full data</td></tr>
+<tr><td><strong>Context-aware</strong></td><td>Different detail levels</td><td>Use <code>f.alternate()</code> to detect <code>{:#?}</code></td></tr>
+<tr><td><strong>Wrapper types</strong></td><td>External types without Debug</td><td><code>struct MyDebug(&amp;'a ExternalType)</code></td></tr>
+</tbody></table>
+<h3 id="best-practices-checklist"><strong>Best Practices Checklist</strong></h3>
+<ul>
+<li>✅ <strong>Hide sensitive data</strong> like passwords, tokens, personal information</li>
+<li>✅ <strong>Show relevant information</strong> that helps with debugging</li>
+<li>✅ <strong>Use helpers</strong> like <code>debug_struct()</code> for cleaner implementations</li>
+<li>✅ <strong>Consider performance</strong> - avoid expensive operations in Debug</li>
+<li>✅ <strong>Handle large data sets</strong> - show summaries, not everything</li>
+<li>✅ <strong>Test your Debug output</strong> - make sure it's actually helpful</li>
+<li>✅ <strong>Document security implications</strong> - what data is exposed?</li>
+</ul>
+<p><strong>The Debug trait is your window into the soul of your data structures.</strong> When implemented thoughtfully, it becomes an invaluable tool for understanding, debugging, and maintaining your Rust applications. Think of it as creating the perfect "developer view" that shows exactly what you need to know, when you need to know it!</p>
+<ol>
+<li>https://doc.rust-lang.org/std/fmt/trait.Debug.html</li>
+<li>https://doc.rust-lang.org/rust-by-example/hello/print/print_debug.html</li>
+<li>https://www.reddit.com/r/rust/comments/7qqbyp/implemented_displaydebug_on_a_trait/</li>
+<li>https://stackoverflow.com/questions/22243527/how-to-implement-a-custom-fmtdebug-trait</li>
+<li>https://web.mit.edu/rust-lang_v1.25/arch/amd64_ubuntu1404/share/doc/rust/html/std/fmt/trait.Debug.html</li>
+<li>https://users.rust-lang.org/t/customize-the-debug-formatter/127748</li>
+<li>https://www.rustadventure.dev/uploading-pokemon-data-from-a-csv-into-a-planetscale-sql-database/sqlx-0.5/implementing-the-debug-trait-for-third-party-types</li>
+<li>https://practice.course.rs/formatted-output/debug-display.html</li>
+<li>https://www.rustcodeweb.com/2025/02/debug-traits-in-rust.html</li>
+<li>https://www.dotnetperls.com/debug-rust</li>
+<li>https://users.rust-lang.org/t/how-to-implement-debug-for-dyn-trait/39950</li>
+<li>https://dev.to/fadygrab/learning-rust-11-debugging-custom-typesstructs-3dnp</li>
+<li>https://livebook.manning.com/wiki/categories/rust/debug</li>
+<li>https://users.rust-lang.org/t/idiomatic-to-implement-the-debug-trait-for-x-syntax/84955</li>
+<li>https://youtrack.jetbrains.com/issue/RUST-17404/Debugger-Render-using-format-provided-by-Debug-or-Display-traits</li>
+<li>https://www.reddit.com/r/rust/comments/1egz6jw/how_would_i_implement_debug_or_equivalent_for/</li>
+<li>https://www.youtube.com/watch?v=0jp8oNwCsGI</li>
+</ol>
+
+    
+        </div>
+
+    </article>
+</main>
+
+
+    <script type="text/javascript" src="http://localhost/elasticlunr.min.js" defer></script>
+    <script type="text/javascript" src="http://localhost/search_index.en.js" defer></script>
+<script type="text/javascript" src="http://localhost/js.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,1422 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://localhost/main.css">
+    <link rel="icon" href="https://www.rust-lang.org/static/images/favicon-16x16.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Rust Programming Course! | Struct Lifetime Parameters </title>
+</head>
+<body>
+
+<main>
+    
+    <nav>
+            <a href="http:&#x2F;&#x2F;localhost">
+                        <img src="https://www.rust-lang.org/static/images/rust-logo-blk.svg" alt="logo"/>
+                    </a>
+                <!-- -->
+
+            <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+            <div id="trees">
+                <input class="tree-toggle" type="checkbox" id="day-1-introduction"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-1-introduction">Day 1: Introduction</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 1/chapter-1/">What is Rust and why use it?</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-2/">Installing Rust Toolchain (rustup, cargo)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-3/">Setting up Development (VS Code + Hello World)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-4/">Understanding Cargo Project Structure</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-2-basic-syntax-variables"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-2-basic-syntax-variables">Day 2: Basic Syntax &amp; Variables</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 2/chapter-1/">Variables and Mutability in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-2/">Data Types in Rust: Integers, Floats, Booleans, and Characters</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-3/">Constants vs Variables</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-4/">Understanding Shadowing in Rust: A Practical Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-5/">Basic Input&#x2F;Output</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-3-functions-control-flow"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-3-functions-control-flow">Day 3: Functions &amp; Control Flow</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 3/chapter-1/">Function Syntax and Parameters in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-2/">Return Values and Expressions vs Statements</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-3/">If&#x2F;Else Statements in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-4/">Match Expressions in Rust: Powerful Pattern Matching</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-5/">Loops in Rust: loop, while, for Explained</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-4-data-types-deep-dive"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-4-data-types-deep-dive">Day 4: Data Types Deep Dive</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 4/chapter-1/">Compound Types (Tuples, Arrays)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-2/">String vs &amp;str in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-3/">Vector Basics in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-4/">Type Annotations and Inference in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-5/">Practical Rust Exercises</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-5-practice-review"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-5-practice-review">Day 5: Practice &amp; Review</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 5/chapter-1/">Day 5: Practice &amp; Review</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-6-ownership-fundamentals"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-6-ownership-fundamentals">Day 6: Ownership Fundamentals</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 6/chapter-1/">Ownership in Rust: A Detailed Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-2/">Stack vs Heap in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-3/">Understanding Ownership in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-4/">Move Semantics in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-5/">Copy Trait in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-7-references-borrowing"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-7-references-borrowing">Day 7: References &amp; Borrowing</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 7/chapter-1/">Immutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-2/">Mutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-3/">Borrowing Rules</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-4/">Reference Lifetime Basics</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-5/">Common Borrowing Errors and Solutions</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-8-slices"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-8-slices">Day 8: Slices</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 8/chapter-1/">String Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-2/">Array Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-3/">Slice Syntax and Usage</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-4/">Practical Applications</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-5/">Memory Safety Benefits</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-9-advanced-ownership"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-9-advanced-ownership">Day 9: Advanced Ownership</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 9/chapter-1/">Clone Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-2/">Drop Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-3/">RAII Pattern</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-4/">Memory Management Comparison with Other Languages</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-5/">Best Practices (Advanced Ownership)</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-10-ownership-practice"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-10-ownership-practice">Day 10: Ownership Practice</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 10/chapter-1/">Complex Ownership Scenarios</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-2/">Debugging Ownership Errors</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-3/">Code Refactoring Exercises</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-4/">Group Problem-Solving</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-11-structs-basics"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-11-structs-basics">Day 11: Structs Basics</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 11/chapter-1/">Defining and Instantiating Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-2/">Field Access and Modification</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-3/">Tuple Structs and Unit Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-4/">Struct Update Syntax</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-5/">Ownership of Struct Data</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-12-methods-associated-functions"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-12-methods-associated-functions">Day 12: Methods &amp; Associated Functions</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 12/chapter-1/">Implementing Methods with impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-2/">&amp;self, &amp;mut self, and self</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-3/">Associated Functions (like Constructors)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-4/">Multiple impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-5/">Method Chaining</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-13-advanced-struct-concepts"
+                           checked/>
+                    <label class="tree-toggle-label"
+                           for="day-13-advanced-struct-concepts">Day 13: Advanced Struct Concepts</label>
+
+                    <ul class="subtree">
+                        <li class="active">
+                                <a href="http://localhost/day 13/chapter-1/">Struct Lifetime Parameters</a>
+                            </li>
+
+                            
+                                    
+                                    
+                                        <ul id="toc">
+                                            <li><a href="
+                                                        http://localhost/day 13/chapter-1/#struct-lifetime-parameters-in-rust-comprehensive-documentation-for-beginners">Struct Lifetime Parameters in Rust: Comprehensive Documentation for Beginners</a>
+                                                    <ul>
+                                                            <li>
+                                                                    <a href="http://localhost/day 13/chapter-1/#what-are-struct-lifetime-parameters">What are Struct Lifetime Parameters?</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 13/chapter-1/#why-do-we-need-lifetime-parameters">Why Do We Need Lifetime Parameters?</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 13/chapter-1/#basic-examples">Basic Examples</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 13/chapter-1/#multiple-lifetime-parameters">Multiple Lifetime Parameters</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 13/chapter-1/#advanced-patterns-and-real-world-examples">Advanced Patterns and Real-World Examples</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 13/chapter-1/#common-lifetime-patterns">Common Lifetime Patterns</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 13/chapter-1/#understanding-lifetime-elision">Understanding Lifetime Elision</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 13/chapter-1/#common-mistakes-and-solutions">Common Mistakes and Solutions</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 13/chapter-1/#best-practices">Best Practices</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 13/chapter-1/#summary-and-key-takeaways">Summary and Key Takeaways</a>
+                                                                </li>
+                                                            </ul>
+                                                    </li>
+                                            </ul>
+                                    <li >
+                                <a href="http://localhost/day 13/chapter-2/">Debug Trait and Custom Formatting</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-3/">Builder Pattern Implementation</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-4/">Struct Composition</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-5/">Best Practices for Struct Design</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-14-enums-pattern-matching"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-14-enums-pattern-matching">Day 14: Enums &amp; Pattern Matching</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 14/chapter-1/">Defining Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-2/">Enum Variants with Data</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-3/">Option&lt;T&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-4/">Result&lt;T, E&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-5/">Advanced Match Patterns in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-15-practice-project"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-15-practice-project">Day 15: Practice Project</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 15/chapter-1/">Building a Simple CLI Calculator in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-16-vectors"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-16-vectors">Day 16: Vectors</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 16/chapter-1/">Creating and Updating Vectors</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-2/">Vector Methods: push, pop, iter</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-3/">Accessing Vector Elements Safely</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-4/">Vector of Different Types with Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-5/">Performance Considerations</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-17-hashmaps-other-collections"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-17-hashmaps-other-collections">Day 17: HashMaps &amp; Other Collections</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 17/chapter-1/">HashMap Creation and Manipulation</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-2/">Keys and Values Ownership</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-3/">HashMap Methods and Iteration</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-4/">When to Use Different Collections</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-5/">BTreeMap Introduction</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-18-error-handling"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-18-error-handling">Day 18: Error Handling</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 18/chapter-1/">Panic! and When to Use It</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 18/chapter-2/">Result&lt;T, E&gt; in Depth</a>
+                            </li>
+
+                            </ul>
+                </div>
+        </nav>
+    <article>
+
+        <div id="on_right">
+                <span id="search-ico" class="ms-Icon--Search"></span>
+            </div>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="Search as you type...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        <div id="wrap">
+            
+        <h1 id="struct-lifetime-parameters-in-rust-comprehensive-documentation-for-beginners">Struct Lifetime Parameters in Rust: Comprehensive Documentation for Beginners</h1>
+<p>Understanding struct lifetime parameters is one of the most important concepts for Rust beginners. Think of lifetimes like a <strong>library checkout system</strong> - when you borrow a book (reference), the library needs to know how long you'll keep it to ensure the book doesn't get thrown away while you're still reading it. Struct lifetimes work the same way!</p>
+<h2 id="what-are-struct-lifetime-parameters">What are Struct Lifetime Parameters?</h2>
+<h3 id="the-library-analogy">The Library Analogy</h3>
+<p><strong>Imagine a library system:</strong></p>
+<ul>
+<li>📚 <strong>Books</strong> = Data in memory</li>
+<li>🎫 <strong>Library cards</strong> = References (&amp;)</li>
+<li>⏰ <strong>Checkout period</strong> = Lifetime parameter</li>
+<li>👤 <strong>Borrower</strong> = Struct holding the reference</li>
+</ul>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Think of this like a library borrower card
+</span><span style="color:#b48ead;">struct </span><span>LibraryCard {
+</span><span>    </span><span style="color:#bf616a;">borrowed_book</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a str</span><span>,  </span><span style="color:#a7adba;">// Reference to a book
+</span><span>    </span><span style="color:#bf616a;">borrower_name</span><span>: String,   </span><span style="color:#a7adba;">// Owned data
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// The &#39;a lifetime says: &quot;This card can&#39;t exist longer than the book it references&quot;
+</span></code></pre>
+<p>When you create a <code>LibraryCard</code>, the library system needs to ensure:</p>
+<ol>
+<li>The book exists when you borrow it</li>
+<li>The book won't be destroyed while your card is active</li>
+<li>Your card becomes invalid when the book is returned</li>
+</ol>
+<h3 id="basic-definition">Basic Definition</h3>
+<p><strong>Struct lifetime parameters</strong> tell the Rust compiler how long references inside a struct remain valid. They ensure that a struct cannot outlive the data it references.</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Without lifetime (this won&#39;t compile)
+</span><span style="color:#b48ead;">struct </span><span>TextAnalyzer {
+</span><span>    </span><span style="color:#bf616a;">text</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>,  </span><span style="color:#a7adba;">// ❌ Error: missing lifetime specifier
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// With lifetime (this compiles)
+</span><span style="color:#b48ead;">struct </span><span>TextAnalyzer {
+</span><span>    </span><span style="color:#bf616a;">text</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a str</span><span>,  </span><span style="color:#a7adba;">// ✅ The struct can&#39;t outlive the string it references
+</span><span>}
+</span></code></pre>
+<h2 id="why-do-we-need-lifetime-parameters">Why Do We Need Lifetime Parameters?</h2>
+<h3 id="the-problem-without-lifetimes">The Problem Without Lifetimes</h3>
+<p>Imagine this dangerous scenario:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">create_analyzer</span><span>() -&gt; TextAnalyzer {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> text = String::from(&quot;</span><span style="color:#a3be8c;">Hello, World!</span><span>&quot;);  </span><span style="color:#a7adba;">// text created here
+</span><span>    TextAnalyzer {
+</span><span>        text: &amp;text,  </span><span style="color:#a7adba;">// ❌ Borrowing text
+</span><span>    }  </span><span style="color:#a7adba;">// ❌ text is destroyed here, but the reference is returned!
+</span><span>}  </span><span style="color:#a7adba;">// 💥 Dangling pointer! The struct references destroyed data
+</span></code></pre>
+<p><strong>This is like:</strong> Checking out a library book, then the library burns down, but you still have a checkout card claiming you borrowed that book!</p>
+<h3 id="how-lifetimes-solve-this">How Lifetimes Solve This</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">struct </span><span>TextAnalyzer {
+</span><span>    </span><span style="color:#bf616a;">text</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a str</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">create_analyzer</span><span>(</span><span style="color:#bf616a;">text</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; TextAnalyzer {
+</span><span>    TextAnalyzer { text }  </span><span style="color:#a7adba;">// ✅ Safe: text comes from outside, lives longer
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> my_text = String::from(&quot;</span><span style="color:#a3be8c;">Hello, World!</span><span>&quot;);  </span><span style="color:#a7adba;">// text lives here
+</span><span>    </span><span style="color:#b48ead;">let</span><span> analyzer = </span><span style="color:#96b5b4;">create_analyzer</span><span>(&amp;my_text);     </span><span style="color:#a7adba;">// analyzer references my_text
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Analyzing: </span><span style="color:#d08770;">{}</span><span>&quot;, analyzer.text);
+</span><span>}  </span><span style="color:#a7adba;">// Both my_text and analyzer destroyed together - safe!
+</span></code></pre>
+<h2 id="basic-examples">Basic Examples</h2>
+<h3 id="simple-string-reference-struct">Simple String Reference Struct</h3>
+<p>Let's start with the most common pattern:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// A struct that holds a reference to a string slice
+</span><span style="color:#b48ead;">struct </span><span>BookExcerpt {
+</span><span>    </span><span style="color:#bf616a;">title</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a str</span><span>,
+</span><span>    </span><span style="color:#bf616a;">author</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a str</span><span>,
+</span><span>    </span><span style="color:#bf616a;">page_number</span><span>: </span><span style="color:#b48ead;">u32</span><span>,  </span><span style="color:#a7adba;">// Owned data doesn&#39;t need lifetimes
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>BookExcerpt {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#bf616a;">title</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a str</span><span>, </span><span style="color:#bf616a;">author</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a str</span><span>, </span><span style="color:#bf616a;">page</span><span>: </span><span style="color:#b48ead;">u32</span><span>) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        BookExcerpt {
+</span><span>            title,
+</span><span>            author,
+</span><span>            page_number: page,
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">display</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; String {
+</span><span>        format!(&quot;</span><span style="color:#a3be8c;">&#39;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">&#39; by </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> (page </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">)</span><span>&quot;, </span><span style="color:#bf616a;">self</span><span>.title, </span><span style="color:#bf616a;">self</span><span>.author, </span><span style="color:#bf616a;">self</span><span>.page_number)
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">is_by_author</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">author_name</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; </span><span style="color:#b48ead;">bool </span><span>{
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.author == author_name
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// The string data lives in main
+</span><span>    </span><span style="color:#b48ead;">let</span><span> book_title = &quot;</span><span style="color:#a3be8c;">The Rust Programming Language</span><span>&quot;;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> book_author = &quot;</span><span style="color:#a3be8c;">Steve Klabnik and Carol Nichols</span><span>&quot;;
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Create excerpt that references the strings
+</span><span>    </span><span style="color:#b48ead;">let</span><span> excerpt = BookExcerpt::new(book_title, book_author, </span><span style="color:#d08770;">42</span><span>);
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, excerpt.</span><span style="color:#96b5b4;">display</span><span>());
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">By Klabnik? </span><span style="color:#d08770;">{}</span><span>&quot;, excerpt.</span><span style="color:#96b5b4;">is_by_author</span><span>(&quot;</span><span style="color:#a3be8c;">Steve Klabnik and Carol Nichols</span><span>&quot;));
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Both excerpt and the strings are destroyed together - safe!
+</span><span>}
+</span></code></pre>
+<p><strong>Key Points:</strong></p>
+<ul>
+<li>`` declares a lifetime parameter named <code>'a</code></li>
+<li><code>&amp;'a str</code> means "a string reference that lives for lifetime 'a"</li>
+<li>The struct cannot outlive the data it references</li>
+<li>Owned data (like <code>u32</code>) doesn't need lifetime annotations</li>
+</ul>
+<h3 id="text-processing-example">Text Processing Example</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span>#[</span><span style="color:#bf616a;">derive</span><span>(Debug)]
+</span><span style="color:#b48ead;">struct </span><span>TextProcessor {
+</span><span>    </span><span style="color:#bf616a;">original</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a str</span><span>,
+</span><span>    </span><span style="color:#bf616a;">processed</span><span>: String,  </span><span style="color:#a7adba;">// Owned string for processed version
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>TextProcessor {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#bf616a;">text</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a str</span><span>) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        TextProcessor {
+</span><span>            original: text,
+</span><span>            processed: String::new(),
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">process</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) -&gt; &amp;</span><span style="color:#b48ead;">str </span><span>{
+</span><span>        </span><span style="color:#a7adba;">// Process the original text
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.processed = </span><span style="color:#bf616a;">self</span><span>.original
+</span><span>            .</span><span style="color:#96b5b4;">to_lowercase</span><span>()
+</span><span>            .</span><span style="color:#96b5b4;">replace</span><span>(&quot; &quot;, &quot;</span><span style="color:#a3be8c;">_</span><span>&quot;)
+</span><span>            .</span><span style="color:#96b5b4;">replace</span><span>(&quot;</span><span style="color:#a3be8c;">!</span><span>&quot;, &quot;&quot;);
+</span><span>
+</span><span>        &amp;</span><span style="color:#bf616a;">self</span><span>.processed
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">word_count</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; </span><span style="color:#b48ead;">usize </span><span>{
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.original.</span><span style="color:#96b5b4;">split_whitespace</span><span>().</span><span style="color:#96b5b4;">count</span><span>()
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">get_original</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; &amp;</span><span style="color:#b48ead;">str </span><span>{
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.original
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> input = &quot;</span><span style="color:#a3be8c;">Hello, Rust World!</span><span>&quot;;
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> processor = TextProcessor::new(input);
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Original: </span><span style="color:#d08770;">{}</span><span>&quot;, processor.</span><span style="color:#96b5b4;">get_original</span><span>());
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Word count: </span><span style="color:#d08770;">{}</span><span>&quot;, processor.</span><span style="color:#96b5b4;">word_count</span><span>());
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> processed = processor.</span><span style="color:#96b5b4;">process</span><span>();
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Processed: </span><span style="color:#d08770;">{}</span><span>&quot;, processed);
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Processor: </span><span style="color:#d08770;">{:?}</span><span>&quot;, processor);
+</span><span>}
+</span></code></pre>
+<h2 id="multiple-lifetime-parameters">Multiple Lifetime Parameters</h2>
+<h3 id="when-you-need-different-lifetimes">When You Need Different Lifetimes</h3>
+<p>Sometimes your struct needs to reference data with different lifetimes:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// A struct that references two different pieces of data
+</span><span style="color:#b48ead;">struct </span><span>Comparison {
+</span><span>    </span><span style="color:#bf616a;">first</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a str</span><span>,
+</span><span>    </span><span style="color:#bf616a;">second</span><span>: &amp;</span><span style="color:#b48ead;">&#39;b str</span><span>,
+</span><span>    </span><span style="color:#bf616a;">result</span><span>: String,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>Comparison {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#bf616a;">first</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a str</span><span>, </span><span style="color:#bf616a;">second</span><span>: &amp;</span><span style="color:#b48ead;">&#39;b str</span><span>) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        </span><span style="color:#b48ead;">let</span><span> result = </span><span style="color:#b48ead;">if</span><span> first.</span><span style="color:#96b5b4;">len</span><span>() &gt; second.</span><span style="color:#96b5b4;">len</span><span>() {
+</span><span>            format!(&quot;</span><span style="color:#a3be8c;">&#39;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">&#39; is longer</span><span>&quot;, first)
+</span><span>        } </span><span style="color:#b48ead;">else if</span><span> second.</span><span style="color:#96b5b4;">len</span><span>() &gt; first.</span><span style="color:#96b5b4;">len</span><span>() {
+</span><span>            format!(&quot;</span><span style="color:#a3be8c;">&#39;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">&#39; is longer</span><span>&quot;, second)
+</span><span>        } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>            &quot;</span><span style="color:#a3be8c;">Both are the same length</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()
+</span><span>        };
+</span><span>
+</span><span>        Comparison { first, second, result }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">get_longer</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; &amp;</span><span style="color:#b48ead;">str </span><span>{
+</span><span>        </span><span style="color:#b48ead;">if </span><span style="color:#bf616a;">self</span><span>.first.</span><span style="color:#96b5b4;">len</span><span>() &gt; </span><span style="color:#bf616a;">self</span><span>.second.</span><span style="color:#96b5b4;">len</span><span>() {
+</span><span>            </span><span style="color:#bf616a;">self</span><span>.first
+</span><span>        } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>            </span><span style="color:#bf616a;">self</span><span>.second
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">get_result</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; &amp;</span><span style="color:#b48ead;">str </span><span>{
+</span><span>        &amp;</span><span style="color:#bf616a;">self</span><span>.result
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> long_text = &quot;</span><span style="color:#a3be8c;">This is a very long string that contains many words</span><span>&quot;;
+</span><span>
+</span><span>    {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> short_text = &quot;</span><span style="color:#a3be8c;">Short</span><span>&quot;;
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">let</span><span> comparison = Comparison::new(long_text, short_text);
+</span><span>
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">First: </span><span style="color:#d08770;">{}</span><span>&quot;, comparison.first);
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Second: </span><span style="color:#d08770;">{}</span><span>&quot;, comparison.second);
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Longer: </span><span style="color:#d08770;">{}</span><span>&quot;, comparison.</span><span style="color:#96b5b4;">get_longer</span><span>());
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Result: </span><span style="color:#d08770;">{}</span><span>&quot;, comparison.</span><span style="color:#96b5b4;">get_result</span><span>());
+</span><span>
+</span><span>        </span><span style="color:#a7adba;">// comparison can exist as long as both long_text and short_text exist
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// long_text still exists here, but short_text is gone
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Long text still exists: </span><span style="color:#d08770;">{}</span><span>&quot;, long_text);
+</span><span>}
+</span></code></pre>
+<p><strong>Why separate lifetimes?</strong></p>
+<ul>
+<li><code>'a</code> for <code>first</code> field - might live longer</li>
+<li><code>'b</code> for <code>second</code> field - might have different lifetime</li>
+<li>Gives maximum flexibility for different data sources</li>
+</ul>
+<h3 id="single-vs-multiple-lifetimes">Single vs Multiple Lifetimes</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Single lifetime - all references must live equally long
+</span><span style="color:#b48ead;">struct </span><span>SingleLifetime {
+</span><span>    </span><span style="color:#bf616a;">text1</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a str</span><span>,
+</span><span>    </span><span style="color:#bf616a;">text2</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a str</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Multiple lifetimes - references can have different lifespans
+</span><span style="color:#b48ead;">struct </span><span>MultipleLifetimes {
+</span><span>    </span><span style="color:#bf616a;">text1</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a str</span><span>,
+</span><span>    </span><span style="color:#bf616a;">text2</span><span>: &amp;</span><span style="color:#b48ead;">&#39;b str</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">demonstrate_difference</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> long_lived = &quot;</span><span style="color:#a3be8c;">I live for the entire function</span><span>&quot;;
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> single = {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> short_lived = &quot;</span><span style="color:#a3be8c;">I only live in this block</span><span>&quot;;
+</span><span>
+</span><span>        </span><span style="color:#a7adba;">// This works - both references have the same (short) lifetime
+</span><span>        MultipleLifetimes {
+</span><span>            text1: long_lived,      </span><span style="color:#a7adba;">// &#39;a can be long
+</span><span>            text2: short_lived,     </span><span style="color:#a7adba;">// &#39;b can be short
+</span><span>        }
+</span><span>
+</span><span>        </span><span style="color:#a7adba;">// This would NOT work with SingleLifetime because
+</span><span>        </span><span style="color:#a7adba;">// it would force long_lived to have the same short lifetime
+</span><span>    };
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Text1: </span><span style="color:#d08770;">{}</span><span>&quot;, single.text1);  </span><span style="color:#a7adba;">// ✅ Still valid
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Text2: </span><span style="color:#d08770;">{}</span><span>&quot;, single.text2);  </span><span style="color:#a7adba;">// ✅ Still valid within scope
+</span><span>}
+</span></code></pre>
+<h2 id="advanced-patterns-and-real-world-examples">Advanced Patterns and Real-World Examples</h2>
+<h3 id="configuration-parser">Configuration Parser</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span>#[</span><span style="color:#bf616a;">derive</span><span>(Debug)]
+</span><span style="color:#b48ead;">struct </span><span>ConfigParser {
+</span><span>    </span><span style="color:#bf616a;">raw_config</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a str</span><span>,
+</span><span>    </span><span style="color:#bf616a;">parsed_values</span><span>: std::collections::HashMap,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>ConfigParser {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#bf616a;">config_text</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a str</span><span>) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        ConfigParser {
+</span><span>            raw_config: config_text,
+</span><span>            parsed_values: std::collections::HashMap::new(),
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">parse</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) -&gt; Result {
+</span><span>        </span><span style="color:#b48ead;">for</span><span> line in </span><span style="color:#bf616a;">self</span><span>.raw_config.</span><span style="color:#96b5b4;">lines</span><span>() {
+</span><span>            </span><span style="color:#b48ead;">let</span><span> line = line.</span><span style="color:#96b5b4;">trim</span><span>();
+</span><span>
+</span><span>            </span><span style="color:#a7adba;">// Skip empty lines and comments
+</span><span>            </span><span style="color:#b48ead;">if</span><span> line.</span><span style="color:#96b5b4;">is_empty</span><span>() || line.</span><span style="color:#96b5b4;">starts_with</span><span>(&#39;</span><span style="color:#a3be8c;">#</span><span>&#39;) {
+</span><span>                </span><span style="color:#b48ead;">continue</span><span>;
+</span><span>            }
+</span><span>
+</span><span>            </span><span style="color:#a7adba;">// Parse key=value pairs
+</span><span>            </span><span style="color:#b48ead;">if let </span><span>Some((key, value)) = line.</span><span style="color:#96b5b4;">split_once</span><span>(&#39;</span><span style="color:#a3be8c;">=</span><span>&#39;) {
+</span><span>                </span><span style="color:#bf616a;">self</span><span>.parsed_values.</span><span style="color:#96b5b4;">insert</span><span>(
+</span><span>                    key.</span><span style="color:#96b5b4;">trim</span><span>().</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>                    value.</span><span style="color:#96b5b4;">trim</span><span>().</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>                );
+</span><span>            } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>                </span><span style="color:#b48ead;">return </span><span>Err(format!(&quot;</span><span style="color:#a3be8c;">Invalid config line: </span><span style="color:#d08770;">{}</span><span>&quot;, line));
+</span><span>            }
+</span><span>        }
+</span><span>
+</span><span>        Ok(())
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">get_value</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">key</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; Option {
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.parsed_values.</span><span style="color:#96b5b4;">get</span><span>(key)
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">get_raw_config</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; &amp;</span><span style="color:#b48ead;">str </span><span>{
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.raw_config
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">list_keys</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; Vec {
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.parsed_values.</span><span style="color:#96b5b4;">keys</span><span>().</span><span style="color:#96b5b4;">collect</span><span>()
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() -&gt; Result {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> config_text = </span><span style="color:#b48ead;">r</span><span>#&quot;
+</span><span style="color:#a3be8c;">        # Database Configuration
+</span><span style="color:#a3be8c;">        database_url = postgresql://localhost:5432/myapp
+</span><span style="color:#a3be8c;">        database_pool_size = 10
+</span><span style="color:#a3be8c;">
+</span><span style="color:#a3be8c;">        # Server Configuration
+</span><span style="color:#a3be8c;">        server_port = 8080
+</span><span style="color:#a3be8c;">        server_host = 0.0.0.0
+</span><span style="color:#a3be8c;">
+</span><span style="color:#a3be8c;">        # Logging
+</span><span style="color:#a3be8c;">        log_level = info
+</span><span style="color:#a3be8c;">    </span><span>&quot;#;
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> parser = ConfigParser::new(config_text);
+</span><span>    parser.</span><span style="color:#96b5b4;">parse</span><span>()?;
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Configuration keys: </span><span style="color:#d08770;">{:?}</span><span>&quot;, parser.</span><span style="color:#96b5b4;">list_keys</span><span>());
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">if let </span><span>Some(db_url) = parser.</span><span style="color:#96b5b4;">get_value</span><span>(&quot;</span><span style="color:#a3be8c;">database_url</span><span>&quot;) {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Database URL: </span><span style="color:#d08770;">{}</span><span>&quot;, db_url);
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">if let </span><span>Some(port) = parser.</span><span style="color:#96b5b4;">get_value</span><span>(&quot;</span><span style="color:#a3be8c;">server_port</span><span>&quot;) {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Server port: </span><span style="color:#d08770;">{}</span><span>&quot;, port);
+</span><span>    }
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Raw config length: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> characters</span><span>&quot;, parser.</span><span style="color:#96b5b4;">get_raw_config</span><span>().</span><span style="color:#96b5b4;">len</span><span>());
+</span><span>
+</span><span>    Ok(())
+</span><span>}
+</span></code></pre>
+<h3 id="log-entry-parser">Log Entry Parser</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>std::collections::HashMap;
+</span><span>
+</span><span>#[</span><span style="color:#bf616a;">derive</span><span>(Debug)]
+</span><span style="color:#b48ead;">struct </span><span>LogEntry {
+</span><span>    </span><span style="color:#bf616a;">timestamp</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a str</span><span>,
+</span><span>    </span><span style="color:#bf616a;">level</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a str</span><span>,
+</span><span>    </span><span style="color:#bf616a;">message</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a str</span><span>,
+</span><span>    </span><span style="color:#bf616a;">raw_line</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a str</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">struct </span><span>LogParser {
+</span><span>    </span><span style="color:#bf616a;">log_content</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a str</span><span>,
+</span><span>    </span><span style="color:#bf616a;">parsed_entries</span><span>: Vec&gt;,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>LogEntry {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#bf616a;">line</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a str</span><span>) -&gt; Result {
+</span><span>        </span><span style="color:#a7adba;">// Parse log format: [timestamp] LEVEL: message
+</span><span>        </span><span style="color:#b48ead;">if </span><span>!line.</span><span style="color:#96b5b4;">starts_with</span><span>(&#39;</span><span style="color:#a3be8c;">[</span><span>&#39;) {
+</span><span>            </span><span style="color:#b48ead;">return </span><span>Err(&quot;</span><span style="color:#a3be8c;">Invalid log format: missing timestamp</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>());
+</span><span>        }
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">let</span><span> timestamp_end = line.</span><span style="color:#96b5b4;">find</span><span>(&#39;</span><span style="color:#a3be8c;">]</span><span>&#39;)
+</span><span>            .</span><span style="color:#96b5b4;">ok_or</span><span>(&quot;</span><span style="color:#a3be8c;">Invalid log format: unclosed timestamp</span><span>&quot;)?;
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">let</span><span> timestamp = &amp;line[</span><span style="color:#d08770;">1</span><span>..timestamp_end];
+</span><span>        </span><span style="color:#b48ead;">let</span><span> rest = &amp;line[timestamp_end + </span><span style="color:#d08770;">1</span><span>..].</span><span style="color:#96b5b4;">trim</span><span>();
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">if let </span><span>Some((level, message)) = rest.</span><span style="color:#96b5b4;">split_once</span><span>(&quot;</span><span style="color:#a3be8c;">: </span><span>&quot;) {
+</span><span>            Ok(LogEntry {
+</span><span>                timestamp,
+</span><span>                level: level.</span><span style="color:#96b5b4;">trim</span><span>(),
+</span><span>                message: message.</span><span style="color:#96b5b4;">trim</span><span>(),
+</span><span>                raw_line: line,
+</span><span>            })
+</span><span>        } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>            Err(&quot;</span><span style="color:#a3be8c;">Invalid log format: missing level or message</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>())
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">is_error</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; </span><span style="color:#b48ead;">bool </span><span>{
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.level.</span><span style="color:#96b5b4;">eq_ignore_ascii_case</span><span>(&quot;</span><span style="color:#a3be8c;">ERROR</span><span>&quot;)
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">is_warning</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; </span><span style="color:#b48ead;">bool </span><span>{
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.level.</span><span style="color:#96b5b4;">eq_ignore_ascii_case</span><span>(&quot;</span><span style="color:#a3be8c;">WARN</span><span>&quot;) || </span><span style="color:#bf616a;">self</span><span>.level.</span><span style="color:#96b5b4;">eq_ignore_ascii_case</span><span>(&quot;</span><span style="color:#a3be8c;">WARNING</span><span>&quot;)
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>LogParser {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#bf616a;">log_content</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a str</span><span>) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        LogParser {
+</span><span>            log_content,
+</span><span>            parsed_entries: Vec::new(),
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">parse</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) -&gt; Result {
+</span><span>        </span><span style="color:#b48ead;">for</span><span> line in </span><span style="color:#bf616a;">self</span><span>.log_content.</span><span style="color:#96b5b4;">lines</span><span>() {
+</span><span>            </span><span style="color:#b48ead;">let</span><span> line = line.</span><span style="color:#96b5b4;">trim</span><span>();
+</span><span>            </span><span style="color:#b48ead;">if</span><span> line.</span><span style="color:#96b5b4;">is_empty</span><span>() {
+</span><span>                </span><span style="color:#b48ead;">continue</span><span>;
+</span><span>            }
+</span><span>
+</span><span>            </span><span style="color:#b48ead;">match </span><span>LogEntry::new(line) {
+</span><span>                Ok(entry) =&gt; </span><span style="color:#bf616a;">self</span><span>.parsed_entries.</span><span style="color:#96b5b4;">push</span><span>(entry),
+</span><span>                Err(e) =&gt; eprintln!(&quot;</span><span style="color:#a3be8c;">Failed to parse line &#39;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">&#39;: </span><span style="color:#d08770;">{}</span><span>&quot;, line, e),
+</span><span>            }
+</span><span>        }
+</span><span>
+</span><span>        Ok(())
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">get_errors</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; Vec&gt; {
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.parsed_entries.</span><span style="color:#96b5b4;">iter</span><span>()
+</span><span>            .</span><span style="color:#96b5b4;">filter</span><span>(|</span><span style="color:#bf616a;">entry</span><span>| entry.</span><span style="color:#96b5b4;">is_error</span><span>())
+</span><span>            .</span><span style="color:#96b5b4;">collect</span><span>()
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">get_warnings</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; Vec&gt; {
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.parsed_entries.</span><span style="color:#96b5b4;">iter</span><span>()
+</span><span>            .</span><span style="color:#96b5b4;">filter</span><span>(|</span><span style="color:#bf616a;">entry</span><span>| entry.</span><span style="color:#96b5b4;">is_warning</span><span>())
+</span><span>            .</span><span style="color:#96b5b4;">collect</span><span>()
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">count_by_level</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; HashMap {
+</span><span>        </span><span style="color:#b48ead;">let mut</span><span> counts = HashMap::new();
+</span><span>        </span><span style="color:#b48ead;">for</span><span> entry in &amp;</span><span style="color:#bf616a;">self</span><span>.parsed_entries {
+</span><span>            *counts.</span><span style="color:#96b5b4;">entry</span><span>(entry.level).</span><span style="color:#96b5b4;">or_insert</span><span>(</span><span style="color:#d08770;">0</span><span>) += </span><span style="color:#d08770;">1</span><span>;
+</span><span>        }
+</span><span>        counts
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">total_entries</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; </span><span style="color:#b48ead;">usize </span><span>{
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.parsed_entries.</span><span style="color:#96b5b4;">len</span><span>()
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() -&gt; Result {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> log_data = </span><span style="color:#b48ead;">r</span><span>#&quot;
+</span><span style="color:#a3be8c;">        [2024-01-15 09:30:15] INFO: Application started
+</span><span style="color:#a3be8c;">        [2024-01-15 09:30:16] DEBUG: Database connection established
+</span><span style="color:#a3be8c;">        [2024-01-15 09:31:22] WARN: High memory usage detected
+</span><span style="color:#a3be8c;">        [2024-01-15 09:32:01] ERROR: Failed to process user request
+</span><span style="color:#a3be8c;">        [2024-01-15 09:32:15] INFO: Request retry successful
+</span><span style="color:#a3be8c;">        [2024-01-15 09:33:45] ERROR: Database connection lost
+</span><span style="color:#a3be8c;">        [2024-01-15 09:34:01] INFO: Database connection restored
+</span><span style="color:#a3be8c;">    </span><span>&quot;#;
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> parser = LogParser::new(log_data);
+</span><span>    parser.</span><span style="color:#96b5b4;">parse</span><span>()?;
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Total log entries: </span><span style="color:#d08770;">{}</span><span>&quot;, parser.</span><span style="color:#96b5b4;">total_entries</span><span>());
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Level counts: </span><span style="color:#d08770;">{:?}</span><span>&quot;, parser.</span><span style="color:#96b5b4;">count_by_level</span><span>());
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">Errors found:</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">for</span><span> error in parser.</span><span style="color:#96b5b4;">get_errors</span><span>() {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">  [</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">] </span><span style="color:#d08770;">{}</span><span>&quot;, error.timestamp, error.message);
+</span><span>    }
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">Warnings found:</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">for</span><span> warning in parser.</span><span style="color:#96b5b4;">get_warnings</span><span>() {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">  [</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">] </span><span style="color:#d08770;">{}</span><span>&quot;, warning.timestamp, warning.message);
+</span><span>    }
+</span><span>
+</span><span>    Ok(())
+</span><span>}
+</span></code></pre>
+<h2 id="common-lifetime-patterns">Common Lifetime Patterns</h2>
+<h3 id="iterator-style-processing">Iterator-Style Processing</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">struct </span><span>LineProcessor {
+</span><span>    </span><span style="color:#bf616a;">content</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a str</span><span>,
+</span><span>    </span><span style="color:#bf616a;">current_line</span><span>: </span><span style="color:#b48ead;">usize</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>LineProcessor {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#bf616a;">content</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a str</span><span>) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        LineProcessor {
+</span><span>            content,
+</span><span>            current_line: </span><span style="color:#d08770;">0</span><span>,
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>Iterator </span><span style="color:#b48ead;">for </span><span>LineProcessor {
+</span><span>    </span><span style="color:#b48ead;">type </span><span>Item = (</span><span style="color:#b48ead;">usize</span><span>, &amp;</span><span style="color:#b48ead;">&#39;a str</span><span>);
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">next</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) -&gt; Option {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> lines: Vec = </span><span style="color:#bf616a;">self</span><span>.content.</span><span style="color:#96b5b4;">lines</span><span>().</span><span style="color:#96b5b4;">collect</span><span>();
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">if </span><span style="color:#bf616a;">self</span><span>.current_line  {
+</span><span>    table: Option,
+</span><span>    columns: Vec,
+</span><span>    conditions: Vec,
+</span><span>    order_by: Option,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>QueryBuilder {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>() -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        QueryBuilder {
+</span><span>            table: None,
+</span><span>            columns: Vec::new(),
+</span><span>            conditions: Vec::new(),
+</span><span>            order_by: None,
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">table</span><span>(</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">table</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a str</span><span>) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.table = Some(table);
+</span><span>        </span><span style="color:#bf616a;">self
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">column</span><span>(</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">column</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a str</span><span>) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.columns.</span><span style="color:#96b5b4;">push</span><span>(column);
+</span><span>        </span><span style="color:#bf616a;">self
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">columns</span><span>(</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">columns</span><span>: &amp;[&amp;</span><span style="color:#b48ead;">&#39;a str</span><span>]) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.columns.</span><span style="color:#96b5b4;">extend_from_slice</span><span>(columns);
+</span><span>        </span><span style="color:#bf616a;">self
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">where_clause</span><span>(</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">condition</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a str</span><span>) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.conditions.</span><span style="color:#96b5b4;">push</span><span>(condition);
+</span><span>        </span><span style="color:#bf616a;">self
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">order_by</span><span>(</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">column</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a str</span><span>) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.order_by = Some(column);
+</span><span>        </span><span style="color:#bf616a;">self
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">build</span><span>(</span><span style="color:#bf616a;">self</span><span>) -&gt; Result {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> table = </span><span style="color:#bf616a;">self</span><span>.table.</span><span style="color:#96b5b4;">ok_or</span><span>(&quot;</span><span style="color:#a3be8c;">Table name is required</span><span>&quot;)?;
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">let</span><span> columns = </span><span style="color:#b48ead;">if </span><span style="color:#bf616a;">self</span><span>.columns.</span><span style="color:#96b5b4;">is_empty</span><span>() {
+</span><span>            &quot;</span><span style="color:#a3be8c;">*</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()
+</span><span>        } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>            </span><span style="color:#bf616a;">self</span><span>.columns.</span><span style="color:#96b5b4;">join</span><span>(&quot;</span><span style="color:#a3be8c;">, </span><span>&quot;)
+</span><span>        };
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">let mut</span><span> query = format!(&quot;</span><span style="color:#a3be8c;">SELECT </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> FROM </span><span style="color:#d08770;">{}</span><span>&quot;, columns, table);
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">if </span><span>!</span><span style="color:#bf616a;">self</span><span>.conditions.</span><span style="color:#96b5b4;">is_empty</span><span>() {
+</span><span>            query.</span><span style="color:#96b5b4;">push_str</span><span>(&amp;format!(&quot;</span><span style="color:#a3be8c;"> WHERE </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#bf616a;">self</span><span>.conditions.</span><span style="color:#96b5b4;">join</span><span>(&quot;</span><span style="color:#a3be8c;"> AND </span><span>&quot;)));
+</span><span>        }
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">if let </span><span>Some(order_col) = </span><span style="color:#bf616a;">self</span><span>.order_by {
+</span><span>            query.</span><span style="color:#96b5b4;">push_str</span><span>(&amp;format!(&quot;</span><span style="color:#a3be8c;"> ORDER BY </span><span style="color:#d08770;">{}</span><span>&quot;, order_col));
+</span><span>        }
+</span><span>
+</span><span>        Ok(query)
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() -&gt; Result {
+</span><span>    </span><span style="color:#a7adba;">// All string literals have &#39;static lifetime, so this works
+</span><span>    </span><span style="color:#b48ead;">let</span><span> query = QueryBuilder::new()
+</span><span>        .</span><span style="color:#96b5b4;">table</span><span>(&quot;</span><span style="color:#a3be8c;">users</span><span>&quot;)
+</span><span>        .</span><span style="color:#96b5b4;">columns</span><span>(&amp;[&quot;</span><span style="color:#a3be8c;">id</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">name</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">email</span><span>&quot;])
+</span><span>        .</span><span style="color:#96b5b4;">where_clause</span><span>(&quot;</span><span style="color:#a3be8c;">active = 1</span><span>&quot;)
+</span><span>        .</span><span style="color:#96b5b4;">where_clause</span><span>(&quot;</span><span style="color:#a3be8c;">age &gt;= 18</span><span>&quot;)
+</span><span>        .</span><span style="color:#96b5b4;">order_by</span><span>(&quot;</span><span style="color:#a3be8c;">name</span><span>&quot;)
+</span><span>        .</span><span style="color:#96b5b4;">build</span><span>()?;
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Generated query: </span><span style="color:#d08770;">{}</span><span>&quot;, query);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Using local string references
+</span><span>    </span><span style="color:#b48ead;">let</span><span> table_name = &quot;</span><span style="color:#a3be8c;">products</span><span>&quot;;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> name_col = &quot;</span><span style="color:#a3be8c;">name</span><span>&quot;;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> price_condition = &quot;</span><span style="color:#a3be8c;">price &gt; 100</span><span>&quot;;
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> product_query = QueryBuilder::new()
+</span><span>        .</span><span style="color:#96b5b4;">table</span><span>(table_name)
+</span><span>        .</span><span style="color:#96b5b4;">column</span><span>(&quot;</span><span style="color:#a3be8c;">id</span><span>&quot;)
+</span><span>        .</span><span style="color:#96b5b4;">column</span><span>(name_col)
+</span><span>        .</span><span style="color:#96b5b4;">column</span><span>(&quot;</span><span style="color:#a3be8c;">price</span><span>&quot;)
+</span><span>        .</span><span style="color:#96b5b4;">where_clause</span><span>(price_condition)
+</span><span>        .</span><span style="color:#96b5b4;">build</span><span>()?;
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Product query: </span><span style="color:#d08770;">{}</span><span>&quot;, product_query);
+</span><span>
+</span><span>    Ok(())
+</span><span>}
+</span></code></pre>
+<h2 id="understanding-lifetime-elision">Understanding Lifetime Elision</h2>
+<h3 id="when-you-don-t-need-to-write-lifetimes">When You Don't Need to Write Lifetimes</h3>
+<p>Rust can often infer lifetimes automatically in simple cases:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// These are equivalent - compiler infers the lifetime
+</span><span style="color:#b48ead;">struct </span><span>SimpleHolder1 {
+</span><span>    </span><span style="color:#bf616a;">data</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a str</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// In many cases, you can write just:
+</span><span style="color:#b48ead;">struct </span><span>SimpleHolder2 {
+</span><span>    </span><span style="color:#bf616a;">data</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>,  </span><span style="color:#a7adba;">// Compiler will add lifetime automatically in some contexts
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// For methods, lifetime elision often works
+</span><span style="color:#b48ead;">impl </span><span>SimpleHolder1 {
+</span><span>    </span><span style="color:#a7adba;">// These are equivalent:
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">get_data_explicit</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; &amp;</span><span style="color:#b48ead;">&#39;a str </span><span>{
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.data
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">get_data_inferred</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; &amp;</span><span style="color:#b48ead;">str </span><span>{  </span><span style="color:#a7adba;">// Compiler infers return lifetime
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.data
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// When there&#39;s only one input lifetime, it&#39;s applied to output
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">process</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">_other</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; &amp;</span><span style="color:#b48ead;">str </span><span>{
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.data  </span><span style="color:#a7adba;">// Returns with lifetime of &amp;self
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h3 id="when-you-must-write-lifetimes">When You Must Write Lifetimes</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Multiple input lifetimes require explicit annotation
+</span><span style="color:#b48ead;">struct </span><span>DataComparer {
+</span><span>    </span><span style="color:#bf616a;">first</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a str</span><span>,
+</span><span>    </span><span style="color:#bf616a;">second</span><span>: &amp;</span><span style="color:#b48ead;">&#39;b str</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>DataComparer {
+</span><span>    </span><span style="color:#a7adba;">// Must specify which lifetime the return value has
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">get_longer</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; &amp;</span><span style="color:#b48ead;">str </span><span>{
+</span><span>        </span><span style="color:#b48ead;">if </span><span style="color:#bf616a;">self</span><span>.first.</span><span style="color:#96b5b4;">len</span><span>() &gt; </span><span style="color:#bf616a;">self</span><span>.second.</span><span style="color:#96b5b4;">len</span><span>() {
+</span><span>            </span><span style="color:#bf616a;">self</span><span>.first   </span><span style="color:#a7adba;">// This has lifetime &#39;a
+</span><span>        } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>            </span><span style="color:#bf616a;">self</span><span>.second  </span><span style="color:#a7adba;">// This has lifetime &#39;b
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// If we want to be explicit about the return lifetime:
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">get_first</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; &amp;</span><span style="color:#b48ead;">&#39;a str </span><span>{
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.first
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">get_second</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; &amp;</span><span style="color:#b48ead;">&#39;b str </span><span>{
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.second
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h2 id="common-mistakes-and-solutions">Common Mistakes and Solutions</h2>
+<h3 id="mistake-1-trying-to-create-self-referential-structs">Mistake 1: Trying to Create Self-Referential Structs</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// ❌ This doesn&#39;t work - you can&#39;t reference yourself during construction
+</span><span style="color:#a7adba;">/*
+</span><span style="color:#a7adba;">struct SelfReferential {
+</span><span style="color:#a7adba;">    data: String,
+</span><span style="color:#a7adba;">    reference: &amp;&#39;a str,
+</span><span style="color:#a7adba;">}
+</span><span style="color:#a7adba;">
+</span><span style="color:#a7adba;">fn create_self_ref() -&gt; SelfReferential {
+</span><span style="color:#a7adba;">    let mut s = SelfReferential {
+</span><span style="color:#a7adba;">        data: String::from(&quot;hello&quot;),
+</span><span style="color:#a7adba;">        reference: &quot;&quot;,  // Can&#39;t reference data field here!
+</span><span style="color:#a7adba;">    };
+</span><span style="color:#a7adba;">    s.reference = &amp;s.data;  // ❌ This doesn&#39;t work
+</span><span style="color:#a7adba;">    s
+</span><span style="color:#a7adba;">}
+</span><span style="color:#a7adba;">*/
+</span><span>
+</span><span style="color:#a7adba;">// ✅ Instead, use methods to create references after construction
+</span><span style="color:#b48ead;">struct </span><span>Container {
+</span><span>    </span><span style="color:#bf616a;">data</span><span>: String,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">struct </span><span>ContainerView {
+</span><span>    </span><span style="color:#bf616a;">view</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a str</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>Container {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#bf616a;">data</span><span>: String) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        Container { data }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">get_view</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; ContainerView {
+</span><span>        ContainerView {
+</span><span>            view: &amp;</span><span style="color:#bf616a;">self</span><span>.data
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> container = Container::new(&quot;</span><span style="color:#a3be8c;">Hello, World!</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>());
+</span><span>    </span><span style="color:#b48ead;">let</span><span> view = container.</span><span style="color:#96b5b4;">get_view</span><span>();
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">View: </span><span style="color:#d08770;">{}</span><span>&quot;, view.view);
+</span><span>    </span><span style="color:#a7adba;">// Both container and view are valid here
+</span><span>}
+</span></code></pre>
+<h3 id="mistake-2-lifetime-too-restrictive">Mistake 2: Lifetime Too Restrictive</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// ❌ This forces both strings to have the same lifetime
+</span><span style="color:#b48ead;">struct </span><span>TooRestrictive {
+</span><span>    </span><span style="color:#bf616a;">short_lived</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a str</span><span>,
+</span><span>    </span><span style="color:#bf616a;">long_lived</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a str</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// ✅ This allows different lifetimes
+</span><span style="color:#b48ead;">struct </span><span>MoreFlexible {
+</span><span>    </span><span style="color:#bf616a;">short_lived</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a str</span><span>,
+</span><span>    </span><span style="color:#bf616a;">long_lived</span><span>: &amp;</span><span style="color:#b48ead;">&#39;b str</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">demonstrate</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> long_string = String::from(&quot;</span><span style="color:#a3be8c;">I live for a long time</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> flexible = {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> short_string = String::from(&quot;</span><span style="color:#a3be8c;">I live briefly</span><span>&quot;);
+</span><span>
+</span><span>        MoreFlexible {
+</span><span>            short_lived: &amp;short_string,  </span><span style="color:#a7adba;">// &#39;a lifetime (short)
+</span><span>            long_lived: &amp;long_string,    </span><span style="color:#a7adba;">// &#39;b lifetime (long)
+</span><span>        }
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Can still access the long-lived reference
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Long lived: </span><span style="color:#d08770;">{}</span><span>&quot;, flexible.long_lived);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// short_string is gone, but that&#39;s OK because we have separate lifetimes
+</span><span>}
+</span></code></pre>
+<h3 id="mistake-3-returning-references-from-owned-data">Mistake 3: Returning References from Owned Data</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// ❌ This doesn&#39;t work - you can&#39;t return a reference to owned data
+</span><span style="color:#a7adba;">/*
+</span><span style="color:#a7adba;">fn create_and_reference() -&gt; &amp;str {
+</span><span style="color:#a7adba;">    let s = String::from(&quot;Hello&quot;);
+</span><span style="color:#a7adba;">    &amp;s  // ❌ s is dropped at the end of the function
+</span><span style="color:#a7adba;">}
+</span><span style="color:#a7adba;">*/
+</span><span>
+</span><span style="color:#a7adba;">// ✅ Return owned data instead
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">create_owned</span><span>() -&gt; String {
+</span><span>    String::from(&quot;</span><span style="color:#a3be8c;">Hello</span><span>&quot;)
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// ✅ Or take a reference as input and return a reference
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">process_reference</span><span>(</span><span style="color:#bf616a;">s</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; &amp;</span><span style="color:#b48ead;">str </span><span>{
+</span><span>    s
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// ✅ Or use a struct that holds owned data and provides references
+</span><span style="color:#b48ead;">struct </span><span>TextHolder {
+</span><span>    </span><span style="color:#bf616a;">text</span><span>: String,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>TextHolder {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#bf616a;">text</span><span>: String) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        TextHolder { text }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">get_ref</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; &amp;</span><span style="color:#b48ead;">str </span><span>{
+</span><span>        &amp;</span><span style="color:#bf616a;">self</span><span>.text  </span><span style="color:#a7adba;">// This works - returning reference to owned data
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="1-start-simple-add-complexity-when-needed">1. Start Simple, Add Complexity When Needed</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Start with this
+</span><span style="color:#b48ead;">struct </span><span>Simple {
+</span><span>    </span><span style="color:#bf616a;">data</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a str</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Only add multiple lifetimes when you actually need them
+</span><span style="color:#b48ead;">struct </span><span>Complex {
+</span><span>    </span><span style="color:#bf616a;">data1</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a str</span><span>,
+</span><span>    </span><span style="color:#bf616a;">data2</span><span>: &amp;</span><span style="color:#b48ead;">&#39;b str</span><span>,
+</span><span>}
+</span></code></pre>
+<h3 id="2-use-owned-data-when-possible">2. Use Owned Data When Possible</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// If you don&#39;t need to reference external data, use owned types
+</span><span style="color:#b48ead;">struct </span><span>Owned {
+</span><span>    </span><span style="color:#bf616a;">data</span><span>: String,        </span><span style="color:#a7adba;">// ✅ No lifetime needed
+</span><span>    </span><span style="color:#bf616a;">count</span><span>: </span><span style="color:#b48ead;">usize</span><span>,        </span><span style="color:#a7adba;">// ✅ No lifetime needed
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Only use references when you need to avoid copying
+</span><span style="color:#b48ead;">struct </span><span>Referenced {
+</span><span>    </span><span style="color:#bf616a;">data</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a str</span><span>,       </span><span style="color:#a7adba;">// When you need to reference existing data
+</span><span>    </span><span style="color:#bf616a;">count</span><span>: </span><span style="color:#b48ead;">usize</span><span>,        </span><span style="color:#a7adba;">// Mix owned and borrowed as needed
+</span><span>}
+</span></code></pre>
+<h3 id="3-document-your-lifetime-constraints">3. Document Your Lifetime Constraints</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">/// A struct that holds references to configuration data.
+</span><span style="color:#a7adba;">///
+</span><span style="color:#a7adba;">/// The lifetime &#39;a ensures that the configuration data
+</span><span style="color:#a7adba;">/// lives at least as long as any ConfigReader instance.
+</span><span style="color:#b48ead;">struct </span><span>ConfigReader {
+</span><span>    </span><span style="color:#a7adba;">/// Reference to the raw configuration text
+</span><span>    </span><span style="color:#bf616a;">config_text</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a str</span><span>,
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">/// Cached parsed values (owned)
+</span><span>    </span><span style="color:#bf616a;">parsed_cache</span><span>: std::collections::HashMap,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>ConfigReader {
+</span><span>    </span><span style="color:#a7adba;">/// Creates a new ConfigReader.
+</span><span>    </span><span style="color:#a7adba;">///
+</span><span>    </span><span style="color:#a7adba;">/// The config_text must remain valid for the entire
+</span><span>    </span><span style="color:#a7adba;">/// lifetime of the ConfigReader instance.
+</span><span>    </span><span style="color:#b48ead;">pub fn </span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#bf616a;">config_text</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a str</span><span>) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        ConfigReader {
+</span><span>            config_text,
+</span><span>            parsed_cache: std::collections::HashMap::new(),
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h3 id="4-consider-using-cow-for-flexibility">4. Consider Using Cow for Flexibility</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>std::borrow::Cow;
+</span><span>
+</span><span style="color:#a7adba;">// Cow can hold either borrowed or owned data
+</span><span style="color:#b48ead;">struct </span><span>FlexibleText {
+</span><span>    </span><span style="color:#bf616a;">content</span><span>: Cow,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>FlexibleText {
+</span><span>    </span><span style="color:#a7adba;">// Can accept borrowed data
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">from_borrowed</span><span>(</span><span style="color:#bf616a;">s</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a str</span><span>) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        FlexibleText {
+</span><span>            content: Cow::Borrowed(s),
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Can accept owned data
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">from_owned</span><span>(</span><span style="color:#bf616a;">s</span><span>: String) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        FlexibleText {
+</span><span>            content: Cow::Owned(s),
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Can modify the content (will clone if borrowed)
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">make_uppercase</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) {
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.content = Cow::Owned(</span><span style="color:#bf616a;">self</span><span>.content.</span><span style="color:#96b5b4;">to_uppercase</span><span>());
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h2 id="summary-and-key-takeaways">Summary and Key Takeaways</h2>
+<h3 id="mental-model-the-library-system"><strong>Mental Model: The Library System</strong></h3>
+<p>Remember the library analogy:</p>
+<ul>
+<li>📚 <strong>Data</strong> = Books in the library</li>
+<li>🎫 <strong>References</strong> = Library checkout cards</li>
+<li>⏰ <strong>Lifetimes</strong> = How long you can keep the book</li>
+<li>👤 <strong>Structs</strong> = Library patrons with checkout cards</li>
+</ul>
+<p><strong>The rule:</strong> You can't keep a checkout card longer than the book exists!</p>
+<h3 id="essential-principles"><strong>Essential Principles</strong></h3>
+<ol>
+<li><strong>Lifetime parameters ensure safety</strong> - A struct with references cannot outlive the data it references</li>
+<li><strong>Use multiple lifetimes when needed</strong> - Different references can have different lifetimes</li>
+<li><strong>Owned data is simpler</strong> - Use <code>String</code> instead of <code>&amp;str</code> when you don't need to reference existing data</li>
+<li><strong>Lifetimes are compile-time only</strong> - They help the compiler, but don't exist at runtime</li>
+</ol>
+<h3 id="common-patterns"><strong>Common Patterns</strong></h3>
+<table><thead><tr><th>Pattern</th><th>When to Use</th><th>Example</th></tr></thead><tbody>
+<tr><td><strong>Single lifetime</strong></td><td>All references have same constraints</td><td><code>struct Parser { text: &amp;'a str }</code></td></tr>
+<tr><td><strong>Multiple lifetimes</strong></td><td>References have different constraints</td><td><code>struct Comparer { first: &amp;'a str, second: &amp;'b str }</code></td></tr>
+<tr><td><strong>Mixed owned/borrowed</strong></td><td>Some data owned, some referenced</td><td><code>struct Config { name: String, content: &amp;'a str }</code></td></tr>
+<tr><td><strong>Optional references</strong></td><td>References might not exist</td><td><code>struct Handler { callback: Option }</code></td></tr>
+</tbody></table>
+<h3 id="quick-decision-guide"><strong>Quick Decision Guide</strong></h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Ask yourself:
+</span><span style="color:#a7adba;">// 1. Do I need to reference existing data?
+</span><span style="color:#a7adba;">//    No  → Use owned types (String, Vec, etc.)
+</span><span style="color:#a7adba;">//    Yes → Use references with lifetimes
+</span><span>
+</span><span style="color:#a7adba;">// 2. Do all my references have the same lifetime constraints?
+</span><span style="color:#a7adba;">//    Yes → Use single lifetime parameter
+</span><span style="color:#a7adba;">//    No  → Use multiple lifetime parameters
+</span><span>
+</span><span style="color:#a7adba;">// 3. Is the lifetime relationship complex?
+</span><span style="color:#a7adba;">//    Yes → Consider redesigning with owned data
+</span><span style="color:#a7adba;">//    No  → Proceed with lifetime annotations
+</span></code></pre>
+<p><strong>Understanding struct lifetimes is like learning traffic rules</strong> - they might seem complicated at first, but they keep everyone safe and make the system work smoothly. Start with simple examples, understand the "library checkout" mental model, and gradually work up to more complex patterns!</p>
+<ol>
+<li>https://web.mit.edu/rust-lang_v1.25/arch/amd64_ubuntu1404/share/doc/rust/html/book/second-edition/ch10-03-lifetime-syntax.html</li>
+<li>https://stackoverflow.com/questions/27589054/what-is-the-correct-way-to-use-lifetimes-with-a-struct-in-rust</li>
+<li>https://doc.rust-lang.org/rust-by-example/scope/lifetime/struct.html</li>
+<li>https://doc.rust-lang.org/book/ch10-03-lifetime-syntax.html</li>
+<li>https://www.reddit.com/r/rust/comments/14296mx/how_does_lifetimes_work_with_structs_in_rust/</li>
+<li>https://dev.to/francescoxx/lifetimes-in-rust-explained-4og8</li>
+<li>https://doc.rust-lang.org/rust-by-example/scope/lifetime.html</li>
+<li>https://earthly.dev/blog/rust-lifetimes-ownership-burrowing/</li>
+<li>https://www.freecodecamp.org/news/what-are-lifetimes-in-rust-explained-with-code-examples/</li>
+<li>https://www.reddit.com/r/rust/comments/bltnfv/simplest_best_explanation_of_lifetimes/</li>
+<li>https://blog.thoughtram.io/lifetimes-in-rust/</li>
+<li>https://www.youtube.com/watch?v=S-SkEA4QWWE</li>
+<li>https://stackoverflow.com/questions/70205231/whats-the-literal-meaning-of-lifetimes-in-a-rust-function-struct-definition</li>
+<li>https://users.rust-lang.org/t/why-we-need-lifetime-annotation-in-a-struct/50495</li>
+<li>https://www.naiquev.in/understanding-lifetimes-in-rust.html</li>
+<li>https://users.rust-lang.org/t/what-is-the-relationship-between-the-value-of-a-struct-and-the-lifetime-in-reference-field/88485</li>
+<li>https://users.rust-lang.org/t/do-not-understand-lifetimes-in-structs/49541</li>
+<li>https://users.rust-lang.org/t/help-understanding-multiple-lifetimes-in-structs/82921</li>
+<li>https://www.reddit.com/r/rust/comments/1kmad2y/lifetime_parameters_for_structs_in_rust/</li>
+</ol>
+
+    
+        </div>
+
+    </article>
+</main>
+
+
+    <script type="text/javascript" src="http://localhost/elasticlunr.min.js" defer></script>
+    <script type="text/javascript" src="http://localhost/search_index.en.js" defer></script>
+<script type="text/javascript" src="http://localhost/js.js" defer></script>
+
+</body>
+</html>

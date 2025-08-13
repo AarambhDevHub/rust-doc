@@ -1,0 +1,1400 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://localhost/main.css">
+    <link rel="icon" href="https://www.rust-lang.org/static/images/favicon-16x16.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Rust Programming Course! | Copy Trait in Rust </title>
+</head>
+<body>
+
+<main>
+    
+    <nav>
+            <a href="http:&#x2F;&#x2F;localhost">
+                        <img src="https://www.rust-lang.org/static/images/rust-logo-blk.svg" alt="logo"/>
+                    </a>
+                <!-- -->
+
+            <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+            <div id="trees">
+                <input class="tree-toggle" type="checkbox" id="day-1-introduction"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-1-introduction">Day 1: Introduction</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 1/chapter-1/">What is Rust and why use it?</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-2/">Installing Rust Toolchain (rustup, cargo)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-3/">Setting up Development (VS Code + Hello World)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 1/chapter-4/">Understanding Cargo Project Structure</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-2-basic-syntax-variables"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-2-basic-syntax-variables">Day 2: Basic Syntax &amp; Variables</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 2/chapter-1/">Variables and Mutability in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-2/">Data Types in Rust: Integers, Floats, Booleans, and Characters</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-3/">Constants vs Variables</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-4/">Understanding Shadowing in Rust: A Practical Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 2/chapter-5/">Basic Input&#x2F;Output</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-3-functions-control-flow"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-3-functions-control-flow">Day 3: Functions &amp; Control Flow</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 3/chapter-1/">Function Syntax and Parameters in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-2/">Return Values and Expressions vs Statements</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-3/">If&#x2F;Else Statements in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-4/">Match Expressions in Rust: Powerful Pattern Matching</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 3/chapter-5/">Loops in Rust: loop, while, for Explained</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-4-data-types-deep-dive"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-4-data-types-deep-dive">Day 4: Data Types Deep Dive</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 4/chapter-1/">Compound Types (Tuples, Arrays)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-2/">String vs &amp;str in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-3/">Vector Basics in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-4/">Type Annotations and Inference in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 4/chapter-5/">Practical Rust Exercises</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-5-practice-review"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-5-practice-review">Day 5: Practice &amp; Review</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 5/chapter-1/">Day 5: Practice &amp; Review</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-6-ownership-fundamentals"
+                           checked/>
+                    <label class="tree-toggle-label"
+                           for="day-6-ownership-fundamentals">Day 6: Ownership Fundamentals</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 6/chapter-1/">Ownership in Rust: A Detailed Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-2/">Stack vs Heap in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-3/">Understanding Ownership in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 6/chapter-4/">Move Semantics in Rust</a>
+                            </li>
+
+                            <li class="active">
+                                <a href="http://localhost/day 6/chapter-5/">Copy Trait in Rust</a>
+                            </li>
+
+                            
+                                    
+                                    
+                                        <ul id="toc">
+                                            <li><a href="
+                                                        http://localhost/day 6/chapter-5/#copy-trait-basics-in-rust-comprehensive-documentation">Copy Trait Basics in Rust: Comprehensive Documentation</a>
+                                                    <ul>
+                                                            <li>
+                                                                    <a href="http://localhost/day 6/chapter-5/#what-is-the-copy-trait">What is the Copy Trait?</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 6/chapter-5/#copy-vs-move-the-fundamental-distinction">Copy vs Move: The Fundamental Distinction</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 6/chapter-5/#built-in-types-that-implement-copy">Built-in Types That Implement Copy</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 6/chapter-5/#types-that-do-not-implement-copy">Types That Do NOT Implement Copy</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 6/chapter-5/#implementing-copy-for-custom-types">Implementing Copy for Custom Types</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 6/chapter-5/#copy-semantics-in-different-contexts">Copy Semantics in Different Contexts</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 6/chapter-5/#memory-implications-of-copy">Memory Implications of Copy</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 6/chapter-5/#copy-vs-clone">Copy vs Clone</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 6/chapter-5/#advanced-copy-patterns">Advanced Copy Patterns</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 6/chapter-5/#common-pitfalls-and-best-practices">Common Pitfalls and Best Practices</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 6/chapter-5/#testing-copy-behavior">Testing Copy Behavior</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 6/chapter-5/#performance-considerations">Performance Considerations</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="http://localhost/day 6/chapter-5/#summary-and-best-practices">Summary and Best Practices</a>
+                                                                </li>
+                                                            </ul>
+                                                    </li>
+                                            </ul>
+                                    </ul>
+                <input class="tree-toggle" type="checkbox" id="day-7-references-borrowing"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-7-references-borrowing">Day 7: References &amp; Borrowing</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 7/chapter-1/">Immutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-2/">Mutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-3/">Borrowing Rules</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-4/">Reference Lifetime Basics</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 7/chapter-5/">Common Borrowing Errors and Solutions</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-8-slices"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-8-slices">Day 8: Slices</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 8/chapter-1/">String Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-2/">Array Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-3/">Slice Syntax and Usage</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-4/">Practical Applications</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 8/chapter-5/">Memory Safety Benefits</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-9-advanced-ownership"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-9-advanced-ownership">Day 9: Advanced Ownership</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 9/chapter-1/">Clone Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-2/">Drop Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-3/">RAII Pattern</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-4/">Memory Management Comparison with Other Languages</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 9/chapter-5/">Best Practices (Advanced Ownership)</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-10-ownership-practice"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-10-ownership-practice">Day 10: Ownership Practice</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 10/chapter-1/">Complex Ownership Scenarios</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-2/">Debugging Ownership Errors</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-3/">Code Refactoring Exercises</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 10/chapter-4/">Group Problem-Solving</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-11-structs-basics"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-11-structs-basics">Day 11: Structs Basics</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 11/chapter-1/">Defining and Instantiating Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-2/">Field Access and Modification</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-3/">Tuple Structs and Unit Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-4/">Struct Update Syntax</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 11/chapter-5/">Ownership of Struct Data</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-12-methods-associated-functions"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-12-methods-associated-functions">Day 12: Methods &amp; Associated Functions</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 12/chapter-1/">Implementing Methods with impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-2/">&amp;self, &amp;mut self, and self</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-3/">Associated Functions (like Constructors)</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-4/">Multiple impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 12/chapter-5/">Method Chaining</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-13-advanced-struct-concepts"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-13-advanced-struct-concepts">Day 13: Advanced Struct Concepts</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 13/chapter-1/">Struct Lifetime Parameters</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-2/">Debug Trait and Custom Formatting</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-3/">Builder Pattern Implementation</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-4/">Struct Composition</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 13/chapter-5/">Best Practices for Struct Design</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-14-enums-pattern-matching"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-14-enums-pattern-matching">Day 14: Enums &amp; Pattern Matching</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 14/chapter-1/">Defining Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-2/">Enum Variants with Data</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-3/">Option&lt;T&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-4/">Result&lt;T, E&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 14/chapter-5/">Advanced Match Patterns in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-15-practice-project"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-15-practice-project">Day 15: Practice Project</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 15/chapter-1/">Building a Simple CLI Calculator in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-16-vectors"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-16-vectors">Day 16: Vectors</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 16/chapter-1/">Creating and Updating Vectors</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-2/">Vector Methods: push, pop, iter</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-3/">Accessing Vector Elements Safely</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-4/">Vector of Different Types with Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 16/chapter-5/">Performance Considerations</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-17-hashmaps-other-collections"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-17-hashmaps-other-collections">Day 17: HashMaps &amp; Other Collections</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 17/chapter-1/">HashMap Creation and Manipulation</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-2/">Keys and Values Ownership</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-3/">HashMap Methods and Iteration</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-4/">When to Use Different Collections</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 17/chapter-5/">BTreeMap Introduction</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-18-error-handling"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-18-error-handling">Day 18: Error Handling</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="http://localhost/day 18/chapter-1/">Panic! and When to Use It</a>
+                            </li>
+
+                            <li >
+                                <a href="http://localhost/day 18/chapter-2/">Result&lt;T, E&gt; in Depth</a>
+                            </li>
+
+                            </ul>
+                </div>
+        </nav>
+    <article>
+
+        <div id="on_right">
+                <span id="search-ico" class="ms-Icon--Search"></span>
+            </div>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="Search as you type...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        <div id="wrap">
+            
+        <h1 id="copy-trait-basics-in-rust-comprehensive-documentation">Copy Trait Basics in Rust: Comprehensive Documentation</h1>
+<p>Building on your understanding of move semantics and ownership rules, let's explore the <strong>Copy trait</strong> - a fundamental marker trait that fundamentally changes how Rust handles value assignment and function calls. Understanding the Copy trait is essential for comprehending why some types move while others copy, and how this affects your program's performance and memory management.</p>
+<h2 id="what-is-the-copy-trait">What is the Copy Trait?</h2>
+<p>The <strong>Copy trait</strong> is a <strong>marker trait</strong> that indicates a type's values can be duplicated simply by copying bits. When a type implements Copy, assignment creates a new copy of the data rather than moving ownership. This trait is fundamental to Rust's type system and determines whether values follow move semantics or copy semantics.</p>
+<h3 id="copy-trait-definition">Copy Trait Definition</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Simplified version of the actual Copy trait
+</span><span style="color:#b48ead;">pub trait </span><span>Copy: Clone {}
+</span><span>
+</span><span style="color:#a7adba;">// The actual Copy trait is a marker trait with no methods
+</span><span style="color:#a7adba;">// It requires the type to also implement Clone
+</span></code></pre>
+<p><strong>Key characteristics:</strong></p>
+<ul>
+<li><strong>Marker trait</strong> - Has no methods, just indicates capability</li>
+<li><strong>Automatic behavior</strong> - Compiler generates copying behavior</li>
+<li><strong>Requires Clone</strong> - All Copy types must also implement Clone</li>
+<li><strong>Bitwise copy</strong> - Creates exact bit-for-bit duplicates</li>
+</ul>
+<h2 id="copy-vs-move-the-fundamental-distinction">Copy vs Move: The Fundamental Distinction</h2>
+<h3 id="copy-types-behavior">Copy Types Behavior</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">copy_behavior_demo</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// Copy types: assignment creates a duplicate
+</span><span>    </span><span style="color:#b48ead;">let</span><span> x = </span><span style="color:#d08770;">5</span><span>;        </span><span style="color:#a7adba;">// i32 implements Copy
+</span><span>    </span><span style="color:#b48ead;">let</span><span> y = x;        </span><span style="color:#a7adba;">// x is copied to y
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">x: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">, y: </span><span style="color:#d08770;">{}</span><span>&quot;, x, y);  </span><span style="color:#a7adba;">// Both are valid and usable
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Function calls with Copy types
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">use_number</span><span>(</span><span style="color:#bf616a;">n</span><span>: </span><span style="color:#b48ead;">i32</span><span>) {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Number: </span><span style="color:#d08770;">{}</span><span>&quot;, n);
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#96b5b4;">use_number</span><span>(x);    </span><span style="color:#a7adba;">// x is copied to function parameter
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">x is still valid: </span><span style="color:#d08770;">{}</span><span>&quot;, x);  </span><span style="color:#a7adba;">// x remains accessible
+</span><span>}
+</span></code></pre>
+<h3 id="move-types-behavior-review">Move Types Behavior (Review)</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">move_behavior_demo</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// Move types: assignment transfers ownership
+</span><span>    </span><span style="color:#b48ead;">let</span><span> s1 = String::from(&quot;</span><span style="color:#a3be8c;">hello</span><span>&quot;);  </span><span style="color:#a7adba;">// String does NOT implement Copy
+</span><span>    </span><span style="color:#b48ead;">let</span><span> s2 = s1;                     </span><span style="color:#a7adba;">// s1 is moved to s2
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// println!(&quot;s1: {}, s2: {}&quot;, s1, s2);  // Error: s1 moved
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">s2: </span><span style="color:#d08770;">{}</span><span>&quot;, s2);  </span><span style="color:#a7adba;">// Only s2 is valid
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Function calls with Move types
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">use_string</span><span>(</span><span style="color:#bf616a;">s</span><span>: String) {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">String: </span><span style="color:#d08770;">{}</span><span>&quot;, s);
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#96b5b4;">use_string</span><span>(s2);  </span><span style="color:#a7adba;">// s2 is moved to function
+</span><span>    </span><span style="color:#a7adba;">// println!(&quot;s2: {}&quot;, s2);  // Error: s2 moved
+</span><span>}
+</span></code></pre>
+<h2 id="built-in-types-that-implement-copy">Built-in Types That Implement Copy</h2>
+<h3 id="primitive-types">Primitive Types</h3>
+<p>All of Rust's primitive types implement Copy:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">primitive_copy_types</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// Integer types
+</span><span>    </span><span style="color:#b48ead;">let</span><span> i8_val: </span><span style="color:#b48ead;">i8 </span><span>= </span><span style="color:#d08770;">42</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> i16_val: </span><span style="color:#b48ead;">i16 </span><span>= </span><span style="color:#d08770;">1000</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> i32_val: </span><span style="color:#b48ead;">i32 </span><span>= </span><span style="color:#d08770;">100000</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> i64_val: </span><span style="color:#b48ead;">i64 </span><span>= </span><span style="color:#d08770;">1000000000</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> i128_val: </span><span style="color:#b48ead;">i128 </span><span>= </span><span style="color:#d08770;">123456789012345678901234567890</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> isize_val: </span><span style="color:#b48ead;">isize </span><span>= </span><span style="color:#d08770;">42</span><span>;
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Unsigned integer types
+</span><span>    </span><span style="color:#b48ead;">let</span><span> u8_val: </span><span style="color:#b48ead;">u8 </span><span>= </span><span style="color:#d08770;">255</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> u16_val: </span><span style="color:#b48ead;">u16 </span><span>= </span><span style="color:#d08770;">65535</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> u32_val: </span><span style="color:#b48ead;">u32 </span><span>= </span><span style="color:#d08770;">4294967295</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> u64_val: </span><span style="color:#b48ead;">u64 </span><span>= </span><span style="color:#d08770;">18446744073709551615</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> u128_val: </span><span style="color:#b48ead;">u128 </span><span>= </span><span style="color:#d08770;">340282366920938463463374607431768211455</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> usize_val: </span><span style="color:#b48ead;">usize </span><span>= </span><span style="color:#d08770;">42</span><span>;
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Floating-point types
+</span><span>    </span><span style="color:#b48ead;">let</span><span> f32_val: </span><span style="color:#b48ead;">f32 </span><span>= </span><span style="color:#d08770;">3.14159</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> f64_val: </span><span style="color:#b48ead;">f64 </span><span>= </span><span style="color:#d08770;">3.141592653589793</span><span>;
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Boolean type
+</span><span>    </span><span style="color:#b48ead;">let</span><span> bool_val: </span><span style="color:#b48ead;">bool </span><span>= </span><span style="color:#d08770;">true</span><span>;
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Character type
+</span><span>    </span><span style="color:#b48ead;">let</span><span> char_val: </span><span style="color:#b48ead;">char </span><span>= &#39;</span><span style="color:#a3be8c;">🦀</span><span>&#39;;
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// All of these can be copied freely
+</span><span>    </span><span style="color:#b48ead;">let</span><span> i32_copy = i32_val;  </span><span style="color:#a7adba;">// Copied, not moved
+</span><span>    </span><span style="color:#b48ead;">let</span><span> f64_copy = f64_val;  </span><span style="color:#a7adba;">// Copied, not moved
+</span><span>    </span><span style="color:#b48ead;">let</span><span> bool_copy = bool_val; </span><span style="color:#a7adba;">// Copied, not moved
+</span><span>    </span><span style="color:#b48ead;">let</span><span> char_copy = char_val; </span><span style="color:#a7adba;">// Copied, not moved
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">All values copied successfully!</span><span>&quot;);
+</span><span>}
+</span></code></pre>
+<h3 id="compound-types-that-implement-copy">Compound Types That Implement Copy</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">compound_copy_types</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// Arrays of Copy types
+</span><span>    </span><span style="color:#b48ead;">let</span><span> array_copy: [</span><span style="color:#b48ead;">i32</span><span>; </span><span style="color:#d08770;">5</span><span>] = [</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">2</span><span>, </span><span style="color:#d08770;">3</span><span>, </span><span style="color:#d08770;">4</span><span>, </span><span style="color:#d08770;">5</span><span>];
+</span><span>    </span><span style="color:#b48ead;">let</span><span> array_duplicate = array_copy;  </span><span style="color:#a7adba;">// Entire array copied
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Original: </span><span style="color:#d08770;">{:?}</span><span style="color:#a3be8c;">, Copy: </span><span style="color:#d08770;">{:?}</span><span>&quot;, array_copy, array_duplicate);
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Tuples of Copy types
+</span><span>    </span><span style="color:#b48ead;">let</span><span> tuple_copy: (</span><span style="color:#b48ead;">i32</span><span>, </span><span style="color:#b48ead;">f64</span><span>, </span><span style="color:#b48ead;">bool</span><span>) = (</span><span style="color:#d08770;">42</span><span>, </span><span style="color:#d08770;">3.14</span><span>, </span><span style="color:#d08770;">true</span><span>);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> tuple_duplicate = tuple_copy;  </span><span style="color:#a7adba;">// Entire tuple copied
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Original: </span><span style="color:#d08770;">{:?}</span><span style="color:#a3be8c;">, Copy: </span><span style="color:#d08770;">{:?}</span><span>&quot;, tuple_copy, tuple_duplicate);
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Structs with only Copy fields (if derive Copy)
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Copy, Clone, Debug)]
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>Point {
+</span><span>        </span><span style="color:#bf616a;">x</span><span>: </span><span style="color:#b48ead;">f64</span><span>,
+</span><span>        </span><span style="color:#bf616a;">y</span><span>: </span><span style="color:#b48ead;">f64</span><span>,
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> point_original = Point { x: </span><span style="color:#d08770;">10.0</span><span>, y: </span><span style="color:#d08770;">20.0 </span><span>};
+</span><span>    </span><span style="color:#b48ead;">let</span><span> point_copy = point_original;  </span><span style="color:#a7adba;">// Struct copied
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Original: </span><span style="color:#d08770;">{:?}</span><span style="color:#a3be8c;">, Copy: </span><span style="color:#d08770;">{:?}</span><span>&quot;, point_original, point_copy);
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Enums with only Copy variants
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Copy, Clone, Debug)]
+</span><span>    </span><span style="color:#b48ead;">enum </span><span>Direction {
+</span><span>        North,
+</span><span>        South,
+</span><span>        East,
+</span><span>        West,
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> dir_original = Direction::North;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> dir_copy = dir_original;  </span><span style="color:#a7adba;">// Enum copied
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Original: </span><span style="color:#d08770;">{:?}</span><span style="color:#a3be8c;">, Copy: </span><span style="color:#d08770;">{:?}</span><span>&quot;, dir_original, dir_copy);
+</span><span>}
+</span></code></pre>
+<h3 id="reference-types">Reference Types</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">reference_copy_behavior</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> value = </span><span style="color:#d08770;">42</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> ref1 = &amp;value;      </span><span style="color:#a7adba;">// Immutable reference
+</span><span>    </span><span style="color:#b48ead;">let</span><span> ref2 = ref1;        </span><span style="color:#a7adba;">// Reference itself is copied
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Both references point to the same data
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">ref1: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">, ref2: </span><span style="color:#d08770;">{}</span><span>&quot;, ref1, ref2);  </span><span style="color:#a7adba;">// Both valid
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Same address: </span><span style="color:#d08770;">{}</span><span>&quot;, std::ptr::eq(ref1, ref2));  </span><span style="color:#a7adba;">// true
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Raw pointers also implement Copy
+</span><span>    </span><span style="color:#b48ead;">let</span><span> raw_ptr = &amp;value as </span><span style="color:#b48ead;">*const i32</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> raw_copy = raw_ptr;  </span><span style="color:#a7adba;">// Pointer copied
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">unsafe </span><span>{
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">raw_ptr: </span><span style="color:#d08770;">{:?}</span><span style="color:#a3be8c;">, raw_copy: </span><span style="color:#d08770;">{:?}</span><span>&quot;, raw_ptr, raw_copy);
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h2 id="types-that-do-not-implement-copy">Types That Do NOT Implement Copy</h2>
+<h3 id="heap-allocated-types">Heap-Allocated Types</h3>
+<p>Types that manage heap-allocated resources cannot implement Copy:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">non_copy_types</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// String - manages heap-allocated text
+</span><span>    </span><span style="color:#b48ead;">let</span><span> string1 = String::from(&quot;</span><span style="color:#a3be8c;">hello</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> string2 = string1;  </span><span style="color:#a7adba;">// Move, not copy
+</span><span>    </span><span style="color:#a7adba;">// println!(&quot;{}&quot;, string1);  // Error: string1 moved
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Vec - manages heap-allocated array
+</span><span>    </span><span style="color:#b48ead;">let</span><span> vec1 = vec![</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">2</span><span>, </span><span style="color:#d08770;">3</span><span>];
+</span><span>    </span><span style="color:#b48ead;">let</span><span> vec2 = vec1;  </span><span style="color:#a7adba;">// Move, not copy
+</span><span>    </span><span style="color:#a7adba;">// println!(&quot;{:?}&quot;, vec1);  // Error: vec1 moved
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// HashMap - manages heap-allocated hash table
+</span><span>    </span><span style="color:#b48ead;">use </span><span>std::collections::HashMap;
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> map1 = HashMap::new();
+</span><span>    map1.</span><span style="color:#96b5b4;">insert</span><span>(&quot;</span><span style="color:#a3be8c;">key</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">value</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> map2 = map1;  </span><span style="color:#a7adba;">// Move, not copy
+</span><span>    </span><span style="color:#a7adba;">// println!(&quot;{:?}&quot;, map1);  // Error: map1 moved
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Box - manages heap-allocated value
+</span><span>    </span><span style="color:#b48ead;">let</span><span> box1 = Box::new(</span><span style="color:#d08770;">42</span><span>);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> box2 = box1;  </span><span style="color:#a7adba;">// Move, not copy
+</span><span>    </span><span style="color:#a7adba;">// println!(&quot;{}&quot;, box1);  // Error: box1 moved
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">All non-Copy types moved successfully</span><span>&quot;);
+</span><span>}
+</span></code></pre>
+<h3 id="structs-with-non-copy-fields">Structs with Non-Copy Fields</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">structs_with_non_copy_fields</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// This struct cannot implement Copy because String doesn&#39;t implement Copy
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>Person {
+</span><span>        </span><span style="color:#bf616a;">name</span><span>: String,  </span><span style="color:#a7adba;">// String does NOT implement Copy
+</span><span>        </span><span style="color:#bf616a;">age</span><span>: </span><span style="color:#b48ead;">u32</span><span>,      </span><span style="color:#a7adba;">// u32 implements Copy
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> person1 = Person {
+</span><span>        name: String::from(&quot;</span><span style="color:#a3be8c;">Alice</span><span>&quot;),
+</span><span>        age: </span><span style="color:#d08770;">30</span><span>,
+</span><span>    };
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> person2 = person1;  </span><span style="color:#a7adba;">// Move, not copy
+</span><span>    </span><span style="color:#a7adba;">// println!(&quot;{}&quot;, person1.name);  // Error: person1 moved
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Even if only one field is non-Copy, the entire struct is non-Copy
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>MixedStruct {
+</span><span>        </span><span style="color:#bf616a;">numbers</span><span>: Vec&lt;</span><span style="color:#b48ead;">i32</span><span>&gt;,  </span><span style="color:#a7adba;">// Non-Copy
+</span><span>        </span><span style="color:#bf616a;">count</span><span>: </span><span style="color:#b48ead;">usize</span><span>,       </span><span style="color:#a7adba;">// Copy
+</span><span>        </span><span style="color:#bf616a;">active</span><span>: </span><span style="color:#b48ead;">bool</span><span>,       </span><span style="color:#a7adba;">// Copy
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> mixed1 = MixedStruct {
+</span><span>        numbers: vec![</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">2</span><span>, </span><span style="color:#d08770;">3</span><span>],
+</span><span>        count: </span><span style="color:#d08770;">3</span><span>,
+</span><span>        active: </span><span style="color:#d08770;">true</span><span>,
+</span><span>    };
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> mixed2 = mixed1;  </span><span style="color:#a7adba;">// Move, not copy
+</span><span>    </span><span style="color:#a7adba;">// println!(&quot;{}&quot;, mixed1.count);  // Error: mixed1 moved
+</span><span>}
+</span></code></pre>
+<h2 id="implementing-copy-for-custom-types">Implementing Copy for Custom Types</h2>
+<h3 id="requirements-for-copy-implementation">Requirements for Copy Implementation</h3>
+<p>To implement Copy for a custom type, <strong>all fields must also implement Copy</strong>:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// This works - all fields implement Copy
+</span><span>#[</span><span style="color:#bf616a;">derive</span><span>(Copy, Clone, Debug)]
+</span><span style="color:#b48ead;">struct </span><span>Point2D {
+</span><span>    </span><span style="color:#bf616a;">x</span><span>: </span><span style="color:#b48ead;">f64</span><span>,    </span><span style="color:#a7adba;">// f64 implements Copy
+</span><span>    </span><span style="color:#bf616a;">y</span><span>: </span><span style="color:#b48ead;">f64</span><span>,    </span><span style="color:#a7adba;">// f64 implements Copy
+</span><span>}
+</span><span>
+</span><span>#[</span><span style="color:#bf616a;">derive</span><span>(Copy, Clone, Debug)]  
+</span><span style="color:#b48ead;">struct </span><span>Color {
+</span><span>    </span><span style="color:#bf616a;">r</span><span>: </span><span style="color:#b48ead;">u8</span><span>,     </span><span style="color:#a7adba;">// u8 implements Copy
+</span><span>    </span><span style="color:#bf616a;">g</span><span>: </span><span style="color:#b48ead;">u8</span><span>,     </span><span style="color:#a7adba;">// u8 implements Copy  
+</span><span>    </span><span style="color:#bf616a;">b</span><span>: </span><span style="color:#b48ead;">u8</span><span>,     </span><span style="color:#a7adba;">// u8 implements Copy
+</span><span>    </span><span style="color:#bf616a;">a</span><span>: </span><span style="color:#b48ead;">u8</span><span>,     </span><span style="color:#a7adba;">// u8 implements Copy
+</span><span>}
+</span><span>
+</span><span>#[</span><span style="color:#bf616a;">derive</span><span>(Copy, Clone, Debug)]
+</span><span style="color:#b48ead;">struct </span><span>Pixel {
+</span><span>    </span><span style="color:#bf616a;">position</span><span>: Point2D,  </span><span style="color:#a7adba;">// Point2D implements Copy
+</span><span>    </span><span style="color:#bf616a;">color</span><span>: Color,       </span><span style="color:#a7adba;">// Color implements Copy
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">custom_copy_types</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> point1 = Point2D { x: </span><span style="color:#d08770;">10.0</span><span>, y: </span><span style="color:#d08770;">20.0 </span><span>};
+</span><span>    </span><span style="color:#b48ead;">let</span><span> point2 = point1;  </span><span style="color:#a7adba;">// Copied, not moved
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> color1 = Color { r: </span><span style="color:#d08770;">255</span><span>, g: </span><span style="color:#d08770;">0</span><span>, b: </span><span style="color:#d08770;">0</span><span>, a: </span><span style="color:#d08770;">255 </span><span>};
+</span><span>    </span><span style="color:#b48ead;">let</span><span> color2 = color1;  </span><span style="color:#a7adba;">// Copied, not moved
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> pixel1 = Pixel { position: point1, color: color1 };
+</span><span>    </span><span style="color:#b48ead;">let</span><span> pixel2 = pixel1;  </span><span style="color:#a7adba;">// Copied, not moved
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// All original values still accessible
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">point1: </span><span style="color:#d08770;">{:?}</span><span style="color:#a3be8c;">, point2: </span><span style="color:#d08770;">{:?}</span><span>&quot;, point1, point2);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">color1: </span><span style="color:#d08770;">{:?}</span><span style="color:#a3be8c;">, color2: </span><span style="color:#d08770;">{:?}</span><span>&quot;, color1, color2);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">pixel1: </span><span style="color:#d08770;">{:?}</span><span style="color:#a3be8c;">, pixel2: </span><span style="color:#d08770;">{:?}</span><span>&quot;, pixel1, pixel2);
+</span><span>}
+</span></code></pre>
+<h3 id="copy-with-enums">Copy with Enums</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Enum with only Copy variants
+</span><span>#[</span><span style="color:#bf616a;">derive</span><span>(Copy, Clone, Debug)]
+</span><span style="color:#b48ead;">enum </span><span>Status {
+</span><span>    Active,
+</span><span>    Inactive,
+</span><span>    Pending(</span><span style="color:#b48ead;">u32</span><span>),    </span><span style="color:#a7adba;">// u32 implements Copy
+</span><span>    Error(</span><span style="color:#b48ead;">i32</span><span>),      </span><span style="color:#a7adba;">// i32 implements Copy
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// This enum CANNOT implement Copy
+</span><span style="color:#b48ead;">enum </span><span>Message {
+</span><span>    Text(String),    </span><span style="color:#a7adba;">// String does NOT implement Copy
+</span><span>    Number(</span><span style="color:#b48ead;">i32</span><span>),     </span><span style="color:#a7adba;">// i32 implements Copy
+</span><span>    Quit,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">enum_copy_behavior</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> status1 = Status::Active;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> status2 = status1;  </span><span style="color:#a7adba;">// Copied
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> status3 = Status::Pending(</span><span style="color:#d08770;">42</span><span>);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> status4 = status3;  </span><span style="color:#a7adba;">// Copied
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">status1: </span><span style="color:#d08770;">{:?}</span><span style="color:#a3be8c;">, status2: </span><span style="color:#d08770;">{:?}</span><span>&quot;, status1, status2);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">status3: </span><span style="color:#d08770;">{:?}</span><span style="color:#a3be8c;">, status4: </span><span style="color:#d08770;">{:?}</span><span>&quot;, status3, status4);
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Message enum would move, not copy
+</span><span>    </span><span style="color:#b48ead;">let</span><span> msg1 = Message::Text(String::from(&quot;</span><span style="color:#a3be8c;">hello</span><span>&quot;));
+</span><span>    </span><span style="color:#b48ead;">let</span><span> msg2 = msg1;  </span><span style="color:#a7adba;">// Moved
+</span><span>    </span><span style="color:#a7adba;">// println!(&quot;{:?}&quot;, msg1);  // Error: msg1 moved
+</span><span>}
+</span></code></pre>
+<h3 id="manual-copy-implementation">Manual Copy Implementation</h3>
+<p>You rarely need to implement Copy manually, but here's how it looks:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Manual implementation (usually use derive instead)
+</span><span>#[</span><span style="color:#bf616a;">derive</span><span>(Clone, Debug)]
+</span><span style="color:#b48ead;">struct </span><span>ManualCopy {
+</span><span>    </span><span style="color:#bf616a;">value</span><span>: </span><span style="color:#b48ead;">i32</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Manual Copy implementation
+</span><span style="color:#b48ead;">impl </span><span>Copy </span><span style="color:#b48ead;">for </span><span>ManualCopy {}
+</span><span>
+</span><span style="color:#a7adba;">// Or more commonly, just derive it
+</span><span>#[</span><span style="color:#bf616a;">derive</span><span>(Copy, Clone, Debug)]
+</span><span style="color:#b48ead;">struct </span><span>AutoCopy {
+</span><span>    </span><span style="color:#bf616a;">value</span><span>: </span><span style="color:#b48ead;">i32</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">manual_vs_auto_copy</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> manual1 = ManualCopy { value: </span><span style="color:#d08770;">42 </span><span>};
+</span><span>    </span><span style="color:#b48ead;">let</span><span> manual2 = manual1;  </span><span style="color:#a7adba;">// Copied
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> auto1 = AutoCopy { value: </span><span style="color:#d08770;">42 </span><span>};
+</span><span>    </span><span style="color:#b48ead;">let</span><span> auto2 = auto1;  </span><span style="color:#a7adba;">// Copied
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">manual1: </span><span style="color:#d08770;">{:?}</span><span style="color:#a3be8c;">, manual2: </span><span style="color:#d08770;">{:?}</span><span>&quot;, manual1, manual2);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">auto1: </span><span style="color:#d08770;">{:?}</span><span style="color:#a3be8c;">, auto2: </span><span style="color:#d08770;">{:?}</span><span>&quot;, auto1, auto2);
+</span><span>}
+</span></code></pre>
+<h2 id="copy-semantics-in-different-contexts">Copy Semantics in Different Contexts</h2>
+<h3 id="function-parameters">Function Parameters</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">copy_in_functions</span><span>() {
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Copy, Clone, Debug)]
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>Data {
+</span><span>        </span><span style="color:#bf616a;">value</span><span>: </span><span style="color:#b48ead;">i32</span><span>,
+</span><span>        </span><span style="color:#bf616a;">flag</span><span>: </span><span style="color:#b48ead;">bool</span><span>,
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">process_copy_type</span><span>(</span><span style="color:#bf616a;">data</span><span>: Data) {  </span><span style="color:#a7adba;">// Parameter receives copy
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Processing: </span><span style="color:#d08770;">{:?}</span><span>&quot;, data);
+</span><span>        </span><span style="color:#a7adba;">// data goes out of scope, but original is unaffected
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">process_reference</span><span>(</span><span style="color:#bf616a;">data</span><span>: &amp;Data) {  </span><span style="color:#a7adba;">// Parameter receives reference
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Processing reference: </span><span style="color:#d08770;">{:?}</span><span>&quot;, data);
+</span><span>        </span><span style="color:#a7adba;">// No copying, just borrowing
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> original = Data { value: </span><span style="color:#d08770;">42</span><span>, flag: </span><span style="color:#d08770;">true </span><span>};
+</span><span>    
+</span><span>    </span><span style="color:#96b5b4;">process_copy_type</span><span>(original);  </span><span style="color:#a7adba;">// original copied to function
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Original still valid: </span><span style="color:#d08770;">{:?}</span><span>&quot;, original);
+</span><span>    
+</span><span>    </span><span style="color:#96b5b4;">process_reference</span><span>(&amp;original);  </span><span style="color:#a7adba;">// original borrowed
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Original still valid: </span><span style="color:#d08770;">{:?}</span><span>&quot;, original);
+</span><span>}
+</span></code></pre>
+<h3 id="return-values">Return Values</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">copy_in_return_values</span><span>() {
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Copy, Clone, Debug)]
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>Config {
+</span><span>        </span><span style="color:#bf616a;">timeout</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>        </span><span style="color:#bf616a;">retries</span><span>: </span><span style="color:#b48ead;">u8</span><span>,
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">create_default_config</span><span>() -&gt; Config {
+</span><span>        Config {
+</span><span>            timeout: </span><span style="color:#d08770;">30</span><span>,
+</span><span>            retries: </span><span style="color:#d08770;">3</span><span>,
+</span><span>        }
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">modify_config</span><span>(</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">config</span><span>: Config) -&gt; Config {
+</span><span>        config.timeout = </span><span style="color:#d08770;">60</span><span>;
+</span><span>        config  </span><span style="color:#a7adba;">// Return by value (copied out)
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> config1 = </span><span style="color:#96b5b4;">create_default_config</span><span>();  </span><span style="color:#a7adba;">// Copy returned
+</span><span>    </span><span style="color:#b48ead;">let</span><span> config2 = </span><span style="color:#96b5b4;">modify_config</span><span>(config1);   </span><span style="color:#a7adba;">// config1 copied in, result copied out
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// config1 is still valid because it was copied
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Original config: </span><span style="color:#d08770;">{:?}</span><span>&quot;, config1);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Modified config: </span><span style="color:#d08770;">{:?}</span><span>&quot;, config2);
+</span><span>}
+</span></code></pre>
+<h3 id="collection-operations">Collection Operations</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">copy_in_collections</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// Vector of Copy types
+</span><span>    </span><span style="color:#b48ead;">let</span><span> numbers = vec![</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">2</span><span>, </span><span style="color:#d08770;">3</span><span>, </span><span style="color:#d08770;">4</span><span>, </span><span style="color:#d08770;">5</span><span>];
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Accessing elements of Copy types creates copies
+</span><span>    </span><span style="color:#b48ead;">let</span><span> first = numbers[</span><span style="color:#d08770;">0</span><span>];     </span><span style="color:#a7adba;">// i32 copied out of vector
+</span><span>    </span><span style="color:#b48ead;">let</span><span> second = *numbers.</span><span style="color:#96b5b4;">get</span><span>(</span><span style="color:#d08770;">1</span><span>).</span><span style="color:#96b5b4;">unwrap</span><span>();  </span><span style="color:#a7adba;">// i32 copied out
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Original vector elements unchanged
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">first: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">, second: </span><span style="color:#d08770;">{}</span><span>&quot;, first, second);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Vector: </span><span style="color:#d08770;">{:?}</span><span>&quot;, numbers);
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Iterator operations with Copy types
+</span><span>    </span><span style="color:#b48ead;">let</span><span> doubled: Vec = numbers.</span><span style="color:#96b5b4;">iter</span><span>()
+</span><span>        .</span><span style="color:#96b5b4;">map</span><span>(|&amp;</span><span style="color:#bf616a;">x</span><span>| x * </span><span style="color:#d08770;">2</span><span>)  </span><span style="color:#a7adba;">// x is copied from the reference
+</span><span>        .</span><span style="color:#96b5b4;">collect</span><span>();
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Doubled: </span><span style="color:#d08770;">{:?}</span><span>&quot;, doubled);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Original: </span><span style="color:#d08770;">{:?}</span><span>&quot;, numbers);  </span><span style="color:#a7adba;">// Still valid
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Custom Copy types in collections
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Copy, Clone, Debug)]
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>Point { </span><span style="color:#bf616a;">x</span><span>: </span><span style="color:#b48ead;">i32</span><span>, </span><span style="color:#bf616a;">y</span><span>: </span><span style="color:#b48ead;">i32 </span><span>}
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> points = vec![
+</span><span>        Point { x: </span><span style="color:#d08770;">1</span><span>, y: </span><span style="color:#d08770;">2 </span><span>},
+</span><span>        Point { x: </span><span style="color:#d08770;">3</span><span>, y: </span><span style="color:#d08770;">4 </span><span>},
+</span><span>        Point { x: </span><span style="color:#d08770;">5</span><span>, y: </span><span style="color:#d08770;">6 </span><span>},
+</span><span>    ];
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> first_point = points[</span><span style="color:#d08770;">0</span><span>];  </span><span style="color:#a7adba;">// Point copied out
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">First point: </span><span style="color:#d08770;">{:?}</span><span>&quot;, first_point);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Points vector: </span><span style="color:#d08770;">{:?}</span><span>&quot;, points);  </span><span style="color:#a7adba;">// Still valid
+</span><span>}
+</span></code></pre>
+<h2 id="memory-implications-of-copy">Memory Implications of Copy</h2>
+<h3 id="stack-allocation">Stack Allocation</h3>
+<p>Copy types are typically stored on the stack and copying is very efficient:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">copy_memory_layout</span><span>() {
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Copy, Clone, Debug)]
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>SmallStruct {
+</span><span>        </span><span style="color:#bf616a;">a</span><span>: </span><span style="color:#b48ead;">u32</span><span>,  </span><span style="color:#a7adba;">// 4 bytes
+</span><span>        </span><span style="color:#bf616a;">b</span><span>: </span><span style="color:#b48ead;">u16</span><span>,  </span><span style="color:#a7adba;">// 2 bytes
+</span><span>        </span><span style="color:#bf616a;">c</span><span>: </span><span style="color:#b48ead;">u8</span><span>,   </span><span style="color:#a7adba;">// 1 byte
+</span><span>        </span><span style="color:#a7adba;">// + padding for alignment
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> original = SmallStruct { a: </span><span style="color:#d08770;">1</span><span>, b: </span><span style="color:#d08770;">2</span><span>, c: </span><span style="color:#d08770;">3 </span><span>};
+</span><span>    </span><span style="color:#b48ead;">let</span><span> copy = original;  </span><span style="color:#a7adba;">// Entire struct copied on stack
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Both variables occupy separate stack space
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Original address: </span><span style="color:#d08770;">{:p}</span><span>&quot;, &amp;original);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Copy address: </span><span style="color:#d08770;">{:p}</span><span>&quot;, &amp;copy);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Size of SmallStruct: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> bytes</span><span>&quot;, std::mem::size_of::&lt;SmallStruct&gt;());
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Copying is just a fast memory copy operation
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> copies = Vec::new();
+</span><span>    </span><span style="color:#b48ead;">for </span><span>_ in </span><span style="color:#d08770;">0</span><span>..</span><span style="color:#d08770;">1000 </span><span>{
+</span><span>        copies.</span><span style="color:#96b5b4;">push</span><span>(original);  </span><span style="color:#a7adba;">// Fast copy operation each time
+</span><span>    }
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Created </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> copies efficiently</span><span>&quot;, copies.</span><span style="color:#96b5b4;">len</span><span>());
+</span><span>}
+</span></code></pre>
+<h3 id="performance-characteristics">Performance Characteristics</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>std::time::Instant;
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">copy_performance</span><span>() {
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Copy, Clone)]
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>LargeStruct {
+</span><span>        </span><span style="color:#bf616a;">data</span><span>: [</span><span style="color:#b48ead;">u64</span><span>; 100],  </span><span style="color:#a7adba;">// 800 bytes
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> large = LargeStruct { data: [</span><span style="color:#d08770;">42</span><span>; </span><span style="color:#d08770;">100</span><span>] };
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Benchmark copying
+</span><span>    </span><span style="color:#b48ead;">let</span><span> start = Instant::now();
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> copies = Vec::new();
+</span><span>    </span><span style="color:#b48ead;">for </span><span>_ in </span><span style="color:#d08770;">0</span><span>..</span><span style="color:#d08770;">100_000 </span><span>{
+</span><span>        copies.</span><span style="color:#96b5b4;">push</span><span>(large);  </span><span style="color:#a7adba;">// Copy operation
+</span><span>    }
+</span><span>    </span><span style="color:#b48ead;">let</span><span> copy_time = start.</span><span style="color:#96b5b4;">elapsed</span><span>();
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Copied 100k large structs in: </span><span style="color:#d08770;">{:?}</span><span>&quot;, copy_time);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Each copy: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> bytes</span><span>&quot;, std::mem::size_of::&lt;LargeStruct&gt;());
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Compare with move operations
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> vec_of_boxes = Vec::new();
+</span><span>    </span><span style="color:#b48ead;">let</span><span> start = Instant::now();
+</span><span>    </span><span style="color:#b48ead;">for </span><span>_ in </span><span style="color:#d08770;">0</span><span>..</span><span style="color:#d08770;">100_000 </span><span>{
+</span><span>        vec_of_boxes.</span><span style="color:#96b5b4;">push</span><span>(Box::new([</span><span style="color:#d08770;">42</span><span style="color:#b48ead;">u64</span><span>; </span><span style="color:#d08770;">100</span><span>]));  </span><span style="color:#a7adba;">// Heap allocation + move
+</span><span>    }
+</span><span>    </span><span style="color:#b48ead;">let</span><span> move_time = start.</span><span style="color:#96b5b4;">elapsed</span><span>();
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Created 100k boxed arrays in: </span><span style="color:#d08770;">{:?}</span><span>&quot;, move_time);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Move is </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">x slower than copy</span><span>&quot;, 
+</span><span>             move_time.</span><span style="color:#96b5b4;">as_nanos</span><span>() / copy_time.</span><span style="color:#96b5b4;">as_nanos</span><span>().</span><span style="color:#96b5b4;">max</span><span>(</span><span style="color:#d08770;">1</span><span>));
+</span><span>}
+</span></code></pre>
+<h2 id="copy-vs-clone">Copy vs Clone</h2>
+<h3 id="understanding-the-relationship">Understanding the Relationship</h3>
+<p>Copy and Clone are related but distinct:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">copy_vs_clone</span><span>() {
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Copy, Clone, Debug)]
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>CopyType {
+</span><span>        </span><span style="color:#bf616a;">value</span><span>: </span><span style="color:#b48ead;">i32</span><span>,
+</span><span>    }
+</span><span>    
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Clone, Debug)]
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>CloneOnlyType {
+</span><span>        </span><span style="color:#bf616a;">data</span><span>: String,
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> copy_val = CopyType { value: </span><span style="color:#d08770;">42 </span><span>};
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Copy types: assignment creates implicit copy
+</span><span>    </span><span style="color:#b48ead;">let</span><span> copy_duplicate = copy_val;  </span><span style="color:#a7adba;">// Automatic copying
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Original: </span><span style="color:#d08770;">{:?}</span><span style="color:#a3be8c;">, Copy: </span><span style="color:#d08770;">{:?}</span><span>&quot;, copy_val, copy_duplicate);
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Copy types: explicit clone also works
+</span><span>    </span><span style="color:#b48ead;">let</span><span> copy_cloned = copy_val.</span><span style="color:#96b5b4;">clone</span><span>();  </span><span style="color:#a7adba;">// Explicit cloning
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Cloned: </span><span style="color:#d08770;">{:?}</span><span>&quot;, copy_cloned);
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> clone_val = CloneOnlyType { data: String::from(&quot;</span><span style="color:#a3be8c;">hello</span><span>&quot;) };
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Clone-only types: assignment moves
+</span><span>    </span><span style="color:#b48ead;">let</span><span> clone_moved = clone_val;  </span><span style="color:#a7adba;">// Move, not copy
+</span><span>    </span><span style="color:#a7adba;">// println!(&quot;{:?}&quot;, clone_val);  // Error: clone_val moved
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Clone-only types: explicit clone required for duplication
+</span><span>    </span><span style="color:#b48ead;">let</span><span> clone_val2 = CloneOnlyType { data: String::from(&quot;</span><span style="color:#a3be8c;">world</span><span>&quot;) };
+</span><span>    </span><span style="color:#b48ead;">let</span><span> clone_duplicated = clone_val2.</span><span style="color:#96b5b4;">clone</span><span>();  </span><span style="color:#a7adba;">// Explicit cloning
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Original: </span><span style="color:#d08770;">{:?}</span><span style="color:#a3be8c;">, Cloned: </span><span style="color:#d08770;">{:?}</span><span>&quot;, clone_val2, clone_duplicated);
+</span><span>}
+</span></code></pre>
+<h3 id="when-to-use-each">When to Use Each</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">when_to_use_copy_vs_clone</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// Use Copy for small, simple types
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Copy, Clone, Debug)]
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>Coordinates {
+</span><span>        </span><span style="color:#bf616a;">x</span><span>: </span><span style="color:#b48ead;">f64</span><span>,
+</span><span>        </span><span style="color:#bf616a;">y</span><span>: </span><span style="color:#b48ead;">f64</span><span>,
+</span><span>        </span><span style="color:#bf616a;">z</span><span>: </span><span style="color:#b48ead;">f64</span><span>,
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Use Clone for types that manage resources
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Clone, Debug)]
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>ResourceManager {
+</span><span>        </span><span style="color:#bf616a;">name</span><span>: String,
+</span><span>        </span><span style="color:#bf616a;">connections</span><span>: Vec&lt;String&gt;,
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> coords = Coordinates { x: </span><span style="color:#d08770;">1.0</span><span>, y: </span><span style="color:#d08770;">2.0</span><span>, z: </span><span style="color:#d08770;">3.0 </span><span>};
+</span><span>    </span><span style="color:#b48ead;">let</span><span> coords_copy = coords;  </span><span style="color:#a7adba;">// Fast, automatic copy
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> manager = ResourceManager {
+</span><span>        name: String::from(&quot;</span><span style="color:#a3be8c;">Database</span><span>&quot;),
+</span><span>        connections: vec![String::from(&quot;</span><span style="color:#a3be8c;">conn1</span><span>&quot;), String::from(&quot;</span><span style="color:#a3be8c;">conn2</span><span>&quot;)],
+</span><span>    };
+</span><span>    </span><span style="color:#b48ead;">let</span><span> manager_clone = manager.</span><span style="color:#96b5b4;">clone</span><span>();  </span><span style="color:#a7adba;">// Explicit, potentially expensive clone
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Coordinates copied: </span><span style="color:#d08770;">{:?}</span><span>&quot;, coords_copy);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Manager cloned: </span><span style="color:#d08770;">{:?}</span><span>&quot;, manager_clone);
+</span><span>}
+</span></code></pre>
+<h2 id="advanced-copy-patterns">Advanced Copy Patterns</h2>
+<h3 id="copy-in-generic-contexts">Copy in Generic Contexts</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">copy_with_generics</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// Generic function that works with Copy types
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">duplicate_value</span><span>&lt;T: Copy&gt;(</span><span style="color:#bf616a;">value</span><span>: T) -&gt; (T, T) {
+</span><span>        (value, value)  </span><span style="color:#a7adba;">// Both copies of the same value
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Works with any Copy type
+</span><span>    </span><span style="color:#b48ead;">let </span><span>(a, b) = </span><span style="color:#96b5b4;">duplicate_value</span><span>(</span><span style="color:#d08770;">42</span><span style="color:#b48ead;">i32</span><span>);
+</span><span>    </span><span style="color:#b48ead;">let </span><span>(c, d) = </span><span style="color:#96b5b4;">duplicate_value</span><span>(</span><span style="color:#d08770;">3.14</span><span style="color:#b48ead;">f64</span><span>);
+</span><span>    </span><span style="color:#b48ead;">let </span><span>(e, f) = </span><span style="color:#96b5b4;">duplicate_value</span><span>(</span><span style="color:#d08770;">true</span><span>);
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Integers: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">, </span><span style="color:#d08770;">{}</span><span>&quot;, a, b);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Floats: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">, </span><span style="color:#d08770;">{}</span><span>&quot;, c, d);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Booleans: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">, </span><span style="color:#d08770;">{}</span><span>&quot;, e, f);
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Generic struct that requires Copy types
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Debug)]
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>Pair&lt;T: Copy&gt;  {
+</span><span>        </span><span style="color:#bf616a;">first</span><span>: T,
+</span><span>        </span><span style="color:#bf616a;">second</span><span>: T,
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">impl</span><span>&lt;T: Copy&gt; Pair&lt;T&gt; {
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#bf616a;">value</span><span>: T) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>            Pair {
+</span><span>                first: value,   </span><span style="color:#a7adba;">// value copied
+</span><span>                second: value,  </span><span style="color:#a7adba;">// value copied again
+</span><span>            }
+</span><span>        }
+</span><span>        
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">swap</span><span>(</span><span style="color:#bf616a;">self</span><span>) -&gt; </span><span style="color:#b48ead;">Self </span><span>{  </span><span style="color:#a7adba;">// Takes self by value
+</span><span>            Pair {
+</span><span>                first: </span><span style="color:#bf616a;">self</span><span>.second,  </span><span style="color:#a7adba;">// Copy values
+</span><span>                second: </span><span style="color:#bf616a;">self</span><span>.first,  </span><span style="color:#a7adba;">// Copy values
+</span><span>            }
+</span><span>        }
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> pair = Pair::new(</span><span style="color:#d08770;">42</span><span>);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> swapped = pair.</span><span style="color:#96b5b4;">swap</span><span>();  </span><span style="color:#a7adba;">// pair consumed, swapped returned
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Swapped pair: </span><span style="color:#d08770;">{:?}</span><span>&quot;, swapped);
+</span><span>}
+</span></code></pre>
+<h3 id="copy-with-traits">Copy with Traits</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">copy_with_traits</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">trait </span><span>Drawable: Copy {
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">draw</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>);
+</span><span>    }
+</span><span>    
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Copy, Clone)]
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>Point {
+</span><span>        </span><span style="color:#bf616a;">x</span><span>: </span><span style="color:#b48ead;">i32</span><span>,
+</span><span>        </span><span style="color:#bf616a;">y</span><span>: </span><span style="color:#b48ead;">i32</span><span>,
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">impl </span><span>Drawable </span><span style="color:#b48ead;">for </span><span>Point {
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">draw</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) {
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">Drawing point at (</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">, </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">)</span><span>&quot;, </span><span style="color:#bf616a;">self</span><span>.x, </span><span style="color:#bf616a;">self</span><span>.y);
+</span><span>        }
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">draw_twice</span><span>(</span><span style="color:#bf616a;">item</span><span>: T) {
+</span><span>        item.</span><span style="color:#96b5b4;">draw</span><span>();  </span><span style="color:#a7adba;">// item is copied when passed to draw
+</span><span>        item.</span><span style="color:#96b5b4;">draw</span><span>();  </span><span style="color:#a7adba;">// item can be used again because it implements Copy
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> point = Point { x: </span><span style="color:#d08770;">10</span><span>, y: </span><span style="color:#d08770;">20 </span><span>};
+</span><span>    </span><span style="color:#96b5b4;">draw_twice</span><span>(point);  </span><span style="color:#a7adba;">// point is copied into function
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Point still available after function call</span><span>&quot;);
+</span><span>    point.</span><span style="color:#96b5b4;">draw</span><span>();  </span><span style="color:#a7adba;">// point is still valid
+</span><span>}
+</span></code></pre>
+<h2 id="common-pitfalls-and-best-practices">Common Pitfalls and Best Practices</h2>
+<h3 id="when-not-to-implement-copy">When NOT to Implement Copy</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Don&#39;t implement Copy for types that manage resources
+</span><span style="color:#b48ead;">struct </span><span>FileHandle {
+</span><span>    </span><span style="color:#bf616a;">path</span><span>: String,
+</span><span>    </span><span style="color:#a7adba;">// file descriptor would go here
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// This would be dangerous if Copy were implemented:
+</span><span style="color:#a7adba;">// impl Copy for FileHandle {}  // DON&#39;T DO THIS!
+</span><span>
+</span><span style="color:#a7adba;">// Problem: Multiple copies would try to close the same file
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">dangerous_if_copy_existed</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// If FileHandle implemented Copy:
+</span><span>    </span><span style="color:#a7adba;">// let handle1 = FileHandle { path: String::from(&quot;file.txt&quot;) };
+</span><span>    </span><span style="color:#a7adba;">// let handle2 = handle1;  // Copy would create two handles to same file
+</span><span>    </span><span style="color:#a7adba;">// 
+</span><span>    </span><span style="color:#a7adba;">// When both go out of scope, both would try to close the file
+</span><span>    </span><span style="color:#a7adba;">// This could lead to double-close errors
+</span><span>}
+</span></code></pre>
+<h3 id="large-copy-types-can-be-inefficient">Large Copy Types Can Be Inefficient</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">large_copy_considerations</span><span>() {
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Copy, Clone)]
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>LargeArray {
+</span><span>        </span><span style="color:#bf616a;">data</span><span>: [</span><span style="color:#b48ead;">u8</span><span>; 4096],  </span><span style="color:#a7adba;">// 4KB of data
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> large = LargeArray { data: [</span><span style="color:#d08770;">0</span><span>; </span><span style="color:#d08770;">4096</span><span>] };
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Each assignment copies 4KB
+</span><span>    </span><span style="color:#b48ead;">let</span><span> copy1 = large;  </span><span style="color:#a7adba;">// 4KB copied
+</span><span>    </span><span style="color:#b48ead;">let</span><span> copy2 = large;  </span><span style="color:#a7adba;">// Another 4KB copied
+</span><span>    </span><span style="color:#b48ead;">let</span><span> copy3 = large;  </span><span style="color:#a7adba;">// Another 4KB copied
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// This might be inefficient for very large types
+</span><span>    </span><span style="color:#a7adba;">// Consider using references or Box for large data
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Alternative approach for large data:
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>LargeData {
+</span><span>        </span><span style="color:#bf616a;">data</span><span>: Box&lt;[</span><span style="color:#b48ead;">u8</span><span>; </span><span style="color:#d08770;">4096</span><span>]&gt;,  </span><span style="color:#a7adba;">// Heap-allocated, moves instead of copies
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> large_data = LargeData {
+</span><span>        data: Box::new([</span><span style="color:#d08770;">0</span><span>; </span><span style="color:#d08770;">4096</span><span>]),
+</span><span>    };
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// This moves the Box (just a pointer), not the 4KB array
+</span><span>    </span><span style="color:#b48ead;">let</span><span> moved_data = large_data;  </span><span style="color:#a7adba;">// Only pointer moved, not 4KB
+</span><span>}
+</span></code></pre>
+<h3 id="copy-and-interior-mutability">Copy and Interior Mutability</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>std::cell::Cell;
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">copy_with_interior_mutability</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// Cell implements Copy if T implements Copy
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Copy, Clone)]
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>Counter {
+</span><span>        </span><span style="color:#bf616a;">value</span><span>: Cell,  </span><span style="color:#a7adba;">// Cell implements Copy because u32 does
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> counter1 = Counter {
+</span><span>        value: Cell::new(</span><span style="color:#d08770;">0</span><span>),
+</span><span>    };
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> counter2 = counter1;  </span><span style="color:#a7adba;">// Copied
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Both counters are independent
+</span><span>    counter1.value.</span><span style="color:#96b5b4;">set</span><span>(</span><span style="color:#d08770;">10</span><span>);
+</span><span>    counter2.value.</span><span style="color:#96b5b4;">set</span><span>(</span><span style="color:#d08770;">20</span><span>);
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">counter1: </span><span style="color:#d08770;">{}</span><span>&quot;, counter1.value.</span><span style="color:#96b5b4;">get</span><span>());  </span><span style="color:#a7adba;">// 10
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">counter2: </span><span style="color:#d08770;">{}</span><span>&quot;, counter2.value.</span><span style="color:#96b5b4;">get</span><span>());  </span><span style="color:#a7adba;">// 20
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// The copy created independent Cell instances
+</span><span>}
+</span></code></pre>
+<h2 id="testing-copy-behavior">Testing Copy Behavior</h2>
+<h3 id="compile-time-checks">Compile-Time Checks</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">compile_time_copy_checks</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// Function that only accepts Copy types
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">requires_copy</span><span>(</span><span style="color:#bf616a;">_value</span><span>: T) {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">This type implements Copy</span><span>&quot;);
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// These work
+</span><span>    </span><span style="color:#96b5b4;">requires_copy</span><span>(</span><span style="color:#d08770;">42</span><span style="color:#b48ead;">i32</span><span>);
+</span><span>    </span><span style="color:#96b5b4;">requires_copy</span><span>(</span><span style="color:#d08770;">3.14</span><span style="color:#b48ead;">f64</span><span>);
+</span><span>    </span><span style="color:#96b5b4;">requires_copy</span><span>(</span><span style="color:#d08770;">true</span><span>);
+</span><span>    </span><span style="color:#96b5b4;">requires_copy</span><span>(&#39;</span><span style="color:#a3be8c;">A</span><span>&#39;);
+</span><span>    </span><span style="color:#96b5b4;">requires_copy</span><span>([</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">2</span><span>, </span><span style="color:#d08770;">3</span><span>, </span><span style="color:#d08770;">4</span><span>, </span><span style="color:#d08770;">5</span><span>]);
+</span><span>    </span><span style="color:#96b5b4;">requires_copy</span><span>((</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">2</span><span>, </span><span style="color:#d08770;">3</span><span>));
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// These would fail to compile:
+</span><span>    </span><span style="color:#a7adba;">// requires_copy(String::from(&quot;hello&quot;));     // String doesn&#39;t implement Copy
+</span><span>    </span><span style="color:#a7adba;">// requires_copy(vec![1, 2, 3]);            // Vec doesn&#39;t implement Copy
+</span><span>    </span><span style="color:#a7adba;">// requires_copy(Box::new(42));             // Box doesn&#39;t implement Copy
+</span><span>}
+</span></code></pre>
+<h3 id="runtime-verification">Runtime Verification</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">runtime_copy_verification</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">use </span><span>std::any::type_name;
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">is_copy</span><span>&lt;T: </span><span style="color:#b48ead;">&#39;static</span><span>&gt;() -&gt; </span><span style="color:#b48ead;">bool </span><span>{
+</span><span>        std::any::TypeId::of::() == std::any::TypeId::of::()
+</span><span>        </span><span style="color:#a7adba;">// This is a simplified example; in practice, you&#39;d use trait bounds
+</span><span>    }
+</span><span>    
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Copy, Clone)]
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>CopyStruct;
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>NonCopyStruct;
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Check at compile time with trait bounds
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">check_copy_compile_time</span><span>() {
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">needs_copy</span><span>() {}
+</span><span>        
+</span><span>        needs_copy::();          </span><span style="color:#a7adba;">// Compiles
+</span><span>        needs_copy::();   </span><span style="color:#a7adba;">// Compiles
+</span><span>        </span><span style="color:#a7adba;">// needs_copy::(); // Doesn&#39;t compile
+</span><span>        </span><span style="color:#a7adba;">// needs_copy::();       // Doesn&#39;t compile
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#96b5b4;">check_copy_compile_time</span><span>();
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Copy checks completed</span><span>&quot;);
+</span><span>}
+</span></code></pre>
+<h2 id="performance-considerations">Performance Considerations</h2>
+<h3 id="when-copy-is-beneficial">When Copy is Beneficial</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">when_copy_is_beneficial</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// Small data structures benefit from Copy
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Copy, Clone, Debug)]
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>RGB {
+</span><span>        </span><span style="color:#bf616a;">r</span><span>: </span><span style="color:#b48ead;">u8</span><span>,
+</span><span>        </span><span style="color:#bf616a;">g</span><span>: </span><span style="color:#b48ead;">u8</span><span>,
+</span><span>        </span><span style="color:#bf616a;">b</span><span>: </span><span style="color:#b48ead;">u8</span><span>,
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Passing by value is efficient for small Copy types
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">blend_colors</span><span>(</span><span style="color:#bf616a;">color1</span><span>: RGB, </span><span style="color:#bf616a;">color2</span><span>: RGB) -&gt; RGB {
+</span><span>        </span><span style="color:#d08770;">RGB </span><span>{
+</span><span>            r: (color1.r as </span><span style="color:#b48ead;">u16 </span><span>+ color2.r as </span><span style="color:#b48ead;">u16 </span><span>/ </span><span style="color:#d08770;">2</span><span>) as </span><span style="color:#b48ead;">u8</span><span>,
+</span><span>            g: (color1.g as </span><span style="color:#b48ead;">u16 </span><span>+ color2.g as </span><span style="color:#b48ead;">u16 </span><span>/ </span><span style="color:#d08770;">2</span><span>) as </span><span style="color:#b48ead;">u8</span><span>,
+</span><span>            b: (color1.b as </span><span style="color:#b48ead;">u16 </span><span>+ color2.b as </span><span style="color:#b48ead;">u16 </span><span>/ </span><span style="color:#d08770;">2</span><span>) as </span><span style="color:#b48ead;">u8</span><span>,
+</span><span>        }
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> red = </span><span style="color:#d08770;">RGB </span><span>{ r: </span><span style="color:#d08770;">255</span><span>, g: </span><span style="color:#d08770;">0</span><span>, b: </span><span style="color:#d08770;">0 </span><span>};
+</span><span>    </span><span style="color:#b48ead;">let</span><span> blue = </span><span style="color:#d08770;">RGB </span><span>{ r: </span><span style="color:#d08770;">0</span><span>, g: </span><span style="color:#d08770;">0</span><span>, b: </span><span style="color:#d08770;">255 </span><span>};
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Efficient: small structures passed by value
+</span><span>    </span><span style="color:#b48ead;">let</span><span> purple = </span><span style="color:#96b5b4;">blend_colors</span><span>(red, blue);  </span><span style="color:#a7adba;">// red and blue copied
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Original colors still available
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Red: </span><span style="color:#d08770;">{:?}</span><span style="color:#a3be8c;">, Blue: </span><span style="color:#d08770;">{:?}</span><span style="color:#a3be8c;">, Purple: </span><span style="color:#d08770;">{:?}</span><span>&quot;, red, blue, purple);
+</span><span>}
+</span></code></pre>
+<h3 id="when-to-avoid-copy">When to Avoid Copy</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">when_to_avoid_copy</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// Large structures should not implement Copy
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>LargeMatrix {
+</span><span>        </span><span style="color:#bf616a;">data</span><span>: [[</span><span style="color:#b48ead;">f64</span><span>; 100]; 100],  </span><span style="color:#a7adba;">// 80KB of data
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// If this implemented Copy, every assignment would copy 80KB
+</span><span>    </span><span style="color:#a7adba;">// Instead, use references or Box for large data
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">impl </span><span>LargeMatrix {
+</span><span>        </span><span style="color:#a7adba;">// Methods that work with references to avoid copying
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">determinant</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; </span><span style="color:#b48ead;">f64 </span><span>{
+</span><span>            </span><span style="color:#a7adba;">// Calculate determinant without copying the matrix
+</span><span>            </span><span style="color:#d08770;">0.0  </span><span style="color:#a7adba;">// Placeholder
+</span><span>        }
+</span><span>        
+</span><span>        </span><span style="color:#a7adba;">// Methods that take ownership when transformation is needed
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">transpose</span><span>(</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>            </span><span style="color:#a7adba;">// Transpose the matrix in place and return ownership
+</span><span>            </span><span style="color:#bf616a;">self  </span><span style="color:#a7adba;">// Placeholder
+</span><span>        }
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> matrix = LargeMatrix {
+</span><span>        data: [[</span><span style="color:#d08770;">0.0</span><span>; </span><span style="color:#d08770;">100</span><span>]; </span><span style="color:#d08770;">100</span><span>],
+</span><span>    };
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Use references for read-only operations
+</span><span>    </span><span style="color:#b48ead;">let</span><span> det = matrix.</span><span style="color:#96b5b4;">determinant</span><span>();  </span><span style="color:#a7adba;">// Borrow, don&#39;t copy
+</span><span>    
+</span><span>    </span><span style="color:#a7adba;">// Move for transformations
+</span><span>    </span><span style="color:#b48ead;">let</span><span> transposed = matrix.</span><span style="color:#96b5b4;">transpose</span><span>();  </span><span style="color:#a7adba;">// Move, don&#39;t copy
+</span><span>    
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Matrix operations completed efficiently</span><span>&quot;);
+</span><span>}
+</span></code></pre>
+<h2 id="summary-and-best-practices">Summary and Best Practices</h2>
+<h3 id="core-concepts"><strong>Core Concepts</strong></h3>
+<ul>
+<li><strong>Copy trait enables bitwise duplication</strong> of values</li>
+<li><strong>Assignment creates copies</strong> instead of moves for Copy types</li>
+<li><strong>All Copy types must also implement Clone</strong></li>
+<li><strong>Copy is automatic</strong> - no explicit method calls needed</li>
+</ul>
+<h3 id="when-to-implement-copy"><strong>When to Implement Copy</strong></h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Good candidates for Copy:
+</span><span style="color:#a7adba;">// - Small, simple data structures
+</span><span style="color:#a7adba;">// - Types with only stack-allocated data
+</span><span style="color:#a7adba;">// - Types that represent values rather than resources
+</span><span>
+</span><span>#[</span><span style="color:#bf616a;">derive</span><span>(Copy, Clone)]
+</span><span style="color:#b48ead;">struct </span><span>GoodCopyCandidate {
+</span><span>    </span><span style="color:#bf616a;">x</span><span>: </span><span style="color:#b48ead;">f64</span><span>,
+</span><span>    </span><span style="color:#bf616a;">y</span><span>: </span><span style="color:#b48ead;">f64</span><span>,
+</span><span>    </span><span style="color:#bf616a;">color</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Bad candidates for Copy:
+</span><span style="color:#a7adba;">// - Types that manage heap-allocated resources
+</span><span style="color:#a7adba;">// - Large data structures
+</span><span style="color:#a7adba;">// - Types that represent unique resources
+</span><span>
+</span><span style="color:#b48ead;">struct </span><span>BadCopyCandidate {
+</span><span>    </span><span style="color:#bf616a;">name</span><span>: String,           </span><span style="color:#a7adba;">// Heap-allocated
+</span><span>    </span><span style="color:#bf616a;">data</span><span>: Vec,         </span><span style="color:#a7adba;">// Heap-allocated
+</span><span>    </span><span style="color:#bf616a;">file</span><span>: std::fs::File,   </span><span style="color:#a7adba;">// Unique resource
+</span><span>}
+</span></code></pre>
+<h3 id="performance-guidelines"><strong>Performance Guidelines</strong></h3>
+<ul>
+<li><strong>Use Copy for small types</strong> (typically &lt; 100 bytes)</li>
+<li><strong>Avoid Copy for large types</strong> to prevent expensive memory copies</li>
+<li><strong>Consider the frequency of assignment</strong> - Copy types are efficient for frequent copying</li>
+<li><strong>Benchmark when in doubt</strong> - measure the performance impact</li>
+</ul>
+<h3 id="api-design-principles">API Design Principles</h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// Design functions appropriately for Copy vs non-Copy types
+</span><span>
+</span><span style="color:#a7adba;">// For Copy types: pass by value is often efficient
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">process_point</span><span>(</span><span style="color:#bf616a;">point</span><span>: Point2D) -&gt; Point2D {
+</span><span>    </span><span style="color:#a7adba;">// Small Copy type passed by value
+</span><span>    point
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// For non-Copy types: prefer borrowing when possible
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">process_string</span><span>(</span><span style="color:#bf616a;">text</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; </span><span style="color:#b48ead;">usize </span><span>{
+</span><span>    </span><span style="color:#a7adba;">// Borrow instead of taking ownership
+</span><span>    text.</span><span style="color:#96b5b4;">len</span><span>()
+</span><span>}
+</span></code></pre>
+<h3 id="brain-optional-suggestions">🧠 Optional Suggestions:</h3>
+<ul>
+<li>Consider adding a small summary table contrasting Copy, Clone, and Move.</li>
+<li>A visual diagram (if part of a site) showing ownership, copying, and movement can help visual learners.</li>
+<li>For learning purposes, highlight common compiler errors like value borrowed here after move and explain why they happen with non-Copy types.</li>
+</ul>
+<p>Understanding the Copy trait is fundamental to writing efficient Rust code. <strong>Use Copy judiciously for small, value-like types</strong>, and <strong>avoid it for resource-managing types or large data structures</strong>. The Copy trait provides a powerful way to opt into value semantics while maintaining Rust's safety guarantees, but it should be used thoughtfully to avoid performance pitfalls.</p>
+
+    
+        </div>
+
+    </article>
+</main>
+
+
+    <script type="text/javascript" src="http://localhost/elasticlunr.min.js" defer></script>
+    <script type="text/javascript" src="http://localhost/search_index.en.js" defer></script>
+<script type="text/javascript" src="http://localhost/js.js" defer></script>
+
+</body>
+</html>
