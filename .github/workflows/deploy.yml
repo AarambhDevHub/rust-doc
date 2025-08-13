@@ -3,24 +3,25 @@ name: Deploy Zola site to GitHub Pages
 on:
   push:
     branches:
-      - main  # or your default branch
+      - main  # Change this if your default branch is different
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout source
         uses: actions/checkout@v4
 
-      - name: Install Zola
+      - name: Install Snap
         run: |
-          curl -s https://get.zola.rs | sh
-          sudo mv zola /usr/local/bin
+          sudo apt update
+          sudo apt install -y snapd
+          sudo snap install zola --edge
 
-      - name: Build
+      - name: Build site
         run: zola build
 
-      - name: Deploy
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
