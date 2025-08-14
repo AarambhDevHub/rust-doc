@@ -1,0 +1,1652 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://aarambhdevhub.github.io/rust-doc/main.css">
+    <link rel="icon" href="https://www.rust-lang.org/static/images/favicon-16x16.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Rust Programming Course! | PartialEq and Eq Traits </title>
+</head>
+<body>
+
+<main>
+    
+    <nav>
+            <a href="https:&#x2F;&#x2F;aarambhdevhub.github.io&#x2F;rust-doc&#x2F;">
+                        <img src="https://www.rust-lang.org/static/images/rust-logo-blk.svg" alt="logo"/>
+                    </a>
+                <!-- -->
+
+            <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+            <div id="trees">
+                <input class="tree-toggle" type="checkbox" id="day-1-introduction"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-1-introduction">Day 1: Introduction</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 1/chapter-1/">What is Rust and why use it?</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 1/chapter-2/">Installing Rust Toolchain (rustup, cargo)</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 1/chapter-3/">Setting up Development (VS Code + Hello World)</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 1/chapter-4/">Understanding Cargo Project Structure</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-2-basic-syntax-variables"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-2-basic-syntax-variables">Day 2: Basic Syntax &amp; Variables</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 2/chapter-1/">Variables and Mutability in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 2/chapter-2/">Data Types in Rust: Integers, Floats, Booleans, and Characters</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 2/chapter-3/">Constants vs Variables</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 2/chapter-4/">Understanding Shadowing in Rust: A Practical Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 2/chapter-5/">Basic Input&#x2F;Output</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-3-functions-control-flow"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-3-functions-control-flow">Day 3: Functions &amp; Control Flow</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 3/chapter-1/">Function Syntax and Parameters in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 3/chapter-2/">Return Values and Expressions vs Statements</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 3/chapter-3/">If&#x2F;Else Statements in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 3/chapter-4/">Match Expressions in Rust: Powerful Pattern Matching</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 3/chapter-5/">Loops in Rust: loop, while, for Explained</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-4-data-types-deep-dive"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-4-data-types-deep-dive">Day 4: Data Types Deep Dive</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 4/chapter-1/">Compound Types (Tuples, Arrays)</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 4/chapter-2/">String vs &amp;str in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 4/chapter-3/">Vector Basics in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 4/chapter-4/">Type Annotations and Inference in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 4/chapter-5/">Practical Rust Exercises</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-5-practice-review"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-5-practice-review">Day 5: Practice &amp; Review</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 5/chapter-1/">Day 5: Practice &amp; Review</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-6-ownership-fundamentals"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-6-ownership-fundamentals">Day 6: Ownership Fundamentals</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 6/chapter-1/">Ownership in Rust: A Detailed Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 6/chapter-2/">Stack vs Heap in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 6/chapter-3/">Understanding Ownership in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 6/chapter-4/">Move Semantics in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 6/chapter-5/">Copy Trait in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-7-references-borrowing"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-7-references-borrowing">Day 7: References &amp; Borrowing</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 7/chapter-1/">Immutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 7/chapter-2/">Mutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 7/chapter-3/">Borrowing Rules</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 7/chapter-4/">Reference Lifetime Basics</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 7/chapter-5/">Common Borrowing Errors and Solutions</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-8-slices"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-8-slices">Day 8: Slices</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 8/chapter-1/">String Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 8/chapter-2/">Array Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 8/chapter-3/">Slice Syntax and Usage</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 8/chapter-4/">Practical Applications</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 8/chapter-5/">Memory Safety Benefits</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-9-advanced-ownership"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-9-advanced-ownership">Day 9: Advanced Ownership</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 9/chapter-1/">Clone Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 9/chapter-2/">Drop Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 9/chapter-3/">RAII Pattern</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 9/chapter-4/">Memory Management Comparison with Other Languages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 9/chapter-5/">Best Practices (Advanced Ownership)</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-10-ownership-practice"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-10-ownership-practice">Day 10: Ownership Practice</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 10/chapter-1/">Complex Ownership Scenarios</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 10/chapter-2/">Debugging Ownership Errors</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 10/chapter-3/">Code Refactoring Exercises</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 10/chapter-4/">Group Problem-Solving</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-11-structs-basics"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-11-structs-basics">Day 11: Structs Basics</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 11/chapter-1/">Defining and Instantiating Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 11/chapter-2/">Field Access and Modification</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 11/chapter-3/">Tuple Structs and Unit Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 11/chapter-4/">Struct Update Syntax</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 11/chapter-5/">Ownership of Struct Data</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-12-methods-associated-functions"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-12-methods-associated-functions">Day 12: Methods &amp; Associated Functions</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 12/chapter-1/">Implementing Methods with impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 12/chapter-2/">&amp;self, &amp;mut self, and self</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 12/chapter-3/">Associated Functions (like Constructors)</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 12/chapter-4/">Multiple impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 12/chapter-5/">Method Chaining</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-13-advanced-struct-concepts"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-13-advanced-struct-concepts">Day 13: Advanced Struct Concepts</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 13/chapter-1/">Struct Lifetime Parameters</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 13/chapter-2/">Debug Trait and Custom Formatting</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 13/chapter-3/">Builder Pattern Implementation</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 13/chapter-4/">Struct Composition</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 13/chapter-5/">Best Practices for Struct Design</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-14-enums-pattern-matching"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-14-enums-pattern-matching">Day 14: Enums &amp; Pattern Matching</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 14/chapter-1/">Defining Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 14/chapter-2/">Enum Variants with Data</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 14/chapter-3/">Option&lt;T&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 14/chapter-4/">Result&lt;T, E&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 14/chapter-5/">Advanced Match Patterns in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-15-practice-project"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-15-practice-project">Day 15: Practice Project</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 15/chapter-1/">Building a Simple CLI Calculator in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-16-vectors"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-16-vectors">Day 16: Vectors</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 16/chapter-1/">Creating and Updating Vectors</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 16/chapter-2/">Vector Methods: push, pop, iter</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 16/chapter-3/">Accessing Vector Elements Safely</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 16/chapter-4/">Vector of Different Types with Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 16/chapter-5/">Performance Considerations</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-17-hashmaps-other-collections"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-17-hashmaps-other-collections">Day 17: HashMaps &amp; Other Collections</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 17/chapter-1/">HashMap Creation and Manipulation</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 17/chapter-2/">Keys and Values Ownership</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 17/chapter-3/">HashMap Methods and Iteration</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 17/chapter-4/">When to Use Different Collections</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 17/chapter-5/">BTreeMap Introduction</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-18-error-handling"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-18-error-handling">Day 18: Error Handling</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 18/chapter-1/">Panic! and When to Use It</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 18/chapter-2/">Result&lt;T, E&gt; in Depth</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 18/chapter-3/">The ? Operator in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 18/chapter-4/">Creating Custom Error Types in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 18/chapter-5/">Error Propagation Patterns in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-19-strings-deep-dive"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-19-strings-deep-dive">Day 19: Strings Deep Dive</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 19/chapter-1/">String vs &amp;str Revisited</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 19/chapter-2/">String Methods and Manipulation</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 19/chapter-5/">Performance Considerations</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 19/chapter-3/">UTF-8 and Character Encoding</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 19/chapter-4/">String Concatenation Techniques</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-20-mini-project"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-20-mini-project">Day 20: Mini Project</label>
+
+                    <ul class="subtree">
+                        </ul>
+                <input class="tree-toggle" type="checkbox" id="day-21-generic-functions-structs"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-21-generic-functions-structs">Day 21: Generic Functions &amp; Structs</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 21/chapter-1/">Generic Function Syntax</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 21/chapter-2/">Generic Structs and Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 21/chapter-3/">Type Parameters and Constraints</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 21/chapter-4/">Monomorphization Concept</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 21/chapter-5/">Generic Collections</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-22-traits-fundamentals"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-22-traits-fundamentals">Day 22: Traits Fundamentals</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 22/chapter-1/">Defining Traits</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 22/chapter-2/">Implementing Traits for Types</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 22/chapter-3/">Default Implementations</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 22/chapter-4/">Trait as Parameters</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 22/chapter-5/">Trait Bounds</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-23-advanced-traits"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-23-advanced-traits">Day 23: Advanced Traits</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 23/chapter-1/">Trait Objects and Dynamic Dispatch</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 23/chapter-2/">Supertraits</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 23/chapter-3/">Associated Types</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 23/chapter-4/">Orphan Rule</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 23/chapter-5/">Coherence Rules</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-24-standard-library-traits"
+                           checked/>
+                    <label class="tree-toggle-label"
+                           for="day-24-standard-library-traits">Day 24: Standard Library Traits</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 24/chapter-1/">Iterator Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 24/chapter-2/">From and Into Traits</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 24/chapter-3/">Display and Debug Traits</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 24/chapter-4/">Clone and Copy Traits</a>
+                            </li>
+
+                            <li class="active">
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 24/chapter-5/">PartialEq and Eq Traits</a>
+                            </li>
+
+                            
+                                    
+                                    
+                                        <ul id="toc">
+                                            <li><a href="
+                                                        https://aarambhdevhub.github.io/rust-doc/day 24/chapter-5/#partialeq-and-eq-traits-in-rust-comprehensive-documentation-for-beginners">PartialEq and Eq Traits in Rust: Comprehensive Documentation for Beginners</a>
+                                                    <ul>
+                                                            <li>
+                                                                    <a href="https://aarambhdevhub.github.io/rust-doc/day 24/chapter-5/#the-professional-restaurant-quality-comparison-system-analogy-convenience-store">The Professional Restaurant Quality Comparison System Analogy 🏪</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://aarambhdevhub.github.io/rust-doc/day 24/chapter-5/#understanding-partialeq-fundamentals">Understanding PartialEq Fundamentals</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://aarambhdevhub.github.io/rust-doc/day 24/chapter-5/#understanding-eq-fundamentals">Understanding Eq Fundamentals</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://aarambhdevhub.github.io/rust-doc/day 24/chapter-5/#practical-applications-and-real-world-usage">Practical Applications and Real-World Usage</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://aarambhdevhub.github.io/rust-doc/day 24/chapter-5/#summary-and-key-takeaways">Summary and Key Takeaways</a>
+                                                                </li>
+                                                            </ul>
+                                                    </li>
+                                            </ul>
+                                    </ul>
+                </div>
+        </nav>
+    <article>
+
+        <div id="on_right">
+                <span id="search-ico" class="ms-Icon--Search"></span>
+            </div>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="Search as you type...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        <div id="wrap">
+            
+        <h1 id="partialeq-and-eq-traits-in-rust-comprehensive-documentation-for-beginners">PartialEq and Eq Traits in Rust: Comprehensive Documentation for Beginners</h1>
+<p>Understanding PartialEq and Eq traits in Rust is like learning to <strong>establish quality comparison standards for your professional restaurant chain</strong> - you need clear, consistent ways to determine when two menu items, ingredients, or restaurant experiences are "equal" while handling cases where perfect comparison might not always be possible. Just as a professional restaurant manager needs different levels of comparison (like "these two dishes are similar enough for substitution" versus "these two dishes are identical in every way"), Rust's PartialEq and Eq traits provide different levels of equality comparison to handle various real-world scenarios safely and efficiently.</p>
+<h2 id="the-professional-restaurant-quality-comparison-system-analogy-convenience-store">The Professional Restaurant Quality Comparison System Analogy 🏪</h2>
+<h3 id="imagine-you-re-establishing-comparison-standards-for-your-restaurant-chain">Imagine You're Establishing Comparison Standards for Your Restaurant Chain</h3>
+<p><strong>The Problem with Inconsistent Comparison Standards:</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// ❌ Inconsistent approach - like having unclear comparison rules
+</span><span style="color:#b48ead;">struct </span><span>MenuItem {
+</span><span>    </span><span style="color:#bf616a;">name</span><span>: String,
+</span><span>    </span><span style="color:#bf616a;">price</span><span>: </span><span style="color:#b48ead;">f64</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Without proper equality traits, we can&#39;t compare menu items
+</span><span style="color:#a7adba;">// menu_item1 == menu_item2  // Error: no implementation of `==`
+</span><span style="color:#a7adba;">// This creates confusion and prevents proper operations
+</span></code></pre>
+<p><strong>The Power of PartialEq and Eq - Professional Comparison Standards:</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// ✅ Professional approach - clear comparison standards
+</span><span>#[</span><span style="color:#bf616a;">derive</span><span>(Debug, PartialEq)]  </span><span style="color:#a7adba;">// PartialEq for basic equality
+</span><span style="color:#b48ead;">struct </span><span>MenuItem {
+</span><span>    </span><span style="color:#bf616a;">name</span><span>: String,
+</span><span>    </span><span style="color:#bf616a;">price</span><span>: </span><span style="color:#b48ead;">f64</span><span>,
+</span><span>    </span><span style="color:#bf616a;">category</span><span>: String,
+</span><span>}
+</span><span>
+</span><span>#[</span><span style="color:#bf616a;">derive</span><span>(Debug, PartialEq, Eq)]  </span><span style="color:#a7adba;">// Eq for perfect equality (no floating point)
+</span><span style="color:#b48ead;">struct </span><span>TableNumber {
+</span><span>    </span><span style="color:#bf616a;">number</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>    </span><span style="color:#bf616a;">section</span><span>: String,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">professional_comparison_demo</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> pizza1 = MenuItem {
+</span><span>        name: &quot;</span><span style="color:#a3be8c;">Margherita Pizza</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        price: </span><span style="color:#d08770;">15.99</span><span>,
+</span><span>        category: &quot;</span><span style="color:#a3be8c;">Italian</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> pizza2 = MenuItem {
+</span><span>        name: &quot;</span><span style="color:#a3be8c;">Margherita Pizza</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        price: </span><span style="color:#d08770;">15.99</span><span>,
+</span><span>        category: &quot;</span><span style="color:#a3be8c;">Italian</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> table1 = TableNumber { number: </span><span style="color:#d08770;">5</span><span>, section: &quot;</span><span style="color:#a3be8c;">Main</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>() };
+</span><span>    </span><span style="color:#b48ead;">let</span><span> table2 = TableNumber { number: </span><span style="color:#d08770;">5</span><span>, section: &quot;</span><span style="color:#a3be8c;">Main</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>() };
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Now we can compare safely and consistently!
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Pizzas are equal: </span><span style="color:#d08770;">{}</span><span>&quot;, pizza1 == pizza2);  </span><span style="color:#a7adba;">// true
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Tables are equal: </span><span style="color:#d08770;">{}</span><span>&quot;, table1 == table2);  </span><span style="color:#a7adba;">// true
+</span><span>}
+</span></code></pre>
+<p><strong>Why PartialEq and Eq Are Essential:</strong></p>
+<ul>
+<li>🛡️ <strong>Safe comparisons</strong> - Enable reliable equality checking across your system</li>
+<li>⚖️ <strong>Flexible standards</strong> - PartialEq for most cases, Eq for perfect equality</li>
+<li>🔄 <strong>Consistent behavior</strong> - Predictable comparison results throughout your application</li>
+<li>📊 <strong>Algorithm compatibility</strong> - Many algorithms require specific equality guarantees</li>
+<li>🎯 <strong>Type safety</strong> - Compile-time guarantees about comparison capabilities</li>
+</ul>
+<h2 id="understanding-partialeq-fundamentals">Understanding PartialEq Fundamentals</h2>
+<h3 id="the-universal-item-comparison-system">The Universal Item Comparison System</h3>
+<p><strong>PartialEq provides the foundation for equality comparisons in Rust:</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">demonstrate_partialeq_fundamentals</span><span>() {
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">⚖️ PartialEq Fundamentals - Universal Item Comparison System</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">{:=&lt;70}</span><span>&quot;, &quot;&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// PartialEq is like having universal comparison standards for restaurant items
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">📋 PartialEq Requirements:</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   🔄 Symmetric - if a == b, then b == a</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   🔗 Transitive - if a == b and b == c, then a == c</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   ❓ May not be reflexive - a might not equal itself (like NaN)</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   ⚡ Enables == and != operators</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Example 1: Basic PartialEq Implementation - Menu Item Comparison
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">1️⃣ Basic PartialEq - Menu Item Comparison System:</span><span>&quot;);
+</span><span>
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Debug)]
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>Dish {
+</span><span>        </span><span style="color:#bf616a;">name</span><span>: String,
+</span><span>        </span><span style="color:#bf616a;">base_price</span><span>: </span><span style="color:#b48ead;">f64</span><span>,
+</span><span>        </span><span style="color:#bf616a;">ingredients</span><span>: Vec&lt;String&gt;,
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Manual PartialEq implementation
+</span><span>    </span><span style="color:#b48ead;">impl </span><span>PartialEq </span><span style="color:#b48ead;">for </span><span>Dish {
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">eq</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">other</span><span>: &amp;</span><span style="color:#b48ead;">Self</span><span>) -&gt; </span><span style="color:#b48ead;">bool </span><span>{
+</span><span>            </span><span style="color:#a7adba;">// Custom equality logic - only compare name and base price
+</span><span>            </span><span style="color:#bf616a;">self</span><span>.name == other.name &amp;&amp; </span><span style="color:#bf616a;">self</span><span>.base_price == other.base_price
+</span><span>            </span><span style="color:#a7adba;">// Note: We&#39;re ignoring ingredients for this comparison
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> pasta1 = Dish {
+</span><span>        name: &quot;</span><span style="color:#a3be8c;">Spaghetti Carbonara</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        base_price: </span><span style="color:#d08770;">16.99</span><span>,
+</span><span>        ingredients: vec![&quot;</span><span style="color:#a3be8c;">spaghetti</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), &quot;</span><span style="color:#a3be8c;">eggs</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), &quot;</span><span style="color:#a3be8c;">cheese</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()],
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> pasta2 = Dish {
+</span><span>        name: &quot;</span><span style="color:#a3be8c;">Spaghetti Carbonara</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        base_price: </span><span style="color:#d08770;">16.99</span><span>,
+</span><span>        ingredients: vec![&quot;</span><span style="color:#a3be8c;">pasta</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), &quot;</span><span style="color:#a3be8c;">egg</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), &quot;</span><span style="color:#a3be8c;">parmesan</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()], </span><span style="color:#a7adba;">// Different ingredients
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> pizza = Dish {
+</span><span>        name: &quot;</span><span style="color:#a3be8c;">Margherita Pizza</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        base_price: </span><span style="color:#d08770;">15.99</span><span>,
+</span><span>        ingredients: vec![&quot;</span><span style="color:#a3be8c;">dough</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), &quot;</span><span style="color:#a3be8c;">tomato</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), &quot;</span><span style="color:#a3be8c;">mozzarella</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()],
+</span><span>    };
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Custom PartialEq comparison results:</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     pasta1 == pasta2: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> (same name &amp; price, different ingredients)</span><span>&quot;, pasta1 == pasta2);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     pasta1 == pizza: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> (different name &amp; price)</span><span>&quot;, pasta1 == pizza);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     pasta1 != pizza: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> (using != operator)</span><span>&quot;, pasta1 != pizza);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Example 2: Derived PartialEq - Automatic Field-by-Field Comparison
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">2️⃣ Derived PartialEq - Automatic Comparison:</span><span>&quot;);
+</span><span>
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Debug, PartialEq)]  </span><span style="color:#a7adba;">// Automatic implementation
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>Customer {
+</span><span>        </span><span style="color:#bf616a;">id</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>        </span><span style="color:#bf616a;">name</span><span>: String,
+</span><span>        </span><span style="color:#bf616a;">email</span><span>: String,
+</span><span>        </span><span style="color:#bf616a;">loyalty_points</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> customer1 = Customer {
+</span><span>        id: </span><span style="color:#d08770;">1001</span><span>,
+</span><span>        name: &quot;</span><span style="color:#a3be8c;">Alice Johnson</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        email: &quot;</span><span style="color:#a3be8c;">alice@email.com</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        loyalty_points: </span><span style="color:#d08770;">150</span><span>,
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> customer2 = Customer {
+</span><span>        id: </span><span style="color:#d08770;">1001</span><span>,
+</span><span>        name: &quot;</span><span style="color:#a3be8c;">Alice Johnson</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        email: &quot;</span><span style="color:#a3be8c;">alice@email.com</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        loyalty_points: </span><span style="color:#d08770;">150</span><span>,
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> customer3 = Customer {
+</span><span>        id: </span><span style="color:#d08770;">1001</span><span>,
+</span><span>        name: &quot;</span><span style="color:#a3be8c;">Alice Johnson</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        email: &quot;</span><span style="color:#a3be8c;">alice@email.com</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        loyalty_points: </span><span style="color:#d08770;">200</span><span>,  </span><span style="color:#a7adba;">// Different loyalty points
+</span><span>    };
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Derived PartialEq comparison results:</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     customer1 == customer2: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> (all fields identical)</span><span>&quot;, customer1 == customer2);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     customer1 == customer3: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> (different loyalty points)</span><span>&quot;, customer1 == customer3);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Example 3: PartialEq Between Different Types - Cross-Type Comparison
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">3️⃣ Cross-Type PartialEq - Flexible Comparison Standards:</span><span>&quot;);
+</span><span>
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Debug)]
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>MenuItem {
+</span><span>        </span><span style="color:#bf616a;">name</span><span>: String,
+</span><span>        </span><span style="color:#bf616a;">price</span><span>: </span><span style="color:#b48ead;">f64</span><span>,
+</span><span>    }
+</span><span>
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Debug)]
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>Order {
+</span><span>        </span><span style="color:#bf616a;">item_name</span><span>: String,
+</span><span>        </span><span style="color:#bf616a;">customer_id</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Implement PartialEq between MenuItem and Order (comparing names)
+</span><span>    </span><span style="color:#b48ead;">impl </span><span>PartialEq&lt;Order&gt; </span><span style="color:#b48ead;">for </span><span>MenuItem {
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">eq</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">other</span><span>: &amp;Order) -&gt; </span><span style="color:#b48ead;">bool </span><span>{
+</span><span>            </span><span style="color:#bf616a;">self</span><span>.name == other.item_name
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Also implement the reverse for symmetry
+</span><span>    </span><span style="color:#b48ead;">impl </span><span>PartialEq&lt;MenuItem&gt; </span><span style="color:#b48ead;">for </span><span>Order {
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">eq</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">other</span><span>: &amp;MenuItem) -&gt; </span><span style="color:#b48ead;">bool </span><span>{
+</span><span>            </span><span style="color:#bf616a;">self</span><span>.item_name == other.name
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> menu_item = MenuItem {
+</span><span>        name: &quot;</span><span style="color:#a3be8c;">Caesar Salad</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        price: </span><span style="color:#d08770;">12.99</span><span>,
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> order1 = Order {
+</span><span>        item_name: &quot;</span><span style="color:#a3be8c;">Caesar Salad</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        customer_id: </span><span style="color:#d08770;">1001</span><span>,
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> order2 = Order {
+</span><span>        item_name: &quot;</span><span style="color:#a3be8c;">Greek Salad</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        customer_id: </span><span style="color:#d08770;">1002</span><span>,
+</span><span>    };
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Cross-type comparison results:</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     menu_item == order1: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> (matching names)</span><span>&quot;, menu_item == order1);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     menu_item == order2: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> (different names)</span><span>&quot;, menu_item == order2);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     order1 == menu_item: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> (symmetric comparison)</span><span>&quot;, order1 == menu_item);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Example 4: PartialEq with Generic Types - Universal Containers
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">4️⃣ Generic PartialEq - Universal Container Comparison:</span><span>&quot;);
+</span><span>
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Debug)]
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>Container&lt;T&gt; {
+</span><span>        </span><span style="color:#bf616a;">contents</span><span>: T,
+</span><span>        </span><span style="color:#bf616a;">label</span><span>: String,
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// PartialEq implementation for generic containers
+</span><span>    </span><span style="color:#b48ead;">impl</span><span>&lt;T&gt; PartialEq </span><span style="color:#b48ead;">for </span><span>Container&lt;T&gt;
+</span><span>    </span><span style="color:#b48ead;">where
+</span><span>        T: PartialEq,  </span><span style="color:#a7adba;">// T must also be comparable
+</span><span>    {
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">eq</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">other</span><span>: &amp;</span><span style="color:#b48ead;">Self</span><span>) -&gt; </span><span style="color:#b48ead;">bool </span><span>{
+</span><span>            </span><span style="color:#bf616a;">self</span><span>.contents == other.contents &amp;&amp; </span><span style="color:#bf616a;">self</span><span>.label == other.label
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> string_container1 = Container {
+</span><span>        contents: &quot;</span><span style="color:#a3be8c;">Fresh Ingredients</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        label: &quot;</span><span style="color:#a3be8c;">Storage A</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> string_container2 = Container {
+</span><span>        contents: &quot;</span><span style="color:#a3be8c;">Fresh Ingredients</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        label: &quot;</span><span style="color:#a3be8c;">Storage A</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> number_container1 = Container {
+</span><span>        contents: </span><span style="color:#d08770;">42</span><span>,
+</span><span>        label: &quot;</span><span style="color:#a3be8c;">Quantity</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> number_container2 = Container {
+</span><span>        contents: </span><span style="color:#d08770;">42</span><span>,
+</span><span>        label: &quot;</span><span style="color:#a3be8c;">Quantity</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>    };
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Generic container comparison results:</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     string_container1 == string_container2: </span><span style="color:#d08770;">{}</span><span>&quot;, string_container1 == string_container2);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     number_container1 == number_container2: </span><span style="color:#d08770;">{}</span><span>&quot;, number_container1 == number_container2);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Example 5: PartialEq Requirements and Behavior
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">5️⃣ PartialEq Mathematical Properties:</span><span>&quot;);
+</span><span>
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Debug, PartialEq)]
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>Rating {
+</span><span>        </span><span style="color:#bf616a;">stars</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>        </span><span style="color:#bf616a;">review_count</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> rating_a = Rating { stars: </span><span style="color:#d08770;">4</span><span>, review_count: </span><span style="color:#d08770;">100 </span><span>};
+</span><span>    </span><span style="color:#b48ead;">let</span><span> rating_b = Rating { stars: </span><span style="color:#d08770;">4</span><span>, review_count: </span><span style="color:#d08770;">100 </span><span>};
+</span><span>    </span><span style="color:#b48ead;">let</span><span> rating_c = Rating { stars: </span><span style="color:#d08770;">4</span><span>, review_count: </span><span style="color:#d08770;">100 </span><span>};
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Demonstrate mathematical properties
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Mathematical properties demonstration:</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Symmetry: if a == b, then b == a
+</span><span>    </span><span style="color:#b48ead;">let</span><span> a_eq_b = rating_a == rating_b;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> b_eq_a = rating_b == rating_a;
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     Symmetry: a == b: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">, b == a: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> (should be same)</span><span>&quot;, a_eq_b, b_eq_a);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Transitivity: if a == b and b == c, then a == c
+</span><span>    </span><span style="color:#b48ead;">let</span><span> a_eq_b = rating_a == rating_b;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> b_eq_c = rating_b == rating_c;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> a_eq_c = rating_a == rating_c;
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     Transitivity: a == b: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">, b == c: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">, a == c: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> (should all be true)</span><span>&quot;,
+</span><span>             a_eq_b, b_eq_c, a_eq_c);
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">🎯 PartialEq Key Features:</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   ⚖️ Enables == and != operators for your types</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   🔧 Can be derived automatically for most cases</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   🎨 Allows custom equality logic when needed</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   🔄 Supports cross-type comparisons</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   📊 Required by many standard library algorithms</span><span>&quot;);
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#96b5b4;">demonstrate_partialeq_fundamentals</span><span>();
+</span><span>}
+</span></code></pre>
+<h2 id="understanding-eq-fundamentals">Understanding Eq Fundamentals</h2>
+<h3 id="the-perfect-equality-certification-system">The Perfect Equality Certification System</h3>
+<p><strong>Eq provides additional guarantees beyond PartialEq for perfect equality:</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">demonstrate_eq_fundamentals</span><span>() {
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">🏆 Eq Fundamentals - Perfect Equality Certification System</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">{:=&lt;70}</span><span>&quot;, &quot;&quot;);
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">use </span><span>std::collections::HashMap;
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Eq is like having the highest standard of equality certification
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">📋 Eq Additional Requirements:</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   🔄 All PartialEq requirements (symmetric, transitive)</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   🪞 Reflexive - a == a must always be true</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   🏆 Full equivalence relation</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   🗝️ Required for HashMap keys and HashSet elements</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   📌 Marker trait - no additional methods</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Example 1: Basic Eq Implementation - Perfect Restaurant Item Identity
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">1️⃣ Basic Eq - Perfect Restaurant Item Identity:</span><span>&quot;);
+</span><span>
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Debug, PartialEq, Eq)]  </span><span style="color:#a7adba;">// Both traits for perfect equality
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>TableNumber {
+</span><span>        </span><span style="color:#bf616a;">number</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>        </span><span style="color:#bf616a;">section</span><span>: String,
+</span><span>    }
+</span><span>
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Debug, PartialEq, Eq)]
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>EmployeeId {
+</span><span>        </span><span style="color:#bf616a;">id</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>        </span><span style="color:#bf616a;">department</span><span>: String,
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> table1 = TableNumber { number: </span><span style="color:#d08770;">5</span><span>, section: &quot;</span><span style="color:#a3be8c;">Main Dining</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>() };
+</span><span>    </span><span style="color:#b48ead;">let</span><span> table2 = TableNumber { number: </span><span style="color:#d08770;">5</span><span>, section: &quot;</span><span style="color:#a3be8c;">Main Dining</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>() };
+</span><span>    </span><span style="color:#b48ead;">let</span><span> table3 = TableNumber { number: </span><span style="color:#d08770;">7</span><span>, section: &quot;</span><span style="color:#a3be8c;">Patio</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>() };
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> employee1 = EmployeeId { id: </span><span style="color:#d08770;">1001</span><span>, department: &quot;</span><span style="color:#a3be8c;">Kitchen</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>() };
+</span><span>    </span><span style="color:#b48ead;">let</span><span> employee2 = EmployeeId { id: </span><span style="color:#d08770;">1001</span><span>, department: &quot;</span><span style="color:#a3be8c;">Kitchen</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>() };
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Perfect equality comparisons:</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     table1 == table2: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> (identical tables)</span><span>&quot;, table1 == table2);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     table1 == table3: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> (different tables)</span><span>&quot;, table1 == table3);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     employee1 == employee2: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> (same employee)</span><span>&quot;, employee1 == employee2);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Reflexivity demonstration
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     table1 == table1: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> (reflexive property)</span><span>&quot;, table1 == table1);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     employee1 == employee1: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> (reflexive property)</span><span>&quot;, employee1 == employee1);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Example 2: Why Some Types Can&#39;t Implement Eq - Floating Point Issues
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">2️⃣ Why Some Types Can&#39;t Implement Eq - The NaN Problem:</span><span>&quot;);
+</span><span>
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Debug, PartialEq)]  </span><span style="color:#a7adba;">// Only PartialEq, not Eq
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>MenuItem {
+</span><span>        </span><span style="color:#bf616a;">name</span><span>: String,
+</span><span>        </span><span style="color:#bf616a;">price</span><span>: </span><span style="color:#b48ead;">f64</span><span>,  </span><span style="color:#a7adba;">// f64 implements PartialEq but not Eq due to NaN
+</span><span>        </span><span style="color:#bf616a;">rating</span><span>: </span><span style="color:#b48ead;">f64</span><span>,
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> item1 = MenuItem {
+</span><span>        name: &quot;</span><span style="color:#a3be8c;">Pasta Special</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        price: </span><span style="color:#d08770;">15.99</span><span>,
+</span><span>        rating: </span><span style="color:#d08770;">4.5</span><span>,
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> item2 = MenuItem {
+</span><span>        name: &quot;</span><span style="color:#a3be8c;">Pasta Special</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        price: </span><span style="color:#b48ead;">f64</span><span>::</span><span style="color:#d08770;">NAN</span><span>,  </span><span style="color:#a7adba;">// NaN value
+</span><span>        rating: </span><span style="color:#d08770;">4.5</span><span>,
+</span><span>    };
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Floating point comparison issues:</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     item1 == item1: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> (normal comparison)</span><span>&quot;, item1 == item1);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     item2 == item2: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> (NaN breaks reflexivity!)</span><span>&quot;, item2 == item2);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     This is why f64 cannot implement Eq trait</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Example 3: Eq Required for HashMap Keys - The Lookup System
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">3️⃣ Eq Required for HashMap Keys - Restaurant Lookup Systems:</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// HashMap requires Eq for keys
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> table_assignments: HashMap&lt;TableNumber, String&gt; = HashMap::new();
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> employee_schedules: HashMap&lt;EmployeeId, String&gt; = HashMap::new();
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Add entries
+</span><span>    table_assignments.</span><span style="color:#96b5b4;">insert</span><span>(
+</span><span>        TableNumber { number: </span><span style="color:#d08770;">5</span><span>, section: &quot;</span><span style="color:#a3be8c;">Main Dining</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>() },
+</span><span>        &quot;</span><span style="color:#a3be8c;">Reserved for Johnson party</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()
+</span><span>    );
+</span><span>
+</span><span>    table_assignments.</span><span style="color:#96b5b4;">insert</span><span>(
+</span><span>        TableNumber { number: </span><span style="color:#d08770;">7</span><span>, section: &quot;</span><span style="color:#a3be8c;">Patio</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>() },
+</span><span>        &quot;</span><span style="color:#a3be8c;">Available</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()
+</span><span>    );
+</span><span>
+</span><span>    employee_schedules.</span><span style="color:#96b5b4;">insert</span><span>(
+</span><span>        EmployeeId { id: </span><span style="color:#d08770;">1001</span><span>, department: &quot;</span><span style="color:#a3be8c;">Kitchen</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>() },
+</span><span>        &quot;</span><span style="color:#a3be8c;">Morning shift: 6:00 AM - 2:00 PM</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()
+</span><span>    );
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Lookup using Eq-enabled keys
+</span><span>    </span><span style="color:#b48ead;">let</span><span> table_key = TableNumber { number: </span><span style="color:#d08770;">5</span><span>, section: &quot;</span><span style="color:#a3be8c;">Main Dining</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>() };
+</span><span>    </span><span style="color:#b48ead;">let</span><span> employee_key = EmployeeId { id: </span><span style="color:#d08770;">1001</span><span>, department: &quot;</span><span style="color:#a3be8c;">Kitchen</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>() };
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">if let </span><span>Some(assignment) = table_assignments.</span><span style="color:#96b5b4;">get</span><span>(&amp;table_key) {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">     Table 5 status: </span><span style="color:#d08770;">{}</span><span>&quot;, assignment);
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">if let </span><span>Some(schedule) = employee_schedules.</span><span style="color:#96b5b4;">get</span><span>(&amp;employee_key) {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">     Employee 1001 schedule: </span><span style="color:#d08770;">{}</span><span>&quot;, schedule);
+</span><span>    }
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   ✅ HashMap lookups work because keys implement Eq</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// This would NOT compile if we tried to use MenuItem as a key:
+</span><span>    </span><span style="color:#a7adba;">// let mut menu_lookup: HashMap&lt;MenuItem, String&gt; = HashMap::new();
+</span><span>    </span><span style="color:#a7adba;">// ❌ Error: MenuItem doesn&#39;t implement Eq (due to f64 fields)
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Example 4: Workaround for Non-Eq Types - Custom Wrapper
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">4️⃣ Workaround for Non-Eq Types - Custom Wrapper Approach:</span><span>&quot;);
+</span><span>
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Debug, PartialEq, Eq, Hash)]  </span><span style="color:#a7adba;">// Hash also required for HashMap keys
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>MenuItemKey {
+</span><span>        </span><span style="color:#bf616a;">name</span><span>: String,
+</span><span>        </span><span style="color:#bf616a;">price_cents</span><span>: </span><span style="color:#b48ead;">u32</span><span>,  </span><span style="color:#a7adba;">// Store price as cents to avoid floating point
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">impl </span><span>From&lt;&amp;MenuItem&gt; </span><span style="color:#b48ead;">for </span><span>MenuItemKey {
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">from</span><span>(</span><span style="color:#bf616a;">item</span><span>: &amp;MenuItem) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>            MenuItemKey {
+</span><span>                name: item.name.</span><span style="color:#96b5b4;">clone</span><span>(),
+</span><span>                price_cents: (item.price * </span><span style="color:#d08770;">100.0</span><span>) as </span><span style="color:#b48ead;">u32</span><span>,  </span><span style="color:#a7adba;">// Convert to cents
+</span><span>            }
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> menu_lookup: HashMap&lt;MenuItemKey, String&gt; = HashMap::new();
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> pasta_item = MenuItem {
+</span><span>        name: &quot;</span><span style="color:#a3be8c;">Pasta Special</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        price: </span><span style="color:#d08770;">15.99</span><span>,
+</span><span>        rating: </span><span style="color:#d08770;">4.5</span><span>,
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> pasta_key = MenuItemKey::from(&amp;pasta_item);
+</span><span>    menu_lookup.</span><span style="color:#96b5b4;">insert</span><span>(pasta_key.</span><span style="color:#96b5b4;">clone</span><span>(), &quot;</span><span style="color:#a3be8c;">Available in kitchen</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>());
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">if let </span><span>Some(status) = menu_lookup.</span><span style="color:#96b5b4;">get</span><span>(&amp;pasta_key) {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">     Menu item status: </span><span style="color:#d08770;">{}</span><span>&quot;, status);
+</span><span>    }
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   ✅ Workaround successful using integer-based key</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Example 5: Eq vs PartialEq Decision Matrix
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">5️⃣ Eq vs PartialEq Decision Matrix:</span><span>&quot;);
+</span><span>
+</span><span>    println!(&quot;
+</span><span style="color:#a3be8c;">   Decision Guide:
+</span><span style="color:#a3be8c;">
+</span><span style="color:#a3be8c;">   ✅ Use PartialEq when:
+</span><span style="color:#a3be8c;">     • Type contains floating-point numbers
+</span><span style="color:#a3be8c;">     • You need custom equality logic
+</span><span style="color:#a3be8c;">     • Cross-type comparisons are needed
+</span><span style="color:#a3be8c;">     • Standard == operator is sufficient
+</span><span style="color:#a3be8c;">
+</span><span style="color:#a3be8c;">   ✅ Use Eq (+ PartialEq) when:
+</span><span style="color:#a3be8c;">     • All fields support perfect equality
+</span><span style="color:#a3be8c;">     • Type will be used as HashMap/HashSet key
+</span><span style="color:#a3be8c;">     • Algorithms require full equivalence relation
+</span><span style="color:#a3be8c;">     • Reflexivity is guaranteed (a == a always true)
+</span><span style="color:#a3be8c;">
+</span><span style="color:#a3be8c;">   ⚠️ Cannot use Eq when:
+</span><span style="color:#a3be8c;">     • Type contains f32 or f64 fields
+</span><span style="color:#a3be8c;">     • Custom logic might break reflexivity
+</span><span style="color:#a3be8c;">     • Any field doesn&#39;t implement Eq</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Example 6: Testing Equality Properties
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">6️⃣ Testing Equality Properties:</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">test_equality_properties</span><span>&lt;T&gt;(</span><span style="color:#bf616a;">a</span><span>: &amp;T, </span><span style="color:#bf616a;">b</span><span>: &amp;T, </span><span style="color:#bf616a;">c</span><span>: &amp;T, </span><span style="color:#bf616a;">name</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>)
+</span><span>    </span><span style="color:#b48ead;">where
+</span><span>        T: PartialEq + std::fmt::Debug,
+</span><span>    {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">   Testing </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> equality properties:</span><span>&quot;, name);
+</span><span>
+</span><span>        </span><span style="color:#a7adba;">// Symmetry test
+</span><span>        </span><span style="color:#b48ead;">let</span><span> a_eq_b = a == b;
+</span><span>        </span><span style="color:#b48ead;">let</span><span> b_eq_a = b == a;
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">     Symmetry: a == b: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">, b == a: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> ✓</span><span>&quot;, a_eq_b, b_eq_a);
+</span><span>
+</span><span>        </span><span style="color:#a7adba;">// Transitivity test (assuming a == b and b == c)
+</span><span>        </span><span style="color:#b48ead;">if</span><span> a == b &amp;&amp; b == c {
+</span><span>            </span><span style="color:#b48ead;">let</span><span> a_eq_c = a == c;
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">     Transitivity: a == b == c, a == c: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> ✓</span><span>&quot;, a_eq_c);
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> table_a = TableNumber { number: </span><span style="color:#d08770;">3</span><span>, section: &quot;</span><span style="color:#a3be8c;">Window</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>() };
+</span><span>    </span><span style="color:#b48ead;">let</span><span> table_b = TableNumber { number: </span><span style="color:#d08770;">3</span><span>, section: &quot;</span><span style="color:#a3be8c;">Window</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>() };
+</span><span>    </span><span style="color:#b48ead;">let</span><span> table_c = TableNumber { number: </span><span style="color:#d08770;">3</span><span>, section: &quot;</span><span style="color:#a3be8c;">Window</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>() };
+</span><span>
+</span><span>    </span><span style="color:#96b5b4;">test_equality_properties</span><span>(&amp;table_a, &amp;table_b, &amp;table_c, &quot;</span><span style="color:#a3be8c;">TableNumber</span><span>&quot;);
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">🎯 Eq Key Benefits:</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   🏆 Guarantees perfect equality (reflexive + symmetric + transitive)</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   🗝️ Enables use as HashMap/HashSet keys</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   📊 Required by algorithms needing full equivalence relations</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   🛡️ Provides strongest equality guarantees</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   ⚡ Zero runtime cost - marker trait only</span><span>&quot;);
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#96b5b4;">demonstrate_eq_fundamentals</span><span>();
+</span><span>}
+</span></code></pre>
+<h2 id="practical-applications-and-real-world-usage">Practical Applications and Real-World Usage</h2>
+<h3 id="professional-restaurant-management-system-implementation">Professional Restaurant Management System Implementation</h3>
+<p><strong>Demonstrating how PartialEq and Eq solve real programming challenges:</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">demonstrate_practical_equality_applications</span><span>() {
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">🏢 Practical Equality Applications - Restaurant Management Systems</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">{:=&lt;75}</span><span>&quot;, &quot;&quot;);
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">use </span><span>std::collections::{HashMap, HashSet};
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Real-world applications demonstrate equality traits in complete systems
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">💼 Professional Equality Applications:</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Application 1: Menu Management System with Smart Equality
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">1️⃣ Menu Management System - Smart Equality Comparisons:</span><span>&quot;);
+</span><span>
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Debug, Clone)]
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>MenuItem {
+</span><span>        </span><span style="color:#bf616a;">id</span><span>: String,
+</span><span>        </span><span style="color:#bf616a;">name</span><span>: String,
+</span><span>        </span><span style="color:#bf616a;">base_price</span><span>: </span><span style="color:#b48ead;">f64</span><span>,
+</span><span>        </span><span style="color:#bf616a;">ingredients</span><span>: Vec&lt;String&gt;,
+</span><span>        </span><span style="color:#bf616a;">allergens</span><span>: HashSet&lt;String&gt;,
+</span><span>        </span><span style="color:#bf616a;">available</span><span>: </span><span style="color:#b48ead;">bool</span><span>,
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Custom PartialEq that focuses on business logic
+</span><span>    </span><span style="color:#b48ead;">impl </span><span>PartialEq </span><span style="color:#b48ead;">for </span><span>MenuItem {
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">eq</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">other</span><span>: &amp;</span><span style="color:#b48ead;">Self</span><span>) -&gt; </span><span style="color:#b48ead;">bool </span><span>{
+</span><span>            </span><span style="color:#a7adba;">// Two menu items are &quot;equal&quot; if they have the same ID and name
+</span><span>            </span><span style="color:#a7adba;">// We ignore price fluctuations, ingredient variations, and availability
+</span><span>            </span><span style="color:#bf616a;">self</span><span>.id == other.id &amp;&amp; </span><span style="color:#bf616a;">self</span><span>.name == other.name
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> pizza_v1 = MenuItem {
+</span><span>        id: &quot;</span><span style="color:#a3be8c;">PIZZA001</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        name: &quot;</span><span style="color:#a3be8c;">Margherita Pizza</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        base_price: </span><span style="color:#d08770;">15.99</span><span>,
+</span><span>        ingredients: vec![&quot;</span><span style="color:#a3be8c;">dough</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), &quot;</span><span style="color:#a3be8c;">tomato sauce</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), &quot;</span><span style="color:#a3be8c;">mozzarella</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()],
+</span><span>        allergens: [&quot;</span><span style="color:#a3be8c;">gluten</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), &quot;</span><span style="color:#a3be8c;">dairy</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()].</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">cloned</span><span>().</span><span style="color:#96b5b4;">collect</span><span>(),
+</span><span>        available: </span><span style="color:#d08770;">true</span><span>,
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> pizza_v2 = MenuItem {
+</span><span>        id: &quot;</span><span style="color:#a3be8c;">PIZZA001</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        name: &quot;</span><span style="color:#a3be8c;">Margherita Pizza</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        base_price: </span><span style="color:#d08770;">16.99</span><span>,  </span><span style="color:#a7adba;">// Price changed
+</span><span>        ingredients: vec![&quot;</span><span style="color:#a3be8c;">sourdough</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), &quot;</span><span style="color:#a3be8c;">san marzano tomatoes</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), &quot;</span><span style="color:#a3be8c;">buffalo mozzarella</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()], </span><span style="color:#a7adba;">// Upgraded ingredients
+</span><span>        allergens: [&quot;</span><span style="color:#a3be8c;">gluten</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), &quot;</span><span style="color:#a3be8c;">dairy</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()].</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">cloned</span><span>().</span><span style="color:#96b5b4;">collect</span><span>(),
+</span><span>        available: </span><span style="color:#d08770;">false</span><span>,  </span><span style="color:#a7adba;">// Currently unavailable
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> different_pizza = MenuItem {
+</span><span>        id: &quot;</span><span style="color:#a3be8c;">PIZZA002</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        name: &quot;</span><span style="color:#a3be8c;">Pepperoni Pizza</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        base_price: </span><span style="color:#d08770;">17.99</span><span>,
+</span><span>        ingredients: vec![&quot;</span><span style="color:#a3be8c;">dough</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), &quot;</span><span style="color:#a3be8c;">tomato sauce</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), &quot;</span><span style="color:#a3be8c;">mozzarella</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), &quot;</span><span style="color:#a3be8c;">pepperoni</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()],
+</span><span>        allergens: [&quot;</span><span style="color:#a3be8c;">gluten</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), &quot;</span><span style="color:#a3be8c;">dairy</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()].</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">cloned</span><span>().</span><span style="color:#96b5b4;">collect</span><span>(),
+</span><span>        available: </span><span style="color:#d08770;">true</span><span>,
+</span><span>    };
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Menu item business equality:</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     pizza_v1 == pizza_v2: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> (same ID &amp; name, different details)</span><span>&quot;, pizza_v1 == pizza_v2);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     pizza_v1 == different_pizza: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> (different ID &amp; name)</span><span>&quot;, pizza_v1 == different_pizza);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Application 2: Order Processing with Eq-Enabled Keys
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">2️⃣ Order Processing System - HashMap-Based Lookups:</span><span>&quot;);
+</span><span>
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Debug, PartialEq, Eq, Hash, Clone)]
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>OrderId {
+</span><span>        </span><span style="color:#bf616a;">id</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>        </span><span style="color:#bf616a;">date</span><span>: String,  </span><span style="color:#a7adba;">// Using string for simplicity
+</span><span>    }
+</span><span>
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Debug, PartialEq, Eq, Hash, Clone)]
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>CustomerId {
+</span><span>        </span><span style="color:#bf616a;">id</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>    }
+</span><span>
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Debug)]
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>Order {
+</span><span>        </span><span style="color:#bf616a;">order_id</span><span>: OrderId,
+</span><span>        </span><span style="color:#bf616a;">customer_id</span><span>: CustomerId,
+</span><span>        </span><span style="color:#bf616a;">items</span><span>: Vec&lt;String&gt;,
+</span><span>        </span><span style="color:#bf616a;">total</span><span>: </span><span style="color:#b48ead;">f64</span><span>,
+</span><span>        </span><span style="color:#bf616a;">status</span><span>: OrderStatus,
+</span><span>    }
+</span><span>
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Debug, PartialEq)]
+</span><span>    </span><span style="color:#b48ead;">enum </span><span>OrderStatus {
+</span><span>        Pending,
+</span><span>        Confirmed,
+</span><span>        Preparing,
+</span><span>        Ready,
+</span><span>        Delivered,
+</span><span>        Cancelled,
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Order tracking system using Eq-enabled keys
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> order_database: HashMap&lt;OrderId, Order&gt; = HashMap::new();
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> customer_orders: HashMap&lt;CustomerId, Vec&lt;OrderId&gt;&gt; = HashMap::new();
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Create sample orders
+</span><span>    </span><span style="color:#b48ead;">let</span><span> order1_id = OrderId { id: </span><span style="color:#d08770;">1001</span><span>, date: &quot;</span><span style="color:#a3be8c;">2024-01-15</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>() };
+</span><span>    </span><span style="color:#b48ead;">let</span><span> order2_id = OrderId { id: </span><span style="color:#d08770;">1002</span><span>, date: &quot;</span><span style="color:#a3be8c;">2024-01-15</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>() };
+</span><span>    </span><span style="color:#b48ead;">let</span><span> customer1_id = CustomerId { id: </span><span style="color:#d08770;">501 </span><span>};
+</span><span>    </span><span style="color:#b48ead;">let</span><span> customer2_id = CustomerId { id: </span><span style="color:#d08770;">502 </span><span>};
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> order1 = Order {
+</span><span>        order_id: order1_id.</span><span style="color:#96b5b4;">clone</span><span>(),
+</span><span>        customer_id: customer1_id.</span><span style="color:#96b5b4;">clone</span><span>(),
+</span><span>        items: vec![&quot;</span><span style="color:#a3be8c;">Margherita Pizza</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), &quot;</span><span style="color:#a3be8c;">Caesar Salad</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()],
+</span><span>        total: </span><span style="color:#d08770;">28.98</span><span>,
+</span><span>        status: OrderStatus::Preparing,
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> order2 = Order {
+</span><span>        order_id: order2_id.</span><span style="color:#96b5b4;">clone</span><span>(),
+</span><span>        customer_id: customer2_id.</span><span style="color:#96b5b4;">clone</span><span>(),
+</span><span>        items: vec![&quot;</span><span style="color:#a3be8c;">Quinoa Bowl</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()],
+</span><span>        total: </span><span style="color:#d08770;">15.99</span><span>,
+</span><span>        status: OrderStatus::Ready,
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Store orders in database
+</span><span>    order_database.</span><span style="color:#96b5b4;">insert</span><span>(order1_id.</span><span style="color:#96b5b4;">clone</span><span>(), order1);
+</span><span>    order_database.</span><span style="color:#96b5b4;">insert</span><span>(order2_id.</span><span style="color:#96b5b4;">clone</span><span>(), order2);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Track customer orders
+</span><span>    customer_orders.</span><span style="color:#96b5b4;">insert</span><span>(customer1_id.</span><span style="color:#96b5b4;">clone</span><span>(), vec![order1_id.</span><span style="color:#96b5b4;">clone</span><span>()]);
+</span><span>    customer_orders.</span><span style="color:#96b5b4;">insert</span><span>(customer2_id.</span><span style="color:#96b5b4;">clone</span><span>(), vec![order2_id.</span><span style="color:#96b5b4;">clone</span><span>()]);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Efficient lookups using Eq-enabled keys
+</span><span>    </span><span style="color:#b48ead;">if let </span><span>Some(order) = order_database.</span><span style="color:#96b5b4;">get</span><span>(&amp;order1_id) {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">   Order lookup successful:</span><span>&quot;);
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">     Order </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">: </span><span style="color:#d08770;">{:?}</span><span style="color:#a3be8c;"> - $</span><span style="color:#d08770;">{:.2}</span><span>&quot;, order.order_id.id, order.status, order.total);
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">if let </span><span>Some(orders) = customer_orders.</span><span style="color:#96b5b4;">get</span><span>(&amp;customer1_id) {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">   Customer </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> has </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> orders</span><span>&quot;, customer1_id.id, orders.</span><span style="color:#96b5b4;">len</span><span>());
+</span><span>        </span><span style="color:#b48ead;">for</span><span> order_id in orders {
+</span><span>            </span><span style="color:#b48ead;">if let </span><span>Some(order) = order_database.</span><span style="color:#96b5b4;">get</span><span>(order_id) {
+</span><span>                println!(&quot;</span><span style="color:#a3be8c;">     Order </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> items - </span><span style="color:#d08770;">{:?}</span><span>&quot;, order_id.id, order.items.</span><span style="color:#96b5b4;">len</span><span>(), order.status);
+</span><span>            }
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Application 3: Inventory Management with Custom Equality Logic
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">3️⃣ Inventory Management - Custom Equality for Business Logic:</span><span>&quot;);
+</span><span>
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Debug, Clone)]
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>InventoryItem {
+</span><span>        </span><span style="color:#bf616a;">sku</span><span>: String,
+</span><span>        </span><span style="color:#bf616a;">name</span><span>: String,
+</span><span>        </span><span style="color:#bf616a;">quantity</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>        </span><span style="color:#bf616a;">unit_cost</span><span>: </span><span style="color:#b48ead;">f64</span><span>,
+</span><span>        </span><span style="color:#bf616a;">supplier</span><span>: String,
+</span><span>        </span><span style="color:#bf616a;">expiry_date</span><span>: Option&lt;String&gt;,
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Custom equality: items are the same if they have the same SKU
+</span><span>    </span><span style="color:#a7adba;">// (regardless of quantity, cost fluctuations, or supplier changes)
+</span><span>    </span><span style="color:#b48ead;">impl </span><span>PartialEq </span><span style="color:#b48ead;">for </span><span>InventoryItem {
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">eq</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">other</span><span>: &amp;</span><span style="color:#b48ead;">Self</span><span>) -&gt; </span><span style="color:#b48ead;">bool </span><span>{
+</span><span>            </span><span style="color:#bf616a;">self</span><span>.sku == other.sku
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// For deduplication in collections
+</span><span>    </span><span style="color:#b48ead;">impl </span><span>std::hash::Hash </span><span style="color:#b48ead;">for </span><span>InventoryItem {
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">hash</span><span>&lt;H: std::hash::Hasher&gt;(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">state</span><span>: &amp;</span><span style="color:#b48ead;">mut</span><span> H) {
+</span><span>            </span><span style="color:#bf616a;">self</span><span>.sku.</span><span style="color:#96b5b4;">hash</span><span>(state);
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Since we only hash/compare by SKU, we can implement Eq
+</span><span>    </span><span style="color:#b48ead;">impl </span><span>Eq </span><span style="color:#b48ead;">for </span><span>InventoryItem {}
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> tomatoes_batch1 = InventoryItem {
+</span><span>        sku: &quot;</span><span style="color:#a3be8c;">VEG001</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        name: &quot;</span><span style="color:#a3be8c;">Organic Tomatoes</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        quantity: </span><span style="color:#d08770;">50</span><span>,
+</span><span>        unit_cost: </span><span style="color:#d08770;">2.99</span><span>,
+</span><span>        supplier: &quot;</span><span style="color:#a3be8c;">Green Farm Co</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        expiry_date: Some(&quot;</span><span style="color:#a3be8c;">2024-01-20</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()),
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> tomatoes_batch2 = InventoryItem {
+</span><span>        sku: &quot;</span><span style="color:#a3be8c;">VEG001</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),  </span><span style="color:#a7adba;">// Same SKU
+</span><span>        name: &quot;</span><span style="color:#a3be8c;">Organic Tomatoes</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        quantity: </span><span style="color:#d08770;">30</span><span>,  </span><span style="color:#a7adba;">// Different quantity
+</span><span>        unit_cost: </span><span style="color:#d08770;">3.49</span><span>,  </span><span style="color:#a7adba;">// Different cost
+</span><span>        supplier: &quot;</span><span style="color:#a3be8c;">Fresh Valley Farms</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),  </span><span style="color:#a7adba;">// Different supplier
+</span><span>        expiry_date: Some(&quot;</span><span style="color:#a3be8c;">2024-01-22</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()),  </span><span style="color:#a7adba;">// Different expiry
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> onions = InventoryItem {
+</span><span>        sku: &quot;</span><span style="color:#a3be8c;">VEG002</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        name: &quot;</span><span style="color:#a3be8c;">Yellow Onions</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        quantity: </span><span style="color:#d08770;">25</span><span>,
+</span><span>        unit_cost: </span><span style="color:#d08770;">1.99</span><span>,
+</span><span>        supplier: &quot;</span><span style="color:#a3be8c;">Local Growers</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        expiry_date: Some(&quot;</span><span style="color:#a3be8c;">2024-01-25</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()),
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Demonstrate custom equality
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Inventory item business equality:</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     tomatoes_batch1 == tomatoes_batch2: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> (same SKU, different details)</span><span>&quot;, tomatoes_batch1 == tomatoes_batch2);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     tomatoes_batch1 == onions: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> (different SKU)</span><span>&quot;, tomatoes_batch1 == onions);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Use in HashSet for deduplication
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> inventory_set: HashSet&lt;InventoryItem&gt; = HashSet::new();
+</span><span>    inventory_set.</span><span style="color:#96b5b4;">insert</span><span>(tomatoes_batch1.</span><span style="color:#96b5b4;">clone</span><span>());
+</span><span>    inventory_set.</span><span style="color:#96b5b4;">insert</span><span>(tomatoes_batch2);  </span><span style="color:#a7adba;">// Won&#39;t be added due to same SKU
+</span><span>    inventory_set.</span><span style="color:#96b5b4;">insert</span><span>(onions);
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Inventory set size after deduplication: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> items</span><span>&quot;, inventory_set.</span><span style="color:#96b5b4;">len</span><span>());
+</span><span>    </span><span style="color:#b48ead;">for</span><span> item in &amp;inventory_set {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">     SKU: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> - </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> (Qty: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">)</span><span>&quot;, item.sku, item.name, item.quantity);
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Application 4: Configuration Management with Flexible Equality
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">4️⃣ Configuration Management - Flexible Equality Patterns:</span><span>&quot;);
+</span><span>
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Debug, Clone)]
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>RestaurantConfig {
+</span><span>        </span><span style="color:#bf616a;">location</span><span>: String,
+</span><span>        </span><span style="color:#bf616a;">max_capacity</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>        </span><span style="color:#bf616a;">operating_hours</span><span>: (</span><span style="color:#b48ead;">u32</span><span>, </span><span style="color:#b48ead;">u32</span><span>),  </span><span style="color:#a7adba;">// (open_hour, close_hour)
+</span><span>        </span><span style="color:#bf616a;">features</span><span>: HashSet&lt;String&gt;,
+</span><span>        </span><span style="color:#bf616a;">contact_info</span><span>: HashMap&lt;String, String&gt;,
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Implement equality based on core operational parameters
+</span><span>    </span><span style="color:#b48ead;">impl </span><span>PartialEq </span><span style="color:#b48ead;">for </span><span>RestaurantConfig {
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">eq</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">other</span><span>: &amp;</span><span style="color:#b48ead;">Self</span><span>) -&gt; </span><span style="color:#b48ead;">bool </span><span>{
+</span><span>            </span><span style="color:#a7adba;">// Configs are equal if location and capacity match
+</span><span>            </span><span style="color:#a7adba;">// (ignoring hours, features, and contact changes)
+</span><span>            </span><span style="color:#bf616a;">self</span><span>.location == other.location &amp;&amp; </span><span style="color:#bf616a;">self</span><span>.max_capacity == other.max_capacity
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> config_v1 = RestaurantConfig {
+</span><span>        location: &quot;</span><span style="color:#a3be8c;">Downtown Main St</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        max_capacity: </span><span style="color:#d08770;">80</span><span>,
+</span><span>        operating_hours: (</span><span style="color:#d08770;">11</span><span>, </span><span style="color:#d08770;">22</span><span>),  </span><span style="color:#a7adba;">// 11 AM to 10 PM
+</span><span>        features: [&quot;</span><span style="color:#a3be8c;">wifi</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), &quot;</span><span style="color:#a3be8c;">parking</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()].</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">cloned</span><span>().</span><span style="color:#96b5b4;">collect</span><span>(),
+</span><span>        contact_info: [(&quot;</span><span style="color:#a3be8c;">phone</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), &quot;</span><span style="color:#a3be8c;">555-0123</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>())].</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">cloned</span><span>().</span><span style="color:#96b5b4;">collect</span><span>(),
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> config_v2 = RestaurantConfig {
+</span><span>        location: &quot;</span><span style="color:#a3be8c;">Downtown Main St</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),  </span><span style="color:#a7adba;">// Same location
+</span><span>        max_capacity: </span><span style="color:#d08770;">80</span><span>,  </span><span style="color:#a7adba;">// Same capacity
+</span><span>        operating_hours: (</span><span style="color:#d08770;">10</span><span>, </span><span style="color:#d08770;">23</span><span>),  </span><span style="color:#a7adba;">// Different hours
+</span><span>        features: [&quot;</span><span style="color:#a3be8c;">wifi</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), &quot;</span><span style="color:#a3be8c;">parking</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), &quot;</span><span style="color:#a3be8c;">outdoor_seating</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()].</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">cloned</span><span>().</span><span style="color:#96b5b4;">collect</span><span>(),  </span><span style="color:#a7adba;">// Added feature
+</span><span>        contact_info: [
+</span><span>            (&quot;</span><span style="color:#a3be8c;">phone</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), &quot;</span><span style="color:#a3be8c;">555-0123</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()),
+</span><span>            (&quot;</span><span style="color:#a3be8c;">email</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), &quot;</span><span style="color:#a3be8c;">info@restaurant.com</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>())
+</span><span>        ].</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">cloned</span><span>().</span><span style="color:#96b5b4;">collect</span><span>(),  </span><span style="color:#a7adba;">// Added email
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> different_config = RestaurantConfig {
+</span><span>        location: &quot;</span><span style="color:#a3be8c;">Uptown Plaza</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),  </span><span style="color:#a7adba;">// Different location
+</span><span>        max_capacity: </span><span style="color:#d08770;">120</span><span>,  </span><span style="color:#a7adba;">// Different capacity
+</span><span>        operating_hours: (</span><span style="color:#d08770;">11</span><span>, </span><span style="color:#d08770;">22</span><span>),
+</span><span>        features: [&quot;</span><span style="color:#a3be8c;">wifi</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()].</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">cloned</span><span>().</span><span style="color:#96b5b4;">collect</span><span>(),
+</span><span>        contact_info: [(&quot;</span><span style="color:#a3be8c;">phone</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), &quot;</span><span style="color:#a3be8c;">555-0456</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>())].</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">cloned</span><span>().</span><span style="color:#96b5b4;">collect</span><span>(),
+</span><span>    };
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Configuration equality (core parameters only):</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     config_v1 == config_v2: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> (same location &amp; capacity)</span><span>&quot;, config_v1 == config_v2);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     config_v1 == different_config: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> (different location &amp; capacity)</span><span>&quot;, config_v1 == different_config);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Application 5: Advanced Equality Patterns - Conditional Logic
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">5️⃣ Advanced Patterns - Conditional Equality Logic:</span><span>&quot;);
+</span><span>
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Debug, Clone)]
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>PriceRule {
+</span><span>        </span><span style="color:#bf616a;">item_category</span><span>: String,
+</span><span>        </span><span style="color:#bf616a;">base_price</span><span>: </span><span style="color:#b48ead;">f64</span><span>,
+</span><span>        </span><span style="color:#bf616a;">discount_percentage</span><span>: </span><span style="color:#b48ead;">f64</span><span>,
+</span><span>        </span><span style="color:#bf616a;">valid_from</span><span>: String,
+</span><span>        </span><span style="color:#bf616a;">valid_until</span><span>: String,
+</span><span>        </span><span style="color:#bf616a;">conditions</span><span>: Vec&lt;String&gt;,
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">impl </span><span>PartialEq </span><span style="color:#b48ead;">for </span><span>PriceRule {
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">eq</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">other</span><span>: &amp;</span><span style="color:#b48ead;">Self</span><span>) -&gt; </span><span style="color:#b48ead;">bool </span><span>{
+</span><span>            </span><span style="color:#a7adba;">// Price rules are equal if they affect the same category
+</span><span>            </span><span style="color:#a7adba;">// and have the same base logic (ignoring dates and conditions)
+</span><span>            </span><span style="color:#bf616a;">self</span><span>.item_category == other.item_category &amp;&amp;
+</span><span>            (</span><span style="color:#bf616a;">self</span><span>.base_price - other.base_price).</span><span style="color:#96b5b4;">abs</span><span>() &lt; </span><span style="color:#d08770;">0.01 </span><span>&amp;&amp;  </span><span style="color:#a7adba;">// Handle floating point comparison
+</span><span>            (</span><span style="color:#bf616a;">self</span><span>.discount_percentage - other.discount_percentage).</span><span style="color:#96b5b4;">abs</span><span>() &lt; </span><span style="color:#d08770;">0.01
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> summer_special = PriceRule {
+</span><span>        item_category: &quot;</span><span style="color:#a3be8c;">Salads</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        base_price: </span><span style="color:#d08770;">12.99</span><span>,
+</span><span>        discount_percentage: </span><span style="color:#d08770;">15.0</span><span>,
+</span><span>        valid_from: &quot;</span><span style="color:#a3be8c;">2024-06-01</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        valid_until: &quot;</span><span style="color:#a3be8c;">2024-08-31</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        conditions: vec![&quot;</span><span style="color:#a3be8c;">lunch_hours</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), &quot;</span><span style="color:#a3be8c;">weekdays</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()],
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> winter_special = PriceRule {
+</span><span>        item_category: &quot;</span><span style="color:#a3be8c;">Salads</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        base_price: </span><span style="color:#d08770;">12.99</span><span>,
+</span><span>        discount_percentage: </span><span style="color:#d08770;">15.0</span><span>,
+</span><span>        valid_from: &quot;</span><span style="color:#a3be8c;">2024-01-01</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),  </span><span style="color:#a7adba;">// Different dates
+</span><span>        valid_until: &quot;</span><span style="color:#a3be8c;">2024-02-29</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        conditions: vec![&quot;</span><span style="color:#a3be8c;">dinner_hours</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()],  </span><span style="color:#a7adba;">// Different conditions
+</span><span>    };
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Price rule equality (core pricing logic):</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     summer_special == winter_special: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> (same category &amp; pricing)</span><span>&quot;, summer_special == winter_special);
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">🎯 Real-World Equality Benefits:</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   💼 Business logic equality enables smart comparisons</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   🔑 Eq-enabled types work as HashMap/HashSet keys</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   🎨 Custom equality logic matches domain requirements</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   🔄 Flexible comparison standards for different contexts</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   ⚡ Efficient lookups and deduplication operations</span><span>&quot;);
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">💡 Professional Guidelines:</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   🎯 Design equality based on business significance, not just data</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   📊 Use Eq for perfect identity, PartialEq for business equivalence</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   🔑 Implement Hash when using Eq types as collection keys</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   ⚖️ Handle floating-point comparisons with epsilon tolerance</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   📋 Document equality semantics clearly for maintainers</span><span>&quot;);
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#96b5b4;">demonstrate_practical_equality_applications</span><span>();
+</span><span>}
+</span></code></pre>
+<h2 id="summary-and-key-takeaways">Summary and Key Takeaways</h2>
+<h3 id="mental-model-the-complete-professional-restaurant-quality-comparison-system"><strong>Mental Model: The Complete Professional Restaurant Quality Comparison System</strong></h3>
+<p>Remember our comprehensive professional restaurant quality comparison analogy:</p>
+<ul>
+<li>⚖️ <strong>PartialEq</strong> = <strong>Standard comparison system</strong> - Reliable equality for most restaurant operations</li>
+<li>🏆 <strong>Eq</strong> = <strong>Perfect identity certification</strong> - Highest standard for critical operations like key lookups</li>
+<li>🔄 <strong>Mathematical properties</strong> = <strong>Quality assurance standards</strong> - Consistent, predictable comparison behavior</li>
+<li>🎯 <strong>Custom implementations</strong> = <strong>Business-specific standards</strong> - Tailored equality logic for domain needs</li>
+<li>💼 <strong>Real-world applications</strong> = <strong>Complete management systems</strong> - Professional-grade comparison infrastructure</li>
+</ul>
+<h3 id="essential-partialeq-and-eq-concepts"><strong>Essential PartialEq and Eq Concepts</strong></h3>
+<p><strong>The Equality Hierarchy:</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// PartialEq: Basic equality (most types)
+</span><span style="color:#b48ead;">pub trait </span><span>PartialEq&lt;Rhs = Self&gt; {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">eq</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">other</span><span>: &amp;Rhs) -&gt; </span><span style="color:#b48ead;">bool</span><span>;
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">ne</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">other</span><span>: &amp;Rhs) -&gt; </span><span style="color:#b48ead;">bool </span><span>{ !</span><span style="color:#bf616a;">self</span><span>.</span><span style="color:#96b5b4;">eq</span><span>(other) }
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Eq: Perfect equality (marker trait)
+</span><span style="color:#b48ead;">pub trait </span><span>Eq: PartialEq&lt;Self&gt; {}
+</span></code></pre>
+<p><strong>Mathematical Requirements:</strong></p>
+<ul>
+<li><strong>PartialEq</strong>: Symmetric (a == b → b == a) and Transitive (a == b ∧ b == c → a == c)</li>
+<li><strong>Eq</strong>: All PartialEq requirements PLUS Reflexive (a == a must always be true)</li>
+</ul>
+<h3 id="partialeq-vs-eq-decision-matrix"><strong>PartialEq vs Eq Decision Matrix</strong></h3>
+<table><thead><tr><th style="text-align: left"><strong>Use Case</strong></th><th style="text-align: left"><strong>PartialEq</strong></th><th style="text-align: left"><strong>Eq</strong></th><th style="text-align: left"><strong>Reasoning</strong></th></tr></thead><tbody>
+<tr><td style="text-align: left"><strong>Contains floating-point</strong></td><td style="text-align: left">✅ Use PartialEq</td><td style="text-align: left">❌ Cannot use Eq</td><td style="text-align: left">NaN breaks reflexivity (NaN != NaN)</td></tr>
+<tr><td style="text-align: left"><strong>HashMap/HashSet keys</strong></td><td style="text-align: left">❌ Not sufficient</td><td style="text-align: left">✅ Required</td><td style="text-align: left">Need full equivalence relation</td></tr>
+<tr><td style="text-align: left"><strong>Custom equality logic</strong></td><td style="text-align: left">✅ Perfect fit</td><td style="text-align: left">⚠️ Only if reflexive</td><td style="text-align: left">Business logic may break reflexivity</td></tr>
+<tr><td style="text-align: left"><strong>Simple data types</strong></td><td style="text-align: left">✅ Can derive</td><td style="text-align: left">✅ Can derive both</td><td style="text-align: left">Both work for simple cases</td></tr>
+<tr><td style="text-align: left"><strong>Cross-type comparison</strong></td><td style="text-align: left">✅ Supported</td><td style="text-align: left">❌ Not possible</td><td style="text-align: left">Eq requires same type (reflexivity)</td></tr>
+</tbody></table>
+<h3 id="essential-implementation-patterns"><strong>Essential Implementation Patterns</strong></h3>
+<p><strong>Automatic Derivation:</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span>#[</span><span style="color:#bf616a;">derive</span><span>(PartialEq)]        </span><span style="color:#a7adba;">// Most common case
+</span><span style="color:#b48ead;">struct </span><span>BasicType { </span><span style="color:#a7adba;">/* ... */ </span><span>}
+</span><span>
+</span><span>#[</span><span style="color:#bf616a;">derive</span><span>(PartialEq, Eq)]    </span><span style="color:#a7adba;">// When perfect equality is needed
+</span><span style="color:#b48ead;">struct </span><span>PerfectType { </span><span style="color:#a7adba;">/* ... */ </span><span>}
+</span></code></pre>
+<p><strong>Custom Implementation:</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">impl </span><span>PartialEq </span><span style="color:#b48ead;">for </span><span>MyType {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">eq</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">other</span><span>: &amp;</span><span style="color:#b48ead;">Self</span><span>) -&gt; </span><span style="color:#b48ead;">bool </span><span>{
+</span><span>        </span><span style="color:#a7adba;">// Custom equality logic
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.important_field == other.important_field
+</span><span>        </span><span style="color:#a7adba;">// May ignore other fields
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Eq is just a marker - no implementation needed
+</span><span style="color:#b48ead;">impl </span><span>Eq </span><span style="color:#b48ead;">for </span><span>MyType {}  </span><span style="color:#a7adba;">// Only if reflexivity guaranteed
+</span></code></pre>
+<p><strong>Cross-Type Equality:</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">impl </span><span>PartialEq&lt;OtherType&gt; </span><span style="color:#b48ead;">for </span><span>MyType {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">eq</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">other</span><span>: &amp;OtherType) -&gt; </span><span style="color:#b48ead;">bool </span><span>{
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.shared_field == other.shared_field
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h3 id="common-use-cases-and-examples"><strong>Common Use Cases and Examples</strong></h3>
+<p><strong>HashMap Keys (Requires Eq):</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>std::collections::HashMap;
+</span><span>
+</span><span>#[</span><span style="color:#bf616a;">derive</span><span>(PartialEq, Eq, Hash)]  </span><span style="color:#a7adba;">// All three required for HashMap keys
+</span><span style="color:#b48ead;">struct </span><span>ProductId(String);
+</span><span>
+</span><span style="color:#b48ead;">let mut</span><span> inventory: HashMap&lt;ProductId, </span><span style="color:#b48ead;">u32</span><span>&gt; = HashMap::new();
+</span><span>inventory.</span><span style="color:#96b5b4;">insert</span><span>(ProductId(&quot;</span><span style="color:#a3be8c;">ITEM001</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()), </span><span style="color:#d08770;">50</span><span>);
+</span></code></pre>
+<p><strong>Floating-Point Handling (PartialEq Only):</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span>#[</span><span style="color:#bf616a;">derive</span><span>(PartialEq)]  </span><span style="color:#a7adba;">// Cannot derive Eq due to f64
+</span><span style="color:#b48ead;">struct </span><span>Price {
+</span><span>    </span><span style="color:#bf616a;">amount</span><span>: </span><span style="color:#b48ead;">f64</span><span>,
+</span><span>    </span><span style="color:#bf616a;">currency</span><span>: String,
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// For HashMap keys, use integer representation
+</span><span>#[</span><span style="color:#bf616a;">derive</span><span>(PartialEq, Eq, Hash)]
+</span><span style="color:#b48ead;">struct </span><span>PriceKey {
+</span><span>    </span><span style="color:#bf616a;">amount_cents</span><span>: </span><span style="color:#b48ead;">u32</span><span>,  </span><span style="color:#a7adba;">// Store as cents to avoid floating-point
+</span><span>    </span><span style="color:#bf616a;">currency</span><span>: String,
+</span><span>}
+</span></code></pre>
+<h3 id="best-practices-checklist"><strong>Best Practices Checklist</strong></h3>
+<p><strong>✅ Design Guidelines:</strong></p>
+<ul>
+<li>Use <code>#[derive(PartialEq)]</code> for most types unless custom logic is needed</li>
+<li>Add <code>Eq</code> only when reflexivity is guaranteed (a == a always true)</li>
+<li>Implement custom equality based on business significance, not just data structure</li>
+<li>Handle floating-point comparisons with epsilon tolerance when needed</li>
+</ul>
+<p><strong>✅ Implementation Guidelines:</strong></p>
+<ul>
+<li>Always implement both <code>PartialEq</code> and <code>Eq</code> together when using <code>Eq</code></li>
+<li>Document equality semantics clearly, especially for custom implementations</li>
+<li>Use <code>Hash</code> trait alongside <code>Eq</code> when types will be used as HashMap keys</li>
+<li>Test equality properties (reflexivity, symmetry, transitivity) thoroughly</li>
+</ul>
+<p><strong>✅ Performance Guidelines:</strong></p>
+<ul>
+<li>Derived implementations are usually optimal for simple types</li>
+<li>Custom implementations should be efficient - they're called frequently</li>
+<li>Consider field order in equality checks (check most discriminating fields first)</li>
+<li>Use short-circuit evaluation in custom implementations</li>
+</ul>
+<p><strong>❌ Common Pitfalls:</strong></p>
+<ul>
+<li>Implementing <code>Eq</code> for types containing floating-point numbers</li>
+<li>Breaking mathematical properties in custom implementations</li>
+<li>Forgetting to implement <code>Hash</code> when implementing <code>Eq</code> for collection keys</li>
+<li>Not maintaining symmetry in cross-type <code>PartialEq</code> implementations</li>
+<li>Over-complicating equality logic when simple field comparison suffices</li>
+</ul>
+<h3 id="the-professional-advantage"><strong>The Professional Advantage</strong></h3>
+<p><strong>Mastering PartialEq and Eq traits in Rust is like having a complete professional restaurant quality comparison system</strong> that ensures consistency, prevents errors, and enables sophisticated operations:</p>
+<ul>
+<li>⚖️ <strong>Reliable comparisons</strong> - Predictable equality behavior across your entire system</li>
+<li>🔑 <strong>Collection compatibility</strong> - Enable use as keys in HashMap and elements in HashSet</li>
+<li>🎯 <strong>Business logic alignment</strong> - Custom equality that matches domain requirements</li>
+<li>🛡️ <strong>Type safety</strong> - Compile-time guarantees about comparison capabilities</li>
+<li>⚡ <strong>Performance</strong> - Efficient equality checking with zero-cost abstractions</li>
+</ul>
+<p><strong>Understanding PartialEq and Eq transforms you from a programmer who struggles with comparison logic to an architect</strong> who builds reliable, efficient systems with predictable equality semantics. Just as a master restaurant manager can establish comparison standards that work consistently across all operations while handling special cases appropriately, a skilled Rust programmer leverages these traits to create robust systems where equality comparisons are both meaningful and efficient.[^1][^2][^3][^4]</p>
+<p>This comprehensive understanding of PartialEq and Eq traits - from basic concepts through advanced patterns and real-world applications - enables you to build Rust programs with sophisticated comparison logic that maintains mathematical correctness while serving your specific domain needs, whether you're building simple data structures or complex enterprise systems requiring reliable equality semantics!</p>
+<ol>
+<li>https://users.rust-lang.org/t/what-is-the-difference-between-eq-and-partialeq/15751</li>
+<li>https://www.reddit.com/r/rust/comments/t8d6wb/why_does_rust_have_eq_and_partialeq/</li>
+<li>https://doc.rust-lang.org/std/cmp/trait.PartialEq.html</li>
+<li>https://www.linkedin.com/pulse/eq-partialeq-rust-amit-nadiger-514uc</li>
+<li>http://bernardo.shippedbrain.com/rust_ordering/</li>
+<li>https://qxf2.com/blog/implement-partialeq-custom-type-rust/</li>
+<li>https://leapcell.io/blog/understanding-derive-in-rust</li>
+<li>https://google.github.io/comprehensive-rust/std-traits/comparisons.html</li>
+<li>https://effective-rust.com/std-traits.html</li>
+<li>https://www.philipdaniels.com/blog/2019/rust-equality-and-ordering/</li>
+<li>https://stackoverflow.com/questions/55128808/when-is-it-appropriate-to-require-only-partialeq-and-not-eq</li>
+<li>https://doc.rust-lang.org/std/cmp/trait.Eq.html</li>
+<li>https://web.mit.edu/rust-lang_v1.25/arch/amd64_ubuntu1404/share/doc/rust/html/std/cmp/trait.PartialEq.html</li>
+<li>https://users.rust-lang.org/t/derive-partialeq-eq-not-working-with-inner-types/102338</li>
+<li>https://users.rust-lang.org/t/a-question-about-trait-eq-and-partialeq/11608</li>
+<li>https://rust.docs.kernel.org/core/cmp/trait.PartialEq.html</li>
+<li>https://quinedot.github.io/rust-learning/dyn-trait-eq.html</li>
+<li>https://llogiq.github.io/2015/07/30/traits.html</li>
+<li>https://www.reddit.com/r/rust/comments/1g7ecaf/implement_eq_trait_for_same_trait_but_distinct/</li>
+<li>https://stackoverflow.com/questions/25339603/how-to-test-for-equality-between-trait-objects</li>
+<li>https://users.rust-lang.org/t/how-to-compare-two-trait-objects-for-equality/88063</li>
+<li>https://serokell.io/blog/rust-traits</li>
+<li>https://www.youtube.com/watch?v=0sI-GzVSYic</li>
+<li>https://github.com/pretzelhammer/rust-blog/blob/master/posts/tour-of-rusts-standard-library-traits.md</li>
+<li>https://stackoverflow.com/questions/67109860/how-to-compare-trait-objects-within-an-arc</li>
+<li>https://blog.rust-lang.org/2015/05/11/traits.html</li>
+<li>https://users.rust-lang.org/t/trait-bound-eq-is-not-satified/75901</li>
+<li>https://gist.github.com/jlgerber/dd4cae05a3d0515080d8792743f75524</li>
+</ol>
+
+    
+        </div>
+
+    </article>
+</main>
+
+
+    <script type="text/javascript" src="https://aarambhdevhub.github.io/rust-doc/elasticlunr.min.js" defer></script>
+    <script type="text/javascript" src="https://aarambhdevhub.github.io/rust-doc/search_index.en.js" defer></script>
+<script type="text/javascript" src="https://aarambhdevhub.github.io/rust-doc/js.js" defer></script>
+
+</body>
+</html>
