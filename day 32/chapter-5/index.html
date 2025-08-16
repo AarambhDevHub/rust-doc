@@ -1,0 +1,1934 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://aarambhdevhub.github.io/rust-doc/main.css">
+    <link rel="icon" href="https://www.rust-lang.org/static/images/favicon-16x16.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Rust Programming Course! | Custom Iterators </title>
+</head>
+<body>
+
+<main>
+    
+    <nav>
+            <a href="https:&#x2F;&#x2F;aarambhdevhub.github.io&#x2F;rust-doc&#x2F;">
+                        <img src="https://www.rust-lang.org/static/images/rust-logo-blk.svg" alt="logo"/>
+                    </a>
+                <!-- -->
+
+            <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+            <div id="trees">
+                <input class="tree-toggle" type="checkbox" id="day-1-introduction"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-1-introduction">Day 1: Introduction</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 1/chapter-1/">What is Rust and why use it?</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 1/chapter-2/">Installing Rust Toolchain (rustup, cargo)</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 1/chapter-3/">Setting up Development (VS Code + Hello World)</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 1/chapter-4/">Understanding Cargo Project Structure</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-2-basic-syntax-variables"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-2-basic-syntax-variables">Day 2: Basic Syntax &amp; Variables</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 2/chapter-1/">Variables and Mutability in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 2/chapter-2/">Data Types in Rust: Integers, Floats, Booleans, and Characters</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 2/chapter-3/">Constants vs Variables</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 2/chapter-4/">Understanding Shadowing in Rust: A Practical Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 2/chapter-5/">Basic Input&#x2F;Output</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-3-functions-control-flow"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-3-functions-control-flow">Day 3: Functions &amp; Control Flow</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 3/chapter-1/">Function Syntax and Parameters in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 3/chapter-2/">Return Values and Expressions vs Statements</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 3/chapter-3/">If&#x2F;Else Statements in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 3/chapter-4/">Match Expressions in Rust: Powerful Pattern Matching</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 3/chapter-5/">Loops in Rust: loop, while, for Explained</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-4-data-types-deep-dive"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-4-data-types-deep-dive">Day 4: Data Types Deep Dive</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 4/chapter-1/">Compound Types (Tuples, Arrays)</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 4/chapter-2/">String vs &amp;str in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 4/chapter-3/">Vector Basics in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 4/chapter-4/">Type Annotations and Inference in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 4/chapter-5/">Practical Rust Exercises</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-5-practice-review"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-5-practice-review">Day 5: Practice &amp; Review</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 5/chapter-1/">Day 5: Practice &amp; Review</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-6-ownership-fundamentals"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-6-ownership-fundamentals">Day 6: Ownership Fundamentals</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 6/chapter-1/">Ownership in Rust: A Detailed Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 6/chapter-2/">Stack vs Heap in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 6/chapter-3/">Understanding Ownership in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 6/chapter-4/">Move Semantics in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 6/chapter-5/">Copy Trait in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-7-references-borrowing"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-7-references-borrowing">Day 7: References &amp; Borrowing</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 7/chapter-1/">Immutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 7/chapter-2/">Mutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 7/chapter-3/">Borrowing Rules</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 7/chapter-4/">Reference Lifetime Basics</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 7/chapter-5/">Common Borrowing Errors and Solutions</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-8-slices"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-8-slices">Day 8: Slices</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 8/chapter-1/">String Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 8/chapter-2/">Array Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 8/chapter-3/">Slice Syntax and Usage</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 8/chapter-4/">Practical Applications</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 8/chapter-5/">Memory Safety Benefits</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-9-advanced-ownership"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-9-advanced-ownership">Day 9: Advanced Ownership</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 9/chapter-1/">Clone Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 9/chapter-2/">Drop Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 9/chapter-3/">RAII Pattern</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 9/chapter-4/">Memory Management Comparison with Other Languages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 9/chapter-5/">Best Practices (Advanced Ownership)</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-10-ownership-practice"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-10-ownership-practice">Day 10: Ownership Practice</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 10/chapter-1/">Complex Ownership Scenarios</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 10/chapter-2/">Debugging Ownership Errors</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 10/chapter-3/">Code Refactoring Exercises</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 10/chapter-4/">Group Problem-Solving</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-11-structs-basics"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-11-structs-basics">Day 11: Structs Basics</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 11/chapter-1/">Defining and Instantiating Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 11/chapter-2/">Field Access and Modification</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 11/chapter-3/">Tuple Structs and Unit Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 11/chapter-4/">Struct Update Syntax</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 11/chapter-5/">Ownership of Struct Data</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-12-methods-associated-functions"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-12-methods-associated-functions">Day 12: Methods &amp; Associated Functions</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 12/chapter-1/">Implementing Methods with impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 12/chapter-2/">&amp;self, &amp;mut self, and self</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 12/chapter-3/">Associated Functions (like Constructors)</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 12/chapter-4/">Multiple impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 12/chapter-5/">Method Chaining</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-13-advanced-struct-concepts"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-13-advanced-struct-concepts">Day 13: Advanced Struct Concepts</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 13/chapter-1/">Struct Lifetime Parameters</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 13/chapter-2/">Debug Trait and Custom Formatting</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 13/chapter-3/">Builder Pattern Implementation</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 13/chapter-4/">Struct Composition</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 13/chapter-5/">Best Practices for Struct Design</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-14-enums-pattern-matching"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-14-enums-pattern-matching">Day 14: Enums &amp; Pattern Matching</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 14/chapter-1/">Defining Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 14/chapter-2/">Enum Variants with Data</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 14/chapter-3/">Option&lt;T&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 14/chapter-4/">Result&lt;T, E&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 14/chapter-5/">Advanced Match Patterns in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-15-practice-project"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-15-practice-project">Day 15: Practice Project</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 15/chapter-1/">Building a Simple CLI Calculator in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-16-vectors"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-16-vectors">Day 16: Vectors</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 16/chapter-1/">Creating and Updating Vectors</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 16/chapter-2/">Vector Methods: push, pop, iter</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 16/chapter-3/">Accessing Vector Elements Safely</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 16/chapter-4/">Vector of Different Types with Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 16/chapter-5/">Performance Considerations</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-17-hashmaps-other-collections"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-17-hashmaps-other-collections">Day 17: HashMaps &amp; Other Collections</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 17/chapter-1/">HashMap Creation and Manipulation</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 17/chapter-2/">Keys and Values Ownership</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 17/chapter-3/">HashMap Methods and Iteration</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 17/chapter-4/">When to Use Different Collections</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 17/chapter-5/">BTreeMap Introduction</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-18-error-handling"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-18-error-handling">Day 18: Error Handling</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 18/chapter-1/">Panic! and When to Use It</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 18/chapter-2/">Result&lt;T, E&gt; in Depth</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 18/chapter-3/">The ? Operator in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 18/chapter-4/">Creating Custom Error Types in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 18/chapter-5/">Error Propagation Patterns in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-19-strings-deep-dive"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-19-strings-deep-dive">Day 19: Strings Deep Dive</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 19/chapter-1/">String vs &amp;str Revisited</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 19/chapter-2/">String Methods and Manipulation</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 19/chapter-5/">Performance Considerations</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 19/chapter-3/">UTF-8 and Character Encoding</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 19/chapter-4/">String Concatenation Techniques</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-20-mini-project"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-20-mini-project">Day 20: Mini Project</label>
+
+                    <ul class="subtree">
+                        </ul>
+                <input class="tree-toggle" type="checkbox" id="day-21-generic-functions-structs"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-21-generic-functions-structs">Day 21: Generic Functions &amp; Structs</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 21/chapter-1/">Generic Function Syntax</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 21/chapter-2/">Generic Structs and Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 21/chapter-3/">Type Parameters and Constraints</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 21/chapter-4/">Monomorphization Concept</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 21/chapter-5/">Generic Collections</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-22-traits-fundamentals"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-22-traits-fundamentals">Day 22: Traits Fundamentals</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 22/chapter-1/">Defining Traits</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 22/chapter-2/">Implementing Traits for Types</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 22/chapter-3/">Default Implementations</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 22/chapter-4/">Trait as Parameters</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 22/chapter-5/">Trait Bounds</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-23-advanced-traits"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-23-advanced-traits">Day 23: Advanced Traits</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 23/chapter-1/">Trait Objects and Dynamic Dispatch</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 23/chapter-2/">Supertraits</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 23/chapter-3/">Associated Types</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 23/chapter-4/">Orphan Rule</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 23/chapter-5/">Coherence Rules</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-24-standard-library-traits"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-24-standard-library-traits">Day 24: Standard Library Traits</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 24/chapter-1/">Iterator Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 24/chapter-2/">From and Into Traits</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 24/chapter-3/">Display and Debug Traits</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 24/chapter-4/">Clone and Copy Traits</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 24/chapter-5/">PartialEq and Eq Traits</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-25-trait-practice"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-25-trait-practice">Day 25: Trait Practice</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 25/chapter-1/">Custom Trait Implementation</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 25/chapter-2/">Generic Programming Exercises</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 25/chapter-3/">Trait Object Usage</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 25/chapter-4/">Performance Implications</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-26-lifetime-annotations"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-26-lifetime-annotations">Day 26: Lifetime Annotations</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 26/chapter-1/">Why Lifetimes Exist</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 26/chapter-2/">Lifetime Annotation Syntax</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 26/chapter-3/">Function Lifetime Parameters</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 26/chapter-4/">Struct Lifetime Parameters</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 26/chapter-5/">Lifetime Elision Rules</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-27-advanced-lifetimes"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-27-advanced-lifetimes">Day 27: Advanced Lifetimes</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 27/chapter-1/">Static Lifetime</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 27/chapter-2/">Lifetime Subtyping</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 27/chapter-3/">Higher-Ranked Trait Bounds</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 27/chapter-4/">Common Lifetime Patterns</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 27/chapter-5/">Debugging Lifetime Errors</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-28-smart-pointers"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-28-smart-pointers">Day 28: Smart Pointers</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 28/chapter-1/">Box&lt;T&gt; for Heap Allocation</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 28/chapter-2/">Rc&lt;T&gt; for Reference Counting</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 28/chapter-3/">RefCell&lt;T&gt; for Interior Mutability</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 28/chapter-4/">Weak&lt;T&gt; References</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 28/chapter-5/">Memory Leak Prevention</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-29-concurrency-preparation"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-29-concurrency-preparation">Day 29: Concurrency Preparation</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 29/chapter-1/">Arc&lt;T&gt; for Atomic Reference Counting</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 29/chapter-2/">Send and Sync Traits</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 29/chapter-3/">Thread Safety Concepts</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 29/chapter-4/">Shared State Challenges</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 29/chapter-5/">Lock-Free Programming Introduction</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-30-memory-management-project"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-30-memory-management-project">Day 30: Memory Management Project</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 30/chapter-1/">Building a Simple Data Structure</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 30/chapter-2/">Using Smart Pointers Effectively</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 30/chapter-3/">Memory Usage Optimization</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 30/chapter-4/">Performance Benchmarking</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-31-closures"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-31-closures">Day 31: Closures</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 31/chapter-1/">Closure Syntax and Usage</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 31/chapter-2/">Capturing Environment</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 31/chapter-3/">Fn, FnMut, and FnOnce Traits</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 31/chapter-4/">Moving Closures</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 31/chapter-5/">Closures vs Functions</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-32-iterators-deep-dive"
+                           checked/>
+                    <label class="tree-toggle-label"
+                           for="day-32-iterators-deep-dive">Day 32: Iterators Deep Dive</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 32/chapter-1/">Iterator Trait Implementation</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 32/chapter-2/">Lazy Evaluation</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 32/chapter-3/">Iterator Adaptors (map, filter, etc.)</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 32/chapter-4/">Consumer Adaptors (collect, fold, etc.)</a>
+                            </li>
+
+                            <li class="active">
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 32/chapter-5/">Custom Iterators</a>
+                            </li>
+
+                            
+                                    
+                                    
+                                        <ul id="toc">
+                                            <li><a href="
+                                                        https://aarambhdevhub.github.io/rust-doc/day 32/chapter-5/#building-custom-iterators-in-rust-comprehensive-documentation-for-beginners">Building Custom Iterators in Rust: Comprehensive Documentation for Beginners</a>
+                                                    <ul>
+                                                            <li>
+                                                                    <a href="https://aarambhdevhub.github.io/rust-doc/day 32/chapter-5/#the-professional-kitchen-appliance-design-analogy-man-fried-egg">The Professional Kitchen Appliance Design Analogy 👨🍳</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://aarambhdevhub.github.io/rust-doc/day 32/chapter-5/#understanding-the-iterator-trait">Understanding the Iterator Trait</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://aarambhdevhub.github.io/rust-doc/day 32/chapter-5/#designing-your-custom-iterator">Designing Your Custom Iterator</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://aarambhdevhub.github.io/rust-doc/day 32/chapter-5/#advanced-custom-iterator-patterns">Advanced Custom Iterator Patterns</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://aarambhdevhub.github.io/rust-doc/day 32/chapter-5/#real-world-custom-iterator-applications">Real-World Custom Iterator Applications</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://aarambhdevhub.github.io/rust-doc/day 32/chapter-5/#summary-and-key-takeaways">Summary and Key Takeaways</a>
+                                                                </li>
+                                                            </ul>
+                                                    </li>
+                                            </ul>
+                                    </ul>
+                <input class="tree-toggle" type="checkbox" id="day-32-iterators-deep-dive"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-32-iterators-deep-dive">Day 32: Iterators Deep Dive</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 33/chapter-1/">Higher-Order Functions</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 33/chapter-2/">Function Composition</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 33/chapter-3/">Immutable Data Patterns</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 33/chapter-4/">Functional Error Handling</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 33/chapter-5/">Performance of Functional Style</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-34-advanced-iterator-patterns"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-34-advanced-iterator-patterns">Day 34: Advanced Iterator Patterns</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 34/chapter-1/">Chain, Zip, Enumerate</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 34/chapter-2/">Flat_map and Filter_map</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 34/chapter-3/">Custom Iterator Implementations</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 34/chapter-4/">Parallel Iterators (Rayon Introduction)</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 34/chapter-5/">Iterator Performance Optimization</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-35-functional-programming-project"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-35-functional-programming-project">Day 35: Functional Programming Project</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 35/chapter-1/">Functional Programming Project</a>
+                            </li>
+
+                            </ul>
+                </div>
+        </nav>
+    <article>
+
+        <div id="on_right">
+                <span id="search-ico" class="ms-Icon--Search"></span>
+            </div>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="Search as you type...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        <div id="wrap">
+            
+        <h1 id="building-custom-iterators-in-rust-comprehensive-documentation-for-beginners">Building Custom Iterators in Rust: Comprehensive Documentation for Beginners</h1>
+<p>Building custom iterators in Rust is like learning to <strong>design specialized kitchen appliances for your professional restaurant chain</strong> - you need to create equipment that can process specific types of ingredients or execute unique culinary sequences, providing fine-grained control over the output. Just as a master chef might design a custom automated pasta maker that yields different pasta shapes in a specific order, Rust's custom iterators allow you to define precise iteration behavior over your own data structures, enabling efficient and idiomatic data processing.</p>
+<h2 id="the-professional-kitchen-appliance-design-analogy-man-fried-egg">The Professional Kitchen Appliance Design Analogy 👨🍳</h2>
+<h3 id="imagine-you-re-designing-specialized-appliances-for-your-restaurant-kitchen">Imagine You're Designing Specialized Appliances for Your Restaurant Kitchen</h3>
+<p><strong>The Problem with Generic Appliances:</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// ❌ Using only generic appliances - like having only a basic food processor
+</span><span style="color:#a7adba;">// It can chop, but what if you need pasta in a specific sequence?
+</span><span style="color:#a7adba;">// You&#39;re stuck with basic, built-in behaviors.
+</span></code></pre>
+<p><strong>The Power of Custom Iterators - Specialized Appliance Design:</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// ✅ Designing specialized appliances - fine-grained control over output
+</span><span style="color:#b48ead;">struct </span><span>CustomPastaMachine {
+</span><span>    </span><span style="color:#bf616a;">shape_index</span><span>: </span><span style="color:#b48ead;">usize</span><span>,
+</span><span>    </span><span style="color:#bf616a;">pasta_shapes</span><span>: Vec&lt;&amp;</span><span style="color:#b48ead;">&#39;static str</span><span>&gt;,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>CustomPastaMachine {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>() -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        CustomPastaMachine {
+</span><span>            shape_index: </span><span style="color:#d08770;">0</span><span>,
+</span><span>            pasta_shapes: vec![&quot;</span><span style="color:#a3be8c;">Spaghetti</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Fettuccine</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Penne</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Rigatoni</span><span>&quot;],
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Implement Iterator trait to make it a pasta-making machine
+</span><span style="color:#b48ead;">impl </span><span>Iterator </span><span style="color:#b48ead;">for </span><span>CustomPastaMachine {
+</span><span>    </span><span style="color:#b48ead;">type </span><span>Item = &amp;</span><span style="color:#b48ead;">&#39;static str</span><span>; </span><span style="color:#a7adba;">// This machine produces pasta shapes (strings)
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">next</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) -&gt; Option&lt;</span><span style="color:#b48ead;">Self::</span><span>Item&gt; {
+</span><span>        </span><span style="color:#b48ead;">if </span><span style="color:#bf616a;">self</span><span>.shape_index &lt; </span><span style="color:#bf616a;">self</span><span>.pasta_shapes.</span><span style="color:#96b5b4;">len</span><span>() {
+</span><span>            </span><span style="color:#b48ead;">let</span><span> next_shape = </span><span style="color:#bf616a;">self</span><span>.pasta_shapes[</span><span style="color:#bf616a;">self</span><span>.shape_index];
+</span><span>            </span><span style="color:#bf616a;">self</span><span>.shape_index += </span><span style="color:#d08770;">1</span><span>;
+</span><span>            Some(next_shape)
+</span><span>        } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>            None </span><span style="color:#a7adba;">// No more pasta shapes
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">kitchen_appliance_demo</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> pasta_maker = CustomPastaMachine::new();
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Use your custom pasta maker in a for loop!
+</span><span>    </span><span style="color:#b48ead;">for</span><span> shape in pasta_maker {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Produced: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> pasta</span><span>&quot;, shape);
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<p><strong>Why Custom Iterators Are Revolutionary:</strong></p>
+<ul>
+<li>⚙️ <strong>Fine-grained control</strong> - Define precise iteration logic</li>
+<li>📋 <strong>Idiomatic Rust</strong> - Integrate seamlessly with <code>for</code> loops and iterator adapters</li>
+<li>⚡ <strong>Efficiency</strong> - Zero-cost abstractions, often as fast as manual loops</li>
+<li>🔄 <strong>Reusability</strong> - Build powerful data processing pipelines</li>
+<li>🎯 <strong>Domain-specific processing</strong> - Design iterators tailored to your problem</li>
+</ul>
+<h2 id="understanding-the-iterator-trait">Understanding the Iterator Trait</h2>
+<h3 id="the-core-of-your-appliance-design">The Core of Your Appliance Design</h3>
+<p><strong>The <code>Iterator</code> trait is the fundamental contract for anything that can be iterated over:</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">demonstrate_iterator_trait</span><span>() {
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">⚙️ Understanding the Iterator Trait - The Core of Appliance Design</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">{:=&lt;70}</span><span>&quot;, &quot;&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// The Iterator trait is the blueprint for any appliance that produces items in sequence
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">📋 The `Iterator` Trait Definition:</span><span>&quot;);
+</span><span>    println!(&quot;
+</span><span style="color:#a3be8c;">   trait Iterator {
+</span><span style="color:#a3be8c;">       type Item; // Associated type: What kind of item this appliance produces
+</span><span style="color:#a3be8c;">       fn next(&amp;mut self) -&gt; Option&lt;Self::Item&gt;; // The core method: Produces the next item or None
+</span><span style="color:#a3be8c;">       // ... other default methods (e.g., map, filter, fold)
+</span><span style="color:#a3be8c;">   }
+</span><span style="color:#a3be8c;">   </span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Example 1: Implementing a Simple Counter Iterator
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">1️⃣ Implementing a Simple Counter - A Basic Portion Dispenser:</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// The struct that holds the state of our iterator
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>PortionDispenser {
+</span><span>        </span><span style="color:#bf616a;">current_portion</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>        </span><span style="color:#bf616a;">max_portions</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Constructor for our dispenser
+</span><span>    </span><span style="color:#b48ead;">impl </span><span>PortionDispenser {
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#bf616a;">max</span><span>: </span><span style="color:#b48ead;">u32</span><span>) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>            PortionDispenser {
+</span><span>                current_portion: </span><span style="color:#d08770;">0</span><span>,
+</span><span>                max_portions: max,
+</span><span>            }
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Implement the Iterator trait for our PortionDispenser
+</span><span>    </span><span style="color:#b48ead;">impl </span><span>Iterator </span><span style="color:#b48ead;">for </span><span>PortionDispenser {
+</span><span>        </span><span style="color:#b48ead;">type </span><span>Item = </span><span style="color:#b48ead;">u32</span><span>; </span><span style="color:#a7adba;">// This dispenser produces unsigned 32-bit integers
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">next</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) -&gt; Option&lt;</span><span style="color:#b48ead;">Self::</span><span>Item&gt; {
+</span><span>            </span><span style="color:#b48ead;">if </span><span style="color:#bf616a;">self</span><span>.current_portion &lt; </span><span style="color:#bf616a;">self</span><span>.max_portions {
+</span><span>                </span><span style="color:#bf616a;">self</span><span>.current_portion += </span><span style="color:#d08770;">1</span><span>; </span><span style="color:#a7adba;">// Increment for the next run
+</span><span>                Some(</span><span style="color:#bf616a;">self</span><span>.current_portion) </span><span style="color:#a7adba;">// Produce the current portion number
+</span><span>            } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>                None </span><span style="color:#a7adba;">// No more portions to dispense
+</span><span>            }
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> dispenser = PortionDispenser::new(</span><span style="color:#d08770;">5</span><span>);
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Dispensing 5 portions:</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">for</span><span> portion in dispenser {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">     Portion: </span><span style="color:#d08770;">{}</span><span>&quot;, portion);
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Example 2: Implementing a Fibonacci Sequence Iterator
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">2️⃣ Implementing a Fibonacci Sequence - A Growth Predictor Appliance:</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Struct to hold Fibonacci state
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>Fibonacci {
+</span><span>        </span><span style="color:#bf616a;">a</span><span>: </span><span style="color:#b48ead;">u64</span><span>,
+</span><span>        </span><span style="color:#bf616a;">b</span><span>: </span><span style="color:#b48ead;">u64</span><span>,
+</span><span>        </span><span style="color:#bf616a;">count</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>        </span><span style="color:#bf616a;">max_count</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Constructor for Fibonacci sequence
+</span><span>    </span><span style="color:#b48ead;">impl </span><span>Fibonacci {
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#bf616a;">max_count</span><span>: </span><span style="color:#b48ead;">u32</span><span>) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>            Fibonacci {
+</span><span>                a: </span><span style="color:#d08770;">0</span><span>,
+</span><span>                b: </span><span style="color:#d08770;">1</span><span>,
+</span><span>                count: </span><span style="color:#d08770;">0</span><span>,
+</span><span>                max_count,
+</span><span>            }
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Implement Iterator for Fibonacci
+</span><span>    </span><span style="color:#b48ead;">impl </span><span>Iterator </span><span style="color:#b48ead;">for </span><span>Fibonacci {
+</span><span>        </span><span style="color:#b48ead;">type </span><span>Item = </span><span style="color:#b48ead;">u64</span><span>; </span><span style="color:#a7adba;">// Produces unsigned 64-bit integers
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">next</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) -&gt; Option&lt;</span><span style="color:#b48ead;">Self::</span><span>Item&gt; {
+</span><span>            </span><span style="color:#b48ead;">if </span><span style="color:#bf616a;">self</span><span>.count &gt;= </span><span style="color:#bf616a;">self</span><span>.max_count {
+</span><span>                </span><span style="color:#b48ead;">return </span><span>None; </span><span style="color:#a7adba;">// Reached max number of terms
+</span><span>            }
+</span><span>
+</span><span>            </span><span style="color:#b48ead;">let</span><span> current_fib = </span><span style="color:#bf616a;">self</span><span>.a;
+</span><span>            </span><span style="color:#b48ead;">let</span><span> next_fib = </span><span style="color:#bf616a;">self</span><span>.a + </span><span style="color:#bf616a;">self</span><span>.b;
+</span><span>            </span><span style="color:#bf616a;">self</span><span>.a = </span><span style="color:#bf616a;">self</span><span>.b;
+</span><span>            </span><span style="color:#bf616a;">self</span><span>.b = next_fib;
+</span><span>            </span><span style="color:#bf616a;">self</span><span>.count += </span><span style="color:#d08770;">1</span><span>;
+</span><span>
+</span><span>            Some(current_fib)
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> fib_predictor = Fibonacci::new(</span><span style="color:#d08770;">10</span><span>);
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Predicting 10 terms of Fibonacci sequence:</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">for</span><span> term in fib_predictor {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">     Term: </span><span style="color:#d08770;">{}</span><span>&quot;, term);
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Example 3: `next()` Method Behavior and Return Type
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">3️⃣ Understanding `next()` Method - The Heartbeat of Your Appliance:</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// `next(&amp;mut self)`:
+</span><span>    </span><span style="color:#a7adba;">//   - Takes `self` by mutable reference because calling `next` changes the iterator&#39;s state.
+</span><span>    </span><span style="color:#a7adba;">//   - Returns `Option&lt;Self::Item&gt;`:
+</span><span>    </span><span style="color:#a7adba;">//     - `Some(value)`: Indicates there&#39;s a next item.
+</span><span>    </span><span style="color:#a7adba;">//     - `None`: Signals the end of the iteration.
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> dispenser_manual = PortionDispenser::new(</span><span style="color:#d08770;">2</span><span>);
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Manual calls to `next()`:</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     Call 1: </span><span style="color:#d08770;">{:?}</span><span>&quot;, dispenser_manual.</span><span style="color:#96b5b4;">next</span><span>()); </span><span style="color:#a7adba;">// Some(1)
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     Call 2: </span><span style="color:#d08770;">{:?}</span><span>&quot;, dispenser_manual.</span><span style="color:#96b5b4;">next</span><span>()); </span><span style="color:#a7adba;">// Some(2)
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     Call 3: </span><span style="color:#d08770;">{:?}</span><span>&quot;, dispenser_manual.</span><span style="color:#96b5b4;">next</span><span>()); </span><span style="color:#a7adba;">// None (end)
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     Call 4: </span><span style="color:#d08770;">{:?}</span><span>&quot;, dispenser_manual.</span><span style="color:#96b5b4;">next</span><span>()); </span><span style="color:#a7adba;">// None (still end)
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">🎯 Iterator Trait Guidelines:</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   • `type Item`: Clearly define the output type of your iterator.</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   • `fn next(&amp;mut self)`: Implement the core logic for producing items.</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   • `Option&lt;Self::Item&gt;`: Use `Some(value)` for next item, `None` for end.</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   • State: Store the iterator&#39;s current position/status in your struct.</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   • `for` loops: Your custom iterator will work seamlessly with `for` loops.</span><span>&quot;);
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#96b5b4;">demonstrate_iterator_trait</span><span>();
+</span><span>}
+</span></code></pre>
+<h2 id="designing-your-custom-iterator">Designing Your Custom Iterator</h2>
+<h3 id="step-by-step-appliance-design">Step-by-Step Appliance Design</h3>
+<p><strong>A systematic approach to creating robust and efficient custom iterators:</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">demonstrate_custom_iterator_design</span><span>() {
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">🏗️ Designing Your Custom Iterator - Step-by-Step Appliance Design</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">{:=&lt;70}</span><span>&quot;, &quot;&quot;);
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">use </span><span>std::collections::VecDeque;
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Designing a custom iterator is like a systematic process of building an appliance
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">📋 Step-by-Step Iterator Design Process:</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   1️⃣ Define the Iterator&#39;s State: What data does it need to remember?</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   2️⃣ Implement `Iterator` Trait: Define `Item` and `next()` logic.</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   3️⃣ (Optional) Implement `IntoIterator` Trait: Make your collection iterable.</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   4️⃣ (Optional) Implement `iter()`/`iter_mut()`: Provide different iteration views.</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Example: Designing a &quot;Menu Iterator&quot; for a Restaurant Menu
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">🍴 Example: Designing a &#39;Menu Iterator&#39; for a Restaurant Menu</span><span>&quot;);
+</span><span>
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Debug, Clone)]
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>MenuItem {
+</span><span>        </span><span style="color:#bf616a;">name</span><span>: String,
+</span><span>        </span><span style="color:#bf616a;">price</span><span>: </span><span style="color:#b48ead;">f64</span><span>,
+</span><span>        </span><span style="color:#bf616a;">category</span><span>: String,
+</span><span>    }
+</span><span>
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Debug)]
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>RestaurantMenu {
+</span><span>        </span><span style="color:#bf616a;">dishes</span><span>: Vec&lt;MenuItem&gt;,
+</span><span>        </span><span style="color:#bf616a;">restaurant_name</span><span>: String,
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">impl </span><span>RestaurantMenu {
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#bf616a;">name</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>            RestaurantMenu {
+</span><span>                dishes: Vec::new(),
+</span><span>                restaurant_name: name.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>            }
+</span><span>        }
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">add_dish</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">dish</span><span>: MenuItem) {
+</span><span>            </span><span style="color:#bf616a;">self</span><span>.dishes.</span><span style="color:#96b5b4;">push</span><span>(dish);
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Step 1: Define the Iterator&#39;s State
+</span><span>    </span><span style="color:#a7adba;">// Our iterator needs to keep track of the current position in the `dishes` vector.
+</span><span>    </span><span style="color:#a7adba;">// It will also need a reference to the `RestaurantMenu`&#39;s dishes.
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// For `iter()`: we&#39;ll iterate over immutable references `&amp;MenuItem`
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>MenuIterator&lt;</span><span style="color:#b48ead;">&#39;a</span><span>&gt; {
+</span><span>        </span><span style="color:#bf616a;">menu_items</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a </span><span>Vec&lt;MenuItem&gt;, </span><span style="color:#a7adba;">// Immutable reference to the menu&#39;s dishes
+</span><span>        </span><span style="color:#bf616a;">index</span><span>: </span><span style="color:#b48ead;">usize</span><span>,                  </span><span style="color:#a7adba;">// Current position in the vector
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Step 2: Implement `Iterator` Trait for `MenuIterator`
+</span><span>    </span><span style="color:#b48ead;">impl</span><span>&lt;</span><span style="color:#b48ead;">&#39;a</span><span>&gt; Iterator </span><span style="color:#b48ead;">for </span><span>MenuIterator&lt;</span><span style="color:#b48ead;">&#39;a</span><span>&gt; {
+</span><span>        </span><span style="color:#b48ead;">type </span><span>Item = &amp;</span><span style="color:#b48ead;">&#39;a</span><span> MenuItem; </span><span style="color:#a7adba;">// This iterator produces immutable references to MenuItems
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">next</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) -&gt; Option&lt;</span><span style="color:#b48ead;">Self::</span><span>Item&gt; {
+</span><span>            </span><span style="color:#b48ead;">if </span><span style="color:#bf616a;">self</span><span>.index &lt; </span><span style="color:#bf616a;">self</span><span>.menu_items.</span><span style="color:#96b5b4;">len</span><span>() {
+</span><span>                </span><span style="color:#b48ead;">let</span><span> item = &amp;</span><span style="color:#bf616a;">self</span><span>.menu_items[</span><span style="color:#bf616a;">self</span><span>.index];
+</span><span>                </span><span style="color:#bf616a;">self</span><span>.index += </span><span style="color:#d08770;">1</span><span>;
+</span><span>                Some(item)
+</span><span>            } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>                None </span><span style="color:#a7adba;">// End of iteration
+</span><span>            }
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Step 3 (Optional but recommended): Implement `IntoIterator` for `RestaurantMenu`
+</span><span>    </span><span style="color:#a7adba;">// This allows `for dish in restaurant_menu` (consumes `restaurant_menu`)
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// This IntoIterator will consume the `RestaurantMenu` and return an iterator
+</span><span>    </span><span style="color:#b48ead;">impl </span><span>IntoIterator </span><span style="color:#b48ead;">for </span><span>RestaurantMenu {
+</span><span>        </span><span style="color:#b48ead;">type </span><span>Item = MenuItem; </span><span style="color:#a7adba;">// Item produced when consuming
+</span><span>        </span><span style="color:#b48ead;">type </span><span>IntoIter = std::vec::IntoIter&lt;</span><span style="color:#b48ead;">Self::</span><span>Item&gt;; </span><span style="color:#a7adba;">// The iterator type (from Vec)
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">into_iter</span><span>(</span><span style="color:#bf616a;">self</span><span>) -&gt; </span><span style="color:#b48ead;">Self::</span><span>IntoIter {
+</span><span>            </span><span style="color:#bf616a;">self</span><span>.dishes.</span><span style="color:#96b5b4;">into_iter</span><span>() </span><span style="color:#a7adba;">// Delegate to Vec&#39;s `into_iter`
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Step 4 (Optional but highly recommended): Implement `iter()`/`iter_mut()` for `RestaurantMenu`
+</span><span>    </span><span style="color:#a7adba;">// This allows `for dish in &amp;restaurant_menu` (immutable borrow)
+</span><span>    </span><span style="color:#a7adba;">// This allows `for dish in &amp;mut restaurant_menu` (mutable borrow)
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">impl </span><span>RestaurantMenu {
+</span><span>        </span><span style="color:#a7adba;">// `iter()`: Returns an iterator over immutable references `&amp;MenuItem`
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">iter</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; MenuIterator&lt;&#39;_&gt; {
+</span><span>            MenuIterator {
+</span><span>                menu_items: &amp;</span><span style="color:#bf616a;">self</span><span>.dishes,
+</span><span>                index: </span><span style="color:#d08770;">0</span><span>,
+</span><span>            }
+</span><span>        }
+</span><span>
+</span><span>        </span><span style="color:#a7adba;">// `iter_mut()`: Returns an iterator over mutable references `&amp;mut MenuItem`
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">iter_mut</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) -&gt; std::slice::IterMut&lt;&#39;_, MenuItem&gt; {
+</span><span>            </span><span style="color:#bf616a;">self</span><span>.dishes.</span><span style="color:#96b5b4;">iter_mut</span><span>() </span><span style="color:#a7adba;">// Delegate to Vec&#39;s `iter_mut`
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Test the custom iterator
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> my_restaurant_menu = RestaurantMenu::new(&quot;</span><span style="color:#a3be8c;">The Gourmet Spot</span><span>&quot;);
+</span><span>    my_restaurant_menu.</span><span style="color:#96b5b4;">add_dish</span><span>(MenuItem { name: &quot;</span><span style="color:#a3be8c;">Quinoa Bowl</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), price: </span><span style="color:#d08770;">15.99</span><span>, category: &quot;</span><span style="color:#a3be8c;">Main</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>() });
+</span><span>    my_restaurant_menu.</span><span style="color:#96b5b4;">add_dish</span><span>(MenuItem { name: &quot;</span><span style="color:#a3be8c;">Caesar Salad</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), price: </span><span style="color:#d08770;">12.50</span><span>, category: &quot;</span><span style="color:#a3be8c;">Appetizer</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>() });
+</span><span>    my_restaurant_menu.</span><span style="color:#96b5b4;">add_dish</span><span>(MenuItem { name: &quot;</span><span style="color:#a3be8c;">Tiramisu</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), price: </span><span style="color:#d08770;">8.99</span><span>, category: &quot;</span><span style="color:#a3be8c;">Dessert</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>() });
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Iterating over menu items (immutable references):</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">for</span><span> dish in my_restaurant_menu.</span><span style="color:#96b5b4;">iter</span><span>() {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">     - </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> ($</span><span style="color:#d08770;">{:.2}</span><span style="color:#a3be8c;">)</span><span>&quot;, dish.name, dish.price);
+</span><span>    }
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">   Modifying menu items (mutable references):</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">for</span><span> dish in my_restaurant_menu.</span><span style="color:#96b5b4;">iter_mut</span><span>() {
+</span><span>        </span><span style="color:#b48ead;">if</span><span> dish.name.</span><span style="color:#96b5b4;">contains</span><span>(&quot;</span><span style="color:#a3be8c;">Salad</span><span>&quot;) {
+</span><span>            dish.price *= </span><span style="color:#d08770;">0.9</span><span>; </span><span style="color:#a7adba;">// 10% discount on salads
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">     Discounted </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">: $</span><span style="color:#d08770;">{:.2}</span><span>&quot;, dish.name, dish.price);
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">   Consuming the menu (IntoIterator):</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> initial_dish_count = my_restaurant_menu.dishes.</span><span style="color:#96b5b4;">len</span><span>();
+</span><span>    </span><span style="color:#b48ead;">for</span><span> dish in my_restaurant_menu { </span><span style="color:#a7adba;">// Uses IntoIterator
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">     Consumed dish: </span><span style="color:#d08770;">{}</span><span>&quot;, dish.name);
+</span><span>    }
+</span><span>    </span><span style="color:#a7adba;">// println!(&quot;Remaining dishes: {}&quot;, my_restaurant_menu.dishes.len()); // ❌ This would be a compile error because my_restaurant_menu was moved
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     Total dishes consumed: </span><span style="color:#d08770;">{}</span><span>&quot;, initial_dish_count);
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">🎯 Custom Iterator Design Principles:</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   • Separation of Concerns: Often, the iterator is a separate struct.</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   • Lifetime Management: Crucial when returning references (`&amp;&#39;a Item`).</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   • `IntoIterator`: For `for` loops that consume the collection.</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   • `iter()`/`iter_mut()`: For `for` loops that borrow the collection.</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   • Delegation: Delegate to standard library iterators where possible.</span><span>&quot;);
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#96b5b4;">demonstrate_custom_iterator_design</span><span>();
+</span><span>}
+</span></code></pre>
+<h2 id="advanced-custom-iterator-patterns">Advanced Custom Iterator Patterns</h2>
+<h3 id="specialized-appliance-capabilities">Specialized Appliance Capabilities</h3>
+<p><strong>Creating iterators with unique behaviors, combining multiple values, or handling complex state:</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">demonstrate_advanced_custom_iterators</span><span>() {
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">🚀 Advanced Custom Iterator Patterns - Specialized Appliance Capabilities</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">{:=&lt;70}</span><span>&quot;, &quot;&quot;);
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">use </span><span>std::collections::{VecDeque, HashMap};
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Advanced iterators are like designing specialized kitchen appliances
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">✨ Advanced Iterator Design Principles:</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Pattern 1: Iterator Adapters (Chaining Iterators)
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">1️⃣ Iterator Adapters - Building on Existing Appliances:</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// A custom adapter that takes an existing iterator and adds a prefix to each item
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>PrefixedIterator&lt;I&gt; {
+</span><span>        </span><span style="color:#bf616a;">iterator</span><span>: I,
+</span><span>        </span><span style="color:#bf616a;">prefix</span><span>: String,
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">impl</span><span>&lt;I&gt; PrefixedIterator&lt;I&gt; {
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#bf616a;">iterator</span><span>: I, </span><span style="color:#bf616a;">prefix</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>            PrefixedIterator {
+</span><span>                iterator,
+</span><span>                prefix: prefix.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>            }
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// The Iterator trait for our adapter
+</span><span>    </span><span style="color:#b48ead;">impl</span><span>&lt;I&gt; Iterator </span><span style="color:#b48ead;">for </span><span>PrefixedIterator&lt;I&gt;
+</span><span>    </span><span style="color:#b48ead;">where</span><span> I: Iterator, </span><span style="color:#a7adba;">// Our adapter works with ANY type that implements Iterator
+</span><span>          </span><span style="color:#b48ead;">I::</span><span>Item: std::fmt::Display, </span><span style="color:#a7adba;">// And the items it produces must be displayable
+</span><span>    {
+</span><span>        </span><span style="color:#b48ead;">type </span><span>Item = String; </span><span style="color:#a7adba;">// This adapter produces new Strings (prefixed)
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">next</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) -&gt; Option&lt;</span><span style="color:#b48ead;">Self::</span><span>Item&gt; {
+</span><span>            </span><span style="color:#bf616a;">self</span><span>.iterator.</span><span style="color:#96b5b4;">next</span><span>().</span><span style="color:#96b5b4;">map</span><span>(|</span><span style="color:#bf616a;">item</span><span>| format!(&quot;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">: </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#bf616a;">self</span><span>.prefix, item))
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Test the custom adapter
+</span><span>    </span><span style="color:#b48ead;">let</span><span> menu_items = vec![&quot;</span><span style="color:#a3be8c;">Pizza</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Pasta</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Salad</span><span>&quot;];
+</span><span>    </span><span style="color:#b48ead;">let</span><span> prefixed_dishes = PrefixedIterator::new(menu_items.</span><span style="color:#96b5b4;">into_iter</span><span>(), &quot;</span><span style="color:#a3be8c;">Dish</span><span>&quot;);
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Adding prefixes to dishes:</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">for</span><span> dish in prefixed_dishes {
+</span><span>        println!(&quot;     </span><span style="color:#d08770;">{}</span><span>&quot;, dish);
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Pattern 2: Iterators Over Complex Data Structures (e.g., Tree)
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">2️⃣ Iterators Over Complex Structures - Navigating the Kitchen Layout:</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Node for a menu category tree
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Debug)]
+</span><span>    </span><span style="color:#b48ead;">enum </span><span>MenuTreeNode {
+</span><span>        Category(String, Vec&lt;MenuTreeNode&gt;), </span><span style="color:#a7adba;">// Category name and its sub-nodes
+</span><span>        MenuItem(String, </span><span style="color:#b48ead;">f64</span><span>),               </span><span style="color:#a7adba;">// Menu item and its price
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Iterator state for traversing the tree (Depth-First Search)
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>MenuTreeIterator&lt;</span><span style="color:#b48ead;">&#39;a</span><span>&gt; {
+</span><span>        </span><span style="color:#bf616a;">stack</span><span>: VecDeque&lt;&amp;</span><span style="color:#b48ead;">&#39;a</span><span> MenuTreeNode&gt;, </span><span style="color:#a7adba;">// Use a deque for efficient push/pop from both ends
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">impl</span><span>&lt;</span><span style="color:#b48ead;">&#39;a</span><span>&gt; MenuTreeIterator&lt;</span><span style="color:#b48ead;">&#39;a</span><span>&gt; {
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#bf616a;">root</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a</span><span> MenuTreeNode) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>            </span><span style="color:#b48ead;">let mut</span><span> stack = VecDeque::new();
+</span><span>            stack.</span><span style="color:#96b5b4;">push_back</span><span>(root); </span><span style="color:#a7adba;">// Start with the root node
+</span><span>            MenuTreeIterator { stack }
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Implement Iterator for our tree iterator
+</span><span>    </span><span style="color:#b48ead;">impl</span><span>&lt;</span><span style="color:#b48ead;">&#39;a</span><span>&gt; Iterator </span><span style="color:#b48ead;">for </span><span>MenuTreeIterator&lt;</span><span style="color:#b48ead;">&#39;a</span><span>&gt; {
+</span><span>        </span><span style="color:#b48ead;">type </span><span>Item = (&amp;</span><span style="color:#b48ead;">&#39;a str</span><span>, Option&lt;</span><span style="color:#b48ead;">f64</span><span>&gt;); </span><span style="color:#a7adba;">// Produce (name, optional price)
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">next</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) -&gt; Option&lt;</span><span style="color:#b48ead;">Self::</span><span>Item&gt; {
+</span><span>            </span><span style="color:#b48ead;">while let </span><span>Some(node) = </span><span style="color:#bf616a;">self</span><span>.stack.</span><span style="color:#96b5b4;">pop_back</span><span>() { </span><span style="color:#a7adba;">// Pop from end (DFS)
+</span><span>                </span><span style="color:#b48ead;">match</span><span> node {
+</span><span>                    MenuTreeNode::Category(name, children) =&gt; {
+</span><span>                        </span><span style="color:#a7adba;">// Push children onto stack in reverse order to process left-to-right
+</span><span>                        </span><span style="color:#b48ead;">for</span><span> child in children.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">rev</span><span>() {
+</span><span>                            </span><span style="color:#bf616a;">self</span><span>.stack.</span><span style="color:#96b5b4;">push_back</span><span>(child);
+</span><span>                        }
+</span><span>                        </span><span style="color:#b48ead;">return </span><span>Some((name, None)); </span><span style="color:#a7adba;">// Yield category name
+</span><span>                    }
+</span><span>                    MenuTreeNode::MenuItem(name, price) =&gt; {
+</span><span>                        </span><span style="color:#b48ead;">return </span><span>Some((name, Some(*price))); </span><span style="color:#a7adba;">// Yield menu item and price
+</span><span>                    }
+</span><span>                }
+</span><span>            }
+</span><span>            None </span><span style="color:#a7adba;">// Stack is empty, iteration finished
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Test the tree iterator
+</span><span>    </span><span style="color:#b48ead;">let</span><span> menu_tree = MenuTreeNode::Category(&quot;</span><span style="color:#a3be8c;">Root Menu</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), vec![
+</span><span>        MenuTreeNode::Category(&quot;</span><span style="color:#a3be8c;">Appetizers</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), vec![
+</span><span>            MenuTreeNode::MenuItem(&quot;</span><span style="color:#a3be8c;">Bruschetta</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), </span><span style="color:#d08770;">8.99</span><span>),
+</span><span>            MenuTreeNode::MenuItem(&quot;</span><span style="color:#a3be8c;">Hummus Plate</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), </span><span style="color:#d08770;">7.50</span><span>),
+</span><span>        ]),
+</span><span>        MenuTreeNode::Category(&quot;</span><span style="color:#a3be8c;">Main Courses</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), vec![
+</span><span>            MenuTreeNode::MenuItem(&quot;</span><span style="color:#a3be8c;">Quinoa Bowl</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), </span><span style="color:#d08770;">15.99</span><span>),
+</span><span>            MenuTreeNode::MenuItem(&quot;</span><span style="color:#a3be8c;">Pasta Primavera</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), </span><span style="color:#d08770;">14.50</span><span>),
+</span><span>            MenuTreeNode::Category(&quot;</span><span style="color:#a3be8c;">Chef&#39;s Specials</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), vec![
+</span><span>                MenuTreeNode::MenuItem(&quot;</span><span style="color:#a3be8c;">Truffle Risotto</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), </span><span style="color:#d08770;">22.00</span><span>),
+</span><span>            ]),
+</span><span>        ]),
+</span><span>        MenuTreeNode::MenuItem(&quot;</span><span style="color:#a3be8c;">Dessert Menu</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), </span><span style="color:#d08770;">0.0</span><span>), </span><span style="color:#a7adba;">// Special category entry
+</span><span>    ]);
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Traversing the menu tree:</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">for </span><span>(name, price) in MenuTreeIterator::new(&amp;menu_tree) {
+</span><span>        </span><span style="color:#b48ead;">match</span><span> price {
+</span><span>            Some(p) =&gt; println!(&quot;</span><span style="color:#a3be8c;">     - </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> ($</span><span style="color:#d08770;">{:.2}</span><span style="color:#a3be8c;">)</span><span>&quot;, name, p),
+</span><span>            None =&gt; println!(&quot;</span><span style="color:#a3be8c;">     [Category] </span><span style="color:#d08770;">{}</span><span>&quot;, name),
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Pattern 3: Infinite Iterators (Generators)
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">3️⃣ Infinite Iterators - Endless Ingredient Supply:</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// A generator for an endless sequence of unique order IDs
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>OrderIdGenerator {
+</span><span>        </span><span style="color:#bf616a;">current_id</span><span>: </span><span style="color:#b48ead;">u64</span><span>,
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">impl </span><span>OrderIdGenerator {
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>() -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>            OrderIdGenerator { current_id: </span><span style="color:#d08770;">1000 </span><span>} </span><span style="color:#a7adba;">// Start from 1000
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">impl </span><span>Iterator </span><span style="color:#b48ead;">for </span><span>OrderIdGenerator {
+</span><span>        </span><span style="color:#b48ead;">type </span><span>Item = </span><span style="color:#b48ead;">u64</span><span>;
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">next</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) -&gt; Option&lt;</span><span style="color:#b48ead;">Self::</span><span>Item&gt; {
+</span><span>            </span><span style="color:#bf616a;">self</span><span>.current_id += </span><span style="color:#d08770;">1</span><span>;
+</span><span>            Some(</span><span style="color:#bf616a;">self</span><span>.current_id) </span><span style="color:#a7adba;">// Always produce a new ID
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> order_id_source = OrderIdGenerator::new();
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Generating 5 unique order IDs:</span><span>&quot;);
+</span><span>    </span><span style="color:#a7adba;">// Use `take()` to limit infinite iterators
+</span><span>    </span><span style="color:#b48ead;">for</span><span> id in order_id_source.</span><span style="color:#96b5b4;">take</span><span>(</span><span style="color:#d08770;">5</span><span>) {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">     Order ID: #</span><span style="color:#d08770;">{}</span><span>&quot;, id);
+</span><span>    }
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Next 3 unique order IDs (from same generator):</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">for</span><span> id in order_id_source.</span><span style="color:#96b5b4;">take</span><span>(</span><span style="color:#d08770;">3</span><span>) { </span><span style="color:#a7adba;">// Continues from where it left off
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">     Order ID: #</span><span style="color:#d08770;">{}</span><span>&quot;, id);
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Pattern 4: Iterators for Custom Collections (e.g., a simple custom HashMap)
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">4️⃣ Iterators for Custom Collections - Inspecting Custom Storage:</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// A simplified custom HashMap for demonstration
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>SimpleHashMap&lt;K, V&gt; {
+</span><span>        </span><span style="color:#bf616a;">buckets</span><span>: Vec&lt;Vec&lt;(K, V)&gt;&gt;, </span><span style="color:#a7adba;">// Simple chaining for collision
+</span><span>        </span><span style="color:#bf616a;">num_elements</span><span>: </span><span style="color:#b48ead;">usize</span><span>,
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">impl</span><span>&lt;K, V&gt; SimpleHashMap&lt;K, V&gt;
+</span><span>    </span><span style="color:#b48ead;">where
+</span><span>        K: std::hash::Hash + Eq,
+</span><span>    {
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#bf616a;">num_buckets</span><span>: </span><span style="color:#b48ead;">usize</span><span>) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>            </span><span style="color:#b48ead;">let mut</span><span> buckets = Vec::with_capacity(num_buckets);
+</span><span>            </span><span style="color:#b48ead;">for </span><span>_ in </span><span style="color:#d08770;">0</span><span>..num_buckets {
+</span><span>                buckets.</span><span style="color:#96b5b4;">push</span><span>(Vec::new());
+</span><span>            }
+</span><span>            SimpleHashMap {
+</span><span>                buckets,
+</span><span>                num_elements: </span><span style="color:#d08770;">0</span><span>,
+</span><span>            }
+</span><span>        }
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">insert</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">key</span><span>: K, </span><span style="color:#bf616a;">value</span><span>: V) {
+</span><span>            </span><span style="color:#b48ead;">let</span><span> bucket_index = </span><span style="color:#b48ead;">Self</span><span>::get_bucket_index(&amp;key, </span><span style="color:#bf616a;">self</span><span>.buckets.</span><span style="color:#96b5b4;">len</span><span>());
+</span><span>            </span><span style="color:#b48ead;">let</span><span> bucket = &amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>.buckets[bucket_index];
+</span><span>
+</span><span>            </span><span style="color:#a7adba;">// Check if key already exists, update value
+</span><span>            </span><span style="color:#b48ead;">for </span><span>(k, v) in bucket.</span><span style="color:#96b5b4;">iter_mut</span><span>() {
+</span><span>                </span><span style="color:#b48ead;">if </span><span>*k == key {
+</span><span>                    *v = value;
+</span><span>                    </span><span style="color:#b48ead;">return</span><span>;
+</span><span>                }
+</span><span>            }
+</span><span>            </span><span style="color:#a7adba;">// Insert new key-value pair
+</span><span>            bucket.</span><span style="color:#96b5b4;">push</span><span>((key, value));
+</span><span>            </span><span style="color:#bf616a;">self</span><span>.num_elements += </span><span style="color:#d08770;">1</span><span>;
+</span><span>        }
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">get_bucket_index</span><span>(</span><span style="color:#bf616a;">key</span><span>: &amp;K, </span><span style="color:#bf616a;">num_buckets</span><span>: </span><span style="color:#b48ead;">usize</span><span>) -&gt; </span><span style="color:#b48ead;">usize </span><span>{
+</span><span>            </span><span style="color:#b48ead;">use </span><span>std::hash::{Hasher, SipHasher};
+</span><span>            </span><span style="color:#b48ead;">let mut</span><span> hasher = SipHasher::new();
+</span><span>            key.</span><span style="color:#96b5b4;">hash</span><span>(&amp;</span><span style="color:#b48ead;">mut</span><span> hasher);
+</span><span>            (hasher.</span><span style="color:#96b5b4;">finish</span><span>() as </span><span style="color:#b48ead;">usize</span><span>) % num_buckets
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Iterator for SimpleHashMap (Iterates over key-value pairs)
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>SimpleHashMapIterator&lt;</span><span style="color:#b48ead;">&#39;a</span><span>, K, V&gt; {
+</span><span>        </span><span style="color:#bf616a;">bucket_iterator</span><span>: std::slice::Iter&lt;</span><span style="color:#b48ead;">&#39;a</span><span>, Vec&lt;(K, V)&gt;&gt;, </span><span style="color:#a7adba;">// Iterator over buckets
+</span><span>        </span><span style="color:#bf616a;">current_bucket_entry_iterator</span><span>: Option&lt;std::slice::Iter&lt;</span><span style="color:#b48ead;">&#39;a</span><span>, (K, V)&gt;&gt;, </span><span style="color:#a7adba;">// Iterator over entries in current bucket
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">impl</span><span>&lt;</span><span style="color:#b48ead;">&#39;a</span><span>, K, V&gt; SimpleHashMapIterator&lt;</span><span style="color:#b48ead;">&#39;a</span><span>, K, V&gt; {
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#bf616a;">map</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a </span><span>SimpleHashMap&lt;K, V&gt;) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>            SimpleHashMapIterator {
+</span><span>                bucket_iterator: map.buckets.</span><span style="color:#96b5b4;">iter</span><span>(),
+</span><span>                current_bucket_entry_iterator: None,
+</span><span>            }
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">impl</span><span>&lt;</span><span style="color:#b48ead;">&#39;a</span><span>, K, V&gt; Iterator </span><span style="color:#b48ead;">for </span><span>SimpleHashMapIterator&lt;</span><span style="color:#b48ead;">&#39;a</span><span>, K, V&gt; {
+</span><span>        </span><span style="color:#b48ead;">type </span><span>Item = (&amp;</span><span style="color:#b48ead;">&#39;a</span><span> K, &amp;</span><span style="color:#b48ead;">&#39;a</span><span> V); </span><span style="color:#a7adba;">// Produces references to key and value
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">next</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) -&gt; Option&lt;</span><span style="color:#b48ead;">Self::</span><span>Item&gt; {
+</span><span>            </span><span style="color:#b48ead;">loop </span><span>{
+</span><span>                </span><span style="color:#b48ead;">if let </span><span>Some(</span><span style="color:#b48ead;">ref mut</span><span> entry_iter) = </span><span style="color:#bf616a;">self</span><span>.current_bucket_entry_iterator {
+</span><span>                    </span><span style="color:#b48ead;">if let </span><span>Some((key, value)) = entry_iter.</span><span style="color:#96b5b4;">next</span><span>() {
+</span><span>                        </span><span style="color:#b48ead;">return </span><span>Some((key, value)); </span><span style="color:#a7adba;">// Found next entry in current bucket
+</span><span>                    }
+</span><span>                }
+</span><span>
+</span><span>                </span><span style="color:#a7adba;">// Current bucket exhausted or not yet set, move to next bucket
+</span><span>                </span><span style="color:#b48ead;">if let </span><span>Some(next_bucket) = </span><span style="color:#bf616a;">self</span><span>.bucket_iterator.</span><span style="color:#96b5b4;">next</span><span>() {
+</span><span>                    </span><span style="color:#bf616a;">self</span><span>.current_bucket_entry_iterator = Some(next_bucket.</span><span style="color:#96b5b4;">iter</span><span>());
+</span><span>                } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>                    </span><span style="color:#b48ead;">return </span><span>None; </span><span style="color:#a7adba;">// All buckets exhausted
+</span><span>                }
+</span><span>            }
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Allow `for (key, value) in &amp;my_hashmap`
+</span><span>    </span><span style="color:#b48ead;">impl</span><span>&lt;</span><span style="color:#b48ead;">&#39;a</span><span>, K, V&gt; IntoIterator </span><span style="color:#b48ead;">for </span><span>&amp;</span><span style="color:#b48ead;">&#39;a </span><span>SimpleHashMap&lt;K, V&gt;
+</span><span>    </span><span style="color:#b48ead;">where
+</span><span>        K: std::hash::Hash + Eq,
+</span><span>    {
+</span><span>        </span><span style="color:#b48ead;">type </span><span>Item = (&amp;</span><span style="color:#b48ead;">&#39;a</span><span> K, &amp;</span><span style="color:#b48ead;">&#39;a</span><span> V);
+</span><span>        </span><span style="color:#b48ead;">type </span><span>IntoIter = SimpleHashMapIterator&lt;</span><span style="color:#b48ead;">&#39;a</span><span>, K, V&gt;;
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">into_iter</span><span>(</span><span style="color:#bf616a;">self</span><span>) -&gt; </span><span style="color:#b48ead;">Self::</span><span>IntoIter {
+</span><span>            SimpleHashMapIterator::new(</span><span style="color:#bf616a;">self</span><span>)
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Test the custom HashMap iterator
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> custom_map = SimpleHashMap::new(</span><span style="color:#d08770;">10</span><span>); </span><span style="color:#a7adba;">// 10 buckets
+</span><span>    custom_map.</span><span style="color:#96b5b4;">insert</span><span>(&quot;</span><span style="color:#a3be8c;">Pizza</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), </span><span style="color:#d08770;">18.99</span><span>);
+</span><span>    custom_map.</span><span style="color:#96b5b4;">insert</span><span>(&quot;</span><span style="color:#a3be8c;">Salad</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), </span><span style="color:#d08770;">12.50</span><span>);
+</span><span>    custom_map.</span><span style="color:#96b5b4;">insert</span><span>(&quot;</span><span style="color:#a3be8c;">Pasta</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), </span><span style="color:#d08770;">15.00</span><span>);
+</span><span>    custom_map.</span><span style="color:#96b5b4;">insert</span><span>(&quot;</span><span style="color:#a3be8c;">Soup</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), </span><span style="color:#d08770;">9.75</span><span>);
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Iterating over a custom HashMap:</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">for </span><span>(key, value) in &amp;custom_map { </span><span style="color:#a7adba;">// Uses IntoIterator for &amp;SimpleHashMap
+</span><span>        println!(&quot;     </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> -&gt; $</span><span style="color:#d08770;">{:.2}</span><span>&quot;, key, value);
+</span><span>    }
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">🎯 Advanced Custom Iterator Guidelines:</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   • Adapters: Implement `Iterator` for a struct that wraps another iterator.</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   • Complex Structures: Manage state (e.g., stack/queue) to traverse data.</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   • Infinite Iterators: Use `Option&lt;Self::Item&gt;` to signal end (or `take()` to limit).</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   • Custom Collections: Provide `iter()`/`iter_mut()`/`into_iter()` methods.</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   • Performance: Minimize allocations inside `next()` method.</span><span>&quot;);
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#96b5b4;">demonstrate_advanced_custom_iterators</span><span>();
+</span><span>}
+</span></code></pre>
+<h2 id="real-world-custom-iterator-applications">Real-World Custom Iterator Applications</h2>
+<h3 id="complete-restaurant-system-appliance-implementation">Complete Restaurant System Appliance Implementation</h3>
+<p><strong>Practical examples showing how custom iterators solve real programming challenges:</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">demonstrate_real_world_custom_iterators</span><span>() {
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">🏢 Real-World Custom Iterator Applications - Complete Restaurant Systems</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">{:=&lt;75}</span><span>&quot;, &quot;&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Real-world applications demonstrate custom iterators in complete systems
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">💼 Professional Custom Appliance Implementation Examples:</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Application 1: Order Processing Pipeline Iterator
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">1️⃣ Order Processing Pipeline Iterator - Automated Order Flow:</span><span>&quot;);
+</span><span>
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Debug, Clone)]
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>OrderLine {
+</span><span>        </span><span style="color:#bf616a;">item_name</span><span>: String,
+</span><span>        </span><span style="color:#bf616a;">quantity</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>        </span><span style="color:#bf616a;">price_per_unit</span><span>: </span><span style="color:#b48ead;">f64</span><span>,
+</span><span>        </span><span style="color:#bf616a;">status</span><span>: String, </span><span style="color:#a7adba;">// &quot;Received&quot;, &quot;Preparing&quot;, &quot;Ready&quot;, &quot;Served&quot;
+</span><span>    }
+</span><span>
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Debug, Clone)]
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>CustomerOrder {
+</span><span>        </span><span style="color:#bf616a;">order_id</span><span>: String,
+</span><span>        </span><span style="color:#bf616a;">customer_name</span><span>: String,
+</span><span>        </span><span style="color:#bf616a;">lines</span><span>: Vec&lt;OrderLine&gt;,
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Custom iterator to process `CustomerOrder` lines based on status
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>OrderProcessorIterator&lt;</span><span style="color:#b48ead;">&#39;a</span><span>&gt; {
+</span><span>        </span><span style="color:#bf616a;">order_lines</span><span>: std::slice::Iter&lt;</span><span style="color:#b48ead;">&#39;a</span><span>, OrderLine&gt;,
+</span><span>        </span><span style="color:#bf616a;">filter_status</span><span>: Option&lt;&amp;</span><span style="color:#b48ead;">&#39;a str</span><span>&gt;,
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">impl</span><span>&lt;</span><span style="color:#b48ead;">&#39;a</span><span>&gt; OrderProcessorIterator&lt;</span><span style="color:#b48ead;">&#39;a</span><span>&gt; {
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#bf616a;">order</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a</span><span> CustomerOrder, </span><span style="color:#bf616a;">filter_status</span><span>: Option&lt;&amp;</span><span style="color:#b48ead;">&#39;a str</span><span>&gt;) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>            OrderProcessorIterator {
+</span><span>                order_lines: order.lines.</span><span style="color:#96b5b4;">iter</span><span>(),
+</span><span>                filter_status,
+</span><span>            }
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">impl</span><span>&lt;</span><span style="color:#b48ead;">&#39;a</span><span>&gt; Iterator </span><span style="color:#b48ead;">for </span><span>OrderProcessorIterator&lt;</span><span style="color:#b48ead;">&#39;a</span><span>&gt; {
+</span><span>        </span><span style="color:#b48ead;">type </span><span>Item = (&amp;</span><span style="color:#b48ead;">&#39;a str</span><span>, </span><span style="color:#b48ead;">f64</span><span>, </span><span style="color:#b48ead;">u32</span><span>); </span><span style="color:#a7adba;">// (item_name, total_price, quantity)
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">next</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) -&gt; Option&lt;</span><span style="color:#b48ead;">Self::</span><span>Item&gt; {
+</span><span>            </span><span style="color:#b48ead;">loop </span><span>{
+</span><span>                </span><span style="color:#b48ead;">if let </span><span>Some(line) = </span><span style="color:#bf616a;">self</span><span>.order_lines.</span><span style="color:#96b5b4;">next</span><span>() {
+</span><span>                    </span><span style="color:#b48ead;">if let </span><span>Some(status) = </span><span style="color:#bf616a;">self</span><span>.filter_status {
+</span><span>                        </span><span style="color:#b48ead;">if</span><span> line.status != status {
+</span><span>                            </span><span style="color:#b48ead;">continue</span><span>; </span><span style="color:#a7adba;">// Skip if status doesn&#39;t match filter
+</span><span>                        }
+</span><span>                    }
+</span><span>                    </span><span style="color:#a7adba;">// Calculate total price for this line
+</span><span>                    </span><span style="color:#b48ead;">let</span><span> total_price = line.quantity as </span><span style="color:#b48ead;">f64 </span><span>* line.price_per_unit;
+</span><span>                    </span><span style="color:#b48ead;">return </span><span>Some((line.item_name.</span><span style="color:#96b5b4;">as_str</span><span>(), total_price, line.quantity));
+</span><span>                } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>                    </span><span style="color:#b48ead;">return </span><span>None; </span><span style="color:#a7adba;">// No more order lines
+</span><span>                }
+</span><span>            }
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> customer_order = CustomerOrder {
+</span><span>        order_id: &quot;</span><span style="color:#a3be8c;">ORD-001</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        customer_name: &quot;</span><span style="color:#a3be8c;">Alice Johnson</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        lines: vec![
+</span><span>            OrderLine { item_name: &quot;</span><span style="color:#a3be8c;">Pizza Margherita</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), quantity: </span><span style="color:#d08770;">1</span><span>, price_per_unit: </span><span style="color:#d08770;">18.99</span><span>, status: &quot;</span><span style="color:#a3be8c;">Preparing</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>() },
+</span><span>            OrderLine { item_name: &quot;</span><span style="color:#a3be8c;">Caesar Salad</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), quantity: </span><span style="color:#d08770;">2</span><span>, price_per_unit: </span><span style="color:#d08770;">12.50</span><span>, status: &quot;</span><span style="color:#a3be8c;">Ready</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>() },
+</span><span>            OrderLine { item_name: &quot;</span><span style="color:#a3be8c;">Orange Juice</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), quantity: </span><span style="color:#d08770;">3</span><span>, price_per_unit: </span><span style="color:#d08770;">3.50</span><span>, status: &quot;</span><span style="color:#a3be8c;">Received</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>() },
+</span><span>            OrderLine { item_name: &quot;</span><span style="color:#a3be8c;">Tiramisu</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), quantity: </span><span style="color:#d08770;">1</span><span>, price_per_unit: </span><span style="color:#d08770;">8.99</span><span>, status: &quot;</span><span style="color:#a3be8c;">Preparing</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>() },
+</span><span>        ],
+</span><span>    };
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Automated order flow (all lines):</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> total_order_cost = </span><span style="color:#d08770;">0.0</span><span>;
+</span><span>    </span><span style="color:#b48ead;">for </span><span>(item, price, qty) in OrderProcessorIterator::new(&amp;customer_order, None) {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">     - </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> (x</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">) - $</span><span style="color:#d08770;">{:.2}</span><span>&quot;, item, qty, price);
+</span><span>        total_order_cost += price;
+</span><span>    }
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     Total order cost: $</span><span style="color:#d08770;">{:.2}</span><span>&quot;, total_order_cost);
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">   Processing only &#39;Preparing&#39; lines:</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> preparing_cost = </span><span style="color:#d08770;">0.0</span><span>;
+</span><span>    </span><span style="color:#b48ead;">for </span><span>(item, price, _) in OrderProcessorIterator::new(&amp;customer_order, Some(&quot;</span><span style="color:#a3be8c;">Preparing</span><span>&quot;)) {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">     - </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> (preparing) - $</span><span style="color:#d08770;">{:.2}</span><span>&quot;, item, price);
+</span><span>        preparing_cost += price;
+</span><span>    }
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     Cost of preparing items: $</span><span style="color:#d08770;">{:.2}</span><span>&quot;, preparing_cost);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Application 2: Menu Recommendation System Iterator
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">2️⃣ Menu Recommendation System Iterator - Personalized Suggestions:</span><span>&quot;);
+</span><span>
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Debug, Clone)]
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>Dish {
+</span><span>        </span><span style="color:#bf616a;">name</span><span>: String,
+</span><span>        </span><span style="color:#bf616a;">tags</span><span>: HashSet&lt;String&gt;, </span><span style="color:#a7adba;">// e.g., &quot;Vegan&quot;, &quot;Spicy&quot;, &quot;High-Protein&quot;
+</span><span>        </span><span style="color:#bf616a;">avg_rating</span><span>: </span><span style="color:#b48ead;">f64</span><span>,
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Custom iterator to recommend dishes based on customer preferences
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>RecommendationIterator&lt;</span><span style="color:#b48ead;">&#39;a</span><span>&gt; {
+</span><span>        </span><span style="color:#bf616a;">menu_dishes</span><span>: std::slice::Iter&lt;</span><span style="color:#b48ead;">&#39;a</span><span>, Dish&gt;,
+</span><span>        </span><span style="color:#bf616a;">preferred_tags</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a </span><span>HashSet&lt;String&gt;,
+</span><span>        </span><span style="color:#bf616a;">min_rating</span><span>: </span><span style="color:#b48ead;">f64</span><span>,
+</span><span>        </span><span style="color:#bf616a;">recommendation_count</span><span>: </span><span style="color:#b48ead;">usize</span><span>,
+</span><span>        </span><span style="color:#bf616a;">max_recommendations</span><span>: </span><span style="color:#b48ead;">usize</span><span>,
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">impl</span><span>&lt;</span><span style="color:#b48ead;">&#39;a</span><span>&gt; RecommendationIterator&lt;</span><span style="color:#b48ead;">&#39;a</span><span>&gt; {
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#bf616a;">menu</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a </span><span>Vec&lt;Dish&gt;, </span><span style="color:#bf616a;">preferences</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a </span><span>HashSet&lt;String&gt;, </span><span style="color:#bf616a;">min_rating</span><span>: </span><span style="color:#b48ead;">f64</span><span>, </span><span style="color:#bf616a;">max_recs</span><span>: </span><span style="color:#b48ead;">usize</span><span>) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>            RecommendationIterator {
+</span><span>                menu_dishes: menu.</span><span style="color:#96b5b4;">iter</span><span>(),
+</span><span>                preferred_tags: preferences,
+</span><span>                min_rating,
+</span><span>                recommendation_count: </span><span style="color:#d08770;">0</span><span>,
+</span><span>                max_recommendations: max_recs,
+</span><span>            }
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">impl</span><span>&lt;</span><span style="color:#b48ead;">&#39;a</span><span>&gt; Iterator </span><span style="color:#b48ead;">for </span><span>RecommendationIterator&lt;</span><span style="color:#b48ead;">&#39;a</span><span>&gt; {
+</span><span>        </span><span style="color:#b48ead;">type </span><span>Item = &amp;</span><span style="color:#b48ead;">&#39;a</span><span> Dish; </span><span style="color:#a7adba;">// Produces references to recommended dishes
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">next</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) -&gt; Option&lt;</span><span style="color:#b48ead;">Self::</span><span>Item&gt; {
+</span><span>            </span><span style="color:#b48ead;">while </span><span style="color:#bf616a;">self</span><span>.recommendation_count &lt; </span><span style="color:#bf616a;">self</span><span>.max_recommendations {
+</span><span>                </span><span style="color:#b48ead;">if let </span><span>Some(dish) = </span><span style="color:#bf616a;">self</span><span>.menu_dishes.</span><span style="color:#96b5b4;">next</span><span>() {
+</span><span>                    </span><span style="color:#a7adba;">// Check if dish matches preferences
+</span><span>                    </span><span style="color:#b48ead;">let</span><span> matches_tags = dish.tags.</span><span style="color:#96b5b4;">is_superset</span><span>(</span><span style="color:#bf616a;">self</span><span>.preferred_tags) || </span><span style="color:#a7adba;">// Dish has all preferred tags
+</span><span>                                     !dish.tags.</span><span style="color:#96b5b4;">is_disjoint</span><span>(</span><span style="color:#bf616a;">self</span><span>.preferred_tags);  </span><span style="color:#a7adba;">// Dish shares *any* preferred tag
+</span><span>
+</span><span>                    </span><span style="color:#b48ead;">if</span><span> matches_tags &amp;&amp; dish.avg_rating &gt;= </span><span style="color:#bf616a;">self</span><span>.min_rating {
+</span><span>                        </span><span style="color:#bf616a;">self</span><span>.recommendation_count += </span><span style="color:#d08770;">1</span><span>;
+</span><span>                        </span><span style="color:#b48ead;">return </span><span>Some(dish);
+</span><span>                    }
+</span><span>                } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>                    </span><span style="color:#b48ead;">return </span><span>None; </span><span style="color:#a7adba;">// No more dishes to check
+</span><span>                }
+</span><span>            }
+</span><span>            None </span><span style="color:#a7adba;">// Reached max recommendations
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> full_menu = vec![
+</span><span>        Dish { name: &quot;</span><span style="color:#a3be8c;">Quinoa Bowl</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), tags: [&quot;</span><span style="color:#a3be8c;">Vegan</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), &quot;</span><span style="color:#a3be8c;">Healthy</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()].</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">cloned</span><span>().</span><span style="color:#96b5b4;">collect</span><span>(), avg_rating: </span><span style="color:#d08770;">4.8 </span><span>},
+</span><span>        Dish { name: &quot;</span><span style="color:#a3be8c;">Spicy Tofu Stir-fry</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), tags: [&quot;</span><span style="color:#a3be8c;">Vegan</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), &quot;</span><span style="color:#a3be8c;">Spicy</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()].</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">cloned</span><span>().</span><span style="color:#96b5b4;">collect</span><span>(), avg_rating: </span><span style="color:#d08770;">4.5 </span><span>},
+</span><span>        Dish { name: &quot;</span><span style="color:#a3be8c;">Classic Caesar</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), tags: [&quot;</span><span style="color:#a3be8c;">Traditional</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()].</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">cloned</span><span>().</span><span style="color:#96b5b4;">collect</span><span>(), avg_rating: </span><span style="color:#d08770;">4.2 </span><span>},
+</span><span>        Dish { name: &quot;</span><span style="color:#a3be8c;">Lentil Soup</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), tags: [&quot;</span><span style="color:#a3be8c;">Vegan</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), &quot;</span><span style="color:#a3be8c;">Hearty</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()].</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">cloned</span><span>().</span><span style="color:#96b5b4;">collect</span><span>(), avg_rating: </span><span style="color:#d08770;">4.7 </span><span>},
+</span><span>        Dish { name: &quot;</span><span style="color:#a3be8c;">Cheese Pizza</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), tags: [&quot;</span><span style="color:#a3be8c;">Traditional</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()].</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">cloned</span><span>().</span><span style="color:#96b5b4;">collect</span><span>(), avg_rating: </span><span style="color:#d08770;">3.9 </span><span>},
+</span><span>    ];
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> alice_prefs = HashSet::new();
+</span><span>    alice_prefs.</span><span style="color:#96b5b4;">insert</span><span>(&quot;</span><span style="color:#a3be8c;">Vegan</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>());
+</span><span>    alice_prefs.</span><span style="color:#96b5b4;">insert</span><span>(&quot;</span><span style="color:#a3be8c;">Healthy</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>());
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> bob_prefs = HashSet::new();
+</span><span>    bob_prefs.</span><span style="color:#96b5b4;">insert</span><span>(&quot;</span><span style="color:#a3be8c;">Spicy</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>());
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">   Personalized menu recommendations:</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     Recommendations for Alice (Vegan, Healthy):</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">for</span><span> dish in RecommendationIterator::new(&amp;full_menu, &amp;alice_prefs, </span><span style="color:#d08770;">4.0</span><span>, </span><span style="color:#d08770;">3</span><span>) {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">       - </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> (Rating: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">)</span><span>&quot;, dish.name, dish.avg_rating);
+</span><span>    }
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     Recommendations for Bob (Spicy):</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">for</span><span> dish in RecommendationIterator::new(&amp;full_menu, &amp;bob_prefs, </span><span style="color:#d08770;">4.0</span><span>, </span><span style="color:#d08770;">2</span><span>) {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">       - </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> (Rating: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">)</span><span>&quot;, dish.name, dish.avg_rating);
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Application 3: Shift Schedule Generator Iterator
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">3️⃣ Shift Schedule Generator Iterator - Dynamic Staffing:</span><span>&quot;);
+</span><span>
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Debug, Clone)]
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>Employee {
+</span><span>        </span><span style="color:#bf616a;">name</span><span>: String,
+</span><span>        </span><span style="color:#bf616a;">shifts_per_week</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>    }
+</span><span>
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Debug, Clone)]
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>Shift {
+</span><span>        </span><span style="color:#bf616a;">day</span><span>: String,
+</span><span>        </span><span style="color:#bf616a;">time</span><span>: String,
+</span><span>        </span><span style="color:#bf616a;">employee_name</span><span>: String,
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Custom iterator to generate a week&#39;s shift schedule
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>WeeklyScheduleGenerator&lt;</span><span style="color:#b48ead;">&#39;a</span><span>&gt; {
+</span><span>        </span><span style="color:#bf616a;">employees</span><span>: std::slice::Iter&lt;</span><span style="color:#b48ead;">&#39;a</span><span>, Employee&gt;,
+</span><span>        </span><span style="color:#bf616a;">current_employee_shifts</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>        </span><span style="color:#bf616a;">current_day_index</span><span>: </span><span style="color:#b48ead;">usize</span><span>,
+</span><span>        </span><span style="color:#bf616a;">days_of_week</span><span>: Vec&lt;&amp;</span><span style="color:#b48ead;">&#39;static str</span><span>&gt;,
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">impl</span><span>&lt;</span><span style="color:#b48ead;">&#39;a</span><span>&gt; WeeklyScheduleGenerator&lt;</span><span style="color:#b48ead;">&#39;a</span><span>&gt; {
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#bf616a;">employees</span><span>: &amp;</span><span style="color:#b48ead;">&#39;a </span><span>Vec&lt;Employee&gt;) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>            WeeklyScheduleGenerator {
+</span><span>                employees: employees.</span><span style="color:#96b5b4;">iter</span><span>(),
+</span><span>                current_employee_shifts: </span><span style="color:#d08770;">0</span><span>,
+</span><span>                current_day_index: </span><span style="color:#d08770;">0</span><span>,
+</span><span>                days_of_week: vec![&quot;</span><span style="color:#a3be8c;">Monday</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Tuesday</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Wednesday</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Thursday</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Friday</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Saturday</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Sunday</span><span>&quot;],
+</span><span>            }
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">impl</span><span>&lt;</span><span style="color:#b48ead;">&#39;a</span><span>&gt; Iterator </span><span style="color:#b48ead;">for </span><span>WeeklyScheduleGenerator&lt;</span><span style="color:#b48ead;">&#39;a</span><span>&gt; {
+</span><span>        </span><span style="color:#b48ead;">type </span><span>Item = Shift; </span><span style="color:#a7adba;">// Produces Shift structs
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">next</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) -&gt; Option&lt;</span><span style="color:#b48ead;">Self::</span><span>Item&gt; {
+</span><span>            </span><span style="color:#b48ead;">loop </span><span>{
+</span><span>                </span><span style="color:#a7adba;">// If current employee has no more shifts or days are exhausted
+</span><span>                </span><span style="color:#b48ead;">if </span><span style="color:#bf616a;">self</span><span>.current_employee_shifts == </span><span style="color:#d08770;">0 </span><span>{
+</span><span>                    </span><span style="color:#a7adba;">// Move to the next employee
+</span><span>                    </span><span style="color:#b48ead;">if let </span><span>Some(employee) = </span><span style="color:#bf616a;">self</span><span>.employees.</span><span style="color:#96b5b4;">next</span><span>() {
+</span><span>                        </span><span style="color:#bf616a;">self</span><span>.current_employee_shifts = employee.shifts_per_week;
+</span><span>                        </span><span style="color:#bf616a;">self</span><span>.current_day_index = </span><span style="color:#d08770;">0</span><span>; </span><span style="color:#a7adba;">// Reset day for new employee
+</span><span>                        </span><span style="color:#a7adba;">// Fall through to generate shift for this employee
+</span><span>                    } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>                        </span><span style="color:#b48ead;">return </span><span>None; </span><span style="color:#a7adba;">// All employees processed
+</span><span>                    }
+</span><span>                }
+</span><span>
+</span><span>                </span><span style="color:#a7adba;">// If employee has shifts remaining, assign to next day
+</span><span>                </span><span style="color:#b48ead;">if </span><span style="color:#bf616a;">self</span><span>.current_day_index &lt; </span><span style="color:#bf616a;">self</span><span>.days_of_week.</span><span style="color:#96b5b4;">len</span><span>() {
+</span><span>                    </span><span style="color:#b48ead;">let</span><span> employee = </span><span style="color:#bf616a;">self</span><span>.employees.</span><span style="color:#96b5b4;">as_slice</span><span>()[^</span><span style="color:#d08770;">0</span><span>]; </span><span style="color:#a7adba;">// Get current employee (not consumed by next())
+</span><span>
+</span><span>                    </span><span style="color:#b48ead;">let</span><span> shift = Shift {
+</span><span>                        day: </span><span style="color:#bf616a;">self</span><span>.days_of_week[</span><span style="color:#bf616a;">self</span><span>.current_day_index].</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>                        time: &quot;</span><span style="color:#a3be8c;">9AM-5PM</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), </span><span style="color:#a7adba;">// Fixed time for simplicity
+</span><span>                        employee_name: employee.name.</span><span style="color:#96b5b4;">clone</span><span>(),
+</span><span>                    };
+</span><span>
+</span><span>                    </span><span style="color:#bf616a;">self</span><span>.current_employee_shifts -= </span><span style="color:#d08770;">1</span><span>;
+</span><span>                    </span><span style="color:#bf616a;">self</span><span>.current_day_index += </span><span style="color:#d08770;">1</span><span>;
+</span><span>                    </span><span style="color:#b48ead;">return </span><span>Some(shift);
+</span><span>                } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>                    </span><span style="color:#a7adba;">// Employee finished their week, move to next employee
+</span><span>                    </span><span style="color:#a7adba;">// This path is usually taken when current_employee_shifts &gt; 0 but days_of_week exhausted
+</span><span>                    </span><span style="color:#a7adba;">// We need to advance `self.employees` iterator to the next employee
+</span><span>                    </span><span style="color:#a7adba;">// This is tricky because `self.employees` is `std::slice::Iter`
+</span><span>                    </span><span style="color:#a7adba;">// In a more robust design, you might iterate employees differently or design `shifts_per_week` around 7 days
+</span><span>                    </span><span style="color:#bf616a;">self</span><span>.current_employee_shifts = </span><span style="color:#d08770;">0</span><span>; </span><span style="color:#a7adba;">// Force move to next employee in next loop iteration
+</span><span>                    </span><span style="color:#bf616a;">self</span><span>.current_day_index = </span><span style="color:#d08770;">0</span><span>; </span><span style="color:#a7adba;">// Reset for next employee
+</span><span>                    </span><span style="color:#b48ead;">continue</span><span>; </span><span style="color:#a7adba;">// Loop again to get next employee
+</span><span>                }
+</span><span>            }
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> restaurant_employees = vec![
+</span><span>        Employee { name: &quot;</span><span style="color:#a3be8c;">Chef Alice</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), shifts_per_week: </span><span style="color:#d08770;">5 </span><span>},
+</span><span>        Employee { name: &quot;</span><span style="color:#a3be8c;">Server Bob</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), shifts_per_week: </span><span style="color:#d08770;">4 </span><span>},
+</span><span>        Employee { name: &quot;</span><span style="color:#a3be8c;">Dishwasher Carol</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), shifts_per_week: </span><span style="color:#d08770;">3 </span><span>},
+</span><span>    ];
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">   Dynamic staff scheduling:</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">for</span><span> shift in WeeklyScheduleGenerator::new(&amp;restaurant_employees) {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">     - </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> on </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> (</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">)</span><span>&quot;, shift.employee_name, shift.day, shift.time);
+</span><span>    }
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">🎯 Real-World Custom Iterator Benefits:</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   • Automated data processing for complex business logic.</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   • Flexible data filtering and transformation.</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   • Efficient generation of sequences (e.g., IDs, schedules).</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   • Integration with Rust&#39;s powerful iterator ecosystem.</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   • Clean, idiomatic code for domain-specific problems.</span><span>&quot;);
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">💡 Professional Implementation Guidelines:</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   • Clearly define the iterator&#39;s state and item type.</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   • Optimize `next()` for performance (avoid unnecessary allocations).</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   • Implement `IntoIterator`, `iter()`, and `iter_mut()` for flexibility.</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   • Use iterator adapters (`map`, `filter`, `fold`) for common operations.</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   • Consider memory management carefully, especially for borrowed iterators.</span><span>&quot;);
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#96b5b4;">demonstrate_real_world_custom_iterators</span><span>();
+</span><span>}
+</span></code></pre>
+<h2 id="summary-and-key-takeaways">Summary and Key Takeaways</h2>
+<h3 id="mental-model-the-complete-professional-kitchen-appliance-design-system"><strong>Mental Model: The Complete Professional Kitchen Appliance Design System</strong></h3>
+<p>Remember our comprehensive professional kitchen appliance design analogy:</p>
+<ul>
+<li>⚙️ <strong>Custom iterators</strong> = <strong>Specialized kitchen appliances</strong> - Designed for specific processing tasks</li>
+<li><code>Iterator</code> trait = <strong>Appliance blueprint</strong> - Defines how your appliance produces items</li>
+<li><code>next()</code> method = <strong>Appliance's core function</strong> - Generates the next item or signals completion</li>
+<li><strong>State management</strong> = <strong>Appliance's internal mechanism</strong> - What data it needs to remember for its operation</li>
+<li>🚀 <strong>Advanced patterns</strong> = <strong>Specialized capabilities</strong> - Unique features beyond basic production</li>
+</ul>
+<h3 id="understanding-the-iterator-trait-1"><strong>Understanding the <code>Iterator</code> Trait</strong></h3>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">pub trait </span><span>Iterator {
+</span><span>    </span><span style="color:#b48ead;">type </span><span>Item; </span><span style="color:#a7adba;">// Associated type: the type of value yielded by the iterator
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// The core method: returns the next element or `None` if the iteration is finished.
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">next</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) -&gt; Option&lt;</span><span style="color:#b48ead;">Self::</span><span>Item&gt;;
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Many other default methods (e.g., map, filter, fold, for_each) are provided
+</span><span>    </span><span style="color:#a7adba;">// based on this core `next` method.
+</span><span>}
+</span></code></pre>
+<h3 id="designing-your-custom-iterator-step-by-step"><strong>Designing Your Custom Iterator: Step-by-Step</strong></h3>
+<ol>
+<li><strong>Define the Iterator's State:</strong> Create a <code>struct</code> that holds all necessary information (e.g., current position, reference to data, counter).</li>
+<li><strong>Implement <code>Iterator</code> for Your State Struct:</strong>
+<ul>
+<li>Specify the <code>type Item</code> (what your iterator produces).</li>
+<li>Implement the <code>next(&amp;mut self) -&gt; Option&lt;Self::Item&gt;</code> method. This method should update the state and return <code>Some(item)</code> or <code>None</code>.</li>
+</ul>
+</li>
+<li><strong>Implement <code>IntoIterator</code> for Your Collection (Optional but Recommended):</strong>
+<ul>
+<li>This allows <code>for item in my_collection</code> (consumes the collection).</li>
+<li><code>IntoIterator</code>'s <code>into_iter</code> method usually returns your custom iterator struct.</li>
+</ul>
+</li>
+<li><strong>Implement <code>iter()</code> and <code>iter_mut()</code> Methods (Optional but Recommended):</strong>
+<ul>
+<li>These methods on your collection return iterators that borrow (<code>&amp;T</code>) or mutably borrow (<code>&amp;mut T</code>) your collection.</li>
+<li>This allows <code>for item in &amp;my_collection</code> and <code>for item in &amp;mut my_collection</code>.</li>
+</ul>
+</li>
+</ol>
+<h3 id="common-custom-iterator-patterns"><strong>Common Custom Iterator Patterns</strong></h3>
+<table><thead><tr><th style="text-align: left"><strong>Pattern</strong></th><th style="text-align: left"><strong>Description</strong></th><th style="text-align: left"><strong>Example</strong></th><th style="text-align: left"><strong>Use Case</strong></th></tr></thead><tbody>
+<tr><td style="text-align: left"><strong>Counter/Generator</strong></td><td style="text-align: left">Produces a sequence of numbers/IDs.</td><td style="text-align: left"><code>PortionDispenser</code>, <code>Fibonacci</code></td><td style="text-align: left">Generating unique IDs, sequences.</td></tr>
+<tr><td style="text-align: left"><strong>Adapter</strong></td><td style="text-align: left">Wraps another iterator to transform its items.</td><td style="text-align: left"><code>PrefixedIterator</code></td><td style="text-align: left">Adding formatting, filtering, mapping.</td></tr>
+<tr><td style="text-align: left"><strong>Complex Structure</strong></td><td style="text-align: left">Iterates over custom data structures (trees, graphs, custom lists).</td><td style="text-align: left"><code>MenuTreeIterator</code></td><td style="text-align: left">Navigating hierarchical data.</td></tr>
+<tr><td style="text-align: left"><strong>Infinite</strong></td><td style="text-align: left">Generates an endless sequence (use <code>take()</code> to limit).</td><td style="text-align: left"><code>OrderIdGenerator</code></td><td style="text-align: left">Continuous streams of data.</td></tr>
+<tr><td style="text-align: left"><strong>Custom Collection</strong></td><td style="text-align: left">Provides iteration over your own collection types.</td><td style="text-align: left"><code>SimpleHashMapIterator</code></td><td style="text-align: left">Integrating custom data types with <code>for</code> loops.</td></tr>
+</tbody></table>
+<h3 id="real-world-applications"><strong>Real-World Applications</strong></h3>
+<ul>
+<li><strong>Order Processing:</strong> Iterating through order lines, filtering by status, calculating totals.</li>
+<li><strong>Menu Recommendation:</strong> Iterating through dishes, applying filters for dietary needs and ratings.</li>
+<li><strong>Schedule Generation:</strong> Iterating to assign shifts to employees, generate weekly schedules.</li>
+<li><strong>Data Pipelines:</strong> Building custom <code>map</code>/<code>filter</code>/<code>fold</code> operations on domain-specific data.</li>
+<li><strong>Custom Parsers:</strong> Iterating over tokens or parsed elements from a custom input format.</li>
+</ul>
+<h3 id="best-practices-checklist"><strong>Best Practices Checklist</strong></h3>
+<p><strong>✅ Design &amp; Implementation:</strong></p>
+<ul>
+<li><strong>Define State:</strong> Clearly determine what state (<code>struct</code> fields) your iterator needs to maintain.</li>
+<li><strong><code>next()</code> Logic:</strong> Ensure <code>next()</code> correctly updates the state and returns <code>Some(Item)</code> or <code>None</code>.</li>
+<li><strong>Lifetimes:</strong> Pay close attention to lifetimes when returning references (<code>&amp;'a Item</code>).</li>
+<li><strong>Delegation:</strong> Delegate to standard library iterators (like <code>std::slice::Iter</code>) when possible.</li>
+<li><strong>Performance:</strong> Minimize allocations or expensive operations inside the <code>next()</code> method.</li>
+</ul>
+<p><strong>✅ Usage &amp; Integration:</strong></p>
+<ul>
+<li><strong><code>IntoIterator</code>:</strong> Implement for seamless <code>for</code> loop consumption.</li>
+<li><strong><code>iter()</code>/<code>iter_mut()</code>:</strong> Provide for common borrowing patterns.</li>
+<li><strong>Adapters:</strong> Design generic adapters that enhance existing iterators.</li>
+<li><strong>Error Handling:</strong> Decide how to handle errors within <code>next()</code> (often <code>Option&lt;Result&lt;Item, Error&gt;&gt;</code>).</li>
+</ul>
+<p><strong>❌ Common Pitfalls:</strong></p>
+<ul>
+<li>Forgetting to mutate <code>self</code> within <code>next()</code> to advance the iterator.</li>
+<li>Returning references that don't live long enough (dangling pointers).</li>
+<li>Over-allocating inside <code>next()</code> instead of reusing state or pre-allocating.</li>
+<li>Trying to implement <code>Iterator</code> directly on a collection that doesn't hold its state.</li>
+</ul>
+<h3 id="the-professional-advantage"><strong>The Professional Advantage</strong></h3>
+<p><strong>Building custom iterators transforms you from a Rust user to a true craftsman, capable of designing specialized kitchen appliances</strong> that precisely control data flow:</p>
+<ul>
+<li>⚙️ <strong>Fine-grained control:</strong> You dictate exactly how elements are produced.</li>
+<li><strong>Idiomatic code:</strong> Your custom types integrate seamlessly with Rust's powerful iterator ecosystem.</li>
+<li><strong>Efficiency:</strong> Often as fast as manual loops due to zero-cost abstraction.</li>
+<li><strong>Code clarity:</strong> Complex iteration logic is encapsulated cleanly.</li>
+<li><strong>Reusability:</strong> Your custom iterators become building blocks for advanced data pipelines.</li>
+</ul>
+<p><strong>Mastering custom iterators equips you to build highly efficient, flexible, and idiomatic data processing solutions</strong> tailored to your exact domain needs, much like a master chef designing bespoke kitchen tools that perfectly execute unique culinary visions.</p>
+<ol>
+<li>https://refactoring.guru/design-patterns/iterator/rust/example</li>
+<li>https://doc.rust-lang.org/rust-by-example/trait/iter.html</li>
+<li>https://dev.to/wrongbyte/implementing-iterator-and-intoiterator-in-rust-3nio</li>
+<li>https://stackoverflow.com/questions/73955577/implementing-a-custom-iterator-trait</li>
+<li>https://notes.kodekloud.com/docs/Rust-Programming/Closures-and-Iterators/Rusts-Iterator-Ecosystem-Custom-Iterators</li>
+<li>https://www.freecodecamp.org/news/rust-tutorial-build-a-json-parser/</li>
+<li>https://www.risein.com/courses/rust-programming/introduction-to-iterator-and-its-types-in-rust</li>
+<li>https://aloso.github.io/2021/03/09/creating-an-iterator</li>
+<li>https://users.rust-lang.org/t/custom-iterator-over-some-struct-fields/53559</li>
+<li>https://www.reddit.com/r/rust/comments/lrala6/custom_iterator_adapters/</li>
+</ol>
+
+    
+        </div>
+
+    </article>
+</main>
+
+
+    <script type="text/javascript" src="https://aarambhdevhub.github.io/rust-doc/elasticlunr.min.js" defer></script>
+    <script type="text/javascript" src="https://aarambhdevhub.github.io/rust-doc/search_index.en.js" defer></script>
+<script type="text/javascript" src="https://aarambhdevhub.github.io/rust-doc/js.js" defer></script>
+
+</body>
+</html>
