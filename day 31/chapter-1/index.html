@@ -1,0 +1,1779 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://aarambhdevhub.github.io/rust-doc/main.css">
+    <link rel="icon" href="https://www.rust-lang.org/static/images/favicon-16x16.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Rust Programming Course! | Closure Syntax and Usage </title>
+</head>
+<body>
+
+<main>
+    
+    <nav>
+            <a href="https:&#x2F;&#x2F;aarambhdevhub.github.io&#x2F;rust-doc&#x2F;">
+                        <img src="https://www.rust-lang.org/static/images/rust-logo-blk.svg" alt="logo"/>
+                    </a>
+                <!-- -->
+
+            <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+            <div id="trees">
+                <input class="tree-toggle" type="checkbox" id="day-1-introduction"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-1-introduction">Day 1: Introduction</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 1/chapter-1/">What is Rust and why use it?</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 1/chapter-2/">Installing Rust Toolchain (rustup, cargo)</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 1/chapter-3/">Setting up Development (VS Code + Hello World)</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 1/chapter-4/">Understanding Cargo Project Structure</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-2-basic-syntax-variables"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-2-basic-syntax-variables">Day 2: Basic Syntax &amp; Variables</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 2/chapter-1/">Variables and Mutability in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 2/chapter-2/">Data Types in Rust: Integers, Floats, Booleans, and Characters</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 2/chapter-3/">Constants vs Variables</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 2/chapter-4/">Understanding Shadowing in Rust: A Practical Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 2/chapter-5/">Basic Input&#x2F;Output</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-3-functions-control-flow"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-3-functions-control-flow">Day 3: Functions &amp; Control Flow</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 3/chapter-1/">Function Syntax and Parameters in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 3/chapter-2/">Return Values and Expressions vs Statements</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 3/chapter-3/">If&#x2F;Else Statements in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 3/chapter-4/">Match Expressions in Rust: Powerful Pattern Matching</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 3/chapter-5/">Loops in Rust: loop, while, for Explained</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-4-data-types-deep-dive"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-4-data-types-deep-dive">Day 4: Data Types Deep Dive</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 4/chapter-1/">Compound Types (Tuples, Arrays)</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 4/chapter-2/">String vs &amp;str in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 4/chapter-3/">Vector Basics in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 4/chapter-4/">Type Annotations and Inference in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 4/chapter-5/">Practical Rust Exercises</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-5-practice-review"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-5-practice-review">Day 5: Practice &amp; Review</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 5/chapter-1/">Day 5: Practice &amp; Review</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-6-ownership-fundamentals"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-6-ownership-fundamentals">Day 6: Ownership Fundamentals</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 6/chapter-1/">Ownership in Rust: A Detailed Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 6/chapter-2/">Stack vs Heap in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 6/chapter-3/">Understanding Ownership in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 6/chapter-4/">Move Semantics in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 6/chapter-5/">Copy Trait in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-7-references-borrowing"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-7-references-borrowing">Day 7: References &amp; Borrowing</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 7/chapter-1/">Immutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 7/chapter-2/">Mutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 7/chapter-3/">Borrowing Rules</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 7/chapter-4/">Reference Lifetime Basics</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 7/chapter-5/">Common Borrowing Errors and Solutions</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-8-slices"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-8-slices">Day 8: Slices</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 8/chapter-1/">String Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 8/chapter-2/">Array Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 8/chapter-3/">Slice Syntax and Usage</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 8/chapter-4/">Practical Applications</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 8/chapter-5/">Memory Safety Benefits</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-9-advanced-ownership"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-9-advanced-ownership">Day 9: Advanced Ownership</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 9/chapter-1/">Clone Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 9/chapter-2/">Drop Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 9/chapter-3/">RAII Pattern</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 9/chapter-4/">Memory Management Comparison with Other Languages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 9/chapter-5/">Best Practices (Advanced Ownership)</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-10-ownership-practice"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-10-ownership-practice">Day 10: Ownership Practice</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 10/chapter-1/">Complex Ownership Scenarios</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 10/chapter-2/">Debugging Ownership Errors</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 10/chapter-3/">Code Refactoring Exercises</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 10/chapter-4/">Group Problem-Solving</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-11-structs-basics"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-11-structs-basics">Day 11: Structs Basics</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 11/chapter-1/">Defining and Instantiating Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 11/chapter-2/">Field Access and Modification</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 11/chapter-3/">Tuple Structs and Unit Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 11/chapter-4/">Struct Update Syntax</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 11/chapter-5/">Ownership of Struct Data</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-12-methods-associated-functions"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-12-methods-associated-functions">Day 12: Methods &amp; Associated Functions</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 12/chapter-1/">Implementing Methods with impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 12/chapter-2/">&amp;self, &amp;mut self, and self</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 12/chapter-3/">Associated Functions (like Constructors)</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 12/chapter-4/">Multiple impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 12/chapter-5/">Method Chaining</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-13-advanced-struct-concepts"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-13-advanced-struct-concepts">Day 13: Advanced Struct Concepts</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 13/chapter-1/">Struct Lifetime Parameters</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 13/chapter-2/">Debug Trait and Custom Formatting</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 13/chapter-3/">Builder Pattern Implementation</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 13/chapter-4/">Struct Composition</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 13/chapter-5/">Best Practices for Struct Design</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-14-enums-pattern-matching"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-14-enums-pattern-matching">Day 14: Enums &amp; Pattern Matching</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 14/chapter-1/">Defining Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 14/chapter-2/">Enum Variants with Data</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 14/chapter-3/">Option&lt;T&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 14/chapter-4/">Result&lt;T, E&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 14/chapter-5/">Advanced Match Patterns in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-15-practice-project"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-15-practice-project">Day 15: Practice Project</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 15/chapter-1/">Building a Simple CLI Calculator in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-16-vectors"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-16-vectors">Day 16: Vectors</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 16/chapter-1/">Creating and Updating Vectors</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 16/chapter-2/">Vector Methods: push, pop, iter</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 16/chapter-3/">Accessing Vector Elements Safely</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 16/chapter-4/">Vector of Different Types with Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 16/chapter-5/">Performance Considerations</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-17-hashmaps-other-collections"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-17-hashmaps-other-collections">Day 17: HashMaps &amp; Other Collections</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 17/chapter-1/">HashMap Creation and Manipulation</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 17/chapter-2/">Keys and Values Ownership</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 17/chapter-3/">HashMap Methods and Iteration</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 17/chapter-4/">When to Use Different Collections</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 17/chapter-5/">BTreeMap Introduction</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-18-error-handling"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-18-error-handling">Day 18: Error Handling</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 18/chapter-1/">Panic! and When to Use It</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 18/chapter-2/">Result&lt;T, E&gt; in Depth</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 18/chapter-3/">The ? Operator in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 18/chapter-4/">Creating Custom Error Types in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 18/chapter-5/">Error Propagation Patterns in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-19-strings-deep-dive"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-19-strings-deep-dive">Day 19: Strings Deep Dive</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 19/chapter-1/">String vs &amp;str Revisited</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 19/chapter-2/">String Methods and Manipulation</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 19/chapter-5/">Performance Considerations</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 19/chapter-3/">UTF-8 and Character Encoding</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 19/chapter-4/">String Concatenation Techniques</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-20-mini-project"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-20-mini-project">Day 20: Mini Project</label>
+
+                    <ul class="subtree">
+                        </ul>
+                <input class="tree-toggle" type="checkbox" id="day-21-generic-functions-structs"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-21-generic-functions-structs">Day 21: Generic Functions &amp; Structs</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 21/chapter-1/">Generic Function Syntax</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 21/chapter-2/">Generic Structs and Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 21/chapter-3/">Type Parameters and Constraints</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 21/chapter-4/">Monomorphization Concept</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 21/chapter-5/">Generic Collections</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-22-traits-fundamentals"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-22-traits-fundamentals">Day 22: Traits Fundamentals</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 22/chapter-1/">Defining Traits</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 22/chapter-2/">Implementing Traits for Types</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 22/chapter-3/">Default Implementations</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 22/chapter-4/">Trait as Parameters</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 22/chapter-5/">Trait Bounds</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-23-advanced-traits"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-23-advanced-traits">Day 23: Advanced Traits</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 23/chapter-1/">Trait Objects and Dynamic Dispatch</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 23/chapter-2/">Supertraits</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 23/chapter-3/">Associated Types</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 23/chapter-4/">Orphan Rule</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 23/chapter-5/">Coherence Rules</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-24-standard-library-traits"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-24-standard-library-traits">Day 24: Standard Library Traits</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 24/chapter-1/">Iterator Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 24/chapter-2/">From and Into Traits</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 24/chapter-3/">Display and Debug Traits</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 24/chapter-4/">Clone and Copy Traits</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 24/chapter-5/">PartialEq and Eq Traits</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-25-trait-practice"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-25-trait-practice">Day 25: Trait Practice</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 25/chapter-1/">Custom Trait Implementation</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 25/chapter-2/">Generic Programming Exercises</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 25/chapter-3/">Trait Object Usage</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 25/chapter-4/">Performance Implications</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-26-lifetime-annotations"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-26-lifetime-annotations">Day 26: Lifetime Annotations</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 26/chapter-1/">Why Lifetimes Exist</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 26/chapter-2/">Lifetime Annotation Syntax</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 26/chapter-3/">Function Lifetime Parameters</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 26/chapter-4/">Struct Lifetime Parameters</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 26/chapter-5/">Lifetime Elision Rules</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-27-advanced-lifetimes"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-27-advanced-lifetimes">Day 27: Advanced Lifetimes</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 27/chapter-1/">Static Lifetime</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 27/chapter-2/">Lifetime Subtyping</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 27/chapter-3/">Higher-Ranked Trait Bounds</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 27/chapter-4/">Common Lifetime Patterns</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 27/chapter-5/">Debugging Lifetime Errors</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-28-smart-pointers"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-28-smart-pointers">Day 28: Smart Pointers</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 28/chapter-1/">Box&lt;T&gt; for Heap Allocation</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 28/chapter-2/">Rc&lt;T&gt; for Reference Counting</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 28/chapter-3/">RefCell&lt;T&gt; for Interior Mutability</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 28/chapter-4/">Weak&lt;T&gt; References</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 28/chapter-5/">Memory Leak Prevention</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-29-concurrency-preparation"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-29-concurrency-preparation">Day 29: Concurrency Preparation</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 29/chapter-1/">Arc&lt;T&gt; for Atomic Reference Counting</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 29/chapter-2/">Send and Sync Traits</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 29/chapter-3/">Thread Safety Concepts</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 29/chapter-4/">Shared State Challenges</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 29/chapter-5/">Lock-Free Programming Introduction</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-30-memory-management-project"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-30-memory-management-project">Day 30: Memory Management Project</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 30/chapter-1/">Building a Simple Data Structure</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 30/chapter-2/">Using Smart Pointers Effectively</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 30/chapter-3/">Memory Usage Optimization</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 30/chapter-4/">Performance Benchmarking</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-31-closures"
+                           checked/>
+                    <label class="tree-toggle-label"
+                           for="day-31-closures">Day 31: Closures</label>
+
+                    <ul class="subtree">
+                        <li class="active">
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 31/chapter-1/">Closure Syntax and Usage</a>
+                            </li>
+
+                            
+                                    
+                                    
+                                        <ul id="toc">
+                                            <li><a href="
+                                                        https://aarambhdevhub.github.io/rust-doc/day 31/chapter-1/#closure-syntax-and-usage-in-rust-comprehensive-documentation-for-beginners">Closure Syntax and Usage in Rust: Comprehensive Documentation for Beginners</a>
+                                                    <ul>
+                                                            <li>
+                                                                    <a href="https://aarambhdevhub.github.io/rust-doc/day 31/chapter-1/#the-professional-restaurant-recipe-card-system-analogy-convenience-store">The Professional Restaurant Recipe Card System Analogy 🏪</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://aarambhdevhub.github.io/rust-doc/day 31/chapter-1/#understanding-closure-fundamentals">Understanding Closure Fundamentals</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://aarambhdevhub.github.io/rust-doc/day 31/chapter-1/#closure-capture-modes-and-traits">Closure Capture Modes and Traits</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://aarambhdevhub.github.io/rust-doc/day 31/chapter-1/#practical-closure-applications">Practical Closure Applications</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://aarambhdevhub.github.io/rust-doc/day 31/chapter-1/#summary-and-key-takeaways">Summary and Key Takeaways</a>
+                                                                </li>
+                                                            </ul>
+                                                    </li>
+                                            </ul>
+                                    <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 31/chapter-2/">Capturing Environment</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 31/chapter-3/">Fn, FnMut, and FnOnce Traits</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 31/chapter-4/">Moving Closures</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 31/chapter-5/">Closures vs Functions</a>
+                            </li>
+
+                            </ul>
+                </div>
+        </nav>
+    <article>
+
+        <div id="on_right">
+                <span id="search-ico" class="ms-Icon--Search"></span>
+            </div>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="Search as you type...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        <div id="wrap">
+            
+        <h1 id="closure-syntax-and-usage-in-rust-comprehensive-documentation-for-beginners">Closure Syntax and Usage in Rust: Comprehensive Documentation for Beginners</h1>
+<p>Understanding closures in Rust is like learning to <strong>design flexible, portable recipe cards for your professional restaurant chain</strong> - you can create compact instructions that not only describe what to do, but also remember the specific ingredients, tools, and conditions available in each kitchen location. Just as a master chef can write recipe cards that adapt to whatever ingredients are available locally while maintaining consistent results, Rust closures are anonymous functions that can capture and use variables from their surrounding environment, making them incredibly powerful for creating flexible, reusable code that adapts to its context.</p>
+<h2 id="the-professional-restaurant-recipe-card-system-analogy-convenience-store">The Professional Restaurant Recipe Card System Analogy 🏪</h2>
+<h3 id="imagine-you-re-designing-adaptable-recipe-instructions">Imagine You're Designing Adaptable Recipe Instructions</h3>
+<p><strong>The Problem with Traditional Fixed Functions:</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// ❌ Traditional function - like a rigid recipe that can&#39;t adapt
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">fixed_recipe</span><span>(</span><span style="color:#bf616a;">ingredient</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; String {
+</span><span>    format!(&quot;</span><span style="color:#a3be8c;">Cook </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> for 10 minutes</span><span>&quot;) </span><span style="color:#a7adba;">// Always the same, can&#39;t use local conditions
+</span><span>}
+</span><span style="color:#a7adba;">// Result: Can&#39;t adapt to available equipment, local preferences, or seasonal ingredients
+</span></code></pre>
+<p><strong>The Power of Closures - Adaptive Recipe Cards:</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// ✅ Closure - like smart recipe cards that remember local context
+</span><span style="color:#b48ead;">let</span><span> local_cooking_style = &quot;</span><span style="color:#a3be8c;">Italian</span><span>&quot;;
+</span><span style="color:#b48ead;">let</span><span> available_time = </span><span style="color:#d08770;">15</span><span>;
+</span><span>
+</span><span style="color:#b48ead;">let </span><span style="color:#8fa1b3;">adaptive_recipe </span><span>= |</span><span style="color:#bf616a;">ingredient</span><span>| {
+</span><span>    </span><span style="color:#a7adba;">// This &quot;recipe card&quot; remembers local_cooking_style and available_time!
+</span><span>    format!(&quot;</span><span style="color:#a3be8c;">Cook </span><span style="color:#d08770;">{} {}</span><span style="color:#a3be8c;"> style for </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> minutes</span><span>&quot;,
+</span><span>            ingredient, local_cooking_style, available_time)
+</span><span>};
+</span><span>
+</span><span style="color:#b48ead;">let</span><span> result = </span><span style="color:#96b5b4;">adaptive_recipe</span><span>(&quot;</span><span style="color:#a3be8c;">pasta</span><span>&quot;);
+</span><span style="color:#a7adba;">// &quot;Cook pasta Italian style for 15 minutes&quot; - adapted to local context!
+</span></code></pre>
+<p><strong>Why Closures Are Revolutionary:</strong></p>
+<ul>
+<li>🎯 <strong>Context awareness</strong> - Remember and use surrounding variables automatically</li>
+<li>📝 <strong>Concise syntax</strong> - Write inline functionality without separate function definitions</li>
+<li>🔄 <strong>Flexible adaptation</strong> - Code adapts to its environment dynamically</li>
+<li>⚡ <strong>Performance</strong> - Zero-cost abstractions with compile-time optimization</li>
+<li>🛠️ <strong>Powerful patterns</strong> - Enable functional programming and iterator chains</li>
+</ul>
+<h2 id="understanding-closure-fundamentals">Understanding Closure Fundamentals</h2>
+<h3 id="the-basic-recipe-card-creation-system">The Basic Recipe Card Creation System</h3>
+<p><strong>Closures provide a concise way to create anonymous functions that can capture their environment:</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">demonstrate_closure_fundamentals</span><span>() {
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">📝 Closure Fundamentals - Flexible Recipe Card System</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">{:=&lt;70}</span><span>&quot;, &quot;&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Closures are like smart recipe cards that remember their kitchen context
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">🍽️ Closure Core Concepts:</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   📝 Anonymous Functions - Functions without names, defined inline</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   🎯 Environment Capture - Remember variables from surrounding scope</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   ⚡ Concise Syntax - Minimal syntax using |params| body</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   🔄 Type Inference - Rust figures out types automatically</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   🛠️ Flexible Usage - Pass as arguments, store in variables</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Example 1: Basic Closure Syntax
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">1️⃣ Basic Closure Syntax - Simple Recipe Cards:</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Simplest closure - no parameters
+</span><span>    </span><span style="color:#b48ead;">let </span><span style="color:#8fa1b3;">greet_customers </span><span>= || {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Welcome to our restaurant!</span><span>&quot;)
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Closure with one parameter
+</span><span>    </span><span style="color:#b48ead;">let </span><span style="color:#8fa1b3;">format_order </span><span>= |</span><span style="color:#bf616a;">item</span><span>| {
+</span><span>        format!(&quot;</span><span style="color:#a3be8c;">📋 Order: </span><span style="color:#d08770;">{}</span><span>&quot;, item)
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Closure with multiple parameters
+</span><span>    </span><span style="color:#b48ead;">let </span><span style="color:#8fa1b3;">calculate_bill </span><span>= |</span><span style="color:#bf616a;">price</span><span>, </span><span style="color:#bf616a;">tax_rate</span><span>| {
+</span><span>        price * (</span><span style="color:#d08770;">1.0 </span><span>+ tax_rate)
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Closure with explicit types (optional)
+</span><span>    </span><span style="color:#b48ead;">let </span><span style="color:#8fa1b3;">detailed_formatter </span><span>= |</span><span style="color:#bf616a;">name</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>, </span><span style="color:#bf616a;">quantity</span><span>: </span><span style="color:#b48ead;">u32</span><span>| -&gt; String {
+</span><span>        format!(&quot;</span><span style="color:#a3be8c;">🍽️ </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> x </span><span style="color:#d08770;">{}</span><span>&quot;, quantity, name)
+</span><span>    };
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Recipe card examples:</span><span>&quot;);
+</span><span>    </span><span style="color:#96b5b4;">greet_customers</span><span>();
+</span><span>    println!(&quot;   </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#96b5b4;">format_order</span><span>(&quot;</span><span style="color:#a3be8c;">Pizza Margherita</span><span>&quot;));
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   💰 Total with tax: $</span><span style="color:#d08770;">{:.2}</span><span>&quot;, </span><span style="color:#96b5b4;">calculate_bill</span><span>(</span><span style="color:#d08770;">15.99</span><span>, </span><span style="color:#d08770;">0.08</span><span>));
+</span><span>    println!(&quot;   </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#96b5b4;">detailed_formatter</span><span>(&quot;</span><span style="color:#a3be8c;">Caesar Salad</span><span>&quot;, </span><span style="color:#d08770;">2</span><span>));
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Example 2: Closure vs Function Comparison
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">2️⃣ Closures vs Functions - Recipe Card vs Cookbook:</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Traditional function
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">add_tax_function</span><span>(</span><span style="color:#bf616a;">price</span><span>: </span><span style="color:#b48ead;">f64</span><span>, </span><span style="color:#bf616a;">rate</span><span>: </span><span style="color:#b48ead;">f64</span><span>) -&gt; </span><span style="color:#b48ead;">f64 </span><span>{
+</span><span>        price * (</span><span style="color:#d08770;">1.0 </span><span>+ rate)
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Equivalent closures in different syntax styles
+</span><span>    </span><span style="color:#b48ead;">let </span><span style="color:#8fa1b3;">add_tax_v1 </span><span>= |</span><span style="color:#bf616a;">price</span><span>: </span><span style="color:#b48ead;">f64</span><span>, </span><span style="color:#bf616a;">rate</span><span>: </span><span style="color:#b48ead;">f64</span><span>| -&gt; </span><span style="color:#b48ead;">f64 </span><span>{ price * (</span><span style="color:#d08770;">1.0 </span><span>+ rate) };
+</span><span>    </span><span style="color:#b48ead;">let </span><span style="color:#8fa1b3;">add_tax_v2 </span><span>= |</span><span style="color:#bf616a;">price</span><span>, </span><span style="color:#bf616a;">rate</span><span>| { price * (</span><span style="color:#d08770;">1.0 </span><span>+ rate) };
+</span><span>    </span><span style="color:#b48ead;">let </span><span style="color:#8fa1b3;">add_tax_v3 </span><span>= |</span><span style="color:#bf616a;">price</span><span>, </span><span style="color:#bf616a;">rate</span><span>| price * (</span><span style="color:#d08770;">1.0 </span><span>+ rate);
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> test_price = </span><span style="color:#d08770;">20.0</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> tax_rate = </span><span style="color:#d08770;">0.10</span><span>;
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Comparison of equivalent implementations:</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     Function result: $</span><span style="color:#d08770;">{:.2}</span><span>&quot;,
+</span><span>             </span><span style="color:#96b5b4;">add_tax_function</span><span>(test_price, tax_rate));
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     Closure v1 (explicit): $</span><span style="color:#d08770;">{:.2}</span><span>&quot;,
+</span><span>             </span><span style="color:#96b5b4;">add_tax_v1</span><span>(test_price, tax_rate));
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     Closure v2 (inferred): $</span><span style="color:#d08770;">{:.2}</span><span>&quot;,
+</span><span>             </span><span style="color:#96b5b4;">add_tax_v2</span><span>(test_price, tax_rate));
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     Closure v3 (minimal): $</span><span style="color:#d08770;">{:.2}</span><span>&quot;,
+</span><span>             </span><span style="color:#96b5b4;">add_tax_v3</span><span>(test_price, tax_rate));
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Example 3: Environment Capture - The Magic of Recipe Cards
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">3️⃣ Environment Capture - Smart Context-Aware Recipe Cards:</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> restaurant_name = &quot;</span><span style="color:#a3be8c;">Ocean Breeze Cafe</span><span>&quot;;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> service_charge = </span><span style="color:#d08770;">0.15</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> currency_symbol = &quot;</span><span style="color:#a3be8c;">$</span><span>&quot;;
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Closure that captures variables from its environment
+</span><span>    </span><span style="color:#b48ead;">let </span><span style="color:#8fa1b3;">create_receipt </span><span>= |</span><span style="color:#bf616a;">items</span><span>: Vec&lt;(&amp;</span><span style="color:#b48ead;">str</span><span>, </span><span style="color:#b48ead;">f64</span><span>)&gt;| {
+</span><span>        </span><span style="color:#b48ead;">let mut</span><span> total = </span><span style="color:#d08770;">0.0</span><span>;
+</span><span>        </span><span style="color:#b48ead;">let mut</span><span> receipt = format!(&quot;</span><span style="color:#a3be8c;">🧾 Receipt from </span><span style="color:#d08770;">{}</span><span style="color:#96b5b4;">\n</span><span>&quot;, restaurant_name);
+</span><span>        receipt.</span><span style="color:#96b5b4;">push_str</span><span>(&quot;</span><span style="color:#a3be8c;">─────────────────────</span><span style="color:#96b5b4;">\n</span><span>&quot;);
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">for </span><span>(item, price) in items {
+</span><span>            receipt.</span><span style="color:#96b5b4;">push_str</span><span>(&amp;format!(&quot;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">: </span><span style="color:#d08770;">{}{:.2}</span><span style="color:#96b5b4;">\n</span><span>&quot;, item, currency_symbol, price));
+</span><span>            total += price;
+</span><span>        }
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">let</span><span> service = total * service_charge;
+</span><span>        </span><span style="color:#b48ead;">let</span><span> final_total = total + service;
+</span><span>
+</span><span>        receipt.</span><span style="color:#96b5b4;">push_str</span><span>(&quot;</span><span style="color:#a3be8c;">─────────────────────</span><span style="color:#96b5b4;">\n</span><span>&quot;);
+</span><span>        receipt.</span><span style="color:#96b5b4;">push_str</span><span>(&amp;format!(&quot;</span><span style="color:#a3be8c;">Subtotal: </span><span style="color:#d08770;">{}{:.2}</span><span style="color:#96b5b4;">\n</span><span>&quot;, currency_symbol, total));
+</span><span>        receipt.</span><span style="color:#96b5b4;">push_str</span><span>(&amp;format!(&quot;</span><span style="color:#a3be8c;">Service (</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">%): </span><span style="color:#d08770;">{}{:.2}</span><span style="color:#96b5b4;">\n</span><span>&quot;,
+</span><span>                                 (service_charge * </span><span style="color:#d08770;">100.0</span><span>) as </span><span style="color:#b48ead;">u32</span><span>, currency_symbol, service));
+</span><span>        receipt.</span><span style="color:#96b5b4;">push_str</span><span>(&amp;format!(&quot;</span><span style="color:#a3be8c;">Total: </span><span style="color:#d08770;">{}{:.2}</span><span style="color:#96b5b4;">\n</span><span>&quot;, currency_symbol, final_total));
+</span><span>
+</span><span>        receipt
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> order_items = vec![
+</span><span>        (&quot;</span><span style="color:#a3be8c;">Caesar Salad</span><span>&quot;, </span><span style="color:#d08770;">12.99</span><span>),
+</span><span>        (&quot;</span><span style="color:#a3be8c;">Grilled Salmon</span><span>&quot;, </span><span style="color:#d08770;">24.99</span><span>),
+</span><span>        (&quot;</span><span style="color:#a3be8c;">House Wine</span><span>&quot;, </span><span style="color:#d08770;">8.99</span><span>),
+</span><span>    ];
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> receipt = </span><span style="color:#96b5b4;">create_receipt</span><span>(order_items);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Environment capture example:</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, receipt);
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   💡 The closure automatically used:</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     • restaurant_name: &#39;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">&#39;</span><span>&quot;, restaurant_name);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     • service_charge: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">%</span><span>&quot;, (service_charge * </span><span style="color:#d08770;">100.0</span><span>) as </span><span style="color:#b48ead;">u32</span><span>);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     • currency_symbol: &#39;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">&#39;</span><span>&quot;, currency_symbol);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Example 4: Closures in Collections and Iterations
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">4️⃣ Closures with Collections - Recipe Card Workflows:</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> menu_prices = vec![</span><span style="color:#d08770;">15.99</span><span>, </span><span style="color:#d08770;">8.99</span><span>, </span><span style="color:#d08770;">22.50</span><span>, </span><span style="color:#d08770;">12.75</span><span>, </span><span style="color:#d08770;">18.25</span><span>];
+</span><span>    </span><span style="color:#b48ead;">let</span><span> discount_rate = </span><span style="color:#d08770;">0.20</span><span>; </span><span style="color:#a7adba;">// 20% discount
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Using closures with iterators:</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Filter expensive items (over $15)
+</span><span>    </span><span style="color:#b48ead;">let</span><span> expensive_items: Vec&lt;</span><span style="color:#b48ead;">f64</span><span>&gt; = menu_prices
+</span><span>        .</span><span style="color:#96b5b4;">iter</span><span>()
+</span><span>        .</span><span style="color:#96b5b4;">filter</span><span>(|&amp;&amp;</span><span style="color:#bf616a;">price</span><span>| price &gt; </span><span style="color:#d08770;">15.0</span><span>)
+</span><span>        .</span><span style="color:#96b5b4;">copied</span><span>()
+</span><span>        .</span><span style="color:#96b5b4;">collect</span><span>();
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     Expensive items (&gt;$15): </span><span style="color:#d08770;">{:?}</span><span>&quot;, expensive_items);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Apply discount to all items
+</span><span>    </span><span style="color:#b48ead;">let</span><span> discounted_prices: Vec&lt;</span><span style="color:#b48ead;">f64</span><span>&gt; = menu_prices
+</span><span>        .</span><span style="color:#96b5b4;">iter</span><span>()
+</span><span>        .</span><span style="color:#96b5b4;">map</span><span>(|&amp;</span><span style="color:#bf616a;">price</span><span>| price * (</span><span style="color:#d08770;">1.0 </span><span>- discount_rate))
+</span><span>        .</span><span style="color:#96b5b4;">collect</span><span>();
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     After </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">% discount: </span><span style="color:#d08770;">{:?}</span><span>&quot;,
+</span><span>             (discount_rate * </span><span style="color:#d08770;">100.0</span><span>) as </span><span style="color:#b48ead;">u32</span><span>, discounted_prices);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Find total of items under $20 after discount
+</span><span>    </span><span style="color:#b48ead;">let</span><span> affordable_total: </span><span style="color:#b48ead;">f64 </span><span>= menu_prices
+</span><span>        .</span><span style="color:#96b5b4;">iter</span><span>()
+</span><span>        .</span><span style="color:#96b5b4;">map</span><span>(|&amp;</span><span style="color:#bf616a;">price</span><span>| price * (</span><span style="color:#d08770;">1.0 </span><span>- discount_rate)) </span><span style="color:#a7adba;">// Apply discount
+</span><span>        .</span><span style="color:#96b5b4;">filter</span><span>(|&amp;</span><span style="color:#bf616a;">price</span><span>| price &lt; </span><span style="color:#d08770;">20.0</span><span>)               </span><span style="color:#a7adba;">// Keep affordable
+</span><span>        .</span><span style="color:#96b5b4;">sum</span><span>();                                       </span><span style="color:#a7adba;">// Sum them up
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     Total of affordable items after discount: $</span><span style="color:#d08770;">{:.2}</span><span>&quot;, affordable_total);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Complex processing with closure that captures multiple variables
+</span><span>    </span><span style="color:#b48ead;">let</span><span> tax_rate = </span><span style="color:#d08770;">0.08</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> service_fee = </span><span style="color:#d08770;">2.50</span><span>;
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> final_prices: Vec&lt;</span><span style="color:#b48ead;">f64</span><span>&gt; = menu_prices
+</span><span>        .</span><span style="color:#96b5b4;">iter</span><span>()
+</span><span>        .</span><span style="color:#96b5b4;">map</span><span>(|&amp;</span><span style="color:#bf616a;">base_price</span><span>| {
+</span><span>            </span><span style="color:#b48ead;">let</span><span> discounted = base_price * (</span><span style="color:#d08770;">1.0 </span><span>- discount_rate);
+</span><span>            </span><span style="color:#b48ead;">let</span><span> with_tax = discounted * (</span><span style="color:#d08770;">1.0 </span><span>+ tax_rate);
+</span><span>            with_tax + service_fee
+</span><span>        })
+</span><span>        .</span><span style="color:#96b5b4;">collect</span><span>();
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     Final prices (discount + tax + service): </span><span style="color:#d08770;">{:?}</span><span>&quot;,
+</span><span>             final_prices.</span><span style="color:#96b5b4;">iter</span><span>()
+</span><span>                 .</span><span style="color:#96b5b4;">map</span><span>(|</span><span style="color:#bf616a;">p</span><span>| format!(&quot;</span><span style="color:#a3be8c;">$</span><span style="color:#d08770;">{:.2}</span><span>&quot;, p))
+</span><span>                 .collect::&lt;Vec&lt;_&gt;&gt;());
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">🎯 Closure Fundamentals Summary:</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   📝 |params| body syntax creates anonymous functions</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   🎯 Automatic capture of variables from surrounding scope</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   ⚡ Type inference eliminates need for explicit type annotations</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   🔄 Perfect for inline functionality and iterator chains</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   🛠️ Enable powerful functional programming patterns</span><span>&quot;);
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#96b5b4;">demonstrate_closure_fundamentals</span><span>();
+</span><span>}
+</span></code></pre>
+<h2 id="closure-capture-modes-and-traits">Closure Capture Modes and Traits</h2>
+<h3 id="the-kitchen-equipment-access-system">The Kitchen Equipment Access System</h3>
+<p><strong>Closures can capture variables in different ways, similar to how recipe cards can access kitchen equipment:</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">demonstrate_closure_capture_modes</span><span>() {
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">🔧 Closure Capture Modes - Kitchen Equipment Access System</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">{:=&lt;70}</span><span>&quot;, &quot;&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Closure capture modes are like different ways recipe cards can access kitchen equipment
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">🍳 Closure Capture and Trait System:</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   📖 Fn - Borrow equipment (read-only access)</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   🔄 FnMut - Borrow equipment mutably (can modify)</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   📦 FnOnce - Take ownership (consume/move equipment)</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   🎯 Automatic selection based on usage pattern</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Example 1: Fn Trait - Immutable Borrowing
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">1️⃣ Fn Trait - Read-Only Equipment Access:</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> restaurant_rating = </span><span style="color:#d08770;">4.5</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> cuisine_type = &quot;</span><span style="color:#a3be8c;">Mediterranean</span><span>&quot;;
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Closure that only reads from environment (implements Fn)
+</span><span>    </span><span style="color:#b48ead;">let </span><span style="color:#8fa1b3;">create_review </span><span>= |</span><span style="color:#bf616a;">customer_name</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>, </span><span style="color:#bf616a;">dish</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>| {
+</span><span>        format!(&quot;</span><span style="color:#a3be8c;">⭐ </span><span style="color:#d08770;">{:.1}</span><span style="color:#a3be8c;">/5 - </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> enjoyed </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> at our </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> restaurant</span><span>&quot;,
+</span><span>                restaurant_rating, customer_name, dish, cuisine_type)
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Can be called multiple times because it only borrows immutably
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Multiple calls with immutable capture:</span><span>&quot;);
+</span><span>    println!(&quot;     </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#96b5b4;">create_review</span><span>(&quot;</span><span style="color:#a3be8c;">Alice</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Grilled Fish</span><span>&quot;));
+</span><span>    println!(&quot;     </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#96b5b4;">create_review</span><span>(&quot;</span><span style="color:#a3be8c;">Bob</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Greek Salad</span><span>&quot;));
+</span><span>    println!(&quot;     </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#96b5b4;">create_review</span><span>(&quot;</span><span style="color:#a3be8c;">Carol</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Moussaka</span><span>&quot;));
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Variables are still accessible after closure calls
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Original values still accessible:</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     Rating: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">, Cuisine: </span><span style="color:#d08770;">{}</span><span>&quot;, restaurant_rating, cuisine_type);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Function that accepts Fn closures
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">apply_to_customers</span><span>&lt;F&gt;(</span><span style="color:#bf616a;">customer_processor</span><span>: F, </span><span style="color:#bf616a;">customers</span><span>: Vec&lt;&amp;</span><span style="color:#b48ead;">str</span><span>&gt;)
+</span><span>    </span><span style="color:#b48ead;">where</span><span> F: Fn(&amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; String
+</span><span>    {
+</span><span>        </span><span style="color:#b48ead;">for</span><span> customer in customers {
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">     Processing: </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#96b5b4;">customer_processor</span><span>(customer));
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> welcome_message = &quot;</span><span style="color:#a3be8c;">Welcome to Ocean Breeze!</span><span>&quot;;
+</span><span>    </span><span style="color:#b48ead;">let </span><span style="color:#8fa1b3;">create_welcome </span><span>= |</span><span style="color:#bf616a;">name</span><span>| format!(&quot;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> Hello, </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">!</span><span>&quot;, welcome_message, name);
+</span><span>
+</span><span>    </span><span style="color:#96b5b4;">apply_to_customers</span><span>(create_welcome, vec![&quot;</span><span style="color:#a3be8c;">David</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Emma</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Frank</span><span>&quot;]);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Example 2: FnMut Trait - Mutable Borrowing
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">2️⃣ FnMut Trait - Modifiable Equipment Access:</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> order_count = </span><span style="color:#d08770;">0</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> total_revenue = </span><span style="color:#d08770;">0.0</span><span>;
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Closure that modifies environment variables (implements FnMut)
+</span><span>    </span><span style="color:#b48ead;">let mut </span><span style="color:#8fa1b3;">process_order </span><span>= |</span><span style="color:#bf616a;">order_value</span><span>: </span><span style="color:#b48ead;">f64</span><span>| {
+</span><span>        order_count += </span><span style="color:#d08770;">1</span><span>;
+</span><span>        total_revenue += order_value;
+</span><span>        format!(&quot;</span><span style="color:#a3be8c;">📋 Order #</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">: $</span><span style="color:#d08770;">{:.2}</span><span style="color:#a3be8c;"> | Running total: $</span><span style="color:#d08770;">{:.2}</span><span>&quot;,
+</span><span>                order_count, order_value, total_revenue)
+</span><span>    };
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Mutable capture - tracking restaurant state:</span><span>&quot;);
+</span><span>    println!(&quot;     </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#96b5b4;">process_order</span><span>(</span><span style="color:#d08770;">15.99</span><span>));
+</span><span>    println!(&quot;     </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#96b5b4;">process_order</span><span>(</span><span style="color:#d08770;">8.50</span><span>));
+</span><span>    println!(&quot;     </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#96b5b4;">process_order</span><span>(</span><span style="color:#d08770;">22.75</span><span>));
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Final state: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> orders, $</span><span style="color:#d08770;">{:.2}</span><span style="color:#a3be8c;"> total revenue</span><span>&quot;,
+</span><span>             order_count, total_revenue);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Function that accepts FnMut closures
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">process_daily_orders</span><span>&lt;F&gt;(</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">order_processor</span><span>: F, </span><span style="color:#bf616a;">orders</span><span>: Vec&lt;</span><span style="color:#b48ead;">f64</span><span>&gt;)
+</span><span>    </span><span style="color:#b48ead;">where</span><span> F: FnMut(</span><span style="color:#b48ead;">f64</span><span>) -&gt; ()
+</span><span>    {
+</span><span>        </span><span style="color:#b48ead;">for</span><span> order_value in orders {
+</span><span>            </span><span style="color:#96b5b4;">order_processor</span><span>(order_value);
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> daily_stats = (</span><span style="color:#d08770;">0</span><span style="color:#b48ead;">u32</span><span>, </span><span style="color:#d08770;">0.0</span><span style="color:#b48ead;">f64</span><span>); </span><span style="color:#a7adba;">// (count, total)
+</span><span>
+</span><span>    </span><span style="color:#96b5b4;">process_daily_orders</span><span>(|</span><span style="color:#bf616a;">amount</span><span>| {
+</span><span>        daily_stats.</span><span style="color:#d08770;">0 </span><span>+= </span><span style="color:#d08770;">1</span><span>;
+</span><span>        daily_stats.</span><span style="color:#d08770;">1 </span><span>+= amount;
+</span><span>    }, vec![</span><span style="color:#d08770;">12.50</span><span>, </span><span style="color:#d08770;">18.75</span><span>, </span><span style="color:#d08770;">9.25</span><span>, </span><span style="color:#d08770;">15.00</span><span>]);
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Daily statistics: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> orders, $</span><span style="color:#d08770;">{:.2}</span><span style="color:#a3be8c;"> total</span><span>&quot;,
+</span><span>             daily_stats.</span><span style="color:#d08770;">0</span><span>, daily_stats.</span><span style="color:#d08770;">1</span><span>);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Example 3: FnOnce Trait - Taking Ownership
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">3️⃣ FnOnce Trait - Taking Ownership of Equipment:</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> special_ingredient = String::from(&quot;</span><span style="color:#a3be8c;">Truffle Oil</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> chef_name = String::from(&quot;</span><span style="color:#a3be8c;">Chef Antoine</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Closure that takes ownership (implements FnOnce)
+</span><span>    </span><span style="color:#b48ead;">let</span><span> create_signature_dish = </span><span style="color:#b48ead;">move </span><span>|| {
+</span><span>        </span><span style="color:#a7adba;">// &#39;move&#39; keyword forces ownership capture
+</span><span>        format!(&quot;</span><span style="color:#a3be8c;">🍴 Signature dish by </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> using </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">!</span><span>&quot;, chef_name, special_ingredient)
+</span><span>        </span><span style="color:#a7adba;">// special_ingredient and chef_name are consumed here
+</span><span>    };
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Taking ownership with &#39;move&#39;:</span><span>&quot;);
+</span><span>    println!(&quot;     </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#96b5b4;">create_signature_dish</span><span>());
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Can only be called once because it consumed the variables
+</span><span>    </span><span style="color:#a7adba;">// create_signature_dish(); // This would cause a compile error
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// special_ingredient and chef_name are no longer accessible
+</span><span>    </span><span style="color:#a7adba;">// println!(&quot;{}&quot;, special_ingredient); // This would cause a compile error
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Function that accepts FnOnce closures
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">execute_special_operation</span><span>&lt;F&gt;(</span><span style="color:#bf616a;">operation</span><span>: F) -&gt; String
+</span><span>    </span><span style="color:#b48ead;">where</span><span> F: FnOnce() -&gt; String
+</span><span>    {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">     Executing special operation...</span><span>&quot;);
+</span><span>        </span><span style="color:#96b5b4;">operation</span><span>()
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> rare_wine = String::from(&quot;</span><span style="color:#a3be8c;">1947 Château Margaux</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> vip_customer = String::from(&quot;</span><span style="color:#a3be8c;">Distinguished Guest</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> special_service = </span><span style="color:#b48ead;">move </span><span>|| {
+</span><span>        format!(&quot;</span><span style="color:#a3be8c;">🍷 Serving </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> to our </span><span style="color:#d08770;">{}</span><span>&quot;, rare_wine, vip_customer)
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> result = </span><span style="color:#96b5b4;">execute_special_operation</span><span>(special_service);
+</span><span>    println!(&quot;   </span><span style="color:#d08770;">{}</span><span>&quot;, result);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Example 4: Automatic Trait Selection
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">4️⃣ Automatic Trait Selection - Smart Access Level Detection:</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">demonstrate_automatic_selection</span><span>() {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> base_price = </span><span style="color:#d08770;">100.0</span><span>;
+</span><span>
+</span><span>        </span><span style="color:#a7adba;">// Automatically implements Fn (only reads)
+</span><span>        </span><span style="color:#b48ead;">let </span><span style="color:#8fa1b3;">discount_calculator </span><span>= |</span><span style="color:#bf616a;">discount_percent</span><span>| {
+</span><span>            base_price * (</span><span style="color:#d08770;">1.0 </span><span>- discount_percent / </span><span style="color:#d08770;">100.0</span><span>)
+</span><span>        };
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">let mut</span><span> inventory = vec![&quot;</span><span style="color:#a3be8c;">Pasta</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Pizza</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Salad</span><span>&quot;];
+</span><span>
+</span><span>        </span><span style="color:#a7adba;">// Automatically implements FnMut (modifies inventory)
+</span><span>        </span><span style="color:#b48ead;">let mut </span><span style="color:#8fa1b3;">add_item </span><span>= |</span><span style="color:#bf616a;">new_item</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>| {
+</span><span>            inventory.</span><span style="color:#96b5b4;">push</span><span>(new_item);
+</span><span>            format!(&quot;</span><span style="color:#a3be8c;">Added </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> to menu. Items: </span><span style="color:#d08770;">{}</span><span>&quot;, new_item, inventory.</span><span style="color:#96b5b4;">len</span><span>())
+</span><span>        };
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">let</span><span> customer_feedback = vec![&quot;</span><span style="color:#a3be8c;">Great!</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Excellent!</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Amazing!</span><span>&quot;];
+</span><span>
+</span><span>        </span><span style="color:#a7adba;">// Automatically implements FnOnce (consumes feedback)
+</span><span>        </span><span style="color:#b48ead;">let</span><span> summarize_feedback = </span><span style="color:#b48ead;">move </span><span>|| {
+</span><span>            format!(&quot;</span><span style="color:#a3be8c;">Customer feedback summary: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> reviews, all positive!</span><span>&quot;,
+</span><span>                    customer_feedback.</span><span style="color:#96b5b4;">len</span><span>())
+</span><span>        };
+</span><span>
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">   Trait selection examples:</span><span>&quot;);
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">     Fn: </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#96b5b4;">discount_calculator</span><span>(</span><span style="color:#d08770;">20.0</span><span>));
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">     FnMut: </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#96b5b4;">add_item</span><span>(&quot;</span><span style="color:#a3be8c;">Soup</span><span>&quot;));
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">     FnOnce: </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#96b5b4;">summarize_feedback</span><span>());
+</span><span>
+</span><span>        </span><span style="color:#a7adba;">// Can call Fn multiple times
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">     Fn again: </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#96b5b4;">discount_calculator</span><span>(</span><span style="color:#d08770;">15.0</span><span>));
+</span><span>
+</span><span>        </span><span style="color:#a7adba;">// Can call FnMut multiple times
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">     FnMut again: </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#96b5b4;">add_item</span><span>(&quot;</span><span style="color:#a3be8c;">Dessert</span><span>&quot;));
+</span><span>
+</span><span>        </span><span style="color:#a7adba;">// Cannot call FnOnce again - it consumed its environment
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#96b5b4;">demonstrate_automatic_selection</span><span>();
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Example 5: Closure Type Annotations and Storage
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">5️⃣ Closure Storage - Recipe Card Organization System:</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Different ways to store and type closures
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Using function pointers (for simple closures without captures)
+</span><span>    </span><span style="color:#b48ead;">let</span><span> simple_formatter: </span><span style="color:#b48ead;">fn</span><span>(&amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; String = |</span><span style="color:#bf616a;">name</span><span>| format!(&quot;</span><span style="color:#a3be8c;">Hello, </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">!</span><span>&quot;, name);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Using Box&lt;dyn Fn&gt; for dynamic dispatch
+</span><span>    </span><span style="color:#b48ead;">let</span><span> boxed_closure: Box&lt;dyn Fn(</span><span style="color:#b48ead;">f64</span><span>) -&gt; String&gt; = Box::new(|</span><span style="color:#bf616a;">price</span><span>| {
+</span><span>        format!(&quot;</span><span style="color:#a3be8c;">Price: $</span><span style="color:#d08770;">{:.2}</span><span>&quot;, price)
+</span><span>    });
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Using impl Fn for static dispatch (in function parameters)
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">apply_formatter</span><span>&lt;F&gt;(</span><span style="color:#bf616a;">formatter</span><span>: F, </span><span style="color:#bf616a;">items</span><span>: Vec&lt;&amp;</span><span style="color:#b48ead;">str</span><span>&gt;) -&gt; Vec&lt;String&gt;
+</span><span>    </span><span style="color:#b48ead;">where</span><span> F: Fn(&amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; String
+</span><span>    {
+</span><span>        items.</span><span style="color:#96b5b4;">into_iter</span><span>().</span><span style="color:#96b5b4;">map</span><span>(formatter).</span><span style="color:#96b5b4;">collect</span><span>()
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Storing closures in structs
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>RestaurantProcessor&lt;F&gt;
+</span><span>    where F: Fn(&amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; String
+</span><span>    {
+</span><span>        name_formatter: F,
+</span><span>        location: String,
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">impl</span><span>&lt;F&gt; RestaurantProcessor&lt;F&gt;
+</span><span>    </span><span style="color:#b48ead;">where</span><span> F: Fn(&amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; String
+</span><span>    {
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">process_customer</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">customer_name</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; String {
+</span><span>            format!(&quot;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> at </span><span style="color:#d08770;">{}</span><span>&quot;, (</span><span style="color:#bf616a;">self</span><span>.name_formatter)(customer_name), </span><span style="color:#bf616a;">self</span><span>.location)
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Closure storage examples:</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     Function pointer: </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#96b5b4;">simple_formatter</span><span>(&quot;</span><span style="color:#a3be8c;">World</span><span>&quot;));
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     Boxed closure: </span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#96b5b4;">boxed_closure</span><span>(</span><span style="color:#d08770;">29.99</span><span>));
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> formatted_names = </span><span style="color:#96b5b4;">apply_formatter</span><span>(|</span><span style="color:#bf616a;">name</span><span>| format!(&quot;</span><span style="color:#a3be8c;">Mr./Ms. </span><span style="color:#d08770;">{}</span><span>&quot;, name),
+</span><span>                                        vec![&quot;</span><span style="color:#a3be8c;">Smith</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Johnson</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Williams</span><span>&quot;]);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     Formatted names: </span><span style="color:#d08770;">{:?}</span><span>&quot;, formatted_names);
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> processor = RestaurantProcessor {
+</span><span>        name_formatter: |</span><span style="color:#bf616a;">name</span><span>| format!(&quot;</span><span style="color:#a3be8c;">VIP Guest </span><span style="color:#d08770;">{}</span><span>&quot;, name),
+</span><span>        location: &quot;</span><span style="color:#a3be8c;">Downtown Location</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>    };
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     Struct with closure: </span><span style="color:#d08770;">{}</span><span>&quot;, processor.</span><span style="color:#96b5b4;">process_customer</span><span>(&quot;</span><span style="color:#a3be8c;">Anderson</span><span>&quot;));
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">🎯 Closure Capture Summary:</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   📖 Fn: Immutable borrow - can be called multiple times</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   🔄 FnMut: Mutable borrow - can modify captured variables</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   📦 FnOnce: Take ownership - can only be called once</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   🎯 Rust automatically selects the most restrictive applicable trait</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   🛠️ Use &#39;move&#39; keyword to force ownership capture</span><span>&quot;);
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#96b5b4;">demonstrate_closure_capture_modes</span><span>();
+</span><span>}
+</span></code></pre>
+<h2 id="practical-closure-applications">Practical Closure Applications</h2>
+<h3 id="complete-restaurant-operations-with-closures">Complete Restaurant Operations with Closures</h3>
+<p><strong>Real-world examples showing how closures make code more concise and expressive:</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">demonstrate_practical_closure_applications</span><span>() {
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">🏢 Practical Closure Applications - Complete Restaurant Operations</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">{:=&lt;75}</span><span>&quot;, &quot;&quot;);
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">use </span><span>std::collections::HashMap;
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Practical applications demonstrate closures in real restaurant management scenarios
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">💼 Professional Closure Usage Patterns:</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Application 1: Menu Processing and Filtering
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">1️⃣ Menu Processing - Dynamic Item Management:</span><span>&quot;);
+</span><span>
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Debug, Clone)]
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>MenuItem {
+</span><span>        </span><span style="color:#bf616a;">name</span><span>: String,
+</span><span>        </span><span style="color:#bf616a;">price</span><span>: </span><span style="color:#b48ead;">f64</span><span>,
+</span><span>        </span><span style="color:#bf616a;">category</span><span>: String,
+</span><span>        </span><span style="color:#bf616a;">calories</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>        </span><span style="color:#bf616a;">is_vegetarian</span><span>: </span><span style="color:#b48ead;">bool</span><span>,
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> menu_items = vec![
+</span><span>        MenuItem { name: &quot;</span><span style="color:#a3be8c;">Caesar Salad</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), price: </span><span style="color:#d08770;">12.99</span><span>, category: &quot;</span><span style="color:#a3be8c;">Salad</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), calories: </span><span style="color:#d08770;">350</span><span>, is_vegetarian: </span><span style="color:#d08770;">true </span><span>},
+</span><span>        MenuItem { name: &quot;</span><span style="color:#a3be8c;">Grilled Salmon</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), price: </span><span style="color:#d08770;">24.99</span><span>, category: &quot;</span><span style="color:#a3be8c;">Main</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), calories: </span><span style="color:#d08770;">450</span><span>, is_vegetarian: </span><span style="color:#d08770;">false </span><span>},
+</span><span>        MenuItem { name: &quot;</span><span style="color:#a3be8c;">Pasta Primavera</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), price: </span><span style="color:#d08770;">16.99</span><span>, category: &quot;</span><span style="color:#a3be8c;">Main</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), calories: </span><span style="color:#d08770;">520</span><span>, is_vegetarian: </span><span style="color:#d08770;">true </span><span>},
+</span><span>        MenuItem { name: &quot;</span><span style="color:#a3be8c;">Beef Steak</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), price: </span><span style="color:#d08770;">32.99</span><span>, category: &quot;</span><span style="color:#a3be8c;">Main</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), calories: </span><span style="color:#d08770;">680</span><span>, is_vegetarian: </span><span style="color:#d08770;">false </span><span>},
+</span><span>        MenuItem { name: &quot;</span><span style="color:#a3be8c;">Fruit Tart</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), price: </span><span style="color:#d08770;">8.99</span><span>, category: &quot;</span><span style="color:#a3be8c;">Dessert</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), calories: </span><span style="color:#d08770;">280</span><span>, is_vegetarian: </span><span style="color:#d08770;">true </span><span>},
+</span><span>        MenuItem { name: &quot;</span><span style="color:#a3be8c;">Chicken Wings</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), price: </span><span style="color:#d08770;">14.99</span><span>, category: &quot;</span><span style="color:#a3be8c;">Appetizer</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), calories: </span><span style="color:#d08770;">420</span><span>, is_vegetarian: </span><span style="color:#d08770;">false </span><span>},
+</span><span>    ];
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Menu filtering and processing with closures:</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Filter vegetarian items under $20
+</span><span>    </span><span style="color:#b48ead;">let</span><span> affordable_vegetarian: Vec&lt;&amp;MenuItem&gt; = menu_items
+</span><span>        .</span><span style="color:#96b5b4;">iter</span><span>()
+</span><span>        .</span><span style="color:#96b5b4;">filter</span><span>(|</span><span style="color:#bf616a;">item</span><span>| item.is_vegetarian &amp;&amp; item.price &lt; </span><span style="color:#d08770;">20.0</span><span>)
+</span><span>        .</span><span style="color:#96b5b4;">collect</span><span>();
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     Affordable vegetarian items:</span><span>&quot;);
+</span><span>    affordable_vegetarian.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">for_each</span><span>(|</span><span style="color:#bf616a;">item</span><span>| {
+</span><span>        println!(&quot;       </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> - $</span><span style="color:#d08770;">{:.2}</span><span>&quot;, item.name, item.price);
+</span><span>    });
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Create price ranges with closures
+</span><span>    </span><span style="color:#b48ead;">let </span><span style="color:#8fa1b3;">categorize_by_price </span><span>= |</span><span style="color:#bf616a;">price</span><span>: </span><span style="color:#b48ead;">f64</span><span>| {
+</span><span>        </span><span style="color:#b48ead;">match</span><span> price {
+</span><span>            p </span><span style="color:#b48ead;">if</span><span> p &lt; </span><span style="color:#d08770;">15.0 </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">Budget</span><span>&quot;,
+</span><span>            p </span><span style="color:#b48ead;">if</span><span> p &lt; </span><span style="color:#d08770;">25.0 </span><span>=&gt; &quot;</span><span style="color:#a3be8c;">Mid-range</span><span>&quot;,
+</span><span>            _ =&gt; &quot;</span><span style="color:#a3be8c;">Premium</span><span>&quot;
+</span><span>        }
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> price_categories: HashMap&lt;&amp;</span><span style="color:#b48ead;">str</span><span>, Vec&lt;&amp;</span><span style="color:#b48ead;">str</span><span>&gt;&gt; = menu_items
+</span><span>        .</span><span style="color:#96b5b4;">iter</span><span>()
+</span><span>        .</span><span style="color:#96b5b4;">fold</span><span>(HashMap::new(), |</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">acc</span><span>, </span><span style="color:#bf616a;">item</span><span>| {
+</span><span>            </span><span style="color:#b48ead;">let</span><span> category = </span><span style="color:#96b5b4;">categorize_by_price</span><span>(item.price);
+</span><span>            acc.</span><span style="color:#96b5b4;">entry</span><span>(category).</span><span style="color:#96b5b4;">or_insert</span><span>(Vec::new()).</span><span style="color:#96b5b4;">push</span><span>(item.name.</span><span style="color:#96b5b4;">as_str</span><span>());
+</span><span>            acc
+</span><span>        });
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     Items by price category:</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">for </span><span>(category, items) in price_categories {
+</span><span>        println!(&quot;       </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">: </span><span style="color:#d08770;">{:?}</span><span>&quot;, category, items);
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Complex menu analysis with multiple closures
+</span><span>    </span><span style="color:#b48ead;">let </span><span style="color:#8fa1b3;">health_score </span><span>= |</span><span style="color:#bf616a;">item</span><span>: &amp;MenuItem| -&gt; </span><span style="color:#b48ead;">u32 </span><span>{
+</span><span>        </span><span style="color:#b48ead;">let mut</span><span> score = </span><span style="color:#d08770;">100</span><span>;
+</span><span>        </span><span style="color:#b48ead;">if</span><span> item.calories &gt; </span><span style="color:#d08770;">500 </span><span>{ score -= </span><span style="color:#d08770;">30</span><span>; }
+</span><span>        </span><span style="color:#b48ead;">if </span><span>!item.is_vegetarian { score -= </span><span style="color:#d08770;">20</span><span>; }
+</span><span>        </span><span style="color:#b48ead;">if</span><span> item.price &gt; </span><span style="color:#d08770;">25.0 </span><span>{ score -= </span><span style="color:#d08770;">10</span><span>; } </span><span style="color:#a7adba;">// Expensive items might be less healthy
+</span><span>        score
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> healthy_items: Vec&lt;_&gt; = menu_items
+</span><span>        .</span><span style="color:#96b5b4;">iter</span><span>()
+</span><span>        .</span><span style="color:#96b5b4;">map</span><span>(|</span><span style="color:#bf616a;">item</span><span>| (item, </span><span style="color:#96b5b4;">health_score</span><span>(item)))
+</span><span>        .</span><span style="color:#96b5b4;">filter</span><span>(|(_, </span><span style="color:#bf616a;">score</span><span>)| *score &gt;= </span><span style="color:#d08770;">70</span><span>)
+</span><span>        .</span><span style="color:#96b5b4;">collect</span><span>();
+</span><span>
+</span><span>    healthy_items.</span><span style="color:#96b5b4;">sort_by</span><span>(|</span><span style="color:#bf616a;">a</span><span>, </span><span style="color:#bf616a;">b</span><span>| b.</span><span style="color:#d08770;">1.</span><span style="color:#96b5b4;">cmp</span><span>(&amp;a.</span><span style="color:#d08770;">1</span><span>)); </span><span style="color:#a7adba;">// Sort by health score descending
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     Healthiest menu items:</span><span>&quot;);
+</span><span>    healthy_items.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">take</span><span>(</span><span style="color:#d08770;">3</span><span>).</span><span style="color:#96b5b4;">for_each</span><span>(|(</span><span style="color:#bf616a;">item</span><span>, </span><span style="color:#bf616a;">score</span><span>)| {
+</span><span>        println!(&quot;       </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> (Health Score: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">)</span><span>&quot;, item.name, score);
+</span><span>    });
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Application 2: Order Processing Pipeline
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">2️⃣ Order Processing Pipeline - Functional Workflow:</span><span>&quot;);
+</span><span>
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Debug)]
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>Order {
+</span><span>        </span><span style="color:#bf616a;">id</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>        </span><span style="color:#bf616a;">customer_name</span><span>: String,
+</span><span>        </span><span style="color:#bf616a;">items</span><span>: Vec&lt;String&gt;,
+</span><span>        </span><span style="color:#bf616a;">subtotal</span><span>: </span><span style="color:#b48ead;">f64</span><span>,
+</span><span>        </span><span style="color:#bf616a;">status</span><span>: String,
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> orders = vec![
+</span><span>        Order { id: </span><span style="color:#d08770;">101</span><span>, customer_name: &quot;</span><span style="color:#a3be8c;">Alice</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), items: vec![&quot;</span><span style="color:#a3be8c;">Caesar Salad</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()], subtotal: </span><span style="color:#d08770;">12.99</span><span>, status: &quot;</span><span style="color:#a3be8c;">New</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>() },
+</span><span>        Order { id: </span><span style="color:#d08770;">102</span><span>, customer_name: &quot;</span><span style="color:#a3be8c;">Bob</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), items: vec![&quot;</span><span style="color:#a3be8c;">Grilled Salmon</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), &quot;</span><span style="color:#a3be8c;">Wine</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()], subtotal: </span><span style="color:#d08770;">35.99</span><span>, status: &quot;</span><span style="color:#a3be8c;">New</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>() },
+</span><span>        Order { id: </span><span style="color:#d08770;">103</span><span>, customer_name: &quot;</span><span style="color:#a3be8c;">Carol</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), items: vec![&quot;</span><span style="color:#a3be8c;">Pasta Primavera</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>()], subtotal: </span><span style="color:#d08770;">16.99</span><span>, status: &quot;</span><span style="color:#a3be8c;">New</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>() },
+</span><span>    ];
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Order processing functions using closures
+</span><span>    </span><span style="color:#b48ead;">let </span><span style="color:#8fa1b3;">calculate_tax </span><span>= |</span><span style="color:#bf616a;">subtotal</span><span>: </span><span style="color:#b48ead;">f64</span><span>| subtotal * </span><span style="color:#d08770;">0.08</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let </span><span style="color:#8fa1b3;">calculate_tip </span><span>= |</span><span style="color:#bf616a;">subtotal</span><span>: </span><span style="color:#b48ead;">f64</span><span>| subtotal * </span><span style="color:#d08770;">0.18</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let </span><span style="color:#8fa1b3;">apply_discount </span><span>= |</span><span style="color:#bf616a;">total</span><span>: </span><span style="color:#b48ead;">f64</span><span>, </span><span style="color:#bf616a;">customer</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>| {
+</span><span>        </span><span style="color:#b48ead;">if</span><span> customer.</span><span style="color:#96b5b4;">len</span><span>() &gt; </span><span style="color:#d08770;">5 </span><span>{ total * </span><span style="color:#d08770;">0.95 </span><span>} </span><span style="color:#b48ead;">else </span><span>{ total } </span><span style="color:#a7adba;">// 5% discount for longer names
+</span><span>    };
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Order processing pipeline:</span><span>&quot;);
+</span><span>
+</span><span>    orders.</span><span style="color:#96b5b4;">iter_mut</span><span>().</span><span style="color:#96b5b4;">for_each</span><span>(|</span><span style="color:#bf616a;">order</span><span>| {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> tax = </span><span style="color:#96b5b4;">calculate_tax</span><span>(order.subtotal);
+</span><span>        </span><span style="color:#b48ead;">let</span><span> tip = </span><span style="color:#96b5b4;">calculate_tip</span><span>(order.subtotal);
+</span><span>        </span><span style="color:#b48ead;">let</span><span> total_before_discount = order.subtotal + tax + tip;
+</span><span>        </span><span style="color:#b48ead;">let</span><span> final_total = </span><span style="color:#96b5b4;">apply_discount</span><span>(total_before_discount, &amp;order.customer_name);
+</span><span>
+</span><span>        order.status = &quot;</span><span style="color:#a3be8c;">Processed</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>();
+</span><span>
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">     Order #</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> for </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">:</span><span>&quot;, order.id, order.customer_name);
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">       Subtotal: $</span><span style="color:#d08770;">{:.2}</span><span>&quot;, order.subtotal);
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">       Tax: $</span><span style="color:#d08770;">{:.2}</span><span>&quot;, tax);
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">       Tip: $</span><span style="color:#d08770;">{:.2}</span><span>&quot;, tip);
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">       Final Total: $</span><span style="color:#d08770;">{:.2}</span><span>&quot;, final_total);
+</span><span>    });
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Batch operations with closures
+</span><span>    </span><span style="color:#b48ead;">let</span><span> high_value_orders: Vec&lt;&amp;Order&gt; = orders
+</span><span>        .</span><span style="color:#96b5b4;">iter</span><span>()
+</span><span>        .</span><span style="color:#96b5b4;">filter</span><span>(|</span><span style="color:#bf616a;">order</span><span>| order.subtotal &gt; </span><span style="color:#d08770;">20.0</span><span>)
+</span><span>        .</span><span style="color:#96b5b4;">collect</span><span>();
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   High-value orders (&gt;$</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">):</span><span>&quot;, </span><span style="color:#d08770;">20.0</span><span>);
+</span><span>    high_value_orders.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">for_each</span><span>(|</span><span style="color:#bf616a;">order</span><span>| {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">     Order #</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> - $</span><span style="color:#d08770;">{:.2}</span><span>&quot;, order.id, order.customer_name, order.subtotal);
+</span><span>    });
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Application 3: Event Handling and Callbacks
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">3️⃣ Event Handling - Restaurant Event Management:</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>EventSystem&lt;F&gt;
+</span><span>    where F: Fn(&amp;</span><span style="color:#b48ead;">str</span><span>, &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; ()
+</span><span>    {
+</span><span>        event_handler: F,
+</span><span>        restaurant_name: String,
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">impl</span><span>&lt;F&gt; EventSystem&lt;F&gt;
+</span><span>    </span><span style="color:#b48ead;">where</span><span> F: Fn(&amp;</span><span style="color:#b48ead;">str</span><span>, &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; ()
+</span><span>    {
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#bf616a;">handler</span><span>: F, </span><span style="color:#bf616a;">name</span><span>: String) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>            EventSystem { event_handler: handler, restaurant_name: name }
+</span><span>        }
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">trigger_event</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">event_type</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>, </span><span style="color:#bf616a;">details</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) {
+</span><span>            (</span><span style="color:#bf616a;">self</span><span>.event_handler)(event_type, details);
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Create event handlers using closures
+</span><span>    </span><span style="color:#b48ead;">let</span><span> log_file = &quot;</span><span style="color:#a3be8c;">restaurant_events.log</span><span>&quot;;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> notification_service = &quot;</span><span style="color:#a3be8c;">SMS Service</span><span>&quot;;
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let </span><span style="color:#8fa1b3;">event_handler </span><span>= |</span><span style="color:#bf616a;">event_type</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>, </span><span style="color:#bf616a;">details</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>| {
+</span><span>        </span><span style="color:#b48ead;">match</span><span> event_type {
+</span><span>            &quot;</span><span style="color:#a3be8c;">order_received</span><span>&quot; =&gt; println!(&quot;</span><span style="color:#a3be8c;">   📨 New Order: </span><span style="color:#d08770;">{}</span><span>&quot;, details),
+</span><span>            &quot;</span><span style="color:#a3be8c;">payment_processed</span><span>&quot; =&gt; println!(&quot;</span><span style="color:#a3be8c;">   💳 Payment: </span><span style="color:#d08770;">{}</span><span>&quot;, details),
+</span><span>            &quot;</span><span style="color:#a3be8c;">table_ready</span><span>&quot; =&gt; println!(&quot;</span><span style="color:#a3be8c;">   🪑 Table Ready: </span><span style="color:#d08770;">{}</span><span>&quot;, details),
+</span><span>            &quot;</span><span style="color:#a3be8c;">complaint</span><span>&quot; =&gt; {
+</span><span>                println!(&quot;</span><span style="color:#a3be8c;">   ⚠️ Complaint Logged: </span><span style="color:#d08770;">{}</span><span>&quot;, details);
+</span><span>                println!(&quot;</span><span style="color:#a3be8c;">   📧 Notification sent via </span><span style="color:#d08770;">{}</span><span>&quot;, notification_service);
+</span><span>                println!(&quot;</span><span style="color:#a3be8c;">   📝 Event logged to </span><span style="color:#d08770;">{}</span><span>&quot;, log_file);
+</span><span>            },
+</span><span>            _ =&gt; println!(&quot;</span><span style="color:#a3be8c;">   📋 Event: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> - </span><span style="color:#d08770;">{}</span><span>&quot;, event_type, details),
+</span><span>        }
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> event_system = EventSystem::new(event_handler, &quot;</span><span style="color:#a3be8c;">Ocean Breeze Cafe</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>());
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Restaurant event processing:</span><span>&quot;);
+</span><span>    event_system.</span><span style="color:#96b5b4;">trigger_event</span><span>(&quot;</span><span style="color:#a3be8c;">order_received</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Table 5: 2x Caesar Salad</span><span>&quot;);
+</span><span>    event_system.</span><span style="color:#96b5b4;">trigger_event</span><span>(&quot;</span><span style="color:#a3be8c;">payment_processed</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Order #101: $15.99 paid by card</span><span>&quot;);
+</span><span>    event_system.</span><span style="color:#96b5b4;">trigger_event</span><span>(&quot;</span><span style="color:#a3be8c;">table_ready</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Table 3 cleaned and reset</span><span>&quot;);
+</span><span>    event_system.</span><span style="color:#96b5b4;">trigger_event</span><span>(&quot;</span><span style="color:#a3be8c;">complaint</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Food arrived cold - Table 7</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Application 4: Configuration and Customization
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">4️⃣ Configuration System - Flexible Restaurant Settings:</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>RestaurantConfig {
+</span><span>        </span><span style="color:#bf616a;">name</span><span>: String,
+</span><span>        </span><span style="color:#bf616a;">location</span><span>: String,
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">impl </span><span>RestaurantConfig {
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">apply_pricing_strategy</span><span>&lt;F&gt;(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">base_prices</span><span>: Vec&lt;</span><span style="color:#b48ead;">f64</span><span>&gt;, </span><span style="color:#bf616a;">strategy</span><span>: F) -&gt; Vec&lt;</span><span style="color:#b48ead;">f64</span><span>&gt;
+</span><span>        </span><span style="color:#b48ead;">where</span><span> F: Fn(</span><span style="color:#b48ead;">f64</span><span>, &amp;</span><span style="color:#b48ead;">str</span><span>, &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; </span><span style="color:#b48ead;">f64
+</span><span>        {
+</span><span>            base_prices
+</span><span>                .</span><span style="color:#96b5b4;">into_iter</span><span>()
+</span><span>                .</span><span style="color:#96b5b4;">map</span><span>(|</span><span style="color:#bf616a;">price</span><span>| </span><span style="color:#96b5b4;">strategy</span><span>(price, &amp;</span><span style="color:#bf616a;">self</span><span>.name, &amp;</span><span style="color:#bf616a;">self</span><span>.location))
+</span><span>                .</span><span style="color:#96b5b4;">collect</span><span>()
+</span><span>        }
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">customize_menu</span><span>&lt;F&gt;(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">base_menu</span><span>: Vec&lt;String&gt;, </span><span style="color:#bf616a;">customizer</span><span>: F) -&gt; Vec&lt;String&gt;
+</span><span>        </span><span style="color:#b48ead;">where</span><span> F: Fn(String, &amp;RestaurantConfig) -&gt; String
+</span><span>        {
+</span><span>            base_menu
+</span><span>                .</span><span style="color:#96b5b4;">into_iter</span><span>()
+</span><span>                .</span><span style="color:#96b5b4;">map</span><span>(|</span><span style="color:#bf616a;">item</span><span>| </span><span style="color:#96b5b4;">customizer</span><span>(item, </span><span style="color:#bf616a;">self</span><span>))
+</span><span>                .</span><span style="color:#96b5b4;">collect</span><span>()
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> downtown_config = RestaurantConfig {
+</span><span>        name: &quot;</span><span style="color:#a3be8c;">Ocean Breeze Downtown</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        location: &quot;</span><span style="color:#a3be8c;">Downtown</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> airport_config = RestaurantConfig {
+</span><span>        name: &quot;</span><span style="color:#a3be8c;">Ocean Breeze Airport</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        location: &quot;</span><span style="color:#a3be8c;">Airport</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> base_prices = vec![</span><span style="color:#d08770;">12.99</span><span>, </span><span style="color:#d08770;">18.50</span><span>, </span><span style="color:#d08770;">22.75</span><span>, </span><span style="color:#d08770;">8.99</span><span>];
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Different pricing strategies using closures
+</span><span>    </span><span style="color:#b48ead;">let </span><span style="color:#8fa1b3;">downtown_pricing </span><span>= |</span><span style="color:#bf616a;">price</span><span>: </span><span style="color:#b48ead;">f64</span><span>, </span><span style="color:#bf616a;">_name</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>, </span><span style="color:#bf616a;">location</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>| {
+</span><span>        </span><span style="color:#b48ead;">match</span><span> location {
+</span><span>            &quot;</span><span style="color:#a3be8c;">Downtown</span><span>&quot; =&gt; price * </span><span style="color:#d08770;">1.10</span><span>, </span><span style="color:#a7adba;">// 10% markup for downtown
+</span><span>            _ =&gt; price,
+</span><span>        }
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let </span><span style="color:#8fa1b3;">airport_pricing </span><span>= |</span><span style="color:#bf616a;">price</span><span>: </span><span style="color:#b48ead;">f64</span><span>, </span><span style="color:#bf616a;">_name</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>, </span><span style="color:#bf616a;">location</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>| {
+</span><span>        </span><span style="color:#b48ead;">match</span><span> location {
+</span><span>            &quot;</span><span style="color:#a3be8c;">Airport</span><span>&quot; =&gt; price * </span><span style="color:#d08770;">1.25</span><span>, </span><span style="color:#a7adba;">// 25% markup for airport
+</span><span>            _ =&gt; price,
+</span><span>        }
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> downtown_prices = downtown_config.</span><span style="color:#96b5b4;">apply_pricing_strategy</span><span>(base_prices.</span><span style="color:#96b5b4;">clone</span><span>(), downtown_pricing);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> airport_prices = airport_config.</span><span style="color:#96b5b4;">apply_pricing_strategy</span><span>(base_prices.</span><span style="color:#96b5b4;">clone</span><span>(), airport_pricing);
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Location-based pricing:</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     Downtown prices: </span><span style="color:#d08770;">{:?}</span><span>&quot;, downtown_prices.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">map</span><span>(|</span><span style="color:#bf616a;">p</span><span>| format!(&quot;</span><span style="color:#a3be8c;">$</span><span style="color:#d08770;">{:.2}</span><span>&quot;, p)).collect::&lt;Vec&lt;_&gt;&gt;());
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     Airport prices: </span><span style="color:#d08770;">{:?}</span><span>&quot;, airport_prices.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">map</span><span>(|</span><span style="color:#bf616a;">p</span><span>| format!(&quot;</span><span style="color:#a3be8c;">$</span><span style="color:#d08770;">{:.2}</span><span>&quot;, p)).collect::&lt;Vec&lt;_&gt;&gt;());
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Menu customization with closures
+</span><span>    </span><span style="color:#b48ead;">let</span><span> base_menu = vec![
+</span><span>        &quot;</span><span style="color:#a3be8c;">Classic Burger</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        &quot;</span><span style="color:#a3be8c;">Fish and Chips</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        &quot;</span><span style="color:#a3be8c;">Garden Salad</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>    ];
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let </span><span style="color:#8fa1b3;">local_customizer </span><span>= |</span><span style="color:#bf616a;">item</span><span>: String, </span><span style="color:#bf616a;">config</span><span>: &amp;RestaurantConfig| {
+</span><span>        </span><span style="color:#b48ead;">match</span><span> config.location.</span><span style="color:#96b5b4;">as_str</span><span>() {
+</span><span>            &quot;</span><span style="color:#a3be8c;">Downtown</span><span>&quot; =&gt; format!(&quot;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> (Urban Style)</span><span>&quot;, item),
+</span><span>            &quot;</span><span style="color:#a3be8c;">Airport</span><span>&quot; =&gt; format!(&quot;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> (Express)</span><span>&quot;, item),
+</span><span>            _ =&gt; item,
+</span><span>        }
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> downtown_menu = downtown_config.</span><span style="color:#96b5b4;">customize_menu</span><span>(base_menu.</span><span style="color:#96b5b4;">clone</span><span>(), local_customizer);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> airport_menu = airport_config.</span><span style="color:#96b5b4;">customize_menu</span><span>(base_menu.</span><span style="color:#96b5b4;">clone</span><span>(), local_customizer);
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Customized menus:</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     Downtown: </span><span style="color:#d08770;">{:?}</span><span>&quot;, downtown_menu);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     Airport: </span><span style="color:#d08770;">{:?}</span><span>&quot;, airport_menu);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Application 5: Advanced Iterator Patterns
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">5️⃣ Advanced Iterator Patterns - Complex Data Processing:</span><span>&quot;);
+</span><span>
+</span><span>    #[</span><span style="color:#bf616a;">derive</span><span>(Debug)]
+</span><span>    </span><span style="color:#b48ead;">struct </span><span>DailySales {
+</span><span>        </span><span style="color:#bf616a;">date</span><span>: String,
+</span><span>        </span><span style="color:#bf616a;">revenue</span><span>: </span><span style="color:#b48ead;">f64</span><span>,
+</span><span>        </span><span style="color:#bf616a;">orders</span><span>: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>        </span><span style="color:#bf616a;">average_order</span><span>: </span><span style="color:#b48ead;">f64</span><span>,
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> sales_data = vec![
+</span><span>        DailySales { date: &quot;</span><span style="color:#a3be8c;">2024-01-01</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), revenue: </span><span style="color:#d08770;">2450.50</span><span>, orders: </span><span style="color:#d08770;">85</span><span>, average_order: </span><span style="color:#d08770;">28.83 </span><span>},
+</span><span>        DailySales { date: &quot;</span><span style="color:#a3be8c;">2024-01-02</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), revenue: </span><span style="color:#d08770;">1890.25</span><span>, orders: </span><span style="color:#d08770;">72</span><span>, average_order: </span><span style="color:#d08770;">26.25 </span><span>},
+</span><span>        DailySales { date: &quot;</span><span style="color:#a3be8c;">2024-01-03</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), revenue: </span><span style="color:#d08770;">3120.75</span><span>, orders: </span><span style="color:#d08770;">98</span><span>, average_order: </span><span style="color:#d08770;">31.85 </span><span>},
+</span><span>        DailySales { date: &quot;</span><span style="color:#a3be8c;">2024-01-04</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), revenue: </span><span style="color:#d08770;">2780.00</span><span>, orders: </span><span style="color:#d08770;">91</span><span>, average_order: </span><span style="color:#d08770;">30.55 </span><span>},
+</span><span>        DailySales { date: &quot;</span><span style="color:#a3be8c;">2024-01-05</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(), revenue: </span><span style="color:#d08770;">2990.25</span><span>, orders: </span><span style="color:#d08770;">103</span><span>, average_order: </span><span style="color:#d08770;">29.03 </span><span>},
+</span><span>    ];
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Advanced sales data analysis:</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Complex analysis chain using closures
+</span><span>    </span><span style="color:#b48ead;">let</span><span> analysis = sales_data
+</span><span>        .</span><span style="color:#96b5b4;">iter</span><span>()
+</span><span>        .</span><span style="color:#96b5b4;">filter</span><span>(|</span><span style="color:#bf616a;">day</span><span>| day.orders &gt; </span><span style="color:#d08770;">80</span><span>) </span><span style="color:#a7adba;">// High-volume days
+</span><span>        .</span><span style="color:#96b5b4;">map</span><span>(|</span><span style="color:#bf616a;">day</span><span>| (day.date.</span><span style="color:#96b5b4;">clone</span><span>(), day.revenue, day.average_order))
+</span><span>        .</span><span style="color:#96b5b4;">fold</span><span>((</span><span style="color:#d08770;">0.0</span><span>, </span><span style="color:#d08770;">0.0</span><span>, </span><span style="color:#d08770;">0</span><span>), |</span><span style="color:#bf616a;">acc</span><span>, (</span><span style="color:#bf616a;">date</span><span>, </span><span style="color:#bf616a;">revenue</span><span>, </span><span style="color:#bf616a;">avg_order</span><span>)| {
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">     Analyzing </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">: $</span><span style="color:#d08770;">{:.2}</span><span style="color:#a3be8c;"> revenue, $</span><span style="color:#d08770;">{:.2}</span><span style="color:#a3be8c;"> avg order</span><span>&quot;, date, revenue, avg_order);
+</span><span>            (acc.</span><span style="color:#d08770;">0 </span><span>+ revenue, acc.</span><span style="color:#d08770;">1 </span><span>+ avg_order, acc.</span><span style="color:#d08770;">2 </span><span>+ </span><span style="color:#d08770;">1</span><span>)
+</span><span>        });
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let </span><span>(total_revenue, total_avg_order, count) = analysis;
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   High-volume days summary:</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     Total revenue: $</span><span style="color:#d08770;">{:.2}</span><span>&quot;, total_revenue);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     Average order value: $</span><span style="color:#d08770;">{:.2}</span><span>&quot;, total_avg_order / count as </span><span style="color:#b48ead;">f64</span><span>);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">     Days analyzed: </span><span style="color:#d08770;">{}</span><span>&quot;, count);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Performance metrics with closures
+</span><span>    </span><span style="color:#b48ead;">let </span><span style="color:#8fa1b3;">performance_metrics </span><span>= |</span><span style="color:#bf616a;">threshold</span><span>: </span><span style="color:#b48ead;">f64</span><span>| {
+</span><span>        sales_data
+</span><span>            .</span><span style="color:#96b5b4;">iter</span><span>()
+</span><span>            .</span><span style="color:#96b5b4;">enumerate</span><span>()
+</span><span>            .</span><span style="color:#96b5b4;">filter_map</span><span>(|(</span><span style="color:#bf616a;">i</span><span>, </span><span style="color:#bf616a;">day</span><span>)| {
+</span><span>                </span><span style="color:#b48ead;">if</span><span> day.revenue &gt; threshold {
+</span><span>                    Some((i + </span><span style="color:#d08770;">1</span><span>, day.date.</span><span style="color:#96b5b4;">clone</span><span>(), day.revenue))
+</span><span>                } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>                    None
+</span><span>                }
+</span><span>            })
+</span><span>            .collect::&lt;Vec&lt;_&gt;&gt;()
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> high_performance_days = </span><span style="color:#96b5b4;">performance_metrics</span><span>(</span><span style="color:#d08770;">2500.0</span><span>);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   Days exceeding $2500 revenue:</span><span>&quot;);
+</span><span>    high_performance_days.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">for_each</span><span>(|(</span><span style="color:#bf616a;">day_num</span><span>, </span><span style="color:#bf616a;">date</span><span>, </span><span style="color:#bf616a;">revenue</span><span>)| {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">     Day </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> - $</span><span style="color:#d08770;">{:.2}</span><span>&quot;, day_num, date, revenue);
+</span><span>    });
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">🎯 Practical Closure Benefits:</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   📊 Concise data processing with iterator chains</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   🔄 Flexible event handling and callback systems</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   ⚙️ Configurable behavior without complex inheritance</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   📈 Powerful functional programming patterns</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   🛠️ Clean separation of data and processing logic</span><span>&quot;);
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">💡 Professional Usage Guidelines:</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   🎯 Use closures for short, focused operations</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   📊 Leverage with iterators for data processing pipelines</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   🔄 Implement callbacks and event handlers with closures</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   ⚖️ Balance conciseness with code readability</span><span>&quot;);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">   📋 Consider extracting complex closures to named functions</span><span>&quot;);
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#96b5b4;">demonstrate_practical_closure_applications</span><span>();
+</span><span>}
+</span></code></pre>
+<h2 id="summary-and-key-takeaways">Summary and Key Takeaways</h2>
+<h3 id="mental-model-the-complete-professional-restaurant-recipe-card-system"><strong>Mental Model: The Complete Professional Restaurant Recipe Card System</strong></h3>
+<p>Remember our comprehensive professional restaurant recipe card analogy:</p>
+<ul>
+<li>📝 <strong>Closures</strong> = <strong>Smart recipe cards</strong> - Compact instructions that remember their kitchen context</li>
+<li>🎯 <strong>Environment capture</strong> = <strong>Local ingredient awareness</strong> - Recipe cards that adapt to available resources</li>
+<li>🔧 <strong>Capture modes</strong> = <strong>Equipment access levels</strong> - Different ways to access kitchen equipment (read-only, modify, take ownership)</li>
+<li>💼 <strong>Practical applications</strong> = <strong>Complete restaurant operations</strong> - Real workflows using flexible, context-aware instructions</li>
+<li>⚡ <strong>Performance</strong> = <strong>Zero-cost abstractions</strong> - Smart recipe cards with no operational overhead</li>
+</ul>
+<h3 id="essential-closure-syntax-patterns"><strong>Essential Closure Syntax Patterns</strong></h3>
+<p><strong>Basic Closure Syntax:</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// No parameters
+</span><span style="color:#b48ead;">let </span><span style="color:#8fa1b3;">greet </span><span>= || println!(&quot;</span><span style="color:#a3be8c;">Hello!</span><span>&quot;);
+</span><span>
+</span><span style="color:#a7adba;">// One parameter (type inferred)
+</span><span style="color:#b48ead;">let </span><span style="color:#8fa1b3;">double </span><span>= |</span><span style="color:#bf616a;">x</span><span>| x * </span><span style="color:#d08770;">2</span><span>;
+</span><span>
+</span><span style="color:#a7adba;">// Multiple parameters with types
+</span><span style="color:#b48ead;">let </span><span style="color:#8fa1b3;">calculate </span><span>= |</span><span style="color:#bf616a;">a</span><span>: </span><span style="color:#b48ead;">f64</span><span>, </span><span style="color:#bf616a;">b</span><span>: </span><span style="color:#b48ead;">f64</span><span>| -&gt; </span><span style="color:#b48ead;">f64 </span><span>{ a + b };
+</span><span>
+</span><span style="color:#a7adba;">// Multi-line closure
+</span><span style="color:#b48ead;">let </span><span style="color:#8fa1b3;">complex </span><span>= |</span><span style="color:#bf616a;">input</span><span>| {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> processed = input * </span><span style="color:#d08770;">2</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> result = processed + </span><span style="color:#d08770;">10</span><span>;
+</span><span>    result
+</span><span>};
+</span></code></pre>
+<h3 id="closure-capture-modes-and-traits-1"><strong>Closure Capture Modes and Traits</strong></h3>
+<table><thead><tr><th style="text-align: left"><strong>Trait</strong></th><th style="text-align: left"><strong>Capture Type</strong></th><th style="text-align: left"><strong>Can Be Called</strong></th><th style="text-align: left"><strong>Example Use Case</strong></th></tr></thead><tbody>
+<tr><td style="text-align: left"><strong>Fn</strong></td><td style="text-align: left">Immutable borrow</td><td style="text-align: left">Multiple times</td><td style="text-align: left">Reading configuration, formatting</td></tr>
+<tr><td style="text-align: left"><strong>FnMut</strong></td><td style="text-align: left">Mutable borrow</td><td style="text-align: left">Multiple times</td><td style="text-align: left">Updating counters, modifying state</td></tr>
+<tr><td style="text-align: left"><strong>FnOnce</strong></td><td style="text-align: left">Take ownership</td><td style="text-align: left">Once only</td><td style="text-align: left">Consuming resources, moving data</td></tr>
+</tbody></table>
+<p><strong>Automatic Trait Selection:</strong></p>
+<ul>
+<li>Rust automatically selects the most restrictive applicable trait</li>
+<li>Use <code>move</code> keyword to force ownership capture</li>
+<li>Most closures implement <code>Fn</code> unless they modify captured variables</li>
+</ul>
+<h3 id="common-closure-usage-patterns"><strong>Common Closure Usage Patterns</strong></h3>
+<p><strong>With Iterators:</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">let</span><span> results: Vec&lt;_&gt; = data
+</span><span>    .</span><span style="color:#96b5b4;">iter</span><span>()
+</span><span>    .</span><span style="color:#96b5b4;">filter</span><span>(|</span><span style="color:#bf616a;">item</span><span>| item.price &gt; </span><span style="color:#d08770;">10.0</span><span>)
+</span><span>    .</span><span style="color:#96b5b4;">map</span><span>(|</span><span style="color:#bf616a;">item</span><span>| format!(&quot;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">: $</span><span style="color:#d08770;">{:.2}</span><span>&quot;, item.name, item.price))
+</span><span>    .</span><span style="color:#96b5b4;">collect</span><span>();
+</span></code></pre>
+<p><strong>As Function Parameters:</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">process_items</span><span>&lt;F&gt;(</span><span style="color:#bf616a;">items</span><span>: Vec&lt;Item&gt;, </span><span style="color:#bf616a;">processor</span><span>: F) -&gt; Vec&lt;String&gt;
+</span><span style="color:#b48ead;">where</span><span> F: Fn(&amp;Item) -&gt; String
+</span><span>{
+</span><span>    items.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">map</span><span>(processor).</span><span style="color:#96b5b4;">collect</span><span>()
+</span><span>}
+</span></code></pre>
+<p><strong>For Event Handling:</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">let </span><span style="color:#8fa1b3;">event_handler </span><span>= |</span><span style="color:#bf616a;">event_type</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>, </span><span style="color:#bf616a;">data</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>| {
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Event: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> - </span><span style="color:#d08770;">{}</span><span>&quot;, event_type, data);
+</span><span>};
+</span></code></pre>
+<h3 id="best-practices-checklist"><strong>Best Practices Checklist</strong></h3>
+<p><strong>✅ Design Guidelines:</strong></p>
+<ul>
+<li>Use closures for short, focused operations</li>
+<li>Leverage closures with iterators for data processing</li>
+<li>Prefer closures over function pointers when capturing environment</li>
+<li>Use <code>move</code> when you need to transfer ownership into the closure</li>
+</ul>
+<p><strong>✅ Performance Guidelines:</strong></p>
+<ul>
+<li>Closures are zero-cost abstractions - use them freely</li>
+<li>Prefer <code>Fn</code> over <code>FnOnce</code> when possible for reusability</li>
+<li>Consider boxing closures (<code>Box&lt;dyn Fn()&gt;</code>) for dynamic storage</li>
+<li>Use <code>impl Fn</code> in function parameters for better performance</li>
+</ul>
+<p><strong>✅ Readability Guidelines:</strong></p>
+<ul>
+<li>Keep closures concise and focused on single responsibilities</li>
+<li>Extract complex logic to named functions when closures become long</li>
+<li>Use meaningful parameter names even in short closures</li>
+<li>Consider type annotations for clarity in complex cases</li>
+</ul>
+<p><strong>❌ Common Pitfalls:</strong></p>
+<ul>
+<li>Capturing too many variables unnecessarily (impacts closure size)</li>
+<li>Using <code>move</code> when borrowing would be sufficient</li>
+<li>Creating overly complex closures that hurt readability</li>
+<li>Not understanding the difference between closure traits</li>
+</ul>
+<h3 id="advanced-closure-techniques"><strong>Advanced Closure Techniques</strong></h3>
+<p><strong>Storing Closures:</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// In structs
+</span><span style="color:#b48ead;">struct </span><span>Processor&lt;F: Fn(&amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; String&gt; {
+</span><span>    </span><span style="color:#bf616a;">formatter</span><span>: F,
+</span><span>}
+</span><span>
+</span><span style="color:#a7adba;">// Dynamic dispatch
+</span><span style="color:#b48ead;">let</span><span> processors: Vec&lt;Box&lt;dyn Fn(&amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; String&gt;&gt; = vec![
+</span><span>    Box::new(|</span><span style="color:#bf616a;">s</span><span>| s.</span><span style="color:#96b5b4;">to_uppercase</span><span>()),
+</span><span>    Box::new(|</span><span style="color:#bf616a;">s</span><span>| format!(&quot;</span><span style="color:#a3be8c;">Hello, </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">!</span><span>&quot;, s)),
+</span><span>];
+</span></code></pre>
+<p><strong>Higher-Order Functions:</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">create_multiplier</span><span>(</span><span style="color:#bf616a;">factor</span><span>: </span><span style="color:#b48ead;">f64</span><span>) -&gt; impl Fn(</span><span style="color:#b48ead;">f64</span><span>) -&gt; </span><span style="color:#b48ead;">f64 </span><span>{
+</span><span>    </span><span style="color:#b48ead;">move </span><span>|x| x * factor
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">let</span><span> double = </span><span style="color:#96b5b4;">create_multiplier</span><span>(</span><span style="color:#d08770;">2.0</span><span>);
+</span><span style="color:#b48ead;">let</span><span> triple = </span><span style="color:#96b5b4;">create_multiplier</span><span>(</span><span style="color:#d08770;">3.0</span><span>);
+</span></code></pre>
+<h3 id="the-professional-advantage"><strong>The Professional Advantage</strong></h3>
+<p><strong>Mastering closures in Rust is like having a complete professional restaurant recipe card system</strong> that enables maximum flexibility and efficiency in all kitchen operations:</p>
+<ul>
+<li>📝 <strong>Concise expression</strong> - Write inline functionality without verbose function definitions</li>
+<li>🎯 <strong>Context awareness</strong> - Automatically capture and use surrounding variables</li>
+<li>🔄 <strong>Functional patterns</strong> - Enable powerful iterator chains and data processing pipelines</li>
+<li>⚡ <strong>Zero-cost abstractions</strong> - Maximum expressiveness with no runtime overhead</li>
+<li>🛠️ <strong>Flexible design</strong> - Create configurable, reusable components easily</li>
+</ul>
+<p><strong>Understanding closures transforms you from a programmer who writes verbose, repetitive code to an engineer</strong> who creates elegant, expressive solutions that adapt to their context. Just as a master chef can create recipe cards that automatically adapt to local ingredients and equipment while maintaining consistent quality, a skilled Rust programmer uses closures to write code that is both flexible and efficient, capturing exactly the right context needed for each operation.</p>
+<p>This comprehensive understanding of closures - from basic syntax through capture modes and real-world applications - enables you to write Rust code that is more concise, expressive, and maintainable, whether you're processing data with iterator chains, implementing event systems, or creating flexible configuration systems that adapt to their environment!</p>
+<ol>
+<li>https://www.programiz.com/rust/closure</li>
+<li>https://doc.rust-lang.org/rust-by-example/fn/closures.html</li>
+<li>https://doc.rust-lang.org/book/ch13-01-closures.html</li>
+<li>https://web.mit.edu/rust-lang_v1.25/arch/amd64_ubuntu1404/share/doc/rust/html/book/first-edition/closures.html</li>
+<li>https://dev.to/francescoxx/closures-in-rust-2kcm</li>
+<li>https://web.mit.edu/rust-lang_v1.25/arch/amd64_ubuntu1404/share/doc/rust/html/book/second-edition/ch13-01-closures.html</li>
+<li>https://notes.kodekloud.com/docs/Rust-Programming/Closures-and-Iterators/Closures</li>
+<li>https://rust-book.cs.brown.edu/ch13-01-closures.html</li>
+<li>https://news.ycombinator.com/item?id=36054990</li>
+</ol>
+
+    
+        </div>
+
+    </article>
+</main>
+
+
+    <script type="text/javascript" src="https://aarambhdevhub.github.io/rust-doc/elasticlunr.min.js" defer></script>
+    <script type="text/javascript" src="https://aarambhdevhub.github.io/rust-doc/search_index.en.js" defer></script>
+<script type="text/javascript" src="https://aarambhdevhub.github.io/rust-doc/js.js" defer></script>
+
+</body>
+</html>
