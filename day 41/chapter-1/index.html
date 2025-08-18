@@ -1,0 +1,1449 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://aarambhdevhub.github.io/rust-doc/main.css">
+    <link rel="icon" href="https://www.rust-lang.org/static/images/favicon-16x16.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Rust Programming Course! | Creating and Joining Threads </title>
+</head>
+<body>
+
+<main>
+    
+    <nav>
+            <a href="https:&#x2F;&#x2F;aarambhdevhub.github.io&#x2F;rust-doc&#x2F;">
+                        <img src="https://www.rust-lang.org/static/images/rust-logo-blk.svg" alt="logo"/>
+                    </a>
+                <!-- -->
+
+            <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+            <div id="trees">
+                <input class="tree-toggle" type="checkbox" id="day-1-introduction"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-1-introduction">Day 1: Introduction</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 1/chapter-1/">What is Rust and why use it?</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 1/chapter-2/">Installing Rust Toolchain (rustup, cargo)</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 1/chapter-3/">Setting up Development (VS Code + Hello World)</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 1/chapter-4/">Understanding Cargo Project Structure</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-2-basic-syntax-variables"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-2-basic-syntax-variables">Day 2: Basic Syntax &amp; Variables</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 2/chapter-1/">Variables and Mutability in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 2/chapter-2/">Data Types in Rust: Integers, Floats, Booleans, and Characters</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 2/chapter-3/">Constants vs Variables</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 2/chapter-4/">Understanding Shadowing in Rust: A Practical Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 2/chapter-5/">Basic Input&#x2F;Output</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-3-functions-control-flow"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-3-functions-control-flow">Day 3: Functions &amp; Control Flow</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 3/chapter-1/">Function Syntax and Parameters in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 3/chapter-2/">Return Values and Expressions vs Statements</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 3/chapter-3/">If&#x2F;Else Statements in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 3/chapter-4/">Match Expressions in Rust: Powerful Pattern Matching</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 3/chapter-5/">Loops in Rust: loop, while, for Explained</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-4-data-types-deep-dive"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-4-data-types-deep-dive">Day 4: Data Types Deep Dive</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 4/chapter-1/">Compound Types (Tuples, Arrays)</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 4/chapter-2/">String vs &amp;str in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 4/chapter-3/">Vector Basics in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 4/chapter-4/">Type Annotations and Inference in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 4/chapter-5/">Practical Rust Exercises</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-5-practice-review"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-5-practice-review">Day 5: Practice &amp; Review</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 5/chapter-1/">Day 5: Practice &amp; Review</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-6-ownership-fundamentals"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-6-ownership-fundamentals">Day 6: Ownership Fundamentals</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 6/chapter-1/">Ownership in Rust: A Detailed Guide</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 6/chapter-2/">Stack vs Heap in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 6/chapter-3/">Understanding Ownership in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 6/chapter-4/">Move Semantics in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 6/chapter-5/">Copy Trait in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-7-references-borrowing"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-7-references-borrowing">Day 7: References &amp; Borrowing</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 7/chapter-1/">Immutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 7/chapter-2/">Mutable References</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 7/chapter-3/">Borrowing Rules</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 7/chapter-4/">Reference Lifetime Basics</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 7/chapter-5/">Common Borrowing Errors and Solutions</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-8-slices"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-8-slices">Day 8: Slices</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 8/chapter-1/">String Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 8/chapter-2/">Array Slices</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 8/chapter-3/">Slice Syntax and Usage</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 8/chapter-4/">Practical Applications</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 8/chapter-5/">Memory Safety Benefits</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-9-advanced-ownership"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-9-advanced-ownership">Day 9: Advanced Ownership</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 9/chapter-1/">Clone Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 9/chapter-2/">Drop Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 9/chapter-3/">RAII Pattern</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 9/chapter-4/">Memory Management Comparison with Other Languages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 9/chapter-5/">Best Practices (Advanced Ownership)</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-10-ownership-practice"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-10-ownership-practice">Day 10: Ownership Practice</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 10/chapter-1/">Complex Ownership Scenarios</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 10/chapter-2/">Debugging Ownership Errors</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 10/chapter-3/">Code Refactoring Exercises</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 10/chapter-4/">Group Problem-Solving</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-11-structs-basics"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-11-structs-basics">Day 11: Structs Basics</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 11/chapter-1/">Defining and Instantiating Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 11/chapter-2/">Field Access and Modification</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 11/chapter-3/">Tuple Structs and Unit Structs</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 11/chapter-4/">Struct Update Syntax</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 11/chapter-5/">Ownership of Struct Data</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-12-methods-associated-functions"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-12-methods-associated-functions">Day 12: Methods &amp; Associated Functions</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 12/chapter-1/">Implementing Methods with impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 12/chapter-2/">&amp;self, &amp;mut self, and self</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 12/chapter-3/">Associated Functions (like Constructors)</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 12/chapter-4/">Multiple impl Blocks</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 12/chapter-5/">Method Chaining</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-13-advanced-struct-concepts"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-13-advanced-struct-concepts">Day 13: Advanced Struct Concepts</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 13/chapter-1/">Struct Lifetime Parameters</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 13/chapter-2/">Debug Trait and Custom Formatting</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 13/chapter-3/">Builder Pattern Implementation</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 13/chapter-4/">Struct Composition</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 13/chapter-5/">Best Practices for Struct Design</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-14-enums-pattern-matching"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-14-enums-pattern-matching">Day 14: Enums &amp; Pattern Matching</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 14/chapter-1/">Defining Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 14/chapter-2/">Enum Variants with Data</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 14/chapter-3/">Option&lt;T&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 14/chapter-4/">Result&lt;T, E&gt; Enum in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 14/chapter-5/">Advanced Match Patterns in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-15-practice-project"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-15-practice-project">Day 15: Practice Project</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 15/chapter-1/">Building a Simple CLI Calculator in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-16-vectors"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-16-vectors">Day 16: Vectors</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 16/chapter-1/">Creating and Updating Vectors</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 16/chapter-2/">Vector Methods: push, pop, iter</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 16/chapter-3/">Accessing Vector Elements Safely</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 16/chapter-4/">Vector of Different Types with Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 16/chapter-5/">Performance Considerations</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-17-hashmaps-other-collections"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-17-hashmaps-other-collections">Day 17: HashMaps &amp; Other Collections</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 17/chapter-1/">HashMap Creation and Manipulation</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 17/chapter-2/">Keys and Values Ownership</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 17/chapter-3/">HashMap Methods and Iteration</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 17/chapter-4/">When to Use Different Collections</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 17/chapter-5/">BTreeMap Introduction</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-18-error-handling"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-18-error-handling">Day 18: Error Handling</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 18/chapter-1/">Panic! and When to Use It</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 18/chapter-2/">Result&lt;T, E&gt; in Depth</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 18/chapter-3/">The ? Operator in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 18/chapter-4/">Creating Custom Error Types in Rust</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 18/chapter-5/">Error Propagation Patterns in Rust</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-19-strings-deep-dive"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-19-strings-deep-dive">Day 19: Strings Deep Dive</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 19/chapter-1/">String vs &amp;str Revisited</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 19/chapter-2/">String Methods and Manipulation</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 19/chapter-5/">Performance Considerations</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 19/chapter-3/">UTF-8 and Character Encoding</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 19/chapter-4/">String Concatenation Techniques</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-20-mini-project"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-20-mini-project">Day 20: Mini Project</label>
+
+                    <ul class="subtree">
+                        </ul>
+                <input class="tree-toggle" type="checkbox" id="day-21-generic-functions-structs"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-21-generic-functions-structs">Day 21: Generic Functions &amp; Structs</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 21/chapter-1/">Generic Function Syntax</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 21/chapter-2/">Generic Structs and Enums</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 21/chapter-3/">Type Parameters and Constraints</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 21/chapter-4/">Monomorphization Concept</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 21/chapter-5/">Generic Collections</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-22-traits-fundamentals"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-22-traits-fundamentals">Day 22: Traits Fundamentals</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 22/chapter-1/">Defining Traits</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 22/chapter-2/">Implementing Traits for Types</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 22/chapter-3/">Default Implementations</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 22/chapter-4/">Trait as Parameters</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 22/chapter-5/">Trait Bounds</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-23-advanced-traits"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-23-advanced-traits">Day 23: Advanced Traits</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 23/chapter-1/">Trait Objects and Dynamic Dispatch</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 23/chapter-2/">Supertraits</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 23/chapter-3/">Associated Types</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 23/chapter-4/">Orphan Rule</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 23/chapter-5/">Coherence Rules</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-24-standard-library-traits"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-24-standard-library-traits">Day 24: Standard Library Traits</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 24/chapter-1/">Iterator Trait</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 24/chapter-2/">From and Into Traits</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 24/chapter-3/">Display and Debug Traits</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 24/chapter-4/">Clone and Copy Traits</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 24/chapter-5/">PartialEq and Eq Traits</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-25-trait-practice"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-25-trait-practice">Day 25: Trait Practice</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 25/chapter-1/">Custom Trait Implementation</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 25/chapter-2/">Generic Programming Exercises</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 25/chapter-3/">Trait Object Usage</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 25/chapter-4/">Performance Implications</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-26-lifetime-annotations"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-26-lifetime-annotations">Day 26: Lifetime Annotations</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 26/chapter-1/">Why Lifetimes Exist</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 26/chapter-2/">Lifetime Annotation Syntax</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 26/chapter-3/">Function Lifetime Parameters</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 26/chapter-4/">Struct Lifetime Parameters</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 26/chapter-5/">Lifetime Elision Rules</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-27-advanced-lifetimes"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-27-advanced-lifetimes">Day 27: Advanced Lifetimes</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 27/chapter-1/">Static Lifetime</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 27/chapter-2/">Lifetime Subtyping</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 27/chapter-3/">Higher-Ranked Trait Bounds</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 27/chapter-4/">Common Lifetime Patterns</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 27/chapter-5/">Debugging Lifetime Errors</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-28-smart-pointers"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-28-smart-pointers">Day 28: Smart Pointers</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 28/chapter-1/">Box&lt;T&gt; for Heap Allocation</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 28/chapter-2/">Rc&lt;T&gt; for Reference Counting</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 28/chapter-3/">RefCell&lt;T&gt; for Interior Mutability</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 28/chapter-4/">Weak&lt;T&gt; References</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 28/chapter-5/">Memory Leak Prevention</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-29-concurrency-preparation"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-29-concurrency-preparation">Day 29: Concurrency Preparation</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 29/chapter-1/">Arc&lt;T&gt; for Atomic Reference Counting</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 29/chapter-2/">Send and Sync Traits</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 29/chapter-3/">Thread Safety Concepts</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 29/chapter-4/">Shared State Challenges</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 29/chapter-5/">Lock-Free Programming Introduction</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-30-memory-management-project"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-30-memory-management-project">Day 30: Memory Management Project</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 30/chapter-1/">Building a Simple Data Structure</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 30/chapter-2/">Using Smart Pointers Effectively</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 30/chapter-3/">Memory Usage Optimization</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 30/chapter-4/">Performance Benchmarking</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-31-closures"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-31-closures">Day 31: Closures</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 31/chapter-1/">Closure Syntax and Usage</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 31/chapter-2/">Capturing Environment</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 31/chapter-3/">Fn, FnMut, and FnOnce Traits</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 31/chapter-4/">Moving Closures</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 31/chapter-5/">Closures vs Functions</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-32-iterators-deep-dive"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-32-iterators-deep-dive">Day 32: Iterators Deep Dive</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 32/chapter-1/">Iterator Trait Implementation</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 32/chapter-2/">Lazy Evaluation</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 32/chapter-3/">Iterator Adaptors (map, filter, etc.)</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 32/chapter-4/">Consumer Adaptors (collect, fold, etc.)</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 32/chapter-5/">Custom Iterators</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-32-iterators-deep-dive"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-32-iterators-deep-dive">Day 32: Iterators Deep Dive</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 33/chapter-1/">Higher-Order Functions</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 33/chapter-2/">Function Composition</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 33/chapter-3/">Immutable Data Patterns</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 33/chapter-4/">Functional Error Handling</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 33/chapter-5/">Performance of Functional Style</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-34-advanced-iterator-patterns"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-34-advanced-iterator-patterns">Day 34: Advanced Iterator Patterns</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 34/chapter-1/">Chain, Zip, Enumerate</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 34/chapter-2/">Flat_map and Filter_map</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 34/chapter-3/">Custom Iterator Implementations</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 34/chapter-4/">Parallel Iterators (Rayon Introduction)</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 34/chapter-5/">Iterator Performance Optimization</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-35-functional-programming-project"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-35-functional-programming-project">Day 35: Functional Programming Project</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 35/chapter-1/">Functional Programming Project</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-36-unit-testing"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-36-unit-testing">Day 36: Unit Testing</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 36/chapter-1/">Writing Test Functions</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 36/chapter-2/">Assert Macros</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 36/chapter-3/">Test Organization</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 36/chapter-4/">Running Tests with Cargo</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 36/chapter-5/">Test-Driven Development</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-37-integration-testing"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-37-integration-testing">Day 37: Integration Testing</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 37/chapter-1/">Integration Test Structure</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 37/chapter-2/">Testing Public API</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 37/chapter-3/">Test Utilities and Helpers</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 37/chapter-4/">Mocking and Test Doubles</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 37/chapter-5/">Test Data Management</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-38-property-based-testing"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-38-property-based-testing">Day 38: Property-Based Testing</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 38/chapter-1/">QuickCheck Concepts</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 38/chapter-2/">Proptest Library Usage</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 38/chapter-3/">Generating Test Data</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 38/chapter-4/">Property Definition</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 38/chapter-5/">Shrinking and Debugging</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-39-documentation"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-39-documentation">Day 39: Documentation</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 39/chapter-1/">Writing Documentation Comments</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 39/chapter-2/">Generating Docs with cargo doc</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 39/chapter-3/">Documentation Tests</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 39/chapter-4/">Examples in Documentation</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 39/chapter-5/">Documentation Best Practices</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-40-testing-workshop"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-40-testing-workshop">Day 40: Testing Workshop</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 40/chapter-1/">Comprehensive Testing Exercise</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 40/chapter-3/">Continuous Integration Setup</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 40/chapter-4/">Testing Strategies Discussion</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 40/chapter-2/">Code Coverage Analysis</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-41-thread-basics"
+                           checked/>
+                    <label class="tree-toggle-label"
+                           for="day-41-thread-basics">Day 41: Thread Basics</label>
+
+                    <ul class="subtree">
+                        <li class="active">
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 41/chapter-1/">Creating and Joining Threads</a>
+                            </li>
+
+                            
+                                    
+                                    
+                                        <ul id="toc">
+                                            <li><a href="
+                                                        https://aarambhdevhub.github.io/rust-doc/day 41/chapter-1/#creating-and-joining-threads-in-rust-comprehensive-documentation-for-beginners">Creating and Joining Threads in Rust: Comprehensive Documentation for Beginners</a>
+                                                    <ul>
+                                                            <li>
+                                                                    <a href="https://aarambhdevhub.github.io/rust-doc/day 41/chapter-1/#the-professional-kitchen-team-analogy-man-fried-egg">The Professional Kitchen Team Analogy 👨🍳</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://aarambhdevhub.github.io/rust-doc/day 41/chapter-1/#creating-and-managing-threads-in-rust">Creating and Managing Threads in Rust</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://aarambhdevhub.github.io/rust-doc/day 41/chapter-1/#managing-multiple-threads">Managing Multiple Threads</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://aarambhdevhub.github.io/rust-doc/day 41/chapter-1/#returning-values-from-threads">Returning Values from Threads</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://aarambhdevhub.github.io/rust-doc/day 41/chapter-1/#summary-and-best-practices">Summary and Best Practices</a>
+                                                                </li>
+                                                            </ul>
+                                                    </li>
+                                            </ul>
+                                    <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 41/chapter-2/">Thread::spawn Usage</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 41/chapter-3/">Message Passing with Channels</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 41/chapter-4/">Thread Panics and Handling</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 41/chapter-5/">Thread Local Storage</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-42-message-passing"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-42-message-passing">Day 42: Message Passing</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 42/chapter-1/">Channels (mpsc)</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 42/chapter-2/">Synchronous vs Asynchronous Channels</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 42/chapter-3/">Multiple Producers, Single Consumer</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 42/chapter-4/">Deadlock Avoidance</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 42/chapter-5/">Channel Patterns and Best Practices</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-43-shared-state-concurrency"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-43-shared-state-concurrency">Day 43: Shared State Concurrency</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 43/chapter-1/">Mutex and Arc Combination</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 43/chapter-2/">RwLock for Read-Write Access</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 43/chapter-3/">Atomic Types</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 43/chapter-4/">Lock-Free Data Structures</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 43/chapter-5/">Performance Considerations</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-44-parallel-processing"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-44-parallel-processing">Day 44: Parallel Processing</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 44/chapter-1/">Rayon Library Introduction</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 44/chapter-2/">Parallel Iterators</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 44/chapter-3/">Work Stealing</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 44/chapter-4/">Parallel Algorithms</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 44/chapter-5/">When to Use Parallelism</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-45-concurrency-project"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-45-concurrency-project">Day 45: Concurrency Project</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 45/chapter-1/">Day 45 (Friday): Concurrency Project</a>
+                            </li>
+
+                            </ul>
+                </div>
+        </nav>
+    <article>
+
+        <div id="on_right">
+                <span id="search-ico" class="ms-Icon--Search"></span>
+            </div>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="Search as you type...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        <div id="wrap">
+            
+        <h1 id="creating-and-joining-threads-in-rust-comprehensive-documentation-for-beginners">Creating and Joining Threads in Rust: Comprehensive Documentation for Beginners</h1>
+<p>Understanding how to create and manage threads in Rust is like learning to <strong>manage a team of chefs in a professional restaurant kitchen</strong> – instead of one chef doing everything sequentially, you can assign different tasks (like chopping vegetables, grilling meat, and preparing sauces) to different chefs to be done simultaneously. This parallelism significantly speeds up the entire process. Just as a head chef coordinates the team and waits for all components to be ready before plating the final dish, a Rust programmer creates and manages threads to perform tasks concurrently and then "joins" them to ensure all work is completed safely.</p>
+<h2 id="the-professional-kitchen-team-analogy-man-fried-egg">The Professional Kitchen Team Analogy 👨🍳</h2>
+<h3 id="imagine-you-re-managing-a-team-of-chefs-to-prepare-a-complex-meal">Imagine You're Managing a Team of Chefs to Prepare a Complex Meal</h3>
+<p><strong>The Problem with a Single-Threaded Approach (One Chef):</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// ❌ Single-chef approach - one person does everything in order
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">single_chef_workflow</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// 1. Chop vegetables (takes 5 minutes)
+</span><span>    </span><span style="color:#a7adba;">// 2. Grill the steak (takes 10 minutes)
+</span><span>    </span><span style="color:#a7adba;">// 3. Prepare the sauce (takes 3 minutes)
+</span><span>    </span><span style="color:#a7adba;">// Total time = 5 + 10 + 3 = 18 minutes. The kitchen is slow.
+</span><span>}
+</span></code></pre>
+<p><strong>The Power of a Multi-Threaded Approach (A Team of Chefs):</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#a7adba;">// ✅ Multi-chef approach - assign tasks to be done simultaneously
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">multi_chef_workflow</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// Chef A: Chop vegetables (5 mins)  -&gt; Thread 1
+</span><span>    </span><span style="color:#a7adba;">// Chef B: Grill the steak (10 mins) -&gt; Thread 2
+</span><span>    </span><span style="color:#a7adba;">// Chef C: Prepare the sauce (3 mins) -&gt; Thread 3
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// All tasks start at the same time. The total time is determined
+</span><span>    </span><span style="color:#a7adba;">// by the longest task, not the sum of all tasks.
+</span><span>    </span><span style="color:#a7adba;">// Total time = max(5, 10, 3) = 10 minutes. The kitchen is much faster!
+</span><span>}
+</span></code></pre>
+<p><strong>Why Threading Is a Powerful Concept in Rust:</strong></p>
+<ul>
+<li>🚀 <strong>Performance</strong>: Execute multiple tasks concurrently to make your programs faster, especially on modern multi-core processors.[^6]</li>
+<li>responsiveness: Keep your application responsive (e.g., a user interface) while performing long-running tasks in the background.</li>
+<li>🛡️ <strong>Safety</strong>: Rust's ownership and type system are designed to prevent common concurrency bugs, like data races, at compile time, making multi-threaded programming safer than in many other languages.[^8]</li>
+</ul>
+<h2 id="creating-and-managing-threads-in-rust">Creating and Managing Threads in Rust</h2>
+<p>Rust's standard library provides a simple yet powerful way to work with native OS threads through the <code>std::thread</code> module.[^5]</p>
+<h3 id="1-spawning-a-new-thread-with-thread-spawn">1. Spawning a New Thread with <code>thread::spawn</code></h3>
+<p>The primary way to create a new thread is with the <code>thread::spawn</code> function. It takes a <strong>closure</strong> as an argument, and the code inside that closure will be executed in a new thread.[^1][^2]</p>
+<p><strong>Example: A Simple Spawned Thread</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>std::thread;
+</span><span style="color:#b48ead;">use </span><span>std::time::Duration;
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#a7adba;">// The main thread starts here
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Chef (Main Thread): The kitchen is now open!</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Spawn a new thread for a dedicated task
+</span><span>    thread::spawn(|| {
+</span><span>        </span><span style="color:#a7adba;">// This code runs in a separate thread
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Chef A (Spawned Thread): Starting to chop vegetables...</span><span>&quot;);
+</span><span>        </span><span style="color:#b48ead;">for</span><span> i in </span><span style="color:#d08770;">1</span><span>..=</span><span style="color:#d08770;">5 </span><span>{
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">Chef A: ...chopping part </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">...</span><span>&quot;, i);
+</span><span>            thread::sleep(Duration::from_millis(</span><span style="color:#d08770;">500</span><span>));
+</span><span>        }
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Chef A (Spawned Thread): Vegetables are ready!</span><span>&quot;);
+</span><span>    });
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// While Chef A is working, the main thread can do other things
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Chef (Main Thread): I&#39;ll prepare the workstations while Chef A is busy.</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">for</span><span> i in </span><span style="color:#d08770;">1</span><span>..=</span><span style="color:#d08770;">3 </span><span>{
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Chef (Main Thread): ...prepping station </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">...</span><span>&quot;, i);
+</span><span>        thread::sleep(Duration::from_millis(</span><span style="color:#d08770;">300</span><span>));
+</span><span>    }
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Chef (Main Thread): My work is done. Closing the kitchen.</span><span>&quot;);
+</span><span>}
+</span></code></pre>
+<p><strong>What happens when you run this?</strong></p>
+<p>You'll notice that the output is interleaved, and the main thread might finish before the spawned thread does.</p>
+<p><strong>Example Output (can vary):</strong></p>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>Chef (Main Thread): The kitchen is now open!
+</span><span>Chef A (Spawned Thread): Starting to chop vegetables...
+</span><span>Chef (Main Thread): I&#39;ll prepare the workstations while Chef A is busy.
+</span><span>Chef A: ...chopping part 1...
+</span><span>Chef (Main Thread): ...prepping station 1...
+</span><span>Chef (Main Thread): ...prepping station 2...
+</span><span>Chef A: ...chopping part 2...
+</span><span>Chef (Main Thread): ...prepping station 3...
+</span><span>Chef (Main Thread): My work is done. Closing the kitchen.
+</span></code></pre>
+<p><strong>Problem</strong>: The spawned thread (<code>Chef A</code>) was shut down prematurely because the <code>main</code> function (the main thread) finished and exited the program. This is like the head chef leaving and turning off the lights while other chefs are still working.[^2][^6]</p>
+<h3 id="2-waiting-for-threads-to-finish-with-join-handles">2. Waiting for Threads to Finish with <code>join</code> Handles</h3>
+<p>To solve the problem of premature termination, <code>thread::spawn</code> returns a <strong><code>JoinHandle</code></strong>. This handle is a smart pointer that owns the spawned thread. You can call the <code>.join()</code> method on the handle to <strong>block</strong> the current thread's execution until the thread represented by the handle has finished.[^3][^1]</p>
+<p><strong>Example: Using <code>join</code> to Wait for a Thread</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>std::thread;
+</span><span style="color:#b48ead;">use </span><span>std::time::Duration;
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Chef (Main Thread): The kitchen is open!</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Save the handle returned by thread::spawn
+</span><span>    </span><span style="color:#b48ead;">let</span><span> chef_a_handle = thread::spawn(|| {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Chef A (Spawned Thread): Starting to chop vegetables...</span><span>&quot;);
+</span><span>        </span><span style="color:#b48ead;">for</span><span> i in </span><span style="color:#d08770;">1</span><span>..=</span><span style="color:#d08770;">5 </span><span>{
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">Chef A: ...chopping part </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">...</span><span>&quot;, i);
+</span><span>            thread::sleep(Duration::from_millis(</span><span style="color:#d08770;">300</span><span>));
+</span><span>        }
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Chef A (Spawned Thread): Vegetables are ready!</span><span>&quot;);
+</span><span>    });
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// The main thread can still do other work concurrently
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Chef (Main Thread): Prepping other things...</span><span>&quot;);
+</span><span>    thread::sleep(Duration::from_millis(</span><span style="color:#d08770;">500</span><span>));
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Now, wait for Chef A to finish before proceeding
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Chef (Main Thread): Waiting for Chef A to finish chopping...</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// .join() blocks the main thread here
+</span><span>    </span><span style="color:#a7adba;">// .unwrap() will panic if the spawned thread panicked
+</span><span>    chef_a_handle.</span><span style="color:#96b5b4;">join</span><span>().</span><span style="color:#96b5b4;">unwrap</span><span>();
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Chef (Main Thread): Great, Chef A is done. Now we can plate the dish.</span><span>&quot;);
+</span><span>}
+</span></code></pre>
+<p><strong>What happens now?</strong></p>
+<p>The main thread will pause at <code>chef_a_handle.join().unwrap()</code> and wait until the spawned thread prints "Vegetables are ready!" before it continues. This ensures all work is completed.</p>
+<h3 id="3-moving-data-to-a-thread-with-the-move-keyword">3. Moving Data to a Thread with the <code>move</code> Keyword</h3>
+<p>What if a thread needs to use data from the main thread's environment? Rust's ownership rules are very strict to ensure safety. You must explicitly transfer ownership of the data to the new thread using a <code>move</code> closure.</p>
+<p><strong>Example: Giving a Recipe to a Chef</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>std::thread;
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> recipe = vec![
+</span><span>        &quot;</span><span style="color:#a3be8c;">Step 1: Chop onions</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        &quot;</span><span style="color:#a3be8c;">Step 2: Sauté garlic</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>        &quot;</span><span style="color:#a3be8c;">Step 3: Add tomatoes</span><span>&quot;.</span><span style="color:#96b5b4;">to_string</span><span>(),
+</span><span>    ];
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// The `move` keyword tells the closure to take ownership of `recipe`.
+</span><span>    </span><span style="color:#a7adba;">// Without `move`, the compiler would complain because it doesn&#39;t know
+</span><span>    </span><span style="color:#a7adba;">// how long the spawned thread will live, and it can&#39;t guarantee that
+</span><span>    </span><span style="color:#a7adba;">// `recipe` will still be valid.
+</span><span>    </span><span style="color:#b48ead;">let</span><span> chef_b_handle = thread::spawn(</span><span style="color:#b48ead;">move </span><span>|| {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Chef B (Spawned Thread): I have received the recipe. Let&#39;s cook!</span><span>&quot;);
+</span><span>        </span><span style="color:#b48ead;">for</span><span> step in recipe {
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">Chef B: </span><span style="color:#d08770;">{}</span><span>&quot;, step);
+</span><span>        }
+</span><span>    });
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// The following line would cause a compile error because `recipe` has been
+</span><span>    </span><span style="color:#a7adba;">// moved to the new thread and is no longer owned by `main`.
+</span><span>    </span><span style="color:#a7adba;">// println!(&quot;Main thread still has recipe? {:?}&quot;, recipe);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Wait for Chef B to finish
+</span><span>    chef_b_handle.</span><span style="color:#96b5b4;">join</span><span>().</span><span style="color:#96b5b4;">unwrap</span><span>();
+</span><span>}
+</span></code></pre>
+<ul>
+<li><strong>Why <code>move</code> is required</strong>: Rust's compiler can't know if the spawned thread will outlive the <code>main</code> function. To prevent the thread from using a reference to data that has been dropped (a dangling pointer), it requires you to move ownership of the data into the thread. This guarantees the data will live as long as the thread needs it.</li>
+</ul>
+<h2 id="managing-multiple-threads">Managing Multiple Threads</h2>
+<p>In a real kitchen, you'd have many chefs working at once. Similarly, in Rust, you can spawn multiple threads and manage them, often by storing their <code>JoinHandle</code>s in a <code>Vec</code>.</p>
+<p><strong>Example: A Team of Chefs Working Together</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>std::thread;
+</span><span style="color:#b48ead;">use </span><span>std::time::Duration;
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Head Chef: We have a big banquet order! Everyone get to work!</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> handles = vec![];
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Task 1: Appetizers
+</span><span>    </span><span style="color:#b48ead;">let</span><span> appetizer_handle = thread::spawn(|| {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Appetizer Chef: Starting salads...</span><span>&quot;);
+</span><span>        thread::sleep(Duration::from_secs(</span><span style="color:#d08770;">2</span><span>));
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Appetizer Chef: Salads are ready!</span><span>&quot;);
+</span><span>    });
+</span><span>    handles.</span><span style="color:#96b5b4;">push</span><span>(appetizer_handle);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Task 2: Main Course
+</span><span>    </span><span style="color:#b48ead;">let</span><span> main_course_handle = thread::spawn(|| {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Grill Chef: Firing up the grill for steaks...</span><span>&quot;);
+</span><span>        thread::sleep(Duration::from_secs(</span><span style="color:#d08770;">5</span><span>));
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Grill Chef: Steaks are perfectly cooked!</span><span>&quot;);
+</span><span>    });
+</span><span>    handles.</span><span style="color:#96b5b4;">push</span><span>(main_course_handle);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Task 3: Dessert
+</span><span>    </span><span style="color:#b48ead;">let</span><span> dessert_handle = thread::spawn(|| {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Pastry Chef: Preparing the chocolate lava cakes...</span><span>&quot;);
+</span><span>        thread::sleep(Duration::from_secs(</span><span style="color:#d08770;">3</span><span>));
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Pastry Chef: Desserts are ready to go!</span><span>&quot;);
+</span><span>    });
+</span><span>    handles.</span><span style="color:#96b5b4;">push</span><span>(dessert_handle);
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Head Chef: I&#39;m waiting for all stations to report back.</span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Wait for all threads to complete
+</span><span>    </span><span style="color:#b48ead;">for</span><span> handle in handles {
+</span><span>        handle.</span><span style="color:#96b5b4;">join</span><span>().</span><span style="color:#96b5b4;">unwrap</span><span>();
+</span><span>    }
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Head Chef: All dishes are ready. Let&#39;s serve the banquet!</span><span>&quot;);
+</span><span>}
+</span></code></pre>
+<p>This pattern is very common:</p>
+<ol>
+<li>Create an empty <code>Vec</code> to hold the handles.</li>
+<li>Loop to spawn multiple threads, pushing each <code>JoinHandle</code> into the <code>Vec</code>.</li>
+<li>Loop through the <code>Vec</code> of handles, calling <code>.join()</code> on each one to ensure all threads have finished.</li>
+</ol>
+<h2 id="returning-values-from-threads">Returning Values from Threads</h2>
+<p>The <code>join()</code> method returns a <code>Result</code>. If the thread executed successfully, <code>Ok</code> contains the value returned by the closure. This is how you can get results back from your spawned threads.</p>
+<p><strong>Example: Calculating Parts of a Bill</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>std::thread;
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> order_items = vec![</span><span style="color:#d08770;">10.0</span><span>, </span><span style="color:#d08770;">25.50</span><span>, </span><span style="color:#d08770;">8.75</span><span>];
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Thread to calculate the subtotal
+</span><span>    </span><span style="color:#b48ead;">let</span><span> subtotal_handle = thread::spawn(</span><span style="color:#b48ead;">move </span><span>|| {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> subtotal: </span><span style="color:#b48ead;">f64 </span><span>= order_items.</span><span style="color:#96b5b4;">iter</span><span>().</span><span style="color:#96b5b4;">sum</span><span>();
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">Subtotal Chef: Calculated subtotal: $</span><span style="color:#d08770;">{:.2}</span><span>&quot;, subtotal);
+</span><span>        subtotal </span><span style="color:#a7adba;">// This value is returned by the closure
+</span><span>    });
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// The main thread can do other work...
+</span><span>    </span><span style="color:#b48ead;">let</span><span> tax_rate = </span><span style="color:#d08770;">0.05</span><span>; </span><span style="color:#a7adba;">// 5%
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// Wait for the subtotal and get the result
+</span><span>    </span><span style="color:#b48ead;">let</span><span> subtotal = subtotal_handle.</span><span style="color:#96b5b4;">join</span><span>().</span><span style="color:#96b5b4;">unwrap</span><span>();
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> tax = subtotal * tax_rate;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> total = subtotal + tax;
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Head Chef: Subtotal received. With $</span><span style="color:#d08770;">{:.2}</span><span style="color:#a3be8c;"> tax, the final bill is $</span><span style="color:#d08770;">{:.2}</span><span>&quot;, tax, total);
+</span><span>}
+</span></code></pre>
+<h2 id="summary-and-best-practices">Summary and Best Practices</h2>
+<h3 id="mental-model-the-complete-professional-kitchen-management-system"><strong>Mental Model: The Complete Professional Kitchen Management System</strong></h3>
+<p>Remember our comprehensive professional kitchen analogy:</p>
+<ul>
+<li>🚀 <strong><code>thread::spawn</code></strong>: Assigning a task to a new chef.</li>
+<li>👨🍳 <strong>Closure</strong>: The recipe or set of instructions given to the chef.</li>
+<li>📦 <strong><code>move</code> keyword</strong>: Handing over the ingredients (data ownership) to a chef so they can work independently.</li>
+<li>🤝 <strong><code>JoinHandle</code></strong>: A receipt for the task you assigned to a chef.</li>
+<li>⏰ <strong><code>.join()</code></strong>: Waiting for a chef to report back that their task is complete (and getting their finished component).</li>
+<li><code>Vec&lt;JoinHandle&gt;</code>: Managing your entire team of chefs and ensuring everyone finishes before the final dish is assembled.</li>
+</ul>
+<h3 id="the-threading-workflow-in-rust"><strong>The Threading Workflow in Rust</strong></h3>
+<ol>
+<li><strong>Spawn</strong>: Use <code>thread::spawn()</code> with a closure to create a new thread.</li>
+<li><strong>Move (if needed)</strong>: Use the <code>move</code> keyword on the closure to transfer ownership of data from the parent thread to the new thread.</li>
+<li><strong>Manage</strong>: Store the returned <code>JoinHandle</code> to keep track of the thread.</li>
+<li><strong>Join</strong>: Call <code>.join()</code> on the handle to wait for the thread to complete its execution. This also allows you to retrieve any value returned from the thread.</li>
+</ol>
+<h3 id="best-practices-for-threading-in-rust"><strong>Best Practices for Threading in Rust</strong></h3>
+<ul>
+<li><strong>Always <code>join</code> your handles</strong>: Unless you are creating a "detached" thread that you intentionally don't want to wait for, always <code>join</code> your threads. This prevents the main thread from exiting prematurely and ensures all work is completed.</li>
+<li><strong>Use <code>move</code> for safety</strong>: Be explicit about data ownership by using <code>move</code> closures when threads need to use data from their parent's scope. Rust's compiler will often enforce this for you.</li>
+<li><strong>Keep threads focused</strong>: Give each thread a clear, well-defined task. This makes your concurrent code easier to reason about.</li>
+<li><strong>Use Channels for Communication</strong>: For more complex communication between threads (instead of just returning a single value at the end), use channels (<code>std::sync::mpsc</code>) to send messages safely between them.</li>
+<li><strong>Use <code>Arc</code> and <code>Mutex</code> for Shared State</strong>: If multiple threads need to <em>share</em> and <em>modify</em> the same data, use thread-safe smart pointers like <code>Arc</code> (Atomically-Referenced Counter) and <code>Mutex</code> (Mutual Exclusion).</li>
+</ul>
+<p>By following these patterns and leveraging Rust's safety guarantees, you can write powerful, high-performance concurrent applications with confidence.</p>
+<ol>
+<li>https://www.programiz.com/rust/thread</li>
+<li>https://doc.rust-lang.org/book/ch16-01-threads.html</li>
+<li>https://doc.rust-lang.org/rust-by-example/std_misc/threads.html</li>
+<li>https://www.youtube.com/watch?v=YKBwKy5PrpQ</li>
+<li>https://www.linkedin.com/pulse/threads-rust-amit-nadiger</li>
+<li>https://www.codecademy.com/resources/docs/rust/threads</li>
+<li>https://notes.kodekloud.com/docs/Rust-Programming/Fearless-Concurrency/Threads</li>
+<li>https://dev.to/valorsoftware/multi-threading-for-impatient-rust-learners-253e</li>
+</ol>
+
+    
+        </div>
+
+    </article>
+</main>
+
+
+    <script type="text/javascript" src="https://aarambhdevhub.github.io/rust-doc/elasticlunr.min.js" defer></script>
+    <script type="text/javascript" src="https://aarambhdevhub.github.io/rust-doc/search_index.en.js" defer></script>
+<script type="text/javascript" src="https://aarambhdevhub.github.io/rust-doc/js.js" defer></script>
+
+</body>
+</html>
