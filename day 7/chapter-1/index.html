@@ -844,33 +844,6 @@
 
                     <ul class="subtree">
                         <li >
-                                <a href="https://aarambhdevhub.github.io/rust-doc/day 32/chapter-1/">Iterator Trait Implementation</a>
-                            </li>
-
-                            <li >
-                                <a href="https://aarambhdevhub.github.io/rust-doc/day 32/chapter-2/">Lazy Evaluation</a>
-                            </li>
-
-                            <li >
-                                <a href="https://aarambhdevhub.github.io/rust-doc/day 32/chapter-3/">Iterator Adaptors (map, filter, etc.)</a>
-                            </li>
-
-                            <li >
-                                <a href="https://aarambhdevhub.github.io/rust-doc/day 32/chapter-4/">Consumer Adaptors (collect, fold, etc.)</a>
-                            </li>
-
-                            <li >
-                                <a href="https://aarambhdevhub.github.io/rust-doc/day 32/chapter-5/">Custom Iterators</a>
-                            </li>
-
-                            </ul>
-                <input class="tree-toggle" type="checkbox" id="day-32-iterators-deep-dive"
-                           />
-                    <label class="tree-toggle-label"
-                           for="day-32-iterators-deep-dive">Day 32: Iterators Deep Dive</label>
-
-                    <ul class="subtree">
-                        <li >
                                 <a href="https://aarambhdevhub.github.io/rust-doc/day 33/chapter-1/">Higher-Order Functions</a>
                             </li>
 
@@ -888,6 +861,33 @@
 
                             <li >
                                 <a href="https://aarambhdevhub.github.io/rust-doc/day 33/chapter-5/">Performance of Functional Style</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="day-32-iterators-deep-dive"
+                           />
+                    <label class="tree-toggle-label"
+                           for="day-32-iterators-deep-dive">Day 32: Iterators Deep Dive</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 32/chapter-1/">Iterator Trait Implementation</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 32/chapter-2/">Lazy Evaluation</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 32/chapter-3/">Iterator Adaptors (map, filter, etc.)</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 32/chapter-4/">Consumer Adaptors (collect, fold, etc.)</a>
+                            </li>
+
+                            <li >
+                                <a href="https://aarambhdevhub.github.io/rust-doc/day 32/chapter-5/">Custom Iterators</a>
                             </li>
 
                             </ul>
@@ -2290,34 +2290,47 @@
 <pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
 </span><span>    </span><span style="color:#b48ead;">let</span><span> value = Some(</span><span style="color:#d08770;">42</span><span>);
 </span><span>    </span><span style="color:#b48ead;">let</span><span> vector = vec![</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">2</span><span>, </span><span style="color:#d08770;">3</span><span>];
-</span><span>    
-</span><span>    </span><span style="color:#a7adba;">// Pattern matching with references
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// --- Pattern matching on a reference to an Option ---
+</span><span>    </span><span style="color:#a7adba;">// We are matching on `&amp;value`, which is of type &amp;Option&lt;i32&gt;.
 </span><span>    </span><span style="color:#b48ead;">match </span><span>&amp;value {
-</span><span>        Some(n) =&gt; println!(&quot;</span><span style="color:#a3be8c;">Got some: </span><span style="color:#d08770;">{}</span><span>&quot;, n),  </span><span style="color:#a7adba;">// n is &amp;i32
+</span><span>        </span><span style="color:#a7adba;">// Because the matched value is a reference, `n` automatically becomes a
+</span><span>        </span><span style="color:#a7adba;">// reference to the inner value. So, `n` is of type &amp;i32.
+</span><span>        Some(n) =&gt; println!(&quot;</span><span style="color:#a3be8c;">Got some: </span><span style="color:#d08770;">{}</span><span>&quot;, n),
 </span><span>        None =&gt; println!(&quot;</span><span style="color:#a3be8c;">Got none</span><span>&quot;),
 </span><span>    }
-</span><span>    
-</span><span>    </span><span style="color:#a7adba;">// Original value still owned
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// `value` was only borrowed, so we can still use it here.
 </span><span>    println!(&quot;</span><span style="color:#a3be8c;">Original value: </span><span style="color:#d08770;">{:?}</span><span>&quot;, value);
-</span><span>    
-</span><span>    </span><span style="color:#a7adba;">// Pattern matching with vector
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// --- Pattern matching on a slice ---
+</span><span>    </span><span style="color:#a7adba;">// `&amp;vector[..]` creates a slice of type &amp;[i32].
 </span><span>    </span><span style="color:#b48ead;">match </span><span>&amp;vector[..] {
+</span><span>        </span><span style="color:#a7adba;">// `first` becomes a reference to the first element (&amp;i32).
+</span><span>        </span><span style="color:#a7adba;">// `rest` becomes a reference to the rest of the slice (&amp;[i32]).
 </span><span>        [first, rest @ ..] =&gt; {
 </span><span>            println!(&quot;</span><span style="color:#a3be8c;">First: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">, Rest: </span><span style="color:#d08770;">{:?}</span><span>&quot;, first, rest);
 </span><span>        }
+</span><span>        </span><span style="color:#a7adba;">// An empty slice case could be added for completeness.
+</span><span>        [] =&gt; {
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">The vector is empty.</span><span>&quot;);
+</span><span>        }
 </span><span>    }
-</span><span>    
-</span><span>    </span><span style="color:#a7adba;">// Destructuring references
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// --- Destructuring a reference to a tuple ---
 </span><span>    </span><span style="color:#b48ead;">let</span><span> tuple = (</span><span style="color:#d08770;">1</span><span>, String::from(&quot;</span><span style="color:#a3be8c;">hello</span><span>&quot;), </span><span style="color:#d08770;">true</span><span>);
-</span><span>    </span><span style="color:#b48ead;">let</span><span> tuple_ref = &amp;tuple;
-</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let</span><span> tuple_ref = &amp;tuple; </span><span style="color:#a7adba;">// tuple_ref is of type &amp;(i32, String, bool)
+</span><span>
 </span><span>    </span><span style="color:#b48ead;">match</span><span> tuple_ref {
+</span><span>        </span><span style="color:#a7adba;">// The bindings `num`, `text`, and `flag` become references to the
+</span><span>        </span><span style="color:#a7adba;">// elements inside the tuple.
+</span><span>        </span><span style="color:#a7adba;">// num: &amp;i32, text: &amp;String, flag: &amp;bool
 </span><span>        (num, text, flag) =&gt; {
-</span><span>            </span><span style="color:#a7adba;">// num: &amp;i32, text: &amp;String, flag: &amp;bool
 </span><span>            println!(&quot;</span><span style="color:#a3be8c;">Tuple parts: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">, </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">, </span><span style="color:#d08770;">{}</span><span>&quot;, num, text, flag);
 </span><span>        }
 </span><span>    }
-</span><span>    
+</span><span>
+</span><span>    </span><span style="color:#a7adba;">// The original tuple was only borrowed, so it&#39;s still available.
 </span><span>    println!(&quot;</span><span style="color:#a3be8c;">Original tuple: </span><span style="color:#d08770;">{:?}</span><span>&quot;, tuple);
 </span><span>}
 </span></code></pre>
