@@ -431,34 +431,47 @@ fn main() {
 fn main() {
     let value = Some(42);
     let vector = vec![1, 2, 3];
-    
-    // Pattern matching with references
+
+    // --- Pattern matching on a reference to an Option ---
+    // We are matching on `&value`, which is of type &Option<i32>.
     match &value {
-        Some(n) => println!("Got some: {}", n),  // n is &i32
+        // Because the matched value is a reference, `n` automatically becomes a
+        // reference to the inner value. So, `n` is of type &i32.
+        Some(n) => println!("Got some: {}", n),
         None => println!("Got none"),
     }
-    
-    // Original value still owned
+
+    // `value` was only borrowed, so we can still use it here.
     println!("Original value: {:?}", value);
-    
-    // Pattern matching with vector
+
+    // --- Pattern matching on a slice ---
+    // `&vector[..]` creates a slice of type &[i32].
     match &vector[..] {
+        // `first` becomes a reference to the first element (&i32).
+        // `rest` becomes a reference to the rest of the slice (&[i32]).
         [first, rest @ ..] => {
             println!("First: {}, Rest: {:?}", first, rest);
         }
+        // An empty slice case could be added for completeness.
+        [] => {
+            println!("The vector is empty.");
+        }
     }
-    
-    // Destructuring references
+
+    // --- Destructuring a reference to a tuple ---
     let tuple = (1, String::from("hello"), true);
-    let tuple_ref = &tuple;
-    
+    let tuple_ref = &tuple; // tuple_ref is of type &(i32, String, bool)
+
     match tuple_ref {
+        // The bindings `num`, `text`, and `flag` become references to the
+        // elements inside the tuple.
+        // num: &i32, text: &String, flag: &bool
         (num, text, flag) => {
-            // num: &i32, text: &String, flag: &bool
             println!("Tuple parts: {}, {}, {}", num, text, flag);
         }
     }
-    
+
+    // The original tuple was only borrowed, so it's still available.
     println!("Original tuple: {:?}", tuple);
 }
 ```
