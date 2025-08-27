@@ -38,7 +38,7 @@ Rust only allows references whose lifetimes are guaranteed to outlive their use.
 - **Use:** After `&`, e.g., `&'a str` or `&'a mut T`.
 
 ```rust
-fn example(x: &'a i32, y: &'a i32) -> &'a i32 {
+fn example<'a>(x: &'a i32, y: &'a i32) -> &'a i32 {
     if x > y { x } else { y }
 }
 ```
